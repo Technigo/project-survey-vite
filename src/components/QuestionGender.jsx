@@ -1,1 +1,1 @@
-//For example, name your gender Woman, Man, Other,dropdownmenu
+//For example, name your gender Woman, Man, Other, elf, dropdownmenu
