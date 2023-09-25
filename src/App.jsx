@@ -14,9 +14,9 @@ function App() {
     <div className="App">
       <Header />
       <SurveyInfo />
+      <QuestionCelebrate />
       <QuestionGender />
       <QuestionAge />
-      <QuestionCelebrate />
       <QuestionLikeMost />
       <QuestionGift />
       <Submit />

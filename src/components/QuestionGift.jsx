@@ -7,7 +7,7 @@ function QuestionLikeMost() {
   const options = [
     { value: 'receiving', label: 'I like receiving them the most' },
     { value: 'buying', label: 'I like giving them the most' },
-    { value: 'both', label: 'I like them bothequally' },
+    { value: 'both', label: 'I like them both equally' },
   ];
 
   const handleRadioChange = (event) => {
