@@ -1,3 +1,12 @@
+import { Header } from "./Header";
+import { Questions } from "./Questions";
+
 export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
+  return (
+    <>
+      <Header />
+      <Questions />
+    </>
+    
+  );
 };
