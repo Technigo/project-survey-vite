@@ -1,0 +1,110 @@
+/* === Import of font === */
+@import url(https://fonts.googleapis.com/css?family=Space+Mono:400,700);
+
+/* === Custom Properties === */
+:root {
+    /* Colors */
+    --primary: #4A51ED;
+    --secondary: #FFFFFF;
+    --background: #F5F6FA;
+    --text: #000000;
+    --shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.11);
+    /*rgba(37, 40, 122, .09)*/
+
+    /* Font */
+    --font: 'Space Mono', monospace;
+
+    /* Other styles */
+    --corner-radius: 10px;
+    --stroke-thickness: 2px;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* Main section is the section surrounding the questions, answers and header */
+.main-section {
+    margin-top: 4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+}
+
+/* Header text text */
+.quiz-heading {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Section containing questions */
+.question-section {
+    margin: 2rem 0;
+    font-size: 20px;
+}
+
+/* Section containing answers */
+.answers-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* === Form elements === */
+.input-field,
+.submit-btn {
+    border-radius: var(--corner-radius);
+    background: var(--secondary);
+    box-shadow: var(--shadow);
+    height: 60px;
+    border-style: none;
+    cursor: pointer;
+}
+
+/* === Input-only styling === */
+.input-field {
+    grid-column: 1;
+    font-size: 18px;
+    font-family: var(--font);
+    padding: 0 20px;
+    color: var(--text);
+}
+
+/* === Button-only styling === */
+
+.submit-btn,
+.inline {
+    grid-column: 2;
+}
+
+.submit-btn:after {
+    content: '➜';
+    font-size: 16px;
+    color: var(--primary);
+}
+
+/* Style for standalone button, should take up 100% of the full width with a max-width of 500px */
+.standalone {
+    width: 100%;
+    max-width: 500px;
+    grid-column: 1;
+}
+
+/* Style for button next to an input field, with fixed width */
+.inline {
+    width: 60px;
+}
+
+.submit-btn:hover {
+    border-radius: var(--corner-radius);
+    background: var(--primary);
+    color: var(--secondary);
+}
