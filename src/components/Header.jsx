@@ -2,6 +2,8 @@
 
 export const Header = () => {
   return (
-    <div>Header</div>
+    <div>
+      <h1>Hello in our store</h1>
+    </div>
   )
 }
