@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import QuestionAge from './QuestionAge'; // Import other question components as needed
 
 function Survey() {
   // Define a state variable to track the user's response
@@ -35,8 +35,14 @@ function Survey() {
           No
         </label>
       </div>
-      {celebrateChristmas === 'No' && (
+      {celebrateChristmas === 'No' ? (
         <p>Thank you, but you're not right for this survey.</p>
+      ) : (
+        <>
+          {/* Render the remaining questions here */}
+          <QuestionAge />
+          {/* Add other question components as needed */}
+        </>
       )}
     </div>
   );
