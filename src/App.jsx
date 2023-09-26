@@ -1,3 +1,14 @@
+import { Form } from "./component/Form"
+
 export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
-};
+
+  return (
+    <>
+      <div className="app-container">
+        <h1>THE SURVEY</h1>
+        <Form />
+
+      </div>
+    </>
+  );
+}
