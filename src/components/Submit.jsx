@@ -7,24 +7,31 @@ import QuestionLikeMost from './QuestionLikeMost';
 import QuestionGift from './QuestionGift';
 
 function Submit() {
-  const [answers, setAnswers] = useState({});
-  const [currentQuestion, setCurrentQuestion] = useState(''); 
+    const [answers, setAnswers] = useState({
+        celebrate: 'Not Selected',
+        selectedGender: 'Not Selected',
+        selectedAge: 'Not Selected',
+        option: 'Not Selected',
+        likedOption: 'Not Selected',
+      });
+  const [currentQuestion, setCurrentQuestion] = useState('');
+
   const [submitted, setSubmitted] = useState(false);
 
-  const handleAnswer = (question, answer) => {
-    setAnswers({ ...answers, [question]: answer });
+const handleAnswer = (question, answer) => {
+  setAnswers((prevAnswers) => ({
+    ...prevAnswers,
+    [question]: answer,
+  }));
 
-    // Determine the index of the current question
-    const currentQuestionIndex = questionOrder.indexOf(question);
+  const currentQuestionIndex = questionOrder.indexOf(question);
 
-    if (currentQuestionIndex === questionOrder.length - 1) {
-      // If it's the last question, set submitted to true
-      setSubmitted(true);
-    } else {
-      // Otherwise, move to the next question
-      setCurrentQuestion(questionOrder[currentQuestionIndex + 1]);
-    }
-  };
+  if (currentQuestionIndex === questionOrder.length - 1) {
+    setSubmitted(true);
+  } else {
+    setCurrentQuestion(questionOrder[currentQuestionIndex + 1]);
+  }
+};
 
   const handleSubmit = () => {
     // Submit the survey
@@ -41,7 +48,7 @@ function Submit() {
         <>
           {/* Render questions based on the current question state */}
           {currentQuestion === 'celebrate' && (
-            <QuestionCelebrate onAnswer={(answer) => handleAnswer('celebrate', answer)} />
+           <QuestionCelebrate onAnswer={handleAnswer} />
           )}
           {currentQuestion === 'selectedGender' && (
             <QuestionGender onAnswer={(answer) => handleAnswer('selectedGender', answer)} />
@@ -53,7 +60,7 @@ function Submit() {
             <QuestionLikeMost onAnswer={(answer) => handleAnswer('option', answer)} />
           )}
           {currentQuestion === 'likedOption' && (
-            <QuestionGift onAnswer={(answer) => handleAnswer('likedOption', answer)} />
+           <QuestionGift onAnswer={handleAnswer} />
           )}
 
           {/* Render the submit button */}
@@ -65,6 +72,8 @@ function Submit() {
 }
 
 export default Submit;
+
+
 
 
 

@@ -6,7 +6,7 @@ function QuestionLikeMost() {
 
   const options = [
     'Food',
-    'The spirit',
+    'The spirit of christmas',
     'The gifts',
     'Spending time with family',
     'A few days off from work',
