@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 // Creating the Activity component as a functional component
  export const Activity = ({ user, handleInputChange }) => {
   // Returning JSX to render the component

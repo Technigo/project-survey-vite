@@ -1,5 +1,4 @@
-import React from 'react'; // Importing the React library to create a component
-// Creating the Country component as a functional component
+/* eslint-disable react/prop-types */
 export const Country = ({ user, handleInputChange }) => {
   // Returning JSX to render the component
   return (

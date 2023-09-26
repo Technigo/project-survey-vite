@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // Creating the Name component as a functional component
 export const Name = ({ user, handleInputChange }) => {
  // Returning JSX that gets rendered to the screen
