@@ -6,7 +6,7 @@ function QuestionCelebrate({ onAnswer }) {
   const handleRadioChange = (event) => {
     const selectedOption = event.target.value;
     setCelebrateChristmas(selectedOption);
-    onAnswer(selectedOption); // Pass the answer to the parent component
+    onAnswer('celebrateChristmas',selectedOption); // Pass the answer to the parent component
   };
 
   return (
