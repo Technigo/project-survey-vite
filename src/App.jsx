@@ -43,14 +43,14 @@ setActiveQuestion('summary');
 return (
 <>
   <Header />
-  {activeQuestion === 1 && (
+  {activeQuestion === 4 && (
   <>
     <Favoriteperson user={user} handleInputChange={handleInputChange} />
     <button onClick={goToNextQuestion}>Next</button>
   </>
   )}
 
-  {activeQuestion === 2 && (
+  {activeQuestion === 5 && (
   <>
     <Celebrity user={user} handleInputChange={handleInputChange} />
     <button onClick={goToPrevQuestion}>Prev</button>
@@ -58,7 +58,7 @@ return (
   </>
   )}
 
-  {activeQuestion === 3 && (
+  {activeQuestion === 6 && (
   <>
     <SelectPerson user={user} handleInputChange={handleInputChange} />
     <button onClick={goToPrevQuestion}>Prev</button>
