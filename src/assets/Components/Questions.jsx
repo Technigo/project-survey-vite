@@ -4,12 +4,20 @@ import { InfoQuestions } from "./InfoQuestions";
 import { Summary } from "./Summary";
 
 export const Questions = () => {
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+
+  }
     return (
       <>
         {/* Add questions here */}
-        
-          <InfoQuestions />
+        <form action="" onSubmit={handleSubmit} required>
+        <InfoQuestions />
           <FavQuestions />
+
+        </form>
+        
+          
  
    
         <Summary />

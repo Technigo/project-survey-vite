@@ -13,7 +13,9 @@ export const FavQuestions = () => {
   return (
     
                    
-        <div className="radio-question">What is your favourite exercise?
+        <div className="radio-questions">
+            
+            <label htmlFor="">What is your favourite exercise?</label>
            
            <label htmlFor="walking">Walking
            <input type="radio" name="walking" id="walking" value={"Walking"} checked={favourite === "Walking"} onChange={onRadioChange} /> 

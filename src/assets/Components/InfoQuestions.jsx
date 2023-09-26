@@ -19,10 +19,10 @@ export const InfoQuestions = () => {
 
   return (
     <div className='info-questions'>
-        <label htmlFor="name"> What's your name?
+        <label htmlFor="name"> Name :
                 <input type="text" id="name" name="name" placeholder="your name" value={name} onChange={handleInputNameChange}/>
             </label>
-            <label htmlFor="email"> what's your Email address?
+            <label htmlFor="email"> Email :
                 <input type="email" id="email" name="email" placeholder="your Email" value={email} onChange={handleInputEmailChange}/>
             </label>
     </div>

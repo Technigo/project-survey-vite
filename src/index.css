@@ -44,7 +44,7 @@ body{
   font-size: 10px;
   border-radius: 10px;
   text-shadow: 2px 4px 4px rgba(275, 275, 275, .4);
-  padding: 10px 0;
+  padding: 10px;
   margin-bottom: 30px;
   letter-spacing: 3px;
   
@@ -57,4 +57,41 @@ input{
   padding: 6px;
   font-size: 12px;
   color: rgb(58, 57, 57);
+  margin: 10px 0 10px 5px;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+.info-questions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+label{
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(242, 242, 232);
+}
+.radio-questions input{
+  outline: none;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: rgb(221, 224, 226);
+  color: black;
+
+  
+
+}
+
+.radio-questions{
+  display: flex;
+  flex-direction: column;
+}
+.radio-questions label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
