@@ -6,7 +6,7 @@ export const Header = () => {
    
           <div className="form-container">
           <h1 className="header-text">Health & wellness</h1>
-          <p>let us know about your wellness</p>
+          <p>Let us know about your wellness</p>
 
        
     </div>
