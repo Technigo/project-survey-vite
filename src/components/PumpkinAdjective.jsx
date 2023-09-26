@@ -5,7 +5,7 @@ export const Pumpkins = () => {
     const [pumpkins, setPumpkins] = useState('');
 
     return (
-        <form>
+        <form className="pumpkin-adjective-form">
             <select
                 value={pumpkins}
                 onChange={(event) => setPumpkins(event.target.value)}

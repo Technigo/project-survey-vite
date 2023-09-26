@@ -7,7 +7,7 @@ export const PumpkinPatchCharacter = () => {
   const [mysteryCharacter, setmysteryCharacter] = useState();
 
   return (
-    <form>
+    <form className="pumpkin-patch-character-form">
       {mysteryCharacters.map((characterChoice) => (
         <label key={characterChoice}>
           <input
