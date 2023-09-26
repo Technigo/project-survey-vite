@@ -2,22 +2,43 @@ import React, { useState } from 'react';
 import "./app.css";
 import questions from "./questions.json"; // Questions data saved in a JSON format for easy access throughout the code, is imported here
 import { Header } from "./components/Header"; // Header including the Quizname and Icon
-import { Questions } from "./components/Questions"; // Questions and answers, we might need to restructure this later
-// import { InputField } from "./components/FormElements/InputField"; // I first put them in here, in the App, but then moved them out. Keeping them here just in case.
-// import { SubmitButton } from "./components/FormElements/SubmitButton"; // I first put them in here, in the App, but then moved them out. Keeping them here just in case.
+import { QuestionComponent } from './components/Questions/QuestionComponent'; // Logic for displaying questions
+import { AnswersSummary } from './components//Answers/AnswersSummary'; // AnswersSummary component
 
 // Main component that renders all the Quiz Components
 export const App = () => {
-const [currentStep, setCurrentStep] = useState(0);
+  // State to track the current question step, user answers, and completion status
+  const [currentStep, setCurrentStep] = useState(0);
+  const [userAnswers, setUserAnswers] = useState(Array(questions.length).fill(''));
+  const [completed, setCompleted] = useState(false);
 
-const handleNextClick = () => {
-  setCurrentStep(currentStep + 1);
-}
+  // Function to handle moving to the next question or completing the form
+  const handleNextQuestion = () => {
+    if (currentStep < questions.length - 1) {
+      setCurrentStep(currentStep + 1);
+    } else {
+      // All questions answered, mark the form as completed
+      setCompleted(true);
+    }
+  };
 
   return (
     <section className="main-section">
       <Header />
-      <Questions questions={questions} />
+      {!completed ? (
+        // Passes all neccessary data points to QuestionComponent
+        <QuestionComponent
+          questions={questions} // All questionsdata is passed on
+          currentStep={currentStep} // Currentstep information is passed on
+          userAnswers={userAnswers} // State of usersAnswers is passed on
+          setUserAnswers={setUserAnswers} // Function to handle the userAnswers is passed on
+          handleNextQuestion={handleNextQuestion} // Funtion to handle what happens when user clicks for next stage is passed on
+          completed={completed} // Completed state is passed on
+        />
+      ) : (
+        // Display the answers summary after completing the form
+        <AnswersSummary userAnswers={userAnswers} questions={questions} />
+      )}
     </section>
-    );
+  );
 };

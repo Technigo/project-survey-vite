@@ -59,6 +59,13 @@ body {
 }
 
 /* === Form elements === */
+.first-question-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .input-field,
 .submit-btn {
     border-radius: var(--corner-radius);
@@ -67,50 +74,53 @@ body {
     height: 60px;
     border-style: none;
     cursor: pointer;
+    font-size: 18px;
+    font-family: var(--font);
 }
 
 /* === Input-only styling === */
 .input-field {
-    grid-column: 1;
+    /* grid-column: 1; */
     font-size: 18px;
     font-family: var(--font);
     padding: 0 20px;
     color: var(--text);
+    max-width: 400px;
+}
+
+select {
+    width: 400px;
+}
+
+input[type="radio"] {
+    margin: 0.5rem;
 }
 
 /* === Button-only styling === */
-
-.submit-btn,
-.inline {
-    grid-column: 2;
-}
-
 .submit-btn:after {
-    content: '➜';
+    content: ' ➜ ';
     font-size: 16px;
     color: var(--primary);
 }
 
-/* Style for standalone button, should take up 100% of the full width with a max-width of 500px */
 .standalone {
-    width: 100%;
-    max-width: 500px;
-    grid-column: 1;
+    width: 400px;
+    margin: 1rem;
 }
 
 /* Style for button next to an input field, with fixed width */
 .inline {
     width: 60px;
+    margin: 0 0 0 1rem;
 }
 
 .submit-btn:hover {
     border-radius: var(--corner-radius);
-    background: var(--primary);
-    color: var(--secondary);
+    background: var(--secondary);
 }
 
 /* Styling for the "next-question" class */
-.submit-btn.next-question {
+/* .submit-btn.next-question {
     background: var(--primary); 
     color: var(--secondary); 
-  }
+  } */
