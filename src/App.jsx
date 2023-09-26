@@ -46,14 +46,17 @@ export const App = () => {
           {step === 1 && (
             <>
               <h1>what do you think now</h1>
-              <Fairyname fairyName={fairyName} setFairyName={setFairyName} />
+              <Fairyname fairyName={fairyName} setFairyName={setFairyName} onProceed={handleNextQuestion} />
+
             </>
           )}
           {step === 2 && (
-            <Color color={color} setColor={setColor} />
+            <Color color={color} setColor={setColor} onProceed={handleNextQuestion} />
+
           )}
           {step === 3 && (
-            <Adjective horn={horn} setHorn={setHorn} />
+            <Adjective horn={horn} setHorn={setHorn} onProceed={handleNextQuestion} />
+
           )}
           {step === 4 && (
             <Loveact loveAct={loveAct} setLoveAct={setLoveAct} />

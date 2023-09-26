@@ -1,13 +1,23 @@
-import React from 'react'
-
-export const Fairyname = ({ fairyName, setFairyName }) => {
+export const Fairyname = ({ fairyName, setFairyName, onProceed }) => {
   const handleFairyName = (event) => {
-    setFairyName(event.target.value)
+    setFairyName(event.target.value);
   }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onProceed();  // Notify the parent to move to the next step
+  }
+
   return (
-    <form className="fairy-name-from" onSubmit={(event) => event.preventDefault()} required>
+    <form className="fairy-name-from" onSubmit={handleSubmit}>
       tell me what is in yr head
-      <input aria-label="fairytale name input" type="text" required value={fairyName} onChange={handleFairyName} />
+      <input 
+        aria-label="fairytale name input" 
+        type="text" 
+        required 
+        value={fairyName} 
+        onChange={handleFairyName} 
+      />
     </form>
-  )
+  );
 }
