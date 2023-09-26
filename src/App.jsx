@@ -39,34 +39,48 @@ export const App = () => {
    const handleSubmit = () => {
      setActiveQuestion('summary');
    };
+
+// Function to reset the state and restart the survey
+const restartSurvey = () => {
+  setUser({
+    name: "",
+    activity: "",
+    country: "",
+  });
+  setActiveQuestion(1); // Set activeQuestion back to 1 to start the survey from the first question
+};
+
+
   // Rendering components
   return (
     <>
      <Header />
+     <div className="questions-wrapper">
      {activeQuestion === 1 && (
         <>
           <Name user={user} handleInputChange={handleInputChange} />
-          <button onClick={goToNextQuestion}>Next</button>
+          <button className="submit-button" onClick={goToNextQuestion}>Next</button>
         </>
       )}
       
       {activeQuestion === 2 && (
         <>
           <Activity user={user} handleInputChange={handleInputChange} />
-          <button onClick={goToPrevQuestion}>Prev</button>
-          <button onClick={goToNextQuestion}>Next</button>
+          <button className="submit-button" onClick={goToPrevQuestion}>Prev</button>
+          <button className="submit-button" onClick={goToNextQuestion}>Next</button>
         </>
       )}
       
       {activeQuestion === 3 && (
         <>
           <Country user={user} handleInputChange={handleInputChange} />
-          <button onClick={goToPrevQuestion}>Prev</button>
-          <button onClick={handleSubmit}>Submit</button>
+          <button className="submit-button" onClick={goToPrevQuestion}>Prev</button>
+          <button className="submit-button" onClick={handleSubmit}>Submit</button>
         </>
       )}
       
-      {activeQuestion === 'summary' && <Summary user={user} />}
+      {activeQuestion === 'summary' && <Summary user={user} restartSurvey={restartSurvey} />}
+      </div>
         <Footer /> 
     </>
   )

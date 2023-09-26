@@ -15,7 +15,8 @@ code {
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #4C5544; /* olive green */
+  /*background-color: #4C5544; /* olive green */
+  background: radial-gradient(circle at center, #4C5544, #657C44, #763230);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -37,14 +38,37 @@ header {
   margin-bottom: 20px;
 }
 
-.question-container {
-  margin-bottom: 30px;
+.questions-wrapper {
+  background-color:beige; 
+  padding: 10px;
+  border-radius: 5px; 
 }
 
+.question-container {
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+.question-container input {
+  margin-top: 10px;
+  display: block;
+}
+
+.question-container select {
+  margin-top: 10px;
+  display:block;
+}
 .question {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: #333333;
 }
+
+.summary-container {
+  color: #333333;
+}
+
+
 
 .options {
   list-style-type: none;
@@ -53,6 +77,7 @@ header {
 
 .option {
   margin-bottom: 10px;
+  display: block;
 }
 
 .input-group {
@@ -68,11 +93,32 @@ header {
   background-color: #4C5544; /* olive green */
   color: #ffffff;
   border: none;
+  margin-right: 15px;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .submit-button:hover {
-  background-color: #3b4333; /* darker olive green */
+  background-color:#7b876e; /* darker olive green */
+}
+
+.small-text {
+  font-size: 10px;
+}
+
+.header, .footer, .container-wrapper, .summary-container {
+  width: 100%; /* Takes the full width of the viewport */
+  max-width: 500px; 
+  min-width: 300px; /* Doesn’t get smaller than 300px */
+  margin: 0 auto; /* Centers the elements horizontally */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+  .header, .footer, .container-wrapper, .summary-container {
+    padding: 10px; /* Decreases padding for smaller screens */
+    max-width: 90%;
+    min-width: 50px;
+  }
 }
