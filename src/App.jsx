@@ -54,6 +54,17 @@ const restartSurvey = () => {
   setActiveQuestion(1); // Set activeQuestion back to 1 to start the survey from the first question
 };
 
+// Function to decide what happens when a form is submitted
+const handleFormSubmit = (e) => {
+  e.preventDefault(); // Prevents the default form submission behavior
+  
+  if (activeQuestion < 3) {
+    goToNextQuestion();
+  } else {
+    handleSubmit();
+  }
+};
+
 
   // Rendering components
   return (
@@ -61,49 +72,49 @@ const restartSurvey = () => {
       <Header />
       <div className="questions-wrapper">
         {activeQuestion === 1 && (
-          <>
+          <form onSubmit={handleFormSubmit}>
             <Name user={user} handleInputChange={handleInputChange} />
-            <button className="submit-button" onClick={goToNextQuestion}>Next</button>
-          </>
+            <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+          </form>
         )}
       
         {activeQuestion === 2 && (
-          <>
+          <form onSubmit={handleFormSubmit}>
             <Activity user={user} handleInputChange={handleInputChange} />
-            <button className="submit-button" onClick={goToPrevQuestion}>Prev</button>
-            <button className="submit-button" onClick={goToNextQuestion}>Next</button>
-          </>
+            <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
+            <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+          </form>
         )}
       
         {activeQuestion === 3 && (
-          <>
+          <form onSubmit={handleFormSubmit}>
             <Country user={user} handleInputChange={handleInputChange} />
-            <button className="submit-button" onClick={goToPrevQuestion}>Prev</button>
-            <button className="submit-button" onClick={goToNextQuestion}>Next</button>
-          </>
+            <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
+            <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+          </form>
         )}
         {activeQuestion === 4 && (
-          <>
+          <form onSubmit={handleFormSubmit}>
             <Favoriteperson user={user} handleInputChange={handleInputChange} />
-            <button className="submit-button" onClick={goToPrevQuestion}>Prev</button>
-            <button className="submit-button" onClick={goToNextQuestion}>Next</button>
-          </>
+            <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
+            <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+          </form>
         )}
 
         {activeQuestion === 5 && (
-          <>
+          <form onSubmit={handleFormSubmit}>
             <Celebrity user={user} handleInputChange={handleInputChange} />
-            <button className="submit-button" onClick={goToPrevQuestion}>Prev</button>
-            <button className="submit-button" onClick={goToNextQuestion}>Next</button>
-          </>
+            <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
+            <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+          </form>
         )}
 
         {activeQuestion === 6 && (
-          <>
+          <form onSubmit={handleFormSubmit}>
             <SelectPerson user={user} handleInputChange={handleInputChange} />
-            <button className="submit-button" onClick={goToPrevQuestion}>Prev</button>
-            <button className="submit-button" onClick={handleSubmit}>Submit</button>
-          </>
+            <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
+            <button className="submit-button" type="submit" onClick={handleSubmit}>Submit</button>
+          </form>
         )}
       
         {activeQuestion === 'summary' && <Summary user={user} restartSurvey={restartSurvey} />}
