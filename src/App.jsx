@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/header';
 import SurveyInfo from './components/Surveyinfo';
+import QuestionExcited from './components/QuestionExcited'
 import QuestionGender from './components/QuestionGender'; 
 import QuestionAge from './components/QuestionAge';
 import QuestionCelebrate from './components/QuestionCelebrate';
@@ -15,6 +16,7 @@ function App() {
       <Header />
       <SurveyInfo />
       <QuestionCelebrate />
+      <QuestionExcited />
       <QuestionGender />
       <QuestionAge />
       <QuestionLikeMost />
