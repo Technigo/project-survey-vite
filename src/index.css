@@ -117,7 +117,7 @@ header {
 /* Media Query for smaller screens */
 @media (max-width: 600px) {
   .header, .footer, .container-wrapper, .summary-container {
-    padding: 10px; /* Decreases padding for smaller screens */
+    padding: 10px; 
     max-width: 90%;
     min-width: 50px;
   }
