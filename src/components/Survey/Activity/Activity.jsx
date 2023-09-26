@@ -5,8 +5,6 @@ export const Activity = () => {
   const [selectedActivity, setSelectedActivity] = useState('default')
   const handleActivityChange = (event) => {
     setSelectedActivity(event.target.value)
-    console.log(selectedActivity)
-    console.log("hej")
   }
   
   return (
@@ -19,6 +17,7 @@ export const Activity = () => {
       <option value="option2">Cycling Lindvallen</option>
       <option value="option3">Canoeing Koster-islands</option>
       </select>
+      <p>Selected activity: {selectedActivity}</p>
       </label>
     </div>
   )

@@ -17,6 +17,7 @@ export const Name = () => {
         Name: 
       <input type="text" value = {name} onChange={handleNameInput} />
       </label>
+      <p>Current state: {name}</p>
     </div>
   )
 }
