@@ -1,12 +1,10 @@
-import { SeasonRadio } from "./SeasonRadio/SeasonRadio.jsx"
 import { NameInput } from "./NameInput/NameInput.jsx";
-import { EcoCheck } from "./EcoCheck/EcoCheck.jsx";
+import { SeasonRadio } from "./SeasonRadio/SeasonRadio.jsx"
 import { ActivitySelect } from "./ActivitySelect/ActivitySelect.jsx";
 import { ButtonSubmit } from "./ButtonSubmit/ButtonSubmit.jsx"
+import { EcoCheck } from "./EcoCheck/EcoCheck.jsx";
 
 import "./Form.css"
-
-<Hej></Hej>
 
 export const Form  = () => {
 

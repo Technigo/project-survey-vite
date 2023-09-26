@@ -1,0 +1,59 @@
+.seasonradio-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* Styled the default and hidden the input, setting the opacity to 0 makes it still visible for screenreaders */
+.seasonradio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* The adjacent sibling to input, custom-radio, should be affected in the following way when the radio button-container input is hovered */
+.seasonradio-container:hover input ~ .custom-radio {
+  background-color: #ccc;
+}
+
+.seasonradio-container input:checked ~ .custom-radio {
+  background-color: #444444;
+}
+
+/* Need to add content when you use the after property */
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: none;
+}
+
+.seasonradio-container input:checked ~ .custom-radio:after {
+  display:block;
+}
+
+/* Gives the custom radio button an outline when the default radio button is in focus */
+.seasonradio-container input:focus + .custom-radio {
+  outline: #333 auto 4px;
+}
