@@ -79,29 +79,30 @@ const restartSurvey = () => {
           <>
             <Country user={user} handleInputChange={handleInputChange} />
             <button className="submit-button" onClick={goToPrevQuestion}>Prev</button>
-            <button className="submit-button" onClick={handleSubmit}>Submit</button>
+            <button className="submit-button" onClick={goToNextQuestion}>Next</button>
           </>
         )}
         {activeQuestion === 4 && (
           <>
             <Favoriteperson user={user} handleInputChange={handleInputChange} />
-            <button onClick={goToNextQuestion}>Next</button>
+            <button className="submit-button" onClick={goToPrevQuestion}>Prev</button>
+            <button className="submit-button" onClick={goToNextQuestion}>Next</button>
           </>
         )}
 
         {activeQuestion === 5 && (
           <>
             <Celebrity user={user} handleInputChange={handleInputChange} />
-            <button onClick={goToPrevQuestion}>Prev</button>
-            <button onClick={goToNextQuestion}>Next</button>
+            <button className="submit-button" onClick={goToPrevQuestion}>Prev</button>
+            <button className="submit-button" onClick={goToNextQuestion}>Next</button>
           </>
         )}
 
         {activeQuestion === 6 && (
           <>
             <SelectPerson user={user} handleInputChange={handleInputChange} />
-            <button onClick={goToPrevQuestion}>Prev</button>
-            <button onClick={handleSubmit}>Submit</button>
+            <button className="submit-button" onClick={goToPrevQuestion}>Prev</button>
+            <button className="submit-button" onClick={handleSubmit}>Submit</button>
           </>
         )}
       
