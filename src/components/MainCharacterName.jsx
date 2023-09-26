@@ -8,6 +8,7 @@ export const MainCharacterName = () => {
     <form>
       <h1>Choose a name for your adventurer: {name}</h1>
       <input
+        aria-label="adventurer name input"
         type="text"
         required
         value={name}
