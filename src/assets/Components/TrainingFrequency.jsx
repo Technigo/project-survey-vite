@@ -14,7 +14,7 @@ export const TrainingFrequency = () => {
             <label>
                 Daily
                 <input 
-                    type="checkbox" 
+                    type="radio" 
                     name="daily"
                     id="daily"
                     value="Daily"
@@ -26,7 +26,7 @@ export const TrainingFrequency = () => {
             <label>
                 One to three times per week
                 <input 
-                    type="checkbox" 
+                    type="radio" 
                     name="per-week"
                     id="per-week"
                     value="One to three times per week"
@@ -38,7 +38,7 @@ export const TrainingFrequency = () => {
             <label>
                 Once to twice per month
                 <input 
-                    type="checkbox" 
+                    type="radio" 
                     name="per-month"
                     id="per-month"
                     value="Once to twice per month"
@@ -50,7 +50,7 @@ export const TrainingFrequency = () => {
             <label>
                 Rarely
                 <input 
-                    type="checkbox" 
+                    type="radio" 
                     name="rarely"
                     id="rarely"
                     value="Rarely"
