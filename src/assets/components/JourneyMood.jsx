@@ -13,7 +13,7 @@ export const JourneyMood = () => {
                     <input
                         type="radio"
                         value={journeyChoice}
-                        onChange={(event) = setJourney(event.target.value)}
+                        onChange={(event) => setJourney(event.target.value)}
                         checked={journey === journeyChoice}
                     />
                 </label>
