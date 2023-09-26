@@ -1,17 +1,16 @@
 import { useState } from "react";
-import Summary from "./Summary";
 
-export const Questions = () => {
-  {/* Create a controlled text area where the user can type in their fitness goal */}
+export const FitnessGoal = () => {
+  {/* Initialize a controlled text area where the user can type in their fitness goal */}
   const [fitnessGoal, setFitnessGoal] = useState("");
 
-  const handleTextareaChange = (e) => {
+  /* Update the change of the text area based on the user's answer */
+  const updateTextarea = (e) => {
     setFitnessGoal(e.target.value);
   }
 
   return (
-      <>
-        {/* Add questions here */}
+      <div className="fitness-goal">
         {/* Question about fitness goal */}
         <label>
           What is your fitness goal?
@@ -21,10 +20,9 @@ export const Questions = () => {
             cols={40} 
             placeholder="I aim to..." 
             value={fitnessGoal}
-            onChange={handleTextareaChange}
+            onChange={updateTextarea}
           />
         </label>
-        <Summary fitnessGoal={fitnessGoal}/>
-      </>
+      </div>
     );
 };
