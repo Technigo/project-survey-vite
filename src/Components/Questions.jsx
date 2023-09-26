@@ -4,6 +4,9 @@ import { InfoQuestions } from "./InfoQuestions";
 import { Buttons } from "./Buttons";
 import { Summary } from "./Summary";
 import { useState } from "react";
+import { TrainingFrequency } from "./TrainingFrequency";
+import { FitnessGoal } from "./FitnessGoal";
+import { Environment } from "./Environment";
 
 export const Questions = () => {
 
@@ -33,6 +36,15 @@ export const Questions = () => {
           }
           {step === 2 && 
             <FavQuestions />
+          }
+          {step === 3 && 
+            <TrainingFrequency />
+          }
+           {step === 4 && 
+            <FitnessGoal />
+          }
+          {step === 5 && 
+            <Environment />
           }
         </form>
         

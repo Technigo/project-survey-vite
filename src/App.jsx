@@ -1,5 +1,5 @@
-import { Header } from "./assets/Components/Header";
-import { Questions } from "./assets/Components/Questions";
+import { Header } from "./Components/Header";
+import { Questions } from "./Components/Questions";
 
 
 export const App = () => {
