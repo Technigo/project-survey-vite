@@ -81,39 +81,49 @@ const handleFormSubmit = (e) => {
         {activeQuestion === 2 && (
           <form onSubmit={handleFormSubmit}>
             <Activity user={user} handleInputChange={handleInputChange} />
+            <div className="btn-grid">
             <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
-            <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+              <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+              </div>
           </form>
         )}
       
         {activeQuestion === 3 && (
           <form onSubmit={handleFormSubmit}>
             <Country user={user} handleInputChange={handleInputChange} />
+            <div className="btn-grid">
             <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
-            <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+              <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+              </div>
           </form>
         )}
         {activeQuestion === 4 && (
           <form onSubmit={handleFormSubmit}>
             <Favoriteperson user={user} handleInputChange={handleInputChange} />
+            <div className="btn-grid">
             <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
-            <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+              <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+              </div>
           </form>
         )}
 
         {activeQuestion === 5 && (
           <form onSubmit={handleFormSubmit}>
             <Celebrity user={user} handleInputChange={handleInputChange} />
+            <div className="btn-grid">
             <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
-            <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+              <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
+              </div>
           </form>
         )}
 
         {activeQuestion === 6 && (
           <form onSubmit={handleFormSubmit}>
             <SelectPerson user={user} handleInputChange={handleInputChange} />
+            <div className="btn-grid">
             <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
-            <button className="submit-button" type="submit" onClick={handleSubmit}>Submit</button>
+              <button className="submit-button" type="submit" onClick={handleSubmit}>Submit</button>
+              </div>
           </form>
         )}
       

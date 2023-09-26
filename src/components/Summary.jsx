@@ -10,7 +10,7 @@
       {/* Displaying a personalized message based on user inputs */}
       <p>Hi {name}! You have booked a {activity} trip to {country} for you and {favPerson}, we arranged so that {celebrity} will join in aswell, and we will send the bill to {payingPerson} ENJOY!!!</p>
       <p className="small-text">(No were just kidding this is just a suggestion, you will have to arrange and book the trip all by yourself!)</p>
-      <button className="submit-button" type="submit" onClick={restartSurvey}>Restart Survey</button> {/* Restart button */}
+      <button className="restart-button" type="submit" onClick={restartSurvey}>Restart Survey</button> {/* Restart button */}
     </div> 
   );
 }; 
