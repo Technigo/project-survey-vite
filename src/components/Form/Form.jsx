@@ -6,6 +6,8 @@ import { ButtonSubmit } from "./ButtonSubmit/ButtonSubmit.jsx"
 
 import "./Form.css"
 
+<Hej></Hej>
+
 export const Form  = () => {
 
     return (
