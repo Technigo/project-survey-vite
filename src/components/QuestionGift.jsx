@@ -12,25 +12,25 @@ function QuestionGift({ onAnswer }) {
   const handleRadioChange = (event) => {
     const selectedOption = event.target.value;
     setLikedOption(selectedOption);
-    onAnswer('likedOption', selectedOption); // Use the key 'likedOption' for this question
+    onAnswer('likedOption', selectedOption); 
   };
 
   return (
     <div>
       <h2 className="question-container">What do you like most about Christmas gifts?</h2>
       {options.map((option) => (
-        <div key={option.value}>
-          <label>
-            <input
-              type="radio"
-              value={option.value}
-              checked={likedOption === option.value}
-              onChange={handleRadioChange}
-            />
-            {option.label}
-          </label>
-        </div>
-      ))}
+  <div key={option.value}>
+    <label>
+      <input
+        type="radio"
+        value={option.value} 
+        checked={likedOption === option.value}
+        onChange={handleRadioChange}
+      />
+      {option.label}
+    </label>
+  </div>
+))}
       <p>You like: {likedOption === 'both' ? 'Receiving gifts and buying gifts' : likedOption}</p>
     </div>
   );

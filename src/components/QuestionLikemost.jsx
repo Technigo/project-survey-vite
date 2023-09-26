@@ -1,12 +1,11 @@
-//As peoplewhat they like most about christmas, checkbox for example food, the spririt, gifts, spending time with family etc etc
 import React, { useState } from 'react';
 
-function QuestionLikeMost() {
+function QuestionLikeMost({ onAnswer }) {
   const [likedOptions, setLikedOptions] = useState([]);
 
   const options = [
     'Food',
-    'The spirit of christmas',
+    'The spirit of Christmas',
     'The gifts',
     'Spending time with family',
     'A few days off from work',
@@ -17,10 +16,8 @@ function QuestionLikeMost() {
   const handleCheckboxChange = (event) => {
     const option = event.target.value;
     if (likedOptions.includes(option)) {
-      // If the option is already selected, remove it
       setLikedOptions(likedOptions.filter((item) => item !== option));
     } else {
-      // If the option is not selected, add it
       setLikedOptions([...likedOptions, option]);
     }
   };
@@ -41,9 +38,9 @@ function QuestionLikeMost() {
           </label>
         </div>
       ))}
-      <p>You like: {likedOptions.join(', ')}</p>
     </div>
   );
 }
 
 export default QuestionLikeMost;
+

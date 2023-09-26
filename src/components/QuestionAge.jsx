@@ -1,8 +1,7 @@
-//Age, dropdown, choose your age span 
 import React, { useState } from 'react';
 
-function AgeQuestion() {
-  // Create a state variable to store the selected age span
+function AgeQuestion({ onAnswer }) {
+ 
   const [selectedAge, setSelectedAge] = useState('');
 
   // Define an array of age spans as options for the dropdown
@@ -18,7 +17,11 @@ function AgeQuestion() {
 
   // Handle changes when a user selects an age span
   const handleAgeChange = (event) => {
-    setSelectedAge(event.target.value);
+    const selectedAgeSpan = event.target.value;
+    setSelectedAge(selectedAgeSpan);
+
+  
+    onAnswer('selectedAge', selectedAgeSpan);
   };
 
   return (

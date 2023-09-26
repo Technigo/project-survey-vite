@@ -9,14 +9,14 @@ import QuestionExcited from './QuestionExcited';
 
 function Submit() {
   const [answers, setAnswers] = useState({
-    celebrateChristmas: '', // Initialize with empty strings
+    celebrateChristmas: '',
     excitementLevel: '',
     selectedGender: '',
     selectedAge: '',
     option: '',
     likedOption: '',
   });
-  const [currentQuestion, setCurrentQuestion] = useState('');
+  const [currentQuestion, setCurrentQuestion] = useState(''); // Initialize with the first question
   const [submitted, setSubmitted] = useState(false);
 
   const handleAnswer = (question, answer) => {
@@ -34,11 +34,6 @@ function Submit() {
     }
   };
 
-  const handleSubmit = () => {
-    // Submit the survey
-    setSubmitted(true);
-  };
-
   const questionOrder = [
     'celebrateChristmas',
     'excitementLevel',
@@ -49,6 +44,19 @@ function Submit() {
     'summary',
   ];
 
+  const handleSubmit = () => {
+    // Submit the survey
+    setSubmitted(true);
+
+    // Debugging: Check the values
+    console.log('celebrateChristmas:', answers.celebrateChristmas);
+    console.log('excitementLevel:', answers.excitementLevel);
+    console.log('selectedGender:', answers.selectedGender);
+    console.log('selectedAge:', answers.selectedAge);
+    console.log('option:', answers.option);
+    console.log('likedOption:', answers.likedOption);
+  };
+
   return (
     <div>
       {submitted ? (
@@ -57,7 +65,10 @@ function Submit() {
         <>
           {/* Render questions based on the current question state */}
           {currentQuestion === 'celebrateChristmas' && (
-            <QuestionCelebrate onAnswer={handleAnswer} />
+            <QuestionCelebrate
+              onAnswer={(answer) => handleAnswer('celebrateChristmas', answer)}
+              celebrateChristmas={answers.celebrateChristmas} // Pass the value down as a prop
+            />
           )}
           {currentQuestion === 'excitementLevel' && (
             <QuestionExcited onAnswer={(answer) => handleAnswer('excitementLevel', answer)} />
@@ -72,7 +83,7 @@ function Submit() {
             <QuestionLikeMost onAnswer={(answer) => handleAnswer('option', answer)} />
           )}
           {currentQuestion === 'likedOption' && (
-            <QuestionGift onAnswer={handleAnswer} />
+            <QuestionGift onAnswer={(answer) => handleAnswer('likedOption', answer)} />
           )}
 
           {/* Render the submit button */}
@@ -84,6 +95,8 @@ function Submit() {
 }
 
 export default Submit;
+
+
 
 
 

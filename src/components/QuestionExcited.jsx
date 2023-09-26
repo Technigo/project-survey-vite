@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 function QuestionExcited({ onAnswer }) {
-  const [excitementLevel, setExcitementLevel] = useState(5); // Initialize with a default value
+  const [excitementLevel, setExcitementLevel] = useState(5);
 
   const handleSliderChange = (event) => {
-    const selectedLevel = parseInt(event.target.value);
+    const selectedLevel = event.target.value;
     setExcitementLevel(selectedLevel);
-    onAnswer('excited', selectedLevel); // Pass the answer to the parent component with the question name
+    onAnswer('excitementLevel', selectedLevel); // Pass the answer to the parent component
   };
 
   return (
