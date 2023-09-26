@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import "./app.css";
 import questions from "./questions.json"; // Questions data saved in a JSON format for easy access throughout the code, is imported here
 import { Header } from "./components/Header"; // Header including the Quizname and Icon
@@ -7,9 +8,16 @@ import { Questions } from "./components/Questions"; // Questions and answers, we
 
 // Main component that renders all the Quiz Components
 export const App = () => {
+const [currentStep, setCurrentStep] = useState(0);
+
+const handleNextClick = () => {
+  setCurrentStep(currentStep + 1);
+}
+
   return (
     <section className="main-section">
       <Header />
       <Questions questions={questions} />
-    </section>);
+    </section>
+    );
 };

@@ -108,3 +108,9 @@ body {
     background: var(--primary);
     color: var(--secondary);
 }
+
+/* Styling for the "next-question" class */
+.submit-btn.next-question {
+    background: var(--primary); 
+    color: var(--secondary); 
+  }
