@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FavQuestions } from "./FavQuestions";
 import { InfoQuestions } from "./InfoQuestions";
+import { NextButton } from "./NextButton";
 import { Summary } from "./Summary";
 
 export const Questions = () => {
@@ -17,7 +18,7 @@ export const Questions = () => {
 
         </form>
         
-          
+          <NextButton />
  
    
         <Summary />

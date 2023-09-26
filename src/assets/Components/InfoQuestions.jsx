@@ -1,11 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
-import React from 'react'
+
+
 import { useState } from 'react'
 
 export const InfoQuestions = () => {
  const [name , setName] = useState("");
  const [email , setEmai] = useState("");
+ 
 
  const handleInputNameChange = (e)=>{
     setName(e.target.value)
