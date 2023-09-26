@@ -4,8 +4,9 @@ function QuestionCelebrate({ onAnswer }) {
   const [celebrateChristmas, setCelebrateChristmas] = useState('');
 
   const handleRadioChange = (event) => {
-    setCelebrateChristmas(event.target.value);
-    onAnswer(event.target.value); // Pass the answer to the parent component
+    const selectedOption = event.target.value;
+    setCelebrateChristmas(selectedOption);
+    onAnswer(selectedOption); // Pass the answer to the parent component
   };
 
   return (
@@ -33,11 +34,16 @@ function QuestionCelebrate({ onAnswer }) {
           No
         </label>
       </div>
+      {/* Conditional message for non-celebrators */}
+      {celebrateChristmas === 'No' && (
+        <p>This survey is not for you. Thank you for your time and have a lovely holiday!</p>
+      )}
     </div>
   );
 }
 
 export default QuestionCelebrate;
+
 
 
 

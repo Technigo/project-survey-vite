@@ -1,8 +1,7 @@
-//What do you like most? Receiving gifts, buying gifts, i like them both, radiobuttons
 import React, { useState } from 'react';
 
-function QuestionLikeMost() {
-  const [likedOption, setLikedOption] = useState('both'); // Default option
+function QuestionGift({ onAnswer }) {
+  const [likedOption, setLikedOption] = useState(''); // Initialize with an empty string
 
   const options = [
     { value: 'receiving', label: 'I like receiving them the most' },
@@ -11,12 +10,14 @@ function QuestionLikeMost() {
   ];
 
   const handleRadioChange = (event) => {
-    setLikedOption(event.target.value);
+    const selectedOption = event.target.value;
+    setLikedOption(selectedOption);
+    onAnswer('likedOption', selectedOption); // Use the key 'likedOption' for this question
   };
 
   return (
     <div>
-      <h2 className="question-container">What do you like most about christmas gifts?</h2>
+      <h2 className="question-container">What do you like most about Christmas gifts?</h2>
       {options.map((option) => (
         <div key={option.value}>
           <label>
@@ -35,4 +36,4 @@ function QuestionLikeMost() {
   );
 }
 
-export default QuestionLikeMost;
+export default QuestionGift;

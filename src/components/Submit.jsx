@@ -8,31 +8,21 @@ import QuestionGift from './QuestionGift';
 
 function Submit() {
   const [answers, setAnswers] = useState({});
-  const [currentQuestion, setCurrentQuestion] = useState(''); // Start with 'celebrate' question
+  const [currentQuestion, setCurrentQuestion] = useState(''); 
   const [submitted, setSubmitted] = useState(false);
 
   const handleAnswer = (question, answer) => {
     setAnswers({ ...answers, [question]: answer });
 
-    // Transition to the next question or to the summary
-    switch (question) {
-      case 'celebrate':
-        setCurrentQuestion('gender');
-        break;
-      case 'gender':
-        setCurrentQuestion('age');
-        break;
-      case 'age':
-        setCurrentQuestion('likeMost');
-        break;
-      case 'likeMost':
-        setCurrentQuestion('gift');
-        break;
-      case 'gift':
-        setCurrentQuestion('summary');
-        break;
-      default:
-        setCurrentQuestion('summary');
+    // Determine the index of the current question
+    const currentQuestionIndex = questionOrder.indexOf(question);
+
+    if (currentQuestionIndex === questionOrder.length - 1) {
+      // If it's the last question, set submitted to true
+      setSubmitted(true);
+    } else {
+      // Otherwise, move to the next question
+      setCurrentQuestion(questionOrder[currentQuestionIndex + 1]);
     }
   };
 
@@ -40,6 +30,8 @@ function Submit() {
     // Submit the survey
     setSubmitted(true);
   };
+
+  const questionOrder = ['celebrate', 'selectedGender', 'selectedAge', 'option', 'likedOption', 'summary'];
 
   return (
     <div>
@@ -51,23 +43,21 @@ function Submit() {
           {currentQuestion === 'celebrate' && (
             <QuestionCelebrate onAnswer={(answer) => handleAnswer('celebrate', answer)} />
           )}
-          {currentQuestion === 'gender' && (
-            <QuestionGender onAnswer={(answer) => handleAnswer('gender', answer)} />
+          {currentQuestion === 'selectedGender' && (
+            <QuestionGender onAnswer={(answer) => handleAnswer('selectedGender', answer)} />
           )}
-          {currentQuestion === 'age' && (
-            <QuestionAge onAnswer={(answer) => handleAnswer('age', answer)} />
+          {currentQuestion === 'selectedAge' && (
+            <QuestionAge onAnswer={(answer) => handleAnswer('selectedAge', answer)} />
           )}
-          {currentQuestion === 'likeMost' && (
-            <QuestionLikeMost onAnswer={(answer) => handleAnswer('likeMost', answer)} />
+          {currentQuestion === 'option' && (
+            <QuestionLikeMost onAnswer={(answer) => handleAnswer('option', answer)} />
           )}
-          {currentQuestion === 'gift' && (
-            <QuestionGift onAnswer={(answer) => handleAnswer('gift', answer)} />
+          {currentQuestion === 'likedOption' && (
+            <QuestionGift onAnswer={(answer) => handleAnswer('likedOption', answer)} />
           )}
 
           {/* Render the submit button */}
-          {currentQuestion !== 'summary' && (
-            <button onClick={handleSubmit}>Submit</button>
-          )}
+          <button onClick={handleSubmit}>Submit</button>
         </>
       )}
     </div>
@@ -75,6 +65,8 @@ function Submit() {
 }
 
 export default Submit;
+
+
 
   
 
