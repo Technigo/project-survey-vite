@@ -1,6 +1,22 @@
+/* eslint-disable react/prop-types */
+export const Favoriteperson = ({ user, handleInputChange }) => {
 
-export const Favoriteperson = () => {
-  return (
-    <div>Favoriteperson</div>
-  )
-}
+     return (
+     <div className="question-container">
+         <label
+           htmlFor="favPerson"
+           className="question-fav">Who do you take on a trip??
+         </label>
+         <input
+  type="text"
+  id="favPerson"
+  name="favPerson" 
+  placeholder="e.g partner, mom, sibling"
+  value={user.favPerson}
+  onChange={handleInputChange}
+/>
+
+          </div>
+   )
+ }
+  

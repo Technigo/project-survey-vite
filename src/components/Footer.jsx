@@ -1,6 +1,6 @@
 
 export const Footer = () => {
   return (
-    <div>Coding by Sandra and Klaudia</div>
+    <div> <p>Coding by Sandra and Klaudia for Technigo bootcamp</p></div>
   )
 }
