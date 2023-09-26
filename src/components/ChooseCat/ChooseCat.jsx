@@ -1,54 +1,82 @@
 import "./ChooseCat.css";
 
-const cats = [
-  "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
-  "https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1315&q=80",
-  "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1336&q=80",
-  "https://images.unsplash.com/photo-1618826411640-d6df44dd3f7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
+const catOptions = [
+  {
+    id: "cat1",
+    alt: "Cat 1",
+    imgSrc: "src/assets/cat-1.jpeg",
+  },
+  {
+    id: "cat2",
+    alt: "Cat 2",
+    imgSrc: "src/assets/cat-2.jpeg",
+  },
+  {
+    id: "cat3",
+    alt: "Cat 3",
+    imgSrc: "src/assets/cat-3.jpeg",
+  },
+  {
+    id: "cat4",
+    alt: "Cat 4",
+    imgSrc: "src/assets/cat-4.jpeg",
+  },
 ];
 
 export const ChooseCat = ({ chooseCat, setChooseCat }) => {
   const handleChooseCats = (event) => {
     setChooseCat(event.target.value);
   };
+
   return (
-    <form
-      className="chooseCat-form"
-      onSubmit={(event) => event.preventDefault()}
-      required
-    >
+    <form>
       <h3>Choose your cat</h3>
-      <label className="flex">
-        <input type="radio" className="cat-button" onChange={handleChooseCats} />
-        <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="" />
-        
-        <input type="radio" className="cat-button" onChange={handleChooseCats} />
-        <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1315&q=80" alt="" />
-
-        <input type="radio" className="cat-button" onChange={handleChooseCats} />
-        <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1336&q=80" alt="" />
-        
-        <input type="radio" className="cat-button" onChange={handleChooseCats} />
-        <img src="https://images.unsplash.com/photo-1618826411640-d6df44dd3f7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="" />
-      </label>
-
-      {/* {cats.map((cat) => (
-        <>
-          <input
-            key={cat}
-            id="catBtn"
-            type="radio"
-            className="cat-button"
-            value={cat}
-            onChange={handleChooseCats}
-            checked={cat === chooseCat}
-          />
-
-          <label htmlFor="catBtn">
-            <img src={cat} alt="" />
-          </label>
-        </>
-      ))} */}
+      {/* This div with classname flex is only for my eyes sake */}
+      <div className="flex">
+        {catOptions.map((catOption) => (
+          <>
+            <label key={catOption.id}>
+              <input
+                type="radio"
+                value={catOption.id}
+                checked={chooseCat === catOption.id}
+                onChange={handleChooseCats}
+              />
+              <div className="radio-custom">
+                <img src={catOption.imgSrc} alt={catOption.alt} />
+              </div>
+            </label>
+          </>
+        ))}
+      </div>
     </form>
   );
 };
+
+// export const ChooseCat = ({ chooseCat, setChooseCat }) => {
+//   const handleChooseCats = (event) => {
+//     setChooseCat(event.target.value);
+//   };
+//   return (
+//     <form
+//       className="chooseCat-form"
+//       onSubmit={(event) => event.preventDefault()}
+//       required
+//     >
+//       <h3>Choose your cat</h3>
+//       <label className="flex">
+//         <input type="radio" className="cat-button" onChange={handleChooseCats} />
+//         <img src="src/assets/cat-1.jpeg" alt="" />
+
+//         <input type="radio" className="cat-button" onChange={handleChooseCats} />
+//         <img src="src/assets/cat-2.jpeg" alt="" />
+
+//         <input type="radio" className="cat-button" onChange={handleChooseCats} />
+//         <img src="src/assets/cat-3.jpeg" alt="" />
+
+//         <input type="radio" className="cat-button" onChange={handleChooseCats} />
+//         <img src="src/assets/cat-4.jpeg" alt="" />
+//       </label>
+//     </form>
+//   );
+// };

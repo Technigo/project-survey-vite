@@ -11,7 +11,9 @@ export const Personality = ({ personality, setPersonality }) => {
         onChange={(event) => setPersonality(event.target.value)}
         value={personality}
       >
-        <option>Select personality...</option>
+        <option value="" disabled selected>
+          Select personality...
+        </option>
         <option value="extrovert">Extrovert</option>
         <option value="agreeable">Agreeable</option>
         <option value="neurotic">Neurotic</option>

@@ -13,7 +13,7 @@ export const CatName = ({catName, setCatName}) => {
     <form onSubmit={handleSubmit} className="cat-name-input">
       <h3>Name your cat</h3>
       <label>
-        Write your name here..
+        Write your name here.. 
         <input
           type="text"
           name="catName"
