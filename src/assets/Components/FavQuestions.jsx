@@ -34,7 +34,7 @@ export const FavQuestions = () => {
              
            </label>
            <label htmlFor="other">Other
-           <input type="radio" name="other" id="other" value={"Other"} checked={favourite === "Others"} onChange={onRadioChange} /> 
+           <input type="radio" name="other" id="other" value={"Others"} checked={favourite === "Others"} onChange={onRadioChange} /> 
 
            </label>
                
