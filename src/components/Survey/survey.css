@@ -1,0 +1,7 @@
+.survey-container {
+    background-color: red; 
+    display: grid;
+    height: 500px;
+    padding: 15px;
+}
+
