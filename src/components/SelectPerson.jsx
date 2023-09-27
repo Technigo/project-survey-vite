@@ -4,7 +4,7 @@ export const SelectPerson = ({ user, handleInputChange }) => {
     <div className="question-container" >
        <p className="question">Who will be pay?</p>
 <div className="options">
-<label className="radio-person">
+<label className="option">
         <input
           type="radio"
           name="payingPerson"
@@ -14,7 +14,7 @@ export const SelectPerson = ({ user, handleInputChange }) => {
         />You
       </label>
       
-      <label className="radio-person">
+      <label className="option">
         <input
           type="radio"
           name="payingPerson"
@@ -24,7 +24,7 @@ export const SelectPerson = ({ user, handleInputChange }) => {
         />Your partner
       </label>
       
-      <label className="radio-person">
+      <label className="option">
         <input
           type="radio"
           name="payingPerson"
@@ -34,25 +34,15 @@ export const SelectPerson = ({ user, handleInputChange }) => {
         />Your parents
       </label>
       
-      <label className="radio-person">
+      <label className="option">
         <input
           type="radio"
           name="payingPerson"
           value="Your siblings"
-          checked={user.payingPerson === ' Your siblings'}
+          checked={user.payingPerson === 'Your siblings'}
         onChange={handleInputChange} 
         /> Your siblings
       </label>
-      
-      <label className="radio-person">
-        <input
-          type="radio"
-          name="payingPerson"
-          value="Gift card"
-          checked={user.payingPerson === 'Gift card'}
-        onChange={handleInputChange} 
-        />Gift card
-        </label>
         </div>
     </div>
   )

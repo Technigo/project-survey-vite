@@ -49,8 +49,11 @@ code {
     justify-content: center;
     border-radius: 2rem;
     padding: 2rem;
-    background-color: rgb(245, 242, 242);
+    background-color: rgb(251, 251, 230);
+    opacity: 0.8;
     height: 450px;
+    width: 500px;
+  
   }
   .question-container {
     color: #333333;
@@ -60,16 +63,23 @@ code {
   .question {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #333333;
+    text-align: center;
   }
   
   .summary-container {
     color: #333333;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     text-align: center;
+    height: 600px;
   }
+  .pic-summary{
+  max-width: 80%;
+ padding-left: 5rem;
+  }
+  
+
   
   /* -------------------- FORM -------------------- */
   
@@ -103,12 +113,11 @@ code {
     padding: 0;
   }
   
-  .option,
-  .radio-person {
- display: flex;
- gap: 1rem;
- margin: 1rem;
- align-items: center;
+  .option{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+    align-items: center;
   }
   
   .input-group {
@@ -120,14 +129,15 @@ code {
     margin-right: 10px;
   }
   
-  form {
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
    
   }
-  .submit-button {
+.submit-button {
     background-color: #4C5544; /* olive green */
     color: #ffffff;
     border: none;
@@ -135,10 +145,10 @@ code {
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
-  
+
   }
   
-  .restart-button{
+.restart-button{
     background-color: #4C5544; 
     color: #ffffff;
     border: none;
@@ -150,12 +160,19 @@ code {
     margin: 0 auto;
   }
   
-  .submit-button:hover {
+ .submit-button:hover {
     background-color:#7b876e; /* darker olive green */
   }
+ .signature{
+  margin-top: 1rem;
   
-  .small-text {
-    font-size: 10px;
+}
+ .text-summary{
+  margin-top: 1rem;
+
+}
+ ::placeholder {
+    color: rgb(255, 255, 255);
   }
   
   /* -------------------- FOOTER-------------------- */

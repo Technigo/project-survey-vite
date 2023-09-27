@@ -50,6 +50,9 @@ const restartSurvey = () => {
     name: "",
     activity: "",
     country: "",
+    favPerson: "", // fav-person
+celebrity: "",
+payingPerson: ""
   });
   setActiveQuestion(1); // Set activeQuestion back to 1 to start the survey from the first question
 };
