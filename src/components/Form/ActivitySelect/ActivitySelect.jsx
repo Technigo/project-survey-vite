@@ -1,22 +1,18 @@
-import React, { useState } from "react"
 import "./ActivitySelect.css"
 
+// eslint-disable-next-line
+export const ActivitySelect = ({ updateFormData, value}) => {
 
-export const ActivitySelect = () => {
-
-    const [activityOption, setActivityOption] = useState('option')
-
-    const handleSelectChange = (event) => {
-        setActivityOption(event.target.value)
-    }
+    const activity = (e) => updateFormData("activity", e.target.value);
 
     return (
         <div>
-            <h3>What's do you want to do?</h3>
-            <select value={activityOption} onChange={handleSelectChange}>
+            <h3>What do you want to do?</h3>
+            <select value={value} onChange={activity}>
                 <option value="option">Please select an activity</option>
                 <option value="chill">Chill</option>
                 <option value="sports">Sports</option>
+                <option value="sightseeing">Sightseeing</option>
             </select>
         </div>
     )
