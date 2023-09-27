@@ -1,24 +1,18 @@
-import React, { useState } from 'react'
-import "./assets/eco-leaf.png"
 import "./EcoCheck.css"
 
+// eslint-disable-next-line
+export const EcoCheck = ({ updateFormData, value }) => {
 
-export const EcoCheck = () => {
-
-    const [yesEco, setYesEko] = useState(false)
-
-    const handleCheckboxChange = (event) => {
-        setYesEko(event.target.checked)
-    }
+    const eco = (e) => updateFormData("eco", e.target.checked)
 
     return (
         <div>
             <h3>This is eco check</h3>
-            <img src="./assets" alt=""></img>
+            <img src="./src/assets/eco-leaf.png" alt="A leaf icon."></img>
             <label>
                 <input  type="checkbox"
-                        checked={yesEco}
-                        onChange={handleCheckboxChange} 
+                        checked={value}
+                        onChange={eco} 
                 />
                 Want to stay on the ground?
             </label>

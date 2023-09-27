@@ -1,8 +1,7 @@
 import "./ActivitySelect.css"
 
+// eslint-disable-next-line
 export const ActivitySelect = ({ updateFormData, value}) => {
-
-    
 
     const activity = (e) => updateFormData("activity", e.target.value);
 
@@ -13,6 +12,7 @@ export const ActivitySelect = ({ updateFormData, value}) => {
                 <option value="option">Please select an activity</option>
                 <option value="chill">Chill</option>
                 <option value="sports">Sports</option>
+                <option value="sightseeing">Sightseeing</option>
             </select>
         </div>
     )

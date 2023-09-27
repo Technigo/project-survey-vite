@@ -1,4 +1,10 @@
 import "./SeasonRadio.css"
+import propTypes from 'prop-types';
+
+SeasonRadio.propTypes = {
+   updateFormData: propTypes.func,
+   value: propTypes.string
+}
 
 export const SeasonRadio = ({ updateFormData, value }) => {
    
