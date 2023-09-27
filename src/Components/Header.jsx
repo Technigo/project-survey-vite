@@ -1,11 +1,9 @@
 export const Header = () => {
   return (
    
-          <div className="form-container">
-          <h1 className="header-text">Health & wellness</h1>
-          <p>Let us know about your wellness</p>
-
-       
+    <div className="form-container">
+      <h1 className="header-text">Wellness Survey</h1>
+      <p>Tell us more about your wellness activities and goal!</p>       
     </div>
   )
 }

@@ -1,6 +1,6 @@
 
 
-import { useState } from 'react'
+import { useState } from "react";
 
 export const InfoQuestions = () => {
  const [name , setName] = useState("");
@@ -19,12 +19,12 @@ export const InfoQuestions = () => {
 
   return (
     <div className='info-questions'>
-        <label htmlFor="name"> Name :
-                <input type="text" id="name" name="name" placeholder="your name" value={name} onChange={handleInputNameChange}/>
-            </label>
-            <label htmlFor="email"> Email :
-                <input type="email" id="email" name="email" placeholder="your Email" value={email} onChange={handleInputEmailChange}/>
-            </label>
+      <label htmlFor="name"> Name :
+        <input type="text" id="name" name="name" placeholder="Your name" value={name} onChange={handleInputNameChange}/>
+      </label>
+      <label htmlFor="email"> Email :
+        <input type="email" id="email" name="email" placeholder="email@example.com" value={email} onChange={handleInputEmailChange}/>
+      </label>
     </div>
   )
 }

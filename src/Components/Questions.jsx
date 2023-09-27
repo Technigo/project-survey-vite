@@ -6,7 +6,7 @@ import { Summary } from "./Summary";
 import { useState } from "react";
 import { TrainingFrequency } from "./TrainingFrequency";
 import { FitnessGoal } from "./FitnessGoal";
-import { Environment } from "./Environment";
+import { LivingArea } from "./LivingArea";
 
 export const Questions = () => {
 
@@ -14,43 +14,43 @@ export const Questions = () => {
   
   const handleSubmit = (e)=>{
     e.preventDefault()
-
+    /* Something else here */
   }
   const next = () => {
-      setStep((prevStep) => {
-          return prevStep + 1
-      })
+    setStep((prevStep) => {
+      return prevStep + 1
+    })
   }
 
   const back = () => {
     setStep((prevStep) => {
       return prevStep - 1
-  })
+    })
   }
     return (
       <>
-        {/* Add questions here */}
+        {/* Add steps here */}
         <form action="" onSubmit={handleSubmit} required>
           {step === 1 && 
             <InfoQuestions />
           }
           {step === 2 && 
-            <FavQuestions />
+            <LivingArea />
           }
           {step === 3 && 
+            <FavQuestions />
+          }
+          {step === 4 && 
             <TrainingFrequency />
           }
-           {step === 4 && 
+           {step === 5 && 
             <FitnessGoal />
           }
-          {step === 5 && 
-            <Environment />
-          }
+
         </form>
         
-          <Buttons onBack={back} onNext={next} currentStep={step} />
- 
-   
+        <Buttons onBack={back} onNext={next} currentStep={step} />
+    
         <Summary />
       </>
       
