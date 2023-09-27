@@ -25,26 +25,16 @@ export const App = () => {
     setShowSurvey(false);
   };
 
+  // we use the negation (!) operator to return true if any of the fields is empty, and false if all fields have values.
   const surveyAnswered = () => {
-    if (userName === "") {
-      return true;
-    }
-    if (genders === "") {
-      return true;
-    }
-    if (age === "") {
-      return true;
-    }
-    if (personality === "") {
-      return true;
-    }
-    if (chooseCat === "") {
-      return true;
-    }
-    if (catName === "") {
-      return true;
-    }
-    return false;
+    return !(
+      userName !== "" &&
+      genders !== "" &&
+      age !== "" &&
+      personality !== "" &&
+      chooseCat !== "" &&
+      catName !== ""
+    );
   };
 
   return (
