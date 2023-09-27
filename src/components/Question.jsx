@@ -10,6 +10,21 @@ function Question({ question, onAnswerSubmit }) {
     setAnswer(newAnswer);
   };
 
+  const handleCheckbox = (e) => {
+    const option = e.target.value;
+    let newAnswer;
+  
+    if (e.target.checked) {
+      // If the checkbox is checked, add the option to the answer
+      newAnswer = [...answer, option];
+    } else {
+      // If the checkbox is unchecked, remove the option from the answer
+      newAnswer = answer.filter((item) => item !== option);
+    }
+  
+    setAnswer(newAnswer);
+  };
+
   const handleSubmit = () => {
     onAnswerSubmit(answer);
     setAnswer(question.type === 'checkbox' ? [] : '');
@@ -32,7 +47,7 @@ function Question({ question, onAnswerSubmit }) {
                 type="checkbox"
                 value={option}
                 checked={answer.includes(option)}
-                onChange={handleInputChange}
+                onChange={handleCheckbox}
               />
               {option}
             </label>
