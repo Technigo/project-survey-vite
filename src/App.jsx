@@ -21,7 +21,13 @@ export const App = () => {
             <input />
           </House>
 
+          <button onClick={goToSubmit}>Submit</button>
         </>
+
+      )}
+      {step === 'submit' && (
+
+        <p>Summary</p>
 
       )}
 
