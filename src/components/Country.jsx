@@ -15,6 +15,7 @@ export const Country = ({ user, handleInputChange }) => {
         autoComplete="country-name" // Added autocomplete attribute
       >
         {/* Creating an option for each country */}
+        <option value=""> -- Select country -- </option>
         <option value="Norway">Norway</option>
         <option value="Poland">Poland</option>
         <option value="Sweden">Sweden</option>

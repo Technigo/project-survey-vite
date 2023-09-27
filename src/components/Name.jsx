@@ -11,7 +11,8 @@ export const Name = ({ user, handleInputChange }) => {
         name="name"
         value={user.name}
         onChange={handleInputChange}
-        autoComplete="name" // Added autocomplete attribute
+          autoComplete="name" // Added autocomplete attribute
+          placeholder="Enter name here"
         />
          </div>
   )

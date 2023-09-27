@@ -11,7 +11,7 @@ export const Favoriteperson = ({ user, handleInputChange }) => {
   type="text"
   id="favPerson"
   name="favPerson" 
-  placeholder="e.g partner, mom, sibling"
+  placeholder="Enter name here"
   value={user.favPerson}
   onChange={handleInputChange}
 />

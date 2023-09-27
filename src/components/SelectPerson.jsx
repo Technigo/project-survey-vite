@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 export const SelectPerson = ({ user, handleInputChange }) => {
   return (
-    <div className="question-container" >Who pay for the trip ? 
-
+    <div className="question-container" >
+       <p className="question">Who will be pay?</p>
+<div className="options">
 <label className="radio-person">
         <input
           type="radio"
@@ -52,7 +53,7 @@ export const SelectPerson = ({ user, handleInputChange }) => {
         onChange={handleInputChange} 
         />Gift card
         </label>
-
+        </div>
     </div>
   )
 }
