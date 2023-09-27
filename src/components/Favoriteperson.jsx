@@ -5,13 +5,13 @@ export const Favoriteperson = ({ user, handleInputChange }) => {
      <div className="question-container">
          <label
            htmlFor="favPerson"
-           className="question-fav">Who do you take on a trip??
+           className="question">Who do you take on a trip??
          </label>
          <input
   type="text"
   id="favPerson"
   name="favPerson" 
-  placeholder="e.g partner, mom, sibling"
+  placeholder="Enter name here"
   value={user.favPerson}
   onChange={handleInputChange}
 />
