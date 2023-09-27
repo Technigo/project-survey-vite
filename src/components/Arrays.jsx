@@ -6,21 +6,25 @@ export const genderGroups = [
 export const catOptions = [
   {
     id: "cat1",
+    label: "Brown cat",
     alt: "Cat 1",
     imgSrc: "src/assets/cat-1.jpeg",
   },
   {
     id: "cat2",
+    label: "Red cat",
     alt: "Cat 2",
     imgSrc: "src/assets/cat-2.jpeg",
   },
   {
     id: "cat3",
+    label: "Orange cat",
     alt: "Cat 3",
     imgSrc: "src/assets/cat-3.jpeg",
   },
   {
     id: "cat4",
+    label: "Seal cat",
     alt: "Cat 4",
     imgSrc: "src/assets/cat-4.jpeg",
   },

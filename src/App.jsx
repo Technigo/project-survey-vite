@@ -57,6 +57,7 @@ export const App = () => {
             <button
               type="submit"
               className="submitBtn"
+              aria-label="Submit button"
               disabled={surveyAnswered()}
               onClick={handleSubmit}
             >

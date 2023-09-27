@@ -2,7 +2,7 @@ import "./ChooseCat.css";
 // import { catOptions } from "src/components/Arrays.jsx";
 import { catOptions } from "../Arrays";
 
-export const ChooseCat = ({ chooseCat, setChooseCat}) => {
+export const ChooseCat = ({ chooseCat, setChooseCat }) => {
   const handleChooseCats = (event) => {
     setChooseCat(event.target.value);
   };
