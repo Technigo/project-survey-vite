@@ -1,15 +1,15 @@
-/* .survey-container {
-    background-color: red; 
-    display: grid;
-    grid-template-rows: 200px 200px 200px;
-    height: 500px;
-    padding: 15px;
-} */
-
 form {
-    background-color: red; 
+    background-color: whitesmoke; 
     display: grid;
-    grid-template-rows: 25% 45% 20%;
-    height: 500px;
-    padding: 15px;
+    grid-template-rows: 25% 25% 40% 10%;
+    height: auto;
+    padding: 5%;
+    margin: 5%;
+    border-radius: 2%;
+}
+
+button {
+    background-color: rgb(117, 177, 116);
+    width: 50%;
+    height: 120%;
 }
