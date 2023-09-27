@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function QuestionExcited({ onAnswer }) {
-  const [excitementLevel, setExcitementLevel] = useState(5);
+function QuestionExcited({ onAnswer, excitementLevel }) {
+  const [selectedLevel, setSelectedLevel] = useState(excitementLevel);
+
+  useEffect(() => {
+    setSelectedLevel(excitementLevel);
+  }, [excitementLevel]);
 
   const handleSliderChange = (event) => {
     const selectedLevel = event.target.value;
-    setExcitementLevel(selectedLevel);
-    onAnswer('excitementLevel', selectedLevel); // Pass the answer to the parent component
+    setSelectedLevel(selectedLevel);
+    onAnswer('excitementLevel', selectedLevel);
   };
 
   return (
@@ -17,10 +21,10 @@ function QuestionExcited({ onAnswer }) {
         type="range"
         min="1"
         max="100"
-        value={excitementLevel}
+        value={selectedLevel}
         onChange={handleSliderChange}
       />
-      <p>Excitement Level: {excitementLevel}</p>
+      <p>Excitement Level: {selectedLevel}</p>
     </div>
   );
 }

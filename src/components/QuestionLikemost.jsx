@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function QuestionLikeMost({ onAnswer }) {
-  const [likedOptions, setLikedOptions] = useState([]);
 
+function QuestionLikeMost({ onAnswer, option }) {
   const options = [
     'Food',
     'The spirit of Christmas',
@@ -14,12 +13,8 @@ function QuestionLikeMost({ onAnswer }) {
   ];
 
   const handleCheckboxChange = (event) => {
-    const option = event.target.value;
-    if (likedOptions.includes(option)) {
-      setLikedOptions(likedOptions.filter((item) => item !== option));
-    } else {
-      setLikedOptions([...likedOptions, option]);
-    }
+    const selectedOption = event.target.value;
+    onAnswer('option', selectedOption);
   };
 
   return (
@@ -31,7 +26,7 @@ function QuestionLikeMost({ onAnswer }) {
             <input
               type="checkbox"
               value={option}
-              checked={likedOptions.includes(option)}
+              checked={option === option} // This needs to be updated
               onChange={handleCheckboxChange}
             />
             {option}
@@ -43,4 +38,3 @@ function QuestionLikeMost({ onAnswer }) {
 }
 
 export default QuestionLikeMost;
-

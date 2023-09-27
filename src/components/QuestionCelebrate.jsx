@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function QuestionCelebrate({ onAnswer, celebrateChristmas }) {
   const [selectedOption, setSelectedOption] = useState(celebrateChristmas);
+
+  // Update the selectedOption state when the celebrateChristmas prop changes
+  useEffect(() => {
+    setSelectedOption(celebrateChristmas);
+  }, [celebrateChristmas]);
 
   const handleRadioChange = (event) => {
     const selectedOption = event.target.value;
@@ -43,6 +48,7 @@ function QuestionCelebrate({ onAnswer, celebrateChristmas }) {
 }
 
 export default QuestionCelebrate;
+
 
 
 
