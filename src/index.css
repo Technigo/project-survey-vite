@@ -1,13 +1,80 @@
 :root {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Bubblegum Sans', cursive;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+
+/* Header CSS */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFB84C;
+  padding: 1em 0em;
+  color: black;
+  font-size: 84px;
+  font-weight: 800;
+  text-align: center;
+  ;
+}
+
+header img {
+  width: 20%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFB84C;
+  padding: 1em 0em;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+footer img {
+  width: 20%;
+}
+
+.main-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2CD3E1;
+  padding: 1em 0em;
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+main-body img {
+  width: 80%;
+}
+
+/* Grid parent CSS */
+.form-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1em;
+  background-color: #F266AB;
+  display: none;
+}
+
+/* Grid child CSS */
+.output-survey {
+  background-color: #2CD3E1;
+  padding: 2px;
+  margin: 2px;
+  text-align: center;
+  padding: 1em;
+  border-radius: 8px;
+  display: none;
 }

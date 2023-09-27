@@ -1,3 +1,18 @@
+import React from 'react';
+
+import { Header } from "./components/Header"
+import { Footer } from "./components/Footer"
+import { SurveyForm } from "./components/SurveyForm"
+
 export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
+
+  return (
+    <>
+      <Header />
+      <section className="survey-body">
+        <SurveyForm />
+      </section>
+      <Footer />
+    </>
+  )
 };
