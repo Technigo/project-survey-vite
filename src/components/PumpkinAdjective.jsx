@@ -1,5 +1,5 @@
 
-export const Pumpkins = ({ updateFormData, value }) => {
+export const PumpkinAdjective = ({ updateFormData, value }) => {
 
     // const [pumpkins, setPumpkins] = useState('');
     const pumpkinAdjective = (event) => updateFormData("pumpkinAdjective", event.target.value);
