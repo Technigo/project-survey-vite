@@ -4,7 +4,6 @@ const House = ({ children }) => {
     return (
         <div className={styles.house}>
             {children}
-
         </div>
     )
 }

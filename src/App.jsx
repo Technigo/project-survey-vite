@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import House from './Components/House';
 import Container from './Components/Container';
+import Logo from './assets/barbielogo.svg';
 
 
 export const App = () => {
@@ -16,7 +17,7 @@ export const App = () => {
           <House>
             <h1>Come on Barbie let's go party!</h1>
             <p>Do you want to book tickets to the Barbie movie?</p>
-            <img src="./Publi"></img>
+            <img src={Logo} alt="Logo" />;
             <input />
             <input />
           </House>
@@ -25,7 +26,21 @@ export const App = () => {
             <input name='test' type='radio' />
             <input name='test' type='radio' />
             <input name='test' type='radio' />
+          </House>
 
+          <House>
+            <p></p>
+            <select>
+              <option>1</option>
+              <option>2</option>
+            </select>
+          </House>
+
+          <House>
+            <p></p>
+            <input type='checkbox' />
+            <input type='checkbox' />
+            <input type='checkbox' />
           </House>
 
           <button onClick={goToSubmit}>Submit</button>
