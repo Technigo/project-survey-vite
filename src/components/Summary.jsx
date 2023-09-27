@@ -14,8 +14,7 @@ function Summary({ questions }) {
 
   return (
     <div>
-      <h2>Summary (Unconventional Presentation):</h2>
-      <p>Your "Friends" Persona:</p>
+      <h2>Your "Friends" Persona:</h2>
       <p>
         Based on your survey responses, we've analyzed your "Friends" persona.
         Imagine you're sitting in Central Perk with your favorite character.

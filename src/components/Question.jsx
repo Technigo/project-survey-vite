@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function Question({ question, onAnswerSubmit }) {
   const [answer, setAnswer] = useState(
-    question.type === 'checkbox' ? [] : ''
+    question.type === 'dropdown' ? '' : ''
   );
 
   const handleInputChange = (e) => {
@@ -13,7 +13,7 @@ function Question({ question, onAnswerSubmit }) {
   const handleCheckbox = (e) => {
     const option = e.target.value;
     let newAnswer;
-  
+
     if (e.target.checked) {
       // If the checkbox is checked, add the option to the answer
       newAnswer = [...answer, option];
@@ -21,7 +21,12 @@ function Question({ question, onAnswerSubmit }) {
       // If the checkbox is unchecked, remove the option from the answer
       newAnswer = answer.filter((item) => item !== option);
     }
-  
+
+    setAnswer(newAnswer);
+  };
+
+  const handleDropDown = (e) => {
+    const newAnswer = e.target.value; // Set the selected option directly as the answer
     setAnswer(newAnswer);
   };
 
@@ -55,7 +60,7 @@ function Question({ question, onAnswerSubmit }) {
         </div>
       )}
       {question.type === 'dropdown' && (
-        <select value={answer} onChange={handleInputChange}>
+        <select value={answer} onChange={handleDropDown} multiple={false}>  {/* Suppress warning */}
           <option value="">Select an option</option>
           {question.options.map((option) => (
             <option key={option} value={option}>
