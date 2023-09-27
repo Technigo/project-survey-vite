@@ -21,6 +21,13 @@ export const App = () => {
             <input />
           </House>
 
+          <House>
+            <input name='test' type='radio' />
+            <input name='test' type='radio' />
+            <input name='test' type='radio' />
+
+          </House>
+
           <button onClick={goToSubmit}>Submit</button>
         </>
 
