@@ -1,22 +1,28 @@
 import { useState } from "react";
 import Card from "./components/Card";
 import Container from "./components/Container";
+import Signup from "./components/Signup";
+import Selection from "./components/Selection";
 
 export const App = () => {
-  const [step, setStep] = useState('form');
+  const [step, setStep] = useState("form");
 
-  const goToSummary = () => setStep('summary');
+  const goToSummary = () => setStep("summary");
 
   return (
     <Container>
-      {step === 'form' && (
+      {step === "form" && (
         <>
           <Card>
             <h1>Welcome to our mushroom survey!</h1>
-            <p>In this survey we would like you to answer a couple of questions regarding mushrooms.</p>
+            <p>
+              In this survey we would like you to answer a couple of questions
+              regarding mushrooms.
+            </p>
             <img src="/mushroom.jpg"></img>
-            <input />
-            <input />
+            {/* <input/>
+            <input/> */}
+            <Signup />
           </Card>
 
           <Card>
@@ -27,11 +33,12 @@ export const App = () => {
           </Card>
 
           <Card>
-            <p></p>
-            <select>
+            <p>What's your favourite mushroom?</p>
+            {/* <select>
               <option>1</option>
               <option>2</option>
-            </select>
+            </select> */}
+            <Selection />
           </Card>
 
           <Card>
@@ -44,9 +51,7 @@ export const App = () => {
           <button onClick={goToSummary}>Submit</button>
         </>
       )}
-      {step === 'summary' && (
-        <p>Hej</p>
-      )}
+      {step === "summary" && <p>Hej</p>}
     </Container>
   );
 };
