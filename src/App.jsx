@@ -10,32 +10,63 @@ import { Country } from "./components/Country";
 import { useState } from "react";
 
 export const App = () => {
-const [user, setUser] = useState({
-  name: "",
-  activity: "",
-  country: "",
-favPerson: "", // fav-person
-celebrity: "",
-payingPerson: ""
-});
+  const [user, setUser] = useState({
+    name: "",
+    activity: "",
+    country: "",
+    favPerson: "", // fav-person
+    celebrity: "",
+    payingPerson: ""
+  });
 
-// State to control which question is currently active
-const [activeQuestion, setActiveQuestion] = useState(1);
+  // State to control which question is currently active
+  const [activeQuestion, setActiveQuestion] = useState(1);
 
-// Function to handle user input changes
+  // Function to handle user input changes
   const handleInputChange = (e) => {
     setUser({
       ...user,
       [e.target.name]: e.target.value,
     });
   };
+  // Function to validate the name field
+  const validateName = () => {
+    if (user.name !== "" && isNaN(user.name)) {
+      return true;
+    } else
+      alert("Try again. Please enter a valid favorite person.");
+    return false
+  }
+    // Function to validate the favorite person field
+    const validateFavoritePerson = () => {
+      if (user.favPerson !== "" && isNaN(user.favPerson)) {
+        return true;
+      }
+      alert("Try again. Please enter a valid favorite person.");
+      return false;
+    };
+  
+
    // Function to go to the next question
-   const goToNextQuestion = () => {
+  const goToNextQuestion = () => {
+    if (activeQuestion === 1) {
+      // If the current question is Name, validate the name before proceeding
+      if (!validateName()) {
+        return;
+      }
+    }
+    if (activeQuestion === 4) {
+      // If the current question is Favoriteperson, validate it before proceeding
+      if (!validateFavoritePerson()) {
+        return;
+      }
+    }
      setActiveQuestion(activeQuestion + 1);
    };
    
    // Function to go to the previous question
-   const goToPrevQuestion = () => {
+  const goToPrevQuestion = () => {
+     
      setActiveQuestion(activeQuestion - 1);
    };
  
@@ -50,9 +81,9 @@ const restartSurvey = () => {
     name: "",
     activity: "",
     country: "",
-    favPerson: "", // fav-person
-celebrity: "",
-payingPerson: ""
+    favPerson: "", 
+    celebrity: "",
+    payingPerson: ""
   });
   setActiveQuestion(1); // Set activeQuestion back to 1 to start the survey from the first question
 };
