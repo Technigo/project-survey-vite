@@ -42,9 +42,15 @@ export const Questions = () => {
 
     if (step === 3) {
       if (favourite === "Others") {
-        let answerPrompt = prompt("what is your favourite exersice?");
-        console.log(answerPrompt);
-        return;
+        let answerPrompt = prompt("Please specify your favourite exercise");
+        if (answerPrompt !== "") {
+          alert(`Great to know that you like ${answerPrompt}!`);
+          setStep(4);
+          return answerPrompt;
+        } else {
+          answerPrompt;
+          return;
+        }
       }
     }
     
