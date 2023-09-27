@@ -24,6 +24,7 @@ const catOptions = [
 ];
 
 export const ChooseCat = ({ chooseCat, setChooseCat }) => {
+  
   const handleChooseCats = (event) => {
     setChooseCat(event.target.value);
   };
