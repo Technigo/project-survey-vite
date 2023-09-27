@@ -1,6 +1,5 @@
 import "./Gender.css";
-
-const genderGroups = ["Female", "Male"];
+import { genderGroups } from "../Arrays.jsx";
 
 export const Gender = ({ genders, setGenders }) => {
   const handleGenders = (event) => {
@@ -15,15 +14,15 @@ export const Gender = ({ genders, setGenders }) => {
       <h3>Choose gender</h3>
       <p>What gender should the cat be?</p>
       {genderGroups.map((gender) => (
-        <label key={gender}>
+        <label key={gender.id}>
           <input
             type="radio"
             className="radio-btn gender"
-            value={gender}
+            value={gender.id}
             onChange={handleGenders}
-            checked={genders === gender}
+            checked={genders === gender.id}
           />
-          {gender}
+          {gender.id}
         </label>
       ))}
     </form>

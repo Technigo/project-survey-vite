@@ -1,0 +1,9 @@
+.name-gender-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.name-gender-container img {
+  height: 1rem;
+}

@@ -25,29 +25,6 @@ export const App = () => {
     setShowSurvey(false);
   };
 
-  const catOptions = [
-    {
-      id: "cat1",
-      alt: "Cat 1",
-      imgSrc: "src/assets/cat-1.jpeg",
-    },
-    {
-      id: "cat2",
-      alt: "Cat 2",
-      imgSrc: "src/assets/cat-2.jpeg",
-    },
-    {
-      id: "cat3",
-      alt: "Cat 3",
-      imgSrc: "src/assets/cat-3.jpeg",
-    },
-    {
-      id: "cat4",
-      alt: "Cat 4",
-      imgSrc: "src/assets/cat-4.jpeg",
-    },
-  ];
-
   // we use the negation (!) operator to return true if any of the fields is empty, and false if all fields have values.
   const surveyAnswered = () => {
     return !(
@@ -73,11 +50,7 @@ export const App = () => {
               personality={personality}
               setPersonality={setPersonality}
             />
-            <ChooseCat
-              chooseCat={chooseCat}
-              setChooseCat={setChooseCat}
-              catOptions={catOptions}
-            />
+            <ChooseCat chooseCat={chooseCat} setChooseCat={setChooseCat} />
             <CatName catName={catName} setCatName={setCatName} />
 
             {/* Add a submit button */}
@@ -100,7 +73,6 @@ export const App = () => {
           personality={personality}
           chooseCat={chooseCat}
           catName={catName}
-          catOptions={catOptions}
         />
       )}
     </section>

@@ -1,4 +1,6 @@
 import "./CatProfile.css";
+import { catOptions, genderGroups } from "./Arrays";
+
 // import { useState } from "react";
 
 export const CatProfile = ({
@@ -8,15 +10,19 @@ export const CatProfile = ({
   personality,
   chooseCat,
   catName,
-  catOptions,
 }) => {
   // Find the selected cat object based on chooseCat ID
   const selectedCat = catOptions.find(
     (catOption) => catOption.id === chooseCat
   );
-
   // If selectedCat is found, use its imgSrc; otherwise, use a default value
   const catImageSrc = selectedCat ? selectedCat.imgSrc : "";
+
+  const selectedGender = genderGroups.find(
+    (genderOption) => genderOption.id === genders
+  );
+
+  const genderIconSrc = selectedGender ? selectedGender.imgSrc : "";
 
   console.log("chooseCat:", chooseCat);
   return (
@@ -25,9 +31,9 @@ export const CatProfile = ({
         <img src={catImageSrc} alt="" />
       </div>
       <div className="cat-info">
-        <div>
+        <div className="name-gender-container">
           <h3>{catName}</h3>
-          <p>{genders}</p>
+          <img src={genderIconSrc} alt="" />
         </div>
         <div className="cat-details-container">
           <div className="personality-container">
