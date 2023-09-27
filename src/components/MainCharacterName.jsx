@@ -6,7 +6,7 @@ export const MainCharacterName = ({ value, updateFormData }) => {
   return (
     <span>
       <form className="main-character-name-form">
-        <h2>Choose a name for your adventurer: {value}</h2>
+        <h2>Choose a name for your adventurer:</h2>
         <input
           aria-label="adventurer name input"
           type="text"

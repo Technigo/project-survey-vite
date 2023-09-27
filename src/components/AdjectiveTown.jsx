@@ -6,6 +6,7 @@ export const AdjectiveTown = ({ updateFormData, value }) => {
     return (
         <span className="town-span">
             <form className="town-adjective-form">
+                <p>Select the town's mood for the story:</p>
                 <select
                     value={value}
                     onChange={townAdjective}

@@ -9,6 +9,7 @@ export const JourneyMood = ({ updateFormData, value }) => {
     return (
         <span>
             <form className="journey-form">
+                <p>Envision a walk in a dark forest. What encounters come to mind?</p>
                 {journeys.map((journeyChoice) => (
                     <label key={journeyChoice}>
                         <input

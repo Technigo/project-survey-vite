@@ -9,6 +9,7 @@ export const PumpkinPatchCharacter = ({ updateFormData, value }) => {
   return (
     <span>
       <form className="pumpkin-patch-character-form">
+        <p>Select a mysterious character to make an appearance in the story:</p>
         {mysteryCharacters.map((characterChoice) => (
           <label key={characterChoice}>
             <input
@@ -17,7 +18,7 @@ export const PumpkinPatchCharacter = ({ updateFormData, value }) => {
               onChange={PumpkinPatchCharacterChoice}
               checked={value === characterChoice}
             />
-            {characterChoice} 
+            {characterChoice}
           </label>
         ))}
       </form>

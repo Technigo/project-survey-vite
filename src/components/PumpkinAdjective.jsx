@@ -7,6 +7,7 @@ export const PumpkinAdjective = ({ updateFormData, value }) => {
     return (
         <span>
             <form className="pumpkin-adjective-form">
+                <p>Describe your ideal pumpkin patch:</p>
                 <select
                     value={value}
                     onChange={pumpkinAdjective}

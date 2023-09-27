@@ -7,6 +7,7 @@ export const Wish = ({updateFormData, value}) => {
     return (
         <span>
         <form className="wish-form">
+            <p>Finally, which wish resonates with you?</p>
             <select
                 value={value}
                 onChange={wishChoice}
