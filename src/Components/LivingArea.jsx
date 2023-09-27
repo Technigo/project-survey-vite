@@ -12,15 +12,9 @@ export const LivingArea = () => {
     return (
         <div className="living-area">
             <label>
-<<<<<<< HEAD:src/Components/LivingArea.jsx
                 Which area do you live in?
                 <select value={livingArea} onChange={updateLivingArea}>
                     <option value="select" disabled selected>Please select one option</option>
-=======
-                In which environment do you live?
-                <select value={environment} onChange={updateEnvironment}>
-                    <option value="select" selected disabled >Please select one option</option>
->>>>>>> 055016e (added a submit button also move the questions):src/Components/Environment.jsx
                     <option value="city">In the city</option>
                     <option value="countryside">In the countryside</option>
                 </select>
