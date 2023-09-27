@@ -8,11 +8,21 @@ export const CatProfile = ({
   personality,
   chooseCat,
   catName,
+  catOptions,
 }) => {
+  // Find the selected cat object based on chooseCat ID
+  const selectedCat = catOptions.find(
+    (catOption) => catOption.id === chooseCat
+  );
+
+  // If selectedCat is found, use its imgSrc; otherwise, use a default value
+  const catImageSrc = selectedCat ? selectedCat.imgSrc : "";
+
+  console.log("chooseCat:", chooseCat);
   return (
     <div className="cat-profile-wrapper">
       <div className="cat-image">
-        <img src={chooseCat} alt="" />
+        <img src={catImageSrc} alt="" />
       </div>
       <div className="cat-info">
         <div>
