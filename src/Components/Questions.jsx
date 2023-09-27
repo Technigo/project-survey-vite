@@ -25,8 +25,13 @@ export const Questions = () => {
   const back = () => {
     setStep((prevStep) => {
       return prevStep - 1
-    })
+  })
+}
+  const submit = ()=>{
+    setStep(5)
+ 
   }
+
     return (
       <>
         {/* Add steps here */}
@@ -48,9 +53,7 @@ export const Questions = () => {
           }
 
         </form>
-        
-        <Buttons onBack={back} onNext={next} currentStep={step} />
-    
+          <Buttons onBack={back} onNext={next} currentStep={step} onSubmit={submit} />
         <Summary />
       </>
       

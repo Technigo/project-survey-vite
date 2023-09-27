@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 
-export const Buttons = ({onBack, onNext, currentStep}) => {
+export const Buttons = ({onBack, onNext, currentStep , onSubmit}) => {
 
 
   return (
@@ -10,7 +10,13 @@ export const Buttons = ({onBack, onNext, currentStep}) => {
           <button className="back-btn" onClick={onBack}>Back</button>
         }
         
-        <button className={`next-btn`} onClick={onNext}>Next</button>
+        { currentStep < 5 &&
+          <button className={`next-btn`} onClick={onNext}>Next</button>
+        }
+        { currentStep === 5 &&
+          <button className="submit-btn" onClick={onSubmit}>Submit</button>
+        }       
+        
     </div>
   )
 }
