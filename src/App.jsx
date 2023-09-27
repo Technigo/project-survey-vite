@@ -6,7 +6,7 @@ import RadioButton from "./components/RadioButton.jsx";
 export const App = () => {
   return <div>
     <Header />
-    <RadioButton />
+    <Form />
   </div>;
 
 };
