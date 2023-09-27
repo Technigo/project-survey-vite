@@ -17,7 +17,7 @@ export const App = () => {
           <House>
             <img src={Logo} alt="Logo" />
             <h1>Come on Barbie let's go party!</h1>
-            <p>Let's book some tickets to the Barbie movie?</p>
+            <p>Let's get tickets to the Barbie movie?</p>
 
             <input />
             <input />
