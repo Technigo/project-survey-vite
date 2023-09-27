@@ -30,6 +30,7 @@ export const Form = () => {
     if (currentQuestion > 1) setCurrentQuestion(currentQuestion - 1);
   };
 
+  // Function to submit the data entered in the form
   const submitForm = () => {
     console.log(formData);
     const summary = `
