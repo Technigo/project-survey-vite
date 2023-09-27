@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 function QuestionLikeMost({ onAnswer, option }) {
   const options = [
     'Food',
@@ -12,24 +11,41 @@ function QuestionLikeMost({ onAnswer, option }) {
     'Decorating the tree',
   ];
 
+  // Initialize local state for tracking the checked status
+  const [checkedOptions, setCheckedOptions] = useState([]);
+
+  useEffect(() => {
+    // Update the checked options when the 'option' prop changes
+    setCheckedOptions(Array.isArray(option) ? option : [option]);
+  }, [option]);
+
   const handleCheckboxChange = (event) => {
     const selectedOption = event.target.value;
-    onAnswer('option', selectedOption);
+    let updatedOptions = [...checkedOptions];
+
+    if (updatedOptions.includes(selectedOption)) {
+      updatedOptions = updatedOptions.filter((item) => item !== selectedOption);
+    } else {
+      updatedOptions.push(selectedOption);
+    }
+
+    setCheckedOptions(updatedOptions);
+    onAnswer('option', updatedOptions);
   };
 
   return (
     <div>
       <h2 className="question-container">What do you like most about Christmas?</h2>
-      {options.map((option) => (
-        <div key={option}>
+      {options.map((item) => (
+        <div key={item}>
           <label>
             <input
               type="checkbox"
-              value={option}
-              checked={option === option} // This needs to be updated
+              value={item}
+              checked={checkedOptions.includes(item)}
               onChange={handleCheckboxChange}
             />
-            {option}
+            {item}
           </label>
         </div>
       ))}
@@ -38,3 +54,5 @@ function QuestionLikeMost({ onAnswer, option }) {
 }
 
 export default QuestionLikeMost;
+
+

@@ -1,18 +1,13 @@
-//For example, name your gender Woman, Man, Other, elf, dropdownmenu
-// GenderQuestion.jsx
-import React, { useState } from 'react';
+import React from 'react';
 
-function GenderQuestion({ onAnswer }) {
-  const [selectedGender, setSelectedGender] = useState(''); 
-
+function GenderQuestion({ selectedGender, onGenderChange }) {
   const genderOptions = ['Woman', 'Man', 'Other', 'Elf'];
 
   const handleGenderChange = (event) => {
     const selectedGenderOption = event.target.value;
-    setSelectedGender(selectedGenderOption);
 
-    // Call the onAnswer callback with the selected gender option
-    onAnswer('selectedGender', selectedGenderOption);
+
+    onGenderChange(selectedGenderOption);
   };
 
   return (
@@ -22,7 +17,7 @@ function GenderQuestion({ onAnswer }) {
         value={selectedGender}
         onChange={handleGenderChange}
       >
-        <option value="">Select your gender</option> {/* Add an empty option */}
+        <option value="">Select your gender</option>
         {genderOptions.map((option) => (
           <option key={option} value={option}>
             {option}
@@ -35,4 +30,5 @@ function GenderQuestion({ onAnswer }) {
 }
 
 export default GenderQuestion;
+
 
