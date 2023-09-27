@@ -68,9 +68,11 @@ main-body img {
 /* Grid parent CSS */
 .form-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   padding: 1em;
   background-color: #F266AB;
+  border-color: black;
+  border-width: 20px;
 
 }
 
@@ -82,4 +84,19 @@ main-body img {
   text-align: center;
   padding: 1em;
   border-radius: 8px;
+  border-color: black;
+  border-width: 20px;
+}
+
+.q1,
+.q2,
+.q5 {
+  grid-column: span 2;
+}
+
+/*media query for mobile - 1 columns .*/
+@media screen and (max-width: 667px) {
+  .output-survey {
+    grid-column: span 2;
+  }
 }

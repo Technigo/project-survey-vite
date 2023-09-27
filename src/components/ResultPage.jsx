@@ -1,11 +1,26 @@
 
 export const ResultPage = (formData) => {
     console.log("entered the ResultPage component")
+     {/* cant do this as it is an object, cant render object! {formData} */}
     return (
-        <section className="output-survey">
-            Results page appears here!
-            {/* cant do this as it is an object, cant render object! {formData} */}
-
+        <section className="form-wrapper">
+         
+                <div className="output-survey q1">
+                 Question 1 - Name  
+                  </div>
+                  <div className="output-survey q2">
+                  Question 2  - Age
+                  </div>
+                  <div className="output-survey q3">
+                  Question 3  - Class  
+                  </div>
+                  <div className="output-survey q4">
+                  Question 4 - Dinosaur 
+                  </div>
+                  <div className="output-survey q5">
+                  Question 5 - Food 
+                  </div>
+                   
         </section>
     )
 }
