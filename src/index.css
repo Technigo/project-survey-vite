@@ -11,6 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 } */
+*, *:after, *:before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 body {
   margin: 0;
@@ -36,10 +41,15 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 } */
 
+
+/* -------------------- HEADER -------------------- */
+
 .header {
   font-size: 2rem;
   margin-bottom: 20px;
 }
+
+/* -------------------- QUESTIONS-------------------- */
 
 .questions-wrapper {
   display: flex;
@@ -52,31 +62,9 @@ body {
   background-color: rgb(245, 242, 242);
   opacity: 0.7;
 }
-
-input {
-  border: none;
-  padding: 1rem 3rem;
-  opacity: 0.99;
-  
-}
-
-button {
-  margin: 20px;
-  font-weight: bold;
-}
 .question-container {
   margin-bottom: 30px;
   color: #333333;
-}
-
-.question-container input {
-  margin-top: 10px;
-  display: block;
-}
-
-.question-container select {
-  margin-top: 10px;
-  display:block;
 }
 .question {
   font-size: 1.2rem;
@@ -88,7 +76,36 @@ button {
   color: #333333;
 }
 
+.container-wrapper, .summary-container {
+  width: 100%; /* Takes the full width of the viewport */
+  max-width: 500px; 
+  min-width: 300px; /* Doesn’t get smaller than 300px */
+  margin: 0 auto; /* Centers the elements horizontally */
+}
 
+/* -------------------- FORM -------------------- */
+
+button {
+  margin: 20px;
+  font-weight: bold;
+}
+
+
+input {
+  display: block;
+  border: none;
+  padding: 0.7rem 3rem;
+  font-size: 18px;
+  background-color: #7b876e;
+  opacity: 0.7;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+ select {
+  margin-top: 10px;
+  display:block;
+}
 
 .options {
   list-style-type: none;
@@ -108,10 +125,12 @@ button {
 .input-group input {
   margin-right: 10px;
 }
+
 form {
-  display: grid; 
-  grid-template-row: 1fr 1fr; 
-  gap: 5px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .submit-button {
   background-color: #4C5544; /* olive green */
@@ -124,7 +143,7 @@ form {
 }
 
 .restart-button{
-  background-color: #4C5544; /* olive green */
+  background-color: #4C5544; 
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -142,23 +161,22 @@ form {
 .small-text {
   font-size: 10px;
 }
+
+/* -------------------- FOOTER -------------------- */
+
 .footer{
   text-align: center;
   margin-top: 8rem;
   
 }
- .container-wrapper, .summary-container {
-  width: 100%; /* Takes the full width of the viewport */
-  max-width: 500px; 
-  min-width: 300px; /* Doesn’t get smaller than 300px */
-  margin: 0 auto; /* Centers the elements horizontally */
+
+/* -------------------- TABLET -------------------- */
+
+@media (min-width: 667px) and (max-width: 1024px){
+
 }
 
-/* Media Query for smaller screens */
-@media (max-width: 600px) {
-  .header, .footer, .container-wrapper, .summary-container {
-    padding: 10px; 
-    max-width: 90%;
-    min-width: 50px;
-  }
+/* -------------------- DESKTOP -------------------- */
+@media (min-width: 1025px){
+
 }
