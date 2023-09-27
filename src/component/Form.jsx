@@ -1,42 +1,95 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import { ContinentQuestion } from './ContinentQuestion'
-import { NameQuestion } from './NameQuestion'
-import { PreferenceQuestion } from './PreferenceQuestion'
+import { SpiritQuestion } from "./SpiritQuestion";
+import { NameQuestion } from "./NameQuestion";
+import { AgeQuestion } from "./AgeQuestion";
+import { PreferenceQuestion } from "./PreferenceQuestion";
+import { LastPage } from "./LastPage";
 
 export const Form = () => {
+  //Set state to store form data
+  const [formData, setFormData] = useState({
+    name: "",
+    age: "",
+    preference: "",
+    spirit: "",
+  });
 
-    const [name, setName] = useState('')
-    const [preference, setPreference] = useState ('');
-    const [continent, setContinent] = useState ('');
+  //Update form data
+  const updateFormData = (field, value) => {
+    setFormData((previous) => ({ ...previous, [field]: value }));
+  };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        console.log(name)
-        console.log(preference)
-        console.log(continent)
-        
-        alert(`Name: ${name}
-            Preference: ${preference}
-            Continent: ${continent}`)
-    }
-    
-    return (
-        <div className="theFormContainer">
-            <form id="theForm" onSubmit={event => handleSubmit(event)}>
+    nextStep();
 
-                <NameQuestion value={name} setValue={setName} />
+    console.log(`
+    Name: ${formData.name}
+    Age: ${formData.age}
+    Preference: ${formData.preference}
+    Spirit: ${formData.spirit}`);
+  };
 
-                <PreferenceQuestion value={preference} setValue={setPreference} />
+  /// GOING BACK AND FORTH BETWEENQUESTIONS
 
-                <ContinentQuestion value={continent} setValue={setContinent} />
-                
+  // State to track the current step in the form
+  const [currentStep, setCurrentStep] = useState(1);
+  // Function to move to the next step in the form
+  const nextStep = () => {
+    if (currentStep < 5) setCurrentStep(currentStep + 1);
+  };
+  const prevStep = () => {
+    if (currentStep > 1) setCurrentStep(currentStep - 1);
+  };
 
-                <button type="submit">WHAT DESTINATION SUITS YOU?</button>
-
-            </form>
+  return (
+    <div className="theFormContainer">
+      <form id="theForm" onSubmit={(event) => event.preventDefault()}>
+        {/* Render the Name & Age component if on step 1 */}
+        <div className={`question ${currentStep !== 1 ? "hidden" : ""}`}>
+          {currentStep === 1 && (
+            <NameQuestion value={formData.name} setValue={updateFormData} />
+          )}
+        </div>
+        <div className={`question ${currentStep !== 1 ? "hidden" : ""}`}>
+          {currentStep === 1 && (
+            <AgeQuestion value={formData.age} setValue={updateFormData} />
+          )}
         </div>
 
-    )
-}
+        {/* Render the preference component if on step 2 */}
+        <div className={`question ${currentStep !== 2 ? "hidden" : ""}`}>
+          {currentStep === 2 && (
+            <PreferenceQuestion
+              value={formData.preference}
+              setValue={updateFormData}
+            />
+          )}
+        </div>
+
+        {/* Render the spirit component if on step 3 */}
+        <div className={`question ${currentStep !== 3 ? "hidden" : ""}`}>
+          {currentStep === 3 && (
+            <SpiritQuestion value={formData.spirit} setValue={updateFormData} />
+          )}
+        </div>
+
+        <div className={`question ${currentStep !== 4 ? "hidden" : ""}`}>
+          {currentStep === 4 && <LastPage information={formData} />}
+        </div>
+
+        {/* Buttons for each page. "Back"-button is there, but not on page 1. "Next"-button becomes "submit"-button on last page */}
+        <div>
+          {currentStep > 1 && <button onClick={prevStep}>Back</button>}
+          {currentStep < 3 ? (
+            <button onClick={nextStep}>Next</button>
+          ) : (
+            <button onClick={handleSubmit}>WHAT DRINK SUITS YOU?</button>
+          )}
+        </div>
+      </form>
+    </div>
+  );
+};

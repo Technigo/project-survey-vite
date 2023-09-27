@@ -1,15 +1,20 @@
 export const NameQuestion = ({ value, setValue }) => {
+  const [name, setName] = [value, setValue];
 
-    const [name, setName] = [value, setValue]
+  const nameInput = (event) => setName("name", event.target.value);
 
-    return (
-        <label> What's your name? 
-        <input 
-            placeholder="Name here..."
-            type="text"
-            onChange={event => setName(event.target.value)}
-            value={name}
+  return (
+    <>
+      <label>
+        {" "}
+        What's your name?
+        <input
+          placeholder="Name here..."
+          type="text"
+          onChange={nameInput}
+          value={name}
         />
-        </label>
-    )
-}
+      </label>
+    </>
+  );
+};
