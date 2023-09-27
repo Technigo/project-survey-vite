@@ -1,12 +1,10 @@
-import React from "react";
-
-export const Superpower = () => {
+export const Superpower = ({ updateFormData, value }) => {
+  const superpowerInput = (e) => {
+    updateFormData("superpower", e.target.value);
+  };
   return (
     <form>
-      <select
-        onChange={(event) => Superpower(event.target.value)}
-        value={Superpower}
-      >
+      <select value={value} onChange={superpowerInput}>
         <option value="">Select super power</option>
         <option value="flying">Flying</option>
         <option value="invisibility">Invisibility</option>
