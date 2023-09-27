@@ -1,6 +1,7 @@
 .house {
     padding: 1rem;
     background-color: white;
-    border-radius: 1rem;
     margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
 }

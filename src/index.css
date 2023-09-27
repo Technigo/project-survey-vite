@@ -20,5 +20,8 @@ code {
 
 body {
   background-color: #e0218a;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
   align-items: center;
 }

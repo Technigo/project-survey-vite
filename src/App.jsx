@@ -15,9 +15,10 @@ export const App = () => {
       {step === 'form' && (
         <>
           <House>
+            <img src={Logo} alt="Logo" />
             <h1>Come on Barbie let's go party!</h1>
-            <p>Do you want to book tickets to the Barbie movie?</p>
-            <img src={Logo} alt="Logo" />;
+            <p>Let's book some tickets to the Barbie movie?</p>
+
             <input />
             <input />
           </House>
