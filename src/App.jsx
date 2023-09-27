@@ -9,7 +9,7 @@ export const App = () => {
   return (
     <>
       <Header />
-      <section className="survey-body">
+      <section className="form-wrapper">
         <SurveyForm />
       </section>
       <Footer />
