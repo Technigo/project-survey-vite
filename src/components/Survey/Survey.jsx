@@ -13,7 +13,7 @@ const [formData, setFormData] = useState({
   when: "",
 })
 
-//Använder Diegos logik här för att uppdatera formData
+//Function to update FormData and creates a new object that contains previous properties and values. Använder Diegos logik här för att uppdatera formData
 const updateFormData = (field, value) => {
   setFormData((previous) => ({...previous, [field]: value}));
 };
@@ -37,9 +37,9 @@ const submitForm = () => {
       {/* adding default for onSubmit - look into deeper later on  */}
       <form onSubmit={event=> event.preventDefault()}>
       <Name value={formData.name} updateFormData={updateFormData}/> {/*Här skickar vi info in till Name-componenten. Först säger vi att value ska vara det som användaren har skrivit in som sitt namn. Sen säger vi att updateFormData-funktionen i Name.jsx ska vara den funktionen som vi har deklarerat här i Survey.jsx*/}
-      <Activity/>
-      <When/>
-      <button onClick={submitForm}>Submit form</button> {/*Lade till denna knapp */}
+      <Activity value={formData.activity} updateFormData={updateFormData}/>
+      <When value={formData.when} updateFormData={updateFormData}/>
+      <button onClick={submitForm}>Click button to submit form</button>
       </form>
    
     </div>

@@ -1,4 +1,4 @@
-form {
+.survey-container {
     background-color: whitesmoke; 
     display: grid;
     grid-template-rows: 25% 25% 40% 10%;
@@ -10,6 +10,5 @@ form {
 
 button {
     background-color: rgb(117, 177, 116);
-    width: 50%;
-    height: 120%;
+    width: 70%;
 }

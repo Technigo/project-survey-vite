@@ -7,7 +7,6 @@ export const App = () => {
   return (
   
   <div className="body-container">
-    <p>{name}</p>
     <Header />
     <Survey />
     <Footer />

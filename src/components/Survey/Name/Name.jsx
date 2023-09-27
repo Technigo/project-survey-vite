@@ -35,7 +35,6 @@ export const Name = ({value, updateFormData}) => {
           Name: 
         <input type="text" value = {value} onChange={userName} />
         </label>
-        <p>Current state: {value}</p>
     </div>
   )
 }
