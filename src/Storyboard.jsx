@@ -5,6 +5,7 @@ import { MainCharacterName } from "./components/MainCharacterName";
 import { PumpkinAdjective } from "./components/PumpkinAdjective";
 import { PumpkinPatchCharacter } from "./components/PumpkinPatchCharacter";
 import { Wish } from "./components/Wish";
+import { CreateStoryBoard } from "./components/CreateStoryBoard";
 
 
 export const StoryBoard = () => {
@@ -28,29 +29,13 @@ export const StoryBoard = () => {
     const [currentStep, setCurrentStep] = useState(1);
     // Function to move to the next step in the form
     const nextStep = () => {
-        if (currentStep < 6) setCurrentStep(currentStep + 1);
+        if (currentStep < 7) setCurrentStep(currentStep + 1);
     };
     // Function to move back to the previous step
     const prevStep = () => {
         if (currentStep > 1) setCurrentStep(currentStep - 1);
     };
 
-    // function to submit the form itself
-    const createStoryBoard = () => {
-        console.log(formData);
-        const storyData =
-            <container className="story-page">
-                <h1>"{formData.name} and the Enchanted Pumpkin Patch"</h1>
-
-                <p>In a {formData.townAdjective} town nestled among autumn hills, a fluffy cat named {formData.name} had a taste for adventure. Fall arrived, and with it came tales of the Enchanted Pumpkin Patch, whispered secrets among the elder cats.</p>
-
-                <p>One moonlit night, {formData.name} set out to find it. Guided by the full moon, the cat wandered through rustling leaves and {formData.journeyMood}. Eventually, it stumbled upon a clearing bathed in moonlight, filled with enormous, {formData.pumpkinAdjective} pumpkins.</p>
-
-                <p>{formData.name} touched the largest pumpkin, and it transformed into {formData.pumpkinPatchCharacter}. "I can grant one wish," it said. {formData.name} wished for {formData.wish} and laughter for the town's cats. {formData.pumpkinPatchCharacter} granted {formData.name}'s wish, and the patch came alive with happiness.</p>
-
-                <p>Cats from all around visited, and content purring filled the air. Watching from home, {formData.name} realized the essence of fall's magic—bringing joy to others. The Enchanted Pumpkin Patch became a cherished tradition, a tale told for generations from cat to kitten.</p>
-            </container>
-    };
 
     return (
         <div>
@@ -78,14 +63,20 @@ export const StoryBoard = () => {
             {currentStep === 6 && (
                 <Wish value={formData.wishChoice} updateFormData={updateFormData} />
             )}
+
+            {/* Render the story board with all user's input */}
+            {currentStep === 7 && (
+                <CreateStoryBoard formData={formData} />
+            )}
             <div>
                 {/* Show the "Back" button if not on the first step */}
-                {currentStep > 1 && <button onClick={prevStep}>Back</button>}
-                {currentStep < 6 ? (
-                    <button onClick={nextStep}>Next</button>
-                ) : (
-                    <button onClick={createStoryBoard}>Unravel your story</button>
-                )}
+                {(currentStep > 1 && currentStep <= 6) && <button onClick={prevStep}>Back</button>}
+                {/* Show Next button up to 5th step */}
+                {currentStep < 6 && <button onClick={nextStep}>Next</button>}
+                {/* Change button msg on 6th and last form input */}
+                {currentStep === 6 && <button onClick={nextStep}>Unravel your tale</button>}
+                {/* Reload whole story-telling app */}
+                {currentStep === 7 && <button className="reload-btn" type="submit" onClick={() => window.location.reload()}>Weave a brand new tale</button>}
             </div>
         </div>
     );
