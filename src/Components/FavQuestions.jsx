@@ -1,13 +1,9 @@
+/* eslint-disable react/prop-types */
 
 
-import { useState } from "react";
+export const FavQuestions = ({fav ,onChangeFav}) => {
+   
 
-export const FavQuestions = () => {
-    const [favourite , setFavourite] = useState("Other");
-
-    const onRadioChange = (e) => {
-        setFavourite(e.target.value);
-    }
 
   return (               
     <div className="checkbox-questions">
@@ -16,27 +12,32 @@ export const FavQuestions = () => {
 
       <div className="favourite-options">
         <label htmlFor="walking">
-          <input type="checkbox" name="walking" id="walking" value={"Walking"} checked={favourite === "Walking"} onChange={onRadioChange} /> 
+          <input type="checkbox" name="walking" id="walking" value={"Walking"} checked={fav === "Walking"} onChange={onChangeFav} /> 
             Walking
         </label>
         
         <label htmlFor="running">
-          <input type="checkbox" name="running" id="running" value={"Running"} checked={favourite === "Running"} onChange={onRadioChange} />
+          <input type="checkbox" name="running" id="running" value={"Running"} checked={fav=== "Running"} onChange={onChangeFav} />
             Running
         </label>
         
         <label htmlFor="gym"> 
-          <input type="checkbox" name="gym" id="gym" value={"Going to GYM"} checked={favourite === "Going to GYM"} onChange={onRadioChange} />
+          <input type="checkbox" name="gym" id="gym" value={"Going to GYM"} checked={fav === "Going to GYM"} onChange={onChangeFav} />
             Going to GYM
         </label>
         
         <label htmlFor="swimming">
-          <input type="checkbox" name="swimming" id="swimming" value={"Swimming"} checked={favourite === "Swimming"} onChange={onRadioChange} /> 
+          <input type="checkbox" name="swimming" id="swimming" value={"Swimming"} checked={fav === "Swimming"} onChange={onChangeFav} /> 
             Swimming
         </label>
 
+        <label htmlFor="yoga">
+          <input type="checkbox" name="yoga" id="yoga" value={"Doing Yoga"} checked={fav === "Doing Yoga"} onChange={onChangeFav} /> 
+            Doing Yoga
+        </label>
+
         <label htmlFor="other">
-          <input type="checkbox" name="other" id="other" value={"Others"} checked={favourite === "Others"} onChange={onRadioChange} /> 
+          <input type="checkbox" name="other" id="other" value={"Others"} checked={fav === "Others"} onChange={onChangeFav} /> 
             Other
         </label>
       </div>                

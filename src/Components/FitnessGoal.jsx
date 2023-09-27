@@ -1,13 +1,12 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 
-export const FitnessGoal = () => {
+
+export const FitnessGoal = ({goal , onChangeText}) => {
   {/* Initialize a controlled text area where the user can type in their fitness goal */}
-  const [fitnessGoal, setFitnessGoal] = useState("");
+ 
 
   /* Update the change of the text area based on the user's answer */
-  const updateTextarea = (e) => {
-    setFitnessGoal(e.target.value);
-  }
+ 
 
   return (
       <div className="fitness-goal">
@@ -16,11 +15,11 @@ export const FitnessGoal = () => {
           What is your fitness goal?
           <textarea 
             name="fitness-goal" 
-            rows={4} 
-            cols={40} 
+            rows={3} 
+            cols={30} 
             placeholder="I aim to..." 
-            value={fitnessGoal}
-            onChange={updateTextarea}
+            value={goal}
+            onChange={onChangeText}
           />
         </label>
       </div>

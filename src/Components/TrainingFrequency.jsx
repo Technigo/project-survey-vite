@@ -1,11 +1,10 @@
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
 
-export const TrainingFrequency = () => {
-    const [frequency, setFrequency] = useState("Rarely");
+
+export const TrainingFrequency = ({freq , onchangeFreq}) => {
     
-    const updateFrequency = (e) => {
-        setFrequency(e.target.value);
-    };
+    
+   
     
     return (
         <div className="training-frequency">
@@ -17,8 +16,8 @@ export const TrainingFrequency = () => {
                         name="daily"
                         id="daily"
                         value="Daily"
-                        checked={frequency==="Daily"}
-                        onChange={updateFrequency} 
+                        checked={freq === "Daily"}
+                        onChange={onchangeFreq} 
                     />
                     Daily
                 </label> 
@@ -29,8 +28,8 @@ export const TrainingFrequency = () => {
                         name="per-week"
                         id="per-week"
                         value="One to three times per week"
-                        checked={frequency==="One to three times per week"}
-                        onChange={updateFrequency} 
+                        checked={freq === "One to three times per week"}
+                        onChange={onchangeFreq} 
                     />
                     One to three times per week
                 </label>
@@ -41,8 +40,8 @@ export const TrainingFrequency = () => {
                         name="per-month"
                         id="per-month"
                         value="Once to twice per month"
-                        checked={frequency==="Once to twice per month"}
-                        onChange={updateFrequency} 
+                        checked={freq === "Once to twice per month"}
+                        onChange={onchangeFreq} 
                     />
                     Once to twice per month
                 </label>
@@ -53,8 +52,8 @@ export const TrainingFrequency = () => {
                         name="rarely"
                         id="rarely"
                         value="Rarely"
-                        checked={frequency==="Rarely"}
-                        onChange={updateFrequency} 
+                        checked={freq === "Rarely"}
+                        onChange={onchangeFreq} 
                     />
                     Rarely
                 </label>
