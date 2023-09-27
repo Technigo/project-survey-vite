@@ -4,7 +4,7 @@ export const Name = ({ updateFormData, value }) => {
 
     return (
         <div>
-            <label>What is your name?:</label>
+            <label>What is your name?</label>
             <input type="text" value={value} onChange={childsName} />
         </div>
     )

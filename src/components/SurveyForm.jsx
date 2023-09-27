@@ -64,7 +64,8 @@ export const SurveyForm = () => {
     if (hideSurvey === false) {
         return (
             <>
-                <div>
+                <p className="sml-header">Create a poster to share with your class by answering the following questions</p>
+                <div className="question-boxes">
                     {/* Render the Name component if on step 1 */}
                     {currentStep === 1 && (
                         <Name value={formData.name} updateFormData={updateFormData} />

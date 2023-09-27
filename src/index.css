@@ -32,7 +32,12 @@ header img {
 }
 
 .sml-header {
-  padding: auto;
+  padding: 1px;
+  text-align: center;
+}
+
+.question-boxes {
+  margin-left: 1em;
 }
 
 .footer {
@@ -94,7 +99,7 @@ main-body img {
   grid-column: span 2;
 }
 
-/*media query for mobile - 1 columns .*/
+/*media query for mobile - put results into one  column .*/
 @media screen and (max-width: 667px) {
   .output-survey {
     grid-column: span 2;
