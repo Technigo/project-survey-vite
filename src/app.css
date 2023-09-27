@@ -119,6 +119,7 @@ input[type="radio"] {
     background: var(--secondary);
 }
 
+
 /* Styling for the "next-question" class */
 /* .submit-btn.next-question {
     background: var(--primary); 
