@@ -1,11 +1,7 @@
 /* eslint-disable react/prop-types */
 
 
-export const TrainingFrequency = ({freq , onchangeFreq}) => {
-    
-    
-   
-    
+export const TrainingFrequency = ({freq, onChangeFreq}) => {    
     return (
         <div className="training-frequency">
             <label>How often do you engage in physical exercises?</label>
@@ -17,7 +13,7 @@ export const TrainingFrequency = ({freq , onchangeFreq}) => {
                         id="daily"
                         value="Daily"
                         checked={freq === "Daily"}
-                        onChange={onchangeFreq} 
+                        onChange={onChangeFreq} 
                     />
                     Daily
                 </label> 
@@ -29,7 +25,7 @@ export const TrainingFrequency = ({freq , onchangeFreq}) => {
                         id="per-week"
                         value="One to three times per week"
                         checked={freq === "One to three times per week"}
-                        onChange={onchangeFreq} 
+                        onChange={onChangeFreq} 
                     />
                     One to three times per week
                 </label>
@@ -41,7 +37,7 @@ export const TrainingFrequency = ({freq , onchangeFreq}) => {
                         id="per-month"
                         value="Once to twice per month"
                         checked={freq === "Once to twice per month"}
-                        onChange={onchangeFreq} 
+                        onChange={onChangeFreq} 
                     />
                     Once to twice per month
                 </label>
@@ -53,7 +49,7 @@ export const TrainingFrequency = ({freq , onchangeFreq}) => {
                         id="rarely"
                         value="Rarely"
                         checked={freq === "Rarely"}
-                        onChange={onchangeFreq} 
+                        onChange={onChangeFreq} 
                     />
                     Rarely
                 </label>

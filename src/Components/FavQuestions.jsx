@@ -1,10 +1,7 @@
 /* eslint-disable react/prop-types */
 
 
-export const FavQuestions = ({fav ,onChangeFav}) => {
-   
-
-
+export const FavQuestions = ({fav, onChangeFav}) => {
   return (               
     <div className="checkbox-questions">
         
