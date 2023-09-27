@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div class="img">
-            <img src="/Friends_logo.svg.png" alt="Friends" />
+        <div>
+            <img src="/Friends_logo.svg.png" alt="Friends" style={{ width: '50%', height: 'auto' }} />
 
         </div>
     );

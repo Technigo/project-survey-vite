@@ -12,6 +12,9 @@ code {
     monospace;
 }
 
-.img {
-  width: 100px;
+body {
+  background-color: #E4F1FF;
+  display: flex;
+  align-items: center;
+
 }
