@@ -34,8 +34,9 @@ export const ChooseCat = ({ chooseCat, setChooseCat }) => {
       {/* This div with classname flex is only for my eyes sake */}
       <div className="flex">
         {catOptions.map((catOption) => (
-          <>
-            <label key={catOption.id}>
+          <div key={catOption.id}>
+            {/* Need label to make image clickable */}
+            <label>
               <input
                 type="radio"
                 value={catOption.id}
@@ -46,7 +47,7 @@ export const ChooseCat = ({ chooseCat, setChooseCat }) => {
                 <img src={catOption.imgSrc} alt={catOption.alt} />
               </div>
             </label>
-          </>
+          </div>
         ))}
       </div>
     </form>

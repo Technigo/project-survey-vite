@@ -18,8 +18,8 @@ const nextQuestion = () => {
   };
 
   return (
-    <div>
-      {currentQuestion === 1 && <name onNext={handleNextQuestion} />}
+    <>
+      {currentQuestion === 1 && <username onNext={handleNextQuestion} />}
       {currentQuestion === 2 && <gender onNext={handleNextQuestion} />}
       {currentQuestion === 3 && <age onNext={handleNextQuestion} />}
       {currentQuestion === 4 && <personality onNext={handleNextQuestion} />}
@@ -34,7 +34,7 @@ const nextQuestion = () => {
         <p>Age: {formData.age}</p>
         <p>Personality: {formData.personality}</p>
       </div>
-    </div>
+    </>
   );
 };
 
