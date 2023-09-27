@@ -1,20 +1,23 @@
-import { useState } from "react";
+export const AdjectiveTown = ({ updateFormData, value }) => {
 
-export const AdjectiveTown = () => {
-    const [describeTown, setDescribeTown] = useState('');
+    // const [describeTown, setDescribeTown] = useState('');
+    const townAdjective = (event) => updateFormData("townAdjective", event.target.value);
 
     return (
-        <form>
-            <select
-                value={describeTown}
-                onChange={(event) => setDescribeTown(event.target.value)}
-            >
-                <option value="">Choose an option</option>
-                <option value="quiet">quiet</option>
-                <option value="still">still</option>
-                <option value="sinister">sinister</option>
+        <span>
+            <form className="town-adjective-form">
+                <select
+                    value={value}
+                    onChange={townAdjective}
+                >
+                    <option value="">Describe the town mood:</option>
+                    <option value="quiet">quiet</option>
+                    <option value="still">still</option>
+                    <option value="sinister">sinister</option>
 
-            </select>
-        </form>
+                </select>
+            </form>
+        </span>
     )
 }
+

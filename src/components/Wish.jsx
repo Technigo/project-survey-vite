@@ -1,14 +1,15 @@
 import { useState } from "react"
 
-export const Wish = () => {
+export const Wish = ({updateFormData, value}) => {
 
-    const [wish, setWish] = useState('');
-
+    // const [wish, setWish] = useState('');
+    const wishChoice= (event)=> updateFormData("wishChoice", event.target.value)
     return (
-        <form>
+        <span>
+        <form className="wish-form">
             <select
-                value={wish}
-                onChange={(event) => setWish(event.target.value)}
+                value={value}
+                onChange={wishChoice}
             >
                 <option value="">Make a wish:</option>
                 <option value="endless joy">endless joy</option>
@@ -18,5 +19,6 @@ export const Wish = () => {
 
             </select>
         </form>
+        </span>
     )
 }

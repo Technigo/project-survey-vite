@@ -1,20 +1,20 @@
-import { useState } from "react"
 
-export const MainCharacterName = () => {
+export const MainCharacterName = ({ value, updateFormData }) => {
 
-  const [name, setName] = useState('');
-
+  // const [name, setName] = useState('');
+  const mainCharacterName = (event) => updateFormData("name", event.target.value);
   return (
-    <form className="main-character-name-form">
-      <h2>Choose a name for your adventurer: {name}</h2>
-      <input
-        aria-label="adventurer name input"
-        type="text"
-        required
-        value={name}
-        onChange={(event) => setName(event.target.value)}
-      />
-    </form>
+    <span>
+      <form className="main-character-name-form">
+        <h2>Choose a name for your adventurer: {value}</h2>
+        <input
+          aria-label="adventurer name input"
+          type="text"
+          required
+          value={value}
+          onChange={mainCharacterName}
+        />
+      </form>
+    </span>
   )
 }
-
