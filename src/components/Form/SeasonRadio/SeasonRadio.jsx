@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { ButtonNext } from "./Buttons/ButtonNext/ButtonNext.jsx";
 import "./SeasonRadio.css"
 
 export const SeasonRadio = ({ onNext }) => {
@@ -23,7 +24,7 @@ export const SeasonRadio = ({ onNext }) => {
               <span className="custom-radio"></span>
               Winter
            </label>
-           <button onClick={nextQuestion}>Next question</button>
+          <ButtonNext />
         </div>
     )
 }

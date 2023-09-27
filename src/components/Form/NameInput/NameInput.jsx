@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { ButtonNext } from "./Buttons/ButtonNext/ButtonNext.jsx";
 import "./NameInput.css"
 
 export const NameInput = ({ onNext }) => {
@@ -15,7 +16,7 @@ export const NameInput = ({ onNext }) => {
             Name:
             <input type="text" value={name} placeholder="Enter your name" onChange={(e) => setName(e.target.value)} />
           </label>
-          <button onClick={nextQuestion}>Next question</button>
+        <ButtonNext />
       </div>
     )
 }

@@ -1,8 +1,8 @@
 import { NameInput } from "./NameInput/NameInput.jsx";
 import { SeasonRadio } from "./SeasonRadio/SeasonRadio.jsx"
 import { ActivitySelect } from "./ActivitySelect/ActivitySelect.jsx";
-import { ButtonSubmit } from "./ButtonSubmit/ButtonSubmit.jsx"
 import { EcoCheck } from "./EcoCheck/EcoCheck.jsx";
+import { ButtonSubmit } from "./Buttons/ButtonSubmit/ButtonSubmit.jsx"
 
 import "./Form.css"
 
