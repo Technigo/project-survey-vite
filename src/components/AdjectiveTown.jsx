@@ -4,7 +4,7 @@ export const AdjectiveTown = ({ updateFormData, value }) => {
     const townAdjective = (event) => updateFormData("townAdjective", event.target.value);
 
     return (
-        <span>
+        <span className="town-span">
             <form className="town-adjective-form">
                 <select
                     value={value}
