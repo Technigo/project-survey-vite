@@ -18,7 +18,7 @@ export const FavDinosaur = ({ updateFormData, value }) => {
                 <label>
                     <input type="radio"
                         value="tyrannosaurus"
-                        onChange={event => SetDinosaur(event.target.value)}
+                        onChange={event => favDinosaur(event.target.value)}
                         checked={dinosaur === "tyrannosaurus"}
                     />
                     Tyrannosaurus
@@ -28,7 +28,7 @@ export const FavDinosaur = ({ updateFormData, value }) => {
                 <label>
                     <input type="radio"
                         value="stegosaurus"
-                        onChange={event => SetDinosaur(event.target.value)}
+                        onChange={event => favDinosaur(event.target.value)}
                         checked={dinosaur === "stegosaurus"}
                     />
                     Stegosaurus
@@ -37,8 +37,8 @@ export const FavDinosaur = ({ updateFormData, value }) => {
             <p>
                 <label>
                     <input type="radio"
-                        value=" triceratops"
-                        onChange={event => SetDinosaur(event.target.value)}
+                        value="triceratops"
+                        onChange={event => favDinosaur(event.target.value)}
                         checked={dinosaur === "triceratops"}
                     />
                     Triceratops
@@ -47,8 +47,8 @@ export const FavDinosaur = ({ updateFormData, value }) => {
             <p>
                 <label>
                     <input type="radio"
-                        value=" velociraptor"
-                        onChange={event => SetDinosaur(event.target.value)}
+                        value="velociraptor"
+                        onChange={event => favDinosaur(event.target.value)}
                         checked={dinosaur === "velociraptor"}
                     />
                     Velociraptor

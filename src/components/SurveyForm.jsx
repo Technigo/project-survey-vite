@@ -57,7 +57,7 @@ export const SurveyForm = () => {
 
     if (hideSurvey === true) {
         return (
-            <ResultPage />
+            <ResultPage formData={formData} />
         )
     }
 

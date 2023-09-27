@@ -89,7 +89,7 @@ main-body img {
 }
 
 .q1,
-.q2,
+.q4,
 .q5 {
   grid-column: span 2;
 }
