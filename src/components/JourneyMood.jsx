@@ -13,10 +13,11 @@ export const JourneyMood = ({ updateFormData, value }) => {
                     <label key={journeyChoice}>
                         <input
                             type="radio"
-                            value={value}
+                            value={journeyChoice}
                             onChange={journeyMoodChoice}
                             checked={value === journeyChoice}
                         />
+                        {journeyChoice}
                     </label>
                 ))}
             </form>

@@ -13,10 +13,11 @@ export const PumpkinPatchCharacter = ({ updateFormData, value }) => {
           <label key={characterChoice}>
             <input
               type="radio"
-              value={value}
+              value={characterChoice}
               onChange={PumpkinPatchCharacterChoice}
               checked={value === characterChoice}
             />
+            {characterChoice} 
           </label>
         ))}
       </form>
