@@ -12,7 +12,7 @@ console.log(formData.formData.name);
         <section className="form-wrapper">
          
                 <div className="output-survey q1">
-                 My name is {formData.formData.name} 
+                My name is {formData.formData.name} &#128515;
                   </div>
                   <div className="output-survey q2">
                   I am {formData.formData.age} years old
@@ -24,12 +24,13 @@ console.log(formData.formData.name);
                   My favourite dinosaur is a {formData.formData.favDinosaur} 
                   </div>
                   <div className="output-survey q5">
-                  My favourite food is {formData.formData.favFood} 
+                  &#127829; My favourite food is {formData.formData.favFood}
                   </div>
                    
         </section>
     )
 }
+
 
 
 // return (
