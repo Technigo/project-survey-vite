@@ -1,5 +1,5 @@
 import "./CatProfile.css";
-import { catOptions, genderGroups } from "./Arrays";
+import { catOptions, genderGroups, personalityTypes } from "./Arrays";
 
 // import { useState } from "react";
 
@@ -23,6 +23,14 @@ export const CatProfile = ({
   );
 
   const genderIconSrc = selectedGender ? selectedGender.imgSrc : "";
+
+  const selectedPersonality = personalityTypes.find(
+    (pType) => pType.id === personality
+  );
+
+  const pDescription = selectedPersonality
+    ? selectedPersonality.description
+    : "";
 
   console.log("chooseCat:", chooseCat);
   return (
@@ -54,7 +62,11 @@ export const CatProfile = ({
             Congratulations {userName}! Hope you and {catName} will live happily
             ever after 😸
           </p>
-          <p>Your cat is {personality} and </p>
+          <p>
+            {/* Prettier made the {" "} */}
+            You have chosen a cat with the personality type, {personality}.{" "}
+            {pDescription}
+          </p>
         </div>
       </div>
     </div>
