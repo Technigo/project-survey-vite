@@ -13,20 +13,29 @@ import Footer from './components/footer';
 function App() {
   const [answers, setAnswers] = useState({
     celebrateChristmas: '',
-    excitementLevel: '',
+    excitementLevel: '', // Initialize excitementLevel to an empty string
     selectedGender: '',
-    selectedAge: '',
-    option: '',
+    selectedAge: '', // Initialize selectedAge to an empty string
+    option: [],
     likedOption: '',
   });
 
   const [showSummary, setShowSummary] = useState(false);
 
   const handleAnswer = (question, answer) => {
-    setAnswers((prevAnswers) => ({
-      ...prevAnswers,
-      [question]: answer,
-    }));
+    if (question === '') {
+      // Handle the case where the question is empty (for the QuestionExcited component)
+      setAnswers((prevAnswers) => ({
+        ...prevAnswers,
+        excitementLevel: answer,
+      }));
+    } else {
+      // Handle other questions with a non-empty question identifier
+      setAnswers((prevAnswers) => ({
+        ...prevAnswers,
+        [question]: answer,
+      }));
+    }
   };
 
   const handleSubmit = () => {
@@ -37,24 +46,24 @@ function App() {
     <div className="App">
       <Header />
       <SurveyInfo />
-      
+
       {/* Render all questions */}
       <QuestionCelebrate
         onAnswer={(answer) => handleAnswer('celebrateChristmas', answer)}
         celebrateChristmas={answers.celebrateChristmas}
       />
       <QuestionExcited
-        onAnswer={(answer) => handleAnswer('excitementLevel', answer)}
+        onAnswer={(answer) => handleAnswer('', answer)} // Pass an empty question identifier
         excitementLevel={answers.excitementLevel}
       />
-    <QuestionGender
-    onGenderChange={(selectedGender) => handleAnswer('selectedGender', selectedGender)}
-    selectedGender={answers.selectedGender}
-    />
-      <QuestionAge
-        onAnswer={(answer) => handleAnswer('selectedAge', answer)}
-        selectedAge={answers.selectedAge}
+      <QuestionGender
+        onGenderChange={(selectedGender) => handleAnswer('selectedGender', selectedGender)}
+        selectedGender={answers.selectedGender}
       />
+      <QuestionAge
+         selectedAge={answers.selectedAge}
+         setSelectedAge={(newAge) => handleAnswer('selectedAge', newAge)}
+       />
       <QuestionLikeMost
         onAnswer={(answer) => handleAnswer('option', answer)}
         option={answers.option}
@@ -63,18 +72,32 @@ function App() {
         onAnswer={(answer) => handleAnswer('likedOption', answer)}
         likedOption={answers.likedOption}
       />
-      
+
       {/* Render the Submit button */}
       <button onClick={handleSubmit}>Submit</button>
 
-      {/* Render the summary when showSummary is true */}
-      {showSummary && <SurveySummary surveyAnswers={answers} />}
-      
+      {/* Pass the answers to SurveySummary when showSummary is true */}
+      {showSummary && (
+        <SurveySummary
+          surveyAnswers={{
+            celebrateChristmas: answers.celebrateChristmas,
+            excitementLevel: answers.excitementLevel,
+            selectedGender: answers.selectedGender,
+            selectedAge: answers.selectedAge,
+            option: answers.option,
+            likedOption: answers.likedOption,
+          }}
+        />
+      )}
+
       <Footer />
     </div>
   );
 }
 
 export default App;
+
+
+
 
 

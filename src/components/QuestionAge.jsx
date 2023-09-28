@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
-function AgeQuestion({ onAnswer }) {
- 
-  const [selectedAge, setSelectedAge] = useState('');
+function AgeQuestion({ selectedAge, setSelectedAge }) {
+  const [ageSelected, setAgeSelected] = useState(false); // Track if age is selected
 
   // Define an array of age spans as options for the dropdown
   const ageSpans = [
@@ -18,10 +17,8 @@ function AgeQuestion({ onAnswer }) {
   // Handle changes when a user selects an age span
   const handleAgeChange = (event) => {
     const selectedAgeSpan = event.target.value;
-    setSelectedAge(selectedAgeSpan);
-
-  
-    onAnswer('selectedAge', selectedAgeSpan);
+    setSelectedAge(selectedAgeSpan); // Update the selectedAge in the parent component
+    setAgeSelected(true); // Set ageSelected to true when an age is selected
   };
 
   return (
@@ -41,9 +38,11 @@ function AgeQuestion({ onAnswer }) {
           </option>
         ))}
       </select>
-      <p>You selected: {selectedAge}</p>
+      {ageSelected && <p>You selected: {selectedAge}</p>}
     </div>
   );
 }
 
 export default AgeQuestion;
+
+

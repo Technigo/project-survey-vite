@@ -1,12 +1,10 @@
 import React from 'react';
 
-function GenderQuestion({ selectedGender, onGenderChange }) {
+function QuestionGender({ selectedGender, onGenderChange }) {
   const genderOptions = ['Woman', 'Man', 'Other', 'Elf'];
 
   const handleGenderChange = (event) => {
     const selectedGenderOption = event.target.value;
-
-
     onGenderChange(selectedGenderOption);
   };
 
@@ -24,11 +22,13 @@ function GenderQuestion({ selectedGender, onGenderChange }) {
           </option>
         ))}
       </select>
-      <p>You selected: {selectedGender || 'No gender selected'}</p>
+      
+      {/* Conditionally display the selected gender if it's not empty */}
+      {selectedGender && <p>You selected: {selectedGender}</p>}
     </div>
   );
 }
 
-export default GenderQuestion;
+export default QuestionGender;
 
 
