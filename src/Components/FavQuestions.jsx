@@ -44,7 +44,7 @@ export const FavQuestions = ({fav, onChangeFav}) => {
 
         <label htmlFor="biking">
           <input type="radio" name="biking" id="biking" value="Biking" checked={fav === "Biking"} onChange={onChangeFav} /> 
-            Other
+            Biking
         </label>
       </div>                
     </div>
