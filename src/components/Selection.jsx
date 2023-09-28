@@ -1,10 +1,6 @@
-const Selection = ({ value, setFormValue }) => {
-  const handleSelectChange = (event) => {
-    setFormValue("favoriteMushroom", event.target.value);
-  };
-
+const Selection = ({ name, value, onChange }) => {
   return (
-    <select value={value} onChange={handleSelectChange}>
+    <select value={value} onChange={onChange} name={name}>
       <option value="option0" disabled>
         Select an option
       </option>

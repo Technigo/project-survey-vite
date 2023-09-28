@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Card from "./components/Card";
 import Container from "./components/Container";
-import Signup from "./components/Signup";
+import Name from "./components/Name";
 import Selection from "./components/Selection";
 
 export const App = () => {
@@ -9,7 +9,7 @@ export const App = () => {
   const [form, setForm] = useState({
     name: "",
     yearsPickingMushrooms: "",
-    favoriteMushroom: "",
+    favoriteMushroom: "option0",
     prepareMushroom: "",
   });
 
@@ -39,7 +39,7 @@ export const App = () => {
               regarding mushrooms.
             </p>
             <img src="/mushroom.jpg"></img>
-            <input name="name" value={form.name} onChange={setFormValue} />
+            <Name name="name" value={value} onChange={setFormValue} />
           </Card>
 
           <Card>
