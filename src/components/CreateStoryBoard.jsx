@@ -5,7 +5,7 @@ export const CreateStoryBoard = ({ formData }) => {
     const storyData =
 
         <container className="story-page">
-            <h1>"{formData.name} and the Enchanted Pumpkin Patch"</h1>
+            <h1>{formData.name} and the Enchanted Pumpkin Patch</h1>
 
             <p>In a {formData.townAdjective} town nestled among autumn hills, a fluffy cat named {formData.name} had a taste for adventure. Fall arrived, and with it came tales of the Enchanted Pumpkin Patch, whispered secrets among the elder cats.</p>
 

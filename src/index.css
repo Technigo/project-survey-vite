@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-image: url("./pumpkinPatch.jpg");
+  background-size: cover;
+}
+
+.storyboard-wrapper {
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgb(242, 235, 201, 0.8);
+}
+
+/*Desktop viewport*/
+@media (min-width: 1025px) {
+.storyboard-wrapper {
+  width: 600px;
+  height: auto;
+}
+}
+
+/*Tablet viewport*/
+@media (min-width: 667px) and (max-width: 1024px) {
+  .storyboard-wrapper {
+    width: 600px;
+    height: auto;
+  }
+}

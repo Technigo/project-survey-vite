@@ -36,12 +36,13 @@ export const StoryBoard = () => {
         if (currentStep > 1) setCurrentStep(currentStep - 1);
     };
 
+    // Function to reload page
     const reloadPage = () => {
         window.location.reload()
     }
 
     return (
-        <div>
+        <div className="storyboard-wrapper">
             {/* Render the Name component if on step 1 */}
             {currentStep === 1 && (
                 <MainCharacterName value={formData.name} updateFormData={updateFormData} />
@@ -73,11 +74,11 @@ export const StoryBoard = () => {
             )}
             <div>
                 {/* Show the "Back" button if not on the first step */}
-                {(currentStep > 1 && currentStep <= 6) && <button onClick={prevStep}>Back</button>}
+                {(currentStep > 1 && currentStep <= 6) && <button className="back-btn" onClick={prevStep}>Back</button>}
                 {/* Show Next button up to 5th step */}
-                {currentStep < 6 && <button onClick={nextStep}>Next story choice</button>}
+                {currentStep < 6 && <button className="next-btn" onClick={nextStep}>Next story choice</button>}
                 {/* Change button msg on 6th and last form input */}
-                {currentStep === 6 && <button onClick={nextStep}>Unravel your tale</button>}
+                {currentStep === 6 && <button className="create-btn" onClick={nextStep}>Unravel your tale</button>}
                 {/* Reload whole story-telling app */}
                 {currentStep === 7 && <button className="reload-btn" type="submit" onClick={reloadPage}>Weave a brand new tale</button>}
             </div>
