@@ -57,7 +57,7 @@ export const Form  = () => {
         <EcoCheck value={formData.eco} updateFormData={updateFormData} />
       )}
       {currentStep >= 5 && (
-        <FormMatch name={FormData.name} season={FormData.season} activity={FormData.activity} eco={FormData.eco} />
+        <FormMatch name={formData.name} season={formData.season} activity={formData.activity} eco={formData.eco} />
       )}
       <div>
         {/* Show the "Back" button if not on the first step */}

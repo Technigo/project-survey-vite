@@ -1,6 +1,7 @@
 
 
-export const FormMatch = ( name, season, activity, eco ) => {
+export const FormMatch = ({ name, season, activity, eco }) => {
+  console.log("the user info", name, season, activity, eco)
 
     const vacationSuggestions = [
     {
@@ -53,35 +54,32 @@ export const FormMatch = ( name, season, activity, eco ) => {
     },
     ]
 
-    const findMatchingDestination = () => {
+    const findMatchingDestination = (season, activity) => {
         return vacationSuggestions.find((suggestion) => {
-          return (
+          return(
             suggestion.season === season &&
             suggestion.activity === activity
-          );
-        });
+          )
+            
+        });    
     };
 
-    const matchingDestination = findMatchingDestination();
-      if (matchingDestination) {
-      console.log(matchingDestination);
-      const formattedData = `
-        Name: ${name}
-        Season: ${season}
-        Activity: ${activity}
-        Eco: ${eco}
-        Matching Destination: ${matchingDestination.destination}, ${matchingDestination.country}
-        Image: ${matchingDestination.imageUrl}
-        Description: ${matchingDestination.destinationdescription}
-    `;
-    }
+    const matchingDestination = findMatchingDestination(season, activity);
+    console.log("This is the destination", matchingDestination )
+
     return (
         // ${formData.name}, you’ve shared with us that you are in the mood for a ${formData.season} getaway with focus on ${formData.activity}! Kudos for making an eco-friendly choice by avoiding traveling by air! Based on your choices, we think a great vacation spot for you is ${formData.destination}, ${formData.country}! ${matchingDestination.imageUrl} ${formData.destinationdescription}
         <div>
             <h2>Amazing! You have a match!</h2>
-            <p>Dear, {name} </p>
+            <p>Dear {name}, </p>
+            <p>Matching Destination: {matchingDestination.destination}, {matchingDestination.country}</p>
+        <img src={matchingDestination.imageUrl} alt={matchingDestination.destination} />
+        <p>Description: {matchingDestination.destinationdescription}</p>
+        {eco === "checked" ? (
+          <p>Great of you to think of the environment!</p>
+          ) : (
+          <p>Not taking the train? That's ok I guess!</p>
+          )}
         </div>
-
-
-        )
+    )
 };
