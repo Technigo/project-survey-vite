@@ -46,21 +46,26 @@ function Question({ question, onAnswerSubmit }) {
       )}
       {question.type === 'checkbox' && (
         <div>
-          {question.options.map((option) => (
-            <label key={option}>
-              <input
-                type="checkbox"
-                value={option}
-                checked={answer.includes(option)}
-                onChange={handleCheckbox}
-              />
-              {option}
-            </label>
-          ))}
+          <h3>Checkbox Options:</h3>
+          <ul>
+            {question.options.map((option) => (
+              <li key={option}>
+                <label>
+                  <input
+                    type="checkbox"
+                    value={option}
+                    checked={answer.includes(option)}
+                    onChange={handleCheckbox}
+                  />
+                  {option}
+                </label>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
       {question.type === 'dropdown' && (
-        <select value={answer} onChange={handleDropDown} multiple={false}>  {/* Suppress warning */}
+        <select value={answer} onChange={handleDropDown} multiple={false}>
           <option value="">Select an option</option>
           {question.options.map((option) => (
             <option key={option} value={option}>
@@ -71,17 +76,22 @@ function Question({ question, onAnswerSubmit }) {
       )}
       {question.type === 'radio' && (
         <div>
-          {question.options.map((option) => (
-            <label key={option}>
-              <input
-                type="radio"
-                value={option}
-                checked={answer === option}
-                onChange={handleInputChange}
-              />
-              {option}
-            </label>
-          ))}
+          <h3>Radio Options:</h3>
+          <ul>
+            {question.options.map((option) => (
+              <li key={option}>
+                <label>
+                  <input
+                    type="radio"
+                    value={option}
+                    checked={answer === option}
+                    onChange={handleInputChange}
+                  />
+                  {option}
+                </label>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
       <button onClick={handleSubmit}>Submit</button>
