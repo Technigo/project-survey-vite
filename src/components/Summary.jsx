@@ -34,9 +34,7 @@ function Summary({ questions }) {
           <strong>Memorable Moment:</strong> Your favorite "Friends" moment/quote: {memorableMomentQuestion.answer}. This moment adds a unique touch to your "Friends" experience, just like Phoebe's eccentricity or Joey's classic pick-up lines.
         </li>
       </ul>
-      <p>
-        Now, imagine the hilarious mishaps and heartwarming moments you'd share with your "Friends" character over coffee. Enjoy your personalized "Friends" experience!
-      </p>
+      <p>Now, imagine the hilarious mishaps and heartwarming moments you'd share with your "Friends" character over coffee. Enjoy your personalized "Friends" experience!</p>
     </div>
   );
 }
