@@ -7,13 +7,18 @@
 
 .radio-container p{
     width: 80%; 
+    text-align: center;
 }
 
 .radio-buttons {
     display: flex; 
     flex-direction: column;
+    padding: 3%;
+    background-color: hsl(58, 100%, 7%); 
+    border-radius: 5%;
+
 }
 
 .radio-buttons label {
-    margin: 2px; 
+    margin: 5px; 
 }

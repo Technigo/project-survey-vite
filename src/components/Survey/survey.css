@@ -18,7 +18,7 @@ button {
     background-color:hsl(58, 100%, 7%); 
     color: white; 
     padding: 8px 16px; 
-    margin: 15px ;
+    margin: 15px 5px; 
     font-size: 1.1em;
     font-weight: 300;
     border: none; 
