@@ -8,7 +8,7 @@ export const EcoCheck = ({ updateFormData, value }) => {
     return (
         <div>
             <h3>This is eco check</h3>
-            <img src="./src/assets/eco-leaf.png" alt="A leaf icon."></img>
+            <img src="/images/eco-leaf.png" alt="A leaf icon."></img>
             <label>
                 <input  type="checkbox"
                         checked={value}
