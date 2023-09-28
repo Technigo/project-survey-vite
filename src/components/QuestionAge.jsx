@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function AgeQuestion({ selectedAge, setSelectedAge }) {
   const [ageSelected, setAgeSelected] = useState(false); // Track if age is selected
 
   // Define an array of age spans as options for the dropdown
   const ageSpans = [
-    'Under 18',
-    '18 - 24',
-    '25 - 34',
-    '35 - 44',
-    '45 - 54',
-    '55 - 64',
-    '65 or over',
+    "Under 18",
+    "18 - 24",
+    "25 - 34",
+    "35 - 44",
+    "45 - 54",
+    "55 - 64",
+    "65 or over",
   ];
 
   // Handle changes when a user selects an age span
@@ -22,7 +22,7 @@ function AgeQuestion({ selectedAge, setSelectedAge }) {
   };
 
   return (
-    <div>
+    <div className="ageClass">
       <h2>Age</h2>
       <label htmlFor="ageSelect">Choose your age span:</label>
       <select
@@ -44,5 +44,3 @@ function AgeQuestion({ selectedAge, setSelectedAge }) {
 }
 
 export default AgeQuestion;
-
-

@@ -8,13 +8,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background-color: darkgreen;
+  color: beige;
+  text-align: center;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+header {
+  font-family: countach, sans-serif;
+  border-style: dotted;
+}
+
 .footer {
-  background-color: #f0f0f0;
-  padding: 10px;
+  background-color: maroon;
+  color: gold;
+  padding: 2px;
+  margin: 20px;
   text-align: center;
 }

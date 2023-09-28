@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function QuestionCelebrate({ onAnswer, celebrateChristmas }) {
   const [selectedOption, setSelectedOption] = useState(celebrateChristmas);
@@ -11,7 +11,7 @@ function QuestionCelebrate({ onAnswer, celebrateChristmas }) {
   const handleRadioChange = (event) => {
     const selectedOption = event.target.value;
     setSelectedOption(selectedOption);
-    onAnswer('celebrateChristmas', selectedOption);
+    onAnswer(selectedOption);
   };
 
   return (
@@ -22,7 +22,7 @@ function QuestionCelebrate({ onAnswer, celebrateChristmas }) {
           <input
             type="radio"
             value="Yes"
-            checked={selectedOption === 'Yes'}
+            checked={selectedOption === "Yes"}
             onChange={handleRadioChange}
           />
           Yes
@@ -33,23 +33,21 @@ function QuestionCelebrate({ onAnswer, celebrateChristmas }) {
           <input
             type="radio"
             value="No"
-            checked={selectedOption === 'No'}
+            checked={selectedOption === "No"}
             onChange={handleRadioChange}
           />
           No
         </label>
       </div>
       {/* Conditional message for non-celebrators */}
-      {selectedOption === 'No' && (
-        <p>This survey is not for you. Thank you for your time and have a lovely holiday!</p>
+      {selectedOption === "No" && (
+        <p>
+          This survey is not for you. Thank you for your time and have a lovely
+          holiday!
+        </p>
       )}
     </div>
   );
 }
 
 export default QuestionCelebrate;
-
-
-
-
-

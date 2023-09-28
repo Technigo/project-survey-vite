@@ -1,10 +1,14 @@
 //A little bit about the survey and why it's done
-import React from 'react';
+import React from "react";
 
 function SurveyInfo() {
   return (
     <div className="survey-info">
-      <p>Welcome to the survey of Christmas. We are interested to know a little bit more about your christmas traditions and mostly what you like the most with this magical holiday.</p>
+      <p>
+        Welcome to The Great Christmas Survey!
+        <br></br>Please tell us more about your thoughts on this most Magical
+        Holiday of all!
+      </p>
     </div>
   );
 }
