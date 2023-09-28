@@ -1,98 +1,94 @@
 import { useState } from "react";
 import Card from "./components/Card";
 import Container from "./components/Container";
-import Name from "./components/Name";
-import Selection from "./components/Selection";
+import Select from "./components/Select";
+import TextInput from "./components/TextInput";
+import RadioGroup from "./components/RadioGroup";
 
 export const App = () => {
-  // This will act as "database" for our form where we store our values to pass them to the components.
-  const [form, setForm] = useState({
-    name: "",
-    yearsPickingMushrooms: "",
-    favoriteMushroom: "option0",
-    prepareMushroom: "",
-  });
-
-  // Sets a value in our form based on the name property of our target input.
-  const setFormValue = (event) => {
-    const { name, value } = event.target;
-    setForm({
-      ...form,
-      [name]: value,
+    // This will act as "database" for our form where we store our values to pass them to the components.
+    const [form, setForm] = useState({
+        name: "",
+        yearsPickingMushrooms: "",
+        favoriteMushroom: "",
+        prepareMushroom: "",
     });
-  };
 
-  console.log(form);
+    // Sets a value in our form based on the name property of our target input.
+    const setFormValue = (event) => {
+        const { name, value } = event.target;
+        setForm({
+            ...form,
+            [name]: value,
+        });
+    };
 
-  const [step, setStep] = useState("form");
+    console.log(form);
 
-  const goToSummary = () => setStep("summary");
+    const [step, setStep] = useState("form");
 
-  return (
-    <Container>
-      {step === "form" && (
-        <>
-          <Card>
-            <h1>Welcome to our mushroom survey!</h1>
-            <p>
-              In this survey we would like you to answer a couple of questions
-              regarding mushrooms.
-            </p>
-            <img src="/mushroom.jpg"></img>
-            <Name name="name" value={value} onChange={setFormValue} />
-          </Card>
+    const goToSummary = () => setStep("summary");
 
-          <Card>
-            <p>How many years have you been picking mushrooms?</p>
-            <input
-              name="yearsPickingMushrooms"
-              type="radio"
-              checked={form.yearsPickingMushrooms === "0-5"}
-              value="0-5"
-              onChange={setFormValue}
-            />
+    return (
+        <Container>
+            {step === "form" && (
+                <>
+                    <Card>
+                        <h1>Welcome to our mushroom survey!</h1>
+                        <p>
+                            In this survey we would like you to answer a couple of questions
+                            regarding mushrooms.
+                        </p>
+                        <img src="/mushroom.jpg"></img>
+                        <TextInput
+                            name="name"
+                            label="Name"
+                            value={form.name}
+                            onChange={setFormValue}
+                            placeholder="Your name"
+                        />
+                    </Card>
 
-            <input
-              name="yearsPickingMushrooms"
-              type="radio"
-              checked={form.yearsPickingMushrooms === "5-10"}
-              value="5-10"
-              onChange={setFormValue}
-            />
+                    <Card>
+                        <p>How many years have you been picking mushrooms?</p>
+                        <RadioGroup
+                            name="yearsPickingMushrooms"
+                            value={form.yearsPickingMushrooms}
+                            onChange={setFormValue}
+                            options={[
+                                "0-5",
+                                "5-10",
+                                "10+",
+                            ]}
+                        />
+                    </Card>
 
-            <input
-              name="yearsPickingMushrooms"
-              type="radio"
-              checked={form.yearsPickingMushrooms === "10+"}
-              value="10+"
-              onChange={setFormValue}
-            />
-          </Card>
+                    <Card>
+                        <p>What is your favourite mushroom?</p>
+                        <Select
+                            name="favoriteMushroom"
+                            value={form.favoriteMushroom}
+                            onChange={setFormValue}
+                            options={[
+                                "Chanterelle",
+                                "Porcini",
+                                "Black Trumpet",
+                                "Morel",
+                            ]}
+                        />
+                    </Card>
 
-          <Card>
-            <p>What's your favourite mushroom?</p>
-            {/* <select>
-                            <option>1</option>
-                            <option>2</option>
-                        </select> */}
-            <Selection
-              name="favoriteMushroom"
-              value={form.favoriteMushroom}
-              setFormValue={setFormValue}
-            />
-          </Card>
+                    <Card>
+                        <p></p>
+                        <input type="checkbox" />
+                        <input type="checkbox" />
+                        <input type="checkbox" />
+                    </Card>
 
-          <Card>
-            <p></p>
-            <input type="checkbox" />
-            <input type="checkbox" />
-            <input type="checkbox" />
-          </Card>
-
-          <button onClick={goToSummary}>Submit</button>
-        </>
-      )}
-      {step === "summary" && <p>{form.name}</p>}
-    </Container>
-  );
+                    <button onClick={goToSummary}>Submit</button>
+                </>
+            )}
+            {step === "summary" && <p>{form.name}</p>}
+        </Container>
+    );
 };
