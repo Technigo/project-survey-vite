@@ -45,12 +45,12 @@ function Question({ question, onAnswerSubmit }) {
   ];
 
   const optionsWithImagesOutfits = [
-    { label: 'Rachel Green', image: '/rachel.jpeg' },
-    { label: 'Ross Geller', image: '/ross.webp' },
-    { label: 'Monica Geller', image: '/monica.jpg' },
-    { label: 'Chandler Bing', image: '/chandler.webp' },
-    { label: 'Joey Tribbiani', image: '/joey.jpeg' },
-    { label: 'Phoebe Buffay', image: '/Phoebe.jpeg' },
+    { label: 'Rachel Green', image: '/rachelOutfits.jpeg' },
+    { label: 'Ross Geller', image: '/rossOutfits.avif' },
+    { label: 'Monica Geller', image: '/monicaOutfits.jpeg' },
+    { label: 'Chandler Bing', image: '/chandlerOutfits.avif' },
+    { label: 'Joey Tribbiani', image: '/joeyOutfits.avif' },
+    { label: 'Phoebe Buffay', image: '/phoebeOutfits.jpeg' },
   ];
 
 
@@ -78,7 +78,7 @@ function Question({ question, onAnswerSubmit }) {
                       onChange={handleCheckbox}
                     />
 
-                    <img src={`/images/${option.image}`} alt={option.label} className="image-small" />
+                    <img src={`/images/${option.image}`} alt={option.label} className="image-outfits" />
                     <span className="name">{option.label}</span>
                   </div>
                 </label>
