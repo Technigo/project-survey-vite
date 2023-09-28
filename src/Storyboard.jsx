@@ -83,7 +83,7 @@ export const StoryBoard = () => {
                 {/* Change button msg on 6th and last form input */}
                 {currentStep === 6 && <button className="create-btn" onClick={nextStep}>Unravel tale</button>}
                 {/* Reload whole story-telling app */}
-                {currentStep === 7 && <button className="reload-btn" type="submit" onClick={reloadPage}>New tale</button>}
+                {currentStep === 7 && <button className="reload-btn" type="submit" onClick={reloadPage}>Weave new tale</button>}
             </div>
         </div>
     );
