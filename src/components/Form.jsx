@@ -6,6 +6,13 @@ function Form() {
     const [questions, setQuestions] = useState([
         {
             id: 1,
+            text: 'Hi there Friends-fan! Let\'s play a little Friends-game. Start by writing your name:',
+            type: 'text',
+            answer: '',
+        },
+
+        {
+            id: 2,
             text: 'Who is your all-time favorite "Friends" character?',
             type: 'radio',
             answer: '',
@@ -19,7 +26,7 @@ function Form() {
             ],
         },
         {
-            id: 2,
+            id: 3,
             text: 'Select all the characters whose fashion sense you admire:',
             type: 'checkbox',
             answer: [],
@@ -33,7 +40,7 @@ function Form() {
             ],
         },
         {
-            id: 3,
+            id: 4,
             text: 'Which of the following coffee shop drinks would you most likely order at Central Perk?',
             type: 'dropdown',
             answer: '',
@@ -47,8 +54,8 @@ function Form() {
             ],
         },
         {
-            id: 4,
-            text: 'Share your favorite memorable moment or quote from "Friends" and why it\'s special to you:',
+            id: 5,
+            text: 'Share your favorite memorable moment or quote from "Friends":',
             type: 'text',
             answer: '',
         },
