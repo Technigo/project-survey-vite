@@ -14,10 +14,10 @@ export const Favoriteperson = ({ user, handleInputChange }) => {
   placeholder="Enter name here"
   value={user.favPerson}
            onChange={handleInputChange}
+           autoComplete="name" // Added autocomplete attribute
            maxLength={30}
           required
 />
-
           </div>
    )
  }
