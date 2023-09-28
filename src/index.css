@@ -1,46 +1,53 @@
-:root {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Quintessential&family=Roboto&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  background-image: url("./pumpkinPatch.jpg");
-  background-size: cover;
-}
-
-.storyboard-wrapper {
-  margin: 0 auto;
-  padding: 2rem;
-  background: rgb(242, 235, 201, 0.8);
-}
-
-/*Desktop viewport*/
-@media (min-width: 1025px) {
-.storyboard-wrapper {
-  width: 600px;
-  height:500px;
-}
-}
-
-/*Tablet viewport*/
-@media (min-width: 667px) and (max-width: 1024px) {
-  .storyboard-wrapper {
-    width: 600px;
-    height: 500px;
+  /* 
+  :root {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-}
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  } */
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Quintessential, cursive;
+  }
+
+  html {
+    background-image: url("./pumpkinPatch.jpg");
+    background-size: cover;
+  }
+
+  .storyboard-wrapper {
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgb(242, 235, 201, 0.8);
+  }
+
+  /*Desktop viewport*/
+  @media (min-width: 1025px) {
+    .storyboard-wrapper {
+      width: 600px;
+      height: 500px;
+    }
+  }
+
+  /*Tablet viewport*/
+  @media (min-width: 667px) and (max-width: 1024px) {
+    .storyboard-wrapper {
+      width: 600px;
+      height: 500px;
+    }
+  }
