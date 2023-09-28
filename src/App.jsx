@@ -40,7 +40,7 @@ export const App = () => {
     if (user.name !== "" && isNaN(user.name)) {
       return true;
     } else {
-      alert("Try again. Please enter a valid favorite person.");
+      alert("Try again. Please enter your name.");
     return false}
       
   }
@@ -118,12 +118,20 @@ const handleFormSubmit = (e) => {
           <Welcome startSurvey={startSurvey} />
           ) : (
          <>   
-        {activeQuestion === 1 && (
-          <form onSubmit={handleFormSubmit}>
-            <Name user={user} handleInputChange={handleInputChange} />
-            <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
-          </form>
-        )}
+              {activeQuestion === 1 && (
+  <form onSubmit={handleFormSubmit}>
+    <Name user={user} handleInputChange={handleInputChange} />
+    <div className="btn-grid">
+      <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
+      <button className="submit-button" type="button" onClick={() => {
+        if (validateName()) {
+          goToNextQuestion();
+        }
+      }}>Next</button>
+    </div>
+  </form>
+)}
+
       
         {activeQuestion === 2 && (
           <form onSubmit={handleFormSubmit}>
@@ -144,15 +152,16 @@ const handleFormSubmit = (e) => {
               </div>
           </form>
         )}
-        {activeQuestion === 4 && (
-          <form onSubmit={handleFormSubmit}>
-            <Favoriteperson user={user} handleInputChange={handleInputChange} />
-            <div className="btn-grid">
-            <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
-              <button className="submit-button" type="submit" onClick={goToNextQuestion}>Next</button>
-              </div>
-          </form>
-        )}
+              {activeQuestion === 4 && (
+  <form onSubmit={handleFormSubmit}>
+    <Favoriteperson user={user} handleInputChange={handleInputChange} />
+    <div className="btn-grid">
+      <button className="submit-button" type="button" onClick={goToPrevQuestion}>Prev</button>
+      <button className="submit-button" type="button" onClick={goToNextQuestion}>Next</button>
+    </div>
+  </form>
+)}
+
 
         {activeQuestion === 5 && (
           <form onSubmit={handleFormSubmit}>
