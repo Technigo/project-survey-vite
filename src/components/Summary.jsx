@@ -9,7 +9,7 @@
     <div className="summary-container"> {/* A container for the summary */}
       {/* Displaying a personalized message based on user inputs */}
       
-        <img src="src/assets/map.jpg" className="pic-summary"/>
+        <img src="./src/assets/map.jpg" className="pic-summary"/>
       
       <div>
         <h2>Hi {name}!</h2>
