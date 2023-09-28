@@ -11,6 +11,7 @@ export const App = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [userAnswers, setUserAnswers] = useState(Array(questions.length).fill(''));
   const [completed, setCompleted] = useState(false);
+  const [showLoading, setShowLoading] = useState(false);
 
   // Function to handle moving to the next question or completing the form
   const handleNextQuestion = () => {
@@ -19,6 +20,11 @@ export const App = () => {
     } else {
       // All questions answered, mark the form as completed
       setCompleted(true);
+      setShowLoading(true);
+      // Simulate a delay before showing the answer
+      setTimeout(() => {
+        setShowLoading(false);
+      }, 3000);
     }
   };
 
@@ -36,8 +42,19 @@ export const App = () => {
           completed={completed} // Completed state is passed on
         />
       ) : (
-        // Display the answers summary after completing the form
-        <AnswersSummary userAnswers={userAnswers} questions={questions} />
+        // Display the loading or answer summary section after completing the form
+        <div id="answers-summary">
+          {showLoading ? (
+            // Display a loading message or icon here
+            <div className="loading">
+              <p>Your answer is being prepared...</p>
+              {/* You can replace this with your loading icon */}
+              <img src="./icons/tea.gif" alt="Loading tea-cup" width="70px" />
+            </div>
+          ) : (
+            <AnswersSummary userAnswers={userAnswers} questions={questions} />
+          )}
+        </div>
       )}
     </section>
   );

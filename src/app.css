@@ -16,7 +16,7 @@
 
     /* Other styles */
     --corner-radius: 10px;
-    --stroke-thickness: 2px;
+    --stroke-thickness: 2px solid;
 }
 
 body {
@@ -86,14 +86,34 @@ body {
     padding: 0 20px;
     color: var(--text);
     max-width: 400px;
+    border: var(--stroke-thickness) transparent;
+    /* Adds a transparent border by defaul, otherwise the border that is added on hover makes the input field move */
+}
+
+.input-field:hover {
+    transition: all 200ms ease-in-out;
+    border: var(--stroke-thickness);
+    border-color: var(--primary);
 }
 
 select {
     width: 400px;
+    transition: all 200ms ease-in-out;
+}
+
+select:focus {
+    outline: var(--primary);
 }
 
 input[type="radio"] {
     margin: 0.5rem;
+    background-color: var(--primary);
+}
+
+input:focus {
+    background-color: var(--primary);
+    color: var(--secondary);
+    outline: var(--primary);
 }
 
 /* === Button-only styling === */
@@ -108,20 +128,14 @@ input[type="radio"] {
     margin: 1rem;
 }
 
+button:hover {
+    transition: all 200ms ease-in-out;
+    border: var(--stroke-thickness);
+    border-color: var(--primary);
+}
+
 /* Style for button next to an input field, with fixed width */
 .inline {
     width: 60px;
     margin: 0 0 0 1rem;
 }
-
-.submit-btn:hover {
-    border-radius: var(--corner-radius);
-    background: var(--secondary);
-}
-
-
-/* Styling for the "next-question" class */
-/* .submit-btn.next-question {
-    background: var(--primary); 
-    color: var(--secondary); 
-  } */

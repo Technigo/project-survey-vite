@@ -28,13 +28,13 @@ export const QuestionComponent = ({
     if (currentStep === 0) {
       const userName = userAnswers[0];
       if (!/^[a-zA-Z\s]+$/.test(userName)) {
-        setValidationError('Not valid input, try again using only letters and spaces.');
+        setValidationError('Not a valid input, try again using only letters and spaces 🥰.');
         return; // Prevent moving to the next question
       }
     } else if (questions[currentStep].type === 'select' || questions[currentStep].type === 'radio') {
       // Check if the user has made a selection for radio and select questions
       if (!userAnswers[currentStep]) {
-        setValidationError('Please select an option.');
+        setValidationError('Please select an option ✅.');
         return; // Prevent moving to the next question
       }
     }
@@ -54,18 +54,20 @@ export const QuestionComponent = ({
           <p>{questions[currentStep].question}</p> {/* Display the current question */}
           {questions[currentStep].type === 'text' ? (
             /* Render input field for text type question */
-            <div className="first-question-section">
-              <input
-                className="input-field"
-                type="text"
-                value={userAnswers[currentStep]}
-                onChange={handleInputChange}
-              />
-              {currentStep === 0 ? (
-                <ShortStyleButton handleNextQuestion={handleNextQuestionClick} />
-              ) : (
-                <LongStyleButton handleNextQuestion={handleNextQuestionClick} />
-              )}
+            <div>
+              <div className="first-question-section">
+                <input
+                  className="input-field"
+                  type="text"
+                  value={userAnswers[currentStep]}
+                  onChange={handleInputChange}
+                />
+                {currentStep === 0 ? (
+                  <ShortStyleButton handleNextQuestion={handleNextQuestionClick} />
+                ) : (
+                  <LongStyleButton handleNextQuestion={handleNextQuestionClick} />
+                )}
+              </div>
               <p className="validation-error">{validationError}</p> {/* Display validation error */}
             </div>
           ) : questions[currentStep].type === 'select' ? (
@@ -89,7 +91,7 @@ export const QuestionComponent = ({
               <p className="validation-error">{validationError}</p> {/* Display validation error */}
             </div>
           ) : (
-             /* Render radio buttons for radio type question */
+            /* Render radio buttons for radio type question */
             <div className="answers-section">
               {questions[currentStep].answers.map((answer, answerIndex) => (
                 <label key={answerIndex}>
