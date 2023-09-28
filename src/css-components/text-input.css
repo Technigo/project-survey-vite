@@ -4,10 +4,25 @@
   }
   
   .main-character-name-form input {
-    width: 40%;
+    margin-top: 10px;
+    width: 50%;
     border: none;
     border-radius: 5px;
     padding: 8px 5px;
     margin-bottom: 10px;
   }
   
+
+  /*Desktop viewport*/
+@media (min-width: 1025px) {
+  .main-character-name-form input {
+    width: 50%;
+  }
+}
+
+/*Tablet viewport*/
+@media (min-width: 667px) and (max-width: 1024px) {
+  .main-character-name-form input {
+    width: 50%;
+  }
+} 

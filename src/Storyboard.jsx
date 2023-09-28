@@ -79,11 +79,11 @@ export const StoryBoard = () => {
                 {/* Show the "Back" button if not on the first step */}
                 {(currentStep > 1 && currentStep <= 6) && <button className="back-btn" onClick={prevStep}>Back</button>}
                 {/* Show Next button up to 5th step */}
-                {currentStep < 6 && <button className="next-btn" onClick={nextStep}>Next story choice</button>}
+                {currentStep < 6 && <button className="next-btn" onClick={nextStep}>Next choice</button>}
                 {/* Change button msg on 6th and last form input */}
-                {currentStep === 6 && <button className="create-btn" onClick={nextStep}>Unravel your tale</button>}
+                {currentStep === 6 && <button className="create-btn" onClick={nextStep}>Unravel tale</button>}
                 {/* Reload whole story-telling app */}
-                {currentStep === 7 && <button className="reload-btn" type="submit" onClick={reloadPage}>Weave a new tale</button>}
+                {currentStep === 7 && <button className="reload-btn" type="submit" onClick={reloadPage}>New tale</button>}
             </div>
         </div>
     );

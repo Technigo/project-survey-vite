@@ -1,23 +1,36 @@
-
 .button-wrapper {
-    display:flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 
 .button-wrapper button {
-    width: 30%;
-    border: none;
-    border-radius: 15px;
-    padding: 8px 5px;
-    background-color: rgb(83, 61, 115);
-    box-shadow: 2px 2px 4px rgba(4, 5, 13, 0.4);
-    color: #fff;
-    filter: brightness(85%);
-  }
+  width: 35%;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 5px;
+  background-color: rgb(83, 61, 115);
+  box-shadow: 2px 2px 4px rgba(4, 5, 13, 0.4);
+  color: #fff;
+  filter: brightness(85%);
+}
 
-  .button-wrapper button:hover {
-    cursor: pointer;
-    filter: brightness(105%);
-    transition: filter 0.3s ease;
+.button-wrapper button:hover {
+  cursor: pointer;
+  filter: brightness(105%);
+  transition: filter 0.3s ease;
+}
+
+/*Desktop viewport*/
+@media (min-width: 1025px) {
+  .button-wrapper button {
+    width: 25%;
   }
+}
+
+/*Tablet viewport*/
+@media (min-width: 667px) and (max-width: 1024px) {
+  .button-wrapper button {
+    width: 25%;
+  }
+}
