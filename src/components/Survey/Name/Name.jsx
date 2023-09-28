@@ -27,8 +27,8 @@
 
 import './name.css'
 export const Name = ({value, updateFormData}) => {
-  const userName= (e) => updateFormData("name", e.target.value)
-  {/*Vi har skickat in funktionen updateFormData som en prop från Survey.jsx. Den tar emot två variabler (field, value) Så här bestämmer vi att field=name och value=e.target.value. Infon från updateFormData kommer in i userName på något sätt? För userName-funktionen skriver vi in som funktionen som sker när man trycker på onChange nedan. */}
+  const userName= (e) => updateFormData("name", e.target.value) 
+  
   return (
     <div className="name-input">
         <label>

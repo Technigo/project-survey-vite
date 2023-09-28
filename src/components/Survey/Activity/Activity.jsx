@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 //import React,{useState} from 'react'
 //import './activity.css'
 
@@ -26,17 +27,17 @@
 import './activity.css'
 
 export const Activity = ({ value, updateFormData }) => {
-  const selectedActivity = (e) => updateFormData("activity", e.target.value);
+  const selectedActivity = (e) => updateFormData("activity", e.target.value)
 
   return (
     <div className="activity-select">
       <label> Activity:</label>
       <select value={value} onChange={selectedActivity}>
-      <option value="">Choose an adventure!</option>
+      <option disabled value="">Choose an adventure!</option>
       <option value="Hiking Jämtlandstriangeln">Hiking Jämtlandstriangeln</option>
       <option value="Cycling Lindvallen">Cycling Lindvallen</option>
       <option value="Canoeing Koster islands">Canoeing Koster islands</option>
         </select>
         </div>
-  );
-};
+  )
+}

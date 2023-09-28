@@ -1,16 +1,22 @@
 .survey-container {
-    background-color: whitesmoke;
-    display: grid;
-    grid-template-rows: 25% 25% 40% 10%;
+    background-color: hsl(59,98%,16%); 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* display: grid; */
+    /* grid-template-rows: 25% 25% 40% 10%; */
     /*height: auto;*/
     /*Fick kommentera ut height: auto och lägga till height i pixlar för att se allt i form när jag ändrade i stegen. Behöver lösas*/
-    height: 200px;
+    height: auto;
     padding: 5%;
     margin: 5%;
-    border-radius: 2%;
+    border-radius: 10px;
 }
 
 button {
     background-color: rgb(117, 177, 116);
-    /*width: 70%;*/
+}
+
+.submitted-data {
+    max-height: 100px;
 }

@@ -51,7 +51,7 @@
 import './when.css'
 
 export const When = ({value, updateFormData}) => {
-  const selectedWhen = (e) => updateFormData ("when", e.target.value); 
+  const selectedWhen = (e) => updateFormData ("when", e.target.value)
   
   return (
     <div className="radio-container">
