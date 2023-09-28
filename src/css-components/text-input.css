@@ -1,11 +1,12 @@
 .main-character-name-form input:focus {
     outline: none;
-    box-shadow: 0 0 5px #6B68A6, 0 0 1em #6B68A6, 0 0 0.5em #FFFCED;
+    box-shadow: 0 0 5px #F28A2E, 0 0 1em #F28A2E, 0 0 0.5em #FFFCED;
   }
   
   .main-character-name-form input {
+    width: 40%;
     border: none;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 5px;
+    padding: 8px 5px;
   }
   

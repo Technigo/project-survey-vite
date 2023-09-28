@@ -6,18 +6,18 @@
 
 
 .button-wrapper button {
-    width: 100%;
+    width: 30%;
     border: none;
-    border-radius: 10px;
-    padding: 5px;
-    background-color: rgb(83, 61, 115, 0.9);
-    box-shadow: 2px 2px 5px rgba(4, 5, 13, 0.4);
+    border-radius: 15px;
+    padding: 8px 5px;
+    background-color: rgb(83, 61, 115);
+    box-shadow: 2px 2px 4px rgba(4, 5, 13, 0.4);
     color: #fff;
-    filter: brightness(80%);
+    filter: brightness(85%);
   }
 
   .button-wrapper button:hover {
     cursor: pointer;
-    filter: brightness(100%);
+    filter: brightness(105%);
     transition: filter 0.3s ease;
   }
