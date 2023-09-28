@@ -33,7 +33,7 @@ html {
 @media (min-width: 1025px) {
 .storyboard-wrapper {
   width: 600px;
-  height: auto;
+  height:500px;
 }
 }
 
@@ -41,6 +41,6 @@ html {
 @media (min-width: 667px) and (max-width: 1024px) {
   .storyboard-wrapper {
     width: 600px;
-    height: auto;
+    height: 500px;
   }
 }

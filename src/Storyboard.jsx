@@ -72,7 +72,7 @@ export const StoryBoard = () => {
             {currentStep === 7 && (
                 <CreateStoryBoard formData={formData} />
             )}
-            <div>
+            <div className="button-wrapper">
                 {/* Show the "Back" button if not on the first step */}
                 {(currentStep > 1 && currentStep <= 6) && <button className="back-btn" onClick={prevStep}>Back</button>}
                 {/* Show Next button up to 5th step */}
