@@ -5,7 +5,7 @@
   
   .main-character-name-form input {
     margin-top: 10px;
-    width: 50%;
+    width: 100%;
     border: none;
     border-radius: 5px;
     padding: 8px 5px;
@@ -16,13 +16,13 @@
   /*Desktop viewport*/
 @media (min-width: 1025px) {
   .main-character-name-form input {
-    width: 50%;
+    width: 100%;
   }
 }
 
 /*Tablet viewport*/
 @media (min-width: 667px) and (max-width: 1024px) {
   .main-character-name-form input {
-    width: 50%;
+    width: 100%;
   }
 } 

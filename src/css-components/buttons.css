@@ -1,11 +1,13 @@
 .button-wrapper {
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  width: 100%;
 }
 
 
 .button-wrapper button {
-  width: 35%;
+  width: 40%;
   border: none;
   border-radius: 15px;
   padding: 8px 5px;
