@@ -64,9 +64,9 @@ function App() {
          selectedAge={answers.selectedAge}
          setSelectedAge={(newAge) => handleAnswer('selectedAge', newAge)}
        />
-      <QuestionLikeMost
-        onAnswer={(answer) => handleAnswer('option', answer)}
-        option={answers.option}
+     <QuestionLikeMost
+      onAnswer={(answer) => handleAnswer('option', answer)} 
+      option={answers.option}
       />
       <QuestionGift
         onAnswer={(answer) => handleAnswer('likedOption', answer)}

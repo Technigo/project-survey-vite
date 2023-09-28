@@ -1,7 +1,7 @@
 import React from 'react';
 
 function QuestionGender({ selectedGender, onGenderChange }) {
-  const genderOptions = ['Woman', 'Man', 'Other', 'Elf'];
+  const genderOptions = ['Mrs Clause', 'Santa Clause', 'Other', 'Elf', 'Reindeer'];
 
   const handleGenderChange = (event) => {
     const selectedGenderOption = event.target.value;
