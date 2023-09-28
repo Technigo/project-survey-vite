@@ -66,7 +66,7 @@ function App() {
        />
      <QuestionLikeMost
       onAnswer={(answer) => handleAnswer('option', answer)} 
-      option={answers.option}
+      option={answers.option || []} 
       />
       <QuestionGift
         onAnswer={(answer) => handleAnswer('likedOption', answer)}
