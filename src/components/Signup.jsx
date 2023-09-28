@@ -1,32 +1,32 @@
-const Signup = ({ name, email, setFormValue }) => {
-  // console.log(name, email, setFormValue);
-  const handleChangeName = (e) => {
-    setFormValue("name", e.target.value);
-  };
-  const handleChangeEmail = (e) => {
-    setFormValue("email", e.target.value);
-  };
+export const Name = ({ name, value, onChange }) => {
+  console.log(name, onChange);
+
   return (
     <form>
       <label htmlFor="name">Name</label>
       <input
         type="text"
         placeholder="name"
-        value={name}
-        onChange={handleChangeName}
-      />
-
-      <label htmlFor="email">Email</label>
-      <input
-        type="email"
-        placeholder="example@email.com"
-        value={email}
-        onChange={handleChangeEmail}
-        id="email"
-        name="email"
+        name={name}
+        value={value}
+        onChange={onChange}
       />
     </form>
   );
 };
 
-export default Signup;
+export const Email = ({ name, value, onChange }) => {
+  return (
+    <form>
+      <label htmlFor="email">Email</label>
+      <input
+        type="email"
+        placeholder="example@email.com"
+        value={value}
+        onChange={onChange}
+        id="email"
+        name={name}
+      />
+    </form>
+  );
+};

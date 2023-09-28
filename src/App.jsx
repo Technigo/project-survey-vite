@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Card from "./components/Card";
 import Container from "./components/Container";
-import Signup from "./components/Signup";
+import { Name, Email } from "./components/Signup";
 import Selection from "./components/Selection";
 
 export const App = () => {
@@ -16,10 +16,14 @@ export const App = () => {
 
   // Sets a value in our form based on the name property of our target input.
 
-  const setFormValue = (name, value) => {
-    setForm((prev) => ({ ...prev, [name]: value }));
+  // const setFormValue = (name, value) => {
+  //   setForm((prev) => ({ ...prev, [name]: value }));
+  // };
+  const setFormValue = (event) => {
+    const { name, value } = event.target;
+    // console.log(event.target);
+    setForm({ ...form, [name]: value });
   };
-
   console.log(form);
   const [step, setStep] = useState("form");
 
@@ -38,11 +42,8 @@ export const App = () => {
             <img src="/mushroom.jpg"></img>
             {/* <input/>
             <input/> */}
-            <Signup
-              name={form.name}
-              email={form.email}
-              setFormValue={setFormValue}
-            />
+            <Name name="name" value={form.name} onChange={setFormValue} />
+            <Email name="email" value={form.email} onChange={setFormValue} />
           </Card>
 
           <Card>
@@ -59,8 +60,9 @@ export const App = () => {
               <option>2</option>
             </select> */}
             <Selection
+              name="favoriteMushroom"
               value={form.favoriteMushroom}
-              setFormValue={setFormValue}
+              onChange={setFormValue}
             />
           </Card>
 
@@ -76,8 +78,7 @@ export const App = () => {
       )}
       {step === "summary" && (
         <p>
-          Hej
-          {form.name},{form.email},{form.favoriteMushroom} Mushrooms,
+          Hej - {form.name}- {form.email}- {form.favoriteMushroom}
         </p>
       )}
     </Container>
