@@ -7,5 +7,5 @@ export const Header = () => {
                 <img src="/images/vacaydream.png" alt="Your Dream Vacation In Europe, text in blue letters." />
             </div>
         </header>
-    );
-};
+    )
+}

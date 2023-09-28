@@ -1,0 +1,21 @@
+.selection-wrapper {
+    height: 70%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+}
+
+.select-menu {
+    width: 100%;
+    border: 2px solid #7CC1E9;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #7CC1E9;
+}
+
+.select-menu option {
+    font-size: 16px;
+}

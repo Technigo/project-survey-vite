@@ -1,23 +1,37 @@
 import "./ActivitySelect.css"
 
-// eslint-disable-next-line
+// The ActivitySelect component takes two props: updateFormData and value.
 export const ActivitySelect = ({ updateFormData, value}) => {
-
-    const activity = (e) => updateFormData("activity", e.target.value);
+    // The activity function is a callback function that updates the "activity" field in the form data.
+    const activity = (e) => {
+        // Calls the updateFormData function with the field name "activity" and the selected value.
+        updateFormData("activity", e.target.value)
+    }
 
     return (
-        <div>
+        <div className="selection-wrapper">
             <h3>And what do you want to do when you're there?</h3>
             <label className="label-small">
-                Please choose one of the following options: 
-                <select className="select-menu" value={value} onChange={activity}>
-                    <option value="default" disabled selected>Select an activity</option>
+                {/* Display a label with instructions for the user */}
+                Please choose one of
+                <br />
+                the following options:
+                <br />
+                {/* Create a dropdown select menu */}
+                <select
+                    className="select-menu"
+                    value={value}
+                    onChange={activity}
+                >
+                    {/* Display a default option that's disabled and cannot be selected */}
+                    <option value="default" disabled>
+                        Select an activity
+                    </option>
                     <option value="chill">Chill</option>
                     <option value="sports">Sports</option>
                     <option value="sightseeing">Sightseeing</option>
                 </select>
             </label>
         </div>
-    )
+    );
 }
-
