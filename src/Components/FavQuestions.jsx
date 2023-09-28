@@ -44,7 +44,7 @@ export const FavQuestions = ({fav, onChangeFav}) => {
         </label>
 
         <label htmlFor="other">
-          <input type="checkbox" name="other" id="other" value={"Other"} checked={fav === "Others"} onChange={onChangeFav} /> 
+          <input type="checkbox" name="other" id="other" value={"Others"} checked={fav === "Others"} onChange={onChangeFav} /> 
             Other
         </label>
       </div>                
