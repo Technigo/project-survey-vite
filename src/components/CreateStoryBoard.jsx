@@ -1,4 +1,8 @@
+import "../css-components/CreateStoryBoard.css"
+
+
 // function to submit the form itself
+
 export const CreateStoryBoard = ({ formData }) => {
 
     console.log(formData);
