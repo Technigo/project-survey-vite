@@ -29,6 +29,5 @@ body {
 .Form {
   width: 60%;
   margin: 15px auto;
-  display: flex;
-  justify-content: center;
-}
+  }
+
