@@ -10,9 +10,11 @@ export const Room = ({ value, updateFormData }) => {
             <h2>which room did you stay in?</h2>
             <select value={value} onChange={handleRoomChange}>
                 <option value="">Select a room</option>
-                <option value="Room 1">Room 1</option>
-                <option value="Room 2">Room 2</option>
-                <option value="Room 3">Room 3</option>
+                <option value="Superior Suite">Superior Suite</option>
+                <option value="Deluxe Room">Deluxe Room</option>
+                <option value="Superior Room">Superior Room</option>
+                <option value="Dubble Room">Dubble Room</option>
+                <option value="Single Room">Single Room</option>
             </select>
         </div>
     );
