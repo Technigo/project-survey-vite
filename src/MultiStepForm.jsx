@@ -50,20 +50,19 @@ export const MultiStepForm = () => {
     alert(formattedData);
   };
   return (
-    <div>
-      {/* Render the Name component if on step 1 */}
+    <div className="steps">
       {currentStep === 1 && (
         <Name value={formData.name} updateFormData={updateFormData} />
       )}
-      {/* Render the Age component if on step 2 */}
+
       {currentStep === 2 && (
         <Age value={formData.age} updateFormData={updateFormData} />
       )}
-      {/* Render the bloodtype component if on step 3 */}
+
       {currentStep === 3 && (
         <BloodType value={formData.bloodType} updateFormData={updateFormData} />
       )}
-      {/* Render the allergies component if on step 4 */}
+
       {currentStep === 4 && (
         <Allergies value={formData.allergies} updateFormData={updateFormData} />
       )}

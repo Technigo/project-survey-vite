@@ -11,3 +11,73 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  background-image: url(/Users/frida/Desktop/technigo-projects/project-survey-vite/src/assets/nebulosa.jpg);
+  position: relative;
+}
+
+.main {
+  /* border: 2px solid red; */
+  display: grid;
+  place-items: center;
+  height: 650px;
+}
+.steps {
+  width: 300px;
+  height: 400px;
+  display: grid;
+  place-items: center;
+  /* border: 7px solid rgb(204, 78, 0, 0.5); */
+  box-shadow: 5px 10px rgba(121, 46, 0, 0.5);
+  border-radius: 30px;
+  color: antiquewhite;
+
+  box-shadow: inset -5px -5px 15px 5px rgba(234, 138, 36, 0.67),
+    5px 5px 15px 7px rgba(69, 29, 10, 0.8);
+}
+
+h1 {
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  /* border: 2px solid red; */
+}
+
+h2 {
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+label {
+  text-align: center;
+  margin-left: 25%;
+}
+
+button {
+  line-height: 1;
+  text-decoration: none;
+  color: #38a7b5;
+  font-size: 18px;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0px 2px 3px 0px rgba(29, 121, 111, 0.223);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+  background-image: linear-gradient(
+    91deg,
+    rgb(153, 201, 248),
+    rgb(255, 186, 126)
+  );
+}
+
+button:hover {
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+}

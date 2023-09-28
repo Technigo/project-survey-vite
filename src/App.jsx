@@ -4,7 +4,9 @@ import { MultiStepForm } from "./MultiStepForm";
 export const App = () => {
   return (
     <>
-      <MultiStepForm />
+      <div className="main">
+        <MultiStepForm />
+      </div>
     </>
   );
 };
