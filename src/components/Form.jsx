@@ -23,7 +23,7 @@ function Form() {
                 'Chandler Bing',
                 'Joey Tribbiani',
                 'Phoebe Buffay',
-            ],
+            ]
         },
         {
             id: 3,

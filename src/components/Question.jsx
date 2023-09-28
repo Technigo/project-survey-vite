@@ -35,6 +35,16 @@ function Question({ question, onAnswerSubmit }) {
     setAnswer(question.type === 'checkbox' ? [] : '');
   };
 
+
+  const optionsWithImages = [
+    { label: 'Rachel Green', value: 'public/rachel.jpeg' },
+    { label: 'Ross Geller', value: 'public/ross.webp' },
+    { label: 'Monica Geller', value: 'public/monica.jpg' },
+    { label: 'Chandler Bing', value: 'public/chandler.webp' },
+    { label: 'Joey Tribbiani', value: 'public/joey.jpeg' },
+    { label: 'Phoebe Buffay', value: 'public/Phoebe.jpeg' },
+  ];
+
   return (
     <div>
       <h2>{question.text}</h2>
@@ -46,15 +56,16 @@ function Question({ question, onAnswerSubmit }) {
       )}
       {question.type === 'checkbox' && (
         <div>
-          {question.options.map((option) => (
-            <label key={option}>
+          {optionsWithImages.map((option) => (
+            <label key={option.label}>
               <input
                 type="checkbox"
-                value={option}
-                checked={answer.includes(option)}
+                value={option.label}
+                checked={answer.includes(option.label)}
                 onChange={handleCheckbox}
               />
-              {option}
+              {option.label}
+              <img src={`/images/${option.value}`} alt={option.label} />
             </label>
           ))}
         </div>
@@ -62,24 +73,25 @@ function Question({ question, onAnswerSubmit }) {
       {question.type === 'dropdown' && (
         <select value={answer} onChange={handleDropDown} multiple={false}>  {/* Suppress warning */}
           <option value="">Select an option</option>
-          {question.options.map((option) => (
-            <option key={option} value={option}>
-              {option}
+          {optionsWithImages.map((option) => (
+            <option key={option.label} value={option.label}>
+              {option.label}
             </option>
           ))}
         </select>
       )}
       {question.type === 'radio' && (
         <div>
-          {question.options.map((option) => (
-            <label key={option}>
+          {optionsWithImages.map((option) => (
+            <label key={option.label}>
               <input
                 type="radio"
-                value={option}
-                checked={answer === option}
+                value={option.label}
+                checked={answer === option.label}
                 onChange={handleInputChange}
               />
-              {option}
+              {option.label}
+              <img src={`/images/${option.value}`} alt={option.label} />
             </label>
           ))}
         </div>
