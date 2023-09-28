@@ -1,7 +1,19 @@
-// import { useState } from "react";
+// import { Age } from "./components/Age";
+import { SubmitForm } from "./components/Submit";
+
 
 export const App = () => {
-  return <div>MARS</div>;
+  return (
+  <>
+  <div className="main-container">MARS
+    {/* <Age /> */}
+  </div>
+  <div>
+    <SubmitForm />
+    </div>
+    </>
+
+  )
 };
 /* Insert 
     1. Intro
@@ -11,3 +23,4 @@ export const App = () => {
     5. If yes What allergies
     6. submit 
     7. Confirmation */
+    //BlA BLA BLA
