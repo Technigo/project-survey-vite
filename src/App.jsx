@@ -1,7 +1,12 @@
 // import { useState } from "react";
+import { Intro } from "./components/Intro";
 
 export const App = () => {
-  return <div>MARS</div>;
+  return (
+    <>
+      <Intro />
+    </>
+  );
 };
 /* Insert 
     1. Intro
