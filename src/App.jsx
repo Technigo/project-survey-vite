@@ -1,30 +1,29 @@
 import { useState } from "react";
 import Card from "./components/Card";
 import Container from "./components/Container";
-import { Name, Email } from "./components/Signup";
+import Name from "./components/Name";
 import Selection from "./components/Selection";
 
 export const App = () => {
   // This will act as "database" for our form where we store our values to pass them to the components.
   const [form, setForm] = useState({
     name: "",
-    email: "",
     yearsPickingMushrooms: "",
     favoriteMushroom: "option0",
     prepareMushroom: "",
   });
 
   // Sets a value in our form based on the name property of our target input.
-
-  // const setFormValue = (name, value) => {
-  //   setForm((prev) => ({ ...prev, [name]: value }));
-  // };
   const setFormValue = (event) => {
     const { name, value } = event.target;
-    // console.log(event.target);
-    setForm({ ...form, [name]: value });
+    setForm({
+      ...form,
+      [name]: value,
+    });
   };
+
   console.log(form);
+
   const [step, setStep] = useState("form");
 
   const goToSummary = () => setStep("summary");
@@ -40,29 +39,46 @@ export const App = () => {
               regarding mushrooms.
             </p>
             <img src="/mushroom.jpg"></img>
-            {/* <input/>
-            <input/> */}
-            <Name name="name" value={form.name} onChange={setFormValue} />
-            <Email name="email" value={form.email} onChange={setFormValue} />
+            <Name name="name" value={value} onChange={setFormValue} />
           </Card>
 
           <Card>
-            <p></p>
-            <input name="test" type="radio" />
-            <input name="test" type="radio" />
-            <input name="test" type="radio" />
+            <p>How many years have you been picking mushrooms?</p>
+            <input
+              name="yearsPickingMushrooms"
+              type="radio"
+              checked={form.yearsPickingMushrooms === "0-5"}
+              value="0-5"
+              onChange={setFormValue}
+            />
+
+            <input
+              name="yearsPickingMushrooms"
+              type="radio"
+              checked={form.yearsPickingMushrooms === "5-10"}
+              value="5-10"
+              onChange={setFormValue}
+            />
+
+            <input
+              name="yearsPickingMushrooms"
+              type="radio"
+              checked={form.yearsPickingMushrooms === "10+"}
+              value="10+"
+              onChange={setFormValue}
+            />
           </Card>
 
           <Card>
             <p>What's your favourite mushroom?</p>
             {/* <select>
-              <option>1</option>
-              <option>2</option>
-            </select> */}
+                            <option>1</option>
+                            <option>2</option>
+                        </select> */}
             <Selection
               name="favoriteMushroom"
               value={form.favoriteMushroom}
-              onChange={setFormValue}
+              setFormValue={setFormValue}
             />
           </Card>
 
@@ -76,11 +92,7 @@ export const App = () => {
           <button onClick={goToSummary}>Submit</button>
         </>
       )}
-      {step === "summary" && (
-        <p>
-          Hej - {form.name}- {form.email}- {form.favoriteMushroom}
-        </p>
-      )}
+      {step === "summary" && <p>{form.name}</p>}
     </Container>
   );
 };
