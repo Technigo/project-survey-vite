@@ -61,9 +61,9 @@ export const When = ({value, updateFormData}) => {
           <input
           type="radio"
           name="month"
-          value="june"
+          value="June"
           onChange={selectedWhen}
-          checked ={value === "june"} 
+          checked ={value === "June"} 
           />
           June
         </label>
@@ -72,9 +72,9 @@ export const When = ({value, updateFormData}) => {
           <input
           type="radio"
           name="month"
-          value="july"
+          value="July"
           onChange={selectedWhen}
-          checked ={value === "july"} 
+          checked ={value === "July"} 
           />
           July
         </label>
@@ -83,9 +83,9 @@ export const When = ({value, updateFormData}) => {
           <input
           type="radio"
           name="month"
-          value="august"
+          value="August"
           onChange={selectedWhen}
-          checked ={value === "august"}
+          checked ={value === "August"}
           />
           August 
         </label>

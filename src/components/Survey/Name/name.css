@@ -1,3 +1,18 @@
 .name-input {
-    /* background-color: red; */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+p#name-description {
+    margin-bottom: 10px;
+}
+
+.name-input input{
+    width: 70%; 
+    padding: 5px; 
+    font-size: 1.1em;
+    border: none; 
+    color: hsl(80, 2%, 26%);
+    border-radius: 2px; 
 }

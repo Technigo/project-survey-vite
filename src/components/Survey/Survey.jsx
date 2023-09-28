@@ -41,12 +41,6 @@ export const Survey = () => {
     setSubmitted(true);  // Set the submitted flag to true
   };
 
-  //Function to handle key press for "Next" button
-  const handleKeyPress  = (e) => {
-    if (e.key === 'Enter'){
-      nextStep()
-    }
-  }
 
   //Conditionally renders the components based on currentStep and submission. The '!submitted &&' makes the question/text disappear when going to the next step.
   return (
@@ -65,10 +59,7 @@ export const Survey = () => {
 
       {submitted ? ( // Conditionally render submitted data if the form is submitted
         <div className='sumbitted-data'>
-          <h2>Submitted Data:</h2>
-          <p>Name: {formData.name}</p>
-          <p>Activity: {formData.activity}</p>
-          <p>When: {formData.when}</p>
+          <p>Dear {formData.name}, <br></br>we have booked you in for the activity <strong>{formData.activity}</strong> in <strong>{formData.when} 2024</strong>. More details will come shortly. We cannot wait for this summers adventures together with you!</p>
         </div>
       ) : (
         // If form is not submitted, buttons will be displayed

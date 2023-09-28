@@ -3,20 +3,32 @@
     color: white;
     display: flex;
     flex-direction: column;
-    /* display: grid; */
-    /* grid-template-rows: 25% 25% 40% 10%; */
-    /*height: auto;*/
-    /*Fick kommentera ut height: auto och lägga till height i pixlar för att se allt i form när jag ändrade i stegen. Behöver lösas*/
+    align-items: center;
     height: auto;
-    padding: 5%;
+    padding: 1%;
     margin: 5%;
     border-radius: 10px;
 }
 
-button {
-    background-color: rgb(117, 177, 116);
+.survey-container p {
+    font-size: 1.1em;
 }
 
-.submitted-data {
-    max-height: 100px;
+button {
+    background-color:hsl(58, 100%, 7%); 
+    color: white; 
+    padding: 8px 16px; 
+    margin: 15px ;
+    font-size: 1.1em;
+    font-weight: 300;
+    border: none; 
+    border-radius: 20px;
+    cursor: pointer; 
 }
+
+button:hover {
+    background-color: rgb(175,134,6); ;
+}
+/* .submitted-data {
+    max-height: 100px;
+} */

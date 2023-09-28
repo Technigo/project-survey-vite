@@ -31,10 +31,15 @@ export const Name = ({value, updateFormData}) => {
   
   return (
     <div className="name-input">
-        <label>
-          Name: 
-        <input type="text" value = {value} onChange={userName} />
-        </label>
+        
+          <p id="name-description">Please tell us your name</p>
+          <input 
+            type="text" 
+            value = {value} 
+            onChange={userName}
+            aria-labelledby='name-description' //Added this for accessibility as the <label> is removed.
+          />
+        
     </div>
   )
 }

@@ -1,0 +1,15 @@
+.activity-select {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.select-style {
+    padding: 5px; 
+    font-size: 1.1em;
+    border: none; 
+    color: hsl(80, 2%, 26%); 
+    border-radius: 2px; 
+    width: 70%; 
+}
