@@ -3,7 +3,8 @@ export const Superpower = ({ updateFormData, value }) => {
     updateFormData("superpower", e.target.value);
   };
   return (
-    <form>
+    <form className="superpower">
+      <label>Choose a superpower to your Hero</label>
       <select value={value} onChange={superpowerInput}>
         <option value="">Select super power</option>
         <option value="flying">Flying</option>

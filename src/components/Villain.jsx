@@ -3,8 +3,8 @@ export const Villain = ({ updateFormData, value }) => {
     updateFormData("villain", e.target.value);
   };
   return (
-    <div>
-      <label>Villain: </label>
+    <div className="villain">
+      <label>Type a villain name </label>
       <input type="text" value={value} onChange={villainInput} />
     </div>
   );

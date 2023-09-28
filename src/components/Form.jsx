@@ -3,6 +3,7 @@ import { Hero } from "./Hero";
 import { Superpower } from "./Superpower";
 import { Weakness } from "./Weakness";
 import { Villain } from "./Villain";
+import { Story1 } from "./stories/Story1";
 
 export const Form = () => {
   // State to store form data
@@ -39,32 +40,59 @@ export const Form = () => {
     Weakness: ${formData.weakness}
     Villain: ${formData.villain}`;
     alert(summary);
+
+    //Need to adjust prompts for male/female/neither
+    // if (formData.superpower === "flight" && formData.weakness === "blind") {
+    //   alert(
+    //     <Story1
+    //       hero={formData.hero}
+    //       superpower={formData.superpower}
+    //       weakness={formData.weakness}
+    //       villain={formData.villain}
+    //     />
+    //   );
+    // }
   };
 
   return (
     <div className="storyForm">
-      {currentQuestion === 1 && (
-        <Hero value={formData.hero} updateFormData={updateFormData} />
-      )}
-      {currentQuestion === 2 && (
-        <Superpower
-          value={formData.superpower}
-          updateFormData={updateFormData}
-        />
-      )}
-      {currentQuestion === 3 && (
-        <Weakness value={formData.weakness} updateFormData={updateFormData} />
-      )}
-      {currentQuestion === 4 && (
-        <Villain value={formData.villain} updateFormData={updateFormData} />
-      )}
-      <div>
-        {currentQuestion > 1 && (
-          <button onClick={previousQuestion}>Back</button>
-        )}
-        {currentQuestion < 4 && <button onClick={nextQuestion}>Next</button>}
-        {currentQuestion === 4 && <button onClick={submitForm}>Submit</button>}
+      <div className="transparentBackground">
+        <div className="questionContainer">
+          {currentQuestion === 1 && (
+            <Hero value={formData.hero} updateFormData={updateFormData} />
+          )}
+          {currentQuestion === 2 && (
+            <Superpower
+              value={formData.superpower}
+              updateFormData={updateFormData}
+            />
+          )}
+          {currentQuestion === 3 && (
+            <Weakness
+              value={formData.weakness}
+              updateFormData={updateFormData}
+            />
+          )}
+          {currentQuestion === 4 && (
+            <Villain value={formData.villain} updateFormData={updateFormData} />
+          )}
+          <div>
+            {currentQuestion > 1 && (
+              <button onClick={previousQuestion}>Back</button>
+            )}
+            {currentQuestion < 4 && (
+              <button onClick={nextQuestion}>Next</button>
+            )}
+            {currentQuestion === 4 && (
+              <button onClick={submitForm}>Submit</button>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
 };
+
+{
+  /* <a href="https://www.freepik.com/free-vector/superhero-hand-strong_25067091.htm#query=hero&position=1&from_view=search&track=sph">Image by gstudioimagen1</a> on Freepik */
+}
