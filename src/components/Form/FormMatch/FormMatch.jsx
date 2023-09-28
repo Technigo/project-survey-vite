@@ -10,7 +10,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
     destination: "Santorini",
     country: "Greece",
     destinationdescription: "This Greek island is famous for its breathtaking sunsets, white-washed buildings, and crystal-clear waters. It's an ideal destination for couples seeking a romantic escape or anyone looking to relax in a beautiful setting.",
-    imageUrl: "./src/assets/santorini.jpeg",
+    imageUrl: "/images/santorini.jpeg",
     },
     {
     season: "summer",
@@ -18,7 +18,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
     destination: "Sagres",
     country: "Portugal",
     destinationdescription: "Located in the Algarve region, Sagres is known for its beautiful beaches and consistent waves. Tonel Beach and Beliche Beach are popular surf spots with options for both beginners and advanced surfers.",
-    imageUrl: "./src/assets/surf-sagres.jpeg", 
+    imageUrl: "/images/surf-sagres.jpeg", 
     },
     {
     season: "summer",
@@ -26,7 +26,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
     destination: "Krakow",
     country: "Poland",
     destinationdescription: "Krakow's Old Town is a UNESCO World Heritage site, featuring the stunning Wawel Castle, St. Mary's Basilica, and the historic Jewish Quarter of Kazimierz.",
-    imageUrl: "./src/assets/krakowguide.jpeg",
+    imageUrl: "/images/krakowguide.jpeg",
     },
     {
     season: "winter",
@@ -34,7 +34,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
     destination: "Salzburg",
     country: "Austria",
     destinationdescription: "Salzburg is a charming city with a picturesque old town. In winter, it's especially enchanting with its Christmas markets, classical music concerts, and the Hohensalzburg Fortress.",
-    imageUrl: "./public/images/salzburg.jpeg",
+    imageUrl: "/images/salzburg.jpeg",
     },
     {
     season: "winter",
@@ -42,7 +42,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
     destination: "St. Moritz",
     country: "Switzerland",
     destinationdescription: "St. Moritz is synonymous with luxury winter sports. Enjoy world-class skiing and snowboarding, as well as activities like ice skating, horse-drawn carriage rides, and polo on snow.",
-    imageUrl: "./src/assets/stMoritzSkiing.jpeg",
+    imageUrl: "/images/stMoritzSkiing.jpeg",
     },
     {
     season: "winter",
@@ -50,7 +50,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
     destination: "Vienna",
     country: "Austria",
     destinationdescription: "Vienna is a magical city during the winter months. You can explore its historic palaces, museums, and concert halls, including the Hofburg Palace, Belvedere Palace, and the Vienna State Opera.",
-    imageUrl: "./src/assets/wien-winter.jpeg",
+    imageUrl: "/images/wien-winter.jpeg",
     },
     ]
 
