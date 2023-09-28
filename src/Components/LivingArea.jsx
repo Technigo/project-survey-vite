@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+
 export const LivingArea = ({livingArea, onChangeLivingArea}) => {
     return (
         <div className="living-area">
