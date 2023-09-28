@@ -21,19 +21,31 @@
     padding: 0;
   }
 
-  body {
-    font-family: Quintessential, cursive;
-  }
-
   html {
     background-image: url("./pumpkinPatch.jpg");
     background-size: cover;
+    scroll-behavior: smooth;
+  }
+
+  body,
+  button {
+    font-family: Quintessential, cursive;
+  }
+
+  body {
+    position: relative;
   }
 
   .storyboard-wrapper {
-    margin: 0 auto;
+    position: absolute;
+    max-width: 700px;
+    max-height: 600px;
     padding: 2rem;
-    background: rgb(242, 235, 201, 0.8);
+    background: rgb(242, 235, 201, 0.7);
+    box-shadow: 2px 3px 7px 2px #A67687, 3px 4px 9px 3px #533D73;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
   }
 
   /*Desktop viewport*/
