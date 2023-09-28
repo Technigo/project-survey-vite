@@ -20,7 +20,7 @@ function Summary({ questions }) {
     < div >
       <h2>Your &ldquo;Friends&rdquo; Persona:</h2>
       <p>
-        Based on your survey responses <strong>{nameInput.answer}</strong>, we&rsquo;ve analyzed your &ldquo;Friends&rdquo; persona.
+        Based on your survey responses  <strong>{nameInput.answer}</strong>, we&rsquo;ve analyzed your &ldquo;Friends&rdquo; persona.
         Imagine you&rsquo;re sitting in Central Perk with your favorite character.
         Here&rsquo;s what your experience would be like:
       </p>
@@ -29,7 +29,7 @@ function Summary({ questions }) {
           <strong>Favorite Character:</strong> {favoriteCharacterQuestion.answer} would be your partner in crime throughout your coffee shop adventures.
         </li>
         <li>
-          <strong>Fashion Admirer:</strong> You admire the fashion sense of {fashionAdmirerQuestion.answer.join(', ')}. Looks like you appreciate style on a whole new level!
+          <strong>Fashion Admirer:</strong> You admire the fashion sense of {Array.isArray(fashionAdmirerQuestion.answer) ? fashionAdmirerQuestion.answer.join(', ') : 'N/A'}. Looks like you appreciate style on a whole new level!
         </li>
         <li>
           <strong>Coffee Order:</strong> At Central Perk, you&rsquo;d order a {coffeeOrderQuestion.answer} to keep the conversation flowing.
