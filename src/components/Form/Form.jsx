@@ -61,12 +61,9 @@ export const Form  = () => {
       )}
       <div>
         {/* Show the "Back" button if not on the first step */}
-        {currentStep > 1 && <button onClick={prevStep}>Back</button>}
-        {currentStep < 4 ? (
-          <button onClick={nextStep}>Next</button>
-        ) : (
-          <button onClick={submitForm}>Submit Form</button>
-        )}
+        {currentStep > 1 && currentStep !== 5 && <button onClick={prevStep}>Back</button>}
+        {currentStep < 4 && currentStep !== 5 && <button onClick={nextStep}>Next</button>}
+        {currentStep === 4 && <button onClick={submitForm}>Submit Form</button>}
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ export const NameInput = ({ updateFormData, value }) => {
       return (
       <>
         <div className="nameinput-wrapper">
+          <h1>Hey Dreamer!</h1>
           <h3>Please tell us your name</h3>
             <label className="nameinput-container">
               Name:
