@@ -1,0 +1,19 @@
+.radio-container{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.radio-container p{
+    width: 80%; 
+}
+
+.radio-buttons {
+    display: flex; 
+    flex-direction: column;
+}
+
+.radio-buttons label {
+    margin: 2px; 
+}

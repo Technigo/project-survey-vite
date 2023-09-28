@@ -54,9 +54,10 @@ export const When = ({value, updateFormData}) => {
   const selectedWhen = (e) => updateFormData ("when", e.target.value)
   
   return (
-    <div className="radio-container">
-      <label>
-        When would you like to go on your adventure: 
+    <div className="radio-container" aria-labelledby='when-description'> {/*Added for accessibility reasons */}
+      <p id="when-description ">
+        When would you like to go on your adventure?</p>
+        <div className='radio-buttons'>
         <label>
           <input
           type="radio"
@@ -89,8 +90,9 @@ export const When = ({value, updateFormData}) => {
           />
           August 
         </label>
+        </div>
 
-      </label>
+      
     </div>
   )
 }

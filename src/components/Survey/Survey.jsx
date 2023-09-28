@@ -59,7 +59,7 @@ export const Survey = () => {
 
       {submitted ? ( // Conditionally render submitted data if the form is submitted
         <div className='sumbitted-data'>
-          <p>Dear {formData.name}, <br></br>we have booked you in for the activity <strong>{formData.activity}</strong> in <strong>{formData.when} 2024</strong>. More details will come shortly. We cannot wait for this summers adventures together with you!</p>
+          <p>Dear {formData.name}, <br></br>we have booked you in for the activity <strong>{formData.activity}</strong> in <strong>{formData.when} 2024</strong>. More details will come shortly. We cannot wait for this summers adventures together with you!<br></br>//Nordica Adventure Society</p>
         </div>
       ) : (
         // If form is not submitted, buttons will be displayed
