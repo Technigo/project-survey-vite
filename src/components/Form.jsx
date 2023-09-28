@@ -41,7 +41,7 @@ function Form() {
         },
         {
             id: 4,
-            text: 'Which of the following coffee shop drinks would you most likely order at Central Perk?',
+            text: 'Which of the following coffee shop drinks would you most likely order at Central Perk? ☕',
             type: 'dropdown',
             answer: '',
             options: [
