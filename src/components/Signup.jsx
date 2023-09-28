@@ -1,48 +1,27 @@
-import { useState } from "react";
-const Signup = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-  });
-
-  const handleChange = (evt) => {
-    const changedField = evt.target.name;
-    const newValue = evt.target.value;
-    setFormData((currData) => {
-      return {
-        ...currData,
-        [changedField]: newValue,
-      };
-    });
+const Signup = ({ name, email, setFormValue }) => {
+  // console.log(name, email, setFormValue);
+  const handleChangeName = (e) => {
+    setFormValue("name", e.target.value);
   };
-
+  const handleChangeEmail = (e) => {
+    setFormValue("email", e.target.value);
+  };
   return (
     <form>
-      <label htmlFor="firstname">First Name</label>
+      <label htmlFor="name">Name</label>
       <input
         type="text"
-        placeholder="first name"
-        value={formData.firstName}
-        onChange={handleChange}
-        name="firstName"
-        id="firstname"
+        placeholder="name"
+        value={name}
+        onChange={handleChangeName}
       />
-      <label htmlFor="lastname">Last Name</label>
-      <input
-        type="text"
-        placeholder="last name"
-        value={formData.lastName}
-        onChange={handleChange}
-        id="lastname"
-        name="lastName"
-      />
+
       <label htmlFor="email">Email</label>
       <input
         type="email"
         placeholder="example@email.com"
-        value={formData.email}
-        onChange={handleChange}
+        value={email}
+        onChange={handleChangeEmail}
         id="email"
         name="email"
       />

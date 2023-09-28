@@ -1,7 +1,7 @@
 import styles from "./Container.module.css";
 
 const Container = ({ children }) => {
-  //   console.log(children);
+  console.log(children);
   return <div className={styles.container}>{children}</div>;
 };
 
