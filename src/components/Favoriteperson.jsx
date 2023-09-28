@@ -13,7 +13,9 @@ export const Favoriteperson = ({ user, handleInputChange }) => {
   name="favPerson" 
   placeholder="Enter name here"
   value={user.favPerson}
-  onChange={handleInputChange}
+           onChange={handleInputChange}
+           maxLength={30}
+          required
 />
 
           </div>
