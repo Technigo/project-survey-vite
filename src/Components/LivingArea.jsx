@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 
+
 export const LivingArea = ({livingArea, onChangeLivingArea}) => {
     return (
         <div className="living-area">
