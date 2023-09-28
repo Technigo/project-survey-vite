@@ -2,8 +2,8 @@
 
 const Header = () => {
     return (
-        <div>
-            <img src="/Friends_logo.svg.png" alt="Friends" style={{ width: '50%', height: 'auto' }} />
+        <div className="header">
+            <img src="/Friends_logo.svg.png" alt="Friends" style={{ width: '80%', height: 'auto' }} />
 
         </div>
     );
