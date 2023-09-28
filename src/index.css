@@ -50,6 +50,11 @@ input {
   justify-content: center;
 }
 
+.story {
+  color: white;
+  font-size: 18px;
+}
+
 .storyForm {
   background-image: url("./assets/background.jpg");
   background-size: cover;

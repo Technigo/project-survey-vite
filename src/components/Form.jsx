@@ -14,6 +14,8 @@ export const Form = () => {
     villain: "",
   });
 
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   // Function to update form data based on field and value
   const updateFormData = (field, value) => {
     setFormData((previousData) => ({ ...previousData, [field]: value }));
@@ -40,6 +42,7 @@ export const Form = () => {
     Weakness: ${formData.weakness}
     Villain: ${formData.villain}`;
     alert(summary);
+    setFormSubmitted(true);
 
     //Need to adjust prompts for male/female/neither
     // if (formData.superpower === "flight" && formData.weakness === "blind") {
@@ -85,6 +88,14 @@ export const Form = () => {
             )}
             {currentQuestion === 4 && (
               <button onClick={submitForm}>Submit</button>
+            )}
+            {formSubmitted && (
+              <Story1
+                hero={formData.hero}
+                superpower={formData.superpower}
+                weakness={formData.weakness}
+                villain={formData.villain}
+              />
             )}
           </div>
         </div>
