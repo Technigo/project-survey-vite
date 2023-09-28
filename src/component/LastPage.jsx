@@ -3,10 +3,12 @@ export const LastPage = ({ information }) => {
 
   return (
     <>
-      <p>Name: {name}</p>
-      <p>Age: {age}</p>
-      <p>Preference: {preference}</p>
-      <p>Spirit: {spirit}</p>
+      <ul className="square-bullets">
+        <li>Name: {name}</li>
+        <li>Age: {age}</li>
+        <li>Preference: {preference}</li>
+        <li>Spirit: {spirit}</li>
+      </ul>
     </>
   );
 };

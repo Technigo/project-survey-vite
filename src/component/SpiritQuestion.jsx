@@ -6,7 +6,7 @@ export const SpiritQuestion = ({ value, setValue }) => {
   return (
     <div className="spirit-question">
       <select onChange={spiritInput} value={spirit}>
-        <option value="">Which liquor do you want to use?</option>
+        <option value="">Liquor of choice:</option>
         <option value="Vodka">Vodka</option>
         <option value="Gin">Gin</option>
         <option value="Rum">Rum</option>

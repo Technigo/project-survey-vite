@@ -76,17 +76,25 @@ export const Form = () => {
           )}
         </div>
 
-        <div className={`question ${currentStep !== 4 ? "hidden" : ""}`}>
-          {currentStep === 4 && <LastPage information={formData} />}
+        <div className={`question lastP ${currentStep !== 4 ? "hidden" : ""}`}>
+          {currentStep >= 4 && <LastPage information={formData} />}
         </div>
 
         {/* Buttons for each page. "Back"-button is there, but not on page 1. "Next"-button becomes "submit"-button on last page */}
-        <div>
-          {currentStep > 1 && <button onClick={prevStep}>Back</button>}
+        <div className="button-container">
+          {currentStep > 1 && (
+            <button onClick={prevStep} className="button back">
+              Back
+            </button>
+          )}
           {currentStep < 3 ? (
-            <button onClick={nextStep}>Next</button>
+            <button onClick={nextStep} className="button next">
+              Next
+            </button>
           ) : (
-            <button onClick={handleSubmit}>WHAT DRINK SUITS YOU?</button>
+            <button onClick={handleSubmit} className="button submit">
+              WHAT DRINK SUITS YOU?
+            </button>
           )}
         </div>
       </form>
