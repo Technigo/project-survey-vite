@@ -1,5 +1,5 @@
 
-const mysteryCharacters = ["the Pumpkin King", "the Queen of Crows", "the Spectral Scarecrow", "the Autumn Sprite", "the Ember Witch", "the Moonlit Minstrel"];
+const mysteryCharacters = ["The Pumpkin King", "The Queen of Crows", "The Spectral Scarecrow", "The Autumn Sprite", "The Ember Witch", "The Moonlit Minstrel"];
 
 export const PumpkinPatchCharacter = ({ updateFormData, value }) => {
 
@@ -8,12 +8,13 @@ export const PumpkinPatchCharacter = ({ updateFormData, value }) => {
 
   return (
     <span>
-      <form className="pumpkin-patch-character-form">
+      <form className="radio-form-wrapper pumpkin-patch-character-form">
         <p>Select a mysterious character to make an appearance in the story:</p>
         {mysteryCharacters.map((characterChoice) => (
           <label key={characterChoice}>
             <input
               type="radio"
+              class="radio-button"
               value={characterChoice}
               onChange={PumpkinPatchCharacterChoice}
               checked={value === characterChoice}

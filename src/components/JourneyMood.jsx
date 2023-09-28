@@ -8,12 +8,13 @@ export const JourneyMood = ({ updateFormData, value }) => {
 
     return (
         <span>
-            <form className="journey-form">
+            <form className="radio-form-wrapper journey-form">
                 <p>Envision a walk in a dark forest. What encounters come to mind?</p>
                 {journeys.map((journeyChoice) => (
                     <label key={journeyChoice}>
                         <input
                             type="radio"
+                            class="radio-button"
                             value={journeyChoice}
                             onChange={journeyMoodChoice}
                             checked={value === journeyChoice}

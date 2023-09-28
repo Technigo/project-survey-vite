@@ -6,6 +6,9 @@ import { PumpkinAdjective } from "./components/PumpkinAdjective";
 import { PumpkinPatchCharacter } from "./components/PumpkinPatchCharacter";
 import { Wish } from "./components/Wish";
 import { CreateStoryBoard } from "./components/CreateStoryBoard";
+import './css-components/buttons.css';
+import './css-components/text-input.css';
+import './css-components/radio-buttons.css';
 
 
 export const StoryBoard = () => {
