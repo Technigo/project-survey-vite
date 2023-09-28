@@ -9,3 +9,7 @@
     margin-right: 5px; 
     vertical-align: middle;
 }
+
+.radio-form-wrapper label {
+    margin-bottom: 10px;
+}
