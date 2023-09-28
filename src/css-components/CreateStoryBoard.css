@@ -1,8 +1,44 @@
+.story-page {
+    text-align: center;
+}
+
 .story-page h1 {
     margin-bottom: 10px;
+    color: #222140;
 }
 
 .story-page p {
     margin: 10px auto;
     padding: 5px;
+    color: #010D00;
+}
+
+.story-page span {
+    font-weight: 600;
+}
+
+.town {
+    color: #222140;
+
+}
+
+.name {
+    color: #533d73;
+    font-weight: 600;
+}
+
+.journey-mood {
+    color: #A67687;
+}
+
+.pumpkin-adjective {
+    color: #591E19;
+}
+
+.mysterious-character {
+    color: #04050D;
+}
+
+.wish {
+    color: #A63921;
 }
