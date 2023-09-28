@@ -34,7 +34,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
     destination: "Salzburg",
     country: "Austria",
     destinationdescription: "Salzburg is a charming city with a picturesque old town. In winter, it's especially enchanting with its Christmas markets, classical music concerts, and the Hohensalzburg Fortress.",
-    imageUrl: "./src/assets/salzburg.jpeg",
+    imageUrl: "./public/images/salzburg.jpeg",
     },
     {
     season: "winter",
