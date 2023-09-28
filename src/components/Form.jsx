@@ -3,7 +3,7 @@ import { Hero } from "./Hero";
 import { Superpower } from "./Superpower";
 import { Weakness } from "./Weakness";
 import { Villain } from "./Villain";
-import { Story1 } from "./stories/Story1";
+import { Story } from "./stories/Story";
 
 export const Form = () => {
   // State to store form data
@@ -76,21 +76,21 @@ export const Form = () => {
               updateFormData={updateFormData}
             />
           )}
-          {currentQuestion === 4 && (
+          {currentQuestion === 4 && !formSubmitted && (
             <Villain value={formData.villain} updateFormData={updateFormData} />
           )}
           <div>
-            {currentQuestion > 1 && (
+            {currentQuestion > 1 && !formSubmitted && (
               <button onClick={previousQuestion}>Back</button>
             )}
             {currentQuestion < 4 && (
               <button onClick={nextQuestion}>Next</button>
             )}
-            {currentQuestion === 4 && (
+            {currentQuestion === 4 && !formSubmitted && (
               <button onClick={submitForm}>Submit</button>
             )}
             {formSubmitted && (
-              <Story1
+              <Story
                 hero={formData.hero}
                 superpower={formData.superpower}
                 weakness={formData.weakness}
@@ -104,6 +104,6 @@ export const Form = () => {
   );
 };
 
-{
-  /* <a href="https://www.freepik.com/free-vector/superhero-hand-strong_25067091.htm#query=hero&position=1&from_view=search&track=sph">Image by gstudioimagen1</a> on Freepik */
-}
+/* <a href="https://www.freepik.com/free-vector/superhero-hand-strong_25067091.htm#query=hero&position=1&from_view=search&track=sph">Image by gstudioimagen1</a> on Freepik */
+
+// Photo by <a href="https://unsplash.com/@dancristianpaduret?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Cristian Pădureț</a> on <a href="https://unsplash.com/photos/3bb9RUp86M0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

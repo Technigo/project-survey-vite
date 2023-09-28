@@ -51,8 +51,15 @@ input {
 }
 
 .story {
-  color: white;
+  color: black;
   font-size: 18px;
+  background-image: url("./assets/story.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem 4rem;
+  width: 650px;
+  height: 450px;
+  text-shadow: 1px 1px #000000fd;
 }
 
 .storyForm {
