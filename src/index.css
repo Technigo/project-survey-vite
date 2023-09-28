@@ -25,7 +25,8 @@ header {
 
 #header-image {
   color: gold;
-  width: 90%; // Fixa denna till resposive sen, stoppa så den inte dras ut
+  width: 90%;
+  /* Fixa den ovan till resposive sen, stoppa så den inte dras ut */
   height: 50px;
 }
 
