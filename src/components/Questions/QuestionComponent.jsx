@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { LongStyleButton } from '../FormElements/LongStyleButton';
-import { ShortStyleButton } from '../FormElements/ShortStyleButton';
+import { Button } from '../FormElements/Button';
 
 export const QuestionComponent = ({
   questions, //array of questions
@@ -9,15 +7,16 @@ export const QuestionComponent = ({
   setUserAnswers, //function to set user answers
   handleNextQuestion, //function to handle moving to the next question
   completed, //indicates if the form is completed
+  validationError,
+  setValidationError,
 }) => {
-  const [validationError, setValidationError] = useState('');
 
-  // Function to handle user input changes for text questions
+  // Function to handle user input changes for questions
   const handleInputChange = (event) => {
-    const updatedAnswer = event.target.value;
-    setUserAnswers((prevAnswers) => {
-      const updatedAnswers = [...prevAnswers];
-      updatedAnswers[currentStep] = updatedAnswer;
+    const updatedAnswer = event.target.value; // Updates the answer with the answer typed in by the user and saves it in a variable
+    setUserAnswers((prevAnswers) => { // To make sure we are working with the newest data
+      const updatedAnswers = [...prevAnswers]; // Creates a copy of the previous answers array (prevAnswers) to avoid mutating the state directly
+      updatedAnswers[currentStep] = updatedAnswer; // Updates answers array with the new answer, the one relevant for the current step
       return updatedAnswers;
     });
   };
@@ -27,14 +26,14 @@ export const QuestionComponent = ({
     // Validate user input for the name question
     if (currentStep === 0) {
       const userName = userAnswers[0];
-      if (!/^[a-zA-Z\s]+$/.test(userName)) {
+      if (!/^[a-zA-Z\söäåÖÄÅ]+$/.test(userName)) { // A regex to allow lowecase and uppercase letters, and special characters å ä ö, tests them against the text input into the name field. The exclamationmark is there to negate the test, meaning to allow for a valid input
         setValidationError('Not a valid input, try again using only letters and spaces 🥰.');
         return; // Prevent moving to the next question
       }
     } else if (questions[currentStep].type === 'select' || questions[currentStep].type === 'radio') {
       // Check if the user has made a selection for radio and select questions
       if (!userAnswers[currentStep]) {
-        setValidationError('Please select an option ✅.');
+        setValidationError('Please select an option.');
         return; // Prevent moving to the next question
       }
     }
@@ -63,12 +62,12 @@ export const QuestionComponent = ({
                   onChange={handleInputChange}
                 />
                 {currentStep === 0 ? (
-                  <ShortStyleButton handleNextQuestion={handleNextQuestionClick} />
+                  <Button onClick={handleNextQuestionClick} text={" "} longOrShortClass={"inline"} /> // Passes an empty string as the text on the button here, since we want the short inline button to have no text
                 ) : (
-                  <LongStyleButton handleNextQuestion={handleNextQuestionClick} />
+                  <Button onClick={handleNextQuestionClick} text="Next" longOrShortClass={"standalone"} />
                 )}
               </div>
-              <p className="validation-error">{validationError}</p> {/* Display validation error */}
+              {validationError && <p className="validation-error">{validationError}</p>} {/* Display validation error */}
             </div>
           ) : questions[currentStep].type === 'select' ? (
             /* Render select dropdown for select type question */
@@ -86,9 +85,9 @@ export const QuestionComponent = ({
                 ))}
               </select>
               {currentStep !== 0 && (
-                <LongStyleButton handleNextQuestion={handleNextQuestionClick} />
+                <Button onClick={handleNextQuestionClick} text="Next" longOrShortClass={"standalone"} />
               )}
-              <p className="validation-error">{validationError}</p> {/* Display validation error */}
+              {validationError && <p className="validation-error">{validationError}</p>} {/* Display validation error */}
             </div>
           ) : (
             /* Render radio buttons for radio type question */
@@ -106,19 +105,22 @@ export const QuestionComponent = ({
                 </label>
               ))}
               {currentStep !== 0 && (
-                <LongStyleButton handleNextQuestion={handleNextQuestionClick} />
+                <Button onClick={handleNextQuestionClick} text="Next" longOrShortClass={"standalone"} />
               )}
-              <p className="validation-error">{validationError}</p> {/* Display validation error */}
+              {validationError && <p className="validation-error">{validationError}</p>} {/* Display validation error */}
             </div>
           )}
         </form>
       ) : (
-        /* Render completion message when all questions are answered */
+        /* Form is completed */
         <div>
-          <p>Thank you for completing the form.</p>
-          {completed && <LongStyleButton handleNextQuestion={handleNextQuestion} />}
+          {completed && <Button onClick={handleNextQuestion} text="Next" longOrShortClass={"standalone"} />}
         </div>
       )}
     </div>
   );
-};
+}
+
+
+
+

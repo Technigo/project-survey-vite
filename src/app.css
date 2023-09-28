@@ -48,14 +48,20 @@ body {
 
 /* Section containing questions */
 .question-section {
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
     font-size: 20px;
+    max-width: 380px;
 }
 
 /* Section containing answers */
 .answers-section {
     display: flex;
     flex-direction: column;
+}
+
+.progress-bar {
+    font-style: italic;
+    opacity: 0.5;
 }
 
 /* === Form elements === */
@@ -85,7 +91,7 @@ body {
     font-family: var(--font);
     padding: 0 20px;
     color: var(--text);
-    max-width: 400px;
+    max-width: 100%;
     border: var(--stroke-thickness) transparent;
     /* Adds a transparent border by defaul, otherwise the border that is added on hover makes the input field move */
 }
@@ -97,7 +103,7 @@ body {
 }
 
 select {
-    width: 400px;
+    width: 360px;
     transition: all 200ms ease-in-out;
 }
 
@@ -124,8 +130,8 @@ input:focus {
 }
 
 .standalone {
-    width: 400px;
-    margin: 1rem;
+    width: 360px;
+    margin: 1rem 0;
 }
 
 button:hover {

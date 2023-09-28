@@ -1,3 +1,4 @@
+// Template with answers depending on the chosen answers
 export const textTemplates = {
     // 1-exercising-salty
     '1-exercising-salty': `Hello [Name]! You're a caffeine enthusiast morning person who loves to kick off the day with exercise. For breakfast, you enjoy a salty combo. You've got the perfect recipe for a slow and flavorful morning.`,

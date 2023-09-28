@@ -1,15 +1,16 @@
-import { textTemplates } from "./AnswerTemplates.jsx"
+import { textTemplates } from "./AnswerTemplates.jsx";
+import { Button } from "../FormElements/Button.jsx";
 
-export const AnswersSummary = ({ userAnswers }) => {
+export const AnswersSummary = ({ userAnswers, handleRestart }) => {
   // Function to generate an answer based on user responses
   const generateAnswer = () => {
-    // Define the template keys based on user responses
+    // Defines the template keys based on user responses, name (index=[0]) is excluded here, since it's not present in the answers-template
     const templateKey = `${userAnswers[1]}-${userAnswers[2]}-${userAnswers[3]}`;
 
-    // Check if a specific template exists, otherwise use the default template
-    const answerTemplate = textTemplates[templateKey] || textTemplates.default;
+    // Declaring a variable for the answerTemplate
+    const answerTemplate = textTemplates[templateKey];
 
-    // Replace placeholders in the template with actual responses
+    // Replaces placeholders in the template with actual responses
     const finalAnswer = answerTemplate
       .replace('[Name]', userAnswers[0])
       .replace('[Coffee]', userAnswers[1])
@@ -23,6 +24,8 @@ export const AnswersSummary = ({ userAnswers }) => {
     <div className="answers-summary">
       <h3>Your Morning Personality</h3>
       <p>{generateAnswer()}</p>
+      {/* /*Buttoncomponent is reused, with text being changed to Restart*/}
+      <Button onClick={handleRestart} text={"Restart"} longOrShortClass={"standalone"} />
     </div>
   );
 };
