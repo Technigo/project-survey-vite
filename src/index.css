@@ -52,7 +52,7 @@ code {
     background-color: rgb(251, 251, 230);
     opacity: 0.8;
     height: 450px;
-    width: 500px;
+    width: 350px;
   
   }
   .question-container {
@@ -215,9 +215,10 @@ form {
       padding: 0.7rem 5rem;
     }
     .questions-wrapper {
-      padding: 5rem;
       height: 450px;
+      width: 500px;
     }
+    
 
   }
   
@@ -227,6 +228,11 @@ form {
       font-size: 2rem;
       margin-bottom: 20px;
     }
+    .questions-wrapper {
+      height: 450px;
+      width: 500px;
+    }
+
     input {
       padding: 0.7rem 3.5rem;
     }
