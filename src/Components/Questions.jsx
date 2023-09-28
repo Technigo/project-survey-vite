@@ -14,7 +14,7 @@ export const Questions = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [livingArea, setLivingArea] = useState("");
-  const [favourite, setFavourite] = useState("Other");
+  const [favourite, setFavourite] = useState("Walking");
   const [frequency, setFrequency] = useState("Rarely");
   const [fitnessGoal, setFitnessGoal] = useState("");
   
@@ -39,18 +39,6 @@ export const Questions = () => {
         return;
       }
     } 
-
-    if (step === 3) {
-      if (favourite === "Other") {
-        let answerPrompt = prompt("Please specify your favourite exercise");
-        if (!answerPrompt) {
-          prompt("Please choose an option");
-          return;
-        } else {
-          alert(`Great to know that you like ${answerPrompt}!`);
-        }
-      }
-    }
     
     setStep((prevStep) => {
       return prevStep + 1
