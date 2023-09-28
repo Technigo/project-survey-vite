@@ -33,17 +33,20 @@ export const App = () => {
   const validateName = () => {
     if (user.name !== "" && isNaN(user.name)) {
       return true;
-    } else
+    } else {
       alert("Try again. Please enter a valid favorite person.");
-    return false
+    return false}
+      
   }
     // Function to validate the favorite person field
     const validateFavoritePerson = () => {
       if (user.favPerson !== "" && isNaN(user.favPerson)) {
         return true;
-      }
-      alert("Try again. Please enter a valid favorite person.");
+      } else {
+         alert("Try again. Please enter a valid favorite person.");
       return false;
+      }
+     
     };
   
 

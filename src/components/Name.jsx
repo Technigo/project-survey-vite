@@ -13,6 +13,8 @@ export const Name = ({ user, handleInputChange }) => {
         onChange={handleInputChange}
           autoComplete="name" // Added autocomplete attribute
           placeholder="Enter name here"
+          maxLength={30}
+          required
         />
          </div>
   )
