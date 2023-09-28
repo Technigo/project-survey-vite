@@ -39,6 +39,7 @@ function Summary({ questions }) {
         </li>
       </ul>
       <p>Now, imagine the hilarious mishaps and heartwarming moments you&rsquo;d share with your &ldquo;Friends&rdquo; character over coffee. Enjoy your personalized &ldquo;Friends&rdquo; experience!</p>
+      <img src="/friends.avif" alt="picture of all the friends" style={{ width: '100%', height: 'auto' }} />
     </div >
 
   );
