@@ -1,8 +1,10 @@
 .survey-container {
-    background-color: whitesmoke; 
+    background-color: whitesmoke;
     display: grid;
     grid-template-rows: 25% 25% 40% 10%;
-    height: auto;
+    /*height: auto;*/
+    /*Fick kommentera ut height: auto och lägga till height i pixlar för att se allt i form när jag ändrade i stegen. Behöver lösas*/
+    height: 200px;
     padding: 5%;
     margin: 5%;
     border-radius: 2%;
@@ -10,5 +12,5 @@
 
 button {
     background-color: rgb(117, 177, 116);
-    width: 70%;
+    /*width: 70%;*/
 }
