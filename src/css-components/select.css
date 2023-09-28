@@ -1,0 +1,40 @@
+.town-adjective-form,
+.pumpkin-adjective-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.custom-selector {
+    position: relative;
+}
+
+.custom-selector select {
+    min-height: 35px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background: #A67687;
+    border-radius: 4px;
+    border: 2px solid #533D73;
+    outline: none;
+    padding: 0 20px;
+    width: 225px;
+    cursor: pointer;
+    transition: all 0.4s;
+    appearance: none;
+}
+
+/* hide default drpdown arrow -create new one */
+.custom-selector::after {
+    content: '';
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: #533D73;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 37px;
+    border-radius: 6px;
+}
