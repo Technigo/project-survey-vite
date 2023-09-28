@@ -1,21 +1,17 @@
-import React from "react";
-import { HeaderText } from "./Header";
-import { NameInput } from "./nameInput";
-import { DropDown } from "./dropDown";
-import { AgeGroup } from "./radioButton";
-import { NextBtn } from "./nextBtn";
-import "./index.css";
+import { HeaderText } from "./components/Header";
+import { MultistepForm } from "./components/MultistepForm";
+import "./components/index.css";
 
 export const App = () => {
 
 
   return (
     <>
-      <HeaderText />
-      <NameInput />
-      <DropDown />
-      <AgeGroup />
-      <NextBtn />
+      <div className="form">
+        <HeaderText />
+        <MultistepForm /></div>
+
+
     </>
   );
 };
