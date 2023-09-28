@@ -3,7 +3,7 @@ import { NameInput } from "./NameInput/NameInput.jsx";
 import { SeasonRadio } from "./SeasonRadio/SeasonRadio.jsx"
 import { ActivitySelect } from "./ActivitySelect/ActivitySelect.jsx";
 import { EcoCheck } from "./EcoCheck/EcoCheck.jsx";
-
+import { FormMatch } from "./FormMatch/FormMatch.jsx"
 
 import "./Form.css"
 
@@ -27,20 +27,16 @@ export const Form  = () => {
   };
   const prevStep = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
+  };  
+
+  const submitForm = (matchingDestination) => {
+   
+    if (matchingDestination) {
+      setCurrentStep(currentStep + 1)
+    } else {
+      alert("No matching destination found. Please try again.");
+    }
   };
-
-  const submitForm = () => {
-    console.log(formData);
-    const formattedData = `
-    Name: ${formData.name}
-    Season: ${formData.season}
-    Activity: ${formData.activity}
-    Eco: ${formData.eco}
-  `;
-    alert(formattedData);
-  };
-
-
 
     return (
       <div>
@@ -59,6 +55,9 @@ export const Form  = () => {
       {/* Render the Eco component if on step 4 */}
       {currentStep === 4 && (
         <EcoCheck value={formData.eco} updateFormData={updateFormData} />
+      )}
+      {currentStep >= 5 && (
+        <FormMatch name={FormData.name} season={FormData.season} activity={FormData.activity} eco={FormData.eco} />
       )}
       <div>
         {/* Show the "Back" button if not on the first step */}
