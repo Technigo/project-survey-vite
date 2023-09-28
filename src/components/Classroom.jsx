@@ -8,6 +8,7 @@ export const Classroom = ({ updateFormData, value }) => {
         <div>
             <label>What class are you in? </label>
             <select value={value} onChange={childsclass}>
+                <option selected disabled={true} value="">Choose here....</option>
                 <option value="1">Class 1</option>
                 <option value="2">Class 2</option>
                 <option value="3">Class 3</option>
