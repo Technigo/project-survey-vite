@@ -1,5 +1,6 @@
 .town-adjective-form,
-.pumpkin-adjective-form {
+.pumpkin-adjective-form,
+.wish-form {
     display: flex;
     justify-content: center;
     align-items: center;
