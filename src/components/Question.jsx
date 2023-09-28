@@ -35,6 +35,25 @@ function Question({ question, onAnswerSubmit }) {
     setAnswer(question.type === 'checkbox' ? [] : '');
   };
 
+  const optionsWithImages = [
+    { label: 'Rachel Green', image: '/rachel.jpeg' },
+    { label: 'Ross Geller', image: '/ross.webp' },
+    { label: 'Monica Geller', image: '/monica.jpg' },
+    { label: 'Chandler Bing', image: '/chandler.webp' },
+    { label: 'Joey Tribbiani', image: '/joey.jpeg' },
+    { label: 'Phoebe Buffay', image: '/Phoebe.jpeg' },
+  ];
+
+  const optionsWithImagesOutfits = [
+    { label: 'Rachel Green', image: '/rachel.jpeg' },
+    { label: 'Ross Geller', image: '/ross.webp' },
+    { label: 'Monica Geller', image: '/monica.jpg' },
+    { label: 'Chandler Bing', image: '/chandler.webp' },
+    { label: 'Joey Tribbiani', image: '/joey.jpeg' },
+    { label: 'Phoebe Buffay', image: '/Phoebe.jpeg' },
+  ];
+
+
   return (
     <div>
       <h2>{question.text}</h2>
@@ -46,18 +65,22 @@ function Question({ question, onAnswerSubmit }) {
       )}
       {question.type === 'checkbox' && (
         <div>
-          <h3>Checkbox Options:</h3>
+
           <ul>
-            {question.options.map((option) => (
-              <li key={option}>
+            {optionsWithImagesOutfits.map((option) => (
+              <li key={option.label}>
                 <label>
-                  <input
-                    type="checkbox"
-                    value={option}
-                    checked={answer.includes(option)}
-                    onChange={handleCheckbox}
-                  />
-                  {option}
+                  <div className="image-container">
+                    <input
+                      type="checkbox"
+                      value={option.label}
+                      checked={answer.includes(option.label)}
+                      onChange={handleCheckbox}
+                    />
+
+                    <img src={`/images/${option.image}`} alt={option.label} className="image-small" />
+                    <span className="name">{option.label}</span>
+                  </div>
                 </label>
               </li>
             ))}
@@ -67,27 +90,31 @@ function Question({ question, onAnswerSubmit }) {
       {question.type === 'dropdown' && (
         <select value={answer} onChange={handleDropDown} multiple={false}>
           <option value="">Select an option</option>
-          {question.options.map((option) => (
-            <option key={option} value={option}>
-              {option}
+          {optionsWithImages.map((option) => (
+            <option key={option.label} value={option.label}>
+              {option.label}
             </option>
           ))}
         </select>
       )}
       {question.type === 'radio' && (
         <div>
-          <h3>Radio Options:</h3>
+
           <ul>
-            {question.options.map((option) => (
-              <li key={option}>
+            {optionsWithImages.map((option) => (
+              <li key={option.label}>
                 <label>
-                  <input
-                    type="radio"
-                    value={option}
-                    checked={answer === option}
-                    onChange={handleInputChange}
-                  />
-                  {option}
+                  <div className="image-container">
+                    <input
+                      type="radio"
+                      value={option.label}
+                      checked={answer === option.label}
+                      onChange={handleInputChange}
+                    />
+
+                    <img src={`/images/${option.image}`} alt={option.label} className="image-small" />
+                    <span className="name">{option.label}</span>
+                  </div>
                 </label>
               </li>
             ))}

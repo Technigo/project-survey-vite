@@ -19,8 +19,7 @@ body {
 
 }
 
-ul
- {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -36,5 +35,23 @@ ul
 .Form {
   width: 60%;
   margin: 15px auto;
-  }
+}
 
+.image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-small {
+  width: 150px;
+  height: auto;
+}
+
+
+.name {
+  margin: 10px;
+  /* Distance between name and pic */
+}
