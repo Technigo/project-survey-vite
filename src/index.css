@@ -108,6 +108,14 @@ code {
   
   }
   
+  .welcome-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+
   .options {
     list-style-type: none;
     padding: 0;
@@ -120,6 +128,19 @@ code {
     align-items: center;
   }
   
+  .option input[type="radio"] {
+    margin: 0;
+    padding: 0;
+    margin-right: 10px; 
+    display: inline-block;
+  }
+  
+  .option label {
+    display: flex;
+    align-items: center;
+  }
+  
+
   .input-group {
     display: flex;
     align-items: center;

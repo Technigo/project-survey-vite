@@ -7,6 +7,7 @@ import { SelectPerson } from "./components/SelectPerson.jsx"
 import { Name } from "./components/Name";
 import { Activity } from "./components/Activity";
 import { Country } from "./components/Country";
+import { Welcome } from './components/Welcome';
 import { useState } from "react";
 
 export const App = () => {
@@ -19,8 +20,13 @@ export const App = () => {
     payingPerson: ""
   });
 
+  // State variable that controles the welcome and start survey
+  const [showWelcome, setShowWelcome] = useState(true);
+
   // State to control which question is currently active
   const [activeQuestion, setActiveQuestion] = useState(1);
+// Function that handle the button click in welcome page
+  const startSurvey = () => setShowWelcome(false);
 
   // Function to handle user input changes
   const handleInputChange = (e) => {
@@ -105,6 +111,10 @@ const handleFormSubmit = (e) => {
     <>
       <Header />
       <div className="questions-wrapper">
+      {showWelcome ? (
+          <Welcome startSurvey={startSurvey} />
+          ) : (
+         <>   
         {activeQuestion === 1 && (
           <form onSubmit={handleFormSubmit}>
             <Name user={user} handleInputChange={handleInputChange} />
@@ -160,8 +170,9 @@ const handleFormSubmit = (e) => {
               </div>
           </form>
         )}
-      
         {activeQuestion === 'summary' && <Summary user={user} restartSurvey={restartSurvey} />}
+        </>
+          )}
       </div>
       <Footer />
     </>
