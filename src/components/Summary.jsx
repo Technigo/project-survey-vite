@@ -17,8 +17,8 @@ function Summary({ questions }) {
       <h2>Your "Friends" Persona:</h2>
       <p>
         Based on your survey responses, we've analyzed your "Friends" persona.
-        Imagine you're sitting in Central Perk with your favorite character.
-        Here's what your experience would be like:
+        Imagine you&apos;re sitting in Central Perk with your favorite character.
+        Here&apos;s what your experience would be like:
       </p>
       <ul>
         <li>
@@ -28,13 +28,13 @@ function Summary({ questions }) {
           <strong>Fashion Admirer:</strong> You admire the fashion sense of {fashionAdmirerQuestion.answer.join(', ')}. Looks like you appreciate style on a whole new level!
         </li>
         <li>
-          <strong>Coffee Order:</strong> At Central Perk, you'd order a {coffeeOrderQuestion.answer} to keep the conversation flowing.
+          <strong>Coffee Order:</strong> At Central Perk, you&apos;d order a {coffeeOrderQuestion.answer} to keep the conversation flowing.
         </li>
         <li>
-          <strong>Memorable Moment:</strong> Your favorite "Friends" moment/quote: {memorableMomentQuestion.answer}. This moment adds a unique touch to your "Friends" experience, just like Phoebe's eccentricity or Joey's classic pick-up lines.
+          <strong>Memorable Moment:</strong> Your favorite "Friends" moment/quote: {memorableMomentQuestion.answer}. This moment adds a unique touch to your "Friends" experience, just like Phoebe&apos;s eccentricity or Joey&apos;s classic pick-up lines.
         </li>
       </ul>
-      <p>Now, imagine the hilarious mishaps and heartwarming moments you'd share with your "Friends" character over coffee. Enjoy your personalized "Friends" experience!</p>
+      <p>Now, imagine the hilarious mishaps and heartwarming moments you&apos;d share with your "Friends" character over coffee. Enjoy your personalized "Friends" experience!</p>
     </div>
   );
 }
