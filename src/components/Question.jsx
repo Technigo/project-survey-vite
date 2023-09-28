@@ -37,12 +37,12 @@ function Question({ question, onAnswerSubmit }) {
 
 
   const optionsWithImages = [
-    { label: 'Rachel Green', value: 'public/rachel.jpeg' },
-    { label: 'Ross Geller', value: 'public/ross.webp' },
-    { label: 'Monica Geller', value: 'public/monica.jpg' },
-    { label: 'Chandler Bing', value: 'public/chandler.webp' },
-    { label: 'Joey Tribbiani', value: 'public/joey.jpeg' },
-    { label: 'Phoebe Buffay', value: 'public/Phoebe.jpeg' },
+    { label: 'Rachel Green', image: '/rachel.jpeg' },
+    { label: 'Ross Geller', image: '/ross.webp' },
+    { label: 'Monica Geller', image: '/monica.jpg' },
+    { label: 'Chandler Bing', image: '/chandler.webp' },
+    { label: 'Joey Tribbiani', image: '/joey.jpeg' },
+    { label: 'Phoebe Buffay', image: '/Phoebe.jpeg' },
   ];
 
   return (
