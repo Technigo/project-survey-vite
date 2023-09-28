@@ -19,6 +19,10 @@ body {
 
 }
 
+h2 {
+  font-size: 1.5em;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -28,8 +32,8 @@ ul {
 .header {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .Form {
@@ -59,4 +63,62 @@ ul {
 .name {
   margin: 10px;
   /* Distance between name and pic */
+}
+
+.image-small, .image-outfits {
+  /* Example: Adjust image size for tablets */
+  width: 200px;
+  height: auto;
+}
+
+input[type="text"], input[type="number"]  {
+  padding: 10px;
+  font-size: 16px;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  /* Example: Add styles for input and button */
+  padding: 10px;
+  font-size: 16px;
+  /* Add more styles as needed */
+}
+
+/***** TABLET *****/
+@media only screen and (min-width:768px) {
+  /*Tablet styles here*/
+
+  .Form {
+    /* Example: Adjust width and margin for tablets */
+    width: 80%;
+    margin: 15px auto;
+  }
+
+  .image-small, .image-outfits {
+    /* Example: Adjust image size for tablets */
+    width: 400px;
+    height: auto;
+  }
+}
+
+
+/***** DESKTOP *****/
+@media only screen and (min-width:1200px) {
+  /*Desktop styles here*/
+
+  .Form {
+    /* Example: Adjust width and margin for tablets */
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .image-small, .image-outfits {
+    /* Example: Adjust image size for tablets */
+    width: 600px;
+    height: auto;
+  }
 }

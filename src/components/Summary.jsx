@@ -38,7 +38,7 @@ function Summary({ questions }) {
           <strong>Memorable Moment:</strong> Your favorite &ldquo;Friends&rdquo; moment/quote: {memorableMomentQuestion.answer}. This moment adds a unique touch to your &ldquo;Friends&rdquo; experience, just like Phoebe&rsquo;s eccentricity or Joey&rsquo;s classic pick-up lines.
         </li>
       </ul>
-      <p>Now, imagine the hilarious mishaps and heartwarming moments you&rsquo;d share with your &ldquo;Friends&rdquo; character over coffee. Enjoy your personalized &ldquo;Friends&rdquo; experience!</p>
+      <p>Now, imagine the hilarious mishaps and heartwarming moments you&rsquo;d share with <strong>{favoriteCharacterQuestion.answer}</strong> over a coffee.</p>
       <img src="/friends.avif" alt="picture of all the friends" style={{ width: '100%', height: 'auto' }} />
     </div >
 
