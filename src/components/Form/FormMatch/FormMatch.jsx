@@ -70,11 +70,10 @@ export const FormMatch = ({ name, season, activity, eco }) => {
     return (
         // ${formData.name}, you’ve shared with us that you are in the mood for a ${formData.season} getaway with focus on ${formData.activity}! Kudos for making an eco-friendly choice by avoiding traveling by air! Based on your choices, we think a great vacation spot for you is ${formData.destination}, ${formData.country}! ${matchingDestination.imageUrl} ${formData.destinationdescription}
         <div>
-            <h2>Amazing! You have a match!</h2>
-            <p>Dear {name}, </p>
-            <p>Matching Destination: {matchingDestination.destination}, {matchingDestination.country}</p>
+            <h2>Amazing! {name}! You have a match!</h2>
+            <p>Based on your dream of {season}, wouldn't {matchingDestination.destination}, {matchingDestination.country} be a fantastic? Go get yourself a dreamy vacay!!</p>
         <img src={matchingDestination.imageUrl} alt={matchingDestination.destination} />
-        <p>Description: {matchingDestination.destinationdescription}</p>
+        <p>{matchingDestination.destinationdescription}</p>
         {eco === "checked" ? (
           <p>Great of you to think of the environment!</p>
           ) : (
