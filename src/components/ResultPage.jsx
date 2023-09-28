@@ -4,11 +4,15 @@ export const ResultPage = (formData) => {
     console.log(formData)
      {/* cant do this as it is an object, cant render object! {formData} */}
 
+     function refreshPage() {
+        window.location.reload(false);
+      }
 
 console.log(formData.formData.name);
 
 
     return (
+        <>
         <section className="form-wrapper">
          
                 <div className="output-survey q1">
@@ -25,9 +29,12 @@ console.log(formData.formData.name);
                   </div>
                   <div className="output-survey q5">
                   &#127829; My favourite food is {formData.formData.favFood}
-                  </div>
-                   
+                  </div> 
         </section>
+        <section>
+        <button onClick={refreshPage}>Start again</button>
+        </section>
+       </>        
     )
 }
 
