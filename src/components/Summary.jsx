@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Summary({ questions }) {
   const nameInput = questions.find(
     (question) => question.id === 1
@@ -15,12 +17,11 @@ function Summary({ questions }) {
     (question) => question.id === 5
   );
 
-
   return (
-    < div >
+    <div>
       <h2>Your &ldquo;Friends&rdquo; Persona:</h2>
       <p>
-        Based on your survey responses  <strong>{nameInput.answer}</strong>, we&rsquo;ve analyzed your &ldquo;Friends&rdquo; persona.
+        Based on your survey responses <strong>{nameInput.answer}</strong>, we&rsquo;ve analyzed your &ldquo;Friends&rdquo; persona.
         Imagine you&rsquo;re sitting in Central Perk with your favorite character.
         Here&rsquo;s what your experience would be like:
       </p>
@@ -40,8 +41,8 @@ function Summary({ questions }) {
       </ul>
       <p>Now, imagine the hilarious mishaps and heartwarming moments you&rsquo;d share with <strong>{favoriteCharacterQuestion.answer}</strong> over a coffee.</p>
       <img src="/friends.avif" alt="picture of all the friends" style={{ width: '100%', height: 'auto' }} />
-    </div >
-
+      <button onClick={() => window.location.reload(false)}>Restart</button>
+    </div>
   );
 }
 
