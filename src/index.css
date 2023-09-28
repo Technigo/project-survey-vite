@@ -19,6 +19,15 @@ body {
 
 }
 
-.radioForm {
-  margin: 15px auto;
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
+
+.Form {
+  width: 60%;
+  margin: 15px auto;
+  }
+
