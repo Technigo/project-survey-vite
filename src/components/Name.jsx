@@ -1,6 +1,6 @@
 // Frida
 
-import { useState } from "react";
+/*import { useState } from "react";
 
 export const Intro = () => {
   const [name, setName] = useState(``);
@@ -19,6 +19,18 @@ export const Intro = () => {
         />
       </form>
       <button onClick={name}>Next</button>
+    </div>
+  );
+};*/
+
+export const Name = ({ value, updateFormData }) => {
+  const userName = (e) => updateFormData("name", e.target.value);
+  return (
+    <div>
+      <h1>Welcome to get your own ticket to Mars</h1>
+      <h2>Lets get started with your name</h2>
+      <label>Name:</label>
+      <input type="text" value={value} onChange={userName} />
     </div>
   );
 };

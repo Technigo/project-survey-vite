@@ -1,10 +1,10 @@
 // import { useState } from "react";
-import { Intro } from "./components/Intro";
+import { MultiStepForm } from "./MultiStepForm";
 
 export const App = () => {
   return (
     <>
-      <Intro />
+      <MultiStepForm />
     </>
   );
 };
