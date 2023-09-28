@@ -38,3 +38,11 @@ svg {
 a {
   color: inherit;
 }
+
+.next-btn, .prev-btn {
+  border: none;
+}
+
+.next-btn img, .prev-btn img{
+  height: 2.5rem;
+}

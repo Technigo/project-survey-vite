@@ -20,6 +20,7 @@ export const Username = ({ userName, setUserName }) => {
           value={userName}
           onChange={userNameInput}
           placeholder="Name..."
+          required
         />
       </label>
     </form>
