@@ -21,13 +21,19 @@ code {
 
 header {
   font-family: countach, sans-serif;
-  border-style: dotted;
+}
+
+#header-image {
+  color: gold;
+  width: 90%; // Fixa denna till resposive sen, stoppa så den inte dras ut
+  height: 50px;
 }
 
 .footer {
-  background-color: maroon;
+  border-style: none;
   color: gold;
-  padding: 2px;
+  padding: 1px;
   margin: 20px;
   text-align: center;
+  font-size: x-small;
 }

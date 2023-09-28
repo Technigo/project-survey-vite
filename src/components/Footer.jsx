@@ -1,10 +1,10 @@
 //for example this survey is property of Santas little helper inc.
-import React from 'react';
+import React from "react";
 
 function Footer() {
   return (
     <footer className="footer">
-      <p>A survey from Santa's Little Helper Inc.</p>
+      <p>🎁This survey was made by (c) Santa's Little Helper Inc🎁</p>
     </footer>
   );
 }
