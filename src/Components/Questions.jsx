@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+
 import { FavQuestions } from "./FavQuestions";
 import { InfoQuestions } from "./InfoQuestions";
 import { Buttons } from "./Buttons";
@@ -13,8 +13,8 @@ export const Questions = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [livingArea, setLivingArea] = useState("select");
-  const [favourite, setFavourite] = useState("Others");
+  const [livingArea, setLivingArea] = useState("");
+  const [favourite, setFavourite] = useState("Other");
   const [frequency, setFrequency] = useState("Rarely");
   const [fitnessGoal, setFitnessGoal] = useState("");
   
@@ -34,17 +34,17 @@ export const Questions = () => {
     }
 
     if(step === 2) {
-      if (livingArea === "select") {
+      if (livingArea === "") {
         alert("Please choose one option");
         return;
       }
     } 
 
     if (step === 3) {
-      if (favourite === "Others") {
+      if (favourite === "Other") {
         let answerPrompt = prompt("Please specify your favourite exercise");
         if (!answerPrompt) {
-          alert("Please choose an option")
+          prompt("Please choose an option");
           return;
         } else {
           alert(`Great to know that you like ${answerPrompt}!`);

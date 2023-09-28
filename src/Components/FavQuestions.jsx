@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-
+import PropTypes from "prop-types";
 
 export const FavQuestions = ({fav, onChangeFav}) => {
   return (               
@@ -44,10 +43,16 @@ export const FavQuestions = ({fav, onChangeFav}) => {
         </label>
 
         <label htmlFor="other">
-          <input type="checkbox" name="other" id="other" value={"Others"} checked={fav === "Others"} onChange={onChangeFav} /> 
+          <input type="checkbox" name="other" id="other" value={"Other"} checked={fav === "Other"} onChange={onChangeFav} /> 
             Other
         </label>
       </div>                
     </div>
   )
-}
+};
+
+FavQuestions.propTypes = {
+  fav: PropTypes.string,
+  onChangeFav: PropTypes.func
+};
+

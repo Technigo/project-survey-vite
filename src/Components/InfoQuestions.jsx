@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
-export const InfoQuestions = ({name, email, onChangeName, onChangeEmail}) => {
-      
+import PropTypes from "prop-types";
 
+export const InfoQuestions = ({name, email, onChangeName, onChangeEmail}) => {
   return (
     <div className='info-questions'>
       <label htmlFor="name">Name :
@@ -12,4 +11,11 @@ export const InfoQuestions = ({name, email, onChangeName, onChangeEmail}) => {
       </label>
     </div>
   )
-}
+};
+
+InfoQuestions.propTypes = {
+  name: PropTypes.string,
+  email: PropTypes.string,
+  onChangeName: PropTypes.func,
+  onChangeEmail: PropTypes.func
+};

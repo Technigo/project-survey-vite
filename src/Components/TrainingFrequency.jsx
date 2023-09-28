@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-
+import PropTypes from "prop-types";
 
 export const TrainingFrequency = ({freq, onChangeFreq}) => {    
     return (
@@ -56,4 +55,9 @@ export const TrainingFrequency = ({freq, onChangeFreq}) => {
             </div>
         </div>
     )
-}
+};
+
+TrainingFrequency.propTypes = {
+    freq: PropTypes.string,
+    onChangeFreq: PropTypes.func
+};
