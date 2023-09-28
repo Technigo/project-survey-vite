@@ -72,7 +72,7 @@ export const StoryBoard = () => {
                 {/* Show the "Back" button if not on the first step */}
                 {(currentStep > 1 && currentStep <= 6) && <button onClick={prevStep}>Back</button>}
                 {/* Show Next button up to 5th step */}
-                {currentStep < 6 && <button onClick={nextStep}>Next</button>}
+                {currentStep < 6 && <button onClick={nextStep}>Next story choice</button>}
                 {/* Change button msg on 6th and last form input */}
                 {currentStep === 6 && <button onClick={nextStep}>Unravel your tale</button>}
                 {/* Reload whole story-telling app */}
