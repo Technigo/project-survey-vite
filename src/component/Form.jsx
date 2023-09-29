@@ -15,6 +15,9 @@ export const Form = () => {
     spirit: "",
   });
 
+  //Set state to validate the users age
+  const [isAgeValid, setIsAgeValid] = useState(true);
+
   //Update form data
   const updateFormData = (field, value) => {
     setFormData((previous) => ({ ...previous, [field]: value }));
@@ -38,6 +41,10 @@ export const Form = () => {
   const [currentStep, setCurrentStep] = useState(1);
   // Function to move to the next step in the form
   const nextStep = () => {
+    if (currentStep === 1 && !isAgeValid) {
+      alert("You must be 18 or older to proceed!");
+      return;
+    }
     if (currentStep < 5) setCurrentStep(currentStep + 1);
   };
   const prevStep = () => {
@@ -55,7 +62,11 @@ export const Form = () => {
         </div>
         <div className={`question ${currentStep !== 1 ? "hidden" : ""}`}>
           {currentStep === 1 && (
-            <AgeQuestion value={formData.age} setValue={updateFormData} />
+            <AgeQuestion
+              value={formData.age}
+              setValue={updateFormData}
+              setIsAgeValid={setIsAgeValid}
+            />
           )}
         </div>
 
