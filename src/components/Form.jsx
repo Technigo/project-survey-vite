@@ -25,9 +25,20 @@ export const Form = () => {
   // State to keep track of the current question in the form
   const [currentQuestion, setCurrentQuestion] = useState(1);
 
-  // Function to move to the next question in the form
+  // Function to move to the next question in the form and validation to ensure user input
   const nextQuestion = () => {
-    if (currentQuestion < 4) setCurrentQuestion(currentQuestion + 1);
+    if (currentQuestion === 1 && formData.hero === "") {
+      alert("You have to enter a hero name");
+      return;
+    } else if (currentQuestion === 2 && formData.superpower === "") {
+      alert("You have to select a superpower");
+      return;
+    } else if (currentQuestion === 3 && formData.weakness === "") {
+      alert("You have to select a weakness");
+      return;
+    }
+    setCurrentQuestion(currentQuestion + 1);
+    //  if (currentQuestion < 4) setCurrentQuestion(currentQuestion + 1);
   };
   // Function to move to the previous question in the form
   const previousQuestion = () => {
@@ -46,6 +57,10 @@ export const Form = () => {
 
   // Function to submit the data entered in the form
   const submitForm = () => {
+    if (currentQuestion === 4 && formData.villain === "") {
+      alert("You have to enter a villain name");
+      return;
+    }
     console.log(formData);
     const summary = `
     Hero: ${formData.hero}
@@ -89,15 +104,20 @@ export const Form = () => {
               <button onClick={submitForm}>Submit</button>
             )}
             {formSubmitted && (
-              <>
+              <div className="storyTime">
                 <Story
                   hero={formData.hero}
                   superpower={formData.superpower}
                   weakness={formData.weakness}
                   villain={formData.villain}
                 />
-                <button onClick={resetFormData}>Reset</button>
-              </>
+                <button
+                  className="superhero-button reset"
+                  onClick={resetFormData}
+                >
+                  Let´s create a new story!
+                </button>
+              </div>
             )}
           </div>
         </div>
