@@ -90,9 +90,9 @@ function Question({ question, onAnswerSubmit }) {
       {question.type === 'dropdown' && (
         <select value={answer || []} onChange={handleDropDown}>
           <option value="">Select an option</option>
-          {question.options.map((option) => (
-            <option key={option} value={option}>
-              {option}
+          {optionsWithImages.map((option) => (
+            <option key={option.label} value={option.label}>
+              {option.label}
             </option>
           ))}
         </select>

@@ -65,13 +65,9 @@ ul {
   /* Distance between name and pic */
 }
 
-.image-small, .image-outfits {
-  /* Example: Adjust image size for tablets */
-  width: 200px;
-  height: auto;
-}
 
-input[type="text"], input[type="number"]  {
+input[type="text"],
+input[type="number"] {
   padding: 10px;
   font-size: 16px;
 }
@@ -98,7 +94,8 @@ button {
     margin: 15px auto;
   }
 
-  .image-small, .image-outfits {
+  .image-small,
+  .image-outfits {
     /* Example: Adjust image size for tablets */
     width: 400px;
     height: auto;
@@ -116,7 +113,8 @@ button {
     margin: 15px auto;
   }
 
-  .image-small, .image-outfits {
+  .image-small,
+  .image-outfits {
     /* Example: Adjust image size for tablets */
     width: 600px;
     height: auto;
