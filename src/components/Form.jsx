@@ -41,7 +41,7 @@ export const Form = () => {
     Superpower: ${formData.superpower}
     Weakness: ${formData.weakness}
     Villain: ${formData.villain}`;
-    alert(summary);
+    // alert(summary);
     setFormSubmitted(true);
 
     //Need to adjust prompts for male/female/neither

@@ -1,6 +1,12 @@
 import { StoryFlyingBlindness } from "./StoryFlyingBlindness";
-import { StoryFlyingFrail } from "./StoryFlyingFrail";
+import { StoryFlyingFrailty } from "./StoryFlyingFrailty";
 import { StoryFlyingFire } from "./StoryFlyingFire";
+import { StorySuperSpeedFrailty } from "./StorySuperSpeedFrailty";
+import { StorySuperSpeedBlindness } from "./StorySuperspeedBlindness";
+import { StorySuperSpeedFire } from "./StorySuperSpeedFire";
+import { StoryInvisibilityFrailty } from "./StoryInvisibilityFrailty";
+import { StoryInvisibilityFire } from "./StoryInvisibilityFire";
+import { StoryInvisibilityBlindness } from "./StoryInvisibilityBlindness";
 
 export const Story = ({ hero, superpower, weakness, villain }) => {
   console.log(superpower, weakness, hero, villain);
@@ -13,9 +19,9 @@ export const Story = ({ hero, superpower, weakness, villain }) => {
         villain={villain}
       />
     );
-  } else if (superpower === "flying" && weakness === "frail") {
+  } else if (superpower === "flying" && weakness === "frailty") {
     return (
-      <StoryFlyingFrail
+      <StoryFlyingFrailty
         hero={hero}
         superpower={superpower}
         weakness={weakness}
@@ -25,6 +31,60 @@ export const Story = ({ hero, superpower, weakness, villain }) => {
   } else if (superpower === "flying" && weakness === "fire") {
     return (
       <StoryFlyingFire
+        hero={hero}
+        superpower={superpower}
+        weakness={weakness}
+        villain={villain}
+      />
+    );
+  } else if (superpower === "superspeed" && weakness === "frailty") {
+    return (
+      <StorySuperSpeedFrailty
+        hero={hero}
+        superpower={superpower}
+        weakness={weakness}
+        villain={villain}
+      />
+    );
+  } else if (superpower === "superspeed" && weakness === "fire") {
+    return (
+      <StorySuperSpeedFire
+        hero={hero}
+        superpower={superpower}
+        weakness={weakness}
+        villain={villain}
+      />
+    );
+  } else if (superpower === "superspeed" && weakness === "blindness") {
+    return (
+      <StorySuperSpeedBlindness
+        hero={hero}
+        superpower={superpower}
+        weakness={weakness}
+        villain={villain}
+      />
+    );
+  } else if (superpower === "invisibility" && weakness === "frailty") {
+    return (
+      <StoryInvisibilityFrailty
+        hero={hero}
+        superpower={superpower}
+        weakness={weakness}
+        villain={villain}
+      />
+    );
+  } else if (superpower === "invisibility" && weakness === "fire") {
+    return (
+      <StoryInvisibilityFire
+        hero={hero}
+        superpower={superpower}
+        weakness={weakness}
+        villain={villain}
+      />
+    );
+  } else if (superpower === "invisibility" && weakness === "blindness") {
+    return (
+      <StoryInvisibilityBlindness
         hero={hero}
         superpower={superpower}
         weakness={weakness}

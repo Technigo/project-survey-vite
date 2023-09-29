@@ -23,10 +23,10 @@ export const Weakness = ({ updateFormData, value }) => {
       <div className="frail">
         <input
           type="radio"
-          value="frail"
+          value="frailty"
           onChange={weaknessInput}
           name="frail"
-          checked={selectedOption === "frail"}
+          checked={selectedOption === "frailty"}
         />
         <label>Frail body </label>
       </div>

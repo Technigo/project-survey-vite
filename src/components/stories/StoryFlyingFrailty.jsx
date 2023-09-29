@@ -1,4 +1,4 @@
-export const StoryFlyingFrail = ({ hero, superpower, weakness, villain }) => {
+export const StoryFlyingFrailty = ({ hero, superpower, weakness, villain }) => {
   return (
     <div className="story">
       {`
