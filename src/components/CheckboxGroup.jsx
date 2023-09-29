@@ -1,4 +1,4 @@
-const RadioGroup = ({
+const CheckboxGroup = ({
     name,
     value,
     onChange,
@@ -10,11 +10,11 @@ const RadioGroup = ({
             {options.map((option) => (
                 <span key={option}>
                     <input
-                        type="radio"
+                        type="checkbox"
                         name={name}
                         value={option}
                         onChange={onChange}
-                        checked={value === option}
+                        checked={value.includes(option)}
                     />
                     <label>{option}</label>
                 </span>
@@ -23,4 +23,4 @@ const RadioGroup = ({
     );
 }
 
-export default RadioGroup;
+export default CheckboxGroup;
