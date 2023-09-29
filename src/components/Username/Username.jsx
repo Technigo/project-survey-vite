@@ -1,7 +1,11 @@
 import "./Username.css";
 
 export const Username = ({ userName, setUserName }) => {
+  
+  // const [error, setError] = useState(false);
+  
   const userNameInput = (e) => setUserName(e.target.value);
+
 
   // Event handler for form submission
   const handleSubmit = (event) => {

@@ -11,7 +11,7 @@ export const Gender = ({ genders, setGenders }) => {
       onSubmit={(event) => event.preventDefault()}
       required
     >
-      <h3>Choose the cat´s gender</h3>
+      <h3>Choose the cat's gender</h3>
       {genderGroups.map((gender) => (
         <div className="radio-input-wrapper" key={gender.id}>
           {/* Using label element to improve accssibility and user experience. The 'Key' prop is used to uniquely identify each label element and it's is important for React's virtual DOM to efficiently track and update elements.  */}

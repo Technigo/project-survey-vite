@@ -1,5 +1,4 @@
-.personality-dropdown {
-  appearance: none;
+/* .personality-dropdown {
   border: none;
   font: inherit;
   font-size: inherit;
@@ -15,10 +14,21 @@
 }
 
 /* Takes away the default blue outline around the select input */
-select:focus {
+/* select:focus {
   outline: none;
 }
+} */
 
-.personality-dropdown option {
+.personality-dropdown  {
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
   background: linear-gradient(90deg, #f79eb3 0%, #fdc360 100%);
+  width: 13rem;
+  padding: 0.6rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
 }

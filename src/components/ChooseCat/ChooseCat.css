@@ -1,9 +1,16 @@
-
-
 .cat-image-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 }
+
+.each-cat-wrapper img {
+  border-radius: 50px;
+  width: 9rem;
+}
+
+
+
 
 /* HIDE RADIO */
 /* .cat-button[type=radio] { 

@@ -13,7 +13,7 @@ export const ChooseCat = ({ chooseCat, setChooseCat }) => {
       <div className="cat-image-container">
         {/* Mapping over the 'catOptions' array. The 'Key' prop is used to uniquely identify each cat. */}
         {catOptions.map((catOption) => (
-          <div key={catOption.id}>
+          <div key={catOption.id} className="each-cat-wrapper">
             {/* Using label element to improve accssibility and user experience. The 'Key' prop is used to uniquely identify each label element and it's is important for React's virtual DOM to efficiently track and update elements. */}
             <label>
               <input
