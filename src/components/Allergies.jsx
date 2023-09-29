@@ -1,7 +1,7 @@
 export const Allergies = ({ value, updateFormData }) => {
   const allergies = (e) => updateFormData("allergies", e.target.value);
   return (
-    <div>
+    <div className="allergies">
       <form>
         <label>
           Do you have any allergies? If you do, type them here, otherwise go to

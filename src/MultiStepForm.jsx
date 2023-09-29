@@ -3,9 +3,7 @@ import { Age } from "./components/Age";
 import { Name } from "./components/Name";
 import { BloodType } from "./components/BloodType";
 import { Allergies } from "./components/Allergies";
-
-// import { Submit } from "./components/Submit";
-//import { Confirmation } from "./components/Confirmation";
+import { Submit } from "./components/Submit";
 
 export const MultiStepForm = () => {
   // State to store form data
@@ -24,11 +22,9 @@ export const MultiStepForm = () => {
     setFormData((previous) => ({ ...previous, [field]: value }));
   };
 
-  /// GOING BACK AND FORTH BETWEENQUESTIONS
-
   // State to track the current step in the form
   const [currentStep, setCurrentStep] = useState(1);
-  // Function to move to the next step in the form
+
   const nextStep = () => {
     if (currentStep < 5) setCurrentStep(currentStep + 1);
   };
@@ -38,17 +34,21 @@ export const MultiStepForm = () => {
 
   // function to submit the form itself
   const submitForm = () => {
-    console.log(formData);
     const formattedData = `
     Name: ${formData.name}
     Age: ${formData.age}
     Bloodtype: ${formData.bloodType}
     Allergies: ${formData.allergies}
-   
-    
-  `;
-    alert(formattedData);
+   `;
+
+    console.log("Formatted Data:", formattedData);
+    setFormData((previous) => ({
+      ...previous,
+      formattedData: formattedData,
+    }));
+    setCurrentStep(5);
   };
+
   return (
     <div className="steps">
       {currentStep === 1 && (
@@ -67,10 +67,8 @@ export const MultiStepForm = () => {
         <Allergies value={formData.allergies} updateFormData={updateFormData} />
       )}
 
-      {/* Render the Artist component if on step 6 */}
-      {/* {currentStep === 5 && (
-        // <Submit value={formData.submit} updateFormData={updateFormData} />
-      )} */}
+      {currentStep === 5 && <Submit formData={formData} />}
+
       <div>
         {/* Show the "Back" button if not on the first step */}
         {currentStep > 1 && <button onClick={prevStep}>Back</button>}

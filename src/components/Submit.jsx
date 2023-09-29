@@ -1,27 +1,22 @@
-// Isaac
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+export const Submit = ({ formData }) => {
+  if (!formData) {
+    return null;
+  }
+  const { name, age, bloodType, allergies } = formData;
 
-export const Submit = () => {
-  const [formData] = useState("");
-  const [showSummary, setShowSummary] = useState(false);
-
-  const handleSubmit = () => {
-    setShowSummary(true);
-  };
+  const formattedData = `
+  Name: ${name}
+  Age: ${age}
+  Blood Type: ${bloodType}
+  Allergies: ${allergies}
+  `;
 
   return (
     <div>
-      {showSummary ? (
-        <div>
-          <h2>Summary:</h2>
-          <p>User Submission: {formData}</p>
-        </div>
-      ) : (
-        <div>
-          <button onClick={handleSubmit}>Inte Denna</button>
-        </div>
-      )}
+      <div>
+        <h2>Summary:</h2>
+        <pre>{formattedData}</pre>
+      </div>
     </div>
   );
 };

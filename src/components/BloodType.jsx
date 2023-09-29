@@ -8,6 +8,7 @@ export const BloodType = ({ value, updateFormData }) => {
     <form>
       <label htmlFor="bloodType">Select Bloodtype</label>
       <select
+        className="bloodtype"
         id="bloodType"
         name="bloodType"
         value={value}

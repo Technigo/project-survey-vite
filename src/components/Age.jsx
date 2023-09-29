@@ -9,13 +9,13 @@ export const Age = ({ value, updateFormData }) => {
   return (
     <div>
       <form>
-        Age Group:
+        Your Age:
         {ageGroups.map((group, index) => (
-          <div key={index}>
+          <div className="radio-buttons" key={index}>
             <input
               type="radio"
               value={group}
-              checked={value === group} // Check if the value matches the group
+              checked={value === group}
               onChange={userAge}
             />
             <label>{group}</label>
