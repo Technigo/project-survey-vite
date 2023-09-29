@@ -20,9 +20,10 @@ body {
   background-image: url('https://cdn.pixabay.com/photo/2019/10/14/03/26/landscape-4547734_1280.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; /*Keeps the background fixed when scrolling*/;
+  /* background-attachment: fixed;  */
+  /*Keeps the background fixed when scrolling*/;
   background-position: right 50% bottom 45%;
-  overflow: hidden; /* Prevent scrollbars */
+  /* overflow: hidden; Prevent scrollbars */
   display: flex;
   justify-content: center;
 }
