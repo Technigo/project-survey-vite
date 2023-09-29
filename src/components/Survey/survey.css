@@ -29,6 +29,7 @@ button {
 button:hover {
     background-color: rgb(175,134,6); ;
 }
+
 .submitted-data {
-    max-height: 100px;
+   background-color: red;
 } 
