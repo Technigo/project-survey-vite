@@ -14,18 +14,30 @@ export const App = () => {
   const [chooseCat, setChooseCat] = useState("");
   const [genders, setGenders] = useState("");
   const [personality, setPersonality] = useState("");
-  // const [startPage, setStartPage] = useState("");
   const [userName, setUserName] = useState("");
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [formVisible, setFormVisible] = useState(false); // The surveys visiblity
+
+  // Function to show the survey
+  const handleShowForm = () => {
+    setFormVisible(true);
+  };
 
   // Function to move to the next step in the form
   const handleNextQuestion = () => {
-    if (currentQuestion < 7) setCurrentQuestion(currentQuestion + 1);
+    if (currentQuestion < 7) {
+      setCurrentQuestion(currentQuestion + 1);
+      // Call handleShowForm when transitioning from currentQuestion 0
+      if (currentQuestion === 0) {
+        handleShowForm();
+      }
+    }
   };
+  // Function to move to the previous step in the form
   const handlePrevQuestion = () => {
     if (currentQuestion > 1) setCurrentQuestion(currentQuestion - 1);
   };
-
+  // When the 'handleReset' function is called (by clicking the reset-button), all formfields are emptied.
   const handleReset = () => {
     setAge("");
     setCatName("");
@@ -34,32 +46,20 @@ export const App = () => {
     setPersonality("");
     setUserName("");
     setCurrentQuestion(0);
+    setFormVisible(false);
   };
-
-  // // we use the negation (!) operator to return true if any of the fields is empty, and false if all fields have values.
-
-  // const surveyAnswered = () => {
-  //   return !(
-  //     userName !== "" &&
-  //     genders !== "" &&
-  //     age !== "" &&
-  //     personality !== "" &&
-  //     chooseCat !== "" &&
-  //     catName !== ""
-  //   );
-  // };
-
+  // This is a dynamic rendering of components based on the value of 'currentQuestion'. Depending on the current question number, it renders a specific component with the appropriate props necessary for that step in the survey.
   return (
-    <section className="content-wrapper">
-      <div className="page-in-survey">
+    <section className="page-in-survey">
+      {currentQuestion === 0 && (
+        // This is a function that will be passed down to StartPage and is expected to handle the next question in the survey.
+        <StartPage
+          handleNextQuestion={handleNextQuestion}
+          onButtonClick={() => handleNextQuestion(0)}
+        />
+      )}
+      {formVisible && (
         <div className="form-div">
-          {currentQuestion === 0 && (
-            <StartPage
-              handleNextQuestion={handleNextQuestion}
-              onButtonClick={() => handleNextQuestion(0)}
-            />
-          )}
-
           {currentQuestion === 1 && (
             <Username
               userName={userName}
@@ -100,7 +100,7 @@ export const App = () => {
             />
           )}
 
-          <div className="buttons">
+          <div className="buttons-wrapper">
             {/* Show the "Back" button if not on the first step */}
 
             <div className="prev-next-container">
@@ -115,6 +115,7 @@ export const App = () => {
                 </button>
               )}
 
+              {/* 'aria-label' is an accessability attribute that provides an accessible label for screen readers, informing them about the purpose of the button. */}
               {currentQuestion === 6 && (
                 <button
                   type="submit"
@@ -126,6 +127,7 @@ export const App = () => {
                 </button>
               )}
             </div>
+            {/* Check if the current question is between 1 and 7 (inclusive) and that it's not 0. If both conditions are met, it renders a button that, when clicked, will trigger the 'handleReset' function which, in this case, will reload the form. */}
             {currentQuestion <= 7 && currentQuestion !== 0 && (
               <button type="submit" className="reset-btn" onClick={handleReset}>
                 Start over
@@ -133,7 +135,7 @@ export const App = () => {
             )}
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };

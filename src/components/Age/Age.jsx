@@ -28,7 +28,6 @@ export const Age = ({ age, setAge }) => {
           />
           <div className="radio-design"></div>
           <div className="label-text">{kittenAdult}</div>
-          
         </label>
         </div>
       ))}

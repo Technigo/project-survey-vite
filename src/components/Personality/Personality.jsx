@@ -16,15 +16,18 @@ export const Personality = ({ personality, setPersonality }) => {
         self-assured feline, or a playful, energetic buddy. Explore the
         personalities below and find the purrfect match for your home!
       </p>
+       {/* 'aria-label' is an accessability attribute that provides an accessible label for screen readers, informing them about the purpose of the drop-down. */}
       <select
         className="personality-dropdown"
         aria-label="Select personality from dropdown menu."
         onChange={handleOptionChange}
         value={personality}
       >
+        {/* This sets the default value of the dropdown menu to unselectable. */}
         <option value="" disabled defaultValue>
-          Select personality...
+          Select personality
         </option>
+        {/* Using the Map() method to iterate over the 'personalityTypes' array. */}
         {personalityTypes.map((type) => (
           <option key={type.id} value={type.id}>
             {type.id}
@@ -34,24 +37,3 @@ export const Personality = ({ personality, setPersonality }) => {
     </form>
   );
 };
-
-{
-  /* <select aria-live="polite" role="listbox">
-  <option role="option" value="option1">Option 1</option>
-  <option role="option" value="option2">Option 2</option>
-  <option role="option" value="option3">Option 3</option>
-</select>  In this example:
-
-1. aria-live="polite" tells the screen 
-reader to politely announce changes 
-to the content of the dropdown when 
-options are selected.
-
-2. role="listbox" specifies that the <select> 
-element serves as a listbox, which is a commonly 
-used role for dropdown menus.
-
-3. role="option" is applied to each <option> 
-element to indicate that they are individual 
-options within the listbox.*/
-}

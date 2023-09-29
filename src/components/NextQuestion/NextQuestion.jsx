@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./NextQuestion.css";
+
+// This function is intended to handle the transition to the next question in the form.  It also establishes two pieces of state: 'currentQuestion' to keep track of the current question number, and 'formData' to hold form data including fields like username, gender, age, personality, chosenCat, and catName.
 
 const nextQuestion = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
@@ -11,9 +12,11 @@ const nextQuestion = () => {
     chosenCat: "",
     catName: "",
   });
-
+  // This function updates the form data and continue to the next question. 
   const handleNextQuestion = (data) => {
+    //  This is a functional update. It takes the previous state 'prevData', spreads it's properties '...prevData', and then spreads the properties of the new data. This effectively merges the previous form data with the new data.
     setFormData((prevData) => ({ ...prevData, ...data }));
+    // This is a functional update that takes the previous state 'prevStep' and increments it by 1 (going forward to the next question).
     setCurrentQuestion((prevStep) => prevStep + 1);
   };
 
@@ -37,21 +40,3 @@ const nextQuestion = () => {
     </>
   );
 };
-
-// //State to store form data
-// const [currentStep, setCurrentStep] = useState(1);
-// //Function to update for data based on field and value
-// const updateFormData = {field, value} => {
-//     setFormData((previous) => ({...previous, [field] : value}))
-// //Function to move to the next step in the form
-// const nextQuestion = () => {
-//     if (currentStep < 6) setCurrentStep(currentStep + 1);
-// }
-// const prevQuestion = () => {
-//     if (currentStep > 1) setCurrentStep(currentStep - 1);
-// }
-// //Function to submit form
-// const submitForm = () => {
-// }
-// return;
-// };

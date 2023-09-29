@@ -7,11 +7,7 @@
   padding: 0.8rem 1rem;
   margin: 5px 0;
   cursor: pointer;
-  background: linear-gradient(
-    90deg,
-    rgba(247, 158, 179, 0.25) 0%,
-    rgba(253, 195, 96, 0.25) 100%
-  );
+  background: var(--gradient025);
 }
 
 /* Hides the default radio button */
@@ -26,7 +22,7 @@
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 100px;
-  background: linear-gradient(90deg, #f79eb3 0%, #fdc360 100%);
+  background: var(--gradient100)
 }
 
 .radio-design::before {

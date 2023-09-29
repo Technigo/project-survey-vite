@@ -2,10 +2,7 @@ import "./Username.css";
 
 export const Username = ({ userName, setUserName }) => {
   
-  // const [error, setError] = useState(false);
-  
   const userNameInput = (e) => setUserName(e.target.value);
-
 
   // Event handler for form submission
   const handleSubmit = (event) => {
@@ -25,7 +22,7 @@ export const Username = ({ userName, setUserName }) => {
           name="userName" 
           value={userName}
           onChange={userNameInput}
-          placeholder="Write your name here..." required
+          placeholder="Write your name here..."
           
         />
       </label>

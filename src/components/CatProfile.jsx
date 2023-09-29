@@ -1,8 +1,6 @@
 import "./CatProfile.css";
 import { catOptions, genderGroups, personalityTypes } from "./Arrays";
 
-// import { useState } from "react";
-
 export const CatProfile = ({
   userName,
   genders,
@@ -32,7 +30,6 @@ export const CatProfile = ({
     ? selectedPersonality.description
     : "";
 
-  console.log("chooseCat:", chooseCat);
   return (
     <div className="cat-profile-wrapper">
       <div className="cat-image">
