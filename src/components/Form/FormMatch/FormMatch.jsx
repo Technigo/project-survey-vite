@@ -1,3 +1,4 @@
+import "./FormMatch.css";
 // The FormMatch component takes four props: name, season, activity, and eco.
 export const FormMatch = ({ name, season, activity, eco }) => {
     console.log("the user info", name, season, activity, eco)
@@ -74,27 +75,29 @@ export const FormMatch = ({ name, season, activity, eco }) => {
     console.log("This is the destination", matchingDestination)
 
     return (
-        <div>
+        <div className="match-wrapper">
             <h2>Amazing! {name}, you have a match!!</h2>
             <p>
                 {/* Display a message based on the user's name and chosen season */}
-                Based on your dream of {season}, wouldn't{" "}
+                Based on your dream of {season}, wouldn&apos;t{" "}
                 <strong>{matchingDestination.destination}</strong>,{" "}
                 <strong>{matchingDestination.country}</strong> be fantastic? Go
                 get yourself a dreamy vacay!!
             </p>
             {/* Display an image of the matching destination */}
-            <img
-                src={matchingDestination.imageUrl}
-                alt={matchingDestination.destination}
-            />
+            <div className="destination-image-container">
+                <img className="destination-image"
+                    src={matchingDestination.imageUrl}
+                    alt={matchingDestination.destination}
+                />
+            </div>
             {/* Display a description of the matching destination */}
             <p>{matchingDestination.destinationdescription}</p>
             {/* Display a message based on whether the eco checkbox is checked */}
             {eco ? (
                 <p>Great of you to think of the environment!</p>
             ) : (
-                <p>Not taking the train? That's ok I guess!</p>
+                <p>Not taking the train? That&apos;s ok I guess!</p>
             )}
         </div>
     )

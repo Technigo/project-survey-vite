@@ -37,6 +37,7 @@ export const Form = () => {
 
     // Function to submit the form
     const submitForm = (matchingDestination) => {
+
         if (matchingDestination) {
           // If there's a matching destination, move to the next step
             setCurrentStep(currentStep + 1);
@@ -106,7 +107,7 @@ export const Form = () => {
                 {/* Show the "Submit" button if on the last step */}
                 {currentStep === 4 && (
                     <div className="button-submit">
-                        <p>If you’re happy with your</p>
+                        <p>If you&apos;re happy with your</p>
                         <p>choices, please click Submit!</p>
                         <button onClick={submitForm}>Submit!</button>
                     </div>
