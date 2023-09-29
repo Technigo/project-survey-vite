@@ -1,4 +1,5 @@
 import React from "react";
+import "./formStyle.css";
 
 export const Activity = ({ value, updateFormData }) => {
     const handleActivityChange = (e) => {
@@ -8,7 +9,7 @@ export const Activity = ({ value, updateFormData }) => {
     return (
         <div>
             <h2>Did you take part in any activities during your stay?</h2>
-            <select value={value} onChange={handleActivityChange}>
+            <select className="Activity" value={value} onChange={handleActivityChange}>
                 <option value="">Select an activity</option>
                 <option value="a surfing">Surfing</option>
                 <option value="a hiking">Hiking</option>

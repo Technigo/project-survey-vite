@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Name } from "./nameInput";
 import { Room } from "./Room";
-import { Star } from "./starts";
+import { Star } from "./stars";
 import { StayDay } from "./stayDay";
 import { Activity } from "./activities";
 import { Comment } from "./comments";
 import "./index.css";
+import "./formStyle.css";
 
 
 

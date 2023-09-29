@@ -1,4 +1,5 @@
 import React from "react";
+import "./formStyle.css";
 
 export const Room = ({ value, updateFormData }) => {
     const handleRoomChange = (e) => {
@@ -8,7 +9,7 @@ export const Room = ({ value, updateFormData }) => {
     return (
         <div>
             <h2>which room did you stay in?</h2>
-            <select value={value} onChange={handleRoomChange}>
+            <select className="room" value={value} onChange={handleRoomChange}>
                 <option value="">Select a room</option>
                 <option value="Superior Suite">Superior Suite</option>
                 <option value="Deluxe Room">Deluxe Room</option>

@@ -16,7 +16,7 @@ export const Star = ({ updateFormData, value }) => {
         <form>
             <h2>How many stars would you like to give us?</h2>
             {Stars.map(group => (
-                <label key={group}>
+                <label className="StarBox" key={group}>
                     <input
                         type="radio"
                         value={group}

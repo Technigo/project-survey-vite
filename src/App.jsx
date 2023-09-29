@@ -1,6 +1,7 @@
 import { HeaderText } from "./components/Header";
 import { MultistepForm } from "./components/MultistepForm";
 import "./components/index.css";
+import "./components/formStyle.css";
 
 export const App = () => {
 
@@ -9,8 +10,8 @@ export const App = () => {
     <>
       <div className="form">
         <HeaderText />
-        <MultistepForm /></div>
-
+        <MultistepForm />
+      </div>
 
     </>
   );
