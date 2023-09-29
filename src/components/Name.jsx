@@ -4,7 +4,7 @@ export const Name = ({ updateFormData, value }) => {
 
     return (
         <div class="name">
-            <img src="public/assets/name.png"></img>
+            <img src="/assets/name.png"></img>
             <label>What is your name?</label>
             <input type="text" value={value} onChange={childsName} />
         </div>

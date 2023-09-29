@@ -14,7 +14,7 @@ export const FavDinosaur = ({ updateFormData, value }) => {
                         onChange={chosenDinosaur}
                         checked={value === "tyrannosaurus"}
                     />
-                    <img src="public/assets/trex.png" alt="Tyrannosaurus"></img> Tyrannosaurus
+                    <img src="/assets/trex.png" alt="Tyrannosaurus"></img> Tyrannosaurus
                 </label>
             </p>
             <p>

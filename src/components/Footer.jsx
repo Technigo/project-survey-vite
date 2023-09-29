@@ -1,7 +1,7 @@
 
 export const Footer = () => {
     return (
-        <div className='footer'>This is the footer - put some information here</div>
+        <div className='footer'>Technigo Web Development Boot Camp - Week 6 - Elin and Beckie</div>
     )
 }
 

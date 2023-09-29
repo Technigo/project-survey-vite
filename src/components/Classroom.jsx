@@ -7,7 +7,7 @@ export const Classroom = ({ updateFormData, value }) => {
 
     return (
         <div class="class">
-            <img src="public/assets/class-transparent.png" alt="Class"></img>
+            <img src="/assets/class-transparent.png" alt="Class"></img>
             <label>What class are you in? </label>
 
             <select value={value} onChange={childsclass}>

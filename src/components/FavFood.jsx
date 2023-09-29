@@ -7,10 +7,10 @@ export const FavFood = ({ updateFormData, value }) => {
         <div class="food">
 
             <div class="food-img">
-                <img src="public/assets/pizza.png" alt="Pizza"></img>
-                <img src="public/assets/salad.png"></img>
-                <img src="public/assets/spaghetti.png"></img>
-                <img src="public/assets/vegetables.png"></img></div>
+                <img src="/assets/pizza.png" alt="Pizza"></img>
+                <img src="/assets/salad.png"></img>
+                <img src="/assets/spaghetti.png"></img>
+                <img src="/assets/vegetables.png"></img></div>
 
 
             <div class="foods-txt">

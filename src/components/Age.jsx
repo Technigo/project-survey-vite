@@ -5,7 +5,7 @@ export const Age = ({ updateFormData, value }) => {
 
     return (
         <div class="age">
-            <img src="public/assets/numbers-removebg-preview.png" alt="numbers"></img>
+            <img src="/assets/numbers-removebg-preview.png" alt="numbers"></img>
             <label>How old are you?</label>
             <input type="text" value={value} onChange={childsAge} />
         </div>
