@@ -42,41 +42,51 @@ function App() {
     setShowSummary(true);
   };
 
+  const displaySurvey = () => {
+    /* Render all questions */
+    return (
+      <div id="survey">
+        <SurveyInfo />
+
+        {/* Render all questions */}
+        <QuestionCelebrate
+          onAnswer={(answer) => handleAnswer("celebrateChristmas", answer)}
+          celebrateChristmas={answers.celebrateChristmas}
+        />
+        <QuestionExcited
+          onAnswer={(answer) => handleAnswer("", answer)} // Pass an empty question identifier
+          excitementLevel={answers.excitementLevel}
+        />
+        <QuestionGender
+          onGenderChange={(selectedGender) =>
+            handleAnswer("selectedGender", selectedGender)
+          }
+          selectedGender={answers.selectedGender}
+        />
+        <QuestionAge
+          selectedAge={answers.selectedAge}
+          setSelectedAge={(newAge) => handleAnswer("selectedAge", newAge)}
+        />
+        <QuestionLikeMost
+          onAnswer={(answer) => handleAnswer("option", answer)}
+          option={answers.option || []}
+        />
+        <QuestionGift
+          onAnswer={(answer) => handleAnswer("likedOption", answer)}
+          likedOption={answers.likedOption}
+        />
+
+        {/* Render the Submit button */}
+        <button onClick={handleSubmit}>Submit</button>
+      </div>
+    );
+  };
+
   return (
     <div className="App">
       <Header />
-      <SurveyInfo />
 
-      {/* Render all questions */}
-      <QuestionCelebrate
-        onAnswer={(answer) => handleAnswer("celebrateChristmas", answer)}
-        celebrateChristmas={answers.celebrateChristmas}
-      />
-      <QuestionExcited
-        onAnswer={(answer) => handleAnswer("", answer)} // Pass an empty question identifier
-        excitementLevel={answers.excitementLevel}
-      />
-      <QuestionGender
-        onGenderChange={(selectedGender) =>
-          handleAnswer("selectedGender", selectedGender)
-        }
-        selectedGender={answers.selectedGender}
-      />
-      <QuestionAge
-        selectedAge={answers.selectedAge}
-        setSelectedAge={(newAge) => handleAnswer("selectedAge", newAge)}
-      />
-      <QuestionLikeMost
-        onAnswer={(answer) => handleAnswer("option", answer)}
-        option={answers.option || []}
-      />
-      <QuestionGift
-        onAnswer={(answer) => handleAnswer("likedOption", answer)}
-        likedOption={answers.likedOption}
-      />
-
-      {/* Render the Submit button */}
-      <button onClick={handleSubmit}>Submit</button>
+      {!showSummary && displaySurvey()}
 
       {/* Pass the answers to SurveySummary when showSummary is true */}
       {showSummary && (
