@@ -7,10 +7,16 @@
     gap: 3em;
 }
 
+.eco-label-wrapper {
+   display: flex;
+   align-items: center;
+   gap: 0.3rem;
+}
+
 .eco-label {
+    font-size: 15px;
     display: flex;
-    gap: 0.3rem;
-    align-items: center;
+    flex-direction: column;
 }
 
 .eco-img {
@@ -18,16 +24,12 @@
     width: 25px;
 }
 
-.label-small {
-    font-size: 15px;
-}
-
 .checkbox-container {
     display: block;
     position: relative;
     padding-left: 25px;
-    margin: 10px 5px;
-    font-size: 16px;
+    margin: 10px 3px;
+    font-size: 20px;
     user-select: none;
 
 }
@@ -44,19 +46,19 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 19px;
-    width: 19px;
-    background-color: #a2cae4;
+    height: 20px;
+    width: 20px;
+    background-color: #92c7e8;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .checkbox-container:hover input ~ .custom-checkbox {
-    background-color: #66b3e7;
+    background-color: #7FB3D5;
 }
 
-.checkbox-container input:checked ~.custom-checkbox {
-    background-color: #3CA4EA;
+.checkbox-container input:checked ~ .custom-checkbox {
+    background-color: #268DCD;
 }
 
 .custom-checkbox:after {
@@ -64,7 +66,7 @@
     position: absolute;
     width: 5px;
     height: 9px;
-    border: solid bisque;
+    border: solid #FCFDE8;
     border-width: 0 3px 3px 0;
     top: 2px;
     left: 5.5px;
@@ -77,5 +79,5 @@
 }
 
 .checkbox-container input:focus + .custom-checkbox {
-    outline: #3CA4EA auto 4px;
+    outline: #064F7C auto 4px;
 }

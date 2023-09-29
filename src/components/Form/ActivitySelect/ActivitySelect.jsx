@@ -13,10 +13,8 @@ export const ActivitySelect = ({ updateFormData, value}) => {
             <h3>And what do you want to do when you're there?</h3>
             <label className="label-small">
                 {/* Display a label with instructions for the user */}
-                Please choose one of
-                <br />
-                the following options:
-                <br />
+                <p>Please choose one of</p>
+                <p>the following options:</p>
                 {/* Create a dropdown select menu */}
                 <select
                     className="select-menu"

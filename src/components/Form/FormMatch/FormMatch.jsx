@@ -13,6 +13,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
             destinationdescription:
                 "This Greek island is famous for its breathtaking sunsets, white-washed buildings, and crystal-clear waters. It's an ideal destination for couples seeking a romantic escape or anyone looking to relax in a beautiful setting.",
             imageUrl: "/images/santorini.jpeg",
+            imageAlt: "Picture from a height, looking out over white houses, and blue shiny domes. A sunset over the coast in the background.",
         },
         {
             season: "summer",
@@ -22,6 +23,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
             destinationdescription:
                 "Located in the Algarve region, Sagres is known for its beautiful beaches and consistent waves. Tonel Beach and Beliche Beach are popular surf spots with options for both beginners and advanced surfers.",
             imageUrl: "/images/surf-sagres.jpeg",
+            imageAlt: "Picture of a person on a surfboard, riding a green wave in clear water.",
         },
         {
             season: "summer",
@@ -31,6 +33,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
             destinationdescription:
                 "Krakow's Old Town is a UNESCO World Heritage site, featuring the stunning Wawel Castle, St. Mary's Basilica, and the historic Jewish Quarter of Kazimierz.",
             imageUrl: "/images/krakowguide.jpeg",
+            imageAlt: "A picture of the pitoresque city center of Krakow, cafes and a parade of fancy old fashioned horse carrages.",
         },
         {
             season: "winter",
@@ -40,6 +43,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
             destinationdescription:
                 "Salzburg is a charming city with a picturesque old town. In winter, it's especially enchanting with its Christmas markets, classical music concerts, and the Hohensalzburg Fortress.",
             imageUrl: "/images/salzburg.jpeg",
+            imageAlt: "A picture of the castle on top of a mountain, and beautiful houses below. In the foreground a snow covered river, in the background there are snowy mountains.",
         },
         {
             season: "winter",
@@ -49,6 +53,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
             destinationdescription:
                 "St. Moritz is synonymous with luxury winter sports. Enjoy world-class skiing and snowboarding, as well as activities like ice skating, horse-drawn carriage rides, and polo on snow.",
             imageUrl: "/images/stMoritzSkiing.jpeg",
+            imageAlt: "A picture of the people sitting on a snow covered mountain looking out over a dramatic snowy landscape under clear skys, skiis and snowboard in foreground.",
         },
         {
             season: "winter",
@@ -58,6 +63,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
             destinationdescription:
                 "Vienna is a magical city during the winter months. You can explore its historic palaces, museums, and concert halls, including the Hofburg Palace, Belvedere Palace, and the Vienna State Opera.",
             imageUrl: "/images/wien-winter.jpeg",
+            imageAlt: "A picture of a christmas market in Vienna, overlooking a clock tower. Plenty of shops and pretty christmas decorations.",
         },
     ];
 
@@ -76,7 +82,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
 
     return (
         <div className="match-wrapper">
-            <h2>Amazing! {name}, you have a match!!</h2>
+            <h1>Amazing! {name}, you have a match!!</h1>
             <p>
                 {/* Display a message based on the user's name and chosen season */}
                 Based on your dream of {season}, wouldn&apos;t{" "}
@@ -88,7 +94,7 @@ export const FormMatch = ({ name, season, activity, eco }) => {
             <div className="destination-image-container">
                 <img className="destination-image"
                     src={matchingDestination.imageUrl}
-                    alt={matchingDestination.destination}
+                    alt={matchingDestination.imageAlt}
                 />
             </div>
             {/* Display a description of the matching destination */}

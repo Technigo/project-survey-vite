@@ -11,15 +11,18 @@ export const EcoCheck = ({ updateFormData, value }) => {
                 Would you like to take the train for the environment or fly
                 there for convenience?
             </h3>
-            <label className="label-small">
-                <div className="eco-label">
+            <label >
+                <div className="eco-label-wrapper">
                     {/* Display an eco-friendly label with an image */}
                     <img
                         className="eco-img"
                         src="/images/eco-leaf.png"
                         alt="A leaf icon."
                     ></img>
-                    Check the box <br /> to choose the train:
+                    <div className="eco-label">
+                    <p>Check the box</p>
+                    <p>to choose the train:</p>
+                    </div>
                 </div>
                 {/* Create a checkbox input */}
                 <label className="checkbox-container">

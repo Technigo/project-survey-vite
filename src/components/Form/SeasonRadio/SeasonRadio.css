@@ -31,18 +31,18 @@
     left: 0;
     height: 19px;
     width: 19px;
-    background-color: #eee;
+    background-color: #92C7E8;
     cursor: pointer;
     border-radius: 50%;
 }
 
 /* The adjacent sibling to input, custom-radio, should be affected in the following way when the radio button-container input is hovered */
 .seasonradio-container:hover input ~ .custom-radio {
-    background-color: #ccc;
+    background-color: #7FB3D5;
 }
 
 .seasonradio-container input:checked ~ .custom-radio {
-    background-color: #59B1EA;
+    background-color: #268dcd;
 }
 
 /* Need to add content when you use the after property */
@@ -53,7 +53,7 @@
     left: 6px;
     width: 7px;
     height: 7px;
-    background-color: #fff;
+    background-color: #FCFDE8;
     border-radius: 50%;
     display: none;
 }
@@ -64,5 +64,5 @@
 
 /* Gives the custom radio button an outline when the default radio button is in focus */
 .seasonradio-container input:focus + .custom-radio {
-    outline: #0281d5 auto 4px;
+    outline: #064F7C auto 4px;
 }

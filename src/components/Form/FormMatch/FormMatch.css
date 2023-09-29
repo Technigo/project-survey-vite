@@ -1,10 +1,12 @@
 .match-wrapper {
+    height: 100%;
     margin: 20px;
-    display: block;
-    gap: 3em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1em;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .destination-image-container{
@@ -12,6 +14,7 @@
     height: 300px;
     overflow: hidden;
     position: relative;
+    border-radius: 10px;
 }
 
 .destination-image {

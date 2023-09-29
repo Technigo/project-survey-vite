@@ -87,32 +87,39 @@ export const Form = () => {
                     eco={formData.eco}
                 />
             )}
-            <div className="button-container">
+    
                 {/* Show the "Back" button if not on the first step */}
+                <div className="button-container">
                 {currentStep > 1 && currentStep !== 5 && (
-                    <div className="button-back">
-                        <p>Click this button if you</p>
-                        <p>changed your mind:</p>
-                        <button onClick={prevStep}>Go back!</button>
-                    </div>
+                    
+                        <div className="button-back">
+                            <p>Click this button if you</p>
+                            <p>changed your mind:</p>
+                            <button onClick={prevStep}>Go back!</button>
+                        </div>
+                   
                 )}
                 {/* Show the "Continue" button if not on the last step */}
                 {currentStep < 4 && currentStep !== 5 && (
+                   
                     <div className="button-continue">
                         <p>Click this button to continue</p>
                         <p>to the next question:</p>
                         <button onClick={nextStep}>Continue</button>
                     </div>
+                   
                 )}
                 {/* Show the "Submit" button if on the last step */}
                 {currentStep === 4 && (
-                    <div className="button-submit">
-                        <p>If you&apos;re happy with your</p>
-                        <p>choices, please click Submit!</p>
-                        <button onClick={submitForm}>Submit!</button>
-                    </div>
+                
+                        <div className="button-submit">
+                            <p>If you&apos;re happy with your</p>
+                            <p>choices, please click Submit!</p>
+                            <button onClick={submitForm}>Submit!</button>
+                        </div>
+                  
                 )}
+                </div>
             </div>
-        </div>
     );
 }

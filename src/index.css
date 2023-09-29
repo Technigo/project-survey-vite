@@ -14,6 +14,12 @@
   box-sizing: border-box;
 }
 
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
 h1 {
   font-size: 40px;
 }
@@ -30,7 +36,7 @@ code {
 body {
   background-color: #FCFDE8;
   height: 100vh;
-  color: #3CA4EA;
+  color: #268dcd;
   margin: 15px;
 }
 
@@ -42,8 +48,8 @@ body {
 }
 
 .app-container {
-  height: 100vh;
-  max-width: 500px;
+  height: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

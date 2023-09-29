@@ -11,19 +11,25 @@
     font-size: 15px;
 }
 
+.nameinput-wrapper label {
+    color: #268DCD;
+    font-size: 15px;
+}
+
 .nameinput-container input[type="text"] {
     border-radius: 10px;
-    border: solid 2px #59B1EA;
-    padding: 10px;
+    border: solid 1px #268dcd;
     width: 100%;
-    padding: 2px;
+    padding: 4px 6px 3px;
     height: 40px;
+    color: #268dcd;
+    font-size: 20px;
 }
 
 .nameinput-container input[type="text"]::placeholder {
-    color: #59B1EA;
+    color: #B1C7D5;
     font-size: 20px;
-    padding: 6px 6px; 
+    padding: 4px 6px 3px; 
 }
  
   

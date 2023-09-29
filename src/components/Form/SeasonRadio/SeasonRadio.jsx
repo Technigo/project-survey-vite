@@ -9,9 +9,8 @@ export const SeasonRadio = ({ updateFormData, value }) => {
         <div className="seasonradio-wrapper">
             <h3>Are you longing for the sun, or for the winter snow?</h3>
             <label className="label-small">
-                Please choose one of
-                <br />
-                the following options:
+                <p>Please choose one of</p>
+                <p>of the following options:</p>
                 {/* Create radio buttons for the user to choose between summer and winter */}
                 <label className="seasonradio-container">
                     <input

@@ -3,37 +3,41 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: solid 2px #3CA4EA;
+    border: solid 1px #268dcd;
     border-radius: 10px;
     padding: 0 15px;
     margin-bottom: 20px;
 }
  
 .button-container {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
-    justify-content: space-around;
+    gap: 1rem; 
+    margin-bottom: 30px;
 }
 
 .button-container p {
-    font-size: 8px;
+    font-size: 9px;
     margin-left: 6px;
 }
 
+.button-continue .button-back .button-submit {
+    padding: 3px;
+}
+
 button {
-    width: 120px;
-    height: 35px;
-    border: 1px solid #3CA4EA;
+    padding: 0.5rem 1rem;
+    border: 1px solid #268DCD;
     border-radius: 15px;
-    color: #3CA4EA;
-    font-size: 16px;
+    color: #268DCD;
+    font-size: inherit;
     font-weight: bold;
     background-color: #FCFDE8;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #3CA4EA;
+    background-color: #268DCD;
     color: #FCFDE8 ;
 }
 
