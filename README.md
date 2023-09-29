@@ -11,3 +11,5 @@ A sketch was made showing the structure of the components and basic design. We c
 With more time we would have added the map-method to the radio buttons, validation (to require answers), e-mail input and we would also have hidden the header-information when the summary is shown.
 
 ### View it live
+
+https://survey-project-collin-dieden.netlify.app/

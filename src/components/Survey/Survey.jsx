@@ -45,6 +45,7 @@ export const Survey = () => {
   //Conditionally renders the components based on currentStep and submission. The '!submitted &&' makes the question/text disappear when going to the next step.
   return (
     <div className="survey-container">
+
       {currentStep === 1 && !submitted && (
         <Name value={formData.name} updateFormData={updateFormData} />
       )}
