@@ -95,7 +95,7 @@ input:focus {
 .radio-buttons {
   padding: 20px 10px;
   width: 800px;
-  max-width: 70vW;
+  max-width: 70vw;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -235,10 +235,15 @@ select:focus {
 
 .the-drink-pic {
   width: 200px;
+  opacity: 0.7;
 }
 
+.the-drink h2 {
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: 0.1em;
+}
 
-@media (max-width: 450px){
+@media (max-width: 450px) {
   .the-header {
     font-size: 3rem;
   }
