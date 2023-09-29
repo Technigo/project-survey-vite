@@ -233,6 +233,10 @@ select:focus {
   /* margin: 0 166px 10px 0; */
 }
 
+.the-drink-pic {
+  width: 200px;
+}
+
 
 @media (max-width: 450px){
   .the-header {
