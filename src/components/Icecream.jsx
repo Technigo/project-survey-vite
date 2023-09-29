@@ -37,6 +37,8 @@ export const Icecream = ({ updateFormData, value }) => {
                     className="icecream-slider"
                 />
             </div>
+            <div>
+            </div>
         </div>
     )
 }
