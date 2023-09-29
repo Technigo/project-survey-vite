@@ -99,12 +99,47 @@ p {
   font-weight: 700;
 }
 
+.reset-btn {
+  border: 0.3rem solid #fdc360;
+  /* padding: 0.625rem 1.5rem; */
+  padding: 0.3rem;
+  /* border-radius: 10rem; */
+  background: linear-gradient(90deg, #f79eb3 0%, #fdc360 100%);
+  color: #fff;
+  font-size: inherit;
+  font-weight: 700;
+}
+
 button {
   transition: ease 0.5s;
 }
 
 button:hover {
   scale: 1.1;
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .content-wrapper {
+    width: 390px;
+    margin: 100px 0 100px 0;
+    box-shadow: 10px 10px 5px #eebb9569;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .content-wrapper {
+    width: 390px;
+    margin: 100px 0px 100px 0px;
+    box-shadow: 10px 10px 5px #eebb9569;
+  }
 }
 
 /* :root {

@@ -8,14 +8,13 @@ import { CatName } from "./components/CatName/CatName";
 import { Personality } from "./components/Personality/Personality";
 import { CatProfile } from "./components/CatProfile";
 
-
 export const App = () => {
   const [age, setAge] = useState("");
   const [catName, setCatName] = useState("");
   const [chooseCat, setChooseCat] = useState("");
   const [genders, setGenders] = useState("");
   const [personality, setPersonality] = useState("");
-  const [startPage, setStartPage] = useState("");
+  // const [startPage, setStartPage] = useState("");
   const [userName, setUserName] = useState("");
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
@@ -37,24 +36,23 @@ export const App = () => {
     setCurrentQuestion(0);
   };
 
-  // we use the negation (!) operator to return true if any of the fields is empty, and false if all fields have values.
+  // // we use the negation (!) operator to return true if any of the fields is empty, and false if all fields have values.
 
-  const surveyAnswered = () => {
-    return !(
-      userName !== "" &&
-      genders !== "" &&
-      age !== "" &&
-      personality !== "" &&
-      chooseCat !== "" &&
-      catName !== ""
-    );
-  };
+  // const surveyAnswered = () => {
+  //   return !(
+  //     userName !== "" &&
+  //     genders !== "" &&
+  //     age !== "" &&
+  //     personality !== "" &&
+  //     chooseCat !== "" &&
+  //     catName !== ""
+  //   );
+  // };
 
   return (
     <section className="content-wrapper">
       <div className="page-in-survey">
         <div className="form-div">
-          
           {currentQuestion === 0 && (
             <StartPage
               handleNextQuestion={handleNextQuestion}
@@ -74,7 +72,7 @@ export const App = () => {
             <Gender genders={genders} setGenders={setGenders} />
           )}
 
-          {currentQuestion === 3 && ( <Age age={age} setAge={setAge} />)}
+          {currentQuestion === 3 && <Age age={age} setAge={setAge} />}
 
           {currentQuestion === 4 && (
             <Personality
@@ -116,22 +114,21 @@ export const App = () => {
                   <img src="src/assets/next.png" alt="" />
                 </button>
               )}
-            
 
-            {currentQuestion === 6 && (
-              <button
-                type="submit"
-                className="submit-btn"
-                aria-label="Submit button"
-                onClick={handleNextQuestion}
-              >
-                Meet your cat!
-              </button>
-            )}
-</div>
+              {currentQuestion === 6 && (
+                <button
+                  type="submit"
+                  className="submit-btn"
+                  aria-label="Submit button"
+                  onClick={handleNextQuestion}
+                >
+                  Meet your cat!
+                </button>
+              )}
+            </div>
             {currentQuestion <= 7 && currentQuestion !== 0 && (
               <button type="submit" className="reset-btn" onClick={handleReset}>
-                reset
+                Start over
               </button>
             )}
           </div>

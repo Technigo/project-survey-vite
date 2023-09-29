@@ -48,12 +48,12 @@ export const CatProfile = ({
             <h4>Personality</h4>
             <p>{personality}</p>
           </div>
-          <div class="vl"></div>
+          <div className="vl"></div>
           <div className="age-container">
             <h4>Age</h4>
             <p>{age}</p>
           </div>
-          <div class="vl"></div>
+          <div className="vl"></div>
           <div className="owner-container">
             <h4>Owner</h4>
             <p>{userName}</p>

@@ -1,1 +1,5 @@
 /* CSS IN USERNAME.CSS*/
+.cat-name-form {
+  display: flex;
+  flex-direction: column;
+}
