@@ -95,6 +95,7 @@ input:focus {
 .radio-buttons {
   padding: 20px 10px;
   width: 800px;
+  max-width: 70vW;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -230,6 +231,13 @@ select:focus {
   display: flex;
   justify-content: left;
   /* margin: 0 166px 10px 0; */
+}
+
+
+@media (max-width: 450px){
+  .the-header {
+    font-size: 3rem;
+  }
 }
 
 /* For tablets */
