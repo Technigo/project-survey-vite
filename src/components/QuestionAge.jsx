@@ -24,21 +24,23 @@ function AgeQuestion({ selectedAge, setSelectedAge }) {
   return (
     <div className="ageClass">
       <h2>Age</h2>
-      <label htmlFor="ageSelect">Choose your age span:</label>
+      <label htmlFor="ageSelect">
+        Please pick an age-span<br></br>
+      </label>
       <select
         id="ageSelect"
         name="ageSelect"
         value={selectedAge}
         onChange={handleAgeChange}
       >
-        <option value="">Select an age span</option>
+        <option value="">Age-span</option>
         {ageSpans.map((ageSpan) => (
           <option key={ageSpan} value={ageSpan}>
             {ageSpan}
           </option>
         ))}
       </select>
-      {ageSelected && <p>You selected: {selectedAge}</p>}
+      {ageSelected && <p>You selected: {selectedAge} - Excellent age!</p>}
     </div>
   );
 }

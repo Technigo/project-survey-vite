@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function QuestionExcited({ onAnswer, excitementLevel }) {
   const [selectedLevel, setSelectedLevel] = useState(excitementLevel);
@@ -11,7 +11,7 @@ function QuestionExcited({ onAnswer, excitementLevel }) {
   const handleSliderChange = (event) => {
     const selectedLevel = event.target.value;
     setSelectedLevel(selectedLevel);
-    onAnswer('', selectedLevel); 
+    onAnswer("", selectedLevel);
     setIsInteracted(true);
   };
 
@@ -32,9 +32,3 @@ function QuestionExcited({ onAnswer, excitementLevel }) {
 }
 
 export default QuestionExcited;
-
-
-
-
-
-

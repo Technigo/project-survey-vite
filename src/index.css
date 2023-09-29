@@ -30,6 +30,13 @@ header {
   height: 50px;
 }
 
+button {
+  background-color: white;
+  border-radius: 2px;
+  border-style: dotted;
+  border-color: red;
+}
+
 .footer {
   border-style: none;
   color: gold;
@@ -37,4 +44,45 @@ header {
   margin: 20px;
   text-align: center;
   font-size: x-small;
+}
+
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: darkblue;
+    color: rgb(241, 207, 121);
+  }
+
+  #header-image {
+    width: 60%;
+    /* Fixa den ovan till resposive sen, stoppa så den inte dras ut */
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #header-image {
+    /* Fixa den ovan till resposive sen, stoppa så den inte dras ut */
+    width: 60%;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: darkgreen;
+    color: beige;
+  }
+
+  #header-image {
+    width: 600px;
+    height: 70px;
+  }
 }
