@@ -11,7 +11,7 @@ export const Name = ({ value, updateFormData, isNameValid }) => {
 
   return (
     <div>
-      <label>What is your name? 🗣️</label>
+      <label>What is your name? 📛</label>
       <input type="text" value={value} onChange={userName} />
       {isNameValid === false && value.length > 0 && (
         <div style={{ color: "red" }}>Name must be at least 3 characters</div>

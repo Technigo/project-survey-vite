@@ -59,7 +59,7 @@ export const MultiStepForm = () => {
   };
 
   const submitForm = () => {
-    const formattedData = `You’re a ${formData.age} year old individual named ${formData.name}. You have a ${formData.trust} % trust in the government, and in your spare time you watch ${formData.movie} on repeat. When people ask what potato dish you want to become, you always answer: ${formData.potato}! You can be contacted at ${formData.email}.`;
+    const formattedData = `You’re a ${formData.age} year old individual named ${formData.name}. You have a ${formData.trust}% trust in the government, and in your spare time you watch ${formData.movie} on repeat. When people ask what potato dish you want to become, you always answer: ${formData.potato}! You can be contacted at ${formData.email}.`;
     const alertMessage = "Read through the information we have collected about you. Click 'OK' to submit.\n\n" + formattedData;
     alert(alertMessage);
 
@@ -89,49 +89,53 @@ export const MultiStepForm = () => {
         <ThankYou />
       ) : (
         <>
-          {currentStep === 0 && (
-            <div>
-              <h2>Welcome to this important survey! 📄</h2>
-              <button onClick={startSurvey}>Start survey</button>
-            </div>
-          )}
-          {currentStep !== 0 && (
-            <>
-              {currentStep === 1 && (
-                <Name value={formData.name} updateFormData={updateFormData} />
-              )}
-              {currentStep === 2 && (
-                <Age value={formData.age} updateFormData={updateFormData} />
-              )}
-              {currentStep === 3 && (
-                <Email value={formData.email} updateFormData={updateFormData} />
-              )}
-              {currentStep === 4 && (
-                <Potato value={formData.potato} updateFormData={updateFormData} />
-              )}
-              {currentStep === 5 && (
-                <Trust value={formData.trust} updateFormData={updateFormData} />
-              )}
-              {currentStep === 6 && (
-                <Movie value={formData.movie} updateFormData={updateFormData} />
-              )}
+          <div className="button-container">
+            {currentStep === 0 && (
               <div>
-                {currentStep > 1 && <button onClick={prevStep}>Back</button>}
-                {currentStep < 6 ? (
-                  <button onClick={nextStep} disabled={!validateStep(currentStep)}>
-                    Next
-                  </button>
-                ) : (
-                  <button onClick={submitForm} disabled={!validateStep(currentStep)}>
-                    Submit Form
-                  </button>
+                <h6>⚠️ The information provided in this questionnaire is for general informational purposes only and should be used at the user's discretion. It does not constitute financial, legal, medical, or any other professional advice. Users are encouraged to seek advice from qualified professionals regarding their specific circumstances.</h6>
+                <div className="start-button">
+                  <button onClick={startSurvey}>Start survey</button>
+                </div>
+              </div>
+            )}
+            {currentStep !== 0 && (
+              <>
+                {currentStep === 1 && (
+                  <Name value={formData.name} updateFormData={updateFormData} />
+                )}
+                {currentStep === 2 && (
+                  <Age value={formData.age} updateFormData={updateFormData} />
+                )}
+                {currentStep === 3 && (
+                  <Email value={formData.email} updateFormData={updateFormData} />
+                )}
+                {currentStep === 4 && (
+                  <Potato value={formData.potato} updateFormData={updateFormData} />
+                )}
+                {currentStep === 5 && (
+                  <Trust value={formData.trust} updateFormData={updateFormData} />
                 )}
                 {currentStep === 6 && (
-                  <button onClick={restartSurvey}>Restart Survey</button>
+                  <Movie value={formData.movie} updateFormData={updateFormData} />
                 )}
-              </div>
-            </>
-          )}
+                <div>
+                  {currentStep > 1 && <button onClick={prevStep}>Back</button>}
+                  {currentStep < 6 ? (
+                    <button onClick={nextStep} disabled={!validateStep(currentStep)}>
+                      Next
+                    </button>
+                  ) : (
+                    <button onClick={submitForm} disabled={!validateStep(currentStep)}>
+                      Submit Form
+                    </button>
+                  )}
+                  {currentStep === 6 && (
+                    <button onClick={restartSurvey}>Restart survey</button>
+                  )}
+                </div>
+              </>
+            )}
+          </div>
         </>
       )}
     </div>

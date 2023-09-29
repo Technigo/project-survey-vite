@@ -25,7 +25,7 @@ export const Email = ({ updateFormData, value }) => {
 
   return (
     <div>
-      <label>What is your email? ✉️</label>
+      <label>What is your email? 📨</label>
       <input
         type="email"
         value={email}

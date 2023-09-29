@@ -11,11 +11,11 @@ export const Potato = ({ updateFormData, value }) => {
           <input
             type="radio"
             name="potato"
-            value="French Fries"
-            checked={value === "French Fries"}
+            value="French fries"
+            checked={value === "French fries"}
             onChange={potato}
           />
-          French Fries
+          French fries
         </label>
       </div>
       <div>
@@ -23,11 +23,11 @@ export const Potato = ({ updateFormData, value }) => {
           <input
             type="radio"
             name="potato"
-            value="Mashed Potatoes"
-            checked={value === "Mashed Potatoes"}
+            value="Mashed potatoes"
+            checked={value === "Mashed potatoes"}
             onChange={potato}
           />
-          Mashed Potatoes
+          Mashed potatoes
         </label>
       </div>
       <div>
@@ -35,11 +35,11 @@ export const Potato = ({ updateFormData, value }) => {
           <input
             type="radio"
             name="potato"
-            value="Potato Chips"
-            checked={value === "Potato Chips"}
+            value="Potato chips"
+            checked={value === "Potato chips"}
             onChange={potato}
           />
-          Potato Chips
+          Potato chips
         </label>
       </div>
       <div>
@@ -47,11 +47,11 @@ export const Potato = ({ updateFormData, value }) => {
           <input
             type="radio"
             name="potato"
-            value="Potato Salad"
-            checked={value === "Potato Salad"}
+            value="Potato salad"
+            checked={value === "Potato salad"}
             onChange={potato}
           />
-          Potato Salad
+          Potato salad
         </label>
       </div>
       <div>
@@ -63,7 +63,7 @@ export const Potato = ({ updateFormData, value }) => {
             checked={value === "None"}
             onChange={potato}
           />
-          None of the above - I'd rather not be a potato dish.
+          None of the above
         </label>
       </div>
     </div>

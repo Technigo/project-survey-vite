@@ -3,7 +3,7 @@ export const Trust = ({ updateFormData, value }) => {
 
   return (
     <div className="slider-container">
-      <label className="label">How much trust do you have in the government? ⚖️</label>
+      <label className="label">How much trust do you have in the government? 🗳️</label>
       <input
         type="range"
         className="slider"
