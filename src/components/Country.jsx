@@ -4,7 +4,7 @@ export const Country = ({ user, handleInputChange }) => {
   return (
     <div className="question-container"> {/* A container for the question */}
       {/* Displaying the question */}
-     <label htmlFor="country" className="question">Which country are you from?</label>
+     <label htmlFor="country" className="question">Which country would you like to travel to?</label>
       
       {/* Creating a dropdown list with the id of "country" */}
       <select

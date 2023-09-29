@@ -25,6 +25,10 @@ export const App = () => {
 
   // State to control which question is currently active
   const [activeQuestion, setActiveQuestion] = useState(1);
+
+// State for the questions counter
+  const [questionsLeft, setQuestionsLeft] = useState(6);
+
 // Function that handle the button click in welcome page
   const startSurvey = () => setShowWelcome(false);
 
@@ -108,6 +112,8 @@ const handleFormSubmit = (e) => {
   }
 };
 
+const totalQuestions = 6;
+
 
   // Rendering components
   return (
@@ -117,7 +123,10 @@ const handleFormSubmit = (e) => {
       {showWelcome ? (
           <Welcome startSurvey={startSurvey} />
           ) : (
-         <>   
+         <> 
+           {activeQuestion !== 'summary' && (
+            <p className="question-counter">{activeQuestion}/{totalQuestions}</p> 
+          )}
               {activeQuestion === 1 && (
   <form onSubmit={handleFormSubmit}>
     <Name user={user} handleInputChange={handleInputChange} />

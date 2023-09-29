@@ -5,7 +5,7 @@ export const Favoriteperson = ({ user, handleInputChange }) => {
      <div className="question-container">
          <label
            htmlFor="favPerson"
-           className="question">Who do you take on a trip??
+           className="question">Who do you want to travel with?
          </label>
          <input
   type="text"

@@ -141,6 +141,12 @@
   .input-group input {
     margin-right: 10px;
   }
+
+  .question-counter {
+    color: #66584c; 
+    padding-bottom: 50px;
+  }
+  
   
 form {
     display: flex;

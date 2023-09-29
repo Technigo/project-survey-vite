@@ -2,7 +2,7 @@
 export const SelectPerson = ({ user, handleInputChange }) => {
   return (
     <div className="question-container" >
-       <p className="question">Who will be pay?</p>
+       <p className="question">Who should pay?</p>
 <div className="options">
 <label className="option">
         <input
