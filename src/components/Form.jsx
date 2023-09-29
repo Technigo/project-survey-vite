@@ -14,6 +14,7 @@ export const Form = () => {
     villain: "",
   });
 
+  //A state to keep track of if the form has been submitted
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   // Function to update form data based on field and value
@@ -33,6 +34,16 @@ export const Form = () => {
     if (currentQuestion > 1) setCurrentQuestion(currentQuestion - 1);
   };
 
+  //Function to reset the form
+  const resetFormData = () => {
+    updateFormData("hero", "");
+    updateFormData("superpower", "");
+    updateFormData("weakness", "");
+    updateFormData("villain", "");
+    setCurrentQuestion(1);
+    setFormSubmitted(false);
+  };
+
   // Function to submit the data entered in the form
   const submitForm = () => {
     console.log(formData);
@@ -43,18 +54,6 @@ export const Form = () => {
     Villain: ${formData.villain}`;
     // alert(summary);
     setFormSubmitted(true);
-
-    //Need to adjust prompts for male/female/neither
-    // if (formData.superpower === "flight" && formData.weakness === "blind") {
-    //   alert(
-    //     <Story1
-    //       hero={formData.hero}
-    //       superpower={formData.superpower}
-    //       weakness={formData.weakness}
-    //       villain={formData.villain}
-    //     />
-    //   );
-    // }
   };
 
   return (
@@ -90,12 +89,15 @@ export const Form = () => {
               <button onClick={submitForm}>Submit</button>
             )}
             {formSubmitted && (
-              <Story
-                hero={formData.hero}
-                superpower={formData.superpower}
-                weakness={formData.weakness}
-                villain={formData.villain}
-              />
+              <>
+                <Story
+                  hero={formData.hero}
+                  superpower={formData.superpower}
+                  weakness={formData.weakness}
+                  villain={formData.villain}
+                />
+                <button onClick={resetFormData}>Reset</button>
+              </>
             )}
           </div>
         </div>
