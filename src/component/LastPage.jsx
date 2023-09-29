@@ -1,7 +1,7 @@
 import { DrinkSuggestion } from "./DrinkSuggestion";
 
 export const LastPage = ({ information }) => {
-  // let { name, age, preference, spirit } = information;
+  let { name, age, preference, spirit } = information;
 
   return (
     <>
@@ -12,7 +12,7 @@ export const LastPage = ({ information }) => {
         <li>Spirit: {spirit}</li>
       </ul> */}
 
-      <DrinkSuggestion />
+      <DrinkSuggestion preference={preference} spirit={spirit} age={age} />
     </>
   );
 };

@@ -27,12 +27,6 @@ export const Form = () => {
     event.preventDefault();
 
     nextStep();
-
-    console.log(`
-    Name: ${formData.name}
-    Age: ${formData.age}
-    Preference: ${formData.preference}
-    Spirit: ${formData.spirit}`);
   };
 
   /// GOING BACK AND FORTH BETWEENQUESTIONS
