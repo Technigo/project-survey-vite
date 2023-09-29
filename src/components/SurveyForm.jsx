@@ -7,6 +7,7 @@ import { Classroom } from "./Classroom.jsx"
 import { FavDinosaur } from "./FavDinosaur.jsx"
 import { FavFood } from "./FavFood.jsx"
 import { ResultPage } from "./ResultPage.jsx"
+import { Icecream } from "./Icecream.jsx"
 
 //Function to create State to storm form data
 export const SurveyForm = () => {
@@ -17,6 +18,7 @@ export const SurveyForm = () => {
         classroom: "",
         favDinosaur: "",
         favFood: "",
+        icecream: "",
     });
 
     const [hideSurvey, setHideSurvey] = useState(false);
@@ -33,7 +35,7 @@ export const SurveyForm = () => {
 
     // Function to move to the next step in the form
     const nextStep = () => {
-        if (currentStep < 6) setCurrentStep(currentStep + 1);
+        if (currentStep < 7) setCurrentStep(currentStep + 1);
     };
     const prevStep = () => {
         if (currentStep > 1) setCurrentStep(currentStep - 1);
@@ -52,6 +54,7 @@ export const SurveyForm = () => {
           Classroom: ${formData.classroom}
           Favorite Dinosaur: ${formData.favDinosaur}
           Favorite Food: ${formData.favFood}
+          Icecream: ${formData.icecream}
         `;
     };
 
@@ -86,10 +89,14 @@ export const SurveyForm = () => {
                     {currentStep === 5 && (
                         <FavFood value={formData.favFood} updateFormData={updateFormData} />
                     )}
+                    {/* Render the Album component if on step 6 - stretch goal */}
+                    {currentStep === 6 && (
+                        <Icecream value={formData.icecream} updateFormData={updateFormData} />
+                    )}
                     <div>
                         {/* Show the "Back" button if not on the first step */}
                         {currentStep > 1 && <button onClick={prevStep}>Back</button>}
-                        {currentStep < 6 ? (
+                        {currentStep < 7 ? (
                             <button onClick={nextStep}>Next</button>
                         ) : (
                             <button onClick={submitForm}>Submit Form</button>
