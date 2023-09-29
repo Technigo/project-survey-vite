@@ -40,11 +40,12 @@ input {
   flex-direction: column;
   padding: 25px;
   height: 50vh;
-  width: 500px;
+  max-width: 450px;
 }
 
 .transparentBackground {
   margin: auto auto;
+
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -57,9 +58,10 @@ input {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 2rem 4rem;
-  width: 650px;
+  /* width: 650px; */
   height: 450px;
   text-shadow: 1px 1px #000000fd;
+  overflow: scroll;
 }
 
 .storyForm {
@@ -67,10 +69,18 @@ input {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  width: auto;
-  display: flex;
+  /* width: auto; */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
   justify-content: center;
 }
+
+/* .hide-lightbox {
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+} */
 
 button {
   background-color: #b80040; /* Heroic red */

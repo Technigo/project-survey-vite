@@ -38,7 +38,6 @@ export const Form = () => {
       return;
     }
     setCurrentQuestion(currentQuestion + 1);
-    //  if (currentQuestion < 4) setCurrentQuestion(currentQuestion + 1);
   };
   // Function to move to the previous question in the form
   const previousQuestion = () => {
@@ -55,12 +54,15 @@ export const Form = () => {
     setFormSubmitted(false);
   };
 
+  const [hideLightbox, setHideLightbox] = useState(false);
+
   // Function to submit the data entered in the form
   const submitForm = () => {
     if (currentQuestion === 4 && formData.villain === "") {
       alert("You have to enter a villain name");
       return;
     }
+
     console.log(formData);
     const summary = `
     Hero: ${formData.hero}
@@ -69,11 +71,17 @@ export const Form = () => {
     Villain: ${formData.villain}`;
     // alert(summary);
     setFormSubmitted(true);
+    setHideLightbox(true);
   };
 
   return (
     <div className="storyForm">
       <div className="transparentBackground">
+        {/* <div
+        className={`transparentBackground ${
+          hideLightbox ? "hide-lightbox" : ""
+        }`}
+      /> */}
         <div className="questionContainer">
           {currentQuestion === 1 && (
             <Hero value={formData.hero} updateFormData={updateFormData} />
