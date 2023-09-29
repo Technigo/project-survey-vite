@@ -17,7 +17,7 @@ export const DrinkSuggestion = ({ age, preference, spirit }) => {
         </>
     )
 
-    return (
+    if (age >= 18) return (
         <>
             <div className="the-drink">
                 <img className="the-drink-pic" src={chosenDrink[0].drinkPicURL} alt="picture of drink" />
