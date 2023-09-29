@@ -41,10 +41,15 @@ body {
 
 /*-----------Progress Bar---------------*/
 .progress-bar-container {
-  position: fixed;
-  top: 175px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding: 5px;
-  width: 10%;
+  width: 100%;
   background: rgba(0, 0, 0, 0.2);
   margin: 10px 10px 10px 10px;
   border-radius: 5px;
@@ -83,7 +88,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px;
-  font-size: 35px;
+  font-size: 20px;
 }
 
 .name input {

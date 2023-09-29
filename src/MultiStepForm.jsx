@@ -39,7 +39,7 @@ export const MultiStepForm = () => {
     Age: ${formData.age}
     Bloodtype: ${formData.bloodType}
     Allergies: ${formData.allergies}
-   `;
+    `;
 
     setFormData((previous) => ({
       ...previous,
@@ -87,10 +87,10 @@ export const MultiStepForm = () => {
         ) : (
           <button onClick={submitForm}>Submit Form</button>
         )}
-      </div>
-      <div className="progress-bar-container">
-        <div className="progress-bar" style={{ width: `${progress}%` }}>
-          {`${progress}%`}
+        <div className="progress-bar-container">
+          <div className="progress-bar" style={{ width: `${progress}%` }}>
+            {`${progress}%`}
+          </div>
         </div>
       </div>
     </div>
