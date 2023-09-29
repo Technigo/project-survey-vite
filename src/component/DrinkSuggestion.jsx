@@ -7,7 +7,6 @@ export const DrinkSuggestion = ({ age, preference, spirit }) => {
     let spiritMatch = DataOfDrinks.filter((item)=> (item.spirit === spirit))
     let chosenDrink = spiritMatch.filter((item)=>(item.glassType === preference))
 
-
     if (age < 18) return (
         <>
             <div className="the-drink">

@@ -6,7 +6,10 @@ import { AgeQuestion } from "./AgeQuestion";
 import { PreferenceQuestion } from "./PreferenceQuestion";
 import { LastPage } from "./LastPage";
 
-export const Form = () => {
+export const Form = ({ headerVisibleControl, headerContent}) => {
+  let setLastP = headerVisibleControl
+  let setLastHeader = headerContent
+
   //Set state to store form data
   const [formData, setFormData] = useState({
     name: "",
@@ -25,12 +28,10 @@ export const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     nextStep();
   };
 
   /// GOING BACK AND FORTH BETWEENQUESTIONS
-
   // State to track the current step in the form
   const [currentStep, setCurrentStep] = useState(1);
   // Function to move to the next step in the form
@@ -45,10 +46,11 @@ export const Form = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
   };
 
+
   return (
     <div className="theFormContainer">
       <form id="theForm" onSubmit={(event) => event.preventDefault()}>
-        {/* Render the Name & Age component if on step 1 */}
+        {/* Render the Name & Age component on step 1 */}
         <div className={`question ${currentStep !== 1 ? "hidden" : ""}`}>
           {currentStep === 1 && (
             <NameQuestion value={formData.name} setValue={updateFormData} />
@@ -64,7 +66,7 @@ export const Form = () => {
           )}
         </div>
 
-        {/* Render the preference component if on step 2 */}
+        {/* Render the preference component on step 2 */}
         <div className={`question ${currentStep !== 2 ? "hidden" : ""}`}>
           {currentStep === 2 && (
             <PreferenceQuestion
@@ -74,7 +76,7 @@ export const Form = () => {
           )}
         </div>
 
-        {/* Render the spirit component if on step 3 */}
+        {/* Render the spirit component on step 3 */}
         <div className={`question ${currentStep !== 3 ? "hidden" : ""}`}>
           {currentStep === 3 && (
             <SpiritQuestion value={formData.spirit} setValue={updateFormData} />
@@ -82,7 +84,7 @@ export const Form = () => {
         </div>
 
         <div className={`question lastP ${currentStep !== 4 ? "hidden" : ""}`}>
-          {currentStep >= 4 && <LastPage information={formData} />}
+          {currentStep >= 4 && <LastPage information={formData} headerVisibility={setLastP} headerContent={setLastHeader} />}
         </div>
 
         {/* Buttons for each page. "Back"-button is there, but not on page 1. "Next"-button becomes "submit"-button on last page */}

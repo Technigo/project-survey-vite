@@ -1,7 +1,16 @@
 import { DrinkSuggestion } from "./DrinkSuggestion";
 
-export const LastPage = ({ information }) => {
+export const LastPage = ({ information, headerVisibility, headerContent }) => {
+
+  let setLastP = headerVisibility
+  let setLastHeader = headerContent
+
   let { name, age, preference, spirit } = information;
+
+  let bigName = name.toUpperCase()
+
+  setLastP(true)
+  setLastHeader(`${bigName}'S DRINK`)
 
   return (
     <>
