@@ -229,7 +229,7 @@ select:focus {
 
 .lastP {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   /* margin: 0 166px 10px 0; */
 }
 

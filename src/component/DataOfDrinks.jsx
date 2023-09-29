@@ -42,51 +42,51 @@ export const DataOfDrinks = [{
 },
 {
     id: 7,
-    name: 'Dry Martini',
-    spirit: 'gin',
-    glassType: 'cocktailglass',
-    drinkPicURL: ''
+    name: 'Mojito',
+    spirit: 'rum',
+    glassType: 'tumbler',
+    drinkPicURL: 'https://leitesculinaria.com/wp-content/uploads/2021/06/mexican-mojito.jpg'
 },
 {
     id: 8,
-    name: 'Dry Martini',
-    spirit: 'gin',
+    name: 'Strawberry Daiquiri',
+    spirit: 'rum',
     glassType: 'cocktailglass',
-    drinkPicURL: ''
+    drinkPicURL: 'https://www.acouplecooks.com/wp-content/uploads/2021/04/Virgin-Strawberry-Daiquiri-005.jpg'
 },
 {
     id: 9,
-    name: 'Dry Martini',
-    spirit: 'gin',
-    glassType: 'cocktailglass',
-    drinkPicURL: ''
+    name: 'Zombie',
+    spirit: 'rum',
+    glassType: 'tropical drink',
+    drinkPicURL: 'https://receptfavoriter.se/sites/default/files/zombie_cocktail_1200_18.jpg'
 },
 {
     id: 10,
-    name: 'Dry Martini',
-    spirit: 'gin',
-    glassType: 'cocktailglass',
-    drinkPicURL: ''
+    name: 'Whisky Sour',
+    spirit: 'whisky',
+    glassType: 'tumbler',
+    drinkPicURL: 'https://www.jamesonwhiskey.com/wp-content/uploads/2023/02/Whiskey-sour_975x730.png'
 },
 {
     id: 11,
-    name: 'Dry Martini',
-    spirit: 'gin',
+    name: 'Irish Coffee',
+    spirit: 'whisky',
     glassType: 'cocktailglass',
-    drinkPicURL: ''
+    drinkPicURL: 'https://www.theendlessmeal.com/wp-content/uploads/2023/01/Irish-coffee-3.jpg'
 },
 {
     id: 12,
-    name: 'Dry Martini',
-    spirit: 'gin',
-    glassType: 'cocktailglass',
-    drinkPicURL: ''
+    name: 'Mambo Jack',
+    spirit: 'whisky',
+    glassType: 'tropical drink',
+    drinkPicURL: 'https://drinkoteket.se/wp-content/uploads/lick-of-sunshine-1.jpg'
 },
 {
     id: 13,
-    name: 'Dry Martini',
-    spirit: 'gin',
-    glassType: 'cocktailglass',
-    drinkPicURL: ''
+    name: 'Water',
+    spirit: 'water',
+    glassType: '',
+    drinkPicURL: 'https://api.hub.jhu.edu/factory/sites/default/files/styles/soft_crop_1600/public/ww-hydration-hub.jpg'
 }
 ]

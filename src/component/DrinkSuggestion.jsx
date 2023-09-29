@@ -7,7 +7,7 @@ export const DrinkSuggestion = () => {
         <>
             <div className="the-drink">
                 <img className="the-drink-pic" src={drinkSuggestionObject.drinkPicURL} />
-                <p>{drinkSuggestionObject.name.toUpperCase()}</p>
+                <h2>{drinkSuggestionObject.name.toUpperCase()}</h2>
             </div>
         </>
     )
