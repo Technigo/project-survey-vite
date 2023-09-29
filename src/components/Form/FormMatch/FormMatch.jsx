@@ -1,6 +1,6 @@
 
 
-export const FormMatch = ( name, season, activity, eco ) => {
+export const FormMatch = ({ name, season, activity, eco }) => {
 
     const vacationSuggestions = [
     {
@@ -77,10 +77,7 @@ export const FormMatch = ( name, season, activity, eco ) => {
     }
     return (
         // ${formData.name}, you’ve shared with us that you are in the mood for a ${formData.season} getaway with focus on ${formData.activity}! Kudos for making an eco-friendly choice by avoiding traveling by air! Based on your choices, we think a great vacation spot for you is ${formData.destination}, ${formData.country}! ${matchingDestination.imageUrl} ${formData.destinationdescription}
-        <div>
-            <h2>Amazing! You have a match!</h2>
-            <p>Dear, {name} </p>
-        </div>
+        alert(formattedData);
 
 
         )
