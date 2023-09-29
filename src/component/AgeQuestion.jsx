@@ -4,7 +4,7 @@ export const AgeQuestion = ({ value, setValue }) => {
   const ageInput = (e) => setAge("age", e.target.value);
 
   return (
-    <label>
+    <label className="question-name-age">
       What's your age?
       <input
         placeholder="Age here..."

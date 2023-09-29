@@ -5,7 +5,7 @@ export const NameQuestion = ({ value, setValue }) => {
 
   return (
     <>
-      <label>
+      <label className="question-name-age">
         {" "}
         What's your name?
         <input

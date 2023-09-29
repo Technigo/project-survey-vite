@@ -41,7 +41,7 @@ body {
 
 .theFormContainer {
   background-color: rgba(255, 228, 196, 0.7);
-  width: 70%;
+  width: 80%;
   max-width: 800px;
   padding: 50px;
   margin: 0 auto;
@@ -70,7 +70,7 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 input[type="number"] {
@@ -81,11 +81,15 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 input:focus {
   outline: 2px solid #f5ba3b;
+}
+
+.question-name-age {
+  font-size: 14px;
 }
 
 .radio-buttons {
@@ -211,7 +215,8 @@ select:focus {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-left: 30px;
+  /* padding-left: 30px; */
+  font-size: 16px;
   text-align: left;
 }
 
@@ -229,14 +234,54 @@ select:focus {
 
 /* For tablets */
 @media (min-width: 768px) {
+  .theFormContainer {
+    width: 70%;
+  }
+
   .the-header {
     font-size: 6rem;
+  }
+
+  input[type="text"] {
+    font-size: 18px;
+  }
+
+  input[type="number"] {
+    font-size: 18px;
+  }
+
+  .question-name-age {
+    font-size: 20px;
+  }
+
+  .square-bullets {
+    font-size: 20px;
   }
 }
 
 /* For desktop */
 @media (min-width: 1024px) {
+  .theFormContainer {
+    width: 70%;
+  }
+
   .the-header {
     font-size: 10rem;
+  }
+
+  input[type="text"] {
+    font-size: 18px;
+  }
+
+  input[type="number"] {
+    font-size: 18px;
+  }
+
+  .question-name-age {
+    font-size: 20px;
+  }
+
+  .square-bullets {
+    font-size: 20px;
   }
 }
