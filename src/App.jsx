@@ -1,4 +1,5 @@
 import { Form } from "./component/Form";
+import { Footer } from "./component/Footer";
 
 export const App = () => {
   return (
@@ -9,6 +10,7 @@ export const App = () => {
           <Form />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

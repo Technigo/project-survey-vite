@@ -276,6 +276,12 @@ select:focus {
   }
 }
 
+.footer {
+  text-align: center;
+  margin-top: 8rem;
+  color: #f7e3d2;
+}
+
 /* For desktop */
 @media (min-width: 1024px) {
   .theFormContainer {
