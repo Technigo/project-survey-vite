@@ -87,10 +87,10 @@ export const MultiStepForm = () => {
         ) : (
           <button onClick={submitForm}>Submit Form</button>
         )}
-        <div className="progress-bar-container">
-          <div className="progress-bar" style={{ width: `${progress}%` }}>
-            {`${progress}%`}
-          </div>
+      </div>
+      <div className="progress-bar-container">
+        <div className="progress-bar" style={{ width: `${progress}%` }}>
+          {`${progress}%`}
         </div>
       </div>
     </div>

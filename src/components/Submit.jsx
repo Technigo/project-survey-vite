@@ -12,11 +12,9 @@ export const Submit = ({ formData }) => {
   `;
 
   return (
-    <div>
-      <div>
-        <h2>Summary:</h2>
-        <pre>{formattedData}</pre>
-      </div>
+    <div className="summary">
+      <h2>Summary:</h2>
+      <pre>{formattedData}</pre>
     </div>
   );
 };
