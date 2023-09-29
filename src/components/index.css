@@ -11,10 +11,10 @@
 
 body {
   text-align: center;
-  background-image: linear-gradient(black, black), url("https://images.unsplash.com/photo-1512100356356-de1b84283e18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2150&q=80");
+  background-image: url("https://images.unsplash.com/photo-1512100356356-de1b84283e18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2150&q=80");
   background-size: cover;
-  background-blend-mode: saturation;
-  height: 100%;
+
+
 }
 
 h1 {
@@ -28,6 +28,8 @@ h2 {
   padding: 15px;
   font-family: 'Merriweather', serif;
   letter-spacing: 0px;
+  width: 50%;
+  margin: 0 auto;
 }
 
 p {
@@ -56,7 +58,7 @@ p {
 
 label {
   font-size: 15px;
-  padding: 10px;
+  padding: 12px;
   font-family: 'Merriweather', serif;
 }
 
@@ -76,14 +78,14 @@ button {
   height: 50px;
   width: 100px;
   margin: 20px 10px 40px 10px;
-  border-radius: 50%;
-  background-color: rgb(136, 186, 186);
+  color: azure;
+  background-color: rgba(0, 0, 0, 0.7);
   border: none;
   font-family: 'Caveat', cursive;
-  font-size: large;
+  font-size: 20px;
   transition: 1s;
 }
 
 button:hover {
-  background-color: rgb(184, 215, 233);
+  background-color: rgb(138, 138, 138);
 }

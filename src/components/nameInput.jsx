@@ -7,7 +7,8 @@ export const Name = ({ value, updateFormData }) => {
         <div className="nameInput">
             <h2>What is your name?</h2>
             <label>Name (optional)</label>
-            <input type="text" value={value} onChange={userName} />
+            <input type="text" value={value}
+                onChange={userName} />
         </div>
     );
 };
