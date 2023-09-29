@@ -25,7 +25,7 @@ export const FavDinosaur = ({ updateFormData, value }) => {
                         checked={value === "stegosaurus"}
                     />
 
-                    <img src="public/assets/stegosaurus.png" alt="Stegosaurus"></img>Stegosaurus
+                    <img src="/assets/stegosaurus.png" alt="Stegosaurus"></img>Stegosaurus
                 </label>
             </p>
             <p>
@@ -35,7 +35,7 @@ export const FavDinosaur = ({ updateFormData, value }) => {
                         onChange={chosenDinosaur}
                         checked={value === "triceratops"}
                     />
-                    <img src="public/assets/triceratops.png" alt="Triceratops"></img>Triceratops
+                    <img src="/assets/triceratops.png" alt="Triceratops"></img>Triceratops
                 </label>
             </p>
             <p>
@@ -46,7 +46,7 @@ export const FavDinosaur = ({ updateFormData, value }) => {
                         checked={value === "velociraptor"}
                     />
 
-                    <img src="public/assets/velociraptor.png" alt="Velociraptor"></img>Velociraptor
+                    <img src="/assets/velociraptor.png" alt="Velociraptor"></img>Velociraptor
                 </label>
             </p>
         </div>
