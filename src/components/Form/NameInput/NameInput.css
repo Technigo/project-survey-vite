@@ -1,0 +1,33 @@
+.nameinput-wrapper {
+    margin: 20px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+.nameinput-container {
+    font-size: 15px;
+}
+
+.nameinput-container input[type="text"] {
+    border-radius: 10px;
+    border: solid 2px #59B1EA;
+    padding: 10px;
+    width: 100%;
+    padding: 2px;
+    height: 40px;
+}
+
+.nameinput-container input[type="text"]::placeholder {
+    color: #59B1EA;
+    font-size: 20px;
+    padding: 6px 6px; 
+}
+ 
+  
+  
+  
+  
+  

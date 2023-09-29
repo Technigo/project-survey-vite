@@ -1,21 +1,34 @@
 import "./EcoCheck.css"
 
-// eslint-disable-next-line
+// The EcoCheck component takes two props: updateFormData and value.
 export const EcoCheck = ({ updateFormData, value }) => {
-
-    const eco = (e) => updateFormData("eco", e.target.checked)
+    // The eco function is a callback function that updates the "eco" field in the form data when the checkbox is clicked.
+    const eco = (e) => updateFormData("eco", e.target.checked);
 
     return (
-        <div>
-            <h3>This is eco check</h3>
-            <img src="./src/assets/eco-leaf.png" alt="A leaf icon."></img>
-            <label>
-                <input  type="checkbox"
-                        checked={value}
-                        onChange={eco} 
-                />
-                Want to stay on the ground?
+        <div className="eco-wrapper">
+            <h3>
+                Would you like to take the train for the environment or fly
+                there for convenience?
+            </h3>
+            <label className="label-small">
+                <div className="eco-label">
+                    {/* Display an eco-friendly label with an image */}
+                    <img
+                        className="eco-img"
+                        src="/images/eco-leaf.png"
+                        alt="A leaf icon."
+                    ></img>
+                    Check the box <br /> to choose the train:
+                </div>
+                {/* Create a checkbox input */}
+                <label className="checkbox-container">
+                    <input type="checkbox" checked={value} onChange={eco} />
+                    {/* Create a custom-styled checkbox */}
+                    <span className="custom-checkbox"></span>
+                    Want to stay on the ground?
+                </label>
             </label>
         </div>
-    )
+    );
 }

@@ -1,0 +1,39 @@
+.form-wrapper {
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: solid 2px #3CA4EA;
+    border-radius: 10px;
+    padding: 0 15px;
+}
+ 
+.button-container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.button-container p {
+    font-size: 8px;
+    margin-left: 6px;
+}
+
+button {
+    width: 120px;
+    height: 35px;
+    border: 1px solid #3CA4EA;
+    border-radius: 15px;
+    color: #3CA4EA;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #FCFDE8;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3CA4EA;
+    color: #FCFDE8 ;
+}
+
+

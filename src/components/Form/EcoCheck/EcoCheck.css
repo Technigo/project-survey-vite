@@ -1,0 +1,81 @@
+.eco-wrapper {
+    height: 70%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+}
+
+.eco-label {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.eco-img {
+    height: 25px;
+    width: 25px;
+}
+
+.label-small {
+    font-size: 15px;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin: 10px 5px;
+    font-size: 16px;
+    user-select: none;
+
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: #a2cae4;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox-container:hover input ~ .custom-checkbox {
+    background-color: #66b3e7;
+}
+
+.checkbox-container input:checked ~.custom-checkbox {
+    background-color: #3CA4EA;
+}
+
+.custom-checkbox:after {
+    content: ""; 
+    position: absolute;
+    width: 5px;
+    height: 9px;
+    border: solid bisque;
+    border-width: 0 3px 3px 0;
+    top: 2px;
+    left: 5.5px;
+    transform: rotate(45deg);
+    display: none;
+}
+
+.checkbox-container input:checked ~.custom-checkbox:after {
+    display: block;
+}
+
+.checkbox-container input:focus + .custom-checkbox {
+    outline: #3CA4EA auto 4px;
+}
