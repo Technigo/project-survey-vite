@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect } from "react";
 
 function QuestionLikeMost({ onAnswer, option }) {
   const options = [
-    'Food',
-    'The spirit of Christmas',
-    'The gifts',
-    'Spending time with family',
-    'A few days off from work',
-    'Relaxing',
-    'Decorating the tree',
+    "The food",
+    "The spirit of Christmas",
+    "The gifts",
+    "Spending time with friends and family",
+    "Getting few days off from work",
+    "Decorating the tree",
   ];
 
   // Initialize local state for tracking the checked status
@@ -31,12 +29,14 @@ function QuestionLikeMost({ onAnswer, option }) {
     }
 
     setCheckedOptions(updatedOptions);
-    onAnswer('option', updatedOptions);
+    onAnswer(updatedOptions);
   };
 
   return (
     <div>
-      <h2 className="question-container">What do you like most about Christmas?</h2>
+      <h2 className="question-container">
+        What do you like most about Christmas?
+      </h2>
       {options.map((item) => (
         <div key={item}>
           <label>
@@ -55,5 +55,3 @@ function QuestionLikeMost({ onAnswer, option }) {
 }
 
 export default QuestionLikeMost;
-
-

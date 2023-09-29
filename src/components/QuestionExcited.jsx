@@ -11,7 +11,7 @@ function QuestionExcited({ onAnswer, excitementLevel }) {
   const handleSliderChange = (event) => {
     const selectedLevel = event.target.value;
     setSelectedLevel(selectedLevel);
-    onAnswer("", selectedLevel);
+    onAnswer(selectedLevel);
     setIsInteracted(true);
   };
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function QuestionGift({ onAnswer, likedOption }) {
   const [selectedOption, setSelectedOption] = useState(likedOption);
@@ -9,20 +9,22 @@ function QuestionGift({ onAnswer, likedOption }) {
   }, [likedOption]);
 
   const options = [
-    { label: 'I like receiving them the most' },
-    { label: 'I like giving them the most' },
-    { label: 'I like them both equally' },
+    { label: "Receiving them" },
+    { label: "Giving them" },
+    { label: "Both giving and receiving them" },
   ];
 
   const handleRadioChange = (event) => {
     const selectedOption = event.target.value;
     setSelectedOption(selectedOption);
-    onAnswer('', selectedOption);
+    onAnswer(selectedOption);
   };
 
   return (
     <div>
-      <h2 className="question-container">What do you like most about Christmas gifts?</h2>
+      <h2 className="question-container">
+        What do you like most about Christmas gifts?
+      </h2>
       {options.map((option) => (
         <div key={option.label}>
           <label>
@@ -36,7 +38,7 @@ function QuestionGift({ onAnswer, likedOption }) {
           </label>
         </div>
       ))}
-      {selectedOption === 'both' ? (
+      {selectedOption === "both" ? (
         <p>I like them both equally</p>
       ) : (
         <p>{selectedOption}</p>
@@ -46,5 +48,3 @@ function QuestionGift({ onAnswer, likedOption }) {
 }
 
 export default QuestionGift;
-
-
