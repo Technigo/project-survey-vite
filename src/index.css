@@ -20,6 +20,8 @@ body {
 .main {
   /* border: 2px solid red; */
   display: grid;
+  align-items: center;
+  padding: 20px;
   place-items: center;
   height: 650px;
 }
@@ -37,6 +39,32 @@ body {
     5px 5px 15px 7px rgba(69, 29, 10, 0.8);
 }
 
+/*-----------Progress Bar---------------*/
+.progress-bar-container {
+  position: fixed;
+  top: 175px;
+  padding: 5px;
+  width: 10%;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 10px 10px 10px 10px;
+  border-radius: 5px;
+}
+
+.progress-indicator {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.progress-bar {
+  height: 20px;
+  background-color: rgb(0, 140, 255);
+  text-align: center;
+  line-height: 20px;
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+
 /*-----------------Intro--------------*/
 
 .name h1 {
@@ -45,6 +73,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px;
+  font-size: 30px;
   /* border: 2px solid red; */
 }
 
@@ -54,6 +83,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px;
+  font-size: 35px;
 }
 
 .name input {
@@ -63,14 +93,17 @@ body {
   margin: 20px;
 }
 
-/* label {
-  text-align: center;
-  margin-left: 25%;
-} */
-
 /*--------------back and next buttons-----------*/
 
+.button-box {
+  position: absolute;
+  top: 71%;
+  border: 2px solid red;
+}
+
 button {
+  display: inline-grid;
+
   line-height: 1;
   text-decoration: none;
   color: #287782;
@@ -80,7 +113,7 @@ button {
   height: 40px;
   font-weight: bold;
   margin: 5px;
-  transition: 0.3s;
+
   box-shadow: 0px 2px 3px 0px rgba(29, 121, 111, 0.223);
   text-shadow: 1px 1px 2px rgb(57, 57, 57);
 
@@ -122,7 +155,7 @@ form {
 
 .radio-buttons label {
   order: 2;
-  margin-top: 5px; /* Optional: Add some spacing between input and label */
+  margin-top: 5px;
 }
 
 /*--------------bloodtype-------_*/

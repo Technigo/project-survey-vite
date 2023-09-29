@@ -4,6 +4,7 @@ import { Name } from "./components/Name";
 import { BloodType } from "./components/BloodType";
 import { Allergies } from "./components/Allergies";
 import { Submit } from "./components/Submit";
+import { Confirmation } from "./components/Confirmation";
 
 export const MultiStepForm = () => {
   // State to store form data
@@ -16,7 +17,6 @@ export const MultiStepForm = () => {
     submit: "",
     confirmation: "",
   });
-
   // Function to update form data based on field and value
   const updateFormData = (field, value) => {
     setFormData((previous) => ({ ...previous, [field]: value }));
@@ -26,7 +26,7 @@ export const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
 
   const nextStep = () => {
-    if (currentStep < 5) setCurrentStep(currentStep + 1);
+    if (currentStep < 6) setCurrentStep(currentStep + 1);
   };
   const prevStep = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
@@ -41,13 +41,14 @@ export const MultiStepForm = () => {
     Allergies: ${formData.allergies}
    `;
 
-    console.log("Formatted Data:", formattedData);
     setFormData((previous) => ({
       ...previous,
       formattedData: formattedData,
     }));
     setCurrentStep(5);
   };
+
+  const progress = ((currentStep - 1) / 5) * 100;
 
   return (
     <div className="steps">
@@ -69,14 +70,28 @@ export const MultiStepForm = () => {
 
       {currentStep === 5 && <Submit formData={formData} />}
 
-      <div>
+      {currentStep === 6 && (
+        <Confirmation
+          name={formData.name}
+          age={formData.age}
+          bloodType={formData.bloodType}
+          allergies={formData.allergies}
+        />
+      )}
+
+      <div className="button-box">
         {/* Show the "Back" button if not on the first step */}
         {currentStep > 1 && <button onClick={prevStep}>Back</button>}
-        {currentStep < 5 ? (
+        {currentStep < 6 ? (
           <button onClick={nextStep}>Next</button>
         ) : (
           <button onClick={submitForm}>Submit Form</button>
         )}
+      </div>
+      <div className="progress-bar-container">
+        <div className="progress-bar" style={{ width: `${progress}%` }}>
+          {`${progress}%`}
+        </div>
       </div>
     </div>
   );
