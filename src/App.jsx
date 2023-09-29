@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { MultiStepForm } from "./components/MultiStepForm";
+import { MultiStepForm } from "./components/MultiStep/MultiStepForm";
+import "./App.css";
 
 function App() {
   return (
     <>
-    <div>Hej</div>
-    <MultiStepForm />
-    
+      <MultiStepForm />
     </>
-  )
+  );
 }
+
+export default App;
