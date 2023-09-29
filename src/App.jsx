@@ -106,7 +106,7 @@ export const App = () => {
             <div className="prev-next-container">
               {currentQuestion > 1 && currentQuestion < 7 && (
                 <button className="prev-btn" onClick={handlePrevQuestion}>
-                  <img src="./src/assets/prev.png" alt="" />
+                  <img src="/prev.png" alt="" />
                 </button>
               )}
               {currentQuestion < 6 && currentQuestion !== 0 && (
