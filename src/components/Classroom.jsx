@@ -6,8 +6,10 @@ export const Classroom = ({ updateFormData, value }) => {
         updateFormData("classroom", event.target.value);
 
     return (
-        <div>
+        <div class="class">
+            <img src="public/assets/class-transparent.png" alt="Class"></img>
             <label>What class are you in? </label>
+
             <select value={value} onChange={childsclass}>
                 <option disabled={true} value="">Choose here....</option>
                 <option value="1">Class 1</option>

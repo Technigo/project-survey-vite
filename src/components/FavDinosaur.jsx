@@ -6,7 +6,7 @@ export const FavDinosaur = ({ updateFormData, value }) => {
     console.log(chosenDinosaur);
 
     return (
-        <div>What is your favourite Dinosaur?
+        <div class="dino">What is your favourite Dinosaur?
             <p>
                 <label>
                     <input type="radio"
@@ -14,7 +14,7 @@ export const FavDinosaur = ({ updateFormData, value }) => {
                         onChange={chosenDinosaur}
                         checked={value === "tyrannosaurus"}
                     />
-                    Tyrannosaurus
+                    <img src="public/assets/trex.png" alt="Tyrannosaurus"></img> Tyrannosaurus
                 </label>
             </p>
             <p>
@@ -24,7 +24,8 @@ export const FavDinosaur = ({ updateFormData, value }) => {
                         onChange={chosenDinosaur}
                         checked={value === "stegosaurus"}
                     />
-                    Stegosaurus
+
+                    <img src="public/assets/stegosaurus.png" alt="Stegosaurus"></img>Stegosaurus
                 </label>
             </p>
             <p>
@@ -34,7 +35,7 @@ export const FavDinosaur = ({ updateFormData, value }) => {
                         onChange={chosenDinosaur}
                         checked={value === "triceratops"}
                     />
-                    Triceratops
+                    <img src="public/assets/triceratops.png" alt="Triceratops"></img>Triceratops
                 </label>
             </p>
             <p>
@@ -44,7 +45,8 @@ export const FavDinosaur = ({ updateFormData, value }) => {
                         onChange={chosenDinosaur}
                         checked={value === "velociraptor"}
                     />
-                    Velociraptor
+
+                    <img src="public/assets/velociraptor.png" alt="Velociraptor"></img>Velociraptor
                 </label>
             </p>
         </div>
