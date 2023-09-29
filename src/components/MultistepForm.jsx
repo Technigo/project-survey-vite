@@ -4,7 +4,7 @@ import { Room } from "./Room";
 import { Star } from "./starts";
 import { StayDay } from "./stayDay";
 import { Activity } from "./activities";
-import { Email } from "./email";
+import { Comment } from "./comments";
 import "./index.css";
 
 
@@ -16,7 +16,7 @@ export const MultistepForm = () => {
         StayDay: "",
         Activity: "",
         Star: "",
-        Email: "",
+        Comment: "",
 
 
     })
@@ -43,8 +43,11 @@ export const MultistepForm = () => {
             <div>
                 <h2>Thank you {formData.name}!</h2>
                 <p>
-                    Hi {formData.name}! <br /> You stayed in our {formData.room}, for a period of {formData.stayDay}. You took part in {formData.activity} activity, and gave us
-                    the rating of {formData.star}! <br /> <br />As a thank you for taking your time to improve our service, we would like to offer you 10% off on your next stay! We will send a code to {formData.email}
+                    Hi {formData.name}, <br /> you stayed in our {formData.room}, for a period of {formData.stayDay}. You took part in {formData.activity} activity, and gave us
+                    the rating of {formData.star}! <br />
+                    You left the following comment: {formData.comment}
+                    <br /><br />
+                    As a thank you for helping us improve our service, we would like to offer you 10% off on your next stay! <br /> Use the code 'SUNNYVACAY'
                     <br /><br />
                     Hope to see you soon again!
                 </p>
@@ -76,7 +79,7 @@ export const MultistepForm = () => {
                     <Star value={formData.star} updateFormData={updateFormData} />
                 )}
                 {currentStep === 6 && (
-                    <Email value={formData.email} updateFormData={updateFormData} />
+                    <Comment value={formData.comment} updateFormData={updateFormData} />
                 )}
 
                 <div>

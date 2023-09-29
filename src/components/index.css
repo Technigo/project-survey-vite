@@ -14,7 +14,7 @@ body {
   background-image: linear-gradient(black, black), url("https://images.unsplash.com/photo-1512100356356-de1b84283e18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2150&q=80");
   background-size: cover;
   background-blend-mode: saturation;
-  height: 700px;
+  height: 100%;
 }
 
 h1 {
