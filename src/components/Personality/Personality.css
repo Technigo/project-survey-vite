@@ -1,3 +1,24 @@
-select {
-    text-transform: capitalize;
+.personality-dropdown {
+  appearance: none;
+  border: none;
+  font: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  background: linear-gradient(90deg, #f79eb3 0%, #fdc360 100%);
+  color: #fff;
+  width: 13rem;
+  padding: 0.6rem;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* Takes away the default blue outline around the select input */
+select:focus {
+  outline: none;
+}
+
+.personality-dropdown option {
+  background: linear-gradient(90deg, #f79eb3 0%, #fdc360 100%);
 }

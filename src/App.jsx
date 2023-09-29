@@ -8,6 +8,7 @@ import { CatName } from "./components/CatName/CatName";
 import { Personality } from "./components/Personality/Personality";
 import { CatProfile } from "./components/CatProfile";
 
+
 export const App = () => {
   const [age, setAge] = useState("");
   const [catName, setCatName] = useState("");
@@ -17,7 +18,6 @@ export const App = () => {
   const [startPage, setStartPage] = useState("");
   const [userName, setUserName] = useState("");
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [progress, setProgress] = useState(0);
 
   // Function to move to the next step in the form
   const handleNextQuestion = () => {
@@ -52,11 +52,14 @@ export const App = () => {
 
   return (
     <section className="content-wrapper">
-      {/* {showSurvey && ( */}
       <div className="page-in-survey">
         <div className="form-div">
+          
           {currentQuestion === 0 && (
-            <StartPage onButtonClick={() => handleNextQuestion(0)} />
+            <StartPage
+              handleNextQuestion={handleNextQuestion}
+              onButtonClick={() => handleNextQuestion(0)}
+            />
           )}
 
           {currentQuestion === 1 && (
@@ -71,7 +74,7 @@ export const App = () => {
             <Gender genders={genders} setGenders={setGenders} />
           )}
 
-          {currentQuestion === 3 && <Age age={age} setAge={setAge} />}
+          {currentQuestion === 3 && ( <Age age={age} setAge={setAge} />)}
 
           {currentQuestion === 4 && (
             <Personality
@@ -99,38 +102,33 @@ export const App = () => {
             />
           )}
 
-          {currentQuestion === 0 && (
-            <button onClick={handleNextQuestion} className="adopt-btn">
-              Adopt now
-            </button>
-          )}
-
-          <div>
+          <div className="buttons">
             {/* Show the "Back" button if not on the first step */}
 
-            {currentQuestion > 1 && currentQuestion < 7 && (
-              <button className="prev-btn" onClick={handlePrevQuestion}>
-                <img src="src/assets/prev.png" alt="" />
-              </button>
-            )}
-
-            {currentQuestion < 6 && currentQuestion !== 0 && (
-              <button className="next-btn" onClick={handleNextQuestion}>
-                <img src="src/assets/next.png" alt="" />
-              </button>
-            )}
+            <div className="prev-next-container">
+              {currentQuestion > 1 && currentQuestion < 7 && (
+                <button className="prev-btn" onClick={handlePrevQuestion}>
+                  <img src="src/assets/prev.png" alt="" />
+                </button>
+              )}
+              {currentQuestion < 6 && currentQuestion !== 0 && (
+                <button className="next-btn" onClick={handleNextQuestion}>
+                  <img src="src/assets/next.png" alt="" />
+                </button>
+              )}
+            
 
             {currentQuestion === 6 && (
               <button
                 type="submit"
-                className="submitBtn"
+                className="submit-btn"
                 aria-label="Submit button"
                 onClick={handleNextQuestion}
               >
-                Submit
+                Meet your cat!
               </button>
             )}
-
+</div>
             {currentQuestion <= 7 && currentQuestion !== 0 && (
               <button type="submit" className="reset-btn" onClick={handleReset}>
                 reset
@@ -142,45 +140,3 @@ export const App = () => {
     </section>
   );
 };
-
-// return (
-//   <div>
-//     {/* Render the Name component if on step 1 */}
-//     {currentStep === 1 && (
-//       <Name value={formData.name} updateFormData={updateFormData} />
-//     )}
-//     {/* Render the Age component if on step 2 */}
-//     {currentStep === 2 && (
-//       <Age value={formData.age} updateFormData={updateFormData} />
-//     )}
-//     {/* Render the Email component if on step 3 */}
-//     {currentStep === 3 && (
-//       <Email value={formData.email} updateFormData={updateFormData} />
-//     )}
-//     {/* Render the Band component if on step 4 */}
-//     {currentStep === 4 && (
-//       <Band value={formData.favoriteBand} updateFormData={updateFormData} />
-//     )}
-//     {/* Render the Album component if on step 5 */}
-//     {currentStep === 5 && (
-//       <Album value={formData.favoriteAlbum} updateFormData={updateFormData} />
-//     )}
-//     {/* Render the Artist component if on step 6 */}
-//     {currentStep === 6 && (
-//       <Artist
-//         value={formData.favoriteArtist}
-//         updateFormData={updateFormData}
-//       />
-//     )}
-//     <div>
-//       {/* Show the "Back" button if not on the first step */}
-//       {currentStep > 1 && <button onClick={prevStep}>Back</button>}
-//       {currentStep < 6 ? (
-//         <button onClick={nextStep}>Next</button>
-//       ) : (
-//         <button onClick={submitForm}>Submit Form</button>
-//       )}
-//     </div>
-//   </div>
-// );
-//};

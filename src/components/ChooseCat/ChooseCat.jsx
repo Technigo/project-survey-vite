@@ -1,5 +1,4 @@
 import "./ChooseCat.css";
-// import { catOptions } from "src/components/Arrays.jsx";
 import { catOptions } from "../Arrays";
 
 export const ChooseCat = ({ chooseCat, setChooseCat }) => {
@@ -10,11 +9,12 @@ export const ChooseCat = ({ chooseCat, setChooseCat }) => {
   return (
     <form>
       <h3>Choose your cat</h3>
-      {/* This div with classname flex is only for my eyes sake */}
-      <div className="flex">
+      {/* This div with classname flex is only for my eyes sake (Julia) */}
+      <div className="cat-image-container">
+        {/* Mapping over the 'catOptions' array. The 'Key' prop is used to uniquely identify each cat. */}
         {catOptions.map((catOption) => (
           <div key={catOption.id}>
-            {/* Need label to make image clickable */}
+            {/* Using label element to improve accssibility and user experience. The 'Key' prop is used to uniquely identify each label element and it's is important for React's virtual DOM to efficiently track and update elements. */}
             <label>
               <input
                 type="radio"

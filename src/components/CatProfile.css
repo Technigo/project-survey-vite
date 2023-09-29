@@ -1,9 +1,39 @@
+.cat-info {
+  padding: 2rem;
+}
+
 .name-gender-container {
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .name-gender-container img {
   height: 1rem;
+}
+
+.cat-name {
+  margin: 0;
+}
+
+.cat-details-container {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+.cat-details-container p {
+  color: #909090;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.vl {
+  border-left: 1px solid #ececec;
 }

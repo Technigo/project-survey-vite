@@ -9,18 +9,20 @@ export const Username = ({ userName, setUserName }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="user-name-input">
+    <form onSubmit={handleSubmit} className="user-name-form">
       <h3>What is your name?</h3>
-      <p>We need your name to reserve your cat for you. bla bla</p>
+      <p>Please tell us your name. It helps us stay connected, provide tailored advice, and ensures our records are purrfectly accurate. Plus, it makes our adoption journey even more pawsome!🐾😺 </p>
+      {/* Using label element to improve accssibility and user experience. */}
       <label>
-        Write your name here..
+        Name: 
         <input
           type="text"
-          name="userName"
+          className="user-name-input"
+          name="userName" 
           value={userName}
           onChange={userNameInput}
-          placeholder="Name..."
-          required
+          placeholder="Write your name here..." required
+          
         />
       </label>
     </form>

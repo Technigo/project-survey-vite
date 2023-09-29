@@ -1,10 +1,8 @@
-img {
-    height: 200px;
-}
 
-.flex {
-    display: flex;
-    gap: 20px;
+
+.cat-image-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 /* HIDE RADIO */

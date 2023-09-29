@@ -40,7 +40,7 @@ export const CatProfile = ({
       </div>
       <div className="cat-info">
         <div className="name-gender-container">
-          <h3>{catName}</h3>
+          <h3 className="cat-name">{catName}</h3>
           <img src={genderIconSrc} alt="" />
         </div>
         <div className="cat-details-container">
@@ -48,10 +48,12 @@ export const CatProfile = ({
             <h4>Personality</h4>
             <p>{personality}</p>
           </div>
+          <div class="vl"></div>
           <div className="age-container">
             <h4>Age</h4>
             <p>{age}</p>
           </div>
+          <div class="vl"></div>
           <div className="owner-container">
             <h4>Owner</h4>
             <p>{userName}</p>

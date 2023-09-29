@@ -18,8 +18,7 @@ export const Personality = ({ personality, setPersonality }) => {
       </p>
       <select
         className="personality-dropdown"
-        // key={personality}
-        aria-label="Select personality from dropdown menu"
+        aria-label="Select personality from dropdown menu."
         onChange={handleOptionChange}
         value={personality}
       >
