@@ -39,7 +39,7 @@ function Summary({ questions }) {
           <strong>Memorable Moment:</strong> Your favorite &ldquo;Friends&rdquo; moment/quote: <strong>{memorableMomentQuestion.answer}</strong>. This moment adds a unique touch to your &ldquo;Friends&rdquo; experience, just like Phoebe&rsquo;s eccentricity or Joey&rsquo;s classic pick-up lines.
         </li>
       </ul>
-      <p>Now, imagine the hilarious mishaps and heartwarming moments you&rsquo;d share with <strong>{favoriteCharacterQuestion.answer}</strong> over a coffee.</p>
+      <p>Now, imagine the hilarious mishaps and heartwarming moments you&rsquo;d share with <strong>{favoriteCharacterQuestion.answer}</strong> over a <strong>{coffeeOrderQuestion.answer} ☕</strong>.</p>
       <img src="/friends.avif" alt="picture of all the friends" style={{ width: '100%', height: 'auto' }} />
       <button onClick={() => window.location.reload(false)}>Restart</button>
     </div>
