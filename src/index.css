@@ -37,7 +37,7 @@ input {
   align-items: center;
   justify-content: center;
   column-gap: 5px;
-  background: #FFB84C;
+  background: #F266AB;
 }
 
 header img {
@@ -68,6 +68,7 @@ header img {
 
 .question-boxes {
   margin-left: 1em;
+  background-color: #A459D1;
   border: 2px solid #913D66;
   box-sizing: border-box;
   padding: 2em 4em;
@@ -79,7 +80,7 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #FFB84C;
+  background: #2CD3E1;
   padding: 1em 0em;
   color: black;
   font-size: 20px;
@@ -95,11 +96,170 @@ footer img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #2CD3E1;
+  background: #FFB84C;
   padding: 2em 0em;
   color: black;
   font-size: 24px;
   font-weight: 700;
+}
+
+/*Name display*/
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Name image*/
+.name img {
+  height: 100px;
+  width: 100px;
+
+}
+
+/*Name image hover effect*/
+.name img:hover {
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+/*Name text-input*/
+.name input {
+  background-color: #f392c3;
+  padding: 10px;
+  margin: 10px;
+}
+
+/*Age display*/
+.age {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/*Age  image*/
+.age img {
+  height: 200px;
+  width: 200px;
+}
+
+/*Age image hover effect*/
+.age img:hover {
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1);
+  /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+/*Age text-input*/
+.age input {
+  background-color: #f392c3;
+  padding: 10px;
+  margin: 10px;
+}
+
+/*What class are you in- display*/
+.class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/*What class are you in- image*/
+.class img {
+  height: 200px;
+  width: 200px;
+}
+
+/*What class are you in- image hover effect*/
+.class img:hover {
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1);
+  /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+/*What class are you in select dropdown*/
+.class select {
+  background-color: #f392c3;
+  padding: 10px;
+  margin: 20px;
+}
+
+
+/*Hiding the radio buttons*/
+.dino input[type="radio"] {
+  display: none;
+  cursor: pointer;
+}
+
+/*Dino buttons*/
+.dino img {
+  height: 150px;
+  width: 150px;
+  margin-right: 40px;
+}
+
+/*Dino buttons checked*/
+[type=radio]:checked+img {
+  border-radius: 40px;
+  border-color: #F266AB;
+  background: #F266AB;
+}
+
+
+/*Dino images hover effect */
+.dino img:hover {
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+
+/*Food text alignment*/
+.foods-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Food text-input*/
+.foods-txt input {
+  background-color: #f392c3;
+  margin: 20px;
+}
+
+/*Food images size*/
+.food-img img {
+  height: 100px;
+  width: 100px;
+  padding-bottom: 20px;
+  padding-inline: 15px;
+}
+
+/*Div to display food images on a row*/
+.food-img {
+  display: flex;
+  flex-direction: row;
+
+}
+
+/*Food images hover effect*/
+.food-img img:hover {
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
+  transform: scale(1.5);
 }
 
 main-body img {
