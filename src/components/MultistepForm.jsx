@@ -4,7 +4,9 @@ import { Room } from "./Room";
 import { Star } from "./starts";
 import { StayDay } from "./stayDay";
 import { Activity } from "./activities";
+import { Email } from "./email";
 import "./index.css";
+
 
 
 export const MultistepForm = () => {
@@ -14,6 +16,7 @@ export const MultistepForm = () => {
         StayDay: "",
         Activity: "",
         Star: "",
+        Email: "",
 
 
     })
@@ -24,7 +27,7 @@ export const MultistepForm = () => {
     const [currentStep, setCurrentStep] = useState(1);
     // Function to move to the next step in the form
     const nextStep = () => {
-        if (currentStep < 5) setCurrentStep(currentStep + 1);
+        if (currentStep < 6) setCurrentStep(currentStep + 1);
     };
     const prevStep = () => {
         if (currentStep > 1) setCurrentStep(currentStep - 1);
@@ -41,7 +44,7 @@ export const MultistepForm = () => {
                 <h2>Thank you {formData.name}!</h2>
                 <p>
                     Hi {formData.name}! <br /> You stayed in our {formData.room}, for a period of {formData.stayDay}. You took part in {formData.activity} activity, and gave us
-                    the rating of {formData.star}! <br /> <br />As a thank you for taking your time to improve our service, we would like to offer you 10% off on your next stay!
+                    the rating of {formData.star}! <br /> <br />As a thank you for taking your time to improve our service, we would like to offer you 10% off on your next stay! We will send a code to {formData.email}
                     <br /><br />
                     Hope to see you soon again!
                 </p>
@@ -72,10 +75,13 @@ export const MultistepForm = () => {
                 {currentStep === 5 && (
                     <Star value={formData.star} updateFormData={updateFormData} />
                 )}
+                {currentStep === 6 && (
+                    <Email value={formData.email} updateFormData={updateFormData} />
+                )}
 
                 <div>
                     {currentStep > 1 && <button onClick={prevStep}>Back</button>}
-                    {currentStep < 5 ? (
+                    {currentStep < 6 ? (
                         <button onClick={nextStep}>Next</button>
                     ) : (
                         <button onClick={submitForm}>Submit Form</button>
