@@ -21,22 +21,22 @@ function Summary({ questions }) {
     <div>
       <h2>Your &ldquo;Friends&rdquo; Persona:</h2>
       <p>
-        Based on your survey responses <strong>{nameInput.answer}</strong>, we&rsquo;ve analyzed your &ldquo;Friends&rdquo; persona.
+        Based on your survey responses <strong>✨{nameInput.answer}✨</strong>, we&rsquo;ve analyzed your &ldquo;Friends&rdquo; persona.
         Imagine you&rsquo;re sitting in Central Perk with your favorite character.
         Here&rsquo;s what your experience would be like:
       </p>
       <ul>
         <li>
-          <strong>Favorite Character:</strong> {favoriteCharacterQuestion.answer} would be your partner in crime throughout your coffee shop adventures.
+          <strong>Favorite Character:</strong> <strong>{favoriteCharacterQuestion.answer}</strong> would be your partner in crime throughout your coffee shop adventures.
         </li>
         <li>
-          <strong>Fashion Admirer:</strong> You admire the fashion sense of {Array.isArray(fashionAdmirerQuestion.answer) ? fashionAdmirerQuestion.answer.join(', ') : 'N/A'}. Looks like you appreciate style on a whole new level!
+          <strong>Fashion Admirer:</strong> You admire the fashion sense of <strong>{Array.isArray(fashionAdmirerQuestion.answer) ? fashionAdmirerQuestion.answer.join(', ') : 'N/A'}</strong>. Looks like you appreciate style on a whole new level!
         </li>
         <li>
-          <strong>Coffee Order:</strong> At Central Perk, you&rsquo;d order a {coffeeOrderQuestion.answer} to keep the conversation flowing.
+          <strong>Coffee Order:</strong> At Central Perk, you&rsquo;d order a <strong>{coffeeOrderQuestion.answer} ☕</strong> to keep the conversation flowing.
         </li>
         <li>
-          <strong>Memorable Moment:</strong> Your favorite &ldquo;Friends&rdquo; moment/quote: {memorableMomentQuestion.answer}. This moment adds a unique touch to your &ldquo;Friends&rdquo; experience, just like Phoebe&rsquo;s eccentricity or Joey&rsquo;s classic pick-up lines.
+          <strong>Memorable Moment:</strong> Your favorite &ldquo;Friends&rdquo; moment/quote: <strong>{memorableMomentQuestion.answer}</strong>. This moment adds a unique touch to your &ldquo;Friends&rdquo; experience, just like Phoebe&rsquo;s eccentricity or Joey&rsquo;s classic pick-up lines.
         </li>
       </ul>
       <p>Now, imagine the hilarious mishaps and heartwarming moments you&rsquo;d share with <strong>{favoriteCharacterQuestion.answer}</strong> over a coffee.</p>
