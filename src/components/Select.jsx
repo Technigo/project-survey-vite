@@ -1,3 +1,5 @@
+import styles from "./Select.module.css"
+
 const Select = ({
     name,
     value,
@@ -6,6 +8,7 @@ const Select = ({
 }) => {
     return (
         <select
+            className={styles.select}
             name={name}
             value={value}
             onChange={onChange}

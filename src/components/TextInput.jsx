@@ -1,21 +1,20 @@
+import styles from "./TextInput.module.css";
+
 const TextInput = ({
     name,
     value,
-    label,
     onChange,
     placeholder,
 }) => {
     return (
-        <>
-            <label htmlFor={name}>{label}</label>
-            <input
-                type="text"
-                name={name}
-                value={value}
-                onChange={onChange}
-                placeholder={placeholder}
-            />
-        </>
+        <input
+            className={styles.textInput}
+            type="text"
+            name={name}
+            value={value}
+            onChange={onChange}
+            placeholder={placeholder}
+        />
     );
 };
 

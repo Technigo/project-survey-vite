@@ -5,6 +5,7 @@ import Select from "./components/Select";
 import TextInput from "./components/TextInput";
 import RadioGroup from "./components/RadioGroup";
 import CheckboxGroup from "./components/CheckboxGroup";
+import Button from "./components/Button";
 
 // Takes an array of words (["Apple", "Banana", "Cherry"]) as argument
 // Returns a nicely formatted string: Apple, Banana or Cherry
@@ -66,10 +67,10 @@ export const App = () => {
                             In this survey we would like you to answer a couple of questions
                             regarding mushrooms.
                         </h4>
-                        <img src="/mushroom.jpg"></img>
+                        <img src="/mushroom.jpg" />
+                        <p>What is your name?</p>
                         <TextInput
                             name="name"
-                            label="What is your name?"
                             value={form.name}
                             onChange={setFormValue}
                             placeholder="Your name"
@@ -120,7 +121,9 @@ export const App = () => {
                         />
                     </Card>
 
-                    <button onClick={goToSummary}>Submit</button>
+                    <Button>
+                        Submit
+                    </Button>
                 </>
             )}
             {step === "summary" && <p> You have been picking mushrooms for {form.yearsPickingMushrooms} years. You prefer {form.favoriteMushroom} and you like them {formatPreparation(form.prepareMushroom)}. Thank you {form.name} for answering our mushroom survey!</p>}
