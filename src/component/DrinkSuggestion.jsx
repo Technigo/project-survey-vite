@@ -1,23 +1,6 @@
 /* eslint-disable react/prop-types */
 import { DataOfDrinks } from "./DataOfDrinks";
 
-<<<<<<< HEAD
-export const DrinkSuggestion = () => {
-  let drinkSuggestionObject = DataOfDrinks[0];
-
-  return (
-    <>
-      <div className="the-drink">
-        <img
-          className="the-drink-pic"
-          src={drinkSuggestionObject.drinkPicURL}
-        />
-        <h2>{drinkSuggestionObject.name.toUpperCase()}</h2>
-      </div>
-    </>
-  );
-};
-=======
 export const DrinkSuggestion = ({ age, preference, spirit }) => {
 
     //Takes all dataOfDrinks and filters out a correct match, first from the right spirit and then to the right glass-type. This works because we only have one match per combination but if we had more we would have to add some sort of randomizer as well
@@ -43,4 +26,3 @@ export const DrinkSuggestion = ({ age, preference, spirit }) => {
         </>
     )
 }
->>>>>>> origin/main
