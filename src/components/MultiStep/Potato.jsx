@@ -1,5 +1,8 @@
+import React, { useState } from "react";
+
 export const Potato = ({ updateFormData, value }) => {
   const potato = (e) => updateFormData("potato", e.target.value);
+
   return (
     <div>
       <label>Which potato dish would you want to become? 🥔</label>
@@ -8,8 +11,8 @@ export const Potato = ({ updateFormData, value }) => {
           <input
             type="radio"
             name="potato"
-            value="french-fries"
-            checked={value === "french-fries"}
+            value="French Fries"
+            checked={value === "French Fries"}
             onChange={potato}
           />
           French Fries
@@ -20,8 +23,8 @@ export const Potato = ({ updateFormData, value }) => {
           <input
             type="radio"
             name="potato"
-            value="mashed"
-            checked={value === "mashed"}
+            value="Mashed Potatoes"
+            checked={value === "Mashed Potatoes"}
             onChange={potato}
           />
           Mashed Potatoes
@@ -32,8 +35,8 @@ export const Potato = ({ updateFormData, value }) => {
           <input
             type="radio"
             name="potato"
-            value="chips"
-            checked={value === "chips"}
+            value="Potato Chips"
+            checked={value === "Potato Chips"}
             onChange={potato}
           />
           Potato Chips
@@ -44,8 +47,8 @@ export const Potato = ({ updateFormData, value }) => {
           <input
             type="radio"
             name="potato"
-            value="salad"
-            checked={value === "salad"}
+            value="Potato Salad"
+            checked={value === "Potato Salad"}
             onChange={potato}
           />
           Potato Salad
@@ -56,8 +59,8 @@ export const Potato = ({ updateFormData, value }) => {
           <input
             type="radio"
             name="potato"
-            value="none"
-            checked={value === "none"}
+            value="None"
+            checked={value === "None"}
             onChange={potato}
           />
           None of the above - I'd rather not be a potato dish.
