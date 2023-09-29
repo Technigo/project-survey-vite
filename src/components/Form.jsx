@@ -44,6 +44,16 @@ export const Form = () => {
     if (currentQuestion > 1) setCurrentQuestion(currentQuestion - 1);
   };
 
+  //Toggle the background color of transparentBackground
+  const [backgroundColor, setBackgroundColor] = useState("rgba(0, 0, 0, 0.5)");
+  const toggleBackgroundColor = () => {
+    setBackgroundColor(
+      backgroundColor === "rgba(0, 0, 0, 0.5)"
+        ? "rgba(0, 0, 0, 0.0)"
+        : "rgba(0, 0, 0, 0.5)"
+    );
+  };
+
   //Function to reset the form
   const resetFormData = () => {
     updateFormData("hero", "");
@@ -52,9 +62,8 @@ export const Form = () => {
     updateFormData("villain", "");
     setCurrentQuestion(1);
     setFormSubmitted(false);
+    toggleBackgroundColor();
   };
-
-  const [hideLightbox, setHideLightbox] = useState(false);
 
   // Function to submit the data entered in the form
   const submitForm = () => {
@@ -63,6 +72,7 @@ export const Form = () => {
       return;
     }
 
+    toggleBackgroundColor();
     console.log(formData);
     const summary = `
     Hero: ${formData.hero}
@@ -71,17 +81,14 @@ export const Form = () => {
     Villain: ${formData.villain}`;
     // alert(summary);
     setFormSubmitted(true);
-    setHideLightbox(true);
   };
 
   return (
     <div className="storyForm">
-      <div className="transparentBackground">
-        {/* <div
-        className={`transparentBackground ${
-          hideLightbox ? "hide-lightbox" : ""
-        }`}
-      /> */}
+      <div
+        className="transparentBackground"
+        style={{ backgroundColor: backgroundColor }}
+      >
         <div className="questionContainer">
           {currentQuestion === 1 && (
             <Hero value={formData.hero} updateFormData={updateFormData} />
