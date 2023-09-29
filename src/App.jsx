@@ -111,7 +111,7 @@ export const App = () => {
               )}
               {currentQuestion < 6 && currentQuestion !== 0 && (
                 <button className="next-btn" onClick={handleNextQuestion}>
-                  <img src="./src/assets/next.png" alt="" />
+                  <img src="./next.png" alt="" />
                 </button>
               )}
 

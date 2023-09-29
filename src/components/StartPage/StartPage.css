@@ -1,10 +1,10 @@
 @font-face {
   font-family: myFont;
-  src: url(src/assets/CecepsHandwriting-vmpKZ.woff);
+  src: url(public/CecepsHandwriting-vmpKZ.woff);
 }
 
 .start-wrapper {
-  background-image: url(src/assets/cat-background.jpg);
+  background-image: url(/cat-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color: white;

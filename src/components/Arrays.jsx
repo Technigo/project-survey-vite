@@ -1,6 +1,6 @@
 export const genderGroups = [
-  { id: "Female", imgSrc: "src/assets/female.png" },
-  { id: "Male", imgSrc: "src/assets/male.png" },
+  { id: "Female", imgSrc: "/female.png" },
+  { id: "Male", imgSrc: "/male.png" },
 ];
 
 export const catOptions = [
@@ -8,25 +8,25 @@ export const catOptions = [
     id: "cat1",
     label: "Brown cat",
     alt: "Cat 1",
-    imgSrc: "src/assets/cat-1.jpg",
+    imgSrc: "/cat-1.jpg",
   },
   {
     id: "cat2",
     label: "Red cat",
     alt: "Cat 2",
-    imgSrc: "src/assets/cat-2.jpg",
+    imgSrc: "/cat-2.jpg",
   },
   {
     id: "cat3",
     label: "Orange cat",
     alt: "Cat 3",
-    imgSrc: "src/assets/cat-3.jpg",
+    imgSrc: "/cat-3.jpg",
   },
   {
     id: "cat4",
     label: "Seal cat",
     alt: "Cat 4",
-    imgSrc: "src/assets/cat-4.jpg",
+    imgSrc: "/cat-4.jpg",
   },
 ];
 
