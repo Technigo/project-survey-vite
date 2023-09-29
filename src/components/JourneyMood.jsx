@@ -11,7 +11,7 @@ export const JourneyMood = ({ updateFormData, value }) => {
             <form className="radio-form-wrapper journey-form">
                 <p>Envision a walk in a dark forest. What encounters come to mind?</p>
                 {journeys.map((journeyChoice) => (
-                    <label key={journeyChoice}>
+                    <label className="radio-button-label" key={journeyChoice}>
                         <input
                             type="radio"
                             class="radio-button"

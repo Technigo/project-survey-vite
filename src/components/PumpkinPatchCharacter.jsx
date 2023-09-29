@@ -11,7 +11,7 @@ export const PumpkinPatchCharacter = ({ updateFormData, value }) => {
       <form className="radio-form-wrapper pumpkin-patch-character-form">
         <p>Select a mysterious character to make an appearance in the story:</p>
         {mysteryCharacters.map((characterChoice) => (
-          <label key={characterChoice}>
+          <label className="radio-button-label" key={characterChoice}>
             <input
               type="radio"
               class="radio-button"

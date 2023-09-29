@@ -1,15 +1,25 @@
 .radio-form-wrapper {
     line-height: 1.1;
+    margin: 20px 0 30px;
     display: flex;
     flex-direction: column;
 }
 
+.radio-form-wrapper p {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.radio-button-label {
+    align-self: center;
+}
+
 .radio-form-wrapper input[type="radio"] {
     accent-color: rgb(83, 61, 115);
-    margin-right: 5px; 
-    vertical-align: middle;
+    margin-right: 5px;
+    align-items: center;
 }
 
 .radio-form-wrapper label {
     margin-bottom: 10px;
-}
+}   

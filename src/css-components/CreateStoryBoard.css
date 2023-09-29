@@ -11,6 +11,7 @@
     margin: 10px auto;
     padding: 5px;
     color: #010D00;
+    text-align: justify;
 }
 
 .story-page span {
@@ -26,7 +27,7 @@
 }
 
 .journey-mood {
-    color: #A67687;
+    color: #7b515f;
 }
 
 .pumpkin-adjective {

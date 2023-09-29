@@ -1,28 +1,22 @@
+.main-character-name-form h1 {
+  margin-bottom: 1.7rem;
+  font-size: calc(20px + 1vw);
+}
+
+
 .main-character-name-form input:focus {
     outline: none;
     box-shadow: 0 0 5px #F28A2E, 0 0 1em #F28A2E, 0 0 0.5em #FFFCED;
   }
   
   .main-character-name-form input {
-    margin-top: 10px;
-    width: 100%;
+    width: 225px;
     border: none;
     border-radius: 5px;
-    padding: 8px 5px;
-    margin-bottom: 10px;
+    padding: 0 20px;
+    margin: 20px 0 30px;
+    min-height: 35px;
   }
   
 
-  /*Desktop viewport*/
-@media (min-width: 1025px) {
-  .main-character-name-form input {
-    width: 100%;
-  }
-}
-
-/*Tablet viewport*/
-@media (min-width: 667px) and (max-width: 1024px) {
-  .main-character-name-form input {
-    width: 100%;
-  }
-} 
+  

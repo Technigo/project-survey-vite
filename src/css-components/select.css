@@ -1,5 +1,6 @@
 .town-adjective-form,
 .pumpkin-adjective-form,
+.main-character-name-form,
 .wish-form {
     display: flex;
     justify-content: center;
@@ -15,10 +16,9 @@
     min-height: 35px;
     margin-top: 20px;
     margin-bottom: 30px;
-    background: #eeb0a2;
-    opacity: 0.7;
-    border-radius: 4px;
-    border: 2px solid #533D73;
+    background: white;
+    border-radius: 5px;
+    /* border: 2px solid #533D73; */
     outline: none;
     padding: 0 20px;
     width: 225px;
@@ -26,6 +26,10 @@
     cursor: pointer;
     transition: all 0.4s;
     appearance: none;
+}
+
+.custom-selector select:focus {
+    box-shadow: 0 0 5px #F28A2E, 0 0 1em #F28A2E, 0 0 0.5em #FFFCED;
 }
 
 /* hide default dropdown arrow -create new one */
