@@ -7,10 +7,10 @@ export const SpiritQuestion = ({ value, setValue }) => {
     <div className="spirit-question">
       <select onChange={spiritInput} value={spirit}>
         <option value="">Liquor of choice:</option>
-        <option value="Vodka">Vodka</option>
-        <option value="Gin">Gin</option>
-        <option value="Rum">Rum</option>
-        <option value="Whisky">Whisky</option>
+        <option value="vodka">Vodka</option>
+        <option value="gin">Gin</option>
+        <option value="rum">Rum</option>
+        <option value="whisky">Whisky</option>
       </select>
     </div>
   );
