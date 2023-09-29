@@ -18,8 +18,6 @@ export const App = () => {
   const [userName, setUserName] = useState("");
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
-
-
   // Function to move to the next step in the form
   const handleNextQuestion = () => {
     if (currentQuestion < 7) setCurrentQuestion(currentQuestion + 1);
