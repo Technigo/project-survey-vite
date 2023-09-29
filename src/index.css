@@ -50,12 +50,12 @@ ul {
 }
 
 .image-small {
-  width: 150px;
+  width: 170px;
   height: auto;
 }
 
 .image-outfits {
-  width: 250px;
+  width: 300px;
   height: auto;
 }
 
@@ -108,15 +108,18 @@ button {
   /*Desktop styles here*/
 
   .Form {
-    /* Example: Adjust width and margin for tablets */
-    width: 90%;
+    width: 60%;
     margin: 15px auto;
   }
 
-  .image-small,
+
+  .image-small {
+    width: 170px;
+    height: auto;
+  }
+
   .image-outfits {
-    /* Example: Adjust image size for tablets */
-    width: 600px;
+    width: 300px;
     height: auto;
   }
 }
