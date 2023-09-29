@@ -5,7 +5,7 @@ export const Welcome = ({ startSurvey }) => {
     <div className="summary-container">
       <h1>Welcome!</h1>
       <p>Would you like to travel with us?</p>
-      <img className="welcome-image" src="./src/assets/airplane.jpg" alt="Airplane" />
+      <img className="welcome-image" src="./airplane.jpg" alt="Airplane" />
       <button className="restart-button" onClick={startSurvey}>Start</button>
     </div>
   );
