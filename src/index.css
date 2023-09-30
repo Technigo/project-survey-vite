@@ -36,6 +36,7 @@ ul {
   margin-bottom: 100px;
 }
 
+
 .Form {
   width: 60%;
   margin: 15px auto;
@@ -70,6 +71,10 @@ input[type="text"],
 input[type="number"] {
   padding: 10px;
   font-size: 16px;
+  border: 1px solid black;
+  color: black;
+  margin-right: 20px;
+  border-radius: 5px;
 }
 
 select {
@@ -78,10 +83,19 @@ select {
 }
 
 button {
-  /* Example: Add styles for input and button */
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 16px;
-  /* Add more styles as needed */
+  background-color: white;
+  color: black;
+  border: 1px solid black ;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: lightgray;
+  color: black;
 }
 
 /***** TABLET *****/

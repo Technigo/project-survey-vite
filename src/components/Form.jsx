@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Question from './Question';
-import Summary from './Summary';
+import Summary from './summary';
 
 function Form() {
     const [questions, setQuestions] = useState([

@@ -55,7 +55,7 @@ function Question({ question, onAnswerSubmit }) {
 
 
   return (
-    <div>
+    <div className="question-container">
       <h2>{question.text}</h2>
       {question.type === 'text' && (
         <input type="text" value={answer} onChange={handleInputChange} />
