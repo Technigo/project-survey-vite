@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 export const Potato = ({ updateFormData, value }) => {
   const potato = (e) => updateFormData("potato", e.target.value);
 

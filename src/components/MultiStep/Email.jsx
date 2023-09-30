@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 
+// Define email component
 export const Email = ({ updateFormData, value }) => {
+  // State variables
   const [email, setEmail] = useState(value);
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [showError, setShowError] = useState(false);
 
+  // Handle changes in input field, validation etc
   const emailInput = (e) => {
     const inputEmail = e.target.value;
-    setEmail(inputEmail);
+    setEmail(inputEmail); // Update state
     updateFormData("email", inputEmail);
 
     const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;

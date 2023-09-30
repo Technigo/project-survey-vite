@@ -1,3 +1,4 @@
+// Import React, components, css
 import React, { useState } from "react";
 import { Age } from "./Age";
 import { Trust } from "./Trust";
@@ -8,7 +9,9 @@ import { Name } from "./Name";
 import { ThankYou } from "./ThankYou";
 import "../../App.css";
 
+
 export const MultiStepForm = () => {
+// Define state variables
   const [formData, setFormData] = useState({
     name: "",
     age: "",
@@ -21,22 +24,26 @@ export const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
 
+  // Function to update form data
   const updateFormData = (field, value) => {
     setFormData((previous) => ({ ...previous, [field]: value }));
   };
 
+  // Function to go to the next step if the current step is valid
   const nextStep = () => {
     if (currentStep < 6 && validateStep(currentStep)) {
       setCurrentStep(currentStep + 1);
     }
   };
 
+  // Function to go to the previous step
   const prevStep = () => {
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1);
     }
   };
 
+  // Function to validate each step of the form
   const validateStep = (step) => {
     switch (step) {
       case 1:
@@ -58,18 +65,23 @@ export const MultiStepForm = () => {
     }
   };
 
+  // Function to submit the form
   const submitForm = () => {
+    // Format the data and show an alert message
     const formattedData = `You’re a ${formData.age} year old individual named ${formData.name}. You have a ${formData.trust}% trust in the government, and in your spare time you watch ${formData.movie} on repeat. When people ask what potato dish you want to become, you always reply: – ${formData.potato}! You can be contacted at ${formData.email}.`;
     const alertMessage = "Read through the information collected about you. Click 'OK' to submit.\n\n" + formattedData;
     alert(alertMessage);
 
+    // Mark the form as submitted
     setSubmitted(true);
   };
 
+  // Function to start the survey
   const startSurvey = () => {
     setCurrentStep(1);
   };
 
+  // Function to restart the survey
   const restartSurvey = () => {
     setCurrentStep(1);
     setFormData({
