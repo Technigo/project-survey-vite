@@ -25,7 +25,25 @@ npm i && code . && npm run dev
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Describe how you approached to problem: 
+
+Learning content was less this week and concepts covered were not as difficult for us as last week. Now that we have expereince manipulating a react project and boilerplate we were able to start the project with little issues.
+
+Code sessions and Q&A helped a lot and we are grateful for the code snippets that created next/back buttons.
+
+The most difficult section was to get the survey to disappear and be replaced by the results section. We were able to solve this by using a hideQuiz variable which we put into the submitForm function inside SurveryForm.jsx.
+
+How did you plan? 
+We drew a simple diagram for our parent to child structure.
+We created a simple site design layout
+
+What technologies did you use? 
+HTML5
+CSS3
+React
+Editor: VS Code
+
+If you had more time, what would be next?
 
 ### View it live
 
