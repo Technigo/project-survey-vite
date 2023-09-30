@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-
-export const Icecream = ({ updateFormData, value }) => {
+export const Learning = ({ updateFormData, value }) => {
 
 
     //NOTE: After Q&A I know that I should have this useState hook in the parent - surveyForm - Lifting state up
@@ -12,8 +11,8 @@ export const Icecream = ({ updateFormData, value }) => {
         setWidth(event.target.value);
     };
 
-    const likeIcecream = (event) => {
-        updateFormData("icecream", event.target.value);
+    const likeLearning = (event) => {
+        updateFormData("learning", event.target.value);
         changeWidth();
     }
 
@@ -30,11 +29,11 @@ export const Icecream = ({ updateFormData, value }) => {
                 </ul>
                 <input
                     type="range"
-                    onChange={likeIcecream}
+                    onChange={likeLearning}
                     min={1}
                     max={100}
                     defaultValue={width}
-                    className="icecream-slider"
+                    className="learning-slider"
                 />
             </div>
             <div>

@@ -6,7 +6,7 @@ export const FavDinosaur = ({ updateFormData, value }) => {
     console.log(chosenDinosaur);
 
     return (
-        <div class="dino">What is your favourite Dinosaur?
+        <div className="dino">What is your favourite Dinosaur?
             <p>
                 <label>
                     <input type="radio"

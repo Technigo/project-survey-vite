@@ -7,7 +7,7 @@ import { Classroom } from "./Classroom.jsx"
 import { FavDinosaur } from "./FavDinosaur.jsx"
 import { FavFood } from "./FavFood.jsx"
 import { ResultPage } from "./ResultPage.jsx"
-import { Icecream } from "./Icecream.jsx"
+import { Learning } from "./Learning.jsx"
 
 //Function to create State to storm form data
 export const SurveyForm = () => {
@@ -18,7 +18,7 @@ export const SurveyForm = () => {
         classroom: "",
         favDinosaur: "",
         favFood: "",
-        icecream: "",
+        learning: "",
     });
 
     const [hideSurvey, setHideSurvey] = useState(false);
@@ -54,7 +54,7 @@ export const SurveyForm = () => {
           Classroom: ${formData.classroom}
           Favorite Dinosaur: ${formData.favDinosaur}
           Favorite Food: ${formData.favFood}
-          Icecream: ${formData.icecream}
+          Learning: ${formData.learning}
         `;
     };
 
@@ -91,7 +91,7 @@ export const SurveyForm = () => {
                     )}
                     {/* Render the Album component if on step 6 - stretch goal */}
                     {currentStep === 6 && (
-                        <Icecream value={formData.icecream} updateFormData={updateFormData} />
+                        <Learning value={formData.learning} updateFormData={updateFormData} />
                     )}
                     <div>
                         {/* Show the "Back" button if not on the first step */}

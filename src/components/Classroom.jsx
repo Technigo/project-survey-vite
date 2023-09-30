@@ -6,7 +6,7 @@ export const Classroom = ({ updateFormData, value }) => {
         updateFormData("classroom", event.target.value);
 
     return (
-        <div class="class">
+        <div className="class">
             <img src="/assets/class-transparent.png" alt="Class"></img>
             <label>What class are you in? </label>
 

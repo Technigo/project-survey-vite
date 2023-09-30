@@ -73,6 +73,7 @@ header img {
   box-sizing: border-box;
   padding: 2em 4em;
   border-radius: 1em;
+  align-content: center;
 }
 
 /* Footer CSS */
@@ -83,7 +84,7 @@ header img {
   background: #2CD3E1;
   padding: 1em 0em;
   color: black;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 700;
 }
 
@@ -101,6 +102,8 @@ footer img {
   color: black;
   font-size: 24px;
   font-weight: 700;
+  overflow: hidden;
+  align-content: center;
 }
 
 /*Name display*/
@@ -313,7 +316,7 @@ ul>li {
   font-size: 16px;
 }
 
-.icecream-slider {
+.learning-slider {
   width: 100%;
   height: 30px;
   background: #eee;
@@ -325,11 +328,11 @@ ul>li {
   transition: opacity .2s;
 }
 
-.icecream-slider:hover {
+.learning-slider:hover {
   opacity: 1;
 }
 
-.icecream-slider::-webkit-slider-thumb {
+.learning-slider::-webkit-slider-thumb {
   appearance: none;
   -webkit-appearance: none;
   width: 30px;
@@ -338,7 +341,7 @@ ul>li {
   cursor: pointer;
 }
 
-.icecream-slider::-moz-range-thumb {
+.learning-slider::-moz-range-thumb {
   width: 30px;
   height: 30px;
   background: #4caf50;
@@ -382,5 +385,9 @@ ul>li {
 
   .large-header {
     font-size: 44px;
+  }
+
+  .question-boxes {
+    border-radius: 0;
   }
 }

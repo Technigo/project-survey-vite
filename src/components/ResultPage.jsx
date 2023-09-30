@@ -6,8 +6,6 @@ export const ResultPage = (formData) => {
         window.location.reload(false);
     }
 
-    console.log(formData.formData.name);
-
     return (
         <>
             <section className="form-wrapper">
@@ -28,9 +26,9 @@ export const ResultPage = (formData) => {
                     &#127829; My favourite food is {formData.formData.favFood}
                 </div>
                 <div className="output-survey q6">
-                    I rated my love of learning as: {formData.formData.icecream}
+                    I rated my love of learning as: {formData.formData.learning}
                     {
-                        (formData.formData.icecream > 50)
+                        (formData.formData.learning > 50)
                             ? <p>I love to learn!</p>
                             : <p>I'd rather do other things</p>
                     }
