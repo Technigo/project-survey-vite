@@ -16,9 +16,9 @@ export const App = () => {
   const [personality, setPersonality] = useState("");
   const [userName, setUserName] = useState("");
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [formVisible, setFormVisible] = useState(false); // The surveys visiblity
+  const [formVisible, setFormVisible] = useState(false); // The surveys visiblity after clicking the "adopt now" button on StartPage
 
-  // Function to show the survey
+  // Function to show the survey after clicking the "adopt now" button on StartPage
   const handleShowForm = () => {
     setFormVisible(true);
   };

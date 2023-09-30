@@ -16,6 +16,7 @@
     rgba(247, 158, 179, 0.9) 0%,
     rgba(253, 195, 96, 0.9) 100%
   );
+  --yellowFade: rgba(253, 195, 96, 0.5);
 }
 
 /* Box sizing rules */
@@ -57,7 +58,7 @@ body {
   background-color: #fff;
   overflow: hidden;
   width: 100%;
-  max-width: 500px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -155,29 +156,22 @@ button:hover {
   color: #555;
 }
 
-/* @media (min-width: 668px) and (max-width: 1024px) {
-  body {
-    display: flex;
-    justify-content: center;
-  }
-  .content-wrapper {
-    width: 390px;
-    margin: 100px 0 100px 0;
-    box-shadow: 10px 10px 5px #eebb9569;
-  }
+@media (min-width: 668px) {
+
 }
+
+
 
 @media (min-width: 1025px) {
   body {
     display: flex;
     justify-content: center;
   }
-  .content-wrapper {
-    width: 390px;
+  .page-in-survey {
     margin: 100px 0px 100px 0px;
-    box-shadow: 10px 10px 5px #eebb9569;
+    box-shadow: 10px 10px 5px var(--yellowFade);
   }
-} */
+}
 /*
 
 code {
