@@ -92,7 +92,7 @@ export const MultiStepForm = () => {
           <div className="button-container">
             {currentStep === 0 && (
               <div>
-                <h6>⚠️ The information provided in this questionnaire is for general informational purposes only and should be used at the user's discretion. It does not constitute financial, legal, medical, or any other professional advice. Users are encouraged to seek advice from qualified professionals regarding their specific circumstances.</h6>
+                <h6>⚠️ This survey assumes no responsibility or liability for any errors or omissions in the content of this site. The information contained in this site is provided on an &quot;as is&quot; basis with no guarantees of completeness, accuracy or usefulness.</h6>
                 <div className="start-button">
                   <button onClick={startSurvey}>Start survey</button>
                 </div>
@@ -126,11 +126,11 @@ export const MultiStepForm = () => {
                     </button>
                   ) : (
                     <button onClick={submitForm} disabled={!validateStep(currentStep)}>
-                      Submit Form
+                      Submit
                     </button>
                   )}
                   {currentStep === 6 && (
-                    <button onClick={restartSurvey}>Restart survey</button>
+                    <button onClick={restartSurvey}>Restart</button>
                   )}
                 </div>
               </>
