@@ -9,6 +9,7 @@ const TextInput = ({
     return (
         <input
             id={name}
+            autoComplete="name"
             className={styles.textInput}
             type="text"
             name={name}

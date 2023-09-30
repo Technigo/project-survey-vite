@@ -14,11 +14,12 @@ const CheckboxGroup = ({
                     <input
                         type="checkbox"
                         name={name}
+                        id={option}
                         value={option}
                         onChange={onChange}
                         checked={value.includes(option)}
                     />
-                    <label className={styles.checkbox}>{option}</label>
+                    <label className={styles.checkbox} htmlFor={option}>{option}</label>
                 </span>
             ))}
         </div>

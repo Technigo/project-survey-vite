@@ -13,12 +13,13 @@ const RadioGroup = ({
                 <span key={option}>
                     <input
                         type="radio"
+                        id={option}
                         name={name}
                         value={option}
                         onChange={onChange}
                         checked={value === option}
                     />
-                    <label className={styles.radio}>{option}</label>
+                    <label className={styles.radio} htmlFor={option}>{option}</label>
                 </span>
             ))}
         </div>
