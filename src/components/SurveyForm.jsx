@@ -9,7 +9,7 @@ import { FavFood } from "./FavFood.jsx"
 import { ResultPage } from "./ResultPage.jsx"
 import { Learning } from "./Learning.jsx"
 
-//Function to create State to storm form data
+//Function to create State to store form data
 export const SurveyForm = () => {
 
     const [formData, setFormData] = useState({
@@ -41,13 +41,14 @@ export const SurveyForm = () => {
         if (currentStep > 1) setCurrentStep(currentStep - 1);
     };
 
-    console.log(`Hide Survey is: ${hideSurvey}`)
+    console.log(`Hide Survey is: ${hideSurvey}`) //for debugging
 
     // function to submit the form itself
     const submitForm = () => {
-        setHideSurvey(true);
 
-        console.log(formData);
+        setHideSurvey(true);
+        console.log(formData); //for debugging
+
         const formattedData = `
           Name: ${formData.name}
           Age: ${formData.age}
@@ -67,7 +68,7 @@ export const SurveyForm = () => {
     if (hideSurvey === false) {
         return (
             <>
-                <p className="sml-header">Create a poster to share with your class by answering the following questions</p>
+                <p className="sml-header">Answering the following questions, and create a poster to share with your class</p>
                 <div className="question-boxes">
                     {/* Render the Name component if on step 1 */}
                     {currentStep === 1 && (

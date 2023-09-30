@@ -3,8 +3,6 @@ export const FavDinosaur = ({ updateFormData, value }) => {
 
     const chosenDinosaur = (event) => updateFormData("favDinosaur", event.target.value);
 
-    console.log(chosenDinosaur);
-
     return (
         <div className="dino">What is your favourite Dinosaur?
             <p>
@@ -52,4 +50,4 @@ export const FavDinosaur = ({ updateFormData, value }) => {
         </div>
     )
 }
-//Jennie's example says to use an array and map it, less code, less duplication, but below I have done it the long way
+//Jennie's example says to use an array and map it, less code, less duplication, but I have done it the long way

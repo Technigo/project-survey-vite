@@ -9,7 +9,6 @@ export const ResultPage = (formData) => {
     return (
         <>
             <section className="form-wrapper">
-
                 <div className="output-survey q1">
                     My name is {formData.formData.name} &#128515;
                 </div>
