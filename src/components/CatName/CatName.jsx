@@ -15,7 +15,7 @@ export const CatName = ({ catName, setCatName }) => {
       {/* Using label element to improve accssibility and user experience. */}
       <label>
         <input
-          className="cat-name-input"
+          className="text-input"
           type="text"
           name="catName"
           value={catName}

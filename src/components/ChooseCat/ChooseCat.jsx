@@ -18,6 +18,7 @@ export const ChooseCat = ({ chooseCat, setChooseCat }) => {
             <label>
               <input
                 type="radio"
+                className="radio-input"
                 value={catOption.id}
                 checked={chooseCat === catOption.id}
                 onChange={handleChooseCats}

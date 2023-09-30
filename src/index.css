@@ -1,5 +1,6 @@
 :root {
   --black: #313131;
+  --yellow: #fdc360;
   --gradient100: linear-gradient(
     90deg,
     rgba(247, 158, 179, 1) 0%,
@@ -53,7 +54,6 @@ body {
 
 /* The div around everything inside the body tag */
 #root {
-  position: relative;
   background-color: #fff;
   overflow: hidden;
   width: 100%;
@@ -61,22 +61,28 @@ body {
   margin: 0 auto;
 }
 
-.page-in-survey {
+.form-div {
+  padding: 2rem;
+  width: 100%;
 }
 
-.form-div {
+.form-div form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h3 {
-  color: #313131;
+  color: var(--black);
   margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 800;
 }
 
-p {
-  color: #313131;
+.p-form {
+  color: var(--black);
   margin-bottom: 3rem;
+  line-height: 1.7rem;
 }
 
 .p-suggestions {
@@ -84,24 +90,11 @@ p {
   font-style: italic;
 }
 
-/* .form-div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-div form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 3rem;
-  width: 100%;
-} */
-
 .buttons-wrapper {
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
 }
 
 .prev-next-container {
@@ -109,7 +102,6 @@ p {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin: 3rem 0 3rem;
 }
 
 .next-btn,
@@ -124,7 +116,7 @@ p {
 }
 
 .submit-btn {
-  border: 0.3rem solid #fdc360;
+  border: 0.3rem solid var(--yellow);
   padding: 0.625rem 1.5rem;
   border-radius: 10rem;
   background: linear-gradient(90deg, #f79eb3 0%, #fdc360 100%);
@@ -134,11 +126,12 @@ p {
 }
 
 .reset-btn {
-  border: 0.3rem solid #fdc360;
-  /* padding: 0.625rem 1.5rem; */
+  bottom: 0;
+  left: 0;
+  border: 0.3rem solid var(--yellow);
   padding: 0.3rem;
-  /* border-radius: 10rem; */
-  background: linear-gradient(90deg, #f79eb3 0%, #fdc360 100%);
+  width: fit-content;
+  background: var(--gradient100);
   color: #fff;
   font-size: inherit;
   font-weight: 700;
@@ -150,6 +143,16 @@ button {
 
 button:hover {
   scale: 1.1;
+}
+
+.text-input {
+  border: none;
+  width: 250px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--gradient025);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+  color: #555;
 }
 
 /* @media (min-width: 668px) and (max-width: 1024px) {
