@@ -20,3 +20,17 @@
 .radio-input:checked + .radio-custom {
   outline: 0.5rem solid var(--yellow);
 }
+
+.radio-custom img {
+  width: 200px;
+}
+
+@media (min-width: 1025px) {
+  .cat-image-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .radio-custom img {
+    width: 100%;
+  }
+}

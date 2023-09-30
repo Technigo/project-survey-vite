@@ -20,9 +20,10 @@ export const CatName = ({ catName, setCatName }) => {
           name="catName"
           value={catName}
           onChange={catNameInput}
-          placeholder="Garfield..."
+          placeholder="Write your cat name here..."
         />
         <p className="p-suggestions">
+          <br />
           E.g. Whiskers, Luna, Sylvester
         </p>
       </label>

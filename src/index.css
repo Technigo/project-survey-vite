@@ -48,7 +48,6 @@ a {
 }
 
 body {
-  background-color: #faf9f9;
   font-family: "Montserrat", sans-serif;
   height: 100%;
 }
@@ -65,12 +64,14 @@ body {
 .form-div {
   padding: 2rem;
   width: 100%;
+  text-align: center;
 }
 
 .form-div form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 h3 {
@@ -95,7 +96,7 @@ h3 {
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  gap: 7rem;
+  gap: 2rem;
 }
 
 .prev-next-container {
@@ -158,22 +159,45 @@ button:hover {
 
 @media (min-width: 668px) {
 
+  .form-div {
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-div form {
+    max-width: 500px;
+  }
 }
 
-
+.question-counter {
+  text-align: center;
+  padding-top: 2rem;
+}
 
 @media (min-width: 1025px) {
-  body {
-    display: flex;
-    justify-content: center;
+  #root {
+    max-width: 900px;
+    width: 100%;
   }
-  .page-in-survey {
-    margin: 100px 0px 100px 0px;
-    box-shadow: 10px 10px 5px var(--yellowFade);
+  .form-div form {
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-div p {
+    max-width: 500px;
+  }
+
+  .form-div .reset-btn {
+    margin-top: 70px;
   }
 }
-/*
 
+/*
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

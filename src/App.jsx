@@ -51,6 +51,11 @@ export const App = () => {
   // This is a dynamic rendering of components based on the value of 'currentQuestion'. Depending on the current question number, it renders a specific component with the appropriate props necessary for that step in the survey.
   return (
     <section className="page-in-survey">
+      {/* A counter showing how many questions there are and what question you're currently on */}
+      {currentQuestion < 7 && currentQuestion !== 0 && (
+        <div className="question-counter">Question {currentQuestion} of 6</div>
+      )}
+
       {currentQuestion === 0 && (
         // This is a function that will be passed down to StartPage and is expected to handle the next question in the survey.
         <StartPage

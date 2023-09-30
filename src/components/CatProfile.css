@@ -1,6 +1,7 @@
 .cat-info {
   padding: 2rem;
   border-radius: 20px 20px;
+  text-align: start;
 }
 
 .name-gender-container {
@@ -33,8 +34,35 @@ h4 {
   color: #909090;
   font-weight: 500;
   margin-bottom: 0;
+  text-align: start;
 }
 
+.description-container {
+  line-height: 1.7rem;
+}
+
+/* Lines between personality, age and owner */
 .vl {
   border-left: 1px solid #ececec;
+}
+
+@media (min-width: 1025px) {
+  .cat-info {
+    padding-top: 0;
+    padding-right: 0;
+    width: 55%;
+  }
+
+  .cat-image {
+    width: 45%;
+  }
+  .cat-image img {
+    border-radius: 1rem;
+  }
+
+  .form-div .cat-profile-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
 }

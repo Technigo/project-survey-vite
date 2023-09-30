@@ -9,19 +9,21 @@ export const CatProfile = ({
   chooseCat,
   catName,
 }) => {
-  // Find the selected cat object based on chooseCat ID
+  // Uses the find method to search through the 'catOptions'-array to find object whose id property matches the value of chooseCat.
   const selectedCat = catOptions.find(
     (catOption) => catOption.id === chooseCat
   );
   // If selectedCat is found, use its imgSrc; otherwise, use a default value
   const catImageSrc = selectedCat ? selectedCat.imgSrc : "";
 
+  // Uses the find method to search through the 'genderGroups'-array to find bject whose id property matches the value of genders.
   const selectedGender = genderGroups.find(
     (genderOption) => genderOption.id === genders
   );
 
   const genderIconSrc = selectedGender ? selectedGender.imgSrc : "";
 
+  // Uses the find method to search through the 'personalityTypes'-array to find bject whose id property matches the value of personality.
   const selectedPersonality = personalityTypes.find(
     (pType) => pType.id === personality
   );
@@ -30,6 +32,7 @@ export const CatProfile = ({
     ? selectedPersonality.description
     : "";
 
+  // Thi is a summary of all the input from the user presented in a nice format.
   return (
     <div className="cat-profile-wrapper">
       <div className="cat-image">
@@ -43,7 +46,7 @@ export const CatProfile = ({
         <div className="cat-details-container">
           <div className="personality-container">
             <h4>Personality</h4>
-            <p>{personality}</p>
+            <p className="p-profile">{personality}</p>
           </div>
           <div className="vl"></div>
           <div className="age-container">
@@ -58,9 +61,11 @@ export const CatProfile = ({
         </div>
         <div className="description-container">
           <p>
-            Congratulations {userName}! Hope you and {catName} will live happily
-            ever after 😸
+            Congratulations {userName}! You've chosen such a wonderful cat.
+            Wishing you and your new fur baby {catName} a lifetime of happiness
+            together! 😸
           </p>
+          <br />
           <p>
             {/* Prettier made the {" "} */}
             You have chosen a cat with the personality type, {personality}.{" "}
