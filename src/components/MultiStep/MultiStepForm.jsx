@@ -59,8 +59,8 @@ export const MultiStepForm = () => {
   };
 
   const submitForm = () => {
-    const formattedData = `You’re a ${formData.age} year old individual named ${formData.name}. You have a ${formData.trust}% trust in the government, and in your spare time you watch ${formData.movie} on repeat. When people ask what potato dish you want to become, you always answer: ${formData.potato}! You can be contacted at ${formData.email}.`;
-    const alertMessage = "Read through the information we have collected about you. Click 'OK' to submit.\n\n" + formattedData;
+    const formattedData = `You’re a ${formData.age} year old individual named ${formData.name}. You have a ${formData.trust}% trust in the government, and in your spare time you watch ${formData.movie} on repeat. When people ask what potato dish you want to become, you always reply: – ${formData.potato}! You can be contacted at ${formData.email}.`;
+    const alertMessage = "Read through the information collected about you. Click 'OK' to submit.\n\n" + formattedData;
     alert(alertMessage);
 
     setSubmitted(true);
