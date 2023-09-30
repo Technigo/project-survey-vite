@@ -13,12 +13,12 @@ code {
 }
 
 body {
-  background-image: url(/Users/frida/Desktop/technigo-projects/project-survey-vite/src/assets/nebulosa.jpg);
+  background-image: url(./assets/nebulosa.jpg);
   position: relative;
 }
 
 .main {
-  border: 2px solid red;
+  
   position: relative;
   display: flex;
   align-items: center;
@@ -44,17 +44,12 @@ body {
 /*-----------Progress Bar---------------*/
 .progress-bar-container {
   position: absolute;
-  top: 21%;
-  left: 20%;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; */
   padding: 5px;
   width: 200px;
   background: rgba(0, 0, 0, 0.2);
   margin: 10px;
   border-radius: 5px;
+  top: 170px;
 }
 
 .progress-indicator {
@@ -80,9 +75,7 @@ body {
 
 .name h1 {
   color: antiquewhite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   margin: 20px;
   font-size: 27px;
   /* border: 2px solid red; */
@@ -90,18 +83,16 @@ body {
 
 .name h2 {
   color: antiquewhite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   margin: 20px;
   font-size: 17px;
 }
 
 .name input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 70px;
+  border-radius: 5px;
 }
 
 .age {
@@ -122,7 +113,7 @@ body {
 .button-box {
   position: absolute;
   top: 71%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 button {
@@ -210,6 +201,7 @@ form label {
 
 .allergies input {
   margin-top: 20px;
+  border-radius: 5px;
 }
 
 /*-----------responsive design---------------*/
@@ -229,31 +221,21 @@ form label {
   }
 
   .name h1 {
-    color: antiquewhite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  
     margin: 20px;
     font-size: 35px;
     /* border: 2px solid red; */
   }
 
   .name h2 {
-    color: antiquewhite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  
     margin: 20px;
     font-size: 30px;
   }
-
   .name input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+    margin-left: 120px;
+    text-align: center;
   }
-
   .age {
     font-size: 27px;
   }
@@ -277,7 +259,8 @@ form label {
   .steps {
     width: 700px;
     height: 600px;
-    font-size: 30px;
+    
+   
   }
 
   .name {
@@ -285,31 +268,22 @@ form label {
   }
 
   .name h1 {
-    color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    
     font-size: 40px;
     /* border: 2px solid red; */
   }
 
   .name h2 {
-    color: antiquewhite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    margin-right: 225px;
     font-size: 30px;
   }
 
-  .name input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-  }
+.name input {
+  margin-top: 20px;
+  margin-left: 270px;
+}
 
   .age {
     font-size: 27px;

@@ -45,7 +45,7 @@ export const MultiStepForm = () => {
       ...previous,
       formattedData: formattedData,
     }));
-    setCurrentStep(5);
+    setCurrentStep(6);
   };
 
   const progress = ((currentStep - 1) / 5) * 100;
@@ -79,15 +79,15 @@ export const MultiStepForm = () => {
         />
       )}
 
-      <div className="button-box">
-        {/* Show the "Back" button if not on the first step */}
-        {currentStep > 1 && <button onClick={prevStep}>Back</button>}
-        {currentStep < 6 ? (
-          <button onClick={nextStep}>Next</button>
-        ) : (
-          <button onClick={submitForm}>Submit Form</button>
-        )}
-      </div>
+<div className="button-box">
+  {/* Show the "Back" button if not on the first step */}
+  {currentStep > 1 && currentStep < 6 && <button onClick={prevStep}>Back</button>}
+  {currentStep < 5 ? (
+    <button onClick={nextStep}>Next</button>
+  ) : currentStep === 5 ? (
+    <button onClick={submitForm}>Submit Form</button>
+  ) : null}
+</div>
       <div className="progress-bar-container">
         <div className="progress-bar" style={{ width: `${progress}%` }}>
           {`${progress}%`}
