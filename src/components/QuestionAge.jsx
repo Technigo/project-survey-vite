@@ -14,6 +14,28 @@ function AgeQuestion({ selectedAge, setSelectedAge }) {
     "65 or over",
   ];
 
+  // Define a function to get the appropriate message based on the selected age span
+  const getAgeMessage = (ageSpan) => {
+    switch (ageSpan) {
+      case "Under 18":
+        return "  You're still a baby reindeer!";
+      case "18 - 24":
+        return "  Time to start working in Santas workshop!";
+      case "25 - 34":
+        return "  Time to have your own toy department!";
+      case "35 - 44":
+        return " - You are living your best life!";
+      case "45 - 54":
+        return " Still younger than Santa!";
+      case "55 - 64":
+        return " You are in your North pole prime!";
+      case "65 or over":
+        return " You're almost as old as Santa!";
+      default:
+        return "";
+    }
+  };
+
   // Handle changes when a user selects an age span
   const handleAgeChange = (event) => {
     const selectedAgeSpan = event.target.value;
@@ -40,9 +62,12 @@ function AgeQuestion({ selectedAge, setSelectedAge }) {
           </option>
         ))}
       </select>
-      {ageSelected && <p>You selected: {selectedAge} - Excellent age!</p>}
+      {ageSelected && (
+        <p>You selected: {selectedAge} - {getAgeMessage(selectedAge)}</p>
+      )}
     </div>
   );
 }
 
 export default AgeQuestion;
+
