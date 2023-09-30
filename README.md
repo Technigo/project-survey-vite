@@ -1,37 +1,11 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/survey.svg" alt="Project Banner Image">
-  </a>
-</h1>
-
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+The assignment was to build a survey form using React useState with at least three questions and some type of summary after the user clicks submit.
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I carefully watched Diego's code session to get the basic code structure and understand how the different components work. Then, as usual, it was a lot of googling, AI, and W3Schools to get the project working and looking pretty decent. And a little tweaking of CSS as icing on the cake. If I had more time I would build more components with other input types.
 
 ### View it live
 
 https://incomparable-cobbler-ed608f.netlify.app
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
