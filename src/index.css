@@ -49,7 +49,7 @@ body {
   background: rgba(0, 0, 0, 0.2);
   margin: 10px;
   border-radius: 5px;
-  top: 170px;
+  top: 145px;
 }
 
 .progress-indicator {
@@ -211,6 +211,9 @@ form label {
   .main {
     height: 800px;
   }
+  .progress-bar-container {
+    top: 170px;
+  }
   .steps {
     width: 400px;
     height: 500px;
@@ -255,7 +258,9 @@ form label {
   .main {
     height: 800px;
   }
-
+  .progress-bar-container {
+    top: 150px;
+  }
   .steps {
     width: 700px;
     height: 600px;
