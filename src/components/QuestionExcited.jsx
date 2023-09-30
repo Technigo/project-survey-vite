@@ -18,7 +18,7 @@ function QuestionExcited({ onAnswer, excitementLevel }) {
   return (
     <div>
       <h2>Are you excited about Christmas?</h2>
-      <p>How much on a scale from 1 to 100?</p>
+      <p>How much on a scale from 1 to 100? Slide the bar to display your excitementlevel🎄⭐🎄 </p>
       <input
         type="range"
         min="1"
