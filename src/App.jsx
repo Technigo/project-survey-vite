@@ -120,7 +120,8 @@ export const App = () => {
                         />
                     </Card>
 
-                    <Button>
+                    {/* Submit button is disabled if the form values are not filled in. */}
+                    <Button onClick={goToSummary} disabled={form.name === "" || form.favoriteMushroom === "" || form.yearsPickingMushrooms === "" || form.prepareMushroom.length === 0} >
                         Submit
                     </Button>
                 </>
