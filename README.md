@@ -45,6 +45,9 @@ Editor: VS Code
 
 If you had more time, what would be next?
 
+The results page needs a re-styling! It needs images to make it look like a "poster" as the site suggests.
+WE would have also loved to have made it more user friendly for our target demographic (children aged 4-10), having clickable images (eg. on the favourite dinosaur page.
+
 ### View it live
 
 https://wk6-project-survey-602b.netlify.app/
