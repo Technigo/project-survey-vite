@@ -6,6 +6,7 @@ import TextInput from "./components/TextInput";
 import RadioGroup from "./components/RadioGroup";
 import CheckboxGroup from "./components/CheckboxGroup";
 import Button from "./components/Button";
+import Header from "./components/Header";
 
 // Takes an array of words (["Apple", "Banana", "Cherry"]) as argument
 // Returns a nicely formatted string: Apple, Banana or Cherry
@@ -24,6 +25,24 @@ export const App = () => {
         favoriteMushroom: "",
         yearsPickingMushrooms: "",
     });
+
+    // State to manage the current step of the form (e.g., "form" or "summary").s
+    const [step, setStep] = useState("form");
+
+    // Function to switch to the summary step.
+    const goToSummary = () => setStep("summary");
+
+    // Function that restarts the form when clicking the restart button,
+    const restart = () => {
+        setForm({
+            name: "",
+            prepareMushroom: [],
+            favoriteMushroom: "",
+            yearsPickingMushrooms: "",
+        });
+
+        setStep("form")
+    };
 
     // Sets a value in our form based on the name property of our target input.
     const setFormValue = (event) => {
@@ -49,25 +68,14 @@ export const App = () => {
         });
     }
 
-    console.log(form);
-
-    // State to manage the current step of the form (e.g., "form" or "summary").s
-    const [step, setStep] = useState("form");
-
-    // Function to switch to the summary step.
-    const goToSummary = () => setStep("summary");
-
     return (
         <Container>
             {step === "form" && (
                 <>
+                    <h1>Welcome to our mushroom survey!</h1>
+                    <Header />
+
                     <Card>
-                        <h1>Welcome to our mushroom survey!</h1>
-                        <h4>
-                            In this survey we would like you to answer a couple of questions
-                            regarding mushrooms.
-                        </h4>
-                        <img src="/mushroom.jpg" />
                         <p>What is your name?</p>
                         <TextInput
                             name="name"
@@ -126,7 +134,15 @@ export const App = () => {
                     </Button>
                 </>
             )}
-            {step === "summary" && <p> You have been picking mushrooms for {form.yearsPickingMushrooms} years. You prefer {form.favoriteMushroom} and you like them {formatPreparation(form.prepareMushroom)}. Thank you {form.name} for answering our mushroom survey!</p>}
+            {step === "summary" && (
+                <>
+                    <Card>
+                        <p> You have been picking mushrooms for {form.yearsPickingMushrooms} years. You prefer {form.favoriteMushroom} and you like them {formatPreparation(form.prepareMushroom)}. Thank you {form.name} for answering our mushroom survey!</p>
+                    </Card>
+
+                    <Button onClick={restart}>Restart</Button>
+                </>
+            )}
         </Container>
     );
 };

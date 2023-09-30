@@ -1,7 +1,10 @@
-.card {
-    padding: 1rem;
+.header {
     background-color: #3A382C;
     border-radius: 1rem;
     margin-bottom: 1rem;
+}
+
+.headerContent {
+    padding: 1rem;
     line-height: 1.5;
 }
