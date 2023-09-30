@@ -68,6 +68,9 @@ export const App = () => {
         });
     }
 
+    // Submit button is disabled if the form values are not filled in.
+    const submitIsDisabled = form.name === "" || form.favoriteMushroom === "" || form.yearsPickingMushrooms === "" || form.prepareMushroom.length === 0
+
     return (
         <Container>
             {step === "form" && (
@@ -128,9 +131,8 @@ export const App = () => {
                         />
                     </Card>
 
-                    {/* Submit button is disabled if the form values are not filled in. */}
-                    <Button onClick={goToSummary} disabled={form.name === "" || form.favoriteMushroom === "" || form.yearsPickingMushrooms === "" || form.prepareMushroom.length === 0} >
-                        Submit
+                    <Button onClick={goToSummary} disabled={submitIsDisabled}>
+                        {submitIsDisabled ? "Fill in the form to submit" : "Submit"}
                     </Button>
                 </>
             )}
