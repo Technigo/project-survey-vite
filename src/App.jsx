@@ -115,7 +115,6 @@ export const App = () => {
                             options={[
                                 "Fried",
                                 "Stewed",
-                                "Pickled",
                                 "Sautéed",
                             ]}
                         />

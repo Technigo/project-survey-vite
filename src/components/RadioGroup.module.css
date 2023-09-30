@@ -1,0 +1,11 @@
+.radio {
+    color: #fafafa;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+}
+
+.radioGroup {
+    display: flex;
+    justify-content: center;
+}

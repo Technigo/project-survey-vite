@@ -1,3 +1,5 @@
+import styles from "./RadioGroup.module.css"
+
 const RadioGroup = ({
     name,
     value,
@@ -6,7 +8,7 @@ const RadioGroup = ({
 }) => {
     // Maping the options in our option list.
     return (
-        <>
+        <div className={styles.radioGroup}>
             {options.map((option) => (
                 <span key={option}>
                     <input
@@ -16,10 +18,10 @@ const RadioGroup = ({
                         onChange={onChange}
                         checked={value === option}
                     />
-                    <label>{option}</label>
+                    <label className={styles.radio}>{option}</label>
                 </span>
             ))}
-        </>
+        </div>
     );
 }
 

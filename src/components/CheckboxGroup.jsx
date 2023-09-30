@@ -1,3 +1,5 @@
+import styles from "./CheckboxGroup.module.css"
+
 const CheckboxGroup = ({
     name,
     value,
@@ -6,7 +8,7 @@ const CheckboxGroup = ({
 }) => {
     // Maping the options in our option list.
     return (
-        <>
+        <div className={styles.checkboxGroup}>
             {options.map((option) => (
                 <span key={option}>
                     <input
@@ -16,10 +18,10 @@ const CheckboxGroup = ({
                         onChange={onChange}
                         checked={value.includes(option)}
                     />
-                    <label>{option}</label>
+                    <label className={styles.checkbox}>{option}</label>
                 </span>
             ))}
-        </>
+        </div>
     );
 }
 

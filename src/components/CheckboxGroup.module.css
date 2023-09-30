@@ -1,0 +1,11 @@
+.checkbox {
+    color: #fafafa;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+}
+
+.checkboxGroup {
+    display: flex;
+    justify-content: center;
+}
