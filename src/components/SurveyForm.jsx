@@ -21,6 +21,7 @@ export const SurveyForm = () => {
         learning: "",
     });
 
+    //useState Hook to make survery screen disappear and be replaced by results screen
     const [hideSurvey, setHideSurvey] = useState(false);
 
     // Function to update form data based on field and value
