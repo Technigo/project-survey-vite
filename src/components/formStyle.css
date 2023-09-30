@@ -36,6 +36,7 @@ p {
     background: rgba(255, 255, 255, 0.8);
     height: 100%;
     border-radius: 25px;
+    height: auto;
 }
 
 label {
@@ -73,6 +74,7 @@ button:hover {
 }
 
 @media (max-width:1024px) {
+
     h2 {
         font-size: 25px;
         width: 40%;
