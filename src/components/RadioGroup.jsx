@@ -8,7 +8,7 @@ const RadioGroup = ({
 }) => {
     // Maping the options in our option list.
     return (
-        <div className={styles.radioGroup}>
+        <div className={styles.radioGroup} id={name}>
             {options.map((option) => (
                 <span key={option}>
                     <input

@@ -8,6 +8,7 @@ const Select = ({
 }) => {
     return (
         <select
+            id={name}
             className={styles.select}
             name={name}
             value={value}

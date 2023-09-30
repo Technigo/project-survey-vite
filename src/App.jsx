@@ -79,7 +79,7 @@ export const App = () => {
                     <Header />
 
                     <Card>
-                        <p>What is your name?</p>
+                        <label htmlFor="name">What is your name?</label>
                         <TextInput
                             name="name"
                             value={form.name}
@@ -89,7 +89,7 @@ export const App = () => {
                     </Card>
 
                     <Card>
-                        <p>How many years have you been picking mushrooms?</p>
+                        <label htmlFor="yearsPickingMushrooms">How many years have you been picking mushrooms?</label>
                         <RadioGroup
                             name="yearsPickingMushrooms"
                             value={form.yearsPickingMushrooms}
@@ -103,7 +103,7 @@ export const App = () => {
                     </Card>
 
                     <Card>
-                        <p>What is your favourite mushroom?</p>
+                        <label htmlFor="favoriteMushroom">What is your favourite mushroom?</label>
                         <Select
                             name="favoriteMushroom"
                             value={form.favoriteMushroom}
@@ -118,7 +118,7 @@ export const App = () => {
                     </Card>
 
                     <Card>
-                        <p>How would you like your mushrooms cooked?</p>
+                        <label htmlFor="prepareMushrooms">How would you like your mushrooms cooked?</label>
                         <CheckboxGroup
                             name="prepareMushroom"
                             value={form.prepareMushroom}
@@ -139,7 +139,7 @@ export const App = () => {
             {step === "summary" && (
                 <>
                     <Card>
-                        <p> You have been picking mushrooms for {form.yearsPickingMushrooms} years. You prefer {form.favoriteMushroom} and you like them {formatPreparation(form.prepareMushroom)}. Thank you {form.name} for answering our mushroom survey!</p>
+                        <p>You have been picking mushrooms for {form.yearsPickingMushrooms} years. You prefer {form.favoriteMushroom} and you like them {formatPreparation(form.prepareMushroom)}. Thank you {form.name} for answering our mushroom survey!</p>
                     </Card>
 
                     <Button onClick={restart}>Restart</Button>

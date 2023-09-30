@@ -8,7 +8,7 @@ const CheckboxGroup = ({
 }) => {
     // Maping the options in our option list.
     return (
-        <div className={styles.checkboxGroup}>
+        <div className={styles.checkboxGroup} id={name}>
             {options.map((option) => (
                 <span key={option}>
                     <input

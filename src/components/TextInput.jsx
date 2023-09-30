@@ -8,6 +8,7 @@ const TextInput = ({
 }) => {
     return (
         <input
+            id={name}
             className={styles.textInput}
             type="text"
             name={name}
