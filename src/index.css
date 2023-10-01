@@ -30,6 +30,13 @@ header {
   height: 50px;
 }
 
+#survey {
+  text-align: left;
+  margin: auto;
+  max-width: 400px; /* Adjust the max-width as needed */
+}
+
+
 button {
   background-color: white;
   border-radius: 2px;

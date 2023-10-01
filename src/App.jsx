@@ -48,7 +48,7 @@ function App() {
       return (
         <div id="survey">
           <SurveyInfo />
-          <p>Thank you for your time. This survey is not for you.</p>
+          <p>Thank you for your time. You do not meet the requirements for this survey. Maybe next time?</p>
         </div>
       );
     }
