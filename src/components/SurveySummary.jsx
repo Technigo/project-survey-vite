@@ -19,7 +19,7 @@ function SurveySummary({ surveyAnswers }) {
       <h2>Here's a quick review of your answers</h2>
       <p>
         You {celebrateChristmas === "No" ? "don't" : "do"} celebrate Christmas!
-        You are {article} {selectedGender} between the ages {selectedAge}.
+        You identify yourself to be {article} {selectedGender} between the ages {selectedAge}.
       </p>
       <p>
         You are excited about Christmas at a level of {excitementLevel} out of

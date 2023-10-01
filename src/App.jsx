@@ -13,9 +13,9 @@ import Footer from "./components/footer";
 function App() {
   const [answers, setAnswers] = useState({
     celebrateChristmas: "",
-    excitementLevel: "", // Initialize excitementLevel to an empty string
+    excitementLevel: "", 
     selectedGender: "",
-    selectedAge: "", // Initialize selectedAge to an empty string
+    selectedAge: "", 
     option: [],
     likedOption: "",
   });
@@ -24,13 +24,13 @@ function App() {
 
   const handleAnswer = (question, answer) => {
     if (question === "") {
-      // Handle the case where the question is empty (for the QuestionExcited component)
+    
       setAnswers((prevAnswers) => ({
         ...prevAnswers,
         excitementLevel: answer,
       }));
     } else {
-      // Handle other questions with a non-empty question identifier
+      
       setAnswers((prevAnswers) => ({
         ...prevAnswers,
         [question]: answer,
@@ -43,7 +43,16 @@ function App() {
   };
 
   const displaySurvey = () => {
-    /* Render all questions */
+    if (answers.celebrateChristmas === "No") {
+     
+      return (
+        <div id="survey">
+          <SurveyInfo />
+          <p>Thank you for your time. This survey is not for you.</p>
+        </div>
+      );
+    }
+
     return (
       <div id="survey">
         <SurveyInfo />
@@ -54,7 +63,7 @@ function App() {
           celebrateChristmas={answers.celebrateChristmas}
         />
         <QuestionExcited
-          onAnswer={(answer) => handleAnswer("", answer)} // Pass an empty question identifier
+          onAnswer={(answer) => handleAnswer("", answer)} 
           excitementLevel={answers.excitementLevel}
         />
         <QuestionGender
@@ -108,3 +117,4 @@ function App() {
 }
 
 export default App;
+
