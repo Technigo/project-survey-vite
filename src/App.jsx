@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "./components/header";
+import Header from "./components/Header";
 import SurveyInfo from "./components/SurveyInfo";
 import QuestionExcited from "./components/QuestionExcited";
 import QuestionGender from "./components/QuestionGender";
