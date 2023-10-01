@@ -32,7 +32,7 @@ There was an idea of using OpenAI to generate stories in real-time, but it was q
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://statuesque-mooncake-cf0c5d.netlify.app/
 
 ## Instructions
 
