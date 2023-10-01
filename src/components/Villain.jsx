@@ -6,7 +6,7 @@ export const Villain = ({ updateFormData, value }) => {
   return (
     <div className="villain">
       <label>Enter the name of the villain </label>
-      <input type="text" value={value} onChange={villainInput} />
+      <input type="text" value={value} onChange={villainInput} maxLength={25} />
     </div>
   );
 };

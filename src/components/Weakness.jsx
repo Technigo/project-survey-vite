@@ -1,5 +1,6 @@
 import { useState } from "react";
-export const Weakness = ({ updateFormData, value }) => {
+
+export const Weakness = ({ updateFormData }) => {
   const weaknessInput = (e) => {
     updateFormData("weakness", e.target.value);
     setSelectedOption(e.target.value);
@@ -16,6 +17,7 @@ export const Weakness = ({ updateFormData, value }) => {
           value="fire"
           onChange={weaknessInput}
           name="fire"
+          className="customRadio"
           checked={selectedOption === "fire"}
         />
         <label>Fire </label>
@@ -26,6 +28,7 @@ export const Weakness = ({ updateFormData, value }) => {
           value="frailty"
           onChange={weaknessInput}
           name="frail"
+          className="customRadio"
           checked={selectedOption === "frailty"}
         />
         <label>Frail body </label>
@@ -36,6 +39,7 @@ export const Weakness = ({ updateFormData, value }) => {
           value="blindness"
           onChange={weaknessInput}
           name="blind"
+          className="customRadio"
           checked={selectedOption === "blindness"}
         />
         <label>Blindness </label>

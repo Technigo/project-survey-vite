@@ -9,7 +9,6 @@ import { StoryInvisibilityFire } from "./StoryInvisibilityFire";
 import { StoryInvisibilityBlindness } from "./StoryInvisibilityBlindness";
 
 export const Story = ({ hero, superpower, weakness, villain }) => {
-  console.log(superpower, weakness, hero, villain);
   if (superpower === "flying" && weakness === "blindness") {
     return (
       <StoryFlyingBlindness

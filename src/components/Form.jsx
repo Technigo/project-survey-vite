@@ -45,7 +45,10 @@ export const Form = () => {
   };
   // Function to move to the previous question in the form
   const previousQuestion = () => {
-    if (currentQuestion > 1) setCurrentQuestion(currentQuestion - 1);
+    if (currentQuestion > 1) {
+      setCurrentQuestion(currentQuestion - 1);
+      setFormProgress(formProgress - 25);
+    }
   };
 
   //Toggle the background color of transparentBackground
