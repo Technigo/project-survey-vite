@@ -50,98 +50,128 @@ export const App = () => {
   };
   // This is a dynamic rendering of components based on the value of 'currentQuestion'. Depending on the current question number, it renders a specific component with the appropriate props necessary for that step in the survey.
   return (
-    <section className="page-in-survey">
-      <div className="background"></div>
-      {/* A counter showing how many questions there are and what question you're currently on */}
-      {currentQuestion < 7 && currentQuestion !== 0 && (
-        <div className="question-counter">Question {currentQuestion} of 6</div>
-      )}
+    <>
+      <section className="page-in-survey">
+        <div className="background"></div>
+        {/* A counter showing how many questions there are and what question you're currently on */}
+        {currentQuestion < 7 && currentQuestion !== 0 && (
+          <div className="question-counter">
+            Question {currentQuestion} of 6
+          </div>
+        )}
 
-      {currentQuestion === 0 && (
-        // This is a function that will be passed down to StartPage and is expected to handle the next question in the survey.
-        <StartPage
-          handleNextQuestion={handleNextQuestion}
-          onButtonClick={() => handleNextQuestion(0)}
-        />
-      )}
-      {formVisible && (
-        <div className="form-div">
-          {currentQuestion === 1 && (
-            <Username
-              userName={userName}
-              setUserName={setUserName}
-              currentQuestion={currentQuestion}
-            />
-          )}
+        {currentQuestion === 0 && (
+          // This is a function that will be passed down to StartPage and is expected to handle the next question in the survey.
+          <StartPage
+            handleNextQuestion={handleNextQuestion}
+            onButtonClick={() => handleNextQuestion(0)}
+          />
+        )}
+        {formVisible && (
+          <div className="form-div">
+            {currentQuestion === 1 && (
+              <Username
+                userName={userName}
+                setUserName={setUserName}
+                currentQuestion={currentQuestion}
+              />
+            )}
 
-          {currentQuestion === 2 && (
-            <Gender genders={genders} setGenders={setGenders} />
-          )}
+            {currentQuestion === 2 && (
+              <Gender genders={genders} setGenders={setGenders} />
+            )}
 
-          {currentQuestion === 3 && <Age age={age} setAge={setAge} />}
+            {currentQuestion === 3 && <Age age={age} setAge={setAge} />}
 
-          {currentQuestion === 4 && (
-            <Personality
-              personality={personality}
-              setPersonality={setPersonality}
-            />
-          )}
+            {currentQuestion === 4 && (
+              <Personality
+                personality={personality}
+                setPersonality={setPersonality}
+              />
+            )}
 
-          {currentQuestion === 5 && (
-            <ChooseCat chooseCat={chooseCat} setChooseCat={setChooseCat} />
-          )}
+            {currentQuestion === 5 && (
+              <ChooseCat chooseCat={chooseCat} setChooseCat={setChooseCat} />
+            )}
 
-          {currentQuestion === 6 && (
-            <CatName catName={catName} setCatName={setCatName} />
-          )}
+            {currentQuestion === 6 && (
+              <CatName catName={catName} setCatName={setCatName} />
+            )}
 
-          {currentQuestion === 7 && (
-            <CatProfile
-              userName={userName}
-              genders={genders}
-              age={age}
-              personality={personality}
-              chooseCat={chooseCat}
-              catName={catName}
-            />
-          )}
+            {currentQuestion === 7 && (
+              <CatProfile
+                userName={userName}
+                genders={genders}
+                age={age}
+                personality={personality}
+                chooseCat={chooseCat}
+                catName={catName}
+              />
+            )}
 
-          <div className="buttons-wrapper">
-            {/* Show the "Back" button if not on the first step */}
+            <div className="buttons-wrapper">
+              {/* Show the "Back" button if not on the first step */}
 
-            <div className="prev-next-container">
-              {currentQuestion > 1 && currentQuestion < 7 && (
-                <button className="prev-btn" onClick={handlePrevQuestion}>
-                  <img src="/prev.png" alt="" />
-                </button>
-              )}
-              {currentQuestion < 6 && currentQuestion !== 0 && (
-                <button className="next-btn" onClick={handleNextQuestion}>
-                  <img src="./next.png" alt="" />
-                </button>
-              )}
+              <div className="prev-next-container">
+                {currentQuestion > 1 && currentQuestion < 7 && (
+                  <button className="prev-btn" onClick={handlePrevQuestion}>
+                    <img src="/prev.png" alt="" />
+                  </button>
+                )}
+                {currentQuestion < 6 && currentQuestion !== 0 && (
+                  <button className="next-btn" onClick={handleNextQuestion}>
+                    <img src="./next.png" alt="" />
+                  </button>
+                )}
 
-              {/* 'aria-label' is an accessability attribute that provides an accessible label for screen readers, informing them about the purpose of the button. */}
-              {currentQuestion === 6 && (
+                {/* 'aria-label' is an accessability attribute that provides an accessible label for screen readers, informing them about the purpose of the button. */}
+                {currentQuestion === 6 && (
+                  <button
+                    type="submit"
+                    className="submit-btn"
+                    aria-label="Submit button"
+                    onClick={handleNextQuestion}
+                  >
+                    Meet your cat!
+                  </button>
+                )}
+              </div>
+              {/* Check if the current question is between 1 and 7 (inclusive) and that it's not 0. If both conditions are met, it renders a button that, when clicked, will trigger the 'handleReset' function which, in this case, will reload the form. */}
+              {currentQuestion <= 7 && currentQuestion !== 0 && (
                 <button
                   type="submit"
-                  className="submit-btn"
-                  aria-label="Submit button"
-                  onClick={handleNextQuestion}
+                  className="reset-btn"
+                  onClick={handleReset}
                 >
-                  Meet your cat!
+                  Start over
                 </button>
               )}
             </div>
-            {/* Check if the current question is between 1 and 7 (inclusive) and that it's not 0. If both conditions are met, it renders a button that, when clicked, will trigger the 'handleReset' function which, in this case, will reload the form. */}
-            {currentQuestion <= 7 && currentQuestion !== 0 && (
-              <button type="submit" className="reset-btn" onClick={handleReset}>
-                Start over
-              </button>
-            )}
+          </div>
+        )}
+      </section>
+      <footer>
+        <div className="git-hub-container">
+          <div>
+            <a href="https://github.com/JuliaHolm" target="_blank">
+              <h5>Julia Holm</h5>
+              <img src="/public/github-mark.svg" alt="Github icon" />
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/InnaKokic" target="_blank">
+              <h5>Inna Kokic</h5>
+              <img src="/public/github-mark.svg" alt="Github icon" />
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/smExlex" target="_blank">
+              <h5>Susanne Ekenheim</h5>
+              <img src="/public/github-mark.svg" alt="Github icon" />
+            </a>
           </div>
         </div>
-      )}
-    </section>
+      </footer>
+    </>
   );
 };
