@@ -8,7 +8,7 @@ import { StoryInvisibilityFrailty } from "./StoryInvisibilityFrailty";
 import { StoryInvisibilityFire } from "./StoryInvisibilityFire";
 import { StoryInvisibilityBlindness } from "./StoryInvisibilityBlindness";
 
-//Component that receives relevant story data and returns the story that corresponds to the chosen superpower and weakness
+//Component that receives relevant story data and returns the story that corresponds to the chosen superpower and weakness.
 export const Story = ({ hero, superpower, weakness, villain }) => {
   if (superpower === "flying" && weakness === "blindness") {
     return (
