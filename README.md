@@ -5,33 +5,18 @@
 </h1>
 
 # Survey Project
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+This is a simple survey about fitness activities and goal, using React state and controlled forms.
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We divided the tasks among the team members. The survey has five questions using different types of inputs (dropdown list, checkboxes, radio buttons, text and text area). When the user presses submit, they are able to see a summary of their answers.
+
+Potential improvements include:
+- Creating a range slider and connecting it to React state.
+- Visualizing to the user how far through the survey they are, and how much is left, by creating a progress bar
+- Using Regex validation for some input in the survey
+- Showing different questions depending on the answer to a specific question
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+Link to deployed project on Netlify: https://unique-marzipan-eb9c7e.netlify.app/
