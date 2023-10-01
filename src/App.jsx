@@ -155,19 +155,19 @@ export const App = () => {
           <div>
             <a href="https://github.com/JuliaHolm" target="_blank">
               <h5>Julia Holm</h5>
-              <img src="/public/github-mark.svg" alt="Github icon" />
+              <img src="./github-mark.svg" alt="Github icon" />
             </a>
           </div>
           <div>
             <a href="https://github.com/InnaKokic" target="_blank">
               <h5>Inna Kokic</h5>
-              <img src="/public/github-mark.svg" alt="Github icon" />
+              <img src="./github-mark.svg" alt="Github icon" />
             </a>
           </div>
           <div>
             <a href="https://github.com/smExlex" target="_blank">
               <h5>Susanne Ekenheim</h5>
-              <img src="/public/github-mark.svg" alt="Github icon" />
+              <img src="./github-mark.svg" alt="Github icon" />
             </a>
           </div>
         </div>
