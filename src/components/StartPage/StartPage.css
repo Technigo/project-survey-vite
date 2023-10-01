@@ -1,36 +1,38 @@
-@font-face {
-  font-family: myFont;
-  src: url(/CecepsHandwriting-vmpKZ.woff);
-}
-
 .start-wrapper {
   background-image: url(/cat-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  width: 100%;
   color: #fff;
   padding: 4rem 0;
   text-align: center;
   overflow: scroll;
 }
 
+/* Title Adopt a Cat*/
 h1 {
   font-size: clamp(2.25rem, 7vw, 8rem);
   font-weight: 800;
   margin-bottom: 1.5rem;
 }
 
+/* Custom font for h2 */
+@font-face {
+  font-family: myFont;
+  src: url(/CecepsHandwriting-vmpKZ.woff);
+}
+
+/* Find your fur-ever pet! */
 h2 {
   font-family: myFont;
   font-size: clamp(2rem, 5vw, 6rem);
 }
 
 .adopt-btn {
-  margin-top: 70%;
-  display: inline;
+  margin-top: 80%;
   padding: 1.2rem 2.5rem;
   border-radius: 10rem;
+  width: fit-content;
   border: 2px solid rgba(255, 255, 255, 0.5);
   background: var(--gradient9);
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
@@ -41,52 +43,45 @@ h2 {
   text-transform: uppercase;
 }
 
-@media (min-width: 0px) {
-  .hero-image {
-    display: none;
-  }
-
-  .hero-image img {
-    border-radius: 100rem;
-  }
+/* Startpage right column for desktop (background for smaller screens) */
+.hero-image {
+  display: none;
 }
 
+.hero-image img {
+  border-radius: 100rem;
+}
+
+/* DESKTOP */
 @media (min-width: 1025px) {
-
-  #root {
-    max-width: 1200px;
-  }
-
   .start-wrapper {
     background-image: none;
-    display: flex;
     color: var(--black);
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
     text-align: start;
+    gap: 8rem;
     overflow: hidden;
-    padding: 0;
+    padding: 3.5rem;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 0;
   }
 
-  h2{
-    font-size: 2rem;
+  h2 {
+    font-size: 2.7rem;
   }
 
   .adopt-btn {
     margin-top: 2.5rem;
-    width: 280px;
-    height: 69px;
-    display: block;
   }
+
   .hero-image {
     display: block;
-    width: 300px;
+    width: 400px;
   }
 
   .right-column {
@@ -94,5 +89,4 @@ h2 {
     flex-direction: column;
     gap: 1rem;
   }
-
 }

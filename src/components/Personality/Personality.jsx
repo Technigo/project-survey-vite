@@ -12,9 +12,9 @@ export const Personality = ({ personality, setPersonality }) => {
       <p className="p-form">
         Selecting your cat's personality is like choosing a unique companion
         tailored to your lifestyle. Are you looking for an adventurous, outgoing
-        cat, or a laid-back, cuddly friend? Perhaps you prefer an independent,
-        self-assured feline, or a playful, energetic buddy. Explore the
-        personalities below and find the purrfect match for your home!
+        cat, or a laid-back, cuddly friend? Perhaps an independent, self-assured
+        feline, or a playful, energetic buddy. Find the purrfect match for your
+        home!
       </p>
       {/* 'aria-label' is an accessability attribute that provides an accessible label for screen readers, informing them about the purpose of the drop-down. */}
       <select

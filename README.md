@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="">
-    <img src="/survey.svg" alt="Project Banner Image">
+    <img src="/public/survey.svg" alt="Project Banner Image">
   </a>
 </h1>
 

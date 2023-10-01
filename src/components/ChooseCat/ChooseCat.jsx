@@ -7,7 +7,7 @@ export const ChooseCat = ({ chooseCat, setChooseCat }) => {
   };
 
   return (
-    <form>
+    <form className="choose-cat-form">
       <h3>Choose your cat</h3>
       {/* This div with classname flex is only for my eyes sake (Julia) */}
       <div className="cat-image-container">
@@ -23,8 +23,8 @@ export const ChooseCat = ({ chooseCat, setChooseCat }) => {
                 checked={chooseCat === catOption.id}
                 onChange={handleChooseCats}
               />
-              <div className="radio-custom">
-                <img src={catOption.imgSrc} alt={catOption.alt} />
+              <div className="radio-custom-img">
+                <img src={catOption.imgSrc} alt={catOption.label} />
               </div>
             </label>
           </div>

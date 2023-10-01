@@ -15,6 +15,8 @@ export const CatProfile = ({
   );
   // If selectedCat is found, use its imgSrc; otherwise, use a default value
   const catImageSrc = selectedCat ? selectedCat.imgSrc : "";
+  // If selectedCat is found, use its label; otherwise, use a default value
+  const catLabel = selectedCat ? selectedCat.label : "";
 
   // Uses the find method to search through the 'genderGroups'-array to find bject whose id property matches the value of genders.
   const selectedGender = genderGroups.find(
@@ -36,12 +38,12 @@ export const CatProfile = ({
   return (
     <div className="cat-profile-wrapper">
       <div className="cat-image">
-        <img src={catImageSrc} alt="" />
+        <img src={catImageSrc} alt={catLabel} />
       </div>
       <div className="cat-info">
         <div className="name-gender-container">
           <h3 className="cat-name">{catName}</h3>
-          <img src={genderIconSrc} alt="" />
+          <img src={genderIconSrc} alt={genders} className="gender-icon" />
         </div>
         <div className="cat-details-container">
           <div className="personality-container">
@@ -51,22 +53,22 @@ export const CatProfile = ({
           <div className="vl"></div>
           <div className="age-container">
             <h4>Age</h4>
-            <p>{age}</p>
+            <p className="p-profile">{age}</p>
           </div>
           <div className="vl"></div>
           <div className="owner-container">
             <h4>Owner</h4>
-            <p>{userName}</p>
+            <p className="p-profile">{userName}</p>
           </div>
         </div>
         <div className="description-container">
-          <p>
+          <p className="description-text">
             Congratulations {userName}! You've chosen such a wonderful cat.
             Wishing you and your new fur baby {catName} a lifetime of happiness
             together! 😸
           </p>
           <br />
-          <p>
+          <p className="description-text">
             {/* Prettier made the {" "} */}
             You have chosen a cat with the personality type, {personality}.{" "}
             {pDescription}

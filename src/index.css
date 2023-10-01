@@ -48,23 +48,37 @@ a {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  height: 100%;
+  width: 100%;
 }
 
 /* The div around everything inside the body tag */
 #root {
-  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
   overflow: hidden;
   width: 100%;
-  max-width: 1024px;
   margin: 0 auto;
 }
 
-.form-div {
-  padding: 2rem;
+.background {
+  position: fixed; /* Fixed positioning ensures it covers the entire viewport */
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background-image: url("/public/background.png");
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the image */
+  z-index: -1000; /* Place the background behind all other content */
+}
+
+.question-counter {
   text-align: center;
+  padding-top: 2rem;
+}
+
+/* FORM STYLING */
+.form-div {
+  width: 100%;
 }
 
 .form-div form {
@@ -72,6 +86,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
 }
 
 h3 {
@@ -83,20 +100,59 @@ h3 {
 
 .p-form {
   color: var(--black);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   line-height: 1.7rem;
 }
 
-.p-suggestions {
-  color: #616161;
-  font-style: italic;
+/* For username and cat name */
+.text-input {
+  border: none;
+  width: 250px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--gradient025);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+  color: #555;
+}
+
+@media (min-width: 668px) {
+  .form-div form {
+    padding: 2rem 10rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .form-div form {
+    padding: 2rem 13rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .form-div form {
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem 0;
+    margin: 0 auto;
+  }
+}
+
+/*---------------------------------------*/
+
+/* BUTTONS */
+button {
+  transition: ease 0.5s;
+}
+
+button:hover {
+  scale: 1.1;
 }
 
 .buttons-wrapper {
-  padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .prev-next-container {
@@ -117,6 +173,17 @@ h3 {
   height: 2.5rem;
 }
 
+.reset-btn {
+  border: 0.3rem solid var(--yellow);
+  padding: 0.3rem;
+  width: fit-content;
+  background: var(--gradient100);
+  color: #fff;
+  font-size: inherit;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
 .submit-btn {
   border: 0.3rem solid var(--yellow);
   padding: 0.625rem 1.5rem;
@@ -127,78 +194,54 @@ h3 {
   font-weight: 700;
 }
 
-.reset-btn {
-  bottom: 0;
-  left: 0;
-  border: 0.3rem solid var(--yellow);
-  padding: 0.3rem;
-  width: fit-content;
-  background: var(--gradient100);
-  color: #fff;
-  font-size: inherit;
-  font-weight: 700;
-}
+/*---------------------------------*/
 
-button {
-  transition: ease 0.5s;
-}
-
-button:hover {
-  scale: 1.1;
-}
-
-.text-input {
-  border: none;
-  width: 250px;
-  padding: 10px 20px;
-  border-radius: 100px;
+/* RADIO BUTTONS FOR GENDER AND AGE */
+.radio-label {
+  display: flex;
+  align-items: center;
   background: var(--gradient025);
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
-  color: #555;
+  width: 10rem;
+  border-radius: 100px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
 }
 
-@media (min-width: 668px) {
-
-  .form-div {
-    padding: 2rem;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .form-div form {
-    max-width: 500px;
-  }
+/* Hides the default radio button behind the label (also at choose cat component) */
+.radio-input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 }
 
-.question-counter {
-  text-align: center;
-  padding-top: 2rem;
+/* New radio button */
+.radio-design {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100px;
+  background: var(--gradient100);
 }
 
-@media (min-width: 1025px) {
-  #root {
-    max-width: 900px;
-    width: 100%;
-  }
-  .form-div form {
-    max-width: 900px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .form-div p {
-    max-width: 500px;
-  }
-
-  .form-div .reset-btn {
-    margin-top: 70px;
-  }
+.radio-design::before {
+  content: "";
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
 }
 
-/*
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
+.radio-input:checked + .radio-design::before {
+  transform: scale(0);
+}
+
+/* New radio button text  */
+.radio-label-text {
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+/*-----------------------------------*/

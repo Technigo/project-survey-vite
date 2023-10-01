@@ -12,7 +12,7 @@ const nextQuestion = () => {
     chosenCat: "",
     catName: "",
   });
-  // This function updates the form data and continue to the next question. 
+  // This function updates the form data and continue to the next question.
   const handleNextQuestion = (data) => {
     //  This is a functional update. It takes the previous state 'prevData', spreads it's properties '...prevData', and then spreads the properties of the new data. This effectively merges the previous form data with the new data.
     setFormData((prevData) => ({ ...prevData, ...data }));

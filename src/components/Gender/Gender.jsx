@@ -1,4 +1,3 @@
-import "./Gender.css";
 import { genderGroups } from "../Arrays.jsx";
 
 export const Gender = ({ genders, setGenders }) => {
@@ -15,7 +14,7 @@ export const Gender = ({ genders, setGenders }) => {
       {genderGroups.map((gender) => (
         <div className="radio-input-wrapper" key={gender.id}>
           {/* Using label element to improve accssibility and user experience. The 'Key' prop is used to uniquely identify each label element and it's is important for React's virtual DOM to efficiently track and update elements.  */}
-          <label className="label">
+          <label className="radio-label">
             <input
               type="radio"
               className="radio-input"
@@ -24,7 +23,7 @@ export const Gender = ({ genders, setGenders }) => {
               checked={genders === gender.id}
             />
             <div className="radio-design"></div>
-            <div className="label-text">{gender.id}</div>
+            <div className="radio-label-text">{gender.id}</div>
           </label>
         </div>
       ))}

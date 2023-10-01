@@ -1,5 +1,6 @@
-/* CSS IN USERNAME.JSX*/
-.cat-name-form {
-  display: flex;
-  flex-direction: column;
+.p-suggestions {
+  color: #616161;
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 1rem;
 }
