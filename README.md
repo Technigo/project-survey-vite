@@ -6,9 +6,7 @@
 
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week we focused on react and useState. In the assigment we were asked to create a survey using useState and hook function. We worked in teams of two and our aim was to to finish the assigment in time and also working on our creativity. The react part was easier than expected which we thought were a good thing, since we could use the spare time on the design.
 
 ## Getting Started with the Project
 
@@ -24,11 +22,16 @@ npm i && code . && npm run dev
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started by doing a briefly plan in Figma of our project. This was really good when we started working in branches.
+To solve our problems we used google, slack, notion and other places to find the answer.
+
+In the end we had some problems with deploying efter we merged but we find the solution in a coding site.
+
+If we had more time we whould focus on the strechegoals and on the textcontent in our typeform so it has a better flow.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://visionary-griffin-9ffcaf.netlify.app/
 
 ## Instructions
 
