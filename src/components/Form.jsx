@@ -47,7 +47,7 @@ export const Form = () => {
   const previousQuestion = () => {
     if (currentQuestion > 1) {
       setCurrentQuestion(currentQuestion - 1);
-      setFormProgress(formProgress - 25); //Adds to form progress when user has answered a question
+      setFormProgress(formProgress - 25); //Reduces form progress when user goes back to a previous question
     }
   };
 
