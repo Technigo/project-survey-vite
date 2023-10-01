@@ -13,18 +13,29 @@ export const Questions = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [livingArea, setLivingArea] = useState("");
-  const [favourite, setFavourite] = useState("Walking");
+  const [livingArea, setLivingArea] = useState("");  
+  const [selectedExercises, setSelectedExercises] = useState([]);
   const [frequency, setFrequency] = useState("Rarely");
   const [fitnessGoal, setFitnessGoal] = useState("");
-  
-  /* Function to handle submission */
+ 
+    
   const handleSubmit = (e) => {
-    e.preventDefault();
-    /* Something else here */
+    e.preventDefault();   
+   
+    setStep(6);
   };
+  
+  const restart = () => {
+    setStep(1);
+    setName("");
+    setEmail("");
+    setLivingArea("");
+    setSelectedExercises([]);
+    setFrequency("Rarely");
+    setFitnessGoal("");
+  }
 
-  /* Add validation to the steps and function to move to the next question when the user clicks on Next button */
+ 
   const next = () => {
     if (step === 1) {
       if (!name || !email) {
@@ -35,29 +46,40 @@ export const Questions = () => {
 
     if(step === 2) {
       if (livingArea === "") {
-        alert("Please choose one option");
+        alert("Please choose one option!");
         return;
       }
     } 
+
+    if (step === 3) {
+      if (selectedExercises.length === 0) {
+        alert("Please select at least one exercise!");
+        return; 
+      }
+    }
+
+    if (step === 5) {
+      if (fitnessGoal === "") {       
+        alert("Please fill in your fitness goal!");        
+        return;
+      }
+    }
     
     setStep((prevStep) => {
       return prevStep + 1
     });
   }
-
-  /* Function to move to the previous question when the user clicks on Back button */
+  
   const back = () => {
     setStep((prevStep) => {
       return prevStep - 1
     });
   }
-
-  /* Function to place the submission at the final step/question */
+ 
   const submit = () => {
-    setStep(5);
+    setStep(6);
   }
-
-  /* Functions to update the state variables based on the user's answers */
+ 
   const handleInputNameChange = (e) => {
     setName(e.target.value);
   }
@@ -70,13 +92,18 @@ export const Questions = () => {
     setLivingArea(e.target.value);
   }
 
-  const onRadioChange = (e) => {
-    setFavourite(e.target.value)
+  const handleCheckboxChange = (e) => {
+    const { value, checked } = e.target; 
+    if (checked) {
+      setSelectedExercises((selected) => [...selected, value]);     
+    } else {
+      setSelectedExercises((selected) => selected.filter((option) => option !== value));
+    }  
   }
 
   const updateFrequency = (e) => {
     setFrequency(e.target.value)
-  };
+  }
   
   const updateTextarea = (e) => {
     setFitnessGoal(e.target.value);
@@ -84,8 +111,8 @@ export const Questions = () => {
   
   return (
     <>
-      {/* Add steps here and connect to the corresponding components */}
-      <form action="" onSubmit={handleSubmit} required>
+      {/* Add steps here and connect to the corresponding components */}    
+        <form required>
         {step === 1 && 
           <InfoQuestions name={name} email={email} onChangeName={handleInputNameChange} onChangeEmail={handleInputEmailChange}/>
         }
@@ -93,7 +120,7 @@ export const Questions = () => {
           <LivingArea livingArea={livingArea} onChangeLivingArea={updateLivingArea} />
         }
         {step === 3 && 
-          <FavQuestions fav={favourite} onChangeFav={onRadioChange} />
+          <FavQuestions fav={selectedExercises} onChangeFav={handleCheckboxChange} />
         }
         {step === 4 && 
           <TrainingFrequency freq={frequency} onChangeFreq={updateFrequency}/>
@@ -101,10 +128,11 @@ export const Questions = () => {
         {step === 5 && 
           <FitnessGoal goal={fitnessGoal} onChangeText={updateTextarea} />
         }
+        {step === 6 && 
+          <Summary name={name} email={email} livingArea={livingArea} fav={selectedExercises} freq={frequency} goal={fitnessGoal} onChangeSummary={handleSubmit} />
+        }          
       </form>
-
-      <Buttons onBack={back} onNext={next} currentStep={step} onSubmit={submit} />
-      <Summary />
+      <Buttons onBack={back} onNext={next} currentStep={step} onSubmit={submit} onRestart={restart} />      
     </>
   );
 };

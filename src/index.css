@@ -179,3 +179,15 @@ button:active {
   }
   
 }
+.summary {
+color: white
+}
+.summary h2 {
+  font-size: 40px;
+}
+.summary h3 {
+  font-size: 30px;
+}
+.summary p {
+  font-size: 20px;
+}

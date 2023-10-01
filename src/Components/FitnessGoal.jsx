@@ -2,8 +2,7 @@ import PropTypes from "prop-types";
 
 export const FitnessGoal = ({goal, onChangeText}) => {
   return (
-    <div className="fitness-goal">
-      {/* Question about fitness goal */}
+    <div className="fitness-goal">     
       <label>
         What is your fitness goal?
         <textarea 

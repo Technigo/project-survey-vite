@@ -7,43 +7,43 @@ export const FavQuestions = ({fav, onChangeFav}) => {
       <label>What is your favourite exercise?</label>
 
       <div className="favourite-options">
-        <label htmlFor="walking">
-          <input type="radio" name="walking" id="walking" value="Walking" checked={fav === "Walking"} onChange={onChangeFav} /> 
+        <label>
+          <input type="checkbox" name="walking" id="walking" value="Walking" onChange={onChangeFav} /> 
             Walking
         </label>
         
-        <label htmlFor="running">
-          <input type="radio" name="running" id="running" value="Running" checked={fav=== "Running"} onChange={onChangeFav} />
+        <label>
+          <input type="checkbox" name="running" id="running" value="Running" onChange={onChangeFav} />
             Running
         </label>
         
-        <label htmlFor="gym"> 
-          <input type="radio" name="gym" id="gym" value="Going to GYM" checked={fav === "Going to GYM"} onChange={onChangeFav} />
-            Going to GYM
+        <label> 
+          <input type="checkbox" name="gym" id="gym" value="Going to the gym" onChange={onChangeFav} />
+            Going to the gym
         </label>
         
-        <label htmlFor="swimming">
-          <input type="radio" name="swimming" id="swimming" value="Swimming" checked={fav === "Swimming"} onChange={onChangeFav} /> 
+        <label>
+          <input type="checkbox" name="swimming" id="swimming" value="Swimming" onChange={onChangeFav} /> 
             Swimming
         </label>
 
-        <label htmlFor="yoga">
-          <input type="radio" name="yoga" id="yoga" value="Doing Yoga" checked={fav === "Doing Yoga"} onChange={onChangeFav} /> 
+        <label>
+          <input type="checkbox" name="yoga" id="yoga" value="Doing Yoga" onChange={onChangeFav} /> 
             Doing Yoga
         </label>
 
-        <label htmlFor="hiking">
-          <input type="radio" name="hiking" id="hiking" value="Hiking" checked={fav === "Hiking"} onChange={onChangeFav} /> 
+        <label>
+          <input type="checkbox" name="hiking" id="hiking" value="Hiking" onChange={onChangeFav} /> 
             Hiking
         </label>
 
-        <label htmlFor="climbing">
-          <input type="radio" name="climbing" id="climbing" value="Climbing" checked={fav === "Climbing"} onChange={onChangeFav} /> 
+        <label>
+          <input type="checkbox" name="climbing" id="climbing" value="Climbing" onChange={onChangeFav} /> 
             Climbing
         </label>
 
-        <label htmlFor="biking">
-          <input type="radio" name="biking" id="biking" value="Biking" checked={fav === "Biking"} onChange={onChangeFav} /> 
+        <label>
+          <input type="checkbox" name="biking" id="biking" value="Biking" onChange={onChangeFav} /> 
             Biking
         </label>
       </div>                
