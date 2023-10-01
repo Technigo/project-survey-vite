@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
+
 function Header() {
   // Define a state variable for the countdown days
   const [daysUntilChristmas, setDaysUntilChristmas] = useState(0);
@@ -27,11 +28,11 @@ function Header() {
   return (
     <header>
       <div className="header">
-        <img
-          id="header-image"
-          src="/src/assets/horizontally-centered-vertical-decoration.png"
-          alt="Header Image"
-        />
+      <img
+      id="header-image"
+      src="./horizontally-centered-vertical-decoration.png"
+      alt="Header Image"
+      />
         <h1>
           <a>The Great Christmas Survey</a>
         </h1>

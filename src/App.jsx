@@ -10,6 +10,7 @@ import QuestionGift from "./components/QuestionGift";
 import SurveySummary from "./components/SurveySummary";
 import Footer from "./components/footer";
 
+
 function App() {
   const [answers, setAnswers] = useState({
     celebrateChristmas: "",
