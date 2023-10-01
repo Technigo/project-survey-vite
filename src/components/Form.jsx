@@ -25,6 +25,9 @@ export const Form = () => {
   // State to keep track of the current question in the form
   const [currentQuestion, setCurrentQuestion] = useState(1);
 
+  // State to keep track of form progress
+  const [formProgress, setFormProgress] = useState(0);
+
   // Function to move to the next question in the form and validation to ensure user input
   const nextQuestion = () => {
     if (currentQuestion === 1 && formData.hero === "") {
@@ -38,6 +41,7 @@ export const Form = () => {
       return;
     }
     setCurrentQuestion(currentQuestion + 1);
+    setFormProgress(formProgress + 25);
   };
   // Function to move to the previous question in the form
   const previousQuestion = () => {
@@ -63,6 +67,7 @@ export const Form = () => {
     setCurrentQuestion(1);
     setFormSubmitted(false);
     toggleBackgroundColor();
+    setFormProgress(0);
   };
 
   // Function to submit the data entered in the form
@@ -71,20 +76,30 @@ export const Form = () => {
       alert("You have to enter a villain name");
       return;
     }
+    setFormProgress(formProgress + 25);
 
     toggleBackgroundColor();
-    console.log(formData);
-    const summary = `
-    Hero: ${formData.hero}
-    Superpower: ${formData.superpower}
-    Weakness: ${formData.weakness}
-    Villain: ${formData.villain}`;
+    // console.log(formData);
+    // const summary = `
+    // Hero: ${formData.hero}
+    // Superpower: ${formData.superpower}
+    // Weakness: ${formData.weakness}
+    // Villain: ${formData.villain}`;
     // alert(summary);
     setFormSubmitted(true);
   };
 
   return (
     <div className="storyForm">
+      <div className="progressContainer">
+        <div className="progress-bar">
+          <p>{formProgress}%</p>
+          <div
+            className="progress-bar-fill"
+            style={{ width: `${formProgress}%` }}
+          ></div>
+        </div>
+      </div>
       <div
         className="transparentBackground"
         style={{ backgroundColor: backgroundColor }}
@@ -130,7 +145,7 @@ export const Form = () => {
                   className="superhero-button reset"
                   onClick={resetFormData}
                 >
-                  Let´s create a new story!
+                  Let's create a new story!
                 </button>
               </div>
             )}

@@ -32,6 +32,46 @@ input {
   font-size: 25px;
 }
 
+/* Progress bar*/
+.progressContainer {
+  padding-top: 10px;
+  width: 200px;
+  height: 40px;
+  margin: 20px auto 0 auto;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  background-color: yellow;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-bar p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  position: absolute;
+  z-index: 4;
+  margin: 0;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  background-color: red;
+  transition: width 0.7s ease-out;
+  position: absolute;
+  z-index: 3;
+  left: 0; /* Start from the left edge of the progress bar */
+  right: 0; /* End at the right edge of the progress bar */
+}
+/* */
+
 .questionContainer {
   margin: 0 auto;
   display: flex;
@@ -142,6 +182,9 @@ button::before {
 }
 
 @media screen and (min-width: 768px) {
+  .progressContainer {
+    width: 400px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .story,

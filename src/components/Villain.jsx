@@ -5,7 +5,7 @@ export const Villain = ({ updateFormData, value }) => {
 
   return (
     <div className="villain">
-      <label>Type a villain name </label>
+      <label>Enter the name of the villain </label>
       <input type="text" value={value} onChange={villainInput} />
     </div>
   );
