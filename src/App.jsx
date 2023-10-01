@@ -5,7 +5,7 @@ import QuestionExcited from "./components/QuestionExcited";
 import QuestionGender from "./components/QuestionGender";
 import QuestionAge from "./components/QuestionAge";
 import QuestionCelebrate from "./components/QuestionCelebrate";
-import QuestionLikeMost from "./components/QuestionLikeMost.jsx";
+import QuestionLikeMost from "/components/QuestionLikeMost.jsx";
 import QuestionGift from "./components/QuestionGift";
 import SurveySummary from "./components/SurveySummary";
 import Footer from "./components/footer";
