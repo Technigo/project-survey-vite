@@ -47,7 +47,7 @@ export const Form = () => {
   const previousQuestion = () => {
     if (currentQuestion > 1) {
       setCurrentQuestion(currentQuestion - 1);
-      setFormProgress(formProgress - 25);
+      setFormProgress(formProgress - 25); //Adds to form progress when user has answered a question
     }
   };
 
@@ -80,15 +80,7 @@ export const Form = () => {
       return;
     }
     setFormProgress(formProgress + 25);
-
     toggleBackgroundColor();
-    // console.log(formData);
-    // const summary = `
-    // Hero: ${formData.hero}
-    // Superpower: ${formData.superpower}
-    // Weakness: ${formData.weakness}
-    // Villain: ${formData.villain}`;
-    // alert(summary);
     setFormSubmitted(true);
   };
 
@@ -103,6 +95,7 @@ export const Form = () => {
           ></div>
         </div>
       </div>
+      <h1 className="story-title">Superhero Story Generator</h1>
       <div
         className="transparentBackground"
         style={{ backgroundColor: backgroundColor }}
@@ -154,6 +147,28 @@ export const Form = () => {
             )}
           </div>
         </div>
+      </div>
+      <div className="footer">
+        <span>
+          <a
+            href="https://www.freepik.com/free-vector/superhero-hand-strong_25067091.htm#query=hero&position=1&from_view=search&track=sph"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-link"
+          >
+            Background image by gstudioimagen1 on Freepik
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://unsplash.com/photos/3bb9RUp86M0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-link"
+          >
+            Textile image by Dan Cristian Pădureț on Unsplash
+          </a>
+        </span>
       </div>
     </div>
   );
