@@ -134,7 +134,6 @@ button {
   transition: all .3s;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, .3);
   margin-top: 15px;
-  
 }
 
 button:hover {
@@ -145,12 +144,15 @@ button:hover {
 button:active {
   transform: scale(.7);
 }
+
 .submit-btn{
   background-color: rgb(205, 105, 153);
 }
+
 .submit-btn:hover{
   background-color: rgb(221, 208, 85);
 }
+
 @media screen and (min-width:800px) {
   
   .form-container{
@@ -170,24 +172,27 @@ button:active {
   button{
     font-size: 20px;
   }
-
 }
+
 @media  screen and (min-width:1020px) {
   .favourite-options ,.frequency-options {
     flex-direction: row;
     gap: 20px;
   }
-  
 }
+
 .summary {
 color: white
 }
+
 .summary h2 {
   font-size: 40px;
 }
+
 .summary h3 {
   font-size: 30px;
 }
+
 .summary p {
   font-size: 20px;
 }

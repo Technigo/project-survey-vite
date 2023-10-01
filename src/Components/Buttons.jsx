@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export const Buttons = ({onBack, onNext, currentStep, onSubmit, onRestart}) => {
   return (
     <div className="buttons">
@@ -17,5 +19,12 @@ export const Buttons = ({onBack, onNext, currentStep, onSubmit, onRestart}) => {
       }           
     </div>
   )
-}
+};
 
+Buttons.propTypes = {
+  onBack: PropTypes.func,
+  onNext: PropTypes.func, 
+  currentStep: PropTypes.number, 
+  onSubmit: PropTypes.func, 
+  onRestart: PropTypes.func
+}

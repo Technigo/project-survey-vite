@@ -1,9 +1,8 @@
-
+import { useState } from "react";
 import { FavQuestions } from "./FavQuestions";
 import { InfoQuestions } from "./InfoQuestions";
 import { Buttons } from "./Buttons";
 import { Summary } from "./Summary";
-import { useState } from "react";
 import { TrainingFrequency } from "./TrainingFrequency";
 import { FitnessGoal } from "./FitnessGoal";
 import { LivingArea } from "./LivingArea";
@@ -111,8 +110,8 @@ export const Questions = () => {
   
   return (
     <>
-      {/* Add steps here and connect to the corresponding components */}    
-        <form required>
+      {/* Add steps and connect to the corresponding components */}    
+      <form required>
         {step === 1 && 
           <InfoQuestions name={name} email={email} onChangeName={handleInputNameChange} onChangeEmail={handleInputEmailChange}/>
         }
@@ -132,6 +131,7 @@ export const Questions = () => {
           <Summary name={name} email={email} livingArea={livingArea} fav={selectedExercises} freq={frequency} goal={fitnessGoal} onChangeSummary={handleSubmit} />
         }          
       </form>
+      
       <Buttons onBack={back} onNext={next} currentStep={step} onSubmit={submit} onRestart={restart} />      
     </>
   );
