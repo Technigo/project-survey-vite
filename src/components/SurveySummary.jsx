@@ -11,11 +11,12 @@ function SurveySummary({ surveyAnswers }) {
   } = surveyAnswers;
 
   // Determine the article ("a" or "an") based on the selectedGender
+  
   const isVowelSound = ["Elf", "Other", "Reindeer"].includes(selectedGender);
   const article = isVowelSound ? "an" : "a";
-
+//In a perfect code there wouldn´t be an ay before Santa Clause/Mrs Clause, but we didn't figure that one out//
   return (
-    <div>
+    <div id="survey">
       <h2>Here's a quick review of your answers</h2>
       <p>
         You {celebrateChristmas === "No" ? "don't" : "do"} celebrate Christmas!

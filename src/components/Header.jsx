@@ -19,7 +19,7 @@ function Header() {
     return daysRemaining;
   };
 
-  // Update the countdown days when the component mounts
+
   useEffect(() => {
     setDaysUntilChristmas(calculateDaysUntilChristmas());
   }, []);
@@ -35,7 +35,7 @@ function Header() {
         <h1>
           <a>The Great Christmas Survey</a>
         </h1>
-        <p>It is 🎅{daysUntilChristmas}🎅 days until Christmas!</p>
+        <p>It's 🎅{daysUntilChristmas}🎅 days until Christmas!</p>
       </div>
     </header>
   );

@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: darkgreen;
+  background-color: rgb(4, 54, 4);
   color: beige;
   text-align: center;
 }
@@ -84,7 +84,7 @@ h2 {
 
 @media screen and (min-width: 1200px) {
   body {
-    background-color: darkgreen;
+    background-color: rgb(1, 90, 1);
     color: beige;
   }
 
