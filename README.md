@@ -4,31 +4,17 @@
   </a>
 </h1>
 
-# Survey Project
+# Survey - Barbie Survey
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+I made a survey to book tickets to the Barbie movie, using useState and controlled forms.
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I did sometning that the radio buttons are not highlighted when i clicked on them, I changed the value on the radio buttons, thats men the problem occured. I have not solved it due deadline. I am going to change the submit form also, adding the right CSS. 
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+here you can see it live: https://app.netlify.com/sites/barbie-survey-evelyndelcarmen/configuration/general
 
 ## Instructions
 
