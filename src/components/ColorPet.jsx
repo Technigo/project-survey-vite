@@ -1,0 +1,36 @@
+import { useState } from 'react';
+
+const ColorPet = ({ setColorPetProp, onNext }) => {
+  const [color, setColor] = useState('');
+
+  const handleColorPet = (event) => {
+    setColor(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(color);
+    setColorPetProp(color);
+    onNext();
+  };
+
+  return (
+    <form className="color-pet-form" onSubmit={handleSubmit}>
+      which color will you choose..
+      <select
+        className="color-pet-drop-down"
+        value={color}
+        onChange={handleColorPet}
+        required>
+        <option value="">..for your new pet?</option>
+        <option value="black">black</option>
+        <option value="yellow">yellow</option>
+        <option value="brown">brown</option>
+        <option value="green">green</option>
+      </select>
+      <button type="submit" className="next-button">Submit</button>
+    </form>
+  );
+}
+
+export default ColorPet;
