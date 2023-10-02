@@ -28,8 +28,8 @@ function Header() {
       <div className="header">
         <img
           id="header-image"
-          src="src/horizontally-centered-vertical-decoration.png"
-          alt="Header Image"
+          src="src/assets/icons8-jingle-bell-color/horizontally-centered-vertical-decoration.png/"
+          alt="A decorative header"
         />
         <h1>
           <a>The Great Christmas Survey</a>
