@@ -5,31 +5,37 @@ import Logo from './assets/barbielogo.svg';
 
 export const App = () => {
 
-  const [step, setStep] = useState('form');
+  const [step, setStep] = useState('form'); // Keeps track of the current step
   const [formData, setFormData] = useState({
     ticketCount: 1,
     radioOption: '',
     checkboxes: [],
     email: '',
     name: '',
-  });
+  }); // Stores the form data
 
+
+  // Function to switch the submit step
   const goToSubmit = () => setStep('submit');
 
+  //This function update the count of tickets in the form data
   const handleTicketCountChange = (e) => {
     console.log('Selected ticket count:', e.target.value);
     setFormData({ ...formData, ticketCount: e.target.value });
   };
 
+  // radio button function
   const handleRadioChange = (e) => {
     console.log('Selected radio option:', e.target.value);
     setFormData({ ...formData, radioOption: e.target.value });
   };
 
+  //This update the checkboxes
   const handleCheckboxChange = (e) => {
     console.log('checkboxChange:', e.target.value);
     const checkboxValue = e.target.value;
     if (formData.checkboxes.includes(checkboxValue)) {
+      //This remove the ckeckbox if its already selected
 
       setFormData({
         ...formData,
@@ -37,6 +43,7 @@ export const App = () => {
       });
     } else {
 
+      // Add the ckeckbox value is not selected
       setFormData({
         ...formData,
         checkboxes: [...formData.checkboxes, checkboxValue],
@@ -44,18 +51,20 @@ export const App = () => {
     }
   };
 
+  // Here you update the name
   const handleInput1Change = (e) => {
     console.log('handleInput1Change:', e.target.value);
     setFormData({ ...formData, name: e.target.value });
   };
 
+  //here you update the mail
   const handleInput2Change = (e) => {
     console.log('handleInput2Change:', e.target.value);
     setFormData({ ...formData, email: e.target.value });
   };
 
   const handleSubmit = () => {
-
+    // Switch to the submit step when the submit button is clicked
     goToSubmit();
   };
 
@@ -88,7 +97,7 @@ export const App = () => {
             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
               <p style={{ marginRight: '10px' }}>How many tickets do you like to book?</p>
 
-              {/* This code makes sure to collect the data in the form */}
+
               <select value={formData.ticketCount} onChange={handleTicketCountChange}>
                 {Array.from({ length: 10 }, (_, index) => (
                   <option key={index} value={index + 1}>
@@ -212,6 +221,7 @@ export const App = () => {
       }
       {
         step === 'submit' && (
+
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Container>
               <House>
