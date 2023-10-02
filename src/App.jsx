@@ -11,10 +11,13 @@ import Header from "./components/Header";
 // Takes an array of words (["Apple", "Banana", "Cherry"]) as argument
 // Returns a nicely formatted string: Apple, Banana or Cherry
 const formatPreparation = (words) => {
+    if (words.length === 1)
+        return words[0].toLowerCase();
+
     const listOfWords = [...words];
     const lastWord = listOfWords.pop();
 
-    return `${listOfWords.join(", ")} or ${lastWord}`;
+    return `${listOfWords.join(", ").toLowerCase()} or ${lastWord.toLowerCase()}`;
 }
 
 export const App = () => {
@@ -139,7 +142,7 @@ export const App = () => {
             {step === "summary" && (
                 <>
                     <Card>
-                        <p>You have been picking mushrooms for {form.yearsPickingMushrooms} years. You prefer {form.favoriteMushroom} and you like them {formatPreparation(form.prepareMushroom)}. Thank you {form.name} for answering our mushroom survey!</p>
+                        <p>You have been picking mushrooms for {form.yearsPickingMushrooms} years. You prefer {form.favoriteMushroom.toLowerCase()} and you like them {formatPreparation(form.prepareMushroom)}. Thank you {form.name} for answering our mushroom survey!</p>
                     </Card>
 
                     <Button onClick={restart}>Restart</Button>
