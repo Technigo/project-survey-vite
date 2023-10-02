@@ -4,34 +4,15 @@
   </a>
 </h1>
 
-# Survey Project
+# Mushroom Survey Project
+This project is a simple web application built with React, designed to practice React state and controlled forms. It functions similarly to a Typeform-like product, where users can answer a set of questions, and upon submission, they receive a summary of their answers.
 
-Replace this readme with your own information about your project.
+## Feature⛳️
+- User-friendly survey with at least 3 questions.
+- Real-time updating of user answers using React state.
+- Submission button to generate a summary of user responses.
+## The Problem
+As much as we'd love to continue expanding and improving the Mushroom Survey project, we have encountered time constraints. Our primary focus was on building a basic functional application for practicing state management and controlled forms. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
-
-### The Problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-### View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+## View it live
+[Mushroom-Survey-Project]https://project-survey-vite-amanda-huandan.netlify.app/
