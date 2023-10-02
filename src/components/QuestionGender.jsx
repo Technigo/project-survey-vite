@@ -26,12 +26,12 @@ function QuestionGender({ selectedGender, onGenderChange }) {
 
   return (
     <div>
-      <h2>Select your gender:</h2>
+      <h2>How do you identify?</h2>
       <select
         value={selectedGender}
         onChange={handleGenderChange}
       >
-        <option value="">Select your gender</option>
+        <option value="">Make a selection?</option>
         {genderOptions.map((option) => (
           <option key={option} value={option}>
             {option}
