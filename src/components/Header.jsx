@@ -25,10 +25,11 @@ function Header() {
 
   return (
     <header>
+      s
       <div className="header">
         <img
           id="header-image"
-          src="src/assets/icons8-jingle-bell-color/horizontally-centered-vertical-decoration.png/"
+          src="\public\horizontally-centered-vertical-decoration.png"
           alt="A decorative header"
         />
         <h1>
