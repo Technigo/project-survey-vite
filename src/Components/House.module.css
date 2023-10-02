@@ -1,7 +1,8 @@
 .house {
+
     padding: 1rem;
     background-color: white;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     margin-bottom: 1rem;
     justify-content: center;
     justify-self: center;
@@ -12,9 +13,24 @@ h1 {
     font-size: 16px;
     padding: 10px;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #e0218a;
 }
 
 p {
     font-size: 10px;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #e0218a;
+}
+
+button {
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: #e0218a;
+    font-size: 18px;
+    justify-content: center;
+
 }
