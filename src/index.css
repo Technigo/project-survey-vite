@@ -32,3 +32,17 @@ html {
   background-repeat: no-repeat;
   background-image: url(./assets/barbiebackground.jpeg);
 }
+
+
+button {
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: 2px solid #767676;
+  font-size: 18px;
+  text-align: center;
+  background-color: #81b6cf;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}

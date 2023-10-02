@@ -17,6 +17,7 @@ export const App = () => {
   const goToSubmit = () => setStep('submit');
 
   const handleTicketCountChange = (e) => {
+    console.log('Selected ticket count:', e.target.value);
     setFormData({ ...formData, ticketCount: e.target.value });
   };
 
@@ -26,6 +27,7 @@ export const App = () => {
   };
 
   const handleCheckboxChange = (e) => {
+    console.log('checkboxChange:', e.target.value);
     const checkboxValue = e.target.value;
     if (formData.checkboxes.includes(checkboxValue)) {
 
@@ -43,10 +45,12 @@ export const App = () => {
   };
 
   const handleInput1Change = (e) => {
+    console.log('handleInput1Change:', e.target.value);
     setFormData({ ...formData, name: e.target.value });
   };
 
   const handleInput2Change = (e) => {
+    console.log('handleInput2Change:', e.target.value);
     setFormData({ ...formData, email: e.target.value });
   };
 
@@ -68,7 +72,7 @@ export const App = () => {
           <House>
             <h1>Please let me know your name:</h1>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <label style={{ marginRight: '10px', padding: '10px' }}>
+              <label style={{ marginRight: '10px', padding: '5px' }}>
                 <input
                   type="text"
                   placeholder="Name"
@@ -127,7 +131,7 @@ export const App = () => {
 
             </div>
 
-
+            {/* When I changed the value my radioBtns are not highlighted when you click them */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <label style={{ marginRight: '10px', padding: '10px' }}>
                 <p>The President</p>
@@ -190,7 +194,7 @@ export const App = () => {
           <House>
             <h1>May I ask for your email:</h1>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <label style={{ marginRight: '10px', padding: '10px' }}>
+              <label style={{ marginRight: '10px', padding: '5px' }}>
                 <input
                   type="text"
                   placeholder="email"
@@ -208,16 +212,15 @@ export const App = () => {
       }
       {
         step === 'submit' && (
-          <Container>
-            <House>
-              <h1>Hi {formData.name}!</h1>
-              <p>Thanks for booking the tickets!</p>
-              <p> You have booked {formData.ticketCount} tickets.</p>
-              <p> {formData.radioOption} will sit with you your entire stay!</p>
-              <p> We will have your favorite treat {formData.checkboxes.join(', ')} ready for you!</p>
-              <p>The tickets will be delivered to {formData.email}</p>
-            </House>
-          </Container>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Container>
+              <House>
+                <h1 style={{ fontSize: '75px' }}> Hi {formData.name}!</h1>
+                <p style={{ fontSize: '25px' }}>Thanks for booking the tickets! You have booked {formData.ticketCount} tickets. {formData.radioOption} will sit with you! We will have your favorite treat, {formData.checkboxes.join(', ')} ready for you! The tickets will be delivered to {formData.email}.</p>
+              </House>
+            </Container>
+          </div>
+
         )
       }
     </Container >

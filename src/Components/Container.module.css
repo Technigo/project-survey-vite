@@ -1,8 +1,13 @@
 .container {
     max-width: 800px;
     margin: 0auto;
+    margin-top: 50px;
     justify-content: center;
     justify-self: center;
     align-items: center;
-
 }
+
+@media (max-width: 570px) {
+    .submit-container {
+        margin-top: 30px;
+    }
