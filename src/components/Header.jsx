@@ -25,7 +25,6 @@ function Header() {
 
   return (
     <header>
-      s
       <div className="header">
         <img
           id="header-image"
