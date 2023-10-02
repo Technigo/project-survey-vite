@@ -19,7 +19,6 @@ function Header() {
     return daysRemaining;
   };
 
-
   useEffect(() => {
     setDaysUntilChristmas(calculateDaysUntilChristmas());
   }, []);
@@ -29,7 +28,7 @@ function Header() {
       <div className="header">
         <img
           id="header-image"
-          src="/src/assets/horizontally-centered-vertical-decoration.png"
+          src="/src/assets/icons8-jingle-bell-color/horizontally-centered-vertical-decoration.png"
           alt="Header Image"
         />
         <h1>
