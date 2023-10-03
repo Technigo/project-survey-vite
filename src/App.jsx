@@ -5,10 +5,10 @@ import QuestionExcited from "./components/QuestionExcited";
 import QuestionGender from "./components/QuestionGender";
 import QuestionAge from "./components/QuestionAge";
 import QuestionCelebrate from "./components/QuestionCelebrate";
-import QuestionLikeMost from "./components/QuestionLikemost.jsx";
+import QuestionLikeMost from "./components/QuestionLikeMost";
 import QuestionGift from "./components/QuestionGift";
 import SurveySummary from "./components/SurveySummary";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import appImage from "./assets/horizontally-centered-vertical-decoration.png"; // Import the image
 
 function App() {
