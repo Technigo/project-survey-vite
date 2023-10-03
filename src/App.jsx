@@ -114,12 +114,12 @@ export const App = () => {
               <label style={{ marginRight: '10px', padding: '10px' }}>
                 <p>Barbie</p>
               </label>
-
+              {/* When I changed the value my radioBtns are not highlighted when you click them */}
               <input
                 type="radio"
                 name="radioOption"
                 value="Barbie"
-                checked={formData.radioOption === 'Option 1'}
+                checked={formData.radioOption === 'Barbie'}
                 onChange={handleRadioChange}
               />
             </div>
@@ -134,13 +134,13 @@ export const App = () => {
                 type="radio"
                 name="radioOption"
                 value="Ken"
-                checked={formData.radioOption === 'Option 2'}
+                checked={formData.radioOption === 'Ken'}
                 onChange={handleRadioChange}
               />
 
             </div>
 
-            {/* When I changed the value my radioBtns are not highlighted when you click them */}
+
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <label style={{ marginRight: '10px', padding: '10px' }}>
                 <p>The President</p>
@@ -150,7 +150,7 @@ export const App = () => {
                 type="radio"
                 name="radioOption"
                 value="The President"
-                checked={formData.radioOption === 'Option 3'}
+                checked={formData.radioOption === 'The President'}
                 onChange={handleRadioChange}
               />
 
@@ -168,7 +168,7 @@ export const App = () => {
                 type="checkbox"
                 name="checkbox1"
                 value="Champagne"
-                checked={formData.checkboxes.includes('Checkbox 1')}
+                checked={formData.checkboxes.includes('Champagne')}
                 onChange={handleCheckboxChange}
               />
             </div>
@@ -181,7 +181,7 @@ export const App = () => {
                 type="checkbox"
                 name="checkbox2"
                 value="Pizza"
-                checked={formData.checkboxes.includes('Checkbox 2')}
+                checked={formData.checkboxes.includes('Pizza')}
                 onChange={handleCheckboxChange}
               />
             </div>
@@ -194,7 +194,7 @@ export const App = () => {
                 type="checkbox"
                 name="checkbox3"
                 value="Cotton Candy"
-                checked={formData.checkboxes.includes('Checkbox 3')}
+                checked={formData.checkboxes.includes('Cotton Candy')}
                 onChange={handleCheckboxChange}
               />
             </div>
