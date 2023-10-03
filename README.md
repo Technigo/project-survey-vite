@@ -1,37 +1,22 @@
 <h1 align="center">
   <a href="">
-    <img src="/src/assets/survey.svg" alt="Project Banner Image">
+    <img src="/public/survey.svg" alt="Project Banner Image">
   </a>
 </h1>
 
 # Survey Project
 
-Replace this readme with your own information about your project.
+This was a pair project done with Julia Holm, Inna Kokic & Susanne Ekenheim.
+The assignment this week was to create a survey like form using react hook useState().
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+Our form is called "Adopt a cat" where the user gets to select different attributes and then which cat they want. The form ends with a page that sums up all the selected attributes. In the form we use text input fields, radio buttons and a dropdown.
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+To avoid as many problems as possible we started our project with planing in detail in Figma what the app should be about, what questions should appear and what input to use on each question. The planning made it easier for us as a team to have the same goal while coding. During the project we used a lot of different methods and aids to move forward. ChatGPT, youtube and google were our best tools.
+
+If we had more time we would add a function to validate each input and put out an error message.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+https://willowy-meerkat-5ea81b.netlify.app/

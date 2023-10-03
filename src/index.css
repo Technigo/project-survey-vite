@@ -1,13 +1,272 @@
 :root {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --black: #313131;
+  --yellow: #fdc360;
+  --gradient100: linear-gradient(
+    90deg,
+    rgba(247, 158, 179, 1) 0%,
+    rgba(253, 195, 96, 1) 100%
+  );
+  --gradient025: linear-gradient(
+    90deg,
+    rgba(247, 158, 179, 0.25) 0%,
+    rgba(253, 195, 96, 0.25) 100%
+  );
+  --gradient9: linear-gradient(
+    90deg,
+    rgba(247, 158, 179, 0.9) 0%,
+    rgba(253, 195, 96, 0.9) 100%
+  );
+  --yellowFade: rgba(253, 195, 96, 0.5);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin, padding, list styles and built-in form typography styles */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+/* Workflow with images */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  width: 100%;
+}
+
+/* The div around everything inside the body tag */
+#root {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.background {
+  position: fixed; /* Fixed positioning ensures it covers the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/background.png");
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the image */
+  z-index: -1000; /* Place the background behind all other content */
+}
+
+.question-counter {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+/* FORM STYLING */
+.form-div {
+  width: 100%;
+}
+
+.form-div form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+h3 {
+  color: var(--black);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.p-form {
+  color: var(--black);
+  margin-bottom: 2rem;
+  line-height: 1.7rem;
+}
+
+/* For username and cat name */
+.text-input {
+  border: none;
+  width: 250px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--gradient025);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+  color: #555;
+}
+
+@media (min-width: 668px) {
+  .form-div form {
+    padding: 2rem 10rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .form-div form {
+    padding: 2rem 13rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .form-div form {
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem 0;
+    margin: 0 auto;
+  }
+}
+
+/*---------------------------------------*/
+
+/* BUTTONS */
+button {
+  transition: ease 0.5s;
+}
+
+button:hover {
+  scale: 1.1;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem 5rem;
+}
+
+.prev-next-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.next-btn,
+.prev-btn {
+  background: none;
+  border: none;
+}
+
+.next-btn img,
+.prev-btn img {
+  height: 2.5rem;
+}
+
+.reset-btn {
+  border: 0.3rem solid var(--yellow);
+  padding: 0.3rem;
+  width: fit-content;
+  background: var(--gradient100);
+  color: #fff;
+  font-size: inherit;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.submit-btn {
+  border: 0.3rem solid var(--yellow);
+  padding: 0.625rem 1.5rem;
+  border-radius: 10rem;
+  background: linear-gradient(90deg, #f79eb3 0%, #fdc360 100%);
+  color: #fff;
+  font-size: inherit;
+  font-weight: 700;
+}
+
+/*---------------------------------------*/
+
+/* RADIO BUTTONS FOR GENDER AND AGE */
+.radio-label {
+  display: flex;
+  align-items: center;
+  background: var(--gradient025);
+  width: 10rem;
+  border-radius: 100px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Hides the default radio button behind the label (also at choose cat component) */
+.radio-input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* New radio button */
+.radio-design {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100px;
+  background: var(--gradient100);
+}
+
+.radio-design::before {
+  content: "";
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+}
+
+.radio-input:checked + .radio-design::before {
+  transform: scale(0);
+}
+
+/* New radio button text  */
+.radio-label-text {
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+/*---------------------------------------*/
+
+/* Footer */
+
+.git-hub-container {
+  position: fixed;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 0.5rem;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.git-hub-container a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.git-hub-container img {
+  width: 1.5rem;
 }

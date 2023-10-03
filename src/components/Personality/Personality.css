@@ -1,0 +1,13 @@
+.personality-dropdown {
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  background: linear-gradient(90deg, #f79eb3 0%, #fdc360 100%);
+  width: 13rem;
+  padding: 0.6rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+}

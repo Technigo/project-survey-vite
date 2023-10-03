@@ -1,0 +1,38 @@
+.cat-image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1025px) {
+  .cat-image-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.radio-custom-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.radio-custom-img:hover {
+  scale: 1.1;
+}
+
+.radio-input:checked + .radio-custom-img {
+  outline: 0.5rem solid var(--yellow);
+}
+
+.radio-custom-img img {
+  width: 200px;
+}
+
+@media (min-width: 1025px) {
+  .cat-image-container {
+    width: 900px;
+  }
+}
