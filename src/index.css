@@ -7,7 +7,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+}
+
+html {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(./assets/barbiebackground.jpeg);
+}
+
+
+button {
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: 2px solid #dfe99c;
+  font-size: 18px;
+  text-align: center;
+  background-color: #A6C5BD;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
