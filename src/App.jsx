@@ -118,8 +118,8 @@ export const App = () => {
               <input
                 type="radio"
                 name="radioOption"
-                value="Barbie"
-                checked={formData.radioOption === 'Barbie'}
+                value="Barbie 👑"
+                checked={formData.radioOption === 'Barbie 👑'}
                 onChange={handleRadioChange}
               />
             </div>
@@ -133,8 +133,8 @@ export const App = () => {
               <input
                 type="radio"
                 name="radioOption"
-                value="Ken"
-                checked={formData.radioOption === 'Ken'}
+                value="Ken 🎩"
+                checked={formData.radioOption === 'Ken 🎩'}
                 onChange={handleRadioChange}
               />
 
@@ -149,8 +149,8 @@ export const App = () => {
               <input
                 type="radio"
                 name="radioOption"
-                value="The President"
-                checked={formData.radioOption === 'The President'}
+                value="The President 💍"
+                checked={formData.radioOption === 'The President 💍'}
                 onChange={handleRadioChange}
               />
 
@@ -167,8 +167,8 @@ export const App = () => {
               <input
                 type="checkbox"
                 name="checkbox1"
-                value="Champagne"
-                checked={formData.checkboxes.includes('Champagne')}
+                value="Champagne 🥂"
+                checked={formData.checkboxes.includes('Champagne 🥂')}
                 onChange={handleCheckboxChange}
               />
             </div>
@@ -180,8 +180,8 @@ export const App = () => {
               <input
                 type="checkbox"
                 name="checkbox2"
-                value="Pizza"
-                checked={formData.checkboxes.includes('Pizza')}
+                value="Pizza 🍕"
+                checked={formData.checkboxes.includes('Pizza 🍕')}
                 onChange={handleCheckboxChange}
               />
             </div>
@@ -193,8 +193,8 @@ export const App = () => {
               <input
                 type="checkbox"
                 name="checkbox3"
-                value="Cotton Candy"
-                checked={formData.checkboxes.includes('Cotton Candy')}
+                value="Cotton Candy 🍭"
+                checked={formData.checkboxes.includes('Cotton Candy 🍭')}
                 onChange={handleCheckboxChange}
               />
             </div>
@@ -222,14 +222,22 @@ export const App = () => {
       {
         step === 'submit' && (
 
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Container>
-              <House>
-                <h1 style={{ fontSize: '75px' }}> Hi {formData.name}!</h1>
-                <p style={{ fontSize: '25px' }}>Thanks for booking the tickets! You have booked {formData.ticketCount} tickets. {formData.radioOption} will sit with you! We will have your favorite treat, {formData.checkboxes.join(', ')} ready for you! The tickets will be delivered to {formData.email}.</p>
-              </House>
-            </Container>
-          </div>
+
+          <Container>
+            <House>
+              <h1 > Hi {formData.name}!</h1>
+              <p>Thanks for booking the tickets!</p>
+            </House>
+
+            <House>
+              <p>You have booked {formData.ticketCount} tickets. {formData.radioOption} will sit with you!</p>
+            </House>
+
+            <House>
+              <p>We will have your favorite treat, {formData.checkboxes.join(', ')} ready for you! The tickets will be delivered to {formData.email}.</p>
+            </House>
+
+          </Container>
 
         )
       }
@@ -237,7 +245,9 @@ export const App = () => {
   );
 };
 
-
+// style={{ fontSize: '25px' }}
+// style={{ fontSize: '75px' }}
+// style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
 
 
 
