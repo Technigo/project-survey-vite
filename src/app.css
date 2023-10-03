@@ -1,0 +1,147 @@
+/* === Import of font === */
+@import url(https://fonts.googleapis.com/css?family=Space+Mono:400,700);
+
+/* === Custom Properties === */
+:root {
+    /* Colors */
+    --primary: #4A51ED;
+    --secondary: #FFFFFF;
+    --background: #F5F6FA;
+    --text: #000000;
+    --shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.11);
+    /*rgba(37, 40, 122, .09)*/
+
+    /* Font */
+    --font: 'Space Mono', monospace;
+
+    /* Other styles */
+    --corner-radius: 10px;
+    --stroke-thickness: 2px solid;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* Main section is the section surrounding the questions, answers and header */
+.main-section {
+    margin-top: 4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+}
+
+/* Header text text */
+.quiz-heading {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Section containing questions */
+.question-section {
+    margin: 2rem 0 0 0;
+    font-size: 20px;
+    max-width: 380px;
+}
+
+/* Section containing answers */
+.answers-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-bar {
+    font-style: italic;
+    opacity: 0.5;
+}
+
+/* === Form elements === */
+.first-question-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field,
+.submit-btn {
+    border-radius: var(--corner-radius);
+    background: var(--secondary);
+    box-shadow: var(--shadow);
+    height: 60px;
+    border-style: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: var(--font);
+}
+
+/* === Input-only styling === */
+.input-field {
+    /* grid-column: 1; */
+    font-size: 18px;
+    font-family: var(--font);
+    padding: 0 20px;
+    color: var(--text);
+    max-width: 100%;
+    border: var(--stroke-thickness) transparent;
+    /* Adds a transparent border by defaul, otherwise the border that is added on hover makes the input field move */
+}
+
+.input-field:hover {
+    transition: all 200ms ease-in-out;
+    border: var(--stroke-thickness);
+    border-color: var(--primary);
+}
+
+select {
+    width: 360px;
+    transition: all 200ms ease-in-out;
+}
+
+select:focus {
+    outline: var(--primary);
+}
+
+input[type="radio"] {
+    margin: 0.5rem;
+    background-color: var(--primary);
+}
+
+input:focus {
+    background-color: var(--primary);
+    color: var(--secondary);
+    outline: var(--primary);
+}
+
+/* === Button-only styling === */
+.submit-btn:after {
+    content: ' ➜ ';
+    font-size: 16px;
+    color: var(--primary);
+}
+
+.standalone {
+    width: 360px;
+    margin: 1rem 0;
+}
+
+button:hover {
+    transition: all 200ms ease-in-out;
+    border: var(--stroke-thickness);
+    border-color: var(--primary);
+}
+
+/* Style for button next to an input field, with fixed width */
+.inline {
+    width: 60px;
+    margin: 0 0 0 1rem;
+}

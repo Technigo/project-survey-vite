@@ -1,0 +1,65 @@
+[
+    {
+        "question": "First and foremost - what’s your name?",
+        "type": "text",
+        "answers": []
+    },
+    {
+        "question": "How many cups of coffee do you ingest before even leaving your house 🏡?",
+        "type": "radio",
+        "answers": [
+            {
+                "text": "1, who needs more?",
+                "value": "1"
+            },
+            {
+                "text": "2, the perfect amount",
+                "value": "2"
+            },
+            {
+                "text": "Way too many ☕️💀",
+                "value": "many"
+            }
+        ]
+    },
+    {
+        "question": "What’s your favorite activity to do in the morning?",
+        "type": "radio",
+        "answers": [
+            {
+                "text": "Exercising 🏃🏼‍♀️",
+                "value": "exercising"
+            },
+            {
+                "text": "Obviously sleeping in..",
+                "value": "sleeping"
+            },
+            {
+                "text": "Meditating with a green smoothie for company",
+                "value": "meditating"
+            }
+        ]
+    },
+    {
+        "question": "Choose your perfect breakfast combo! 🍳",
+        "type": "select",
+        "answers": [
+            {
+                "text": "Scrambled eggs, sausage, fried potatoes.. yum",
+                "value": "salty"
+            },
+            {
+                "text": "Breakfast? How about an early lunch instead?",
+                "value": "skips"
+            },
+            {
+                "text": "Plain yogurt with nuts and berries",
+                "value": "healthy"
+            },
+            {
+                "text": "Pancakes with lots of syrup, cream, or jam!",
+                "value": "sweet"
+            }
+        ]
+    }
+]
