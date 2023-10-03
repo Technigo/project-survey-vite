@@ -6,9 +6,7 @@
 
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+We (Emmy and Andrej) created a short superhero story generator that asks the user four questions and then displays a story based on user input.
 
 ## Getting Started with the Project
 
@@ -24,11 +22,17 @@ npm i && code . && npm run dev
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started by discussing what we wanted the project to be about and how we wanted our design to look like over voice chat.
+After we had a general outline for the project, we started the coding process.
+Most of the work was done through pair programming using Live Share and Discord. Some parts of the project were created through branches and then merged into the main project and we should have kept doing that in hindsight as most of the later work was done in the main branch.
+
+The project was coded using JS, React & CSS. Data is handled through the use and manipulation of the useState hook. Images were taken from external resources and creators are credited in the footer.
+
+There was an idea of using OpenAI to generate stories in real-time, but it was quickly discarded due to cost issues.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://statuesque-mooncake-cf0c5d.netlify.app/
 
 ## Instructions
 
