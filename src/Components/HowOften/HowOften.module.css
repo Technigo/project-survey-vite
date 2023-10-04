@@ -1,0 +1,23 @@
+.input_wrapper {
+  width: 230px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-top: 40px;
+  border-color: #c7bab8;
+  border-radius: 5px;
+}
+
+@media (min-width: 640px) {
+  .text_input {
+    font-size: 18px;
+  }
+
+  .input_wrapper {
+    width: 260px;
+  }
+}

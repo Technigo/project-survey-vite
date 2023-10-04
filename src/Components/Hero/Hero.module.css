@@ -1,0 +1,60 @@
+.imageContainer {
+  background-size: cover;
+  background-position: 50% 70%;
+  min-height: 150px;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgb(0, 0, 0, 0.1), 0 2px 4px -2px rgb(0, 0, 0, 0.1);
+}
+
+.step1img {
+  background-image: url("/assets/dog.jpg");
+  background-position-y: 70%;
+}
+
+.step2img {
+  background-image: url("/assets/dogs.jpg");
+  background-position-y: 46%;
+}
+
+.step3img {
+  background-image: url("/assets/dog_snow.jpg");
+  background-position-y: 70%;
+}
+
+.step4img {
+  background-image: url("/assets/small_dog.jpg");
+  background-position-y: 60%;
+}
+
+.step5img {
+  background-image: url("/assets/white_dog.jpeg");
+  background-position-y: 30%;
+}
+
+@media (min-width: 640px) {
+  .imageContainer {
+    width: 520px;
+    height: 200px;
+  }
+
+  .step1img {
+    background-position-y: 250px;
+  }
+
+  .step2img {
+    background-position-y: 43%;
+  }
+
+  .step3img {
+    background-position-y: 76%;
+  }
+
+  .step4img {
+    background-position-y: 54%;
+  }
+
+  .step5img {
+    background-position-y: 40%;
+  }
+}
