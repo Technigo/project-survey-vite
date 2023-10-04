@@ -11,3 +11,295 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  background-image: url(./assets/nebulosa.jpg);
+  position: relative;
+}
+
+.main {
+  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  place-items: center;
+  height: 650px;
+}
+.steps {
+  width: 300px;
+  height: 400px;
+  display: grid;
+  place-items: center;
+  /* border: 7px solid rgb(204, 78, 0, 0.5); */
+  box-shadow: 5px 10px rgba(121, 46, 0, 0.5);
+  border-radius: 30px;
+  color: antiquewhite;
+
+  box-shadow: inset -5px -5px 15px 5px rgba(234, 138, 36, 0.67),
+    5px 5px 15px 7px rgba(69, 29, 10, 0.8);
+}
+
+/*-----------Progress Bar---------------*/
+.progress-bar-container {
+  position: absolute;
+  padding: 5px;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  border-radius: 5px;
+  top: 145px;
+}
+
+.progress-indicator {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.progress-bar {
+  height: 20px;
+  width: 60px;
+  background-color: rgb(0, 140, 255);
+  text-align: center;
+  line-height: 20px;
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+
+/*-----------------Intro--------------*/
+.name {
+  margin-bottom: 55px;
+}
+
+.name h1 {
+  color: antiquewhite;
+  text-align: center;
+  margin: 20px;
+  font-size: 27px;
+  /* border: 2px solid red; */
+}
+
+.name h2 {
+  color: antiquewhite;
+  text-align: center;
+  margin: 20px;
+  font-size: 17px;
+}
+
+.name input {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 70px;
+  border-radius: 5px;
+}
+
+.age {
+  font-size: 27px;
+}
+
+.summary {
+  font-size: 17px;
+}
+
+.confirmation {
+  margin: 20px;
+  margin-bottom: 55px;
+}
+
+/*--------------back and next buttons-----------*/
+
+.button-box {
+  position: absolute;
+  top: 71%;
+  /* border: 2px solid red; */
+}
+
+button {
+  display: inline-grid;
+
+  line-height: 1;
+  text-decoration: none;
+  color: #287782;
+  font-size: 18px;
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+  margin: 5px;
+
+  box-shadow: 0px 2px 3px 0px rgba(29, 121, 111, 0.223);
+  text-shadow: 1px 1px 2px rgb(57, 57, 57);
+
+  background-image: linear-gradient(
+    91deg,
+    rgb(107, 142, 176),
+    rgb(249, 163, 88)
+  );
+}
+
+button:hover {
+  box-shadow: 0 0 rgba(15, 145, 106, 0.26);
+}
+
+/* back and next button
+button:first-child {
+  margin-right: 5px;
+}
+
+/* submitbutton */
+/* button:last-child {
+  width: 120px;
+} */
+
+/*---------------Agegroup--------*/
+
+form {
+  font-size: 24px;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-buttons input {
+  order: 1;
+}
+
+.radio-buttons label {
+  order: 2;
+  margin-top: 5px;
+}
+
+/*--------------bloodtype-------_*/
+
+.bloodtype {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  font-size: 18px;
+}
+
+#bloodtype .bloodtype {
+  font-size: 18px;
+}
+
+form label {
+  font-size: 24px;
+}
+
+/*---------------allergies-------------*/
+
+.allergies form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.allergies input {
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/*-----------responsive design---------------*/
+
+/* Tablet styles (768px and up) */
+@media (min-width: 768px) {
+  .main {
+    height: 800px;
+  }
+  .progress-bar-container {
+    top: 170px;
+  }
+  .steps {
+    width: 400px;
+    height: 500px;
+    font-size: 24px;
+  }
+  .name {
+    margin-bottom: 55px;
+  }
+
+  .name h1 {
+  
+    margin: 20px;
+    font-size: 35px;
+    /* border: 2px solid red; */
+  }
+
+  .name h2 {
+  
+    margin: 20px;
+    font-size: 30px;
+  }
+  .name input {
+    margin-left: 120px;
+    text-align: center;
+  }
+  .age {
+    font-size: 27px;
+  }
+
+  .summary {
+    font-size: 20px;
+  }
+
+  .confirmation {
+    margin: 20px;
+    margin-bottom: 55px;
+  }
+}
+
+/* Desktop styles (1024px and up) */
+@media (min-width: 1024px) {
+  .main {
+    height: 800px;
+  }
+  .progress-bar-container {
+    top: 150px;
+  }
+  .steps {
+    width: 700px;
+    height: 600px;
+    
+   
+  }
+
+  .name {
+    margin-bottom: 55px;
+  }
+
+  .name h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 40px;
+    /* border: 2px solid red; */
+  }
+
+  .name h2 {
+    font-size: 30px;
+  }
+
+.name input {
+  margin-top: 20px;
+  margin-left: 270px;
+}
+
+  .age {
+    font-size: 27px;
+  }
+
+  .summary {
+    font-size: 20px;
+  }
+
+  .confirmation {
+    margin: 20px;
+    margin-bottom: 55px;
+  }
+}
