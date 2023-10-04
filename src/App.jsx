@@ -9,6 +9,8 @@ import QuestionLikeMost from "./components/QuestionLikeMost";
 import QuestionGift from "./components/QuestionGift";
 import SurveySummary from "./components/SurveySummary";
 import Footer from "./components/Footer";
+import appImage from "./assets/horizontally-centered-vertical-decoration.png"; // Import the image
+
 
 function App() {
   const [answers, setAnswers] = useState({
@@ -93,6 +95,11 @@ function App() {
 
   return (
     <div className="App">
+      <img
+        id="header-image"
+        src={appImage} // Use the imported image here
+        alt="Header Image"
+      />
       <Header />
 
       {!showSummary && displaySurvey()}
@@ -117,3 +124,4 @@ function App() {
 }
 
 export default App;
+
