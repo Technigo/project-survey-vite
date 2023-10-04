@@ -6,11 +6,38 @@
 
 # Survey Project
 
-Replace this readme with your own information about your project.
+This Survey Project has been a collaboration between Sakura Tanaka, Mikael Öling and Elba Cacan. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Our vision was to craft a survey that aligned with the practical needs of Mikael's clients, focusing on real life senarios and applications. The aim was to create a vertisale survery tool, designed to be easily modified and taylored if needed. 
 
 ## Getting Started with the Project
+
+Mikael provided us with visual aids and questions relevant for the survey, and Sakura created a design for our project in figma inspired by the provided materials.
+
+<img src="./public/figma.png" alt="Figma">
+
+To maintain coherence we began with a multi step component stucture. When this was in place we each made our own branches, but before that we agreed on how to devide the tasks. We allowed each member to chose the components that they wanted to do. Our strategy revolved around frequently merging branches and pulling updated versions to our local copies. Any significant change or addition made, that was not agreed upon upfront, was clearly communicated to the team in a group chat.  
+
+This week was a lot about shared learning for us. We spent some time exchanging knowledge on various topics, including merging techniques, terminal usage, and handy shortcuts. By sharing our knowledge we all incresed our skills. 
+
+
+
+### The Problem
+
+Due to varying commitments and differences in time zones, sceduling meetings was somewhat challenging. Despite this, a mutual understanding of our goal and the project requirements ensured we got the project done. A project we are happy with.  
+
+Given the varied commitments each of us had this week, the amount of tasks differed between us. This wasn't a reflection of effort or dedication, but rather the reality of our individual scedules and time constraits. 
+
+### View it live
+
+
+https://pala-customer-survey.netlify.app/ 
+
+
+
+
+
+
 
 ### Dependency Installation & Startup Development Server
 
@@ -21,17 +48,10 @@ The command below is a combination of installing dependencies, opening up the pr
 ```bash
 npm i && code . && npm run dev
 ```
-
-### The Problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-### View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
 ## Instructions
 
 <a href="instructions.md">
    See instructions of this project
   </a>
+
+

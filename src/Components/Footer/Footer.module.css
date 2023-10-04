@@ -1,0 +1,39 @@
+/*addressing footer id*/
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c3bcbc;
+  color: #7a7676;
+  font-size: 12px;
+}
+
+.footerText {
+  width: 60%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footerText p {
+  margin: 0;
+}
+
+.names {
+  font-size: 14px;
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+@media (min-width: 460px) {
+  .footerText {
+    width: 100%;
+  }
+
+  .names {
+    padding-bottom: 10px;
+  }
+}

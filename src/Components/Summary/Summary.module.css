@@ -1,0 +1,30 @@
+.inner_box {
+  border: #444 solid 0.5px;
+  padding: 10px 0 30px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+h5 {
+  font-size: 16px;
+  margin: 0;
+}
+
+p {
+  margin: 8px 0;
+}
+
+@media (min-width: 640px) {
+  .inner_box {
+    padding: 10px 0;
+    margin: 0 30px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+}
