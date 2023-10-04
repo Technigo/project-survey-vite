@@ -1,0 +1,26 @@
+.selection-wrapper {
+    height: 70%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+}
+
+.select-menu {
+    width: 100%;
+    border: 1px solid #268dcd;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #92c7e8;
+}
+
+.select-menu option {
+    font-size: 20px;
+    color: #268dcd;
+}
+
+.select-menu option[value="default"]:disabled {
+    font-size: 20px;
+}

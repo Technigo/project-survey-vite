@@ -6,32 +6,21 @@
 
 # Survey Project
 
-Replace this readme with your own information about your project.
+This weeks project was to create a survey with a minimum of three questions, and at the end it was supposed to show a summary of the choices that had been made. The focus was on practising React and keeping accessibility in mind.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was a pair project done by Vera Witting and Anna Robertsson.
 
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We first made a function in the Form.jsx to respond to the user after the survey. Then we wanted to put it in a new component, and had som struggle with the data flow. We solved it working together through trouble shooting with console.logs to grasp where it didn't work. 
+
+We also had some issues with styling, especially concerning accessability, since this was the first time for us thinking in those terms. Anna solved it by studying requirements, and we corrected the code to follow that.
+
+If we had more time, we would have spent it on creating more options for each destination in the suggestions array, and use a map method instead of .find(), and add a randomizer to present a destination suggestion. 
+
+We would also have wanted to spend more time on the styling.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+Please visit: yourdreamvacation.netlify.app
