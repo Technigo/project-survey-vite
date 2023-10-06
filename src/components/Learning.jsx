@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export const Learning = ({ updateFormData, value }) => {
 
-
     //NOTE: After Q&A I know that I should have this useState hook in the parent - surveyForm - Lifting state up
     const [width, setWidth] = useState(100);
 

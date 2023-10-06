@@ -1,5 +1,6 @@
 
 export const Age = ({ updateFormData, value }) => {
+    
     const childsAge = (event) =>
         updateFormData("age", event.target.value);
 
