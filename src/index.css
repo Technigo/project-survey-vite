@@ -1,13 +1,398 @@
 :root {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Bubblegum Sans', cursive;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* General styles */
+button {
+  background-color: #F266AB;
+  padding: 14px 32px;
+  border-color: #913D66;
+  border-radius: 20px;
+  margin: 1em;
+  font-size: 30px;
+  font-family: 'Bubblegum Sans';
+}
+
+select {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px;
+}
+
+input {
+  padding: 6px;
+  margin-left: 8px;
+}
+
+
+/* Header CSS */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  background: #F266AB;
+}
+
+header img {
+  width: 20%;
+}
+
+.large-header {
+  color: black;
+  font-weight: 800;
+  text-align: center;
+  font-family: 'Bubblegum Sans', cursive;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 6vw;
+}
+
+.header-image {
+  width: 18%;
+}
+
+.sml-header {
+  padding: 1px;
+  text-align: center;
+  font-family: 'Bubblegum Sans', cursive;
+  font-weight: 500;
+  font-size: 4vw;
+}
+
+/* Footer CSS */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2CD3E1;
+  padding: 1em 0em;
+  color: black;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+footer img {
+  width: 20%;
+}
+
+/* Main body CSS */
+.main-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFB84C;
+  padding: 2em 0em;
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+  overflow: hidden;
+  align-content: center;
+}
+
+
+.question-boxes {
+  margin-left: 1em;
+  background-color: #A459D1;
+  border: 2px solid #913D66;
+  box-sizing: border-box;
+  padding: 2em;
+  border-radius: 1em;
+  align-content: center;
+  width: 80%;
+}
+
+/*Name display*/
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Name image*/
+.name img {
+  height: 100px;
+  width: 100px;
+}
+
+/*Name image hover effect*/
+.name img:hover {
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+/*Name text-input*/
+.name input {
+  background-color: #f392c3;
+  padding: 10px;
+  margin: 10px;
+}
+
+/*Age display*/
+.age {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/*Age  image*/
+.age img {
+  height: 200px;
+  width: 200px;
+}
+
+/*Age image hover effect*/
+.age img:hover {
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1);
+  /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+/*Age text-input*/
+.age input {
+  background-color: #f392c3;
+  padding: 10px;
+  margin: 10px;
+}
+
+/*What class are you in- display*/
+.class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/*What class are you in- image*/
+.class img {
+  height: 200px;
+  width: 200px;
+}
+
+/*What class are you in- image hover effect*/
+.class img:hover {
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1);
+  /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+/*What class are you in select dropdown*/
+.class select {
+  background-color: #f392c3;
+  padding: 10px;
+  margin: 20px;
+}
+
+/*Hiding the radio buttons*/
+.dino input[type="radio"] {
+  display: none;
+  cursor: pointer;
+}
+
+/*Dino buttons*/
+.dino img {
+  height: 150px;
+  width: 150px;
+  margin-right: 40px;
+}
+
+/*Dino buttons checked*/
+[type=radio]:checked+img {
+  border-radius: 40px;
+  border-color: #F266AB;
+  background: #F266AB;
+}
+
+/*Dino images hover effect */
+.dino img:hover {
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+
+/*Food text alignment*/
+.foods-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Food text-input*/
+.foods-txt input {
+  background-color: #f392c3;
+  margin: 20px;
+}
+
+/*Food images size*/
+.food-img img {
+  height: 100px;
+  width: 100px;
+  padding-bottom: 20px;
+  padding-inline: 15px;
+}
+
+/*Div to display food images on a row*/
+.food-img {
+  display: flex;
+  flex-direction: row;
+
+}
+
+/*Food images hover effect*/
+.food-img img:hover {
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+main-body img {
+  width: 80%;
+}
+
+.slidecontainer {
+  width: 100%;
+  /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 25px;
+  /* Specified height */
+  background: #d3d3d3;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Style the custom slider */
+.slider-container {
+  display: inline;
+}
+
+.sliderLabels {
+  list-style-type: none;
+  width: 100%;
+  margin-bottom: 0px;
+  padding-left: 14px;
+  padding-right: 0px;
+  margin-right: 0px;
+  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul>li {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.learning-slider {
+  width: 100%;
+  height: 30px;
+  background: #eee;
+  opacity: 0.8;
+  outline: none;
+  transition: 0.3s;
+  -webkit-appearance: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.learning-slider:hover {
+  opacity: 1;
+}
+
+.learning-slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.learning-slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+
+/* Grid parent for results page CSS */
+.form-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1em;
+  background-color: #F266AB;
+  border-color: black;
+  border-width: 20px;
+  max-width: 99%;
+
+}
+
+/* Grid child for results page CSS */
+.output-survey {
+  background-color: #2CD3E1;
+  padding: 2px;
+  margin: 2px;
+  text-align: center;
+  padding: 1em;
+  border-radius: 8px;
+  border-color: black;
+  border-width: 20px;
+}
+
+.q1,
+.q4 {
+  grid-column: span 2;
+}
+
+/*media query for mobile - put results into one  column .*/
+@media screen and (max-width: 667px) {
+  .output-survey {
+    grid-column: span 2;
+  }
+
+  .large-header {
+    font-size: 10vw;
+  }
+
+  .sml-header {
+    font-size: 5vw;
+  }
+
+
+  .question-boxes {
+    border-radius: 0;
+  }
 }

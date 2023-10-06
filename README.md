@@ -6,9 +6,10 @@
 
 # Survey Project
 
-Replace this readme with your own information about your project.
+Week 6 - Technigo Web Development Bootcamp - Porject Survey
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Paired Project - Beckie Morton and Elin Olausson
+
 
 ## Getting Started with the Project
 
@@ -24,11 +25,32 @@ npm i && code . && npm run dev
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Describe how you approached to problem: 
+
+Learning content was less this week and concepts covered were not as difficult for us as last week. Now that we have expereince manipulating a react project and boilerplate we were able to start the project with little issues.
+
+Code sessions and Q&A helped a lot and we are grateful for the code snippets that created next/back buttons.
+
+The most difficult section was to get the survey to disappear and be replaced by the results section. We were able to solve this by using a hideQuiz variable which we put into the submitForm function inside SurveryForm.jsx.
+
+How did you plan? 
+We drew a simple diagram for our parent to child structure.
+We created a simple site design layout
+
+What technologies did you use? 
+HTML5
+CSS3
+React
+Editor: VS Code
+
+If you had more time, what would be next?
+
+The results page needs a re-styling! It needs images to make it look like a "poster" as the site suggests.
+WE would have also loved to have made it more user friendly for our target demographic (children aged 4-10), having clickable images (eg. on the favourite dinosaur page.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://wk6-project-survey-602b.netlify.app/
 
 ## Instructions
 
