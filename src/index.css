@@ -11,3 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  background-color: #E4F1FF;
+  display: flex;
+  align-items: center;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.Form {
+  width: 60%;
+  margin: 15px auto;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-small {
+  width: 150px;
+  height: auto;
+}
+
+.image-outfits {
+  width: 250px;
+  height: auto;
+}
+
+
+.name {
+  margin: 10px;
+  /* Distance between name and pic */
+}
