@@ -1,3 +1,15 @@
-export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
-};
+
+import { MultiStepForm } from "./components/MultiStepForm";
+import "./App.css";
+import "./index.css"
+
+export default function App() {
+  return (
+    <>
+      {/* Multi Step Form */}
+      <MultiStepForm />
+    </>
+  )
+}
+
+

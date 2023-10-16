@@ -1,13 +1,103 @@
-:root {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {
+  background-image: url("halloween.png");
+  background-size: 100%;
+  background-color: #242638;
+  background-repeat: no-repeat;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Mooli';
+  background-color: rgb(63, 68, 97);
+  border-radius: 10px;
+  padding: 20px;
+  color: rgb(221, 192, 117);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper {
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#name-input,
+#age-input,
+#weather-input,
+#creature-input,
+#sound-input {
+  background-color: rgb(165, 174, 189);
+  color: rgb(65, 65, 80);
+  font-family: 'Mooli';
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+button {
+  background-color: rgb(63, 68, 97);
+  padding: 10px;
+  color: rgb(165, 174, 189);
+  border-radius: 5px;
+  font-family: 'Mooli';
+  font-size: 15px;
+  border: 2px solid rgb(165, 174, 189);
+  margin: 2px;
+}
+
+.buttons {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.story-container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Mooli';
+  background-color: #242638;
+  border-radius: 10px;
+  padding: 20px;
+  color: rgb(221, 192, 117);
+}
+
+@media screen and (max-width: 667px) {
+  body {
+    background-image: url('halloween-mobile.png');
+    background-repeat: no-repeat;
+    background-color: #242638;
+  }
+
+  .story-container {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 668px) and (max-width: 1024px) {
+  body {
+    background-image: url('halloween-tablet.png');
+    background-repeat: no-repeat;
+    background-color: #242638;
+  }
+
+  .story-container {
+    width: 85%;
+  }
 }
