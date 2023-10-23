@@ -1,0 +1,23 @@
+.button {
+  border: none;
+  background-color: #a9a19f;
+  box-shadow: 0 10px 15px -3px rgb(0, 0, 0, 0.1), 0 4px 6px -4px rgb(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 16px;
+  padding: 3px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.button:hover {
+  background-color: #d0c4c2;
+  border: #a9a19f solid 0.5px;
+}
+
+@media (min-width: 640px) {
+  .button {
+    font-size: 18px;
+    padding: 5px 18px;
+  }
+}

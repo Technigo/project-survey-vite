@@ -1,0 +1,18 @@
+/*addressing footer id*/
+
+.footer {
+    height: 200px;
+    width: 100%; /* Set the width to 100% to stretch across the full screen */
+    display: flex;
+    flex-direction: row;
+    background-color: #c3bcbc;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  
+  
+  
+  
