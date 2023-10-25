@@ -1,6 +1,6 @@
 // Import React, components, css
 import { useState } from "react";
-import "../../App.css";
+import "../App.css";
 import { Thanks } from "./Thanks";
 
 export const MainForm = () => {
@@ -74,6 +74,7 @@ export const MainForm = () => {
   //Function to start survey
   const startSurvey = () => {
     setCurrentStep(1);
+    console.log("Survey started");
   };
 
   //Reset the form and the state
@@ -97,7 +98,15 @@ export const MainForm = () => {
       <Thanks />
     ) : (
       <>
-        <div className="button-container"></div>
+        <div className="button-container">
+            {currentStep === 0 && (
+              <div>
+                <div className="start-button">
+                  <button onClick={startSurvey}>Start survey</button>
+                </div>
+              </div>
+            )}
+        </div>
       </>
     )}
     </div>
