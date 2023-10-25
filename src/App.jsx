@@ -1,3 +1,12 @@
-export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
-};
+import './App.css'
+
+function App() {
+
+  return (
+    <>
+      
+    </>
+  )
+}
+
+export default App
