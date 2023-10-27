@@ -1,10 +1,10 @@
-export const TravelDestinationInput = ({ value, updateFormData }) => {
-  const TravelDestination = (e) => updateFormData("name", e.target.value);
+export const TravelDestinationInput = ({ value, updateDestination }) => {
+  const handleDestinationChange = (e) => updateDestination(e.target.value);
 
   return (
     <div>
       <label>Travel Destination:</label>
-      <input type="text" value={value} onChange={TravelDestination} />
+      <input type="text" value={value} onChange={handleDestinationChange} />
     </div>
   );
 };

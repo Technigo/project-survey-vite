@@ -1,10 +1,10 @@
-export const ReasonTravel = ({ value, updateFormData }) => {
-  const TravelReason = (e) => updateFormData("reason", e.target.value);
+export const ReasonTravel = ({ value, updateReason }) => {
+  const handleTravelReasonChange = (e) => updateReason(e.target.value);
 
   return (
     <div>
       <label>Travel Reason:</label>
-      <input type="text" value={value} onChange={TravelReason} />
+      <input type="text" value={value} onChange={handleTravelReasonChange} />
       {/* <input type="radio" value={value}>
         Personal{" "}
       </input> */}

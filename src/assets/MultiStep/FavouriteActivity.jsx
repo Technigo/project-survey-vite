@@ -1,10 +1,10 @@
-export const FavoriteActivity = ({ value, updateFormData }) => {
-  const Activity = (e) => updateFormData("activity", e.target.value);
+export const FavoriteActivity = ({ value, updateActivity }) => {
+  const handleActivityChange = (e) => updateActivity(e.target.value);
 
   return (
     <div>
       <label>Favourite Activity:</label>
-      <input type="text" value={value} onChange={Activity} />
+      <input type="text" value={value} onChange={handleActivityChange} />
     </div>
   );
 };
