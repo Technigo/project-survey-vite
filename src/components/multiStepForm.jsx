@@ -3,9 +3,9 @@ import { Name } from "./name";
 import { Age } from "./age";
 import { Workrole } from "./workrole";
 import { Favorite } from "./favorite";
-import { SecondFavorite } from "./secondfavorite";
 import { Feeling } from "./feeling";
 import { FinalStory } from "./finalStory";
+import { SecondFavorite } from "./secondFavorite";
 
 export const MultiStepFrom = () => {
   const [formData, setFormData] = useState({
