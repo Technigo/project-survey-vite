@@ -1,10 +1,9 @@
 export const SummaryKeys = {
-  TravelDestination: "travelDestination",
+  Destination: "travelDestination",
   Reason: "reason",
   Activity: "activity",
   Name: "name",
   Age: "age",
-  Email: "email",
   Color: "favoriteColor",
   Season: "favoriteSeason",
 };
