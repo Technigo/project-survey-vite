@@ -11,6 +11,8 @@ import { Season } from "./Season";
 import { SummaryData } from "./SummaryData";
 import { SummaryKeys } from "./summaryKeys";
 
+import "./MultiStepForm.css";
+
 const initialSummary = {
   [SummaryKeys.TravelDestination]: "",
   [SummaryKeys.Reason]: "",
@@ -150,7 +152,7 @@ export const MultiStepForm = () => {
   };
 
   return (
-    <>
+    <div className="container">
       {!isSurveySubmitted && (
         <div>
           {surveyStepContents[currentStep].content}
@@ -190,6 +192,6 @@ export const MultiStepForm = () => {
           <button onClick={handleStartSurveyClick}>Start survey again!</button>
         </>
       )}
-    </>
+    </div>
   );
 };
