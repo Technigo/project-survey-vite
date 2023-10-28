@@ -11,3 +11,60 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.wrapper {
+  background-color: beige;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+button {
+  background-color: rgb(46, 45, 45);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: opacity 0.3s;
+  margin: 10px;
+}
+
+button:hover {
+  opacity: 60%;
+}
+
+div {
+  padding: 10px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input,
+select {
+  padding: 5px;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+  input {
+    margin-top: 10px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+}
