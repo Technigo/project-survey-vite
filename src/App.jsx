@@ -1,13 +1,13 @@
-import './App.css'
-import { MainForm } from './components/MainForm'
+import React from 'react';
+import MultiStepForm from './components/MultiStepForm';
+
 
 function App() {
-
   return (
-    <>
-      <MainForm/>
-    </>
-  )
+    <div className="App">
+      <MultiStepForm />      
+    </div>
+  );
 }
 
-export default App
+export default App;
