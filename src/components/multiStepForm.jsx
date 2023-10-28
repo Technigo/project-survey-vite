@@ -45,14 +45,6 @@ export const MultiStepFrom = () => {
 
   const submitForm = () => {
     setCurrentStep(7);
-    console.log(formData);
-    const formattedData = `
-    Name: ${formData.name}
-    Age: ${formData.age} 
-    Workrole: ${formData.workrole}
-    Facorite: ${formData.favorite}
-    Second Favorite: ${formData.secondFavorite}
-    Feeling: ${formData.feeling}`;
   };
 
   return (
