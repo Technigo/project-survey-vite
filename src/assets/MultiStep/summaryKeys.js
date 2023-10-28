@@ -1,4 +1,4 @@
-export const SummaryKeys = {
+export const summaryKeys = {
   Destination: "travelDestination",
   Reason: "reason",
   Activity: "activity",

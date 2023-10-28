@@ -5,7 +5,7 @@ export const Color = ({ value, updateColor }) => {
     <div>
       <label>Favorite Color:</label>
       <section className="radioGroup">
-        <label>
+        <label style={{ color: "violet" }}>
           <input
             type="radio"
             value="violet"
@@ -14,7 +14,7 @@ export const Color = ({ value, updateColor }) => {
           />
           Violet
         </label>
-        <label>
+        <label style={{ color: "indigo" }}>
           <input
             type="radio"
             value="indigo"
@@ -23,7 +23,7 @@ export const Color = ({ value, updateColor }) => {
           />
           Indigo
         </label>
-        <label>
+        <label style={{ color: "blue" }}>
           <input
             type="radio"
             value="blue"
@@ -32,7 +32,7 @@ export const Color = ({ value, updateColor }) => {
           />
           Blue
         </label>
-        <label>
+        <label style={{ color: "green" }}>
           <input
             type="radio"
             value="green"
@@ -41,7 +41,7 @@ export const Color = ({ value, updateColor }) => {
           />
           Green
         </label>
-        <label>
+        <label style={{ color: "yellow" }}>
           <input
             type="radio"
             value="yellow"
@@ -50,7 +50,7 @@ export const Color = ({ value, updateColor }) => {
           />
           Yellow
         </label>
-        <label>
+        <label style={{ color: "orange" }}>
           <input
             type="radio"
             value="orange"
@@ -59,7 +59,7 @@ export const Color = ({ value, updateColor }) => {
           />
           Orange
         </label>
-        <label>
+        <label style={{ color: "red" }}>
           <input
             type="radio"
             value="red"

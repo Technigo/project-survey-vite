@@ -8,19 +8,20 @@ import { Name } from "./Name";
 import { Color } from "./Color";
 import { Season } from "./Season";
 import { SummaryData } from "./SummaryData";
-import { SummaryKeys } from "./summaryKeys";
+
+import { summaryKeys } from "./summaryKeys";
 
 import "./MultiStepForm.css";
 
 const initialSummary = {
-  [SummaryKeys.Destination]: "",
-  [SummaryKeys.Reason]: "",
-  [SummaryKeys.Activity]: "",
-  [SummaryKeys.Name]: "",
-  [SummaryKeys.Age]: "",
-  [SummaryKeys.Email]: "",
-  [SummaryKeys.Color]: "",
-  [SummaryKeys.Season]: "",
+  [summaryKeys.Destination]: "",
+  [summaryKeys.Reason]: "",
+  [summaryKeys.Activity]: "",
+  [summaryKeys.Name]: "",
+  [summaryKeys.Age]: "",
+  [summaryKeys.Email]: "",
+  [summaryKeys.Color]: "",
+  [summaryKeys.Season]: "",
 };
 
 const isUndefinedOrEmpty = (value) => {
@@ -40,82 +41,82 @@ export const MultiStepForm = () => {
   const surveyStepContents = [
     {
       name: "Travel destination",
-      valueKey: SummaryKeys.Destination,
+      valueKey: summaryKeys.Destination,
       content: (
         <TravelDestinationInput
-          value={summary[SummaryKeys.Destination]}
+          value={summary[summaryKeys.Destination]}
           updateDestination={(value) =>
-            updateSummary(SummaryKeys.Destination, value)
+            updateSummary(summaryKeys.Destination, value)
           }
         />
       ),
-      isValid: () => !isUndefinedOrEmpty(summary[SummaryKeys.Destination]),
+      isValid: () => !isUndefinedOrEmpty(summary[summaryKeys.Destination]),
     },
     {
       name: "Travel Reason",
-      valueKey: SummaryKeys.Reason,
+      valueKey: summaryKeys.Reason,
       content: (
         <ReasonTravel
-          value={summary[SummaryKeys.Reason]}
-          updateReason={(value) => updateSummary(SummaryKeys.Reason, value)}
+          value={summary[summaryKeys.Reason]}
+          updateReason={(value) => updateSummary(summaryKeys.Reason, value)}
         />
       ),
-      isValid: () => !isUndefinedOrEmpty(summary[SummaryKeys.Reason]),
+      isValid: () => !isUndefinedOrEmpty(summary[summaryKeys.Reason]),
     },
     {
       name: "Favourite Activity",
-      valueKey: SummaryKeys.Activity,
+      valueKey: summaryKeys.Activity,
       content: (
         <FavoriteActivity
-          value={summary[SummaryKeys.Activity]}
-          updateActivity={(value) => updateSummary(SummaryKeys.Activity, value)}
+          value={summary[summaryKeys.Activity]}
+          updateActivity={(value) => updateSummary(summaryKeys.Activity, value)}
         />
       ),
-      isValid: () => !isUndefinedOrEmpty(summary[SummaryKeys.Activity]),
+      isValid: () => !isUndefinedOrEmpty(summary[summaryKeys.Activity]),
     },
     {
       name: "Name",
-      valueKey: SummaryKeys.Name,
+      valueKey: summaryKeys.Name,
       content: (
         <Name
-          value={summary[SummaryKeys.Name]}
-          updateName={(value) => updateSummary(SummaryKeys.Name, value)}
+          value={summary[summaryKeys.Name]}
+          updateName={(value) => updateSummary(summaryKeys.Name, value)}
         />
       ),
-      isValid: () => !isUndefinedOrEmpty(summary[SummaryKeys.Name]),
+      isValid: () => !isUndefinedOrEmpty(summary[summaryKeys.Name]),
     },
     {
       name: "Age",
-      valueKey: SummaryKeys.Age,
+      valueKey: summaryKeys.Age,
       content: (
         <Age
-          value={summary[SummaryKeys.Age]}
-          updateAge={(value) => updateSummary(SummaryKeys.Age, value)}
+          value={summary[summaryKeys.Age]}
+          updateAge={(value) => updateSummary(summaryKeys.Age, value)}
         />
       ),
-      isValid: () => !isUndefinedOrEmpty(summary[SummaryKeys.Age]),
+      isValid: () => !isUndefinedOrEmpty(summary[summaryKeys.Age]),
     },
     {
       name: "Favorite Color",
-      valueKey: SummaryKeys.Color,
+      valueKey: summaryKeys.Color,
       content: (
         <Color
-          value={summary[SummaryKeys.Color]}
-          updateColor={(value) => updateSummary(SummaryKeys.Color, value)}
+          value={summary[summaryKeys.Color]}
+          updateColor={(value) => updateSummary(summaryKeys.Color, value)}
         />
       ),
-      isValid: () => !isUndefinedOrEmpty(summary[SummaryKeys.Color]),
+      isValid: () => !isUndefinedOrEmpty(summary[summaryKeys.Color]),
     },
     {
       name: "Favorite Season",
-      valueKey: SummaryKeys.Season,
+      valueKey: summaryKeys.Season,
       content: (
         <Season
-          value={summary[SummaryKeys.Season]}
-          updateSeason={(value) => updateSummary(SummaryKeys.Season, value)}
+          value={summary[summaryKeys.Season]}
+          updateSeason={(value) => updateSummary(summaryKeys.Season, value)}
         />
       ),
-      isValid: () => !isUndefinedOrEmpty(summary[SummaryKeys.Season]),
+      isValid: () => !isUndefinedOrEmpty(summary[summaryKeys.Season]),
     },
   ];
 
