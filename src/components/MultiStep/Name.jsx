@@ -3,8 +3,8 @@ export const Name = ({ value, updateName }) => {
 
   return (
     <div>
-      <label>Name:</label>
-      <input type="text" value={value} onChange={handleNameChange} />
+      <label htmlFor="name">Name:</label>
+      <input type="text" id="name" value={value} onChange={handleNameChange} />
     </div>
   );
 };

@@ -3,8 +3,12 @@ export const Season = ({ value, updateSeason }) => {
 
   return (
     <div>
-      <label>Favorite Season:</label>
-      <select value={value} onChange={handleFavoriteSeasonChange}>
+      <label htmlFor="favoriteSeason">Favorite Season:</label>
+      <select
+        id="favoriteSeason"
+        value={value}
+        onChange={handleFavoriteSeasonChange}
+      >
         <option value="">Select a Season</option>
         <option value="spring">Spring</option>
         <option value="summer">Summer</option>

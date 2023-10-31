@@ -3,9 +3,10 @@ export const Age = ({ value, updateAge }) => {
 
   return (
     <div>
-      <label>Age:</label>
+      <label htmlFor="age">Age:</label>
       <input
         type="number"
+        id="age"
         value={value}
         onChange={handleAgeChange}
         min={0}

@@ -3,8 +3,13 @@ export const FavoriteActivity = ({ value, updateActivity }) => {
 
   return (
     <div>
-      <label>Favourite Activity:</label>
-      <input type="text" value={value} onChange={handleActivityChange} />
+      <label htmlFor="favoriteActivity">Favourite Activity:</label>
+      <input
+        type="text"
+        id="favoriteActivity"
+        value={value}
+        onChange={handleActivityChange}
+      />
     </div>
   );
 };
