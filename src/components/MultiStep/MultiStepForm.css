@@ -3,13 +3,14 @@
   width: auto;
   margin: 1em;
   border: 1px solid #707070;
-  padding: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
 
 input,
 select {
   border: 2px solid #555;
-  margin-left: 4px;
+  margin-top: 5px;
 }
 
 button {
@@ -30,11 +31,12 @@ button:hover:enabled {
   margin: 2px;
 }
 
-.summary label {
+.summary > * {
   display: flex;
   flex-direction: column;
 }
 
-.radioGroup > * {
-  padding: 5px;
+label {
+  display: block;
+  margin-top: 1rem;
 }

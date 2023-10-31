@@ -1,7 +1,7 @@
 export const SummaryData = ({ name, value }) => {
   return (
-    <label>
-      {name} : {value}
-    </label>
+    <span>
+      {name}: {value}
+    </span>
   );
 };

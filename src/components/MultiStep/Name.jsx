@@ -4,7 +4,13 @@ export const Name = ({ value, updateName }) => {
   return (
     <div>
       <label htmlFor="name">Name:</label>
-      <input type="text" id="name" value={value} onChange={handleNameChange} />
+      <input
+        type="text"
+        id="name"
+        value={value}
+        autoComplete="given-name"
+        onChange={handleNameChange}
+      />
     </div>
   );
 };

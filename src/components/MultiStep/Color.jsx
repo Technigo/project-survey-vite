@@ -3,8 +3,8 @@ export const Color = ({ value, updateColor }) => {
 
   return (
     <div>
-      <label htmlFor="color">Favorite Color:</label>
-      <section id="color" className="radioGroup">
+      <p>Favorite Color:</p>
+      <section className="radioGroup">
         <label htmlFor="violet" style={{ color: "violet" }}>
           <input
             type="radio"
