@@ -1,9 +1,7 @@
 export const SummaryData = ({ name, value }) => {
   return (
-    <>
-      <label>
-        {name} : {value}
-      </label>
-    </>
+    <label>
+      {name} : {value}
+    </label>
   );
 };
