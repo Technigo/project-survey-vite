@@ -1,4 +1,4 @@
-export const ReasonTravel = ({ value, updateReason }) => {
+export const TravelReason = ({ value, updateReason }) => {
   const handleTravelReasonChange = (e) => updateReason(e.target.value);
 
   return (
@@ -10,9 +10,6 @@ export const ReasonTravel = ({ value, updateReason }) => {
         value={value}
         onChange={handleTravelReasonChange}
       />
-      {/* <input type="radio" value={value}>
-        Personal{" "}
-      </input> */}
     </div>
   );
 };

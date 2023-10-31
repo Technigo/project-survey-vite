@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { TravelDestinationInput } from "./TravelDestinationInput";
-import { ReasonTravel } from "./ReasonTravel";
-import { FavoriteActivity } from "./FavouriteActivity";
+import { TravelDestination } from "./TravelDestination";
+import { TravelReason } from "./TravelReason";
+import { FavoriteActivity } from "./FavoriteActivity";
 import { Age } from "./Age";
 import { Name } from "./Name";
 import { Color } from "./Color";
@@ -43,7 +43,7 @@ export const MultiStepForm = () => {
       name: "Travel destination",
       valueKey: summaryKeys.Destination,
       content: (
-        <TravelDestinationInput
+        <TravelDestination
           value={summary[summaryKeys.Destination]}
           updateDestination={(value) =>
             updateSummary(summaryKeys.Destination, value)
@@ -56,7 +56,7 @@ export const MultiStepForm = () => {
       name: "Travel Reason",
       valueKey: summaryKeys.Reason,
       content: (
-        <ReasonTravel
+        <TravelReason
           value={summary[summaryKeys.Reason]}
           updateReason={(value) => updateSummary(summaryKeys.Reason, value)}
         />
