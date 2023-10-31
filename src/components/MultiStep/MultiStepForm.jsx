@@ -167,7 +167,7 @@ export const MultiStepForm = () => {
       )}
       {isSurveySubmitted && (
         <>
-          <p>Summary:</p>
+          <h1>Summary:</h1>
           <div className="summary">
             {surveyStepContents.map((stepData, index) => (
               <SummaryData
