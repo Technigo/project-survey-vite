@@ -9,15 +9,15 @@ import QuestionLikeMost from "./components/QuestionLikeMost";
 import QuestionGift from "./components/QuestionGift";
 import SurveySummary from "./components/SurveySummary";
 import Footer from "./components/Footer";
-import appImage from "./assets/horizontally-centered-vertical-decoration.png"; // Import the image
+import appImage from "../assets/horizontally-centered-vertical-decoration.png";
 
 
 function App() {
   const [answers, setAnswers] = useState({
     celebrateChristmas: "",
-    excitementLevel: "",
+    excitementLevel: "", 
     selectedGender: "",
-    selectedAge: "",
+    selectedAge: "", 
     option: [],
     likedOption: "",
   });
@@ -26,11 +26,13 @@ function App() {
 
   const handleAnswer = (question, answer) => {
     if (question === "") {
+    
       setAnswers((prevAnswers) => ({
         ...prevAnswers,
         excitementLevel: answer,
       }));
     } else {
+      
       setAnswers((prevAnswers) => ({
         ...prevAnswers,
         [question]: answer,
@@ -44,13 +46,11 @@ function App() {
 
   const displaySurvey = () => {
     if (answers.celebrateChristmas === "No") {
+     
       return (
         <div id="survey">
           <SurveyInfo />
-          <p>
-            Thank you for your time. You do not meet the requirements for this
-            survey. Maybe next time?
-          </p>
+          <p>Thank you for your time. You do not meet the requirements for this survey. Maybe next time?</p>
         </div>
       );
     }
@@ -65,7 +65,7 @@ function App() {
           celebrateChristmas={answers.celebrateChristmas}
         />
         <QuestionExcited
-          onAnswer={(answer) => handleAnswer("", answer)}
+          onAnswer={(answer) => handleAnswer("", answer)} 
           excitementLevel={answers.excitementLevel}
         />
         <QuestionGender
@@ -124,4 +124,3 @@ function App() {
 }
 
 export default App;
-
