@@ -7,13 +7,27 @@ function Header() {
 
   // Calculate the number of days until Christmas
   const calculateDaysUntilChristmas = () => {
-    // Your calculation logic here
+    // Get the current date
+    const currentDate = new Date();
+
+    // Calculate Christmas date for the current year
+    const christmasDate = new Date(currentDate.getFullYear(), 11, 25); // December is month 11
+
+    // If Christmas has passed this year, calculate for the next year
+    if (currentDate > christmasDate) {
+      christmasDate.setFullYear(currentDate.getFullYear() + 1);
+    }
+
+    // Calculate the difference in days
+    const daysRemaining = Math.ceil((christmasDate - currentDate) / (1000 * 60 * 60 * 24));
+
+    return daysRemaining;
   };
 
   // Use effect to set the days until Christmas
   useEffect(() => {
     setDaysUntilChristmas(calculateDaysUntilChristmas());
-  }, []);
+  }, []); // Empty dependency array ensures it runs only once when the component mounts
 
   // Component JSX
   return (
@@ -22,7 +36,6 @@ function Header() {
         <img src={headerImage} alt="Header Decoration" /> {/* Image included here */}
         <h1><a>The Great Christmas Survey</a></h1>
         <p>It's 🎅{daysUntilChristmas}🎅 days until Christmas!</p>
-        {/* ... other components or HTML ... */}
       </div>
     </header>
   );
