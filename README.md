@@ -2,7 +2,7 @@
   <a href="">
     <img src="/src/assets/survey.svg" alt="Project Banner Image">
   </a>
-</h1>
+</h1> 
 
 # Survey Project
 
