@@ -10,11 +10,17 @@ function SurveySummary({ surveyAnswers }) {
     likedOption,
   } = surveyAnswers;
 
-  // Determine the article ("a" or "an") based on the selectedGender
-  
-  const isVowelSound = ["Elf", "Other", "Reindeer"].includes(selectedGender);
-  const article = isVowelSound ? "an" : "a";
-//In a perfect code there wouldn´t be an ay before Santa Clause/Mrs Clause, but we didn't figure that one out//
+  const getArticle = (gender) => {
+    if (gender === "Santa Claus" || gender === "Mrs. Claus") {
+      return ""; // No article for Santa Claus or Mrs. Claus
+    }
+    const vowels = ["a", "e", "i", "o", "u"];
+    const firstLetter = gender.charAt(0).toLowerCase();
+    return vowels.includes(firstLetter) ? "an" : "a";
+  };
+
+  const article = getArticle(selectedGender);
+
   return (
     <div id="survey">
       <h2>Here's a quick review of your answers</h2>
@@ -36,3 +42,4 @@ function SurveySummary({ surveyAnswers }) {
 }
 
 export default SurveySummary;
+

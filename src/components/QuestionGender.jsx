@@ -1,5 +1,5 @@
 function QuestionGender({ selectedGender, onGenderChange }) {
-  const genderOptions = ['Mrs Clause', 'Santa Clause', 'Other', 'Elf', 'Reindeer'];
+  const genderOptions = ['Mrs Clause', 'Santa Clause', ' An elf', 'A reindeer', 'The Grinch', 'Other', ];
 
   const handleGenderChange = (event) => {
     const selectedGenderOption = event.target.value;
@@ -13,12 +13,14 @@ function QuestionGender({ selectedGender, onGenderChange }) {
         return 'You selected Mrs. Clause - The one who runs the show!';
       case 'Santa Clause':
         return 'You selected Santa Clause - Ho ho ho!';
-      case 'Other':
-        return 'You selected Other - Magical!';
       case 'Elf':
         return 'You selected Elf - Do you know Buddy?';
       case 'Reindeer':
         return 'You selected Reindeer - Flying high!';
+        case 'The Grinch':
+          return 'You selected The Grinch- Keep it green!';
+        case 'Other':
+          return 'You selected Other - Magical!';
       default:
         return '';
     }
@@ -26,7 +28,7 @@ function QuestionGender({ selectedGender, onGenderChange }) {
 
   return (
     <div>
-      <h2>How do you identify?</h2>
+      <h2>I can see myself as?</h2>
       <select
         value={selectedGender}
         onChange={handleGenderChange}

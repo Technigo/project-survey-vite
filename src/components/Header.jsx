@@ -11,7 +11,7 @@ function Header() {
     const currentDate = new Date();
 
     // Calculate Christmas date for the current year
-    const christmasDate = new Date(currentDate.getFullYear(), 11, 25); // December is month 11
+    const christmasDate = new Date(currentDate.getFullYear(), 11, 24); // December is month 11
 
     // If Christmas has passed this year, calculate for the next year
     if (currentDate > christmasDate) {
