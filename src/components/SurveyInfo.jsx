@@ -1,14 +1,15 @@
-//A little bit about the survey and why it's done
 import React from "react";
 
-function SurveyInfo() {
+function SurveyInfo({ showInfo }) {
   return (
     <div className="survey-info">
-      <p>
-        Welcome to The Great Christmas Survey!
-        <br></br>Please tell us more about your thoughts on this most Magical
-        Holiday of all!
-      </p>
+      {showInfo && (
+        <p>
+          Welcome to The Great Christmas Survey!
+          <br></br>Please tell us more about your thoughts on this most Magical
+          Holiday of all!
+        </p>
+      )}
     </div>
   );
 }
