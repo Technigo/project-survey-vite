@@ -12,7 +12,7 @@ export const App = () => {
         <div className="form-background">
           <h1 className={"the-header " + (lastP ? "hidden" : "")}>FIND YOUR DRINK</h1>
           <h1 className={"the-header "+ (lastP ? "" : "hidden")}>{lastHeader}</h1>
-          <Form headerVisibleControl={setLastP} headerContent={setLastHeader} />
+          <Form headerVisibleControl={setLastP} headerContent={setLastHeader} summaryPage={lastP} />
         </div>
       </div>
       <Footer />

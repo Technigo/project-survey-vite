@@ -10,8 +10,8 @@ export const DrinkSuggestion = ({ age, preference, spirit }) => {
     if (age < 18) return (
         <>
             <div className="the-drink">
-                <img className="the-drink-pic" src={chosenDrink[12].drinkPicURL} alt="picture of drink" />
-                <h2>{chosenDrink[12].name.toUpperCase()}</h2>
+                <img className="the-drink-pic" src={DataOfDrinks[12].drinkPicURL} alt="picture of drink" />
+                <h2>{DataOfDrinks[12].name.toUpperCase()}</h2>
             </div>
         </>
     )

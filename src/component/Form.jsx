@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
 import { SpiritQuestion } from "./SpiritQuestion";
@@ -6,9 +7,10 @@ import { AgeQuestion } from "./AgeQuestion";
 import { PreferenceQuestion } from "./PreferenceQuestion";
 import { LastPage } from "./LastPage";
 
-export const Form = ({ headerVisibleControl, headerContent}) => {
-  let setLastP = headerVisibleControl
-  let setLastHeader = headerContent
+export const Form = ({ headerVisibleControl, headerContent, summaryPage }) => {
+  let setLastP = headerVisibleControl;
+  let setLastHeader = headerContent;
+  let lastP = summaryPage;
 
   //Set state to store form data
   const [formData, setFormData] = useState({
@@ -31,14 +33,24 @@ export const Form = ({ headerVisibleControl, headerContent}) => {
     nextStep();
   };
 
-  /// GOING BACK AND FORTH BETWEENQUESTIONS
+  const handleTryAgain = () => {
+    setFormData({
+      name: "",
+      age: "",
+      preference: "",
+      spirit: "",
+    })
+    setLastP(false)
+    setCurrentStep(1)
+  }
+
+  /// GOING BACK AND FORTH BETWEEN QUESTIONS
   // State to track the current step in the form
   const [currentStep, setCurrentStep] = useState(1);
   // Function to move to the next step in the form
   const nextStep = () => {
     if (currentStep === 1 && !isAgeValid) {
-      alert("You must be 18 or older to proceed!");
-      return;
+      alert("Should you really be doing this, you're not old enough!");
     }
     if (currentStep < 5) setCurrentStep(currentStep + 1);
   };
@@ -50,6 +62,7 @@ export const Form = ({ headerVisibleControl, headerContent}) => {
   return (
     <div className="theFormContainer">
       <form id="theForm" onSubmit={(event) => event.preventDefault()}>
+
         {/* Render the Name & Age component on step 1 */}
         <div className={`question ${currentStep !== 1 ? "hidden" : ""}`}>
           {currentStep === 1 && (
@@ -88,22 +101,32 @@ export const Form = ({ headerVisibleControl, headerContent}) => {
         </div>
 
         {/* Buttons for each page. "Back"-button is there, but not on page 1. "Next"-button becomes "submit"-button on last page */}
-        <div className="button-container">
-          {currentStep > 1 && (
-            <button onClick={prevStep} className="button back">
-              Back
+        {
+          !lastP &&
+            <div className="button-container">
+              { currentStep > 1 && (
+                <button onClick={prevStep} className="button back">
+                  Back
+                </button>
+              )}
+              { currentStep < 3 ? (
+                <button onClick={nextStep} className="button next">
+                  Next
+                </button>
+              ) : (
+                <button onClick={handleSubmit} className="button submit">
+                  WHAT DRINK SUITS YOU?
+                </button>
+              )}
+            </div>
+        }
+        {
+          lastP && <div className="button-container">
+            <button onClick={handleTryAgain} className="button">
+              Try again
             </button>
-          )}
-          {currentStep < 3 ? (
-            <button onClick={nextStep} className="button next">
-              Next
-            </button>
-          ) : (
-            <button onClick={handleSubmit} className="button submit">
-              WHAT DRINK SUITS YOU?
-            </button>
-          )}
-        </div>
+          </div>
+        }
       </form>
     </div>
   );

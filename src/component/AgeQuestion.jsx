@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
+
 export const AgeQuestion = ({ value, setValue, setIsAgeValid }) => {
-  const ageInput = (e) => {
-    const ageValue = e.target.value;
+  const ageInput = (event) => {
+    const ageValue = event.target.value;
     setValue("age", ageValue);
 
     if (parseInt(ageValue, 10) < 18) {

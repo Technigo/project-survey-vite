@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const preferences = ["cocktails", "tropical drinks", "tumbler"];
 const imageURL = ["./cocktail.png", "./tropical.png", "./tumbler.png"];
 

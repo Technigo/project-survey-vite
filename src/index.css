@@ -28,6 +28,7 @@ body {
   background-image: url("https://static.thatsup.co/content/img/place/l/i/liberdade-20220914-19.jpg");
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
   object-position: 50% 50%;
 }
 
