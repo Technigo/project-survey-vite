@@ -1,11 +1,6 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/survey.svg" alt="Project Banner Image">
-  </a>
-</h1>
 
 # Survey Project
-## Getting Started with the Project
+The assignment was to do a survey and since both Ulrika and I love christmas, we thought a christmas survey would be fun to do.
 
 ### Dependency Installation & Startup Development Server
 
@@ -18,14 +13,12 @@ npm i && code . && npm run dev
 ```
 
 ### The Problem
-
+This was one of the first weeks with React. The biggest issue we had was firstly, what questions and later on when we wanted to bring on the slider how to implement it actually knowing the level. That took some time. We also struggled a bit with the path to the image and that one we actually solved afterwards.
 
 ### View it live
 
-https://stunning-faloodeh-3e176a.netlify.app/ - as of now I'm not getting the header to work, it works locally and I'm sure this is regular issue.
+https://stunning-faloodeh-3e176a.netlify.app/ 
 
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+### Links
+Alexandra Meija portfolio https://alexandrameijaportfolio.netlify.app/
+Ulrika Gålnander portfolio
