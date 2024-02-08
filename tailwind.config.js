@@ -7,7 +7,7 @@ export default {
   ],
   theme: {
     backgroundImage: {
-      'cinema': "url('./CinemaBackground.jpg')",
+      'cinema': "url('/CinemaBackground.jpg')",
     },
     extend: {},
   },
