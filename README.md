@@ -14,7 +14,7 @@ I did sometning that the radio buttons are not highlighted when i clicked on the
 
 ### View it live
 
-here you can see it live: https://app.netlify.com/sites/barbie-survey-evelyndelcarmen/configuration/general
+here you can see it live: https://barbie-survey-evelyndelcarmen.netlify.app/
 
 ## Instructions
 
