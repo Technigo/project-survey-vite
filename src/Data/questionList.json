@@ -3,85 +3,85 @@
     "questions" :
         [ {
             "id":"q1",
-            "question": "If you could choose the location for your dream home, where would it be? ()",
+            "questionText": "If you could choose the location for your dream home, where would it be?",
             "options": [
                 {"id":"q1a1",
-                  "option":"Tropical island paradise"},
+                  "optionText":"Tropical island paradise"},
                 {"id":"q1a2",
-                  "option":"Flower meadow with snow-capped peaks"},
+                  "optionText":"Flower meadow with snow-capped peaks"},
                 {"id":"q1a3",
-                  "option":"Historic city with cobblestone streets"},
+                  "optionText":"Historic city with cobblestone streets"},
                 {"id":"q1a4",
-                  "option":"Remote countryside by nature"}
+                  "optionText":"Remote countryside by nature"}
             ]
         },
 
         {
             "id":"q2",
-            "question": "What interior design color theme would you prefer for your dream home?",
+            "questionText": "What interior design color theme would you prefer for your dream home?",
             "options": [
                 {"id":"q2a1",
-                  "option":"choose your color theme in the color wheel"}
+                  "optionText":"choose your color theme in the color wheel"}
             ]
           },
 
         {
             "id":"q3",
-            "question": "What personal life features would be essential in your dream home? (Drag over all that apply)",
+            "questionText": "What personal life features would be essential in your dream home? (Drag over all that apply)",
             "options": [
                 {"id":"q3a1",
-                  "option":"Beautiful garden or green space"},
+                  "optionText":"Beautiful garden or green space"},
                 {"id":"q3a2",
-                  "option":"Nice kitchen with a chef"},
+                  "optionText":"Nice kitchen with a chef"},
                 {"id":"q3a3",
-                  "option":"Spa or home gym"},
+                  "optionText":"Spa or home gym"},
                 {"id":"q3a4",
-                  "option":"Home theater with endless movies"},
+                  "optionText":"Home theater with endless movies"},
                 {"id":"q3a5",
-                  "option":"Open outdoor space for pets"},
+                  "optionText":"Open outdoor space for pets"},
                 {"id":"q3a6",
-                  "option":"High-speed internet"},
+                  "optionText":"High-speed internet"},
                 {"id":"q3a7",
-                  "option":"Smart home system"},
+                  "optionText":"Smart home system"},
                 {"id":"q3a8",
-                  "option":"Huge bookshelf with a cozy reading nook"},
+                  "optionText":"Huge bookshelf with a cozy reading nook"},
                 {"id":"q3a9",
-                  "option":"Big windows for natural light"},
+                  "optionText":"Big windows for natural light"},
                 {"id":"q3a10",
-                  "option":"Equipped workshop of hobbies"}
+                  "optionText":"Equipped workshop of hobbies"}
             ]
           },
 
         {
             "id":"q4",
-            "question":"How important is having a dedicated home office or workspace to you?",
+            "questionText":"How important is having a dedicated home office or workspace to you?",
             "options": [
                 {"id":"q4a1",
-                  "option":"points:"}
+                  "optionText":"points:"}
             ]
         },
 
        {    
             "id":"q5",  
-            "question":"If you could invite someone to your dream accommodation for a special room tour, who would it be?",
+            "questionText":"If you could invite someone to your dream accommodation for a special room tour, who would it be?",
             "options":[
                 {"id":"q5a1",
-                  "option":"A close friend or family member"},
+                  "optionText":"A close friend or family member"},
                 {"id":"q5a2",
-                  "option":"A total stranger for a surprise"}
+                  "optionText":"A total stranger for a surprise"}
             ]
         },
 
         {   
             "id":"q6",
-            "question":"If you could invite anyone, living or dead, for the special room tour, who would it be? (Only if you chose stranger in the previous question)",
+            "questionText":"If you could invite anyone, living or dead, for the special room tour, who would it be? (Only if you chose stranger in the previous question)",
             "options":[
                 {"id":"q6a1",
-                  "option":"A historical figure for intriguing conversations"},
+                  "optionText":"A historical figure for intriguing conversations"},
                 {"id":"q6a2",
-                  "option":"A celebrity for a touch of glamour and excitement"},
+                  "optionText":"A celebrity for a touch of glamour and excitement"},
                 {"id":"q6a2",
-                  "option":"A fictional character for a unique and imaginative experience"}
+                  "optionText":"A fictional character for a unique and imaginative experience"}
             ]
         }
     ]
