@@ -1,11 +1,4 @@
-export const ColorType = ({question, index,setOptionSummary}) => {
-
-    const handleChange = (event)=>{
-        const value = event.target.value;
-        console.log('Index:', index); 
-        console.log('Selected Option:', value); 
-        setOptionSummary(value);
-    }
+export const ColorType = ({question, handleChange}) => {
 
     return (
         

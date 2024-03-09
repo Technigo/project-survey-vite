@@ -1,11 +1,5 @@
-export const DropdownType = ({question, index,setOptionSummary}) => {
+export const DropdownType = ({question, handleChange}) => {
 
-    const handleChange = (event)=>{
-        const value = event.target.value;
-        console.log('Index:', index); 
-        console.log('Selected Option:', value); 
-        setOptionSummary(value);
-    }
 
     return (
         <section className={`input-section ${question.id}`}>
