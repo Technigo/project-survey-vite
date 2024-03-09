@@ -1,3 +1,11 @@
+import { Heading } from './assets/Components/Heading/Heading'
+import { Form } from './assets/Components/Form/Form'
+
 export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
-};
+  return (
+    <div>
+      <Heading />
+      <Form />
+    </div>
+  )
+}
