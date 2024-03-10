@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #7e1639;
+}
+.heroSection {
+  text-align: center;
+  color: white;
+  background-color: #7e1639;
+  padding: 30px;
+}
