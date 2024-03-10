@@ -1,0 +1,13 @@
+.formwrapper{
+	color: #000;;
+	background:#fff;
+
+}
+
+.hidden{
+visibility: hidden;
+}
+
+.visible{
+visibility: visible;
+}
