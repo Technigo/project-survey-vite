@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Result } from '../Result/Result'
 import './form.css'
 const selectedCups = ['1 cup', '2 cups', '3 cups', '4 cups or more']
