@@ -1,19 +1,18 @@
 
 import { useState } from "react";
-import ReactDOM from 'react-dom/client';
 import "./app.css";
 
 
-let toggle = "visible"
+
 export const App = () => {
-	//dropdown form
+	//dropdown, input, checkbox, radiobuttons and visibility
 	const [dropdown, setDropdown] = useState("");
 	const [name, setName] = useState("");
 	const [check, setChecked] = useState("");
 	const [value, setRadio] = useState("");
 	const [toggle, setClear] = useState("visible");
-
-
+	const [visible, setVisible] = useState("hidden");
+	// handle states
 	const handleChange = (e) => {
 		//prevent reload
 		e.preventDefault();
@@ -24,11 +23,17 @@ export const App = () => {
 		const formJson = Object.fromEntries(formData.entries());
 		console.log(formJson);
 	}
-//hide form on post
-	const toggleVisible = () => {
+	//hide form on post
+	const toggleInvisible = () => {
 		setClear("hidden");
+		toggleVisible()
 	}
-// reset form on refresh
+
+	const toggleVisible = () => {
+		setVisible("visible")
+	}
+
+	// reset form on refresh
 	function refreshPage() {
 		window.location.reload(false);
 	}
@@ -36,25 +41,37 @@ export const App = () => {
 	return (
 		<div className="formwrapper">
 			<div className={toggle}>
+
 				<form method="post" onSubmit={handleChange}>
 					<label>
 						Enter your name:
 						<input
 							value={name}
 							name="username"
-
 							onChange={e => setName(e.target.value)}
 						/>
 					</label>
-					<select type="dropdown" name="dropdownOption" onSubmit={handleChange} onChange={e => setDropdown(e.target.value)}  >
+
+					<select
+						type="dropdown"
+						name="dropdownOption"
+						onSubmit={handleChange}
+						onChange={e => setDropdown(e.target.value)}
+					>
 						<option name="dropdown" dropdown="1" value="1">1</option>
 						<option name="dropdown" dropdown="2" value="2">2</option>
 						<option name="dropdown" dropdown="3" value="3">3</option>
 						<option name="dropdown" dropdown="4" value="4">4</option>
 					</select >
-
 					<label>
-						Checkbox: <input type="checkbox" name="myCheckbox" check="checked" onSubmit={handleChange} onChange={e => setChecked(e.target.value)} />
+						Checkbox:
+						<input
+							type="checkbox"
+							name="myCheckbox"
+							check="checked"
+							onSubmit={handleChange}
+							onChange={e => setChecked(e.target.value)}
+						/>
 					</label>
 					<hr />
 					<p>
@@ -94,10 +111,10 @@ export const App = () => {
 					<hr />
 
 
-					<button type="submit" onClick={toggleVisible}>Submit form</button>
+					<button type="submit" onClick={toggleInvisible}>Submit form</button>
 				</form>
 			</div>
-			<div className="userChoices">
+			<div className={visible}>
 				{setName !== "" && <p>Your name is {name}</p>}
 				{setDropdown !== "" && <p>You chose {dropdown}</p>}
 				{setChecked !== "" && <p>You chose {check}</p>}

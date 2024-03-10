@@ -5,10 +5,13 @@
 }
 
 .hidden{
-
 display:none;
 }
 
 .visible{
 visibility: visible;
+}
+
+.notvisible{
+	visibility: hidden;
 }
