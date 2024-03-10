@@ -7,6 +7,12 @@ import { RadioType } from "./InputTypes/RadioType"
 export const InputSection = ({question, index, setOptionSummary}) =>{
 //a property should be passed in here to decide which question id it is, so the correct option can be selected
 
+const handleDropDownChange = (value)=>{
+    console.log('Index:', index); 
+    console.log('Selected Option:', value); 
+    setOptionSummary(value);
+}
+
 const handleChange = (event)=>{
     const value = event.target.value;
     console.log('Index:', index); 
@@ -18,7 +24,7 @@ const handleChange = (event)=>{
     return (
         <>
             { index === 0 && 
-                <DropdownType question={question} handleChange={handleChange}/>
+                <DropdownType question={question} handleDropDownChange={handleDropDownChange}/>
             }
 
             { index === 1 && 

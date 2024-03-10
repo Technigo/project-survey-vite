@@ -1,22 +1,27 @@
-export const DropdownType = ({question, handleChange}) => {
+import { useState } from "react"
 
+export const DropdownType = ({question, handleDropDownChange}) => {
+
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <section className={`input-section ${question.id}`}>
-            <label htmlFor={question.id}>{question.questionText}</label>
-                <input 
-                    type="text" 
-                    id={question.id} 
-                    name={question.id} 
-                    list={`${question.id}-list`}
-                    placeholder="Choose your dream home"
-                    onChange={handleChange}
-                />
-                <datalist id={`${question.id}-list`}>
-                    {question.options.map((option) => (
-                        <option key={option.id} value={option.optionText} />
-                    ))}
-                </datalist>
+            <p>{question.questionText}</p>
+                <button type="button" onClick={()=>setIsOpen(!isOpen)}>Selec your dream home</button>
+                {isOpen && (
+                    <ul>
+                        {question.options.map((option)=>(
+                            <li 
+                                key={option.id} 
+                                value={option.optionText} 
+                                onClick={()=>handleDropDownChange(option.optionText)}>
+                                {option.optionText}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+
+               
         </section>
     )
 }
