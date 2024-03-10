@@ -24,21 +24,14 @@ export const App = () => {
 		const formJson = Object.fromEntries(formData.entries());
 		console.log(formJson);
 	}
-
+//hide form on post
 	const toggleVisible = () => {
-		if (toggle === "visible") {
-			setClear("hidden");
-		}
-		else if (toggle === "hidden") {
-			setClear("visible")
-
-		}
+		setClear("hidden");
 	}
-
+// reset form on refresh
 	function refreshPage() {
 		window.location.reload(false);
 	}
-
 
 	return (
 		<div className="formwrapper">
@@ -53,18 +46,15 @@ export const App = () => {
 							onChange={e => setName(e.target.value)}
 						/>
 					</label>
-					{setName !== "" && <p>Your name is {name}</p>}
 					<select type="dropdown" name="dropdownOption" onSubmit={handleChange} onChange={e => setDropdown(e.target.value)}  >
 						<option name="dropdown" dropdown="1" value="1">1</option>
 						<option name="dropdown" dropdown="2" value="2">2</option>
 						<option name="dropdown" dropdown="3" value="3">3</option>
 						<option name="dropdown" dropdown="4" value="4">4</option>
 					</select >
-					{setDropdown !== "" && <p>You chose {dropdown}</p>}
 
 					<label>
 						Checkbox: <input type="checkbox" name="myCheckbox" check="checked" onSubmit={handleChange} onChange={e => setChecked(e.target.value)} />
-						{setChecked !== "" && <p>You chose {check}</p>}
 					</label>
 					<hr />
 					<p>
@@ -101,12 +91,17 @@ export const App = () => {
 						</label>
 
 					</p>
-					{setRadio !== "" && <p>You chose {value}</p>}
 					<hr />
 
 
 					<button type="submit" onClick={toggleVisible}>Submit form</button>
 				</form>
+			</div>
+			<div className="userChoices">
+				{setName !== "" && <p>Your name is {name}</p>}
+				{setDropdown !== "" && <p>You chose {dropdown}</p>}
+				{setChecked !== "" && <p>You chose {check}</p>}
+				{setRadio !== "" && <p>You chose {value}</p>}
 			</div>
 			<button type="reset" onClick={refreshPage} >Reset form</button>
 		</div >
