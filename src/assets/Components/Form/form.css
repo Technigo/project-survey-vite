@@ -1,10 +1,14 @@
 form {
+  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 button {
+  width: 300px;
+  height: 60px;
+  margin-top: 20px;
   background-color: #7e1639;
   color: white;
   padding: 10px 20px;
@@ -27,6 +31,7 @@ button:invalid {
 }
 
 input {
+  width: 200px;
   outline: none;
   color: #7e1639;
   padding: 10px 20px;
@@ -95,4 +100,30 @@ select:user-valid {
   color: white;
   background-color: #68157a;
   border: solid #68157a;
+}
+
+@media (min-width: 669px) and (max-width: 1024px) {
+  form {
+    margin: 30px 100px;
+  }
+
+  button {
+    width: 500px;
+    height: 60px;
+  }
+  input {
+    width: 300px;
+  }
+}
+@media (min-width: 1025px) {
+  form {
+    margin: 30px 300px;
+  }
+  button {
+    width: 600px;
+    height: 60px;
+  }
+  input {
+    width: 400px;
+  }
 }

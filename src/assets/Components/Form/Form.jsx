@@ -44,7 +44,10 @@ export const Form = () => {
       {!formSubmitted ? ( // Render the form if formSubmitted is false
         <form onSubmit={handleSubmit}>
           <label>
-            <h1> 1.What type of coffee do you prefer?</h1>{' '}
+            <h1>
+              {' '}
+              1.<br></br>What type of coffee do you prefer?
+            </h1>{' '}
             <input
               type="text"
               value={favouriteCoffee}
@@ -72,7 +75,9 @@ export const Form = () => {
             </label>
           ))}
           <label>
-            <h1>3.What motivates you to drink coffee?</h1>
+            <h1>
+              3.<br></br>What motivates you to drink coffee?
+            </h1>
             <select
               onChange={handleDropdownInput}
               value={selectedReason}
@@ -86,7 +91,9 @@ export const Form = () => {
               <option value="Warmth/comfort">Warmth/comfort</option>
             </select>
           </label>
-          <h1>4.When do you usually drink coffee?</h1>
+          <h1>
+            4.<br></br>When do you usually drink coffee?
+          </h1>
           {selectedTimes.map((time) => (
             <label key={time}>
               <input

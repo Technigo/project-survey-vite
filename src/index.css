@@ -13,14 +13,67 @@ code {
 }
 
 body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #7e1639;
+  text-align: center;
+  font-size: 15px;
+}
+h1 {
+  font-size: 20px;
+  margin-top: 20px;
 }
 .heroSection {
   text-align: center;
   color: white;
   background-color: #7e1639;
-  padding: 30px;
+  padding: 20px 30px;
+}
+.heroSection h2 {
+  font-weight: 400;
+  font-size: 15px;
+}
+.resultWrapper {
+  margin: 30px;
+}
+.footer {
+  padding: 20px 20px;
+  color: white;
+  background-color: #7e1639;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+a {
+  color: white;
+}
+@media (min-width: 669px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  .heroSection h2 {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 25px;
+    margin-top: 30px;
+  }
+}
+@media (min-width: 1025px) {
+  body {
+    font-size: 20px;
+  }
+  .heroSection h2 {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 30px;
+    margin-top: 35px;
+  }
+  .footer {
+    flex-direction: row;
+    padding: 40px;
+  }
 }
