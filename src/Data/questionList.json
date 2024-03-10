@@ -27,7 +27,7 @@
 
         {
             "id":"q3",
-            "questionText": "What personal life features would be essential in your dream home? (Drag over all that apply)",
+            "questionText": "What personal life features would be essential in your dream home?",
             "options": [
                 {"id":"q3a1",
                   "optionText":"Beautiful garden or green space"},

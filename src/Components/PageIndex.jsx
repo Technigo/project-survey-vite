@@ -19,6 +19,7 @@ export const PageIndex = () =>{
     const currentQuestion = data.questions[currentQuestionIndex];
     
     const handleOptionSummary = (value) => {
+        console.log(value);
       const updatedOptionSummary = [...optionSummary];
 
       updatedOptionSummary[currentQuestionIndex] = value;
@@ -32,7 +33,12 @@ export const PageIndex = () =>{
         //send out correct data from here
         <>
             <form>
-                <InputSection question={currentQuestion} index={currentQuestionIndex} setOptionSummary={handleOptionSummary} />
+                <InputSection 
+                    question={currentQuestion} 
+                    index={currentQuestionIndex} 
+                    optionSummary={optionSummary}
+                    setOptionSummary={setOptionSummary}
+                    handleOptionSummary={handleOptionSummary} />
 
                 {currentQuestionIndex > 0 && <button type="button" onClick={handlePreviousQuestion}>Previous question</button>}
 

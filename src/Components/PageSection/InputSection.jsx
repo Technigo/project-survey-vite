@@ -1,23 +1,21 @@
 import { DropdownType } from "./InputTypes/DropdownType"
 import { ColorType } from "./InputTypes/ColorType"
-import { DragType } from "./InputTypes/DragType"
 import { RangeType } from "./InputTypes/RangeType"
 import { RadioType } from "./InputTypes/RadioType"
 
-export const InputSection = ({question, index, setOptionSummary}) =>{
-//a property should be passed in here to decide which question id it is, so the correct option can be selected
+export const InputSection = ({question, index, handleOptionSummary}) =>{
 
 const handleDropDownChange = (value)=>{
     console.log('Index:', index); 
     console.log('Selected Option:', value); 
-    setOptionSummary(value);
+    handleOptionSummary(value);
 }
 
 const handleChange = (event)=>{
     const value = event.target.value;
     console.log('Index:', index); 
     console.log('Selected Option:', value); 
-    setOptionSummary(value);
+    handleOptionSummary(value);
 }
 
 
@@ -32,7 +30,7 @@ const handleChange = (event)=>{
             }
             
             { index === 2 && 
-                <DragType question={question} handleChange={handleChange}/>
+                <RadioType question={question} handleChange={handleChange}/>
             }
 
             { index === 3 && 
