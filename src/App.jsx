@@ -1,38 +1,13 @@
-import { useState } from "react";
-import SurveyForm from "./SurveyForm";
-import SurveySummary from "./SurveySummary";
-import PropTypes from "prop-types";
+import { SurveyForm } from "./SurveyForm";
 
-function App() {
-  const [surveySubmitted, setSurveySubmitted] = useState(false);
-  const [responses, setResponses] = useState({
-    favoriteFood: "",
-    cuisinePreference: "",
-    foodReason: "",
-  });
-
-  const handleSubmit = (answers) => {
-    setResponses(answers);
-    setSurveySubmitted(true);
-  };
-
+const App = () => {
   return (
-    <div>
-      {!surveySubmitted ? (
-        <SurveyForm onSubmit={handleSubmit} />
-      ) : (
-        <SurveySummary responses={responses} />
-      )}
+    <div className="container">
+      <h1>Break the ice survey</h1>
+      <SurveyForm />
     </div>
   );
-}
-
-SurveySummary.propTypes = {
-  responses: PropTypes.shape({
-    favoriteFood: PropTypes.string,
-    cuisinePreference: PropTypes.string,
-    foodReason: PropTypes.string,
-  }).isRequired,
 };
 
+//why "export defalut" ?? 
 export default App;

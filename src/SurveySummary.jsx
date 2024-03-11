@@ -1,19 +1,27 @@
 import PropTypes from "prop-types";
-function SurveySummary({ responses }) {
+
+export const SurveySummary = ({ surveyData, steps }) => {
   return (
     <div>
       <h2>Survey Summary</h2>
-      {/* Display responses*/}
+      <ul>
+        {steps.map((step) => (
+          <li key={step.valueKey}>
+            <strong>{step.question}</strong>:{" "}
+            {surveyData[step.valueKey] || "Not answered"}
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
-
-SurveySummary.propTypes = {
-  responses: PropTypes.shape({
-    favoriteFood: PropTypes.string.isRequired,
-    cuisinePreference: PropTypes.string.isRequired,
-    foodReason: PropTypes.string.isRequired,
-  }).isRequired,
 };
 
-export default SurveySummary;
+SurveySummary.propTypes = {
+  surveyData: PropTypes.object.isRequired,
+  steps: PropTypes.arrayOf(
+    PropTypes.shape({
+      valueKey: PropTypes.string.isRequired,
+      question: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
