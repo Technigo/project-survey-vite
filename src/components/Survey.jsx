@@ -1,6 +1,6 @@
-import { Level } from "./survey-components/Level"
+import { Level } from "./survey-components/Level";
 import { Toppings } from "./survey-components/toppings";
-import { Location } from "./survey-components/Location"
+import { Location } from "./survey-components/location";
 
 export const Survey = () => {
   return (
