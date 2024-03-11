@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Result } from '../Result/Result'
 import './form.css'
+import { ProgressBar } from '../ProgressBar/ProgressBar'
+
 const selectedCups = ['1 cup', '2 cups', '3 cups', '4 cups or more']
 const selectedTimes = ['Morning', 'Mid-morning', 'Afternoon', 'Evening']
 export const Form = () => {
