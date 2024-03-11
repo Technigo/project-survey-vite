@@ -10,6 +10,9 @@ export const App = () => {
         <label for="bestThing">What's the best thing about you?</label>
         <input type="text" id="bestThing" name="bestThing" />
       </div>
+      <div>
+        <input type="submit" value="Submit" />
+      </div>
     
       
     </form>
