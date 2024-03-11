@@ -5,6 +5,10 @@ form {
   justify-content: center;
   align-items: center;
 }
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+}
 button {
   width: 300px;
   height: 60px;
@@ -14,7 +18,8 @@ button {
   padding: 10px 20px;
   border-radius: 6px;
   border: solid #7e1639;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   font-weight: 400;
   font-style: normal;
 }
@@ -37,7 +42,8 @@ input {
   padding: 10px 20px;
   border-radius: 6px;
   border: solid #7e1639;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   font-weight: 400;
   font-style: normal;
 }
@@ -87,7 +93,8 @@ select {
   padding: 10px 20px;
   border-radius: 6px;
   border: solid #7e1639;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   font-weight: 400;
   font-style: normal;
 }
