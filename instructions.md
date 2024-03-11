@@ -65,3 +65,10 @@ So you’ve completed the requirements? Great job! Ensure you've committed and p
   }
   ```
   As always, there are many ways to approach this! This is just one suggestion.
+
+
+### ROADMAP
+
+- Acceptable pizza toppings
+- Country of residence. Dropdown?
+- Nivå av pizza-ätanade. Radio buttons
