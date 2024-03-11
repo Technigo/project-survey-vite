@@ -145,7 +145,7 @@ export const Form = () => {
           coffee={favouriteCoffee}
           cups={selectedCup}
           reason={selectedReason}
-          time={selectedTime}
+          time={selectedTime.join(', ')}
         />
       )}
     </div>
