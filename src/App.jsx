@@ -1,3 +1,9 @@
-export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
-};
+import { MultiStepFrom } from "./components/multiStepForm";
+
+export function App() {
+  return (
+    <div className="wrapper">
+      <MultiStepFrom />
+    </div>
+  );
+}
