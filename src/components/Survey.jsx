@@ -1,5 +1,5 @@
 import { Level } from "./survey-components/Level";
-import { Toppings } from "./survey-components/toppings";
+import { Choices } from "./survey-components/Choices";
 import { Location } from "./survey-components/location";
 
 export const Survey = () => {
@@ -7,7 +7,7 @@ export const Survey = () => {
     <div className="survey">
           <p>Survey component</p>
           <Level />
-          <Toppings />
+          <Choices />
           <Location />
     </div>
   );
