@@ -32,16 +32,17 @@ code {
 width: 100%;
 padding: 6px 10px;
 margin: 10px 0;
-border: 1px solid #ddd;
+border: 1px solid #dddddd;
 box-sizing: border-box;
 display: block;
 }
 
 .test button{
-  background: red;
+  background: rgb(25, 0, 255);
   color: white;
   border: 0;
   padding:8px;
   border-radius: 8px;
   cursor: pointer;
 }
+

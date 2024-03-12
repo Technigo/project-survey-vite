@@ -4,6 +4,7 @@ export const Test = () => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
     const [author, setAuthor] = useState('new user')
+    const [recommendation, setRecommendation] = useState('')
 
     const handleSubmit =(e) => {
         e.preventDefault()
@@ -13,6 +14,15 @@ export const Test = () => {
     return(
         <div className="test">
         <h2>Quick Survey on your hotel stay</h2>
+        <label>Where did you stay?</label>
+        <select
+        value={author}
+        onChange={(e) => setAuthor (e.target.value)}
+        >
+            <option value= "Stockholm">Stockholm</option>
+            <option value= "Oslo">Oslo</option>
+            <option value= "London">London</option>
+        </select>
         <form onSubmit={handleSubmit}><label> Which one of our hotels did you stay at?</label>
         <input type= "text" 
         required
@@ -24,19 +34,31 @@ export const Test = () => {
         value={body}
         onChange={(e) => setBody(e.target.value)}
         ></textarea>
-        <label>Where did you stay?</label>
-        <select
-        value={author}
-        onChange={(e) => setAuthor (e.target.value)}
-        >
-            <option value= "Stockholm">Stockholm</option>
-            <option value= "Oslo">Oslo</option>
-            <option value= "London">London</option>
-        </select>
+        <label>Would you recommend a friend to stay at the hotel in the future?</label>
+        <div>
+            <label>
+                <input
+                type="radio"
+                value="yes"
+                checked={recommendation === "yes"}
+                onChange={(e)=> setRecommendation(e.target.value)}
+                />
+Yes
+</label>
+<label>
+    <input type="radio"
+    value= "no"
+    checked= {recommendation === "no"}
+    onChange={(e) => setRecommendation(e.target.value)}
+    />
+    No
+            </label>
+        </div>
         <button>Submit</button>
         <p> { title } </p>
         <p> { body } </p>
         </form>
+        
 </div>
     )
 }
