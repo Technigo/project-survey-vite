@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.test{
+  max-width: 400px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.text label {
+  text-align: left;
+  display: block;
+}
+.test h2{
+  font-size: 20px;
+  color: blue;
+  margin-bottom: 30px;
+}
+
+.test input, .test textarea, .test select{
+width: 100%;
+padding: 6px 10px;
+margin: 10px 0;
+border: 1px solid #ddd;
+box-sizing: border-box;
+display: block;
+}
+
+.test button{
+  background: red;
+  color: white;
+  border: 0;
+  padding:8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
