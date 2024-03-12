@@ -1,12 +1,14 @@
 import { useState } from "react"
 import data from "../Data/questionList.json"
 import { InputSection } from "./PageSection/InputSection"
+import { Button } from "./Button"
 import { Summary } from "./PageSection/Summary"
 
 export const PageIndex = () =>{
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState (0);
     const [optionSummary, setOptionSummary] = useState([]);
+    const [isStranger, setIsStranger]=useState(false);
 
     const handleNextQuestion = () =>{
         setCurrentQuestionIndex((prevIndex)=>prevIndex+1);
@@ -16,21 +18,23 @@ export const PageIndex = () =>{
         setCurrentQuestionIndex((prevIndex)=>prevIndex-1);
     }
 
-    const currentQuestion = data.questions[currentQuestionIndex];
-    
     const handleOptionSummary = (value) => {
         console.log(value);
-      const updatedOptionSummary = [...optionSummary];
-
-      updatedOptionSummary[currentQuestionIndex] = value;
-
-      setOptionSummary(updatedOptionSummary);
-       
+        const updatedOptionSummary = [...optionSummary];
+        updatedOptionSummary[currentQuestionIndex] = value;
+        setOptionSummary(updatedOptionSummary);
     }
 
+    const handleVisitor = (value) =>{
+        const updatedVisitorState = value === "A total stranger for a surprise"? true:false
+        setIsStranger(updatedVisitorState);
+        handleOptionSummary(value);
+    }
+
+    const currentQuestion = data.questions[currentQuestionIndex];
+    const lastQuesionIndex = data.questions.length-1;
 
     return (
-        //send out correct data from here
         <>
             <form>
                 <InputSection 
@@ -38,15 +42,25 @@ export const PageIndex = () =>{
                     index={currentQuestionIndex} 
                     optionSummary={optionSummary}
                     setOptionSummary={setOptionSummary}
-                    handleOptionSummary={handleOptionSummary} />
+                    handleOptionSummary={handleOptionSummary}
+                    handleVisitor={handleVisitor}
+                    isStranger={isStranger}
+                 />
 
-                {currentQuestionIndex > 0 && <button type="button" onClick={handlePreviousQuestion}>Previous question</button>}
+                <Button 
+                    handleNextQuestion={handleNextQuestion}
+                    handlePreviousQuestion ={handlePreviousQuestion}
+                    currentQuestionIndex={currentQuestionIndex}
+                    lastQuesionIndex={lastQuesionIndex}
+                    isStranger={isStranger}
+                />
 
-                {currentQuestionIndex <= (data.questions.length - 2) && <button type="button" onClick={handleNextQuestion}>Next question</button>}
-
-                {currentQuestionIndex === (data.questions.length - 1) && <button type="submit">Submit</button>}
+                <Summary 
+                    optionSummary={optionSummary} 
+                    index={currentQuestionIndex}
+                />
             </form>
-            <Summary optionSummary={optionSummary} index={currentQuestionIndex}/>
+           
         </>
     )
 }
