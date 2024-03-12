@@ -31,7 +31,7 @@ export const Survey = () => {
             onChange={(event) => setHours(event.target.value)}
             checked={hours === group}
           />{" "}
-          {group}
+          {group} Hours
         </label>
       ))}
     </form>
