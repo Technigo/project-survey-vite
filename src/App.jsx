@@ -1,3 +1,7 @@
-export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
-};
+import Form from "./components/Form"
+
+const App = () => {
+  return <Form />
+}
+
+export default App
