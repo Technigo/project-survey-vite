@@ -5,8 +5,10 @@ export const Footer = () => {
       <section className="links">
         <a
           href="https://github.com/vittoriamatteoli"
-          className="fa-brands fa-github"
-        ></a>
+          // className="fa-brands fa-github"
+        >
+          GitHub
+        </a>
       </section>
     </div>
   )

@@ -11,6 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+html {
+  height: 100%;
+  position: relative;
+}
 
 body {
   margin: 0;
@@ -40,9 +44,14 @@ h1 {
   margin: 30px;
 }
 .footer {
+  box-sizing: border-box;
+  margin: 0;
   padding: 20px 20px;
   color: white;
   background-color: #7e1639;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

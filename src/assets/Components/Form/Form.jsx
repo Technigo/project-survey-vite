@@ -11,7 +11,7 @@ export const Form = () => {
   const [selectedReason, setSelectedReason] = useState('')
   const [selectedTime, setSelectedTime] = useState([])
   const [formSubmitted, setFormSubmitted] = useState(false)
-  const [section, setSection] = useState(1)
+  const [section, setSection] = useState(0)
 
   const handleInputChange = (event) => {
     setFavouriteCoffee(event.target.value)
@@ -46,6 +46,14 @@ export const Form = () => {
   }
   const renderSection = () => {
     switch (section) {
+      case 0:
+        return (
+          <div>
+            <button className="startButton" onClick={handleNextSection}>
+              Let`s go ☕
+            </button>
+          </div>
+        )
       case 1:
         return (
           <div className="formWrapper">
