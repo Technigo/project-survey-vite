@@ -1,3 +1,10 @@
+import { Name } from "./components/Q1Name"
+
 export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
-};
+  return (
+    <form onSubmit={(event) => event.preventDefault()}>
+      <Name />
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
