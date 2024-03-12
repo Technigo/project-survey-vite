@@ -53,7 +53,15 @@ export const toppings = [
     score: 9,
   },
   {
+    name: "Peanuts",
+    score: 12,
+  },
+  {
+    name: "Tuna",
+    score: 5,
+  },
+  {
     name: "French fries",
     score: 10,
-  }
+  },
 ];

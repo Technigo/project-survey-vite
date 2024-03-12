@@ -72,3 +72,4 @@ So you’ve completed the requirements? Great job! Ensure you've committed and p
 - Acceptable pizza toppings (How much of a degenerate swede are you?)
 - Country of residence. Dropdown?
 - Nivå av pizza-ätanade. Radio buttons
+- Vem av dessa skulle du vilja äta pizza med?
