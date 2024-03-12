@@ -1,8 +1,8 @@
-import { DropdownType } from "./InputTypes/DropdownType"
-import { ColorType } from "./InputTypes/ColorType"
-import { RangeType } from "./InputTypes/RangeType"
-import { RadioType } from "./InputTypes/RadioType"
-import { CheckboxType } from "./InputTypes/CheckboxType"
+import { DropdownType } from "./index"
+import { ColorType } from "./index"
+import { RangeType } from "./index"
+import { RadioType } from "./index"
+import { CheckboxType } from "./index"
 import { useState } from "react"
 
 export const InputSection = ({question, index, handleOptionSummary, handleVisitor, isStranger}) =>{
@@ -54,7 +54,7 @@ export const InputSection = ({question, index, handleOptionSummary, handleVisito
             { index === 4  && 
                 <RadioType index={index} question={question} handleVisitor={handleVisitor}/>
             }
-            
+
             {  (isStranger===true && index === 5) && 
                 <RadioType index={index} question={question} handleChange={handleChange}/>
             }

@@ -6,7 +6,7 @@ export const Button = ({handleNextQuestion, handlePreviousQuestion,currentQuesti
         <section className="button-section">
             {isStranger? (
                 <>
-                    {(currentQuestionIndex > 0 && currentQuestionIndex <= removLastQuestion) && 
+                    {(currentQuestionIndex > 0 && currentQuestionIndex <= (lastQuesionIndex + 1)) && 
                     (
                         <button type="button" onClick={handlePreviousQuestion}>
                             Previous
@@ -27,7 +27,7 @@ export const Button = ({handleNextQuestion, handlePreviousQuestion,currentQuesti
                 </>
                 ) : (
                     <>
-                        {(currentQuestionIndex > 0 && currentQuestionIndex <= removLastQuestion) && 
+                        {(currentQuestionIndex > 0 && currentQuestionIndex <= (removLastQuestion + 1)) && 
                         (
                             <button type="button" onClick={handlePreviousQuestion}>
                                 Previous

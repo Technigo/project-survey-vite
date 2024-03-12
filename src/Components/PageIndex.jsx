@@ -1,8 +1,8 @@
 import { useState } from "react"
 import data from "../Data/questionList.json"
-import { InputSection } from "./PageSection/InputSection"
-import { Button } from "./Button"
-import { Summary } from "./PageSection/Summary"
+import { InputSection } from "./InputSection"
+import { Button } from "./index"
+import { Summary } from "./index"
 
 export const PageIndex = () =>{
 
