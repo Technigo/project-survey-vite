@@ -30,37 +30,44 @@ function Questions() {
   return (
     <div>
       {!submitted ? (
-        <form onSubmit={handleSubmit}>
-          <h2>1.</h2>
-          <p>What is your mood-boosting activity?</p>
-          <textarea value={activity} onChange={handleActivityChange} />
-          <h2>2.</h2>
-          <p>Does music make you happy?</p>
-          <input
-            type="radio"
-            name="music"
-            value="Yes"
-            onClick={() => toggleMusicHappy("Yes")}
-          />
-          Yes, absolutely
-          <input
-            type="radio"
-            name="music"
-            value="No"
-            onClick={() => toggleMusicHappy("No")}
-          />
-          No, I like the silence
-          <h2>3.</h2>
-          <p>What is your go-to happy song?</p>
-          <select value={songs} onChange={selectHappySongs}>
-            <option value="">Select songs</option>
-            <option>Ariana Grande - yea, and?</option>
-            <option>SZA - Saturn</option>
-            <option>Dua Lipa - Training Session</option>
-            <option>Taylor Swift - Cruel Summer</option>
-          </select>
-          <br />
-          <button type="submit">Submit</button>
+        <form onSubmit={handleSubmit} className="QuestionForm">
+          <div className="FirstQuestion">
+            <h2 className="number">1.</h2>
+            <p className="question">What is your mood-boosting activity?</p>
+            <textarea value={activity} onChange={handleActivityChange} className="activity"/>
+          </div>
+          <div className="SecondQuestion">
+            <h2 className="number">2.</h2>
+            <p className="question">Does music make you happy?</p>
+            <input
+              type="radio"
+              name="music"
+              value="Yes"
+              onClick={() => toggleMusicHappy("Yes")}
+            />
+            Yes, absolutely
+            <input
+              type="radio"
+              name="music"
+              value="No"
+              onClick={() => toggleMusicHappy("No")}
+            />
+            No, I like the silence
+          </div>
+
+          <div className="ThirdQuestion">
+            <h2 className="number">3.</h2>
+            <p className="question">What is your go-to happy song?</p>
+            <select value={songs} onChange={selectHappySongs}>
+              <option value="">Select songs</option>
+              <option>Ariana Grande - yea, and?</option>
+              <option>SZA - Saturn</option>
+              <option>Dua Lipa - Training Session</option>
+              <option>Taylor Swift - Cruel Summer</option>
+            </select>
+            <br />
+            <button type="submit">Submit</button>
+          </div>
         </form>
       ) : (
         <div>
