@@ -1,15 +1,18 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export const Period = () => {
-  const [period, setPeriod] = useState("")
+  const [period, setPeriod] = useState("");
   return (
-    <div className="radio-container">
-      <label>
+    <div className="questions">
+      <p className="counter">3.</p>
+      How long do you want to stay?
+      <label className="labelQ">
         <input
           type="radio"
           value="weekend"
           onChange={(event) => setPeriod(event.target.value)}
-          checked={period === "weekend"}></input>
+          checked={period === "weekend"}
+        ></input>
         Weekend
       </label>
       <label>
@@ -17,7 +20,8 @@ export const Period = () => {
           type="radio"
           value="week"
           onChange={(event) => setPeriod(event.target.value)}
-          checked={period === "week"}></input>
+          checked={period === "week"}
+        ></input>
         Week
       </label>
       <label>
@@ -25,7 +29,8 @@ export const Period = () => {
           type="radio"
           value="two-weeks"
           onChange={(event) => setPeriod(event.target.value)}
-          checked={period === "two-weeks"}></input>
+          checked={period === "two-weeks"}
+        ></input>
         Two weeks
       </label>
       <label>
@@ -33,9 +38,10 @@ export const Period = () => {
           type="radio"
           value="month"
           onChange={(event) => setPeriod(event.target.value)}
-          checked={period === "month"}></input>
+          checked={period === "month"}
+        ></input>
         Month
       </label>
     </div>
-  )
-}
+  );
+};

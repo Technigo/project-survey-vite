@@ -1,0 +1,59 @@
+.header {
+  background-color: #0018a4;
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header h1,
+.header h2 {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.header h1 {
+  height: 36px;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  height: 27px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.form {
+  padding: 0 16px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.counter {
+  height: 36px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #0018a4;
+  margin-bottom: 10px;
+}
+
+.questions {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.labelQ {
+  color: #0018a4;
+  height: 27px;
+  font-weight: 400;
+  font-size: 18px;
+}
