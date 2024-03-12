@@ -18,34 +18,17 @@ export const Choices = () => {
     setCheckedState(updatedCheckedState);
     console.log(name);
 
-    const totalName = updatedCheckedState.reduce(
-      (sumName, currentState, index) => {
-        // const startLength = toppings.length;
-        // index = 1;
-        // console.log(toppings);
-        // switch (startLength) {
-        //   case 1:
-        //     break;
-        //   case 2:
-        //     toppings.splice(1, 0, " & ");
-        //     break;
-        //   default:
-        //     for (let i = 1; i < startLength - 1; i++) {
-        //       toppings.splice(index, 0, ", ");
-        //       index = index + 2;
-        //     }
-        //     toppings.splice(-1, 0, " & ");
-        // }
-        console.log(toppings);
-        if (currentState === true) {
-          return sumName + toppings[index].name;
-        }
-        return sumName;
-      },
-      ""
-    );
-    setTotalName(totalName);
-    console.log("Total name: ", totalName);
+    const selectedToppings = updatedCheckedState.reduce((sumName, currentState, index) => {
+      if (currentState) {
+          return sumName.concat(toppings[index].name);
+      }
+      return sumName;
+     }, 
+    []
+  );
+  
+  const formattedTotalName = selectedToppings.join(", ");
+  setTotalName(formattedTotalName);
 
     const totalScore = updatedCheckedState.reduce(
       (sum, currentState, index) => {
