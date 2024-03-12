@@ -4,6 +4,15 @@ import React, { useState } from "react";
 export const App = () => {
   // here we created a varible. so we can update mode  to "summary" when the form is submitted.
   const [mode, setMode] = useState("form");
+  // here we created a varible. so we can update bestThing to the value of the input field.
+  const [bestThing, setBestThing] = useState("");
+// const holdDate is a function that takes an event as an argument//store the date user has put to the input field. 
+  const holdData = (event) => {
+    console.log(event.target.value);
+    // here we update the bestThing to the value of the input field.
+    setBestThing(event.target.value);
+  };
+
   const onSubmit = (event) => {
     // here we create the varible for the funtion that prevent the page from refreshing when hit submit button.
     event.preventDefault();
@@ -25,7 +34,7 @@ export const App = () => {
             {/* "for" and "id" has to match, it's for accessabiliy  */}
             {/* use "htmlfor", otherwise you will get a warning in the console log.  */}
             <label htmlFor="bestThing">What's the best thing about you?</label>
-            <input type="text" id="bestThing" name="bestThing" />
+            <input type="text" id="bestThing" name="bestThing" onChange={holdData} />
           </div>
           <div>
             <input type="submit" value="Submit" />
