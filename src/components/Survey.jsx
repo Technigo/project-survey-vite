@@ -3,8 +3,9 @@ import { useState } from "react";
 export const Survey = () => {
   const [workout, setWorkout] = useState("");
   const [hours, setHours] = useState("");
-  /*const [music, setMusic] = useState ("")*/
+  const [music, setMusic] = useState("")
   const hourGroups = ["1-2", "3-4", "4+"];
+
 
   return (
     <form>
@@ -34,6 +35,19 @@ export const Survey = () => {
           {group} Hours
         </label>
       ))}
+      <h3>3.</h3>
+      <p>What music do you listen to during workout</p>
+      <select
+        onChange={event => setMusic(event.target.value)}
+        value={music}
+      >
+        <option value="">Select music</option>
+        <option value="house">House</option>
+        <option value="rock">Rock</option>
+        <option value="pop">Pop</option>
+        <option value="electronic">Electronic</option>
+      </select>
+
     </form>
   );
 };
