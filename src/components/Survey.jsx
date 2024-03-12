@@ -1,36 +1,63 @@
 import { useState } from "react";
 
 export const Survey = () => {
-  const [houses, setHouses] = useState();
-  const [character, setCharacter] = useState("");
-  const [spell, setSpell] = useState("");
+  // const [houses, setHouses] = useState();
+  // const [character, setCharacter] = useState("");
+  // const [spell, setSpell] = useState("");
+  const [formData, setFormData] = useState({
+    house: "",
+    character: "",
+    spell: "",
+  });
 
   const houseGroup = ["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"];
 
+
+const handleInputChange = (event) => {
+  const { name, value, type, checked} = event.target
+  const newValue = type === "radio" ? checked : value
+
+  setFormData ({
+    ...formData,
+    [name] : newValue
+  })
+}
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  console.log(formData)
+}
+
   return (
     <div className="form-container">
-      <form>
+      <form onSubmit={handleSubmit}>
+        {/* radio buttons */}
         <div className="radio-buttons">
           <label>Which Hogwarts house represents you the best?</label>
 
           {houseGroup.map((house) => (
             <label key={house}>
               <input
+                name="house"
                 type="radio"
-                value={house}
-                onChange={(event) => setHouses(event.target.value)}
-                checked={houses === house}
+                value={formData.house}
+                // onChange={handleSubmit}
+                onChange={handleInputChange}
+                checked={house}
               />
               {house}
             </label>
           ))}
         </div>
 
+        {/* dropdown selection */}
         <div className="dropdown">
           <label>Who is your favorite character?</label>
           <select
-            value={character}
-            onChange={(event) => setCharacter(event.target.value)}
+            name="character"
+            value={formData.character}
+            // onChange={handleSubmit}
+            onChange={handleInputChange}
           >
             <option disabled value="">
               choose your favorite character:
@@ -46,14 +73,19 @@ export const Survey = () => {
           </select>
         </div>
 
+        {/* text input */}
         <div className="text-input">
           <label> What is your favorite spell?</label>
           <input
+            name="spell"
             type="text"
-            onChange={(event) => setSpell(event.target.value)}
-            value={spell}
+            // onChange={handleSubmit}
+            onChange={handleInputChange}
+            value={formData.spell}
           ></input>
         </div>
+
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
