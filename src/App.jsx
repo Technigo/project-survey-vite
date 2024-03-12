@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { Header } from "./components/Header";
 
 export const App = () => {
   const [selectedOption, setSelectedOption] = useState("hiking");
   const [level, setLevel] = useState("Beginner");
   const [requirements, setRequirements] = useState("");
   const [email, setEmail] = useState("");
+  const [hidden, setHidden] = useState("off");
 
   const handleSelectOption = (event) => {
     setSelectedOption(event.target.value);
@@ -26,16 +28,18 @@ export const App = () => {
     event.preventDefault();
   };
 
+  const handleHidden = () => {
+    setHidden((status) => (status === "on" ? "off" : "on"));
+  };
+
   const submitForm = () => {
-    console.log({ selectedOption });
+    handleHidden();
   };
 
   return (
     <div>
-      <header>
-        Adventure in the Wild: find the perfect quest for your level
-      </header>
-      <form onSubmit={handleSubmit}>
+      <Header />
+      <form onSubmit={handleSubmit} id="survey-form" className={`${hidden}`}>
         <fieldset>
           <legend>What type of activity are you interested in?</legend>
           <label htmlFor="activities-dropdown">Choose an activity: </label>
@@ -102,7 +106,7 @@ export const App = () => {
           Submit
         </button>
       </form>
-      <div id="replies">
+      <div id="replies" className={hidden === "off" ? "on" : "off"}>
         <p>Selected activity {selectedOption}</p>
         <p>Selected level: {level}</p>
         <p>Special requirements: {requirements}</p>
@@ -111,5 +115,3 @@ export const App = () => {
     </div>
   );
 };
-
-// Have a optional textbox where the user can add extra info about their preferences/needs?
