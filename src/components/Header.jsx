@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const Header = ({ question }) => {
   return (
     <div className="header">
@@ -7,4 +8,5 @@ const Header = ({ question }) => {
   );
 };
 
+Header.propTypes = { question: PropTypes.object.isRequired };
 export default Header;
