@@ -7,7 +7,7 @@ export const App = () => {
     setClicked(true);
   };
   return (
-    <div>
+    <>
       {clicked ? (
         <QuestionFrame />
       ) : (
@@ -19,6 +19,6 @@ export const App = () => {
           </button>
         </div>
       )}
-    </div>
+    </>
   );
 };

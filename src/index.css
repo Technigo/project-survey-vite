@@ -29,6 +29,10 @@ body {
   font-weight: 400;
 }
 
+#root {
+  width: inherit;
+  height: inherit;
+}
 /* Starting page */
 .starting-page {
   background-color: #0018a5;
@@ -61,6 +65,16 @@ body {
   border: 0;
 }
 
+/* Question page */
+.question-page {
+  display: grid;
+  width: inherit;
+  height: inherit;
+  grid-template-rows: minmax(200px, 40vh) auto;
+}
+
+/* header - the direct child (1/2) of question-page */
+
 .header {
   background-color: #0018a5;
   display: flex;
@@ -68,10 +82,10 @@ body {
   font-size: 20px;
   width: 100%;
   color: white;
-  height: 280px;
   justify-content: center;
 }
 
+/* the direct child of header */
 .question-text,
 .question-number {
   display: flex;
@@ -82,34 +96,30 @@ body {
   margin: 6px;
 }
 
+/* form - the direct child (2/2) of question-page */
+form {
+  display: grid;
+  grid-template-rows: auto minmax(80px, 20%);
+  gap: minmax(80px, 20%);
+}
+
+/* question-container - the direct child (1/2) of form */
+.question-container {
+  align-self: center;
+}
+
+/* the direct child of question container (1/1)*/
 .question-options {
   display: flex;
   flex-direction: column;
   font-size: 20px;
-  width: 100%;
-  margin-top: 20px;
 }
 
-.question-options div {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
-}
-
-.question-options input {
-  flex-grow: 2.5;
-}
-
-.question-options label {
-  flex-grow: 1;
-}
-
+/* next-q-btn - the direct child (2/2) of form */
 .next-q-btn {
-  position: absolute;
-  bottom: 30px;
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-self: center;
 }
 
 .next-q-btn button {
@@ -124,13 +134,29 @@ body {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+/* question 1 */
+.question-one {
+  align-items: center;
+}
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.input-container > input {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.input-container > label {
+  margin-bottom: 5px;
+}
+
 /* question 2 */
 .question-two {
-  /* height: 100%;
-  min-height: 100%; */
   margin: 2.5rem auto;
-  display: flex;
-  flex-direction: column;
   width: 60%;
 }
 
@@ -161,10 +187,7 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-.button-label h1 {
-  font-size: 1em;
-  font-family: "Lato", sans-serif;
-}
+
 .button-label:hover {
   background: #d6d6d6;
   color: #101010;
@@ -178,7 +201,7 @@ body {
 @media (max-width: 40em) {
   .button-label {
     padding: 0em 1em 3px;
-    margin: 0.25em;
+    margin: 0.4em;
   }
 }
 
@@ -223,7 +246,7 @@ body {
 
 #range-value {
   margin: 15px 0;
-  font-size: 35px;
+  font-size: 24px;
 }
 
 #range-value::after {
@@ -310,9 +333,10 @@ input[type="range"]:focus::-moz-range-thumb {
 .checkbox-option {
   display: grid;
   grid-template-columns: 3em auto;
-  gap: 0.5em;
+  gap: 1em;
   font-family: inherit;
   margin-top: 1em;
+  align-items: center;
 }
 
 input[type="checkbox"] {

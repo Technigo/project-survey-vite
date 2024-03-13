@@ -42,7 +42,7 @@ const QuestionFrame = () => {
   };
 
   return (
-    <div>
+    <div className="question-page">
       <Header question={questions[qNum]} />
       <form onSubmit={handleSubmit}>
         <Question

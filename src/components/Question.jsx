@@ -6,7 +6,7 @@ const Question = ({ formData, qNum, onChange }) => {
     <div className="question-container">
       {qNum === 0 && (
         <div className="question-one question-options">
-          <div>
+          <div className="input-container">
             <label htmlFor="username">Enter your name: </label>
             <input
               id="username"
@@ -17,7 +17,7 @@ const Question = ({ formData, qNum, onChange }) => {
               required
             />
           </div>
-          <div>
+          <div className="input-container">
             <label htmlFor="useremail">Enter your email: </label>
             <input
               id="useremail"
@@ -89,19 +89,19 @@ const Question = ({ formData, qNum, onChange }) => {
           <div className="checkbox-container">
             <label className="checkbox-option">
               <input type="checkbox" name="subscription" />
-              Knitting
+              <span>Knitting</span>
             </label>
             <label className="checkbox-option">
               <input type="checkbox" name="subscription" />
-              ASMR
+              <span>ASMR</span>
             </label>
             <label className="checkbox-option">
               <input type="checkbox" name="subscription" />
-              Meditation
+              <span>Meditation</span>
             </label>
             <label className="checkbox-option">
               <input type="checkbox" name="subscription" />
-              Yoga
+              <span>Yoga</span>
             </label>
           </div>
         </div>
