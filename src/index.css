@@ -13,5 +13,19 @@ code {
 }
 
 .header {
-  border: 2px solid black;
+  background-color: #0018a5;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  width: 100%;
+  color: white;
+}
+
+.question-text,
+.question-number {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 4px 4px 5px black;
+  font-size: 1.3rem;
 }
