@@ -1,6 +1,7 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-export const Location = () => {
+export const Location = ({setLocation}) => {
   const [selectedLocation, setSelectedLocation] = useState("");
 
   return (
@@ -8,8 +9,11 @@ export const Location = () => {
       <h3>3. Where do you usually eat pizza?</h3>
       <div className="dropdown">
         <select
-        value={selectedLocation}
-        onChange={(event) => setSelectedLocation(event.target.value)}
+          value={selectedLocation}
+          onChange={(event) => {
+            setSelectedLocation(event.target.value)
+            setLocation(event.target.value)
+          }}
       >
         <option value="" disabled hidden>
           -- Please choose region --
@@ -24,4 +28,8 @@ export const Location = () => {
       <p><span>Your favorite pizza-eating-spot is:</span>{selectedLocation}</p>
     </div>
   );
+};
+
+Location.propTypes = {
+  setLocation: PropTypes.string.isRequired,
 };

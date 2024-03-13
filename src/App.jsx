@@ -1,12 +1,17 @@
-import { Survey } from "./components/Survey"
-import { Header } from "./components/Header"
-import "./app.css"
-
+import { Survey, Result } from "./components/Survey";
+import { Header } from "./components/Header";
+import "./app.css";
 
 export const App = () => {
-  return <>
-    <Header />
-    <div className="main-container">
-    <Survey />
-    </div></>;
+  return (
+    <>
+      <Header />
+      <div className="result-container main-container">
+        <Result />
+      </div>
+      <div className="main-container">
+        <Survey />
+      </div>
+    </>
+  );
 };

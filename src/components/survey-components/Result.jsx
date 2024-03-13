@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 // import { Choices } from "./Choices";
 // import { Location } from "./location";
 
-export const Results = (props) => {
+export const Result = (props) => {
   return (
     <div className="question results">
       <p>Your results: {props.level}</p>
@@ -11,6 +11,6 @@ export const Results = (props) => {
   );
 };
 
-Results.propTypes = {
+Result.propTypes = {
   level: PropTypes.string.isRequired,
 };
