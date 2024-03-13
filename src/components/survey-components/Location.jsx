@@ -5,8 +5,9 @@ export const Location = () => {
 
   return (
     <div className="question location">
-      <h2>3. Where do you usually eat pizza?</h2>
-      <select
+      <h3>3. Where do you usually eat pizza?</h3>
+      <div className="dropdown">
+        <select
         value={selectedLocation}
         onChange={(event) => setSelectedLocation(event.target.value)}
       >
@@ -19,8 +20,8 @@ export const Location = () => {
         <option value="North America">North America</option>
         <option value="South America">South America</option>
         <option value="Oceania">Oceania</option>
-      </select>
-      <p>Your favorite pizza-eating-spot is: {selectedLocation}</p>
+      </select></div>
+      <p><span>Your favorite pizza-eating-spot is:</span>{selectedLocation}</p>
     </div>
   );
 };
