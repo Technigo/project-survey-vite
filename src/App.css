@@ -78,10 +78,12 @@
 .radio-button {
   display: inline-block;
   width: 100%;
-  padding: 10px 5px;
+  padding: 10px;
   border: 1px solid #9c9c9c;
   border-radius: 6px;
   cursor: pointer;
+  margin-top: 7px;
+  font-size: 14px;
 }
 
 .radio-button input[type="radio"] {
