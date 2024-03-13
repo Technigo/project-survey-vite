@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -9,31 +10,36 @@
   --black: #000000;
   --button-color: #c2c2c2;
   --radio-border: #9c9c9c;
-  --radio-bg: #CCD1ED;
+  --radio-bg: #ccd1ed;
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 35px 10px;
+  padding: 35px 20px;
+  font-size: 18px;
+  /* width: 100%; */
 }
 
-.radio-button-wrapper {
-  display: flex;
-  flex-direction: column;
-  /* opacity: 0;
-  position: fixed;
-  width: 0; */
+h2,
+p {
+  padding-bottom: 15px;
+  color: var(--blue);
+}
+
+.radio-button-wrapper,
+.dropdown,
+.text-input {
+  padding-bottom: 30px;
+  border: solid black;
+  /* max-width: 100%; */
+
 }
 
 .radio-button-container {
   display: block;
-  position: relative;
-  padding-left: 25px;
-  margin: 10px 5px;
-  font-size: 16px;
-  user-select: none;
+  padding-bottom: 5px;
 }
 
 .radio-button-container input {
@@ -45,21 +51,42 @@ form {
 }
 
 .custom-radio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 30px;
-  width: 100%;
-  border: 1px solid var(--radio-border);
-  cursor: pointer;
+  display: flex;
+  /* max-width: 100%; */
+  height: 25px;
   border-radius: 5px;
+  border: 1px solid var(--radio-border);
+  background-color: #ffffff;
+  padding: 10px 0 10px 15px;
+
 }
 
-.radio-button-container:hover input ~ .custom-radio {
+.custom-radio.checked {
   background-color: var(--radio-bg);
-  content: attr(data-value);
+  padding-left: 40px;
 }
 
-.radio-button-container:hover input:checked ~ .custom-radio {
-  
+.custom-radio.checked::after {
+  content: url("./assets/check.png");
+  position: absolute;
+  left: 30px;
+}
+
+.dropdown {
+  /* width: 100%; */
+}
+
+select {
+  position: relative;
+  display: block;
+  border-radius: 5px;
+  /* width: 400px; */
+  font-size: 18px;
+  padding: 10px;
+}
+
+option {
+  background-color: #f0f0f0;
+  color: #ffffff;
+  font-size: 16px;
 }

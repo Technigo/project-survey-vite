@@ -35,17 +35,16 @@ export const Survey = () => {
             <p>Which Hogwarts house represents you the best?</p>
           </label>
           {houseGroup.map((house) => (
-            <label className="radio-button-container" key={house}>
+            <label tabIndex="0" className="radio-button-container" key={house}>
               <input
                 name="house"
                 type="radio"
                 value={house}
                 onChange={handleInputChange}
                 checked={results.house === house}
-                data-value={house}
               />
-              <span className="custom-radio"></span>
-              {house}
+              <span className={`custom-radio ${results.house === house ? 'checked' : ""}`}>{house}</span>
+             
             </label>
           ))}
         </div>
@@ -56,22 +55,22 @@ export const Survey = () => {
             <h2>2.</h2>
             <p>Who is your favorite character?</p>
           </label>
-          <select
+          <select className="select-box"
             name="character"
             value={results.character}
             onChange={handleInputChange}
           >
-            <option disabled value="">
-              choose your favorite character:
+            <option className="option" disabled value="">
+              Choose character
             </option>
-            <option value="Harry Potter">Harry Potter</option>
-            <option value="Hermione Granger">Hermione Granger</option>
-            <option value="Ron Weasley">Ron Weasley</option>
-            <option value="Lord Voldemort">Lord Voldemort</option>
-            <option value="Severus Snape">Severus Snape</option>
-            <option value="Albus Dumbledore">Albus Dumbledore</option>
-            <option value="Rubeus Hagrid">Rubeus Hagrid</option>
-            <option value="Minerva McGonagall">Minerva McGonagall</option>
+            <option className="option" value="Harry Potter">Harry Potter</option>
+            <option className="option" value="Hermione Granger">Hermione Granger</option>
+            <option className="option" value="Ron Weasley">Ron Weasley</option>
+            <option className="option" value="Lord Voldemort">Lord Voldemort</option>
+            <option className="option" value="Severus Snape">Severus Snape</option>
+            <option className="option" value="Albus Dumbledore">Albus Dumbledore</option>
+            <option className="option" value="Rubeus Hagrid">Rubeus Hagrid</option>
+            <option className="option" value="Minerva McGonagall">Minerva McGonagall</option>
           </select>
         </div>
 
