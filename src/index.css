@@ -293,3 +293,8 @@ input[type="range"]:focus::-moz-range-thumb {
   outline: 3px solid #0018a4;
   outline-offset: 0.125rem;
 }
+
+/*question 3 */
+.hidden-label {
+  display: none;
+}

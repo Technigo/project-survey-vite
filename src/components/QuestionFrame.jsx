@@ -22,10 +22,11 @@ const QuestionFrame = () => {
     selectedOption: "option1",
     frequency: "",
     level: 0,
+    waysToDeal: "",
   });
 
   // Event handler for form input changes
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     const { name, value, type, checked } = event.target;
     const newValue = type === "checkbox" ? checked : value;
     setFormData({
@@ -35,7 +36,7 @@ const QuestionFrame = () => {
   };
 
   // Event handler for form submission
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     // Process the form data here
     console.log("Form Data:", formData);

@@ -84,6 +84,21 @@ const Question = ({ formData, qNum, onChange }) => {
           </label>
         </div>
       )}
+
+      {qNum === 3 && (
+        <div className="question-four question-options">
+          <label className="hidden-label" htmlFor="ways-to-deal">
+            How many ways do you have to deal with the stress?
+          </label>
+          <select onChange={onChange} name="waysToDeal" id="ways-to-deal">
+            <option value="">Select one option </option>
+            <option value="none">None </option>
+            <option value="oneway">1 way </option>
+            <option value="twothreeway"> 2-3 ways </option>
+            <option value="morethanthree">more than 3 ways </option>
+          </select>
+        </div>
+      )}
     </div>
   );
 };
