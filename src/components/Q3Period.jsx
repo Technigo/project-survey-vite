@@ -1,47 +1,47 @@
-import { useState } from "react";
+import { useState } from "react"
 
 export const Period = () => {
-  const [period, setPeriod] = useState("");
+  const [period, setPeriod] = useState("")
   return (
     <div className="questions">
       <p className="counter">3.</p>
-      How long do you want to stay?
-      <label className="labelQ">
+      <p className="labelQ">How long do you want to stay?</p>
+      <label htmlFor="weekend">
         <input
+          id="weekend"
           type="radio"
           value="weekend"
           onChange={(event) => setPeriod(event.target.value)}
-          checked={period === "weekend"}
-        ></input>
+          checked={period === "weekend"}></input>
         Weekend
       </label>
-      <label>
+      <label htmlFor="week">
         <input
+          id="week"
           type="radio"
           value="week"
           onChange={(event) => setPeriod(event.target.value)}
-          checked={period === "week"}
-        ></input>
+          checked={period === "week"}></input>
         Week
       </label>
-      <label>
+      <label htmlFor="two-weeks">
         <input
+          id="two-weeks"
           type="radio"
           value="two-weeks"
           onChange={(event) => setPeriod(event.target.value)}
-          checked={period === "two-weeks"}
-        ></input>
+          checked={period === "two-weeks"}></input>
         Two weeks
       </label>
-      <label>
+      <label htmlFor="month">
         <input
+          id="month"
           type="radio"
           value="month"
           onChange={(event) => setPeriod(event.target.value)}
-          checked={period === "month"}
-        ></input>
+          checked={period === "month"}></input>
         Month
       </label>
     </div>
-  );
-};
+  )
+}

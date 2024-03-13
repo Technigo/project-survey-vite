@@ -1,7 +1,8 @@
-import { Name } from "./components/Q1Name";
-import { DestinationType } from "./components/Q2DestType";
-import { Period } from "./components/Q3Period";
-import "./App.css";
+import { Name } from "./components/Q1Name"
+import { DestinationType } from "./components/Q2DestType"
+import { Period } from "./components/Q3Period"
+import { Budget } from "./components/Q4Budget"
+import "./App.css"
 
 export const App = () => {
   return (
@@ -11,13 +12,12 @@ export const App = () => {
         <h2>by Alma and Linda</h2>
       </header>
       <form className="form" onSubmit={(event) => event.preventDefault()}>
-        <Name /> <br></br>
+        <Name />
         <DestinationType />
-        <br></br>
         <Period />
-        <br></br>
+        <Budget />
         <button type="submit">Submit</button>
       </form>
     </div>
-  );
-};
+  )
+}
