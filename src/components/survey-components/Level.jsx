@@ -1,10 +1,11 @@
+import { LevelAnswer } from "./LevelAnswer";
 import { useState } from "react";
 
 export const Level = () => {
     const [selectedLevel, setLevel] = useState("Novice");
 
     const levelSelect = (event) => {
-        setLevel(event.target.value)
+      setLevel(event.target.value)
     }
 
   return (
