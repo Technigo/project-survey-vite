@@ -118,14 +118,14 @@ export const App = () => {
   };
 
   const colors = [
-    { name: "colorButton", value: "red", label: "red" },
-    { name: "colorButton", value: "green", label: "green" },
-    { name: "colorButton", value: "blue", label: "blue" },
-    { name: "colorButton", value: "yellow", label: "yellow" },
-    { name: "colorButton", value: "pink", label: "pink" },
-    { name: "colorButton", value: "purple", label: "purple" },
-    { name: "colorButton", value: "black", label: "black" },
-    { name: "colorButton", value: "white", label: "white" },
+    { name: "colorButton", value: "red", label: "Red" },
+    { name: "colorButton", value: "green", label: "Green" },
+    { name: "colorButton", value: "blue", label: "Blue" },
+    { name: "colorButton", value: "yellow", label: "Yellow" },
+    { name: "colorButton", value: "pink", label: "Pink" },
+    { name: "colorButton", value: "purple", label: "Purple" },
+    { name: "colorButton", value: "black", label: "Black" },
+    { name: "colorButton", value: "white", label: "White" },
   ];
 
   const handleColorChange = (event) => {
@@ -200,8 +200,14 @@ export const App = () => {
         <>
           {" "}
           {/* Text to show when submitted */}
-          <p>Your dream animal is: {animal}</p>
-          <p>Your favourite planet is: {capitalizeFirstLetter(planet)}</p>
+          <p>
+            Once upon a time, there was an alien - you. You were colored {color}{" "}
+            and lived on {capitalizeFirstLetter(planet)}. Your best friend was a
+            cute {animal.toLowerCase()} named Sparkle. Together, you zoomed
+            through space, exploring new worlds and making friends wherever you
+            went. And you lived happily ever after, spreading joy across the
+            galaxy. The end!
+          </p>
         </>
       )}
     </div>
