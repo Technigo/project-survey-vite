@@ -136,37 +136,24 @@ export const SurveyForm = () => {
           <SurveySummary surveyData={surveyData} steps={STEPS} />
         ) : (
           // If the survey has not been submitted ('submit' is false), render the survey form.
-          <form onSubmit={handleSubmit}>
-            <div>
-              {/* Render the component for the current survey step.
-                The component type is determined dynamically based on the 'currentStepDetails.Component'.
-                This allows for different input types (text, select, radio buttons, etc.) at different steps.
-                The 'value' prop passes the current value for this step from 'surveyData'.
-                The 'updateSurveyData' function is passed to allow the component to update the survey data.
-                Spread 'currentStepDetails' to pass additional props like 'question' and 'options' to the component. ??*/}
-              <currentStepDetails.Component
-                value={surveyData[currentStepDetails.valueKey]}
-                updateSurveyData={updateSurveyData}
-                {...currentStepDetails}
-              />
-            </div>
-            <div>
-              {/* Render a "Back" button if the current step is greater than 1 (not the first step).
-                Clicking this button calls 'prevStep', moving the user to the previous step. */}
-              {currentStep > 0 && <button onClick={prevStep}>Back</button>}
-              {/* Conditional rendering for the next button:
-                - If the current step is less than the total number of steps, render a "Continue" button.
-                  Clicking this button calls 'nextStep', moving the user to the next step.
-                - If the current step is the last step, render a "Submit" button instead.
-                  Clicking this button calls 'submitSurvey', marking the survey as submitted. */}
-              {currentStep < STEPS.length - 1 ? (
-                <button onClick={nextStep}>Continue</button>
-              ) : (
-                <button onClick={submitSurvey}>Submit</button>
-              )}
-              {error && <p>Error: {error}</p>}
-            </div>
-          </form>
+            <form className="form" onSubmit={handleSubmit}>
+              <div className="questions">
+                <currentStepDetails.Component
+                  value={surveyData[currentStepDetails.valueKey]}
+                  updateSurveyData={updateSurveyData}
+                  {...currentStepDetails}
+                />
+              </div>
+              <div className="answers">
+                {currentStep > 0 && <button onClick={prevStep}>Back</button>}
+                {currentStep < STEPS.length - 1 ? (
+                  <button onClick={nextStep}>Continue</button>
+                ) : (
+                  <button onClick={submitSurvey}>Submit</button>
+                )}
+                {error && <p>Error: {error}</p>}
+              </div>
+            </form>
         )
       }
     </>
