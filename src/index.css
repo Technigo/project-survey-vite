@@ -32,6 +32,8 @@ body {
   font-size: 20px;
   width: 100%;
   color: white;
+  height: 280px;
+  justify-content: center;
 }
 
 .question-text,
@@ -41,6 +43,7 @@ body {
   text-align: center;
   text-shadow: 4px 4px 5px black;
   font-size: 1.3rem;
+  margin: 6px;
 }
 
 .question-options {
@@ -48,6 +51,7 @@ body {
   flex-direction: column;
   font-size: 20px;
   width: 100%;
+  margin-top: 20px;
 }
 
 .question-options div {
