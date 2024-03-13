@@ -16,6 +16,7 @@ return(
         </option>
         <option value="Michelle Obama">Michelle Obama</option>
         <option value="Albert Einstein">Albert Einstein</option>
+        <option value="Greta Thunberg">Greta Thunberg</option>
         <option value="Jackie Chan">Jackie Chan</option>
         <option value="Margaret Thatcher">Margaret Thatcher</option>
         <option value="Martin Luther King Jr">Martin Luther King Jr</option>
