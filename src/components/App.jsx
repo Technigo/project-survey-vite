@@ -3,6 +3,7 @@ import { NameInput } from "./NameInput.jsx";
 import { SubmitButton } from "./SubmitButton.jsx";
 import { EmailInput } from "./EmailInput.jsx";
 import { CourseInput } from "./CourseInput.jsx";
+import { LevelOptions } from "../LevelOptions.jsx";
 
 export const App = () => {
   return (
@@ -15,6 +16,7 @@ export const App = () => {
         <NameInput />
         <EmailInput />
         <CourseInput />
+        <LevelOptions />
         <SubmitButton />
       </form>
     </div>
