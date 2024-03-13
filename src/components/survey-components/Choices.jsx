@@ -45,7 +45,7 @@ export const Choices = () => {
 
   return (
     <div className="question">
-      <h2>2. What would be the most disgusting pizza toppings to you?</h2>
+      <h2>2. What would be the most disgusting pizza toppings to you?</h2> {/* Should we phrase the question: Select all the toppings you find disgusting on pizza? */}
       <div className="headline"><h3>Toppings:</h3><h3>Disgust points</h3></div>
       <ul className="toppings-list">
         {toppings.map(({ name, score }, index) => {

@@ -10,7 +10,7 @@ export const Location = () => {
         value={selectedLocation}
         onChange={(event) => setSelectedLocation(event.target.value)}
       >
-        <option value="" selected="selected" disabled hidden>
+        <option value="" disabled hidden>
           -- Please choose region --
         </option>
         <option value="Africa">Africa</option>

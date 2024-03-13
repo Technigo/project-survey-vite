@@ -1,6 +1,8 @@
 import { Level } from "./survey-components/Level";
 import { Choices } from "./survey-components/Choices";
 import { Location } from "./survey-components/location";
+import { Results } from "./survey-components/Result";
+
 
 export const Survey = () => {
   return (
@@ -8,7 +10,8 @@ export const Survey = () => {
           <p>Survey component</p>
           <Level />
           <Choices />
-          <Location />
+      <Location />
+      <Results />
     </div>
   );
 };
