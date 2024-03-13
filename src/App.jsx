@@ -118,14 +118,14 @@ export const App = () => {
   };
 
   const colors = [
-    { value: "red", label: "red" },
-    { value: "green", label: "green" },
-    { value: "blue", label: "blue" },
-    { value: "yellow", label: "yellow" },
-    { value: "pink", label: "pink" },
-    { value: "purple", label: "purple" },
-    { value: "black", label: "black" },
-    { value: "white", label: "white" },
+    { name: "colorButton", value: "red", label: "red" },
+    { name: "colorButton", value: "green", label: "green" },
+    { name: "colorButton", value: "blue", label: "blue" },
+    { name: "colorButton", value: "yellow", label: "yellow" },
+    { name: "colorButton", value: "pink", label: "pink" },
+    { name: "colorButton", value: "purple", label: "purple" },
+    { name: "colorButton", value: "black", label: "black" },
+    { name: "colorButton", value: "white", label: "white" },
   ];
 
   const handleColorChange = (event) => {
@@ -162,11 +162,16 @@ export const App = () => {
         <form onSubmit={handleSubmit}>
           <label>
             What is your dream pet?
-            <input type="text" onChange={handleAnimalChange} value={animal} />
+            <input
+              type="text"
+              onChange={handleAnimalChange}
+              value={animal}
+              required
+            />
           </label>
           <label>
             What is your favourite planet?
-            <select onChange={handlePlanetChange} value={planet}>
+            <select onChange={handlePlanetChange} value={planet} required>
               {planets.map(({ value, label }) => (
                 <option key={value} value={value}>
                   {label}
@@ -175,7 +180,7 @@ export const App = () => {
             </select>
           </label>
           <p>What is your favourite color? </p>
-          {colors.map(({ value, label }) => (
+          {colors.map(({ value, label, name }) => (
             <label key={value}>
               {label}
               <input
@@ -183,6 +188,8 @@ export const App = () => {
                 value={value}
                 onChange={handleColorChange}
                 checked={color === value}
+                name={name}
+                required
               />
             </label>
           ))}
