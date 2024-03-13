@@ -6,10 +6,10 @@ export const DestinationType = ({ onInputChange }) => {
 
   const handleChange = (event) => {
     const newDestType = event.target.value
-    console.log("New Destination Type:", newDestType)
+    console.log("Q2 dest type:", newDestType)
 
     setDestinationType(newDestType)
-    onInputChange("destination", newDestType)
+    onInputChange("destinationType", newDestType)
   }
 
   return (

@@ -39,7 +39,12 @@ export const App = () => {
       </header>
       <div className="app-body">
         {showSummary ? (
-          <Summary {...formData} />
+          <Summary
+            name={formData.name}
+            destinationType={formData.destinationType}
+            period={formData.period}
+            budget={formData.budget}
+          />
         ) : (
           <form className="form" onSubmit={handleSubmit}>
             <Name onInputChange={handleInputChange} />

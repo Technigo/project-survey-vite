@@ -39,6 +39,7 @@
   margin-top: 40px;
   display: flex;
   flex-direction: column;
+  max-width: 350px;
 }
 
 .counter {
@@ -120,7 +121,7 @@
 }
 
 /*Media queries*/
-@media (min-width: 400px) {
+@media (min-width: 450px) {
   .app-body {
     display: flex;
     justify-content: center;
@@ -133,5 +134,8 @@
   .submit-button {
     width: 233px;
     align-self: center;
+  }
+  .summary-container {
+    padding: 40px 25%;
   }
 }

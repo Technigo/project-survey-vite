@@ -6,7 +6,7 @@ export const Period = ({ onInputChange }) => {
 
   const handleChange = (event) => {
     const newPeriod = event.target.value
-    console.log("New Destination Type:", newPeriod)
+    console.log("Q3 period:", newPeriod)
 
     setPeriod(newPeriod)
     onInputChange("period", newPeriod)

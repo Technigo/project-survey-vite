@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 
 export const Summary = ({ name, destinationType, period, budget }) => {
-  console.log("props:", { name, destinationType, period, budget })
+  console.log("summary dest type:", destinationType)
 
   return (
     <div className="summary-container">
