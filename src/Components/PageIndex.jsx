@@ -1,6 +1,7 @@
 import { useState } from "react";
 import data from "../Data/questionList.json";
-import { InputSection } from "./InputSection";
+import { StartPage } from "./index";
+import { InputSection } from "./index";
 import { Button } from "./index";
 import { Summary } from "./index";
 
@@ -20,7 +21,6 @@ export const PageIndex = () => {
   };
 
   const handleOptionSummary = (value) => {
-    console.log(value);
     const updatedOptionSummary = [...optionSummary];
     updatedOptionSummary[currentQuestionIndex] = value;
     setOptionSummary(updatedOptionSummary);
@@ -47,14 +47,7 @@ export const PageIndex = () => {
 
   return (
     <>
-      {!showForm && (
-        <section className="start-section">
-          <h1>Welcome to the Dream Home Survey</h1>
-          <button type="button" onClick={handleStart}>
-            Start!
-          </button>
-        </section>
-      )}
+      {!showForm && <StartPage handleStart={handleStart} />}
 
       {showForm && !formSubmitted && (
         <form onSubmit={handleSubmit}>
@@ -79,7 +72,11 @@ export const PageIndex = () => {
       )}
 
       {formSubmitted && (
-        <Summary optionSummary={optionSummary} index={currentQuestionIndex} />
+        <Summary
+          optionSummary={optionSummary}
+          index={currentQuestionIndex}
+          isStranger={isStranger}
+        />
       )}
     </>
   );
