@@ -60,7 +60,10 @@ export const App = () => {
 
   return (
     <div className="App">
-      <header></header>
+      <header>
+        <h1>{!submitted ? "Once upon a time" : "Results"}</h1>
+        <h2>{!submitted ? "on a website far far away..." : "please enjoy"}</h2>
+      </header>
 
       {!submitted && ( // Render the form only if not submitted
         <form onSubmit={handleSubmit}>
