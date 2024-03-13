@@ -6,7 +6,7 @@ export const EmailInput = () => {
   const { placeholder, handleFocus, handleOnBlur } = HandleFocus("Type your email");
 
   return (
-    <label className="text-form-area">
+    <label className="text-form-area form-area">
       Email
       <input
         type="text"

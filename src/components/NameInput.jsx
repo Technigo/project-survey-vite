@@ -6,7 +6,7 @@ export const NameInput = () => {
   const { placeholder, handleFocus, handleOnBlur } = HandleFocus("Type your full name");
 
   return (
-    <label className="text-form-area">
+    <label className="text-form-area form-area">
       Full name
       <input
         type="text"

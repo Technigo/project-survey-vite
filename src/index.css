@@ -1,5 +1,6 @@
 :root {
   --primary-color: #496480;
+  --secondary-color: #b3c1d1;
   --header-font: Protest Revolution, Sans;
   --text-font: Quicksand, Sans;
   --text-size: 20px;
@@ -36,14 +37,15 @@ body {
 
 .container {
   background-color: #fff;
+  width: 95%;
   height: 1000px;
   margin: 10px auto;
   border-radius: 10px;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .header-box {
-  border-bottom: 5px dotted #b3c1d1;
+  border-bottom: 5px dotted var(--secondary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,10 +56,14 @@ form {
   flex-direction: column;
 }
 
+.form-area {
+  margin-top: 30px;
+}
+
 .text-form-area input {
   border: 1px solid var(--primary-color);
   width: 100%;
-  margin: 5px;
+  margin: 5px 0;
   padding: 8px;
   border-radius: 5px;
 }
@@ -70,4 +76,27 @@ button[type="submit"] {
   padding: 15px;
   margin: 10px;
   cursor: pointer;
+}
+
+fieldset {
+  padding: 2px;
+  border: none;
+}
+
+.radio-options {
+  display: block;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+label input[type="radio"] {
+  /* margin-right: 15px; */
+  opacity: 0;
+  width: 0;
+}
+
+.radio-options.selected {
+  background-color: var(--secondary-color);
 }
