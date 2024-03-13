@@ -1,6 +1,9 @@
 .footer{
-     background-color: var(--indigo);
-    color: var(--white);
+     background-color: var(--pink);
+    color: var(--indigo);
     text-align: center;
     font-size: 12px;
+    font-weight: 700;
+    padding: 10px;
+    
 }

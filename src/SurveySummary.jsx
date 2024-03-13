@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./SurveyForm.css"
 
 // Define a functional component named SurveySummary that takes props.
 export const SurveySummary = ({ surveyData, steps }) => {
@@ -6,7 +7,7 @@ export const SurveySummary = ({ surveyData, steps }) => {
   return (
     <div className="summary">
       {/* Display the heading for the survey summary */}
-      <h2>This is you...</h2>
+      <h2>You're on fire!</h2>
       {/* List each question and its corresponding answer from the survey */}
       <ul>
         {/* Loop through each step of the survey to display questions and answers */}
