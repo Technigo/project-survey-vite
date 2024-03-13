@@ -1,17 +1,141 @@
-.formwrapper{
-	color: #000;;
-	background:#fff;
+.formwrapper {
+  color: #3d405b;
+  background: #f4f1de;
+  padding: 10px;
+  max-width: 90vw;
+  align-self: center;
+  justify-content: center;
+  font-family: "outfit";
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  visibility: visible;
 
 }
 
-.hidden{
-display:none;
+.notvisible {
+  visibility: hidden;
+
 }
 
-.visible{
-visibility: visible;
+.piratename {
+  background-color: #f2cc8f;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
-.notvisible{
-	visibility: hidden;
+h1 {
+  font-family: "BioRhyme";
+  font-weight: 800;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  padding: 3px;
+  margin: 10px;
+}
+
+label {
+  font-family: "outfit";
+}
+
+button {
+  background-color: #e07a5f;
+  color: #3d405b;
+  border: none;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-family: "outfit";
+}
+
+button:hover,
+:active,
+:focus {
+  background-color: #3d405b;
+  color: #f4f1de;
+}
+
+select {
+  background-color: #e07a5f;
+  color: #3d405b;
+  border: none;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-family: "outfit";
+  margin: 0 10px;
+}
+
+input {
+  appearance: none;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+
+input[type="checkbox"] {
+  position: relative;
+  /*background-color:#f4f1de;*/
+  border: 2px solid #3d405b;
+  width: 1em;
+  height: 1em;
+
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -11px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: #e07a5f;
+}
+
+input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: #ddd;
+  color: gray;
+}
+
+input[type="radio"] {
+  appearance: none;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+
+  border: 2px solid #3d405b;
+  vertical-align: -14px;
+  outline: none;
+}
+
+input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: #e07a5f;
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
 }
