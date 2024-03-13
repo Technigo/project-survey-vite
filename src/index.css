@@ -5,6 +5,7 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --blue: #0018a4;
 }
 
 code {
@@ -13,27 +14,130 @@ code {
 }
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
   padding: 0;
+  font-family: "Poppins";
+}
+
+h2 {
+  font-weight: 300;
+}
+
+h4 {
+  font-weight: 100;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid;
 }
 
 header {
-  background-color: #0f2080;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--blue);
   color: white;
-  margin: 0;
+  height: 150px;
+  gap: 0.5rem;
 }
 
 legend {
-  color: blue;
+  color: var(--blue);
+  width: 100%;
+  padding: 0 0 30px 0;
 }
 
 fieldset {
-  border: solid purple;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid;
+}
+
+button:hover {
+  background-color: var(--blue);
+}
+
+#requirement-text {
+  height: 100px;
+}
+
+#requirement-text::placeholder {
+  position: absolute;
+  top: 10px; /* Adjust to position placeholder */
+  left: 10px;
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: 40px;
+}
+
+.radio-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
 
 .on {
   display: none;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/***** Tablet *****/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/***** Desktop *****/
+@media (min-width: 768px) {
+  legend {
+    text-align: center;
+  }
+
+  button {
+    width: 250px;
+    align-self: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-flex {
+    justify-content: center;
+    width: 500px;
+  }
+
+  .radio-field {
+    justify-content: center;
+  }
 }
