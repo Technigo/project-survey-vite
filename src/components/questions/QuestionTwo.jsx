@@ -6,7 +6,7 @@ export const QuestionTwo = () => {
 
   return (
     <form>
-      Does music make you happy?
+      <h3>Does music make you happy?</h3>
       <label>
         <p>Yes, absolutely</p>
         <input
