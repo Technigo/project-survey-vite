@@ -7,10 +7,11 @@ export const Budget = () => {
       <p className="counter">4.</p>
 
       <label htmlFor="budget" className="labelQ">
-        What is your budget?<br></br>
+        What is your budget?
         <input
           type="range"
           id="budget"
+          className="budget-range"
           name="budget"
           min="100"
           max="10000"

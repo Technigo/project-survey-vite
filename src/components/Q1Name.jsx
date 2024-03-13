@@ -6,7 +6,7 @@ export const Name = () => {
     <div className="questions">
       <p className="counter">1.</p>
       <label htmlFor="name" className="labelQ">
-        What is your name?<br></br>
+        What is your name?
         <input
           type="text"
           onChange={(event) => setName(event.target.value)}

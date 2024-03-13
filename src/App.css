@@ -1,6 +1,9 @@
+:root {
+  --darkblue: #0018a4;
+}
 /*Header styling*/
 .header {
-  background-color: #0018a4;
+  background-color: var(--darkblue);
   width: 100vw;
   height: 200px;
   display: flex;
@@ -17,7 +20,7 @@
 }
 
 .header h1 {
-  height: 36px;
+  /* height: 36px; */
   font-weight: 500;
   font-size: 24px;
   margin-bottom: 10px;
@@ -25,13 +28,12 @@
 }
 
 .header h2 {
-  height: 27px;
+  /* height: 27px; */
   font-weight: 400;
   font-size: 18px;
 }
 
 /*Form styling*/
-
 .form {
   padding: 0 16px;
   margin-top: 40px;
@@ -40,11 +42,11 @@
 }
 
 .counter {
-  height: 36px;
+  /* height: 36px; */
   font-weight: 500;
   font-size: 24px;
-  color: #0018a4;
-  margin-bottom: 10px;
+  color: var(--darkblue);
+  margin-bottom: 5px;
 }
 
 .questions {
@@ -56,22 +58,13 @@
 }
 
 .labelQ {
-  color: #0018a4;
-  height: 27px;
+  color: var(--darkblue);
+  /* height: 27px; */
   font-weight: 400;
   font-size: 18px;
 }
 
 /*Buttons styling*/
-.submit-button {
-  background-color: #c2c2c2;
-  border: 1px solid black;
-  color: white;
-  border-radius: 6px;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
 .name-input,
 .destination-input {
   width: 100%;
@@ -80,10 +73,7 @@
   border: 1px solid black;
 }
 
-.name-input::after {
-  background-color: white;
-}
-
+/*Radio buttons*/
 .radio-button {
   display: inline-block;
   width: 100%;
@@ -93,10 +83,55 @@
   cursor: pointer;
 }
 
-/* .radio-button input[type="radio"] {
+.radio-button input[type="radio"] {
   display: none;
-} */
+}
 
-.radio-button input[type="radio"]:checked + label {
-  background: #ccd1ed;
+/*Range slider*/
+.budget-range {
+  width: 100%;
+}
+
+/*Submit button*/
+.submit-button {
+  background-color: #c2c2c2;
+  border: 1px solid black;
+  color: white;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.submit-button:active {
+  background-color: var(--darkblue);
+}
+
+/*Summary container styling*/
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  color: var(--darkblue);
+}
+
+.summary-message {
+  padding: 25px 0;
+}
+
+/*Media queries*/
+@media (min-width: 400px) {
+  .app-body {
+    display: flex;
+    justify-content: center;
+  }
+  .counter,
+  .labelQ {
+    text-align: center;
+  }
+
+  .submit-button {
+    width: 233px;
+    align-self: center;
+  }
 }

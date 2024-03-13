@@ -6,7 +6,7 @@ export const DestinationType = () => {
     <div className="questions">
       <p className="counter">2.</p>
       <label htmlFor="destination-type" className="labelQ">
-        How should your destination look like?<br></br>
+        How should your destination look like?
         <select
           onChange={(event) => setDestinationType(event.target.value)}
           value={destinationType}
