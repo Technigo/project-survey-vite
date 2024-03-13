@@ -1,26 +1,30 @@
 import { useState } from "react";
+import { Email } from "./Email";
+import { Activity } from "./Activity";
+import { Level } from "./Level";
+import { Requirements } from "./Requirements";
 
 export const Form = () => {
   const [selectedOption, setSelectedOption] = useState("Hiking");
-  const [level, setLevel] = useState("Beginner");
+  const [selectedLevel, setSelectedLevel] = useState("Beginner");
   const [requirements, setRequirements] = useState("");
-  const [email, setEmail] = useState("");
+  const [emailValue, setEmailValue] = useState("");
   const [hidden, setHidden] = useState("off");
 
-  const handleSelectOption = (event) => {
-    setSelectedOption(event.target.value);
+  const handleLevelSelection = (level) => {
+    setSelectedLevel(level);
   };
 
-  const handleLevel = (event) => {
-    setLevel(event.target.value);
+  const handleRequirements = (requirement) => {
+    setRequirements(requirement);
   };
 
-  const handleRequirements = (event) => {
-    setRequirements(event.target.value);
+  const handleActivityChange = (activity) => {
+    setSelectedOption(activity);
   };
 
-  const handleEmail = (event) => {
-    setEmail(event.target.value);
+  const handleEmailChange = (email) => {
+    setEmailValue(email);
   };
 
   const handleSubmit = (event) => {
@@ -42,114 +46,21 @@ export const Form = () => {
         id="survey-form"
         className={`form-flex ${hidden}`}
       >
-        <fieldset>
-          <legend>
-            <h3>1.</h3>
-            <p>What type of activity are you interested in?</p>
-          </legend>
-          <label htmlFor="activities-dropdown" className="visually-hidden">
-            Choose an activity:{" "}
-          </label>
-          <select
-            name="activities-dropdown"
-            id="activities-dropdown"
-            onChange={handleSelectOption}
-          >
-            <option value="hiking">Hiking</option>
-            <option value="skiing">Skiing</option>
-            <option value="canoeing">Canoeing</option>
-          </select>
-        </fieldset>
-        <fieldset className="radio-field">
-          <legend>
-            <h3>2.</h3>
-            <p>What is your current level?</p>
-          </legend>
-
-          <label htmlFor="beginner">
-            Beginner
-            <input
-              type="radio"
-              className="radio"
-              id="beginner"
-              value="Beginner"
-              name="level"
-              checked={level === "Beginner"}
-              tabIndex="0"
-              onChange={handleLevel}
-            />
-          </label>
-
-          <label htmlFor="intermediate">
-            Intermediate
-            <input
-              type="radio"
-              className="radio"
-              id="intermediate"
-              value="Intermediate"
-              name="level"
-              checked={level === "Intermediate"}
-              tabIndex="0"
-              onChange={handleLevel}
-            />
-          </label>
-
-          <label htmlFor="advanced">
-            Advanced
-            <input
-              type="radio"
-              className="radio"
-              id="advanced"
-              value="Advanced"
-              name="level"
-              checked={level === "Advanced"}
-              tabIndex="0"
-              onChange={handleLevel}
-            />
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>
-            <h3>3.</h3>
-            <p>
-              Do you have any specific requirements, such as dietary
-              restrictions, medical needs, or mobility assistance?
-            </p>
-          </legend>
-          <input
-            type="text"
-            id="requirement-text"
-            placeholder="Write your answer here"
-            value={requirements}
-            onChange={handleRequirements}
-          />
-        </fieldset>
-        <fieldset>
-          <legend>
-            <h3>3.</h3>
-            <p>
-              Finally, please enter your email address so that we may get in
-              contact with you
-            </p>
-          </legend>
-          <input
-            type="email"
-            placeholder="your@email.com"
-            value={email}
-            onChange={handleEmail}
-          />
-        </fieldset>
-
+        <Activity onChange={handleActivityChange} />
+        <Level onChange={handleLevelSelection} />
+        <Requirements onChange={handleRequirements} />
+        <Email onChange={handleEmailChange} />
         <button type="submit" onClick={submitForm}>
           Submit your answers
         </button>
       </form>
       <div id="replies" className={hidden === "off" ? "on" : ""}>
+        <p>Contact email: {emailValue}</p>
         <p>Selected activity: {selectedOption}</p>
-        <p>Selected level: {level}</p>
+        <p>Selected level: {selectedLevel}</p>
         <p>Special requirements: {requirements}</p>
-        <p>Contact email: {email}</p>
       </div>
     </div>
   );
 };
+//
