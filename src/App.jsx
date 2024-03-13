@@ -15,7 +15,7 @@ export const App = () => {
           <h1>How to cope with stress</h1>
           <h2>Find your inner peace </h2>
           <button className="start-button" onClick={handleClick}>
-            Let's go
+            Let&apos;s go
           </button>
         </div>
       )}

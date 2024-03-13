@@ -1,4 +1,4 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 
 const Question = ({ formData, qNum, onChange }) => {
   //Question 1
@@ -86,6 +86,12 @@ const Question = ({ formData, qNum, onChange }) => {
       )}
     </div>
   );
+};
+
+Question.propTypes = {
+  formData: PropTypes.object.isRequired,
+  qNum: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Question;
