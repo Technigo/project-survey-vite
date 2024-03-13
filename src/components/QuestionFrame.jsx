@@ -22,12 +22,14 @@ const QuestionFrame = () => {
     selectedOption: "option1",
     frequency: "",
     level: 0,
+    subscription: [],
   });
 
   // Event handler for form input changes
   const handleInputChange = event => {
-    const { name, value, type, checked } = event.target;
-    const newValue = type === "checkbox" ? checked : value;
+    const { name, value, type } = event.target;
+    const newValue =
+      type === "checkbox" ? [...formData.subscription, value] : value;
     setFormData({
       ...formData, //spread syntax
       [name]: newValue,
@@ -43,7 +45,7 @@ const QuestionFrame = () => {
 
   return (
     <div className="question-page">
-      <Header question={questions[qNum]} />
+      <Header question={questions?.[qNum]} />
       <form onSubmit={handleSubmit}>
         <Question
           qNum={qNum}
