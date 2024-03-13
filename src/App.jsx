@@ -6,7 +6,7 @@ import "./App.css"
 
 export const App = () => {
   return (
-    <div>
+    <div className="app-body">
       <header className="header">
         <h1>Surprise Holiday</h1>
         <h2>by Alma and Linda</h2>
