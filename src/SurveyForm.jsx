@@ -4,6 +4,7 @@ import { SelectOption } from "./SelectOption";
 import { RadioButtons } from "./RadioButtons";
 import { RangeSlider } from "./RangeSlider";
 import { SurveySummary } from "./SurveySummary";
+import "./SurveyForm.css"
 
 // Static data = data that does not change during the execution of a program / using any component props or state
 // 1. Put outside component (Global scope)
