@@ -11,6 +11,16 @@ export const Button = ({
     <section className="button-section">
       {isStranger ? (
         <>
+          {currentQuestionIndex > lastQuesionIndex && (
+            <>
+              <p>Are you satisfied with your choice?</p>
+              <p>
+                Click previous button to go back, click submit button to send
+                your choices.
+              </p>
+            </>
+          )}
+
           {currentQuestionIndex > 0 &&
             currentQuestionIndex <= lastQuesionIndex + 1 && (
               <button type="button" onClick={handlePreviousQuestion}>
@@ -25,11 +35,23 @@ export const Button = ({
           )}
 
           {currentQuestionIndex > lastQuesionIndex && (
-            <button type="submit">Submit</button>
+            <>
+              <button type="submit">Submit</button>
+            </>
           )}
         </>
       ) : (
         <>
+          {currentQuestionIndex > removLastQuestion && (
+            <>
+              <p>Are you satisfied with your choice?</p>
+              <p>
+                Click previous button to go back, click submit button to send
+                your choices.
+              </p>
+            </>
+          )}
+
           {currentQuestionIndex > 0 &&
             currentQuestionIndex <= removLastQuestion + 1 && (
               <button type="button" onClick={handlePreviousQuestion}>
@@ -44,7 +66,9 @@ export const Button = ({
           )}
 
           {currentQuestionIndex > removLastQuestion && (
-            <button type="submit">Submit</button>
+            <>
+              <button type="submit">Submit</button>
+            </>
           )}
         </>
       )}

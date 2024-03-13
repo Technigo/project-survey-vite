@@ -4,6 +4,7 @@ export const Summary = ({ optionSummary, index }) => {
 
   return (
     <section className="summary-section">
+      <p>Thank you for participanting! Here are your choices:</p>
       {optionSummary.map((option, index) => (
         <p key={index}>{option}</p>
       ))}

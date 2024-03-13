@@ -15,15 +15,11 @@ export const InputSection = ({
   const [featureArr, setFeatureArr] = useState([]);
 
   const handleDropDownChange = (value) => {
-    console.log("Index:", index);
-    console.log("Selected Option:", value);
     handleOptionSummary(value);
   };
 
   const handleChange = (event) => {
     const value = event.target.value;
-    console.log("Index:", index);
-    console.log("Selected Option:", value);
     handleOptionSummary(value);
   };
 
