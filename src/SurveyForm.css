@@ -1,12 +1,12 @@
 .survey-form {
-  margin: 20px;
-  padding: 20px;
+	margin: 20px;
+	padding: 20px;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /*.questions {
@@ -16,65 +16,87 @@
 } */
 
 .button {
-  display: flex;
-  /* work on for mobile and error */
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin: 24px;
+	display: flex;
+	/* work on for mobile and error */
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+	margin: 24px;
 }
 
 /* Style each component*/
 .text-imput {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .text-imput-answer {
-  width: 80%;
-  height: 1.5rem;
-  margin-top: 24px;
+	width: 80%;
+	height: 1.5rem;
+	margin-top: 24px;
 }
 
 .select-option {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .select-option-answer {
-  width: 100%;
-  height: 2rem;
-  margin-top: 24px;
+	width: 100%;
+	height: 2rem;
+	margin-top: 24px;
 }
 
 .radio-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.2rem;
 }
 
 .radio-buttons-answer {
-  width: 100%;
-  height: 2rem;
-  margin-top: 24px;
+	width: 100%;
+	height: 2rem;
+	margin-top: 24px;
 }
 
 .range-slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.2rem;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--pink);
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--indigo);
+  cursor: pointer;
+  transition: background 0.2s; /* Smooth transition for thumb color */
+}
+
+.slider:hover::-webkit-slider-thumb {
+  background: var(--indigo);
 }
 
 .range-slider-answer {
-  width: 100%;
-  height: 2rem;
-  margin-top: 24px;
-  color: var(--pink);
-
+	width: 100%;
+	height: 2rem;
+	margin-top: 24px;
 }
 
 /* Tablet and Desktop */
