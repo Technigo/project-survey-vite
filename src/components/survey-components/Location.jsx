@@ -8,11 +8,10 @@ export const Location = () => {
       <h2>3. Where do you usually eat pizza?</h2>
       <select
         value={selectedLocation}
-        defaultValue={"default"}
         onChange={(event) => setSelectedLocation(event.target.value)}
       >
-        <option value="default" default disabled>
-          -- Please Choose Continent --
+        <option value="" selected="selected" disabled hidden>
+          -- Please choose region --
         </option>
         <option value="Africa">Africa</option>
         <option value="Asia">Asia</option>
