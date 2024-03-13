@@ -35,3 +35,11 @@ Every project should be deployed somewhere. Be sure to include the link to the d
 <a href="instructions.md">
    See instructions of this project
   </a>
+
+//TODO: 1. Avoid empty input - validate the data
+//TODO: 2. Adjust the background color for Q2 - pass the accessibility test
+//TODO: 3. Finish question 4
+//TODO: 4. Finish question 5
+//TODO: 5. Create beginning and final page
+//TODO: 6. Responsive design - make sure it looks good on mobile and desktop
+//TODO: 7. (if possible) Visualize to the user how far through the survey they are and how much is left by creating a progress bar

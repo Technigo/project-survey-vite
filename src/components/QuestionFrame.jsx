@@ -20,10 +20,11 @@ const QuestionFrame = () => {
     message: "",
     isSubscribed: false,
     selectedOption: "option1",
+    frequency: "",
+    level: 0,
   });
 
   // Event handler for form input changes
-  // <input type="checkbox/radio" onChange={} name="username" value={userinput} ></input>
   const handleInputChange = event => {
     const { name, value, type, checked } = event.target;
     const newValue = type === "checkbox" ? checked : value;
