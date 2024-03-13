@@ -4,29 +4,30 @@ export const Survey = () => {
   // const [houses, setHouses] = useState();
   // const [character, setCharacter] = useState("");
   // const [spell, setSpell] = useState("");
-  const [formData, setFormData] = useState({
+  
+  const [results, setResults] = useState({
     house: "",
     character: "",
     spell: "",
   });
+  const [submitted, setSubmitted] = useState(false)
 
   const houseGroup = ["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"];
 
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setResults({
+      ...results,
+      [name]: value,
+    });
+    setSubmitted(true)
+  };
 
-const handleInputChange = (event) => {
-  const { name, value, type, checked} = event.target
-  const newValue = type === "radio" ? checked : value
-
-  setFormData ({
-    ...formData,
-    [name] : newValue
-  })
-}
-
-const handleSubmit = (event) => {
-  event.preventDefault();
-  console.log(formData)
-}
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(results);
+  };
 
   return (
     <div className="form-container">
@@ -40,10 +41,10 @@ const handleSubmit = (event) => {
               <input
                 name="house"
                 type="radio"
-                value={formData.house}
-                // onChange={handleSubmit}
+                value={house}
                 onChange={handleInputChange}
-                checked={house}
+                // onChange={event => setHouses(event.target.value)}
+                checked={results.house === house}
               />
               {house}
             </label>
@@ -55,9 +56,9 @@ const handleSubmit = (event) => {
           <label>Who is your favorite character?</label>
           <select
             name="character"
-            value={formData.character}
-            // onChange={handleSubmit}
+            value={results.character}
             onChange={handleInputChange}
+            // onChange={event => setCharacter(event.target.value)}
           >
             <option disabled value="">
               choose your favorite character:
@@ -79,14 +80,22 @@ const handleSubmit = (event) => {
           <input
             name="spell"
             type="text"
-            // onChange={handleSubmit}
             onChange={handleInputChange}
-            value={formData.spell}
+            // onChange={event => setSpell(event.target.value)}
+            value={results.spell}
           ></input>
         </div>
 
         <button type="submit">Submit</button>
       </form>
+      {submitted && (
+        <div className="results">
+          <h2>Here are your survey answers:</h2>
+          <p>House: { results.house } </p>
+          <p>Character: { results.character } </p>
+          <p>Spell: { results.spell } </p>
+        </div>
+      )}
     </div>
   );
 };
