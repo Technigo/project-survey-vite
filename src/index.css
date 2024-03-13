@@ -68,3 +68,17 @@ code {
   border-radius: 6px;
   padding: 10px;
 }
+
+.RadioButtons {
+}
+
+/* input[type="radio"]{
+  display: none;
+} */
+
+label {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+
+}

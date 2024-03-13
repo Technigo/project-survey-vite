@@ -34,25 +34,33 @@ function Questions() {
           <div className="FirstQuestion">
             <h2 className="number">1.</h2>
             <p className="question">What is your mood-boosting activity?</p>
-            <textarea value={activity} onChange={handleActivityChange} className="activity"/>
+            <textarea
+              value={activity}
+              onChange={handleActivityChange}
+              className="activity"
+            />
           </div>
           <div className="SecondQuestion">
             <h2 className="number">2.</h2>
             <p className="question">Does music make you happy?</p>
-            <input
-              type="radio"
-              name="music"
-              value="Yes"
-              onClick={() => toggleMusicHappy("Yes")}
-            />
-            Yes, absolutely
-            <input
-              type="radio"
-              name="music"
-              value="No"
-              onClick={() => toggleMusicHappy("No")}
-            />
-            No, I like the silence
+            <div className="RadioButtons">
+              <input
+                type="radio"
+                name="music"
+                value="Yes"
+                onClick={() => toggleMusicHappy("Yes")}
+                className="yes-radio"
+              />
+              <label>Yes, absolutely</label>
+              <input
+                type="radio"
+                name="music"
+                value="No"
+                onClick={() => toggleMusicHappy("No")}
+                className="no-radio"
+              />
+              <label>No, I like the silence</label>
+            </div>
           </div>
 
           <div className="ThirdQuestion">
