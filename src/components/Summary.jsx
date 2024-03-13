@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 
 export const Summary = ({ name, destinationType, period, budget }) => {
   return (
-    <div>
+    <div className="summary-container">
       <h3>Summary of your suprise holiday</h3>
       <p>Name: {name}</p>
       <p>Destination Type: {destinationType}</p>

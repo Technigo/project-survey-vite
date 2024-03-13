@@ -10,7 +10,8 @@ export const DestinationType = () => {
         <select
           onChange={(event) => setDestinationType(event.target.value)}
           value={destinationType}
-          id="destination-type">
+          id="destination-type"
+          className="destination-input">
           <option value="" disabled>
             Select destination type
           </option>

@@ -12,6 +12,8 @@ export const Name = () => {
           onChange={(event) => setName(event.target.value)}
           value={name}
           id="name"
+          placeholder="Write your name here..."
+          className="name-input"
         />
       </label>
     </div>

@@ -30,22 +30,26 @@ export const App = () => {
   }
 
   return (
-    <div className="app-body">
+    <div className="app-container">
       <header className="header">
-        <h1>Surprise Holiday</h1>
+        <h1 onClick={() => location.reload()}>Surprise Holiday</h1>
         <h2>by Alma and Linda</h2>
       </header>
-      {showSummary ? (
-        <Summary {...formData} />
-      ) : (
-        <form className="form" onSubmit={handleSubmit}>
-          <Name onInputChange={handleInputChange} />
-          <DestinationType onInputChange={handleInputChange} />
-          <Period onInputChange={handleInputChange} />
-          <Budget onInputChange={handleInputChange} />
-          <button type="submit">Submit</button>
-        </form>
-      )}
+      <div className="app-body">
+        {showSummary ? (
+          <Summary {...formData} />
+        ) : (
+          <form className="form" onSubmit={handleSubmit}>
+            <Name onInputChange={handleInputChange} />
+            <DestinationType onInputChange={handleInputChange} />
+            <Period onInputChange={handleInputChange} />
+            <Budget onInputChange={handleInputChange} />
+            <button type="submit" className="submit-button">
+              Submit your answer
+            </button>
+          </form>
+        )}
+      </div>
     </div>
   )
 }
