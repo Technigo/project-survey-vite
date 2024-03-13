@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+:root {
+  --blue: #0018a4;
+  --black: #000000;
+  --button-color: #c2c2c2;
+  --radio-border: #9c9c9c;
+  --radio-bg: #CCD1ED;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 35px 10px;
+}
+
+.radio-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* opacity: 0;
+  position: fixed;
+  width: 0; */
+}
+
+.radio-button-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.radio-button-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  border: 1px solid var(--radio-border);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.radio-button-container:hover input ~ .custom-radio {
+  background-color: var(--radio-bg);
+  content: attr(data-value);
+}
+
+.radio-button-container:hover input:checked ~ .custom-radio {
+  
+}

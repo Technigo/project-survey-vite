@@ -1,16 +1,13 @@
 import { useState } from "react";
 
 export const Survey = () => {
-  // const [houses, setHouses] = useState();
-  // const [character, setCharacter] = useState("");
-  // const [spell, setSpell] = useState("");
-  
+
   const [results, setResults] = useState({
     house: "",
     character: "",
     spell: "",
   });
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
 
   const houseGroup = ["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"];
 
@@ -20,32 +17,34 @@ export const Survey = () => {
       ...results,
       [name]: value,
     });
-    setSubmitted(true)
   };
 
-  
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(results);
+    setSubmitted(true);
   };
 
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         {/* radio buttons */}
-        <div className="radio-buttons">
-          <label>Which Hogwarts house represents you the best?</label>
-
+        <div className="radio-button-wrapper">
+          <label>
+            <h2>1.</h2>
+            <p>Which Hogwarts house represents you the best?</p>
+          </label>
           {houseGroup.map((house) => (
-            <label key={house}>
+            <label className="radio-button-container" key={house}>
               <input
                 name="house"
                 type="radio"
                 value={house}
                 onChange={handleInputChange}
-                // onChange={event => setHouses(event.target.value)}
                 checked={results.house === house}
+                data-value={house}
               />
+              <span className="custom-radio"></span>
               {house}
             </label>
           ))}
@@ -53,12 +52,14 @@ export const Survey = () => {
 
         {/* dropdown selection */}
         <div className="dropdown">
-          <label>Who is your favorite character?</label>
+          <label>
+            <h2>2.</h2>
+            <p>Who is your favorite character?</p>
+          </label>
           <select
             name="character"
             value={results.character}
             onChange={handleInputChange}
-            // onChange={event => setCharacter(event.target.value)}
           >
             <option disabled value="">
               choose your favorite character:
@@ -76,12 +77,14 @@ export const Survey = () => {
 
         {/* text input */}
         <div className="text-input">
-          <label> What is your favorite spell?</label>
+          <label>
+            <h2>3.</h2>
+            <p>What is your favorite spell?</p>
+            </label>
           <input
             name="spell"
             type="text"
             onChange={handleInputChange}
-            // onChange={event => setSpell(event.target.value)}
             value={results.spell}
           ></input>
         </div>
@@ -90,10 +93,10 @@ export const Survey = () => {
       </form>
       {submitted && (
         <div className="results">
-          <h2>Here are your survey answers:</h2>
-          <p>House: { results.house } </p>
-          <p>Character: { results.character } </p>
-          <p>Spell: { results.spell } </p>
+          <h3>Here are your survey answers:</h3>
+          <p>House: {results.house} </p>
+          <p>Character: {results.character} </p>
+          <p>Spell: {results.spell} </p>
         </div>
       )}
     </div>

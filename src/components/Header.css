@@ -1,3 +1,19 @@
 * {
+  margin: 0;
   font-family: "Poppins", sans-serif;
+}
+
+header {
+  text-align: center;
+  background-color: #0018A4 ;
+  height: 100%;
+  font-size: 16px;
+
+
+}
+
+h1 {
+  color: #FFFFFF;
+  font-weight: 500;
+  padding: 25px 14px;
 }
