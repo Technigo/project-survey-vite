@@ -25,7 +25,6 @@ export const SurveyForm = () => {
         <DropDown selectedValue={selectedGenre} handleDropdownChange={handleGenreChange} />
         <TextInput />
         <RadioButtons />
-        {/* Render the DropDown2 component */}
         <DropDown2 selectedValue={selectedDiscovery} handleDropdownChange={handleDiscoveryChange} />
         <button type="button" className="button">Submit</button>
       </div>

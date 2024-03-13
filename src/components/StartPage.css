@@ -1,0 +1,16 @@
+/* Start page positioning */
+.start-page {
+    background: #ffffff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+button {
+    display: block; 
+    margin: 0 auto; 
+}
