@@ -11,7 +11,7 @@ export const Level = () => {
       <div className="question level">
           <h2>1. Select your pizza eating level:</h2>
       <form>
-        <div>
+        <div className="radio-option">
           <label>
             <input
               type="radio"
@@ -22,7 +22,7 @@ export const Level = () => {
             Novice
           </label>
         </div>
-        <div>
+        <div className="radio-option">
           <label>
             <input
               type="radio"
@@ -33,7 +33,7 @@ export const Level = () => {
             Intermediate
           </label>
         </div>
-        <div>
+        <div className="radio-option">
           <label>
             <input
               type="radio"
@@ -44,7 +44,7 @@ export const Level = () => {
             Expert
           </label>
         </div>
-        <div>
+        <div className="radio-option">
           <label>
             <input
               type="radio"
@@ -55,7 +55,7 @@ export const Level = () => {
             Doctoral degree in Pizza eating
           </label>
         </div>
-        <div>
+        <div className="radio-option">
           <label>
             <input
               type="radio"

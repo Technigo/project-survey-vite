@@ -8,7 +8,7 @@ h2 {
   font-size: 20px;
 }
 
-.toppings-list{
+.toppings-list {
   margin: 0;
 }
 
@@ -21,20 +21,27 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1px 0;
+  padding: 0.5em 0 ;
 }
 
 .toppings-result {
   display: flex;
   flex-direction: column;
   margin: 2em 0 1em 0;
-  border: 1px solid rgb(250, 109, 156);
+  border: 1px solid #caced1;
   border-radius: 20px;
   padding: 1em;
 }
 
-p span {
-  font-size: 18px;
-  font-weight: 500;
-  padding-right: 3px;
+.toppings-selected {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  padding: 0;
 }
+
+.score-section {
+  display: flex;
+  flex-direction: row;
+}
+

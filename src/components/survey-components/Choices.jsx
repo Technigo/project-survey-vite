@@ -74,14 +74,10 @@ export const Choices = () => {
         })}
         <div className="toppings-result">
           <div className="toppings-selected">
-            <p>
-              <span>You selected:</span> {totalName}
-            </p>
+              <p><span>You selected:</span>{totalName}</p>
           </div>
           <div className="score-section">
-            <p>
-              <span>Your total score:</span> {total} disgust points
-            </p>
+              <p><span>Your total score:</span>{total} disgust points</p>
           </div>
         </div>
       </ul>
