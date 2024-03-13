@@ -33,16 +33,21 @@ export const App = () => {
           <div>
             {/* "for" and "id" has to match, it's for accessabiliy  */}
             {/* use "htmlfor", otherwise you will get a warning in the console log.  */}
-            <label htmlFor="bestThing">What's the best thing about you?</label>
+            <label htmlFor="bestThing">1. What's the best thing about you?</label>
             <input type="text" id="bestThing" name="bestThing" onChange={holdData} />
           </div>
           <div>
             <input type="submit" value="Submit" />
           </div>
+        <div>
+        <label htmlFor="bestThing">2. Are you sometimes too nice?</label>
+        <input type="radio" id="yes" name="yes" value="yes" />
+        </div>
+
         </form>
         // This is the end of the form/conditional rendering
       )}
-      {mode == "summary" && <div>summary</div>}
+      {mode == "summary" && <div>{bestThing}</div>}
     </div>
   );
 };
