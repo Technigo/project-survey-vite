@@ -1,0 +1,31 @@
+/* Radiobuttons positioning */
+.radio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Styling for the Radiobutton answers */
+.radio-label {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Space between Radiobutton and it's answers */
+.radio-input {
+  margin-right: 10px;
+}
+
+/* Adding bold font-weight to the answers when clicked on */
+.radio-input:checked + .radio-label {
+  font-weight: bold;
+}
+
+/* Styling for the question */
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  text-align: center;
+}

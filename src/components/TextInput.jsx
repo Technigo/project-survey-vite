@@ -5,8 +5,8 @@ export const TextInput = () => {
   // Create a ref to hold the input element
   const inputRef = useRef(null);
 
-  // Function to handle input change
-  const handleInputChange = () => {
+  // Function to handle input blur
+  const handleInputBlur = () => {
     const enteredValue = inputRef.current.value;
     // Do something with the entered value
     console.log("Entered value:", enteredValue);
@@ -22,8 +22,8 @@ export const TextInput = () => {
         type="text"
         id="favoriteMusician"
         name="favoriteMusician"
-        defaultValue="Enter your answer here" // Set a default value
-        onChange={handleInputChange} // Call the handleInputChange function on input change
+        placeholder="Enter your answer here" // Use placeholder instead of defaultValue
+        onBlur={handleInputBlur} // Call the handleInputBlur function on input blur
         className="input-field"
       />
     </div>
