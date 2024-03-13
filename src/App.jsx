@@ -23,6 +23,8 @@ export const App = () => {
 
   //Function to handle when input is changed
   const handleInputChange = (name, value) => {
+    console.log("Name:", name, "Value:", value)
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,

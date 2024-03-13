@@ -1,14 +1,24 @@
 import { useState } from "react"
+import PropTypes from "prop-types"
 
-export const DestinationType = () => {
+export const DestinationType = ({ onInputChange }) => {
   const [destinationType, setDestinationType] = useState("")
+
+  const handleChange = (event) => {
+    const newDestType = event.target.value
+    console.log("New Destination Type:", newDestType)
+
+    setDestinationType(newDestType)
+    onInputChange("destination", newDestType)
+  }
+
   return (
     <div className="questions">
       <p className="counter">2.</p>
       <label htmlFor="destination-type" className="labelQ">
         How should your destination look like?
         <select
-          onChange={(event) => setDestinationType(event.target.value)}
+          onChange={handleChange}
           value={destinationType}
           id="destination-type"
           className="destination-input">
@@ -27,4 +37,8 @@ export const DestinationType = () => {
       </label>
     </div>
   )
+}
+
+DestinationType.propTypes = {
+  onInputChange: PropTypes.func.isRequired,
 }

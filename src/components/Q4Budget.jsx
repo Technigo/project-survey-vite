@@ -1,7 +1,15 @@
 import { useState } from "react"
+import PropTypes from "prop-types"
 
-export const Budget = () => {
+export const Budget = ({ onInputChange }) => {
   const [budget, setBudget] = useState("")
+
+  const handleChange = (event) => {
+    const newBudget = event.target.value
+    setBudget(newBudget)
+    onInputChange("budget", newBudget)
+  }
+
   return (
     <div className="questions">
       <p className="counter">4.</p>
@@ -16,11 +24,15 @@ export const Budget = () => {
           min="100"
           max="10000"
           step="100"
-          onChange={(event) => setBudget(event.target.value)}
+          onChange={handleChange}
           value={budget}
         />
         <span> {budget} €</span>
       </label>
     </div>
   )
+}
+
+Budget.propTypes = {
+  onInputChange: PropTypes.func.isRequired,
 }

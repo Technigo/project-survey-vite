@@ -1,7 +1,17 @@
 import { useState } from "react"
+import PropTypes from "prop-types"
 
-export const Period = () => {
+export const Period = ({ onInputChange }) => {
   const [period, setPeriod] = useState("")
+
+  const handleChange = (event) => {
+    const newPeriod = event.target.value
+    console.log("New Destination Type:", newPeriod)
+
+    setPeriod(newPeriod)
+    onInputChange("period", newPeriod)
+  }
+
   return (
     <div className="questions">
       <p className="counter">3.</p>
@@ -12,7 +22,7 @@ export const Period = () => {
             id="weekend"
             type="radio"
             value="weekend"
-            onChange={(event) => setPeriod(event.target.value)}
+            onChange={handleChange}
             checked={period === "weekend"}></input>
           Weekend
         </label>
@@ -21,7 +31,7 @@ export const Period = () => {
             id="week"
             type="radio"
             value="week"
-            onChange={(event) => setPeriod(event.target.value)}
+            onChange={handleChange}
             checked={period === "week"}></input>
           Week
         </label>
@@ -30,7 +40,7 @@ export const Period = () => {
             id="two-weeks"
             type="radio"
             value="two-weeks"
-            onChange={(event) => setPeriod(event.target.value)}
+            onChange={handleChange}
             checked={period === "two-weeks"}></input>
           Two weeks
         </label>
@@ -39,11 +49,15 @@ export const Period = () => {
             id="month"
             type="radio"
             value="month"
-            onChange={(event) => setPeriod(event.target.value)}
+            onChange={handleChange}
             checked={period === "month"}></input>
           Month
         </label>
       </div>
     </div>
   )
+}
+
+Period.propTypes = {
+  onInputChange: PropTypes.func.isRequired,
 }
