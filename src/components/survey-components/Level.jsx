@@ -76,5 +76,5 @@ export const Level = ({ setDisplayLevel }) => {
   );
 };
 Level.propTypes = {
-  setDisplayLevel: PropTypes.string.isRequired,
+  setDisplayLevel: PropTypes.func,
 };

@@ -93,5 +93,5 @@ export const Choices = ({ setDisplayChoices }) => {
   );
 };
 Choices.propTypes = {
-  setDisplayChoices: PropTypes.string.isRequired,
+  setDisplayChoices: PropTypes.func,
 };

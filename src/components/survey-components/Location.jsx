@@ -31,5 +31,5 @@ export const Location = ({setLocation}) => {
 };
 
 Location.propTypes = {
-  setLocation: PropTypes.string.isRequired,
+  setLocation: PropTypes.func,
 };

@@ -4,17 +4,20 @@ import PropTypes from "prop-types";
 export const Company = ({ setDisplayCompany }) => {
   const [company, setCompany] = useState("");
 
-  const selectCompany = (event) => {
-    setCompany(event.target.value);
-    setDisplayCompany(event.target.value);
-  };
+  // const selectCompany = (event) => {
+  //   setCompany(event.target.value);
+  //   setDisplayCompany(event.target.value);
+  // };
 
 return(
 <div className="question company">
 <h3>4. Who do you dream of eating pizza with?</h3>
-<select value={company} onChange={selectCompany}>
-      <option value="" selected="selected" disabled hidden>
-        Company of your choice
+    <select value={company} onChange={(event) => {
+      setCompany(event.target.value);
+      setDisplayCompany(event.target.value)
+    }}>
+      <option value="" disabled hidden>
+       -- Company of your choice --
         </option>
         <option value="Michelle Obama">Michelle Obama</option>
         <option value="Albert Einstein">Albert Einstein</option>
@@ -31,5 +34,5 @@ return(
 )
 }
 Company.propTypes = {
-  setDisplayCompany: PropTypes.string.isRequired,
+  setDisplayCompany: PropTypes.func,
 };

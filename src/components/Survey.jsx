@@ -21,10 +21,10 @@ export const Survey = () => {
 };
 
 export const Result = () => {
-  const [displayLevel, setDisplayLevel] = useState("");
-  const [displayChoices, setDisplayChoices] = useState("");
-  const [location, setLocation] = useState("");
-  const [displayCompany, setDisplayCompany] = useState("");
+  const [displayLevel, setDisplayLevel] = useState("Not chosen");
+  const [displayChoices, setDisplayChoices] = useState("Not chosen");
+  const [location, setLocation] = useState("Not chosen");
+  const [displayCompany, setDisplayCompany] = useState("Not chosen");
 
   return (
     <div className="result-container">
@@ -38,7 +38,7 @@ export const Result = () => {
       <Level setDisplayLevel={setDisplayLevel} />
       <Choices setDisplayChoices={setDisplayChoices} />
       <Location setLocation={setLocation} />
-      <Company setCompany={setDisplayCompany} />
+      <Company setDisplayCompany={setDisplayCompany} />
     </div>
   );
 };
