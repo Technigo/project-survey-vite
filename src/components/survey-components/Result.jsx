@@ -1,12 +1,16 @@
-import { LevelAnswer } from "./LevelAnswer";
+import PropTypes from "prop-types";
+// import { LevelAnswer } from "./LevelAnswer";
 // import { Choices } from "./Choices";
 // import { Location } from "./location";
 
-export const Results = () => {
+export const Results = (props) => {
   return (
     <div className="question results">
-      <h2>Your results:</h2>
-      <LevelAnswer />
+      <p>Your results: {props.level}</p>
     </div>
   );
+};
+
+Results.propTypes = {
+  level: PropTypes.string.isRequired,
 };

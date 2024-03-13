@@ -1,15 +1,16 @@
+import { Results } from "./Result";
 import PropTypes from "prop-types";
 
 export const LevelAnswer = (props) => {
+  const level = props.level;
+  console.log("Level: ", level);
 
-       const level = props.level;
-    console.log("Level: ", level)
-
-  return <p>You Selected: {level}</p>;
+  return (
+    // <p>You Selected: {level}</p>
+    <Results level={level} />
+  );
 };
 
 LevelAnswer.propTypes = {
-  selectedLevel: PropTypes.string.isRequired,
+  level: PropTypes.string.isRequired,
 };
-
-LevelAnswer.propTypes
