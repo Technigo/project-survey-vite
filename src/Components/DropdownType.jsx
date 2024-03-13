@@ -35,7 +35,7 @@ export const DropdownType = ({ question, handleDropDownChange }) => {
       )}
       {selectedOption && (
         <p>
-          You choose: <span>{selectedOption}</span>
+          Your selection: <span>{selectedOption}</span>
         </p>
       )}
     </section>
