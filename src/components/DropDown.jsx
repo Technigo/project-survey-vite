@@ -25,7 +25,7 @@ export const DropDown = () => {
         className="dropdown"
         onChange={handleDropdownChange}
       >
-        <option value="">Click to view genres</option>
+        <option value="">Select an option</option>
         <option value="Pop">Pop</option>
         <option value="Rock">Rock</option>
         <option value="Hip Hop/Rap">Hip Hop/Rap</option>
