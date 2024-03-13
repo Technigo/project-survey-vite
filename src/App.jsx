@@ -154,6 +154,13 @@ export const App = () => {
     setSubmitted(true);
   };
 
+  const handleStartOver = () => {
+    setAnimal("");
+    setPlanet("");
+    setColor("");
+    setSubmitted(false);
+  };
+
   return (
     <div className="App">
       <header></header>
@@ -208,6 +215,7 @@ export const App = () => {
             went. And you lived happily ever after, spreading joy across the
             galaxy. The end!
           </p>
+          <button onClick={handleStartOver}>Start over</button>
         </>
       )}
     </div>
