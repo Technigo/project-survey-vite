@@ -1,54 +1,53 @@
-export const Button = ({handleNextQuestion, handlePreviousQuestion,currentQuestionIndex, lastQuesionIndex, isStranger}) =>{
+export const Button = ({
+  handleNextQuestion,
+  handlePreviousQuestion,
+  currentQuestionIndex,
+  lastQuesionIndex,
+  isStranger,
+}) => {
+  const removLastQuestion = lastQuesionIndex - 1;
 
-    const removLastQuestion = lastQuesionIndex - 1;
+  return (
+    <section className="button-section">
+      {isStranger ? (
+        <>
+          {currentQuestionIndex > 0 &&
+            currentQuestionIndex <= lastQuesionIndex + 1 && (
+              <button type="button" onClick={handlePreviousQuestion}>
+                Previous
+              </button>
+            )}
 
-    return (
-        <section className="button-section">
-            {isStranger? (
-                <>
-                    {(currentQuestionIndex > 0 && currentQuestionIndex <= (lastQuesionIndex + 1)) && 
-                    (
-                        <button type="button" onClick={handlePreviousQuestion}>
-                            Previous
-                        </button>
-                    )}
+          {currentQuestionIndex <= lastQuesionIndex && (
+            <button type="button" onClick={handleNextQuestion}>
+              Next
+            </button>
+          )}
 
-                    {currentQuestionIndex <= lastQuesionIndex && 
-                    (
-                    <button type="button" onClick={handleNextQuestion}>
-                        Next
-                    </button>
-                    )}
-            
-                    {currentQuestionIndex > lastQuesionIndex && 
-                    (<button type="submit" >
-                        Submit
-                    </button>)}
-                </>
-                ) : (
-                    <>
-                        {(currentQuestionIndex > 0 && currentQuestionIndex <= (removLastQuestion + 1)) && 
-                        (
-                            <button type="button" onClick={handlePreviousQuestion}>
-                                Previous
-                            </button>
-                        )}
+          {currentQuestionIndex > lastQuesionIndex && (
+            <button type="submit">Submit</button>
+          )}
+        </>
+      ) : (
+        <>
+          {currentQuestionIndex > 0 &&
+            currentQuestionIndex <= removLastQuestion + 1 && (
+              <button type="button" onClick={handlePreviousQuestion}>
+                Previous
+              </button>
+            )}
 
-                        {currentQuestionIndex <= removLastQuestion && 
-                        (
-                            <button type="button" onClick={handleNextQuestion}>
-                                Next
-                            </button>
-                        )}
+          {currentQuestionIndex <= removLastQuestion && (
+            <button type="button" onClick={handleNextQuestion}>
+              Next
+            </button>
+          )}
 
-                        {currentQuestionIndex > removLastQuestion && 
-                        (
-                            <button type="submit" >
-                                Submit
-                            </button>
-                        )}
-                    </>
-                )
-            }
-        </section>
-    )}
+          {currentQuestionIndex > removLastQuestion && (
+            <button type="submit">Submit</button>
+          )}
+        </>
+      )}
+    </section>
+  );
+};

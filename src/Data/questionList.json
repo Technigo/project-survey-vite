@@ -1,88 +1,82 @@
-{ 
-    
-    "questions" :
-        [ {
-            "id":"q1",
-            "questionText": "If you could choose the location for your dream home, where would it be?",
-            "options": [
-                {"id":"q1a1",
-                  "optionText":"Tropical island paradise"},
-                {"id":"q1a2",
-                  "optionText":"Flower meadow with snow-capped peaks"},
-                {"id":"q1a3",
-                  "optionText":"Historic city with cobblestone streets"},
-                {"id":"q1a4",
-                  "optionText":"Remote countryside by nature"}
-            ]
-        },
-
+{
+  "questions": [
+    {
+      "id": "q1",
+      "questionText": "If you could choose the location for your dream home, where would it be?",
+      "options": [
+        { "id": "q1a1", "optionText": "Tropical island paradise" },
+        { "id": "q1a2", "optionText": "Flower meadow with snow-capped peaks" },
         {
-            "id":"q2",
-            "questionText": "What interior design color theme would you prefer for your dream home?",
-            "options": [
-                {"id":"q2a1",
-                  "optionText":"choose your color theme in the color wheel"}
-            ]
-          },
-
-        {
-            "id":"q3",
-            "questionText": "What personal life features would be essential in your dream home?",
-            "options": [
-                {"id":"q3a1",
-                  "optionText":"Beautiful garden or green space"},
-                {"id":"q3a2",
-                  "optionText":"Nice kitchen with a chef"},
-                {"id":"q3a3",
-                  "optionText":"Spa or home gym"},
-                {"id":"q3a4",
-                  "optionText":"Home theater with endless movies"},
-                {"id":"q3a5",
-                  "optionText":"Open outdoor space for pets"},
-                {"id":"q3a6",
-                  "optionText":"High-speed internet"},
-                {"id":"q3a7",
-                  "optionText":"Smart home system"},
-                {"id":"q3a8",
-                  "optionText":"Huge bookshelf with a cozy reading nook"},
-                {"id":"q3a9",
-                  "optionText":"Big windows for natural light"},
-                {"id":"q3a10",
-                  "optionText":"Equipped workshop of hobbies"}
-            ]
-          },
-
-        {
-            "id":"q4",
-            "questionText":"How important is having a dedicated home office or workspace to you?",
-            "options": [
-                {"id":"q4a1",
-                  "optionText":"points:"}
-            ]
+          "id": "q1a3",
+          "optionText": "Historic city with cobblestone streets"
         },
+        { "id": "q1a4", "optionText": "Remote countryside by nature" }
+      ]
+    },
 
-       {    
-            "id":"q5",  
-            "questionText":"If you could invite someone to your dream accommodation for a special room tour, who would it be?",
-            "options":[
-                {"id":"q5a1",
-                  "optionText":"A close friend or family member"},
-                {"id":"q5a2",
-                  "optionText":"A total stranger for a surprise"}
-            ]
-        },
-
-        {   
-            "id":"q6",
-            "questionText":"If you could invite anyone, living or dead, for the special room tour, who would it be? (Only if you chose stranger in the previous question)",
-            "options":[
-                {"id":"q6a1",
-                  "optionText":"A historical figure for intriguing conversations"},
-                {"id":"q6a2",
-                  "optionText":"A celebrity for a touch of glamour and excitement"},
-                {"id":"q6a3",
-                  "optionText":"A fictional character for a unique and imaginative experience"}
-            ]
+    {
+      "id": "q2",
+      "questionText": "What interior design color theme would you prefer for your dream home?",
+      "options": [
+        {
+          "id": "q2a1",
+          "optionText": "choose your color theme in the color wheel"
         }
-    ]
+      ]
+    },
+
+    {
+      "id": "q3",
+      "questionText": "What personal life features would be essential in your dream home?",
+      "options": [
+        { "id": "q3a1", "optionText": "Beautiful garden or green space" },
+        { "id": "q3a2", "optionText": "Nice kitchen with a chef" },
+        { "id": "q3a3", "optionText": "Spa or home gym" },
+        { "id": "q3a4", "optionText": "Home theater with endless movies" },
+        { "id": "q3a5", "optionText": "Open outdoor space for pets" },
+        { "id": "q3a6", "optionText": "High-speed internet" },
+        { "id": "q3a7", "optionText": "Smart home system" },
+        {
+          "id": "q3a8",
+          "optionText": "Huge bookshelf with a cozy reading nook"
+        },
+        { "id": "q3a9", "optionText": "Big windows for natural light" },
+        { "id": "q3a10", "optionText": "Equipped workshop of hobbies" }
+      ]
+    },
+
+    {
+      "id": "q4",
+      "questionText": "How important is having a dedicated home office or workspace to you?",
+      "options": [{ "id": "q4a1", "optionText": "points:" }]
+    },
+
+    {
+      "id": "q5",
+      "questionText": "If you could invite someone to your dream accommodation for a special room tour, who would it be?",
+      "options": [
+        { "id": "q5a1", "optionText": "A close friend or family member" },
+        { "id": "q5a2", "optionText": "A total stranger for a surprise" }
+      ]
+    },
+
+    {
+      "id": "q6",
+      "questionText": "If you could invite anyone, living or dead, for the special room tour, who would it be? (Only if you chose stranger in the previous question)",
+      "options": [
+        {
+          "id": "q6a1",
+          "optionText": "A historical figure for intriguing conversations"
+        },
+        {
+          "id": "q6a2",
+          "optionText": "A celebrity for a touch of glamour and excitement"
+        },
+        {
+          "id": "q6a3",
+          "optionText": "A fictional character for a unique and imaginative experience"
+        }
+      ]
+    }
+  ]
 }
