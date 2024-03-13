@@ -12,40 +12,61 @@ code {
     monospace;
 }
 
+.test select,
+.test input[type="text"],
+.test textarea {
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+}
 
+.test textarea {
+  resize: vertical;
+}
 
+.test button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-.test{
-  max-width: 400px;
-  margin: 0px auto;
-  text-align: center;
+.test button:hover {
+  background-color: #0056b3;
+}
+
+.submitted-data {
+  margin-top: 20px;
+}
+
+.submitted-data p {
+  margin-bottom: 10px;
 }
 
 .text label {
   text-align: left;
   display: block;
+  margin-bottom: 5px;
 }
 .test h2{
-  font-size: 20px;
-  color: blue;
+  color: #007bff;
+  font-size: 24px;
   margin-bottom: 30px;
 }
 
-.test input, .test textarea, .test select{
-width: 100%;
-padding: 6px 10px;
-margin: 10px 0;
-border: 1px solid #dddddd;
-box-sizing: border-box;
-display: block;
+.test {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.test button{
-  background: rgb(25, 0, 255);
-  color: white;
-  border: 0;
-  padding:8px;
-  border-radius: 8px;
-  cursor: pointer;
-}
 

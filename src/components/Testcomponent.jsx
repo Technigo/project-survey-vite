@@ -3,7 +3,7 @@ import { useState } from "react"
 export const Test = () => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
-    const [author, setAuthor] = useState('Stockholm') // Default value
+    const [author, setAuthor] = useState('Stockholm')
     const [recommendation, setRecommendation] = useState('')
     const [submittedData, setSubmittedData] = useState(null)
     const [formSubmitted, setFormSubmitted] = useState(false)
@@ -13,7 +13,7 @@ export const Test = () => {
         const blog = { title, body, author, recommendation }
         console.log(blog)
         setSubmittedData(blog)
-        // Clearing the form fields
+       
         setTitle('')
         setBody('')
         setAuthor('Stockholm')
@@ -25,11 +25,12 @@ export const Test = () => {
         <div className="test">
             {formSubmitted ? (
                 <div>
-                    <h2>Submitted Data</h2>
-                    <p>Title: {submittedData.title}</p>
-                    <p>Body: {submittedData.body}</p>
-                    <p>Author: {submittedData.author}</p>
+                    <h2>Submitted hotel stay survey</h2>
+                    <p>Hotel: {submittedData.title}</p>
+                    <p>Comment: {submittedData.body}</p>
+                    <p>City: {submittedData.author}</p>
                     <p>Recommendation: {submittedData.recommendation}</p>
+                    <p>Thank you for your input, your data means alot to us, have a nice day</p>
                 </div>
             ) : (
                 <form onSubmit={handleSubmit}>
@@ -42,6 +43,8 @@ export const Test = () => {
                         <option value="Stockholm">Stockholm</option>
                         <option value="Oslo">Oslo</option>
                         <option value="London">London</option>
+                        <option value="Venice">Venice</option>
+                        <option value="Paris">Paris</option>
                     </select>
                     <label>Which one of our hotels did you stay at?</label>
                     <input
