@@ -21,7 +21,7 @@ export const Location = () => {
         <option value="South America">South America</option>
         <option value="Oceania">Oceania</option>
       </select></div>
-      <p>Your favorite pizza-eating-spot is: {selectedLocation}</p>
+      <p><span>Your favorite pizza-eating-spot is:</span>{selectedLocation}</p>
     </div>
   );
 };
