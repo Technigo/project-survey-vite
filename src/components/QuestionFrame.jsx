@@ -3,8 +3,9 @@ import Header from "./Header";
 import Question from "./Question";
 import NextButton from "./NextButton";
 import { questions } from "../question.json";
+import PropTypes from "prop-types";
 
-const QuestionFrame = () => {
+const QuestionFrame = ({ createSummary }) => {
   const [clicked, setClicked] = useState(false);
   const [qNum, setQNum] = useState(0);
 
@@ -40,7 +41,10 @@ const QuestionFrame = () => {
   const handleSubmit = event => {
     event.preventDefault();
     // Process the form data here
-    console.log("Form Data:", formData);
+    if (qNum === 5) {
+      createSummary(formData);
+    }
+    // console.log("Form Data:", formData);
   };
 
   return (
@@ -57,5 +61,7 @@ const QuestionFrame = () => {
     </div>
   );
 };
+
+QuestionFrame.propTypes = { createSummary: PropTypes.func.isRequired };
 
 export default QuestionFrame;
