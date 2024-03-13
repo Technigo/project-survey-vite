@@ -2,7 +2,7 @@ import { SurveyForm } from './SurveyForm'
 import { Header } from './Header'
 import { Footer } from './Footer'
 import './App.css'
-import './SurveyForm'
+import './SurveyForm.css'
 
 export const App = () => {
 	return (

@@ -100,7 +100,7 @@ export const SurveyForm = () => {
 	// if "currentStepDetails.answerRequired" means it is true (required to answer) AND "!currentStepValue! means it is false = empty -> error shows up
 	const nextStep = () => {
 		if (currentStepDetails.answerRequired && !currentStepValue) {
-			setError('Answer required')
+			setError('Hey! You forgot to answer!')
 			return
 		}
 
@@ -166,9 +166,13 @@ export const SurveyForm = () => {
 								</button>
 							)}
 						</div>
-            <div className='error'>
-						{error && <p>Error: {error}</p>}
-            </div>
+						<div>{error && <p>Error: {error}</p>}</div>
+						<div className="donut-img">
+							<img
+								src="./src/assets/pinkdonut.png"
+								alt="pink donut with sprinkles"
+							/>
+						</div>
 					</form>
 				)
 			}
