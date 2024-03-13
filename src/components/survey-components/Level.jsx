@@ -67,7 +67,7 @@ export const Level = () => {
           </label>
         </div>
       </form>
-      <p>You selected: {selectedLevel}</p>
+      <p><span>You selected: {selectedLevel}</span></p>
     </div>
   );
 };

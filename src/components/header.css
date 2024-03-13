@@ -8,8 +8,8 @@ h1 {
   z-index: 1;
   top: 1em;
   left: 10%;
-  color: rgb(255, 255, 255);
-  text-shadow: rgb(214, 0, 0) 1px 0 10px;
+  color: black;
+  display: none;
 }
 
 #headerImg {
