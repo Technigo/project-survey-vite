@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 export const SurveySummary = ({ surveyData, steps }) => {
   // Render the SurveySummary component.
   return (
-    <div>
+    <div className="summary">
       {/* Display the heading for the survey summary */}
-      <h2>Survey Summary</h2>
+      <h2>This is you...</h2>
       {/* List each question and its corresponding answer from the survey */}
       <ul>
         {/* Loop through each step of the survey to display questions and answers */}

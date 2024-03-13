@@ -40,8 +40,8 @@ const STEPS = [
   },
   {
     Component: RangeSlider,
-    valueKey: "satisfaction",
-    question: "How satisfied are you with our service?",
+    valueKey: "summer",
+    question: "How much do you want summer right now?",
     min: 0,
     max: 100,
     step: 1,
@@ -57,7 +57,7 @@ export const SurveyForm = () => {
     harryPotter: "",
     loudOrNoisy: "",
     goodKid: "",
-    satisfaction: 50,
+    summer: 0,
   });
 
   // The initial value is quesiton no.1
@@ -144,7 +144,7 @@ export const SurveyForm = () => {
                   {...currentStepDetails}
                 />
               </div>
-              <div className="answers">
+              <div className="button">
                 {currentStep > 0 && <button onClick={prevStep}>Back</button>}
                 {currentStep < STEPS.length - 1 ? (
                   <button onClick={nextStep}>Continue</button>
@@ -159,5 +159,3 @@ export const SurveyForm = () => {
     </>
   );
 };
-
-SurveyForm

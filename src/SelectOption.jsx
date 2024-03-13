@@ -16,11 +16,16 @@ export const SelectOption = ({
 
   // The component returns a label and a dropdown (select) element.
   return (
-    <div>
+    <div className="select-option">
       {/* Label for the dropdown, displaying the question */}
       <label htmlFor={valueKey}>{question}</label>
       {/* The dropdown itself */}
-      <select id={valueKey} value={value} onChange={handleChange}>
+      <select
+        className="select-option-answer"
+        id={valueKey}
+        value={value}
+        onChange={handleChange}
+      >
         {/* A default "select your option" choice */}
         <option value="">Select your option</option>
         {/* Map over the options array to create an <option> element for each one */}

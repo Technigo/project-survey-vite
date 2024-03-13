@@ -11,14 +11,14 @@ export const TextInput = ({ value, updateSurveyData, valueKey, question }) => {
 
   // Render the text input component.
   return (
-    <div>
+    <div className="text-imput">
       {/* Display the question as a label for the input field */}
       <label htmlFor={valueKey}>{question}</label>
       {/* Render the text input field
           - 'id' is set to valueKey to link the label to this input for accessibility.
           - 'value' represents the current value of the input, making this a controlled component.
           - 'onChange' specifies what happens when the input's value changes (when the user types). */}
-      <input type="text" id={valueKey} value={value} onChange={handleChange} />
+      <input className="text-imput-answer" type="text" id={valueKey} value={value} onChange={handleChange} />
     </div>
   );
 };

@@ -1,6 +1,15 @@
-:root {
+* {
   margin: 0;
   font-family: "Jost", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* when applying: var(--indigo) */
+:root {
+  --white: #fff;
+  --lightgreen: #ccffe2;
+  --indigo: #0018A4;
+  --pink: #ffaec1;
+}
+

@@ -17,7 +17,7 @@ export const RadioButtons = ({
 
   // Render the component
   return (
-    <div>
+    <div className="radio-buttons">
       <p>{question}</p> {/* Display the question */}
       {/* Loop through the options and render a radio button for each one */}
       {options.map((option) => (

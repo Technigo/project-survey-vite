@@ -18,7 +18,7 @@ export const RangeSlider = ({
 
   // Render the RangeSlider component.
   return (
-    <div>
+    <div className="range-slider">
       {/* Display the question as a label for the slider */}
       <label htmlFor={valueKey}>{question}</label>
       {/* Render the range input with props to control its configuration */}
