@@ -1,0 +1,52 @@
+/* Survey positioning */
+.survey-form {
+  background: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+/* Styling for survey heading */
+h1 {
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* Styling for questions */
+.label {
+  display: block;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Styling for Submit-button */
+.button {
+  display: block;
+  margin: 0 auto;
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.button:hover {
+  background-color: blue;
+}
