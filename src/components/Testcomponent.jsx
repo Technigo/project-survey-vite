@@ -1,4 +1,5 @@
 import { useState } from "react"
+import headerImage from './pexels-quark-studio-2507010.jpg';
 
 export const Test = () => {
     const [title, setTitle] = useState('')
@@ -23,8 +24,12 @@ export const Test = () => {
 
     return(
         <div className="test">
+           
+            <div className= "header">
+                <img src={headerImage} alt="Picture of a hotel"/>
+            </div>
             {formSubmitted ? (
-                <div>
+                <div> 
                     <h2>Submitted hotel stay survey</h2>
                     <p>Hotel: {submittedData.title}</p>
                     <p>Comment: {submittedData.body}</p>
