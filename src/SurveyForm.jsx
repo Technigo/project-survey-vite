@@ -5,12 +5,10 @@ import { RadioButtons } from "./RadioButtons";
 import { RangeSlider } from "./RangeSlider";
 import { SurveySummary } from "./SurveySummary";
 
-// Define the structure of the survey, including questions and input types.
-// STEP = Static data - use uppercase
-// This is not using any component props or state so this can live outside component
+// Static data = data that does not change during the execution of a program / using any component props or state
+// 1. Put outside component (Global scope)
+// 2. Use uppercase (STEP)
 const STEPS = [
-  // For each step, we define the component to render, the key for storing its value,
-  // the question text, and other properties as needed.
   {
     Component: TextInput,
     valueKey: "tvShow",
@@ -39,7 +37,6 @@ const STEPS = [
     ],
     answerRequired: true,
   },
-  //intermediate stretch goal
   {
     Component: RangeSlider,
     valueKey: "satisfaction",
@@ -51,9 +48,9 @@ const STEPS = [
   },
 ];
 
-// Define the main component for our survey form
+// 1. Initializing (初期化)
 export const SurveyForm = () => {
-  // Initialize state for holding responses. This object will store all user inputs.
+  // surveyData = user's data (set up /initialized by an empty string and 50)
   const [surveyData, setSurveyData] = useState({
     tvShow: "",
     harryPotter: "",
@@ -62,61 +59,71 @@ export const SurveyForm = () => {
     satisfaction: 50,
   });
 
-  // Initialize state to track which step of the survey the user is on IN human representation
-  const [currentStep, setCurrentStep] = useState(1);
+  // The initial value is quesiton no.1
+  const [currentStep, setCurrentStep] = useState(0);
 
-  // Initialize state to track if the survey has been submitted.
+  // Initializes a state to keep track of whether the survey has been submitted
+  //without this there is no way to track whether the survey has been submitted
   const [submit, setSubmit] = useState(false);
 
+  // Initializes a state with the value null since there is no error message in the beggining
   const [error, setError] = useState(null);
 
-  // Because I wrote "useState(1)" to keep track of which step the user is on, need to minus 1 for index
-  const currentStepDetails = STEPS[currentStep - 1];
+  // 2. Updating the data
+  // current step -> STEPS's currentStep , value is surveyData's valueKey
+  const currentStepDetails = STEPS[currentStep];
   const currentStepValue = surveyData[currentStepDetails.valueKey];
 
-  // Function to update survey data. Takes a field name and its new value as arguments.
-  const updateSurveyData = (field, value) => {
-    // Use spread syntax (...) to copy existing state, then update the field with new value.
-    setSurveyData((values) => ({ ...values, [field]: value }));
+  // Function to update survey data
+  // when you call any function, only POSITION matters in parameters, not names. e.g. in SelectOption.jsx
+  // key = 1st position = valueKey
+  // value = 2nd position = event.target.value
+  const updateSurveyData = (key, value) => {
+    // ... (spread syntax) = to copy existing state/data
+    // [key]: value = update the key with new value
+    // why write like ({ ...values, [key]: value }) -> key is dynamic, [] is how you write dynamic key in js rule
+    setSurveyData((values) => ({ ...values, [key]: value }));
+    // resets any error that might have occurred, returning to a state where there are no errors
     setError(null);
   };
 
-  // Function to go back to the previous survey step.
+  // 3. "back" "next" steps
+  // When currentStep is more than 0, prevStep is (currentStep - 1)
   const prevStep = () => {
-    // Decrement 'currentStep' if it's not the first step.
-    if (currentStep > 1) {
+    if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
       setError(null);
     }
   };
 
-  // Function to advance to the next survey step.
+  // if "currentStepDetails.answerRequired" means it is true (required to answer) AND "!currentStepValue! means it is false = empty -> error shows up
   const nextStep = () => {
     if (currentStepDetails.answerRequired && !currentStepValue) {
       setError("Answer required");
       return;
     }
 
-    if (currentStep < STEPS.length) {
+    // Check user can move forward or not
+    // currentStep < STEPS.length - 1 = check user is in last step or not
+    const canMoveForward = currentStep < STEPS.length - 1;
+    if (canMoveForward) {
       // Increase 'currentStep' if it's not the last step.
       setCurrentStep(currentStep + 1);
+      // Reset errors
       setError(null);
     }
   };
 
-  // Function to mark the survey as submitted.
+  // Function to mark the survey as submitted
   const submitSurvey = () => {
-    setSubmit(true); // Set 'submit' state to true.
+    setSubmit(true); // Set 'submit' state to true - written in line 67
   };
 
-  //intermediate stretch goal
   const handleSubmit = (event) => {
-    event.preventDefault(); // Stop the form from submitting in the traditional way.
+    event.preventDefault();
+    // prevent reloading the page when you click submit
   };
 
-  // Determine details of the current step based on 'currentStep' state.
-
-  // Render the form or the survey summary based on the survey submission state.
   return (
     // A React component can only return (render) one child, so you can use a fragment (<>) to wrap multiple children
     <>
@@ -135,7 +142,7 @@ export const SurveyForm = () => {
                 This allows for different input types (text, select, radio buttons, etc.) at different steps.
                 The 'value' prop passes the current value for this step from 'surveyData'.
                 The 'updateSurveyData' function is passed to allow the component to update the survey data.
-                Spread 'currentStepDetails' to pass additional props like 'question' and 'options' to the component. */}
+                Spread 'currentStepDetails' to pass additional props like 'question' and 'options' to the component. ??*/}
               <currentStepDetails.Component
                 value={surveyData[currentStepDetails.valueKey]}
                 updateSurveyData={updateSurveyData}
@@ -145,13 +152,13 @@ export const SurveyForm = () => {
             <div>
               {/* Render a "Back" button if the current step is greater than 1 (not the first step).
                 Clicking this button calls 'prevStep', moving the user to the previous step. */}
-              {currentStep > 1 && <button onClick={prevStep}>Back</button>}
+              {currentStep > 0 && <button onClick={prevStep}>Back</button>}
               {/* Conditional rendering for the next button:
                 - If the current step is less than the total number of steps, render a "Continue" button.
                   Clicking this button calls 'nextStep', moving the user to the next step.
                 - If the current step is the last step, render a "Submit" button instead.
                   Clicking this button calls 'submitSurvey', marking the survey as submitted. */}
-              {currentStep < STEPS.length ? (
+              {currentStep < STEPS.length - 1 ? (
                 <button onClick={nextStep}>Continue</button>
               ) : (
                 <button onClick={submitSurvey}>Submit</button>
