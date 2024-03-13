@@ -12,8 +12,8 @@ code {
     monospace;
 }
 
-
-.question {
-  border: 2px solid black;
-  padding: 1rem;
+body{
+  margin: 0;
 }
+
+

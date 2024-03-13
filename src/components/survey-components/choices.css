@@ -1,0 +1,26 @@
+.question {
+  border: 1px solid black;
+}
+
+.headline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.toppings-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1px 0;
+}
+
+.score-section {
+  text-align: right;
+  padding-top: 1em;
+}

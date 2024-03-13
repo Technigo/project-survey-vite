@@ -17,7 +17,7 @@ export const toppings = [
     score: 5,
   },
   {
-    name: "Marshmellows",
+    name: "Marshmallows",
     score: 7,
   },
   {
@@ -49,7 +49,7 @@ export const toppings = [
     score: 6,
   },
   {
-    name: "Curry powder",
+    name: "Curry",
     score: 9,
   },
   {
@@ -63,5 +63,9 @@ export const toppings = [
   {
     name: "French fries",
     score: 10,
+  },
+  {
+    name: "Sushi",
+    score: 17,
   },
 ];

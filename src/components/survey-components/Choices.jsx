@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { toppings } from "./toppings.js";
-import "../../index.css";
+import "./choices.css";
 
 export const Choices = () => {
   const [checkedState, setCheckedState] = useState(
@@ -45,7 +45,8 @@ export const Choices = () => {
 
   return (
     <div className="question">
-      <h2>2. Select all acceptable pizza toppings:</h2>
+      <h2>2. What would be the most disgusting pizza toppings to you?</h2>
+      <div className="headline"><h3>Toppings:</h3><h3>Disgust points</h3></div>
       <ul className="toppings-list">
         {toppings.map(({ name, score }, index) => {
           return (
@@ -71,8 +72,9 @@ export const Choices = () => {
           <div className="toppings-selected">
             <p>You selected: {totalName}</p>
           </div>
-          <div className="right-section">
-            Your total degenerate score: {total}
+          <div className="score-section">
+            <div>Your total score</div>
+            <div>{total} disgust points</div>
           </div>
         </div>
       </ul>
