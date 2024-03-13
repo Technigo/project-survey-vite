@@ -84,6 +84,28 @@ const Question = ({ formData, qNum, onChange }) => {
           </label>
         </div>
       )}
+      {qNum === 4 && (
+        <div className="question-five question-options">
+          <div className="checkbox-container">
+            <label className="checkbox-option">
+              <input type="checkbox" name="subscription" />
+              Knitting
+            </label>
+            <label className="checkbox-option">
+              <input type="checkbox" name="subscription" />
+              ASMR
+            </label>
+            <label className="checkbox-option">
+              <input type="checkbox" name="subscription" />
+              Meditation
+            </label>
+            <label className="checkbox-option">
+              <input type="checkbox" name="subscription" />
+              Yoga
+            </label>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

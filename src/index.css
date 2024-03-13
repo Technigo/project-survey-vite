@@ -293,3 +293,53 @@ input[type="range"]:focus::-moz-range-thumb {
   outline: 3px solid #0018a4;
   outline-offset: 0.125rem;
 }
+
+/* Question 5 */
+
+.question-five {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+}
+
+.checkbox-option {
+  display: grid;
+  grid-template-columns: 3em auto;
+  gap: 0.5em;
+  font-family: inherit;
+  margin-top: 1em;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 2.3em;
+  height: 2.3em;
+  border: 0.15em solid #0018a4;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1.5em #0018a4;
+  border-radius: 50%;
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
