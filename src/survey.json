@@ -1,0 +1,43 @@
+{
+  "survey": [
+    {
+      "id": 1,
+      "question": "What is your favorite mood-boosting activity?",
+      "name": "questionOne",
+      "options": [],
+      "placeholder": "Write your answer here..."
+    },
+    {
+      "id": 2,
+      "question": "Does music make you happy?",
+      "name": "questionTwo",
+      "placeholder": "",
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes, absolutely!"
+        },
+        {
+          "value": "No",
+          "label": "No, I like the silence"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "What is your go-to happy song",
+      "name": "questionThree",
+      "placeholder": "",
+      "options": [
+        {
+          "value": "song1",
+          "label": "First option"
+        },
+        {
+          "value": "song2",
+          "label": "Second option"
+        }
+      ]
+    }
+  ]
+}
