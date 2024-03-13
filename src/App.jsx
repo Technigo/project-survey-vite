@@ -1,11 +1,11 @@
 import { Survey } from "./components/Survey"
-import Background from "./assets/background-green.jpg"
+import { Header } from "./components/Header"
 import "./app.css"
 
 
 export const App = () => {
   return <>
-    <img id="pink-background" src={Background} alt="greek sculpture holding pizza"/>
+    <Header />
     <div className="main-container">
     <Survey />
     </div></>;

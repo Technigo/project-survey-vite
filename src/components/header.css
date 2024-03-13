@@ -1,0 +1,42 @@
+header {
+  width: 100wv;
+  margin-bottom: 1em;
+}
+
+h1 {
+  position: absolute;
+  z-index: 1;
+  top: 1em;
+  left: 10%;
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(214, 0, 0) 1px 0 10px;
+}
+
+#headerImg {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  object-fit: cover;
+  position: center;
+  min-height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    margin-bottom: 5em;
+  }
+  h1 {
+    font-size: 30px;
+    top: 1.5em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    margin-bottom: 5em;
+  }
+  h1 {
+    font-size: 40px;
+    top: 2em;
+    left: 30%;
+  }
+}

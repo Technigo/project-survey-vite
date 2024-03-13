@@ -5,7 +5,6 @@ import { Location } from "./survey-components/location";
 export const Survey = () => {
   return (
     <div className="survey">
-          <p>Survey component</p>
           <Level />
           <Choices />
           <Location />
