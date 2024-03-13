@@ -6,12 +6,15 @@ import { questions } from "../question.json";
 import PropTypes from "prop-types";
 
 const QuestionFrame = ({ createSummary }) => {
-  const [clicked, setClicked] = useState(false);
+  // const [clicked, setClicked] = useState(false);
   const [qNum, setQNum] = useState(0);
 
-  const handleChange = () => {
-    setClicked(!clicked);
-    setQNum(qNum + 1);
+  // const handleSubmitBtn = () => {
+  //   setQNum(qNum + 1);
+  // };
+
+  const handleKeyDown = e => {
+    if (e.key === "Enter") e.preventDefault();
   };
 
   // State object to store form variables
@@ -40,10 +43,12 @@ const QuestionFrame = ({ createSummary }) => {
   // Event handler for form submission
   const handleSubmit = event => {
     event.preventDefault();
-    // Process the form data here
-    if (qNum === 5) {
+    if (qNum === 4) {
       createSummary(formData);
+    } else {
+      setQNum(qNum + 1);
     }
+    // Process the form data here
     // console.log("Form Data:", formData);
   };
 
@@ -55,8 +60,9 @@ const QuestionFrame = ({ createSummary }) => {
           qNum={qNum}
           formData={formData}
           onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
         />
-        <NextButton onClick={handleChange} />
+        <NextButton />
       </form>
     </div>
   );

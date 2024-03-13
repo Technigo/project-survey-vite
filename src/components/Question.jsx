@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Question = ({ formData, qNum, onChange }) => {
+const Question = ({ formData, qNum, onChange, onKeyDown }) => {
   //Question 1
   return (
     <div className="question-container">
@@ -14,6 +14,7 @@ const Question = ({ formData, qNum, onChange }) => {
               type="text"
               name="name"
               value={formData.name}
+              onKeyDown={onKeyDown}
               required
             />
           </div>
@@ -26,6 +27,7 @@ const Question = ({ formData, qNum, onChange }) => {
               name="email"
               placeholder="hello123@gmail.com"
               value={formData.email}
+              onKeyDown={onKeyDown}
               required
             />
           </div>
@@ -138,6 +140,7 @@ Question.propTypes = {
   formData: PropTypes.object.isRequired,
   qNum: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
+  onKeyDown: PropTypes.func.isRequired,
 };
 
 export default Question;
