@@ -5,7 +5,7 @@ export const Location = () => {
 
   return (
     <div className="question location">
-      <h2>3. Where do you usually eat pizza?</h2>
+      <h3>3. Where do you usually eat pizza?</h3>
       <div className="dropdown">
         <select
         value={selectedLocation}

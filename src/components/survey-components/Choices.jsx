@@ -46,7 +46,7 @@ export const Choices = () => {
 
   return (
     <div className="question">
-      <h2>2. What are the most disgusting pizza toppings?</h2>
+      <h3>2. What are the most disgusting pizza toppings?</h3>
       <div className="headline">
         <h3>Toppings:</h3>
         <h3>Disgust points</h3>
@@ -74,7 +74,7 @@ export const Choices = () => {
         })}
         <div className="toppings-result">
           <div className="toppings-selected">
-              <p><span>You selected:</span>{totalName}</p>
+              <p><span>Toppings of your choice:</span>{totalName}</p>
           </div>
           <div className="score-section">
               <p><span>Your total score:</span>{total} disgust points</p>

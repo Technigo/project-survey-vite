@@ -9,7 +9,7 @@ export const Level = () => {
 
   return (
       <div className="question level">
-          <h2>1. Select your pizza eating level:</h2>
+          <h3>1. Select your pizza eating level:</h3>
       <form>
         <div className="radio-option">
           <label>
