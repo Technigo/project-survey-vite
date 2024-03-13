@@ -64,7 +64,7 @@ export const App = () => {
 
       {!submitted && ( // Render the form only if not submitted
         <form onSubmit={handleSubmit}>
-          <div className="question">
+          <div className="question-1">
             <p>1. </p>
             <label>
               What is your dream pet?
@@ -76,7 +76,7 @@ export const App = () => {
               />
             </label>
           </div>
-          <div className="question">
+          <div className="question-2">
             <p>2. </p>
             <label>
               What is your favourite planet?
@@ -89,9 +89,9 @@ export const App = () => {
               </select>
             </label>
           </div>
-          <div className="question">
+          <div className="question-3">
             <p>3.</p>
-            <p>What is your favourite color? </p>
+            <label>What is your favourite color? </label>
             {colors.map(({ value, label, name }) => (
               <div className="radio-button" key={value}>
                 <label>
