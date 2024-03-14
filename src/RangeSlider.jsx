@@ -29,7 +29,7 @@ export const RangeSlider = ({
 			<input
 				type="range" // Sets the input type to a range slider
 				id={valueKey} // Associates the label with this input
-				value={value} // Current value of the slider, making this a controlled component
+				value={sliderValue} // Current value of the slider, making this a controlled component
 				min={min} // Minimum value for the slider
 				max={max} // Maximum value for the slider
 				step={step} // Step increment for the slider
@@ -37,7 +37,7 @@ export const RangeSlider = ({
 				className="slider"
 			/>
 			{/* Display the current value of the slider */}
-			<div>Value: {value}</div>
+			<div>Value: {sliderValue}</div>
 		</div>
 	)
 }

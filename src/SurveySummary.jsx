@@ -5,24 +5,24 @@ import "./SurveyForm.css"
 export const SurveySummary = ({ surveyData, steps }) => {
   // Render the SurveySummary component.
   return (
-    <div className="summary">
-      {/* Display the heading for the survey summary */}
-      <h2>You're on fire!</h2>
-      {/* List each question and its corresponding answer from the survey */}
-      <ul>
-        {/* Loop through each step of the survey to display questions and answers */}
-        {steps.map((step) => (
-          // Create a list item for each step with a unique key
-          <li key={step.valueKey}>
-            {/* Display the question */}
-            <strong>{step.question}</strong>:{" "}
-            {/* Display the answer from surveyData. If no answer is found, display "Not answered". */}
-            {surveyData[step.valueKey] || "Not answered"}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+		<div className="summary">
+			{/* Display the heading for the survey summary */}
+			<h2>🔥You're on fire!🔥</h2>
+			{/* List each question and its corresponding answer from the survey */}
+			<ul>
+				{/* Loop through each step of the survey to display questions and answers */}
+				{steps.map((step) => (
+					// Create a list item for each step with a unique key
+					<li key={step.valueKey}>
+						{/* Display the question */}
+						<strong>{step.question}</strong>:{' '}
+						{/* Display the answer from surveyData. If no answer is found, display "Not answered". */}
+						{surveyData[step.valueKey] || 'Not answered'}
+					</li>
+				))}
+			</ul>
+		</div>
+	)
 };
 
 // Use PropTypes to specify the expected types of props the component accepts.
