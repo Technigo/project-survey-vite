@@ -54,7 +54,7 @@ export const Survey = () => {
           <h3>2.</h3>
           <p>How many hours/week do you spend exercising?</p>
           {hourGroups.map((group) => (
-            <label key={group}>
+            <label for="textinput" class="label" id="textworkoutinput" key={group}>
               <input
                 type="radio"
                 value={group}
