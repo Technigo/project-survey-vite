@@ -1,4 +1,4 @@
-import { PageIndex } from "./Components/PageIndex";
+import { PageIndex } from "./Components/PageIndex/PageIndex";
 
 export const App = () => {
   return (

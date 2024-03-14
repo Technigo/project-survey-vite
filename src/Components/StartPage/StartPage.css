@@ -1,0 +1,39 @@
+.start-section {
+  border: blue 1px solid;
+
+  margin: 0 auto;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(200deg, #cfada7, #2664d840 80%),
+    linear-gradient(127deg, #7778af, #00ff0000 70%),
+    linear-gradient(336deg, #44c8ba, #0000ff00 50%);
+
+  color: var(--main-color);
+  font-size: 2rem;
+}
+
+.start-btn {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  margin: 50px auto;
+  width: 400px;
+  height: 80px;
+  border: var(--main-color) 2px solid;
+  border-radius: 30px;
+  color: var(--main-color);
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 800;
+  box-shadow: 3px 5px 8px #fbf4f172;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0px 0px 0px #fbf4f172, inset 0px 0px 20px #fbf4f172;
+}

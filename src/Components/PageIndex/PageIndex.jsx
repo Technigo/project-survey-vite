@@ -1,9 +1,9 @@
 import { useState } from "react";
-import data from "../Data/questionList.json";
-import { StartPage } from "./index";
-import { InputSection } from "./index";
-import { Button } from "./index";
-import { Summary } from "./index";
+import data from "../../Data/questionList.json";
+import { StartPage } from "../index";
+import { InputSection } from "../index";
+import { Button } from "../index";
+import { Summary } from "../index";
 
 export const PageIndex = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
