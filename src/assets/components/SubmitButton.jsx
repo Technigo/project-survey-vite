@@ -7,5 +7,3 @@ export function SubmitButton({ onClick }) {
     </button>
   );
 }
-
-

@@ -43,7 +43,7 @@ export function Questions() {
           <Location setLocation={setLocation} />
           <Companion setCompanion={setCompanion} />
           <Adventure setAdventure={setAdventure} />
-          <SubmitButton />
+          <SubmitButton onClick={setSubmitted} />
         </form>
       ) : (
         <div>
