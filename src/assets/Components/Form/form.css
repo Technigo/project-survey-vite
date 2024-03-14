@@ -20,8 +20,8 @@ form {
   padding: 10px 20px;
   border-radius: 6px;
   border: solid #7e1639;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* font-family: 'Poppins', sans-serif; */
+
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -34,8 +34,8 @@ button {
   padding: 10px 20px;
   border-radius: 6px;
   border: solid #7e1639;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* font-family: 'Poppins', sans-serif; */
+
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -58,8 +58,8 @@ input {
   padding: 10px 20px;
   border-radius: 6px;
   border: solid #7e1639;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* font-family: 'Poppins', sans-serif; */
+
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -109,8 +109,8 @@ select {
   padding: 10px 20px;
   border-radius: 6px;
   border: solid #7e1639;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* font-family: 'Poppins', sans-serif; */
+
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -138,9 +138,7 @@ select:user-valid {
 .slider:hover {
   opacity: 1;
 }
-/* .sliderContainer {
-  width: 100%;
-} */
+
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
