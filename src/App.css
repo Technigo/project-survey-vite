@@ -63,6 +63,15 @@
   opacity: 0;
 }
 
+.radio-button input[type="radio"] + label {
+  display: inline-block;
+  padding: 10px;
+}
+
+.radio-button input[type="radio"]:checked + label {
+  background-color: #ccd1ed;
+}
+
 /*Range slider*/
 .budget-range {
   width: 100%;
@@ -87,7 +96,11 @@
     display: flex;
     justify-content: center;
   }
-  .counter,
+
+  .counter {
+    align-self: center;
+  }
+
   .labelQ {
     text-align: center;
   }

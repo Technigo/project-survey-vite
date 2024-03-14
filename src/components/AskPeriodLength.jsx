@@ -1,21 +1,21 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import { useForm, Controller } from "react-hook-form";
+import { useState } from "react"
+import PropTypes from "prop-types"
+import { useForm, Controller } from "react-hook-form"
 
 export const Period = ({ onInputChange }) => {
-  const [period, setPeriod] = useState("");
+  const [period, setPeriod] = useState("")
   const {
     control,
     formState: { errors },
-  } = useForm();
+  } = useForm()
 
   const handleChange = (event) => {
-    const newPeriod = event.target.value;
-    console.log("Q3 period:", newPeriod);
+    const newPeriod = event.target.value
+    console.log("Q3 period:", newPeriod)
 
-    setPeriod(newPeriod);
-    onInputChange("period", newPeriod);
-  };
+    setPeriod(newPeriod)
+    onInputChange("period", newPeriod)
+  }
 
   return (
     <div className="questions">
@@ -26,7 +26,8 @@ export const Period = ({ onInputChange }) => {
           name="period"
           control={control}
           rules={{ required: "Please select an option" }}
-          render={({ field }) => (
+          //Removed field from here which solves the problem that is doesn't take the value when user clicks, but to discuss
+          render={(/*{ field }*/) => (
             <>
               <label htmlFor="weekend" className="radio-button">
                 <input
@@ -36,9 +37,8 @@ export const Period = ({ onInputChange }) => {
                   value="weekend"
                   onChange={handleChange}
                   checked={period === "weekend"}
-                  {...field}
-                  required
-                ></input>
+                  //{...field}
+                  required></input>
                 Weekend
               </label>
               <label htmlFor="week" className="radio-button">
@@ -49,7 +49,7 @@ export const Period = ({ onInputChange }) => {
                   value="week"
                   onChange={handleChange}
                   checked={period === "week"}
-                  {...field}
+                  //{...field}
                 ></input>
                 Week
               </label>
@@ -61,7 +61,7 @@ export const Period = ({ onInputChange }) => {
                   value="two-weeks"
                   onChange={handleChange}
                   checked={period === "two-weeks"}
-                  {...field}
+                  //{...field}
                 ></input>
                 Two weeks
               </label>
@@ -73,7 +73,7 @@ export const Period = ({ onInputChange }) => {
                   value="month"
                   onChange={handleChange}
                   checked={period === "month"}
-                  {...field}
+                  //{...field}
                 ></input>
                 Month
               </label>
@@ -85,9 +85,9 @@ export const Period = ({ onInputChange }) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
 Period.propTypes = {
   onInputChange: PropTypes.func.isRequired,
-};
+}
