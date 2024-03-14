@@ -57,7 +57,7 @@ const QuestionFrame = ({ createSummary }) => {
           formData={formData}
           onChange={handleInputChange}
         />
-        <NextButton />
+        <NextButton qNum={qNum} />
       </form>
     </div>
   );

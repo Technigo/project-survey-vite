@@ -213,29 +213,35 @@ form {
 }
 
 #always-button:checked + .button-label {
-  background: #2ecc71;
+  /* background: #2ecc71; */
+  background-color: #0018a5;
   color: #efefef;
 }
 #always-button:checked + .button-label:hover {
-  background: #29b765;
+  /* background: #29b765; */
+  background-color: #0018a5;
   color: #e2e2e2;
 }
 
 #sometimes-button:checked + .button-label {
-  background: #d91e18;
+  /* background: #d91e18; */
+  background-color: #0018a5;
   color: #efefef;
 }
 #sometimes-button:checked + .button-label:hover {
-  background: #c21b15;
+  /* background: #c21b15; */
+  background-color: #0018a5;
   color: #e2e2e2;
 }
 
 #never-button:checked + .button-label {
-  background: #4183d7;
+  /* background: #4183d7; */
+  background-color: #0018a5;
   color: #efefef;
 }
 #never-button:checked + .button-label:hover {
-  background: #2c75d2;
+  /* background: #2c75d2; */
+  background-color: #0018a5;
   color: #e2e2e2;
 }
 

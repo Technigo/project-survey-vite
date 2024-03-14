@@ -38,8 +38,6 @@ Every project should be deployed somewhere. Be sure to include the link to the d
 
 //TODO: 1. Avoid empty input - validate the data --- complete text input area
 //TODO: 2. Adjust the background color for Q2 - pass the accessibility test
-//TODO: 3. Finish question 4 -Done
-//TODO: 4. Finish question 5 -Done
-//TODO: 5. Create beginning and final page --Begining page Complete :)--
+//TODO: 3. Style question 4
 //TODO: 6. Responsive design - make sure it looks good on mobile and desktop
 //TODO: 7. (if possible) Visualize to the user how far through the survey they are and how much is left by creating a progress bar

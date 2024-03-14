@@ -1,10 +1,13 @@
 // import PropTypes from "prop-types";
 
-const NextButton = () => {
+const NextButton = ({ qNum }) => {
   return (
     <div className="next-q-btn">
-      <button aria-label="button to next question" type="submit">
-        Next question
+      <button
+        aria-label={qNum === 4 ? "Submit your answer" : "go to next question"}
+        type="submit"
+      >
+        {qNum === 4 ? "Submit your answer" : "Next question"}
       </button>
     </div>
   );
