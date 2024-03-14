@@ -98,9 +98,21 @@ button {
   font-weight: var(--font-weight-regular);
   border-radius: 6px;
   border: solid 1px black;
-  padding: 10px 20px;
+  padding: 15px 5px;
   margin: 20px 0;
   background-color: #c2c2c2;
   color: black;
   width: 100%;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: #e2e0e0;
+}
+
+button:active {
+  background-color: #c2c2c2;
+  transition-timing-function: ease-out;
+  transition: 0.5s;
 }

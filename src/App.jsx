@@ -86,6 +86,7 @@ export const App = () => {
                 onChange={handleAnimalChange}
                 value={animal}
                 required
+                placeholder="Type your answer here"
               />
             </label>
           </div>
@@ -149,57 +150,3 @@ export const App = () => {
     </div>
   );
 };
-
-{
-  /* <div className="App">
-  <header className="header">
-  
-  </header>
-
-  {!submitted && (
-    <form className="form-container" onSubmit={handleSubmit}>
-      <div className="question textfield">
-      <p> 1. </p>
-        <p className="question-label">What is your dream pet?</p>
-        <label className="input-label">
-        What is your dream pet?
-          <input
-            className="input textfield"
-            type="text"
-            onChange={handleAnimalChange}
-            value={animal}
-            required
-          />
-        </label>
-      </div>
-
-      <div className="question dropdown">
-        <p className="question-label">What is your favourite planet?</p>
-        <label className="input-label">
-          <select
-            className="input dropdown"
-            onChange={handlePlanetChange}
-            value={planet}
-            required
-          >
-            
-          </select>
-        </label>
-      </div>
-
-      <div className="question radio-buttons">
-        <p className="question-label">What is your favourite color?</p>
-        <div className="radio-button">
-          
-        </div>
-      </div>
-
-      <button className="button" type="submit">Submit your answer</button>
-    </form>
-  )}
-
-  {submitted && (
-   
-  )}
-</div> */
-}
