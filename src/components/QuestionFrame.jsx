@@ -4,6 +4,7 @@ import Question from "./Question";
 import NextButton from "./NextButton";
 import { questions } from "../question.json";
 import PropTypes from "prop-types";
+import ProgressBar from "./ProgressBar";
 
 const QuestionFrame = ({ createSummary }) => {
   const [qNum, setQNum] = useState(0);
@@ -26,7 +27,7 @@ const QuestionFrame = ({ createSummary }) => {
   });
 
   // Event handler for form input changes
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     const { name, value, type } = event.target;
     const newValue =
       type === "checkbox" ? [...formData.subscription, value] : value;
@@ -37,7 +38,7 @@ const QuestionFrame = ({ createSummary }) => {
   };
 
   // Event handler for form submission
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (qNum === 4) {
       createSummary(formData);
@@ -51,6 +52,7 @@ const QuestionFrame = ({ createSummary }) => {
   return (
     <div className="question-page">
       <Header question={questions?.[qNum]} />
+      <ProgressBar progress={qNum + 1} total={questions.length} />
       <form onSubmit={handleSubmit}>
         <Question
           qNum={qNum}
