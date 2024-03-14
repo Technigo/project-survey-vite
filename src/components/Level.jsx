@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export const Level = (props) => {
-  const [level, setLevel] = useState("Beginner");
+export const Level = ({ onChange }) => {
+  const [level, setLevel] = useState("");
 
   const handleLevel = (event) => {
     setLevel(event.target.value);
-    props.onChange(event.target.value);
+    onChange(event.target.value);
   };
   return (
     <fieldset className="radio-field">
@@ -58,4 +58,3 @@ export const Level = (props) => {
     </fieldset>
   );
 };
-

@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export const Activity = (props) => {
-  const [activity, setActivity] = useState("Hiking");
+export const Activity = ({ onChange }) => {
+  const [activity, setActivity] = useState("");
 
   const handleSelectActivity = (event) => {
     setActivity(event.target.value);
-    props.onChange(event.target.value);
+    onChange(event.target.value);
   };
 
   return (

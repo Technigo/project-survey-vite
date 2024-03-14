@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export const Email = (props) => {
+export const Email = ({ formError, onChange }) => {
   const [email, setEmail] = useState("");
 
   const handleEmailInput = (event) => {
     setEmail(event.target.value);
-    props.onChange(event.target.value);
+    onChange(event.target.value);
   };
 
   return (
@@ -19,10 +19,11 @@ export const Email = (props) => {
       </legend>
       <input
         type="email"
-        placeholder="your@email.com"
+        placeholder="your.email@email.com"
         value={email}
         onChange={handleEmailInput}
       />
+      <p className="error-message">{formError}</p>
     </fieldset>
   );
 };

@@ -14,10 +14,10 @@ export const Requirements = (props) => {
         <h3>3.</h3>
         <p>
           Do you have any specific requirements, such as dietary restrictions,
-          medical needs, or mobility assistance?
+          medical needs, or mobility assistance? (optional)
         </p>
       </legend>
-      <input
+      <textarea
         type="text"
         id="requirement-text"
         placeholder="Write your answer here"

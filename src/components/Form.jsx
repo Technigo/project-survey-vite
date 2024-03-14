@@ -3,40 +3,32 @@ import { Email } from "./Email";
 import { Activity } from "./Activity";
 import { Level } from "./Level";
 import { Requirements } from "./Requirements";
+import { Summary } from "./Summary";
 
 export const Form = () => {
-  const [selectedOption, setSelectedOption] = useState("Hiking");
-  const [selectedLevel, setSelectedLevel] = useState("Beginner");
-  const [requirements, setRequirements] = useState("");
-  const [emailValue, setEmailValue] = useState("");
-  const [hidden, setHidden] = useState("off");
+  const [formData, setFormData] = useState({
+    selectedOption: "",
+    selectedLevel: "",
+    specialRequirements: "",
+    emailValue: "",
+  });
+  const [hidden, setHidden] = useState("");
+  const [formError, setFormError] = useState("");
 
-  const handleLevelSelection = (level) => {
-    setSelectedLevel(level);
-  };
-
-  const handleRequirements = (requirement) => {
-    setRequirements(requirement);
-  };
-
-  const handleActivityChange = (activity) => {
-    setSelectedOption(activity);
-  };
-
-  const handleEmailChange = (email) => {
-    setEmailValue(email);
+  const handleChange = (fieldName, value) => {
+    setFormData({
+      ...formData,
+      [fieldName]: value,
+    });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  };
-
-  const handleHidden = () => {
-    setHidden((status) => (status === "on" ? "" : "on"));
-  };
-
-  const submitForm = () => {
-    handleHidden();
+    if (formData.emailValue.trim() === "") {
+      setFormError("Please enter your email.");
+    } else {
+      setHidden((status) => (status === "hidden" ? "" : "hidden"));
+    }
   };
 
   return (
@@ -46,21 +38,19 @@ export const Form = () => {
         id="survey-form"
         className={`form-flex ${hidden}`}
       >
-        <Activity onChange={handleActivityChange} />
-        <Level onChange={handleLevelSelection} />
-        <Requirements onChange={handleRequirements} />
-        <Email onChange={handleEmailChange} />
-        <button type="submit" onClick={submitForm}>
-          Submit your answers
-        </button>
+        <Activity onChange={(value) => handleChange("selectedOption", value)} />
+        <Level onChange={(value) => handleChange("selectedLevel", value)} />
+        <Requirements
+          onChange={(value) => handleChange("specialRequirements", value)}
+        />
+        <Email
+          formError={formError}
+          onChange={(value) => handleChange("emailValue", value)}
+        />
+
+        <button type="submit">Submit your answers</button>
       </form>
-      <div id="replies" className={hidden === "off" ? "on" : ""}>
-        <p>Contact email: {emailValue}</p>
-        <p>Selected activity: {selectedOption}</p>
-        <p>Selected level: {selectedLevel}</p>
-        <p>Special requirements: {requirements}</p>
-      </div>
+      <Summary hidden={hidden} formData={formData} />
     </div>
   );
 };
-//

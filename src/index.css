@@ -6,6 +6,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --blue: #0018a4;
+  --red: #dc3220;
 }
 
 code {
@@ -28,11 +29,16 @@ h4 {
 }
 
 select,
-input {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
   border: 1px solid;
+}
+
+textarea {
+  height: 100px;
 }
 
 header {
@@ -73,16 +79,6 @@ button:hover {
   background-color: var(--blue);
 }
 
-#requirement-text {
-  height: 100px;
-}
-
-#requirement-text::placeholder {
-  position: absolute;
-  top: 10px; /* Adjust to position placeholder */
-  left: 10px;
-}
-
 .form-flex {
   display: flex;
   flex-direction: column;
@@ -96,7 +92,19 @@ button:hover {
   justify-content: left;
 }
 
-.on {
+.error-message {
+  color: var(--red);
+  margin: 5px;
+  padding: 5px;
+  text-align: left;
+  width: 100%;
+}
+
+#summary {
+  padding: 40px;
+}
+
+.hidden {
   display: none;
 }
 
@@ -134,5 +142,11 @@ button:hover {
 
   .radio-field {
     justify-content: center;
+  }
+
+  #summary {
+    padding: 40px;
+    max-width: 500px;
+    line-height: 25px;
   }
 }
