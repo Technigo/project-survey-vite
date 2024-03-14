@@ -14,7 +14,7 @@ const Question = ({ formData, qNum, onChange }) => {
               type="text"
               name="name"
               value={formData.name}
-              required
+              // required
             />
           </div>
           <div className="input-container">
@@ -26,7 +26,7 @@ const Question = ({ formData, qNum, onChange }) => {
               name="email"
               placeholder="hello123@gmail.com"
               value={formData.email}
-              required
+              // required
             />
           </div>
         </div>
