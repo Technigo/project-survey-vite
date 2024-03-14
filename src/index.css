@@ -79,6 +79,10 @@ button:hover {
   background-color: var(--blue);
 }
 
+button:focus {
+  border: orange;
+}
+
 .form-flex {
   display: flex;
   flex-direction: column;

@@ -22,18 +22,10 @@ export const Activity = ({ formError, onChange }) => {
         id="activities-dropdown"
         onChange={handleSelectActivity}
       >
-        <option name="select" value="">
-          Choose an activity
-        </option>
-        <option name="hiking" value="hiking">
-          Hiking
-        </option>
-        <option name="skiing" value="skiing">
-          Skiing
-        </option>
-        <option name="canoeing" value="canoeing">
-          Canoeing
-        </option>
+        <option value="select">Choose an activity</option>
+        <option value="hiking">Hiking</option>
+        <option value="skiing">Skiing</option>
+        <option value="canoeing">Canoeing</option>
       </select>
       <p className="error-message">{formError}</p>
     </fieldset>

@@ -23,7 +23,6 @@ export const Level = ({ formError, onChange }) => {
           value="Beginner"
           name="level"
           checked={level === "Beginner"}
-          tabIndex="0"
           onChange={handleLevel}
         />
       </label>
@@ -37,7 +36,6 @@ export const Level = ({ formError, onChange }) => {
           value="Intermediate"
           name="level"
           checked={level === "Intermediate"}
-          tabIndex="0"
           onChange={handleLevel}
         />
       </label>
@@ -51,7 +49,6 @@ export const Level = ({ formError, onChange }) => {
           value="Advanced"
           name="level"
           checked={level === "Advanced"}
-          tabIndex="0"
           onChange={handleLevel}
         />
       </label>
