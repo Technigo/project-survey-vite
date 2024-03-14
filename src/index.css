@@ -17,6 +17,7 @@ html {
 }
 
 body {
+  height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* font-family: 'Poppins', sans-serif; */
@@ -45,15 +46,13 @@ h1 {
 }
 .footer {
   box-sizing: border-box;
-  margin: 0;
-  padding: 20px 20px;
+
   color: white;
   background-color: #7e1639;
-  position: absolute;
-  bottom: 0;
+
   width: 100%;
   display: flex;
-  flex-direction: column;
+
   justify-content: space-between;
 }
 a {

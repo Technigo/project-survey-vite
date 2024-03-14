@@ -10,12 +10,14 @@ export const Form = () => {
   const [selectedCup, setSelectedCups] = useState('')
   const [selectedReason, setSelectedReason] = useState('')
   const [selectedTime, setSelectedTime] = useState([])
+  const [sliderValue, setSliderValue] = useState(50)
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [section, setSection] = useState(0)
 
   const handleInputChange = (event) => {
     setFavouriteCoffee(event.target.value)
   }
+
   const handleRadioInput = (event) => {
     setSelectedCups(event.target.value)
   }
@@ -36,9 +38,13 @@ export const Form = () => {
       )
     }
   }
+  const handleInputSlider = (event) => {
+    setSliderValue(event.target.value)
+  }
   const handleNextSection = () => {
     setSection(section + 1)
   }
+
   const handleSubmit = (event) => {
     event.preventDefault()
     // on submit the useState update the state of formsubmitted on true
@@ -48,7 +54,7 @@ export const Form = () => {
     switch (section) {
       case 0:
         return (
-          <div>
+          <div className="formWrapper">
             <button className="startButton" onClick={handleNextSection}>
               Let`s go ☕
             </button>
@@ -74,7 +80,7 @@ export const Form = () => {
         )
       case 2:
         return (
-          <div>
+          <div className="formWrapper">
             <h1>
               2.<br></br> How many cups of coffee do you typically drink per
               day?
@@ -120,7 +126,7 @@ export const Form = () => {
         )
       case 4:
         return (
-          <div>
+          <div className="formWrapper">
             <h1>
               4. <br></br>When do you usually drink coffee?
             </h1>
@@ -136,6 +142,27 @@ export const Form = () => {
                 <div className="customRadioCheckbox">{time}</div>
               </label>
             ))}
+            <button onClick={handleNextSection}>Continue</button>
+          </div>
+        )
+      case 5:
+        return (
+          <div className="formWrapper">
+            <h1>
+              5.<br></br>How important is coffee to your daily routine?
+            </h1>
+            <input
+              onInput={handleInputSlider}
+              type="range"
+              min="1"
+              max="100"
+              value={sliderValue}
+              className="slider"
+              id="myRange"
+            />
+            <p>
+              Rate: <span id="demo">{sliderValue}</span>%
+            </p>
             <button onClick={handleSubmit}>Submit your answer</button>
           </div>
         )
@@ -145,7 +172,7 @@ export const Form = () => {
   }
 
   return (
-    <div>
+    <>
       {!formSubmitted ? ( // Render the form if formSubmitted is false
         <form onSubmit={handleSubmit}>{renderSection()}</form>
       ) : (
@@ -154,8 +181,9 @@ export const Form = () => {
           cups={selectedCup}
           reason={selectedReason}
           time={selectedTime.join(', ')}
+          rate={sliderValue}
         />
       )}
-    </div>
+    </>
   )
 }

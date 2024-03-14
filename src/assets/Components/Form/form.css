@@ -1,5 +1,4 @@
 form {
-  height: 100%;
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -9,6 +8,7 @@ form {
 .formWrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .startButton {
@@ -123,6 +123,38 @@ select:user-valid {
   color: white;
   background-color: #68157a;
   border: solid #68157a;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 20px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+/* .sliderContainer {
+  width: 100%;
+} */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 30%;
+  width: 25px;
+  height: 25px;
+  background: #bf2b5a;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #bf2b5a;
+  cursor: pointer;
 }
 
 @media (min-width: 669px) and (max-width: 1024px) {
