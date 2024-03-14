@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { companionsArray, adventuresArray } from "./Arrays.jsx";
 
-
-function Questions() {
+export function Questions() {
   const [charactername, setCharactername] = useState("");
   const [location, setLocation] = useState("");
   const [companion, setCompanion] = useState("");
   const [adventure, setAdventure] = useState("");
-
   const [submitted, setSubmitted] = useState(false);
 
   function characterName(event) {
@@ -22,14 +20,6 @@ function Questions() {
     setCompanion(event.target.value);
   }
 
-  //added function for adventures
-  function selectAdventure(event) {
-    setAdventure(event.target.value);
-  function selectCompanion(event) {
-    setCompanion(event.target.value);
-  }
-
-  //added function for adventures
   function selectAdventure(event) {
     setAdventure(event.target.value);
   }
@@ -38,7 +28,7 @@ function Questions() {
     event.preventDefault();
     if (
       charactername !== "" &&
-      music !== "" &&
+      location !== "" &&
       companion !== "" &&
       adventure !== ""
     ) {
@@ -46,6 +36,14 @@ function Questions() {
     } else {
       alert("Please answer all questions.");
     }
+  }
+
+  function makeAnotherStory() {
+    setCharactername("");
+    setLocation("");
+    setCompanion("");
+    setAdventure("");
+    setSubmitted(false);
   }
 
   return (
@@ -69,7 +67,7 @@ function Questions() {
             <div className="RadioButtons">
               <input
                 type="radio"
-                name="music"
+                name="location"
                 value="Forest"
                 onClick={() => chooseLocation("Forest")}
                 className="radio"
@@ -77,7 +75,7 @@ function Questions() {
               <label>Forest</label>
               <input
                 type="radio"
-                name="music"
+                name="location"
                 value="A far far away kingdom"
                 onClick={() => chooseLocation("A far far away kingdom")}
                 className="radio"
@@ -85,7 +83,7 @@ function Questions() {
               <label>A far far away kingdom</label>
               <input
                 type="radio"
-                name="music"
+                name="location"
                 value="School of Witchcraft and Wizardry"
                 onClick={() =>
                   chooseLocation("School of Witchcraft and Wizardry")
@@ -119,60 +117,41 @@ function Questions() {
                   {adventure.name}
                 </option>
               ))}
-            <p className="question">Who is your main character's companion?</p>
-            <select value={companion} onChange={selectCompanion}>
-              <option value="">Select companion</option>
-              {companionsArray.map((companion, index) => (
-                <option key={index} value={companion.name}>
-                  {companion.name}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="FourthQuestion">
-            <h2 className="number">4.</h2>
-            <p className="question">What's the pair's favourite adventure?</p>
-            <select value={adventure} onChange={selectAdventure}>
-              <option value="">Select adventure</option>
-              {adventuresArray.map((adventure, index) => (
-                <option key={index} value={adventure.name}>
-                  {adventure.name}
-                </option>
-              ))}
             </select>
             <br />
-            <button type="submit" onClick={handleSubmit}>
-              Submit
-            </button>
-            <button type="submit" onClick={handleSubmit}>
-              Submit
-            </button>
+            <button type="submit">Submit</button>
           </div>
         </form>
       ) : (
         <div>
           <h2>Thank you for answering! Here's your whimsical bedtime story</h2>
-          <p>Your name is {charactername}, and you are tasked with an important mission and about start your adventure!</p>
+          <p>
+            Your name is {charactername}, and you are tasked with an important
+            mission and about start your adventure!
+          </p>
           <p>You are excited to leave {location} and make some new friends!</p>
-          <p>
-            {
-              companionsArray.find(
-                (companionElement) => companionElement.name === companion
-              ).description
-            }
-          </p>
-          <p>
-            {
-              adventuresArray.find(
-                (adventureElement) => adventureElement.name === adventure
-              ).description
-            }
-          </p>
+          {companion && (
+            <p>
+              You will choose{" "}
+              {
+                companionsArray.find(
+                  (companionElement) => companionElement.name === companion
+                )?.description
+              }
+            </p>
+          )}
+          {adventure && (
+            <p>
+              {
+                adventuresArray.find(
+                  (adventureElement) => adventureElement.name === adventure
+                )?.description
+              }
+            </p>
+          )}
+          <button onClick={makeAnotherStory}>Make another story</button>
         </div>
       )}
     </div>
   );
 }
-
-export default Questions;
