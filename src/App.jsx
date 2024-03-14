@@ -6,8 +6,8 @@ export const App = () => {
   const [mode, setMode] = useState("form");
   // here we created a varible. so we can update bestThing to the value of the input field.
   const [bestThing, setBestThing] = useState("");
-// const holdDate is a function that takes an event as an argument//store the date user has put to the input field. 
-  const holdData = (event) => {
+  // const holdDate is a function that takes an event as an argument//store the date user has put to the input field.
+  const onChange = (event) => {
     console.log(event.target.value);
     // here we update the bestThing to the value of the input field.
     setBestThing(event.target.value);
@@ -33,17 +33,33 @@ export const App = () => {
           <div>
             {/* "for" and "id" has to match, it's for accessabiliy  */}
             {/* use "htmlfor", otherwise you will get a warning in the console log.  */}
-            <label htmlFor="bestThing">1. What's the best thing about you?</label>
-            <input type="text" id="bestThing" name="bestThing" onChange={holdData} />
+            <label htmlFor="bestThing">
+              1. What's the best thing about you?
+            </label>
+            <input
+              type="text"
+              id="bestThing"
+              name="bestThing"
+              onChange={onChange}
+            />
           </div>
           <div>
             <input type="submit" value="Submit" />
           </div>
-        <div>
-        <label htmlFor="bestThing">2. Are you sometimes too nice?</label>
-        <input type="radio" id="yes" name="yes" value="yes" />
-        </div>
+          <div>
+            <label htmlFor="bestThing">
+              2. Do you often say nice things to people?
+            </label>
+            <div>
+              <input type="radio" id="yes" name="niceThings" value="yes" checked />
+              <label for="yes">Yes</label>
+            </div>
 
+            <div>
+              <input type="radio" id="no" name="niceThings" value="no" />
+              <label for="no">No</label>
+            </div>
+          </div>
         </form>
         // This is the end of the form/conditional rendering
       )}
