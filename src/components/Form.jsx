@@ -3,6 +3,7 @@ import "./Form.css";
 import { QuestionOne } from "./questions/QuestionOne";
 import { QuestionTwo } from "./questions/QuestionTwo";
 import { QuestionThree } from "./questions/QuestionThree";
+import { SubmitButton } from "./SubmitButton";
 import { useState } from "react";
 
 export const Form = () => {
@@ -17,6 +18,7 @@ export const Form = () => {
       <QuestionOne />
       <QuestionTwo />
       <QuestionThree />
+      <SubmitButton />
     </form>
   );
 };

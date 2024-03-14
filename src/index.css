@@ -17,6 +17,8 @@
   /* CSS - Variables */
   --primary: #0018a4;
   --white: #fff;
+  --button: #c2c2c2;
+  --radius: 6px;
 }
 
 code {
@@ -56,4 +58,13 @@ h3 {
   font-weight: 400;
 }
 
+/* Elements */
+button {
+  background: var(--button);
+  color: var(--white);
+  font-size: 20px;
+  border: 1px solid #000;
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
 /* Media queries */
