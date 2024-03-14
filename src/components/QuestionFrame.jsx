@@ -6,16 +6,11 @@ import { questions } from "../question.json";
 import PropTypes from "prop-types";
 
 const QuestionFrame = ({ createSummary }) => {
-  // const [clicked, setClicked] = useState(false);
   const [qNum, setQNum] = useState(0);
 
-  // const handleSubmitBtn = () => {
-  //   setQNum(qNum + 1);
+  // const handleKeyDown = e => {
+  //   if (e.key === "Enter") e.preventDefault();
   // };
-
-  const handleKeyDown = e => {
-    if (e.key === "Enter") e.preventDefault();
-  };
 
   // State object to store form variables
   const [formData, setFormData] = useState({
@@ -30,11 +25,11 @@ const QuestionFrame = ({ createSummary }) => {
     subscription: [],
   });
 
-
   // Event handler for form input changes
-  const handleInputChange = (event) => {
-    const { name, value, type, checked } = event.target;
-    const newValue = type === "checkbox" ? [...formData.subscription, value] : value
+  const handleInputChange = event => {
+    const { name, value, type } = event.target;
+    const newValue =
+      type === "checkbox" ? [...formData.subscription, value] : value;
     setFormData({
       ...formData, //spread syntax
       [name]: newValue,
@@ -42,7 +37,7 @@ const QuestionFrame = ({ createSummary }) => {
   };
 
   // Event handler for form submission
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
     if (qNum === 4) {
       createSummary(formData);
@@ -61,7 +56,6 @@ const QuestionFrame = ({ createSummary }) => {
           qNum={qNum}
           formData={formData}
           onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
         />
         <NextButton />
       </form>

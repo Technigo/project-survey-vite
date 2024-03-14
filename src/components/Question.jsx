@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Question = ({ formData, qNum, onChange, onKeyDown }) => {
+const Question = ({ formData, qNum, onChange }) => {
   //Question 1
   return (
     <div className="question-container">
@@ -14,7 +14,6 @@ const Question = ({ formData, qNum, onChange, onKeyDown }) => {
               type="text"
               name="name"
               value={formData.name}
-              onKeyDown={onKeyDown}
               required
             />
           </div>
@@ -27,7 +26,6 @@ const Question = ({ formData, qNum, onChange, onKeyDown }) => {
               name="email"
               placeholder="hello123@gmail.com"
               value={formData.email}
-              onKeyDown={onKeyDown}
               required
             />
           </div>
@@ -92,15 +90,20 @@ const Question = ({ formData, qNum, onChange, onKeyDown }) => {
 
       {qNum === 3 && (
         <div className="question-four question-options">
-          <label className="hidden-label" htmlFor="ways-to-deal">
-            How many ways do you have to deal with the stress?
-          </label>
-          <select onChange={onChange} name="waysToDeal" id="ways-to-deal">
-            <option value="">Select one option </option>
-            <option value="none">None </option>
-            <option value="oneway">1 way </option>
-            <option value="twothreeway"> 2-3 ways </option>
-            <option value="morethanthree">more than 3 ways </option>
+          <label htmlFor="ways-to-deal"></label>
+          <select
+            onChange={onChange}
+            name="waysToDeal"
+            id="ways-to-deal"
+            value={formData.waysToDeal}
+          >
+            <option value="" disabled hidden>
+              Select one option
+            </option>
+            <option value="no">None</option>
+            <option value="one">One way</option>
+            <option value="two or three">Two or three ways</option>
+            <option value="more than three">More than three ways</option>
           </select>
         </div>
       )}
@@ -155,7 +158,6 @@ Question.propTypes = {
   formData: PropTypes.object.isRequired,
   qNum: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
-  onKeyDown: PropTypes.func.isRequired,
 };
 
 export default Question;

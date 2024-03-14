@@ -33,8 +33,9 @@ body {
   width: inherit;
   height: inherit;
 }
-/* Starting page */
-.starting-page {
+/* Starting page */ /* Summary page */
+.starting-page,
+.summary-page {
   background-color: #0018a5;
   color: white;
   display: flex;
@@ -63,6 +64,12 @@ body {
   height: 45px;
   width: 100px;
   border: 0;
+}
+
+.summary-text {
+  padding: 0 20px;
+  display: grid;
+  gap: 20px;
 }
 
 /* Question page */
@@ -321,6 +328,12 @@ input[type="range"]:focus::-moz-range-thumb {
   outline-offset: 0.125rem;
 }
 
+/* Question 4 */
+select {
+  font-size: 25px;
+  width: 70%;
+  margin: 0 auto;
+}
 /* Question 5 */
 
 .question-five {
@@ -370,8 +383,4 @@ input[type="checkbox"]::before {
 }
 input[type="checkbox"]:checked::before {
   transform: scale(1);
-
- /*question 3 */
-.hidden-label {
-  display: none;
 }
