@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Level = ({ onChange }) => {
+export const Level = ({ formError, onChange }) => {
   const [level, setLevel] = useState("");
 
   const handleLevel = (event) => {
@@ -55,6 +55,7 @@ export const Level = ({ onChange }) => {
           onChange={handleLevel}
         />
       </label>
+      <p className="error-message">{formError}</p>
     </fieldset>
   );
 };

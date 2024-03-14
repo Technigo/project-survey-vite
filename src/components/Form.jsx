@@ -12,21 +12,38 @@ export const Form = () => {
     specialRequirements: "",
     emailValue: "",
   });
+
+  const [formErrors, setFormErrors] = useState({
+    selectedOption: "",
+    selectedLevel: "",
+    specialRequirements: "",
+    emailValue: "",
+  });
   const [hidden, setHidden] = useState("");
-  const [formError, setFormError] = useState("");
 
   const handleChange = (fieldName, value) => {
     setFormData({
       ...formData,
       [fieldName]: value,
     });
+    setFormErrors({
+      ...formErrors,
+      [fieldName]: "",
+    });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (formData.emailValue.trim() === "") {
-      setFormError("Please enter your email.");
-    } else {
+    let errors = { ...formErrors };
+    if (formData.selectedOption.trim() === "") {
+      errors.selectedOption = "Please select an activity.";
+    } else if (formData.selectedLevel.trim() === "") {
+      errors.selectedLevel = "Please select your level.";
+    } else if (formData.emailValue.trim() === "") {
+      errors.emailValue = "Please enter your email.";
+    }
+    setFormErrors(errors);
+    if (Object.values(errors).every((arreyElement) => arreyElement === "")) {
       setHidden((status) => (status === "hidden" ? "" : "hidden"));
     }
   };
@@ -38,16 +55,21 @@ export const Form = () => {
         id="survey-form"
         className={`form-flex ${hidden}`}
       >
-        <Activity onChange={(value) => handleChange("selectedOption", value)} />
-        <Level onChange={(value) => handleChange("selectedLevel", value)} />
+        <Activity
+          formError={formErrors.selectedOption}
+          onChange={(value) => handleChange("selectedOption", value)}
+        />
+        <Level
+          formError={formErrors.selectedLevel}
+          onChange={(value) => handleChange("selectedLevel", value)}
+        />
         <Requirements
           onChange={(value) => handleChange("specialRequirements", value)}
         />
         <Email
-          formError={formError}
+          formError={formErrors.emailValue}
           onChange={(value) => handleChange("emailValue", value)}
         />
-
         <button type="submit">Submit your answers</button>
       </form>
       <Summary hidden={hidden} formData={formData} />

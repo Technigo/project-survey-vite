@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Activity = ({ onChange }) => {
+export const Activity = ({ formError, onChange }) => {
   const [activity, setActivity] = useState("");
 
   const handleSelectActivity = (event) => {
@@ -22,10 +22,20 @@ export const Activity = ({ onChange }) => {
         id="activities-dropdown"
         onChange={handleSelectActivity}
       >
-        <option value="hiking">Hiking</option>
-        <option value="skiing">Skiing</option>
-        <option value="canoeing">Canoeing</option>
+        <option name="select" value="">
+          Choose an activity
+        </option>
+        <option name="hiking" value="hiking">
+          Hiking
+        </option>
+        <option name="skiing" value="skiing">
+          Skiing
+        </option>
+        <option name="canoeing" value="canoeing">
+          Canoeing
+        </option>
       </select>
+      <p className="error-message">{formError}</p>
     </fieldset>
   );
 };
