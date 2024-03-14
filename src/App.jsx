@@ -6,12 +6,12 @@ import './SurveyForm.css'
 
 export const App = () => {
 	return (
-		<body className="wrapper">
+		<div className="wrapper">
 			<Header />
 			<div className="survey-form">
 				<SurveyForm />
 			</div>
 			<Footer />
-		</body>
+		</div>
 	)
 }

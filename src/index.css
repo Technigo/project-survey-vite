@@ -5,7 +5,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* when applying: var(--indigo) */
 :root {
   --white: #fff;
   --lightgreen: #ccffe2;
@@ -13,4 +12,3 @@
   --pink: #ffaec1;
   --red: #ff4575; 
 }
-

@@ -1,7 +1,5 @@
-// Import PropTypes to validate the types of props passed to our component.
 import PropTypes from "prop-types";
 
-// Define the RadioButtons component. This component takes several props to customize its behavior.
 export const RadioButtons = ({
   value, // The currently selected value.
   updateSurveyData, // Function to update the survey data based on selection.
@@ -38,12 +36,11 @@ export const RadioButtons = ({
   );
 };
 
-// Define propTypes for the RadioButtons component to ensure correct prop types are passed.
 RadioButtons.propTypes = {
-  value: PropTypes.string.isRequired, // 'value' should be a string and is required.
+  value: PropTypes.string.isRequired,
   updateSurveyData: PropTypes.func.isRequired, // 'updateSurveyData' should be a function and is required.
-  valueKey: PropTypes.string.isRequired, // 'valueKey' should be a string and is required.
-  question: PropTypes.string.isRequired, // 'question' should be a string and is required.
+  valueKey: PropTypes.string.isRequired,
+  question: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(
     // 'options' should be an array of objects, each with 'name' and 'valueKey' strings.
     PropTypes.shape({

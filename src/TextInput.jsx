@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 
-// Define a functional component named TextInput. This component is used for text input fields in a form.
 export const TextInput = ({ value, updateSurveyData, valueKey, question }) => {
   // Function that will be called every time the user types in the input field.
   const handleChange = (event) => {
@@ -9,7 +8,6 @@ export const TextInput = ({ value, updateSurveyData, valueKey, question }) => {
     updateSurveyData(valueKey, event.target.value);
   };
 
-  // Render the text input component.
   return (
     <div className="text-imput">
       {/* Display the question as a label for the input field */}
@@ -23,11 +21,10 @@ export const TextInput = ({ value, updateSurveyData, valueKey, question }) => {
   );
 };
 
-// Here we use PropTypes to specify the types and requirements of the props our component expects.
-// This helps catch bugs by ensuring we pass the right type of props to our component.
+// PropTypes: to specify the types and requirements of the props our component expects.This helps catch bugs by ensuring we pass the right type of props to our component.
 TextInput.propTypes = {
-  value: PropTypes.string.isRequired, // 'value' should be a string and is required.
+  value: PropTypes.string.isRequired,
   updateSurveyData: PropTypes.func.isRequired, // 'updateSurveyData' should be a function and is required.
-  valueKey: PropTypes.string.isRequired, // 'valueKey' should be a string and is used to identify which piece of state to update.
-  question: PropTypes.string.isRequired, // 'question' should be a string and is the text that will be displayed as the label.
+  valueKey: PropTypes.string.isRequired,
+  question: PropTypes.string.isRequired,
 };

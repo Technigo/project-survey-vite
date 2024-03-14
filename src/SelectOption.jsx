@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 
-// Define the SelectOption component. This component allows users to choose an option from a dropdown list.
 export const SelectOption = ({
   value, // The currently selected value of the dropdown.
   updateSurveyData, // A function provided to update the state of the parent component when an option is selected.
@@ -40,18 +39,16 @@ export const SelectOption = ({
   );
 };
 
-// Define the prop types for the component.
-// This helps ensure the component is used correctly by checking the types of the props.
 SelectOption.propTypes = {
-  value: PropTypes.string.isRequired, // The selected value must be a string.
+  value: PropTypes.string.isRequired, 
   updateSurveyData: PropTypes.func.isRequired, // The function to update state must be provided.
-  valueKey: PropTypes.string.isRequired, // The key for the value must be a string.
-  question: PropTypes.string.isRequired, // The question/label must be a string.
+  valueKey: PropTypes.string.isRequired,
+  question: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(
     // The options must be an array of objects with specific properties.
     PropTypes.shape({
-      name: PropTypes.string.isRequired, // Each option's name must be a string.
-      valueKey: PropTypes.string.isRequired, // Each option's value key must be a string.
+      name: PropTypes.string.isRequired,
+      valueKey: PropTypes.string.isRequired,
     })
   ).isRequired,
 };
