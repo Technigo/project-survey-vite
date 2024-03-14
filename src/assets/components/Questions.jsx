@@ -25,6 +25,13 @@ function Questions() {
   //added function for adventures
   function selectAdventure(event) {
     setAdventure(event.target.value);
+  function selectCompanion(event) {
+    setCompanion(event.target.value);
+  }
+
+  //added function for adventures
+  function selectAdventure(event) {
+    setAdventure(event.target.value);
   }
 
   function handleSubmit(event) {
@@ -112,8 +119,32 @@ function Questions() {
                   {adventure.name}
                 </option>
               ))}
+            <p className="question">Who is your main character's companion?</p>
+            <select value={companion} onChange={selectCompanion}>
+              <option value="">Select companion</option>
+              {companionsArray.map((companion, index) => (
+                <option key={index} value={companion.name}>
+                  {companion.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="FourthQuestion">
+            <h2 className="number">4.</h2>
+            <p className="question">What's the pair's favourite adventure?</p>
+            <select value={adventure} onChange={selectAdventure}>
+              <option value="">Select adventure</option>
+              {adventuresArray.map((adventure, index) => (
+                <option key={index} value={adventure.name}>
+                  {adventure.name}
+                </option>
+              ))}
             </select>
             <br />
+            <button type="submit" onClick={handleSubmit}>
+              Submit
+            </button>
             <button type="submit" onClick={handleSubmit}>
               Submit
             </button>
