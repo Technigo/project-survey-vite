@@ -29,6 +29,7 @@ ul {
   flex-direction: column;
   margin: 2em 0 1em 0;
   border: 1px solid #caced1;
+  background-color:#ffffffe1;;
   border-radius: 20px;
   padding: 1em;
 }

@@ -29,6 +29,7 @@ return(
         <option value="Vladimir Putin">Vladimir Putin</option>
         <option value="Yayoi Kusama">Yayoi Kusama</option>
       </select>
+      </div>
       <p><span>We will organize a pizza date for you and {company}</span></p>
       </div>
 )
