@@ -6,10 +6,9 @@ export const Location = ({ setLocation }) => {
 
   return (
     <div className="question location">
-      <h3>3. Where do you usually eat pizza?</h3>
       <div className="dropdown">
         <label htmlFor="location">
-          Select region
+          <h3>3. Where do you usually eat pizza?</h3>
           <select
             id="location"
             value={selectedLocation}

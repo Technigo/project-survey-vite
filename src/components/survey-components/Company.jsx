@@ -11,10 +11,9 @@ export const Company = ({ setDisplayCompany }) => {
 
   return (
     <div className="question company">
-      <h3>4. Who do you dream of eating pizza with?</h3>
       <div className="dropdown">
         <label htmlFor="company">
-          Select company
+        <h3>4. Who do you dream of eating pizza with?</h3>
         <select
           id="company"
           value={company}
