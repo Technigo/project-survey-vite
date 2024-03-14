@@ -1,36 +1,39 @@
-import { useState } from "react";
 import "./Survey.css";
+import { useState } from "react"
 
 export const Survey = () => {
   const [workout, setWorkout] = useState("");
   const [hours, setHours] = useState("");
   const [music, setMusic] = useState("");
   const hourGroups = ["1-2", "3-4", "4+"];
-
   const [showSummary, setShowSummary] = useState(false);
-
+  
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     setShowSummary(true);
-    setWorkout("");
-    setHours("");
-    setMusic("");
-  };
+     }
+   
+     const clearSurvey = () => {
+      setWorkout ("")
+      setHours ("")
+      setMusic ("")
+      setHours(false) 
+     }
 
-  const Summary = () => (
-    <div>
-      <p>workout{workout}</p>
-      <p>hours{hours}</p>
-      <p>music{music}</p>
-    </div>
-  );
-
-  return (
+  return ( 
     <>
-      {showSummary ? (
-        <Summary />
-      ) : (
-        <form>
+    {showSummary ? 
+    <div>
+    <p>Your prefered type of exercise is: {workout}</p>
+    <p>The amount of hours you exercise per week is: {hours} h</p>
+    <p>The music genre you like listening to whilst exercising is: {music} music </p>
+    <h2> Thank you for participating!🎉</h2>
+    <button onClick={clearSurvey}>Return</button>
+  </div> :
+
+     <form onSubmit={handleSubmit}>
+          
           <h3>1.</h3>
           <p>
             What kind of exercise do you enjoy the most? (ex. running,
@@ -43,6 +46,8 @@ export const Survey = () => {
             required
             placeholder="Write your answer here..."
           />
+
+          
           <h3>2.</h3>
           <p>How many hours/week do you spend exercising?</p>
           {hourGroups.map((group) => (
@@ -56,6 +61,8 @@ export const Survey = () => {
               {group} Hours
             </label>
           ))}
+
+          
           <h3>3.</h3>
           <p>What music do you like listening to when exercising?</p>
           <div className="dropdown">
@@ -68,14 +75,11 @@ export const Survey = () => {
               <option value="rock">Rock</option>
               <option value="pop">Pop</option>
               <option value="electronic">Electronic</option>
-            </select>
-          </div>
+            </select></div>
+          
 
-          <button type="submit" onClick={handleSubmit}>
-            Submit
-          </button>
-        </form>
-      )}
-    </>
+          <button type="submit">Submit</button>
+        </form>}
+        </>
   );
 };
