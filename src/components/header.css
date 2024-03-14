@@ -6,9 +6,9 @@ header {
 h1 {
   position: absolute;
   z-index: 1;
-  top: 1em;
+  bottom: 0px;
   left: 10%;
-  color: black;
+  color: white;
   display: none;
 }
 

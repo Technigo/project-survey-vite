@@ -1,19 +1,26 @@
-// import { useState } from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
-export const Result = () => {
-    //   const [displayLevel, setDisplayLevel] = useState("Not chosen");
-    //   const [displayChoices, setDisplayChoices] = useState("Not chosen");
-    //   const [location, setLocation] = useState("Not chosen");
-    //   const [displayCompany, setDisplayCompany] = useState("Not chosen");
+export const Result = ({
+  displayLevel,
+  displayChoices,
+  displayLocation,
+  displayCompany,
+}) => {
   return (
     <div className="result-container">
-      <h2>This is empty.</h2>
-{/* 
+      <h2>You are super picky when it comes to pizza.</h2>
+
       <p className="result">Your level: {displayLevel}</p>
-      <p className="result">Your level: {displayChoices}</p>
-      <p className="result">Your Location: {location}</p>
-      <p className="result">Your company: {displayCompany}</p> */}
+      <p className="result">Your score: {displayChoices}</p>
+      <p className="result">Your Location: {displayLocation}</p>
+      <p className="result">Your company: {displayCompany}</p>
     </div>
   );
+};
+
+Result.propTypes = {
+  displayLevel: PropTypes.string,
+  displayChoices: PropTypes.number,
+  displayLocation: PropTypes.string,
+  displayCompany: PropTypes.string,
 };
