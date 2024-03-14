@@ -1,8 +1,8 @@
 export const Header = () => {
     return (
       <div className="header-container">
-        <h3>Exercise Survey 🚴‍♂️</h3>
-        <p>We want to hear about peoples exercise habits! Please share your habits by answering our form below. </p>
+        <h1>Exercise Survey 🤸‍♀️</h1>
+        <h3>We want to hear about your exercise habits! Please share by answering our form below. </h3>
       </div>
     )
   }

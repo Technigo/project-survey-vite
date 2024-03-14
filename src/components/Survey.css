@@ -1,0 +1,44 @@
+
+.dropdown {
+min-width:350px;
+}
+
+select {
+    /*appearance: none;*/
+    font-size: 1.15rem;
+    padding: 0.1em 4em 0.2em 2em;
+    background-color: white;
+    border-radius: 0.25rem;
+  }
+
+  .header-container {
+    background-color: #0018A4;
+    color: white;
+    text-align: center;  
+    padding: 40px 30px;
+    
+  }
+  
+
+  h3 {
+    font-weight:500;
+  }
+
+  input {
+    font-size: 1.15rem;
+    padding: 0.2em 1em 0.2em 1em;
+    background-color: white;
+    border-radius: 0.25rem;
+    
+  }
+
+  button {
+    background-color: #0018A4;
+    ;
+    border-radius: 0.25rem;
+    color:white;
+    font-size: 1rem;
+    padding:8px;
+    margin:5px;
+
+  }
