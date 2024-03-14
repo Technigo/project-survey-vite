@@ -1,37 +1,6 @@
 :root {
   --darkblue: #0018a4;
 }
-/*Header styling*/
-.header {
-  background-color: var(--darkblue);
-  width: 100vw;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.header h1,
-.header h2 {
-  margin: 0;
-  padding: 0;
-  color: #ffffff;
-}
-
-.header h1 {
-  /* height: 36px; */
-  font-weight: 500;
-  font-size: 24px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.header h2 {
-  /* height: 27px; */
-  font-weight: 400;
-  font-size: 18px;
-}
 
 /*Form styling*/
 .form {
@@ -93,20 +62,6 @@
 /*Range slider*/
 .budget-range {
   width: 100%;
-}
-
-/*Submit button*/
-.submit-button {
-  background-color: #c2c2c2;
-  border: 1px solid black;
-  color: white;
-  border-radius: 6px;
-  padding: 10px;
-  margin-bottom: 40px;
-}
-
-.submit-button:active {
-  background-color: var(--darkblue);
 }
 
 /*Summary container styling*/

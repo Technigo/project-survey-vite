@@ -1,42 +1,41 @@
-import { useState } from "react"
-import { Name } from "./components/Q1Name"
-import { DestinationType } from "./components/Q2DestType"
-import { Period } from "./components/Q3Period"
-import { Budget } from "./components/Q4Budget"
-import { Summary } from "./components/Summary"
-import "./App.css"
+import { useState } from "react";
+import { Header } from "./Header.jsx";
+import { Name } from "./components/AskName";
+import { DestinationType } from "./components/AskDestType";
+import { Period } from "./components/AskPeriodLength";
+import { Budget } from "./components/AskBudget";
+import { SubmitButton } from "./components/SubmitButton.jsx";
+import { Summary } from "./components/Summary";
+import "./App.css";
 
 export const App = () => {
-  const [showSummary, setShowSummary] = useState(false)
+  const [showSummary, setShowSummary] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     destinationType: "",
     period: "",
     budget: "",
-  })
+  });
 
   //Function to show summary after submit
   const handleSubmit = (event) => {
-    event.preventDefault()
-    setShowSummary(true)
-  }
+    event.preventDefault();
+    setShowSummary(true);
+  };
 
   //Function to log change and update form upon input
   const handleInputChange = (name, value) => {
-    console.log("Name:", name, "Value:", value)
+    console.log("Name:", name, "Value:", value);
 
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
   return (
     <div className="app-container">
-      <header className="header">
-        <h1 onClick={() => location.reload()}>Surprise Holiday</h1>
-        <h2>by Alma and Linda</h2>
-      </header>
+      <Header />
       <div className="app-body">
         {showSummary ? (
           <Summary
@@ -51,12 +50,10 @@ export const App = () => {
             <DestinationType onInputChange={handleInputChange} />
             <Period onInputChange={handleInputChange} />
             <Budget onInputChange={handleInputChange} />
-            <button type="submit" className="submit-button">
-              Submit your answer
-            </button>
+            <SubmitButton />
           </form>
         )}
       </div>
     </div>
-  )
-}
+  );
+};
