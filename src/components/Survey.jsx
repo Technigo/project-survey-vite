@@ -8,7 +8,7 @@ import "../app.css";
 
 export const Survey = () => {
   const [displayLevel, setDisplayLevel] = useState("Not chosen");
-  const [displayChoices, setDisplayChoices] = useState("Not chosen");
+  const [displayChoices, setDisplayChoices] = useState(0);
   const [location, setLocation] = useState("Not chosen");
   const [displayCompany, setDisplayCompany] = useState("Not chosen");
 
@@ -40,7 +40,7 @@ export const Result = ({displayLevel, displayChoices, location, displayCompany})
       <h2>You are super picky when it comes to pizza.</h2>
 
       <p className="result">Your level: {displayLevel}</p>
-      <p className="result">Your level: {displayChoices}</p>
+      <p className="result">Your score: {displayChoices}</p>
       <p className="result">Your Location: {location}</p>
       <p className="result">Your company: {displayCompany}</p>
 

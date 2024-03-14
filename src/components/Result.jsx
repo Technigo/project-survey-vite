@@ -8,7 +8,7 @@ export const Result = () => {
     //   const [displayCompany, setDisplayCompany] = useState("Not chosen");
   return (
     <div className="result-container">
-      <h2>You are super picky when it comes to pizza.</h2>
+      <h2>This is empty.</h2>
 {/* 
       <p className="result">Your level: {displayLevel}</p>
       <p className="result">Your level: {displayChoices}</p>
