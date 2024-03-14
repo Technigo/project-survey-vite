@@ -11,6 +11,7 @@
   --button-color: #615c5c;
   --radio-border: #9c9c9c;
   --radio-bg: #ccd1ed;
+  --white: #ffffff;
 }
 
 form {
@@ -18,19 +19,22 @@ form {
   flex-direction: column;
   align-items: flex-start;
   padding: 35px 10px;
-  font-size: 18px;
+  font-size: 20px;
+  color: var(--blue);
 }
 
-h2,
-p {
+.results h3 {
   padding-bottom: 20px;
-  color: var(--blue);
+}
+
+.results p {
+  padding-bottom: 10px;
 }
 
 .results {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   font-size: 18px;
   color: var(--blue);
   padding: 30px 15px;
@@ -38,8 +42,19 @@ p {
   margin: 0 auto;
 }
 
-.results h3 {
-  padding-bottom: 10px;
+.radio-button-wrapper h2,
+p {
+  padding-bottom: 15px;
+}
+
+.dropdown h2,
+p {
+  padding-bottom: 15px;
+}
+
+.text-input h2,
+p {
+  padding-bottom: 15px;
 }
 
 .radio-button-wrapper,
@@ -52,7 +67,6 @@ p {
 }
 
 .radio-button-container {
-  display: block;
   padding-bottom: 5px;
 }
 
@@ -66,7 +80,7 @@ p {
 
 .radio-button-container input:focus + .custom-radio {
   background-color: var(--button-color);
-  color: #ffffff;
+  color: var(--white);
 }
 
 .custom-radio {
@@ -74,19 +88,21 @@ p {
   align-items: center;
   border-radius: 5px;
   border: 1px solid var(--radio-border);
-  background-color: #ffffff;
   padding: 10px 0 10px 15px;
 }
 
 .custom-radio.checked {
-  background-color: var(--radio-bg);
+  /* background-color: var(--radio-bg); */
+  background-color: var(--button-color);
   padding-left: 35px;
+  color: var(--white);
 }
 
 .custom-radio.checked::after {
   content: url("./assets/check.png");
   position: absolute;
   left: 20px;
+  background-color: var(--button-color);
 }
 
 select {
@@ -95,18 +111,19 @@ select {
   border-radius: 5px;
   font-size: 18px;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 .text-input input {
   padding: 13px;
   border-radius: 5px;
+  font-size: 18px;
 }
 
 .submit-button {
   width: 100%;
   padding: 10px;
-  color: #ffffff;
+  color: var(--white);
   background-color: var(--button-color);
   border-radius: 5px;
 }
@@ -116,11 +133,12 @@ select {
 }
 
 .clear-button {
-  width: 100%;
+  width: 70%;
   padding: 10px;
-  color: #ffffff;
+  color: var(--white);
   background-color: var(--button-color);
   border-radius: 5px;
+  margin: 30px auto;
 }
 
 .clear-button:hover {
@@ -163,6 +181,9 @@ select {
     left: 70px;
   }
 
+  select {
+    font-size: 20px;
+  }
   .text-input input {
     font-size: 20px;
   }
@@ -192,5 +213,9 @@ select {
 
   .clear-button {
     font-size: 20px;
+  }
+
+  select {
+    font-size: 22px;
   }
 }

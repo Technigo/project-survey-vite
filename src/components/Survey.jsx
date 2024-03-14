@@ -34,7 +34,9 @@ export const Survey = () => {
       {submitted ? (
         <div className="results">
           <h3>Here are your results!</h3>
-          <p>Your favorite Harry Potter character and spell are {results.character} and {results.spell}. Your would like to be in house {results.house}!</p>
+          <p>Your favorite character is {results.character}.</p>
+          <p>Your favorite spell is {results.spell}.</p> 
+          <p>You would like to be in house {results.house}!</p>
           <button className="clear-button" onClick={clearForm}>Again!</button>
         </div>
       ) : (
