@@ -174,7 +174,9 @@ export const Form = () => {
   return (
     <>
       {!formSubmitted ? ( // Render the form if formSubmitted is false
-        <form onSubmit={handleSubmit}>{renderSection()}</form>
+        <form onSubmit={handleSubmit} netlify>
+          {renderSection()}
+        </form>
       ) : (
         <Result // Render the Result component if formSubmitted is true
           coffee={favouriteCoffee}
