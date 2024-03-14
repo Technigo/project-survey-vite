@@ -3,14 +3,24 @@
 import React, { useState } from "react";
 export const App = () => {
   // here we created a varible. so we can update mode  to "summary" when the form is submitted.
+  //here we create varibles.
   const [mode, setMode] = useState("form");
   // here we created a varible. so we can update bestThing to the value of the input field.
   const [bestThing, setBestThing] = useState("");
+  const [niceThings, setNiceThings] = useState("");
   // const holdDate is a function that takes an event as an argument//store the date user has put to the input field.
+  //Here we create a function that takes an event as an argument.
   const onChange = (event) => {
-    console.log(event.target.value);
+   
     // here we update the bestThing to the value of the input field.
+    //here we are calling the function.
     setBestThing(event.target.value);
+  };
+
+  // here we call the function that is going to run when the radiobuttons are clicked.
+  const onOptionChange = (event) => {
+    
+    setNiceThings(event.target.value);
   };
 
   const onSubmit = (event) => {
@@ -43,27 +53,42 @@ export const App = () => {
               onChange={onChange}
             />
           </div>
-          <div>
-            <input type="submit" value="Submit" />
-          </div>
-          <div>
-            <label htmlFor="bestThing">
+         {/* https://stackoverflow.com/questions/13273806/using-the-html-label-tag-with-radio-buttons "radiogroup" is a accessibility thing to tell that now a group of radiobuttons that belongs together, will be coming*/}
+          <div role="radiogroup" aria-labelledby="radioGroupLabel">
+            <div id="radioGroupLabel">
               2. Do you often say nice things to people?
-            </label>
+            </div>
             <div>
-              <input type="radio" id="yes" name="niceThings" value="yes" checked />
-              <label for="yes">Yes</label>
+              <input
+                type="radio"
+                id="yes"
+                name="niceThings"
+                value="yes"
+                onChange={onOptionChange}
+              />
+              <label htmlFor="yes">Yes</label>
             </div>
 
             <div>
-              <input type="radio" id="no" name="niceThings" value="no" />
-              <label for="no">No</label>
+              <input
+                type="radio"
+                id="no"
+                name="niceThings"
+                value="no"
+                // here we tell react to call the function when the radio button is clicked.
+                onChange={onOptionChange}
+              />
+              <label htmlFor="no">No</label>
             </div>
+            <div>
+              {/* input is the same thing as button. */}
+            <input type="submit" value="Submit" />
+          </div>
           </div>
         </form>
         // This is the end of the form/conditional rendering
       )}
-      {mode == "summary" && <div>{bestThing}</div>}
+      {mode == "summary" && <div>{bestThing} {niceThings} </div>}
     </div>
   );
 };
