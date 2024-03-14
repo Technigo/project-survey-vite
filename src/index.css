@@ -370,4 +370,8 @@ input[type="checkbox"]::before {
 }
 input[type="checkbox"]:checked::before {
   transform: scale(1);
+
+ /*question 3 */
+.hidden-label {
+  display: none;
 }

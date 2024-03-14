@@ -26,14 +26,15 @@ const QuestionFrame = ({ createSummary }) => {
     selectedOption: "option1",
     frequency: "",
     level: 0,
+    waysToDeal: "",
     subscription: [],
   });
 
+
   // Event handler for form input changes
-  const handleInputChange = event => {
-    const { name, value, type } = event.target;
-    const newValue =
-      type === "checkbox" ? [...formData.subscription, value] : value;
+  const handleInputChange = (event) => {
+    const { name, value, type, checked } = event.target;
+    const newValue = type === "checkbox" ? [...formData.subscription, value] : value
     setFormData({
       ...formData, //spread syntax
       [name]: newValue,
@@ -41,7 +42,7 @@ const QuestionFrame = ({ createSummary }) => {
   };
 
   // Event handler for form submission
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (qNum === 4) {
       createSummary(formData);
