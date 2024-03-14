@@ -75,12 +75,13 @@ export const App = () => {
       </header>
 
       {!submitted && ( // Render the form only if not submitted
-        <form onSubmit={handleSubmit}>
-          <div className="question-1">
+        <form className="form-container" onSubmit={handleSubmit}>
+          <div className="question-textfield">
             <p>1. </p>
-            <label>
+            <label className="question-label">
               What is your dream pet?
               <input
+                className="input-textfield"
                 type="text"
                 onChange={handleAnimalChange}
                 value={animal}
@@ -88,11 +89,16 @@ export const App = () => {
               />
             </label>
           </div>
-          <div className="question-2">
+          <div className="question-dropdown">
             <p>2. </p>
-            <label>
+            <label className="question-label">
               What is your favourite planet?
-              <select onChange={handlePlanetChange} value={planet} required>
+              <select
+                className="input-dropdown"
+                onChange={handlePlanetChange}
+                value={planet}
+                required
+              >
                 {planets.map(({ value, label }) => (
                   <option key={value} value={value}>
                     {label}
@@ -101,12 +107,14 @@ export const App = () => {
               </select>
             </label>
           </div>
-          <div className="question-3">
+          <div className="question-radio-buttons">
             <p>3.</p>
-            <label>What is your favourite color? </label>
+            <label className="question-label">
+              What is your favourite color?{" "}
+            </label>
             {colors.map(({ value, label, name }) => (
-              <div className="radio-button" key={value}>
-                <label>
+              <div key={value}>
+                <label className="input-radio-button">
                   {label}
                   <input
                     type="radio"
@@ -151,8 +159,10 @@ export const App = () => {
   {!submitted && (
     <form className="form-container" onSubmit={handleSubmit}>
       <div className="question textfield">
+      <p> 1. </p>
         <p className="question-label">What is your dream pet?</p>
         <label className="input-label">
+        What is your dream pet?
           <input
             className="input textfield"
             type="text"
