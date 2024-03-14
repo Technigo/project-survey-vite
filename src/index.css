@@ -125,6 +125,7 @@ h2 {
   transition: 0.5s;
 }
 .start-over-button {
+  display: block;
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-regular);
   border-radius: 6px;
