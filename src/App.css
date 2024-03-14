@@ -21,7 +21,7 @@
 
 .questions {
   display: flex;
-  align-items: left;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 80px;
@@ -56,7 +56,7 @@
 }
 
 .radio-button input[type="radio"] {
-  display: none;
+  opacity: 0;
 }
 
 /*Range slider*/
