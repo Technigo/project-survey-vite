@@ -1,5 +1,5 @@
 import { useState } from "react";
-  
+
 export const Survey = () => {
   const [results, setResults] = useState({
     house: "",
@@ -42,7 +42,7 @@ export const Survey = () => {
           <form onSubmit={handleSubmit}>
             {/* radio buttons */}
             <div className="radio-button-wrapper">
-              <label>
+              <label htmlFor="houselist">
                 <h2>1.</h2>
                 <p>Which Hogwarts house would you be in?</p>
               </label>
@@ -54,6 +54,7 @@ export const Survey = () => {
                     value={house}
                     onChange={handleInputChange}
                     checked={results.house === house}
+                    id="houselist"
                   />
                   <span
                     className={`custom-radio ${
@@ -68,7 +69,7 @@ export const Survey = () => {
 
             {/* dropdown selection */}
             <div className="dropdown">
-              <label>
+              <label htmlFor="characters">
                 <h2>2.</h2>
                 <p>Who is your favorite character?</p>
               </label>
@@ -77,6 +78,7 @@ export const Survey = () => {
                 name="character"
                 value={results.character}
                 onChange={handleInputChange}
+                id="characters"
               >
                 <option className="option" disabled value="">
                   Choose character
@@ -110,15 +112,17 @@ export const Survey = () => {
 
             {/* text input */}
             <div className="text-input">
-              <label>
+              <label htmlFor="spells">
                 <h2>3.</h2>
                 <p>What is your favorite spell?</p>
               </label>
               <input
+                placeholder="Favorite spell"
                 name="spell"
                 type="text"
                 onChange={handleInputChange}
                 value={results.spell}
+                id="spells"
               ></input>
             </div>
 

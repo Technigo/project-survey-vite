@@ -8,7 +8,7 @@
 :root {
   --blue: #0018a4;
   --black: #000000;
-  --button-color: #c2c2c2;
+  --button-color: #615c5c;
   --radio-border: #9c9c9c;
   --radio-bg: #ccd1ed;
 }
@@ -35,7 +35,6 @@ p {
   color: var(--blue);
   padding: 30px 15px;
   max-width: 500px;
-  border: solid black;
   margin: 0 auto;
 }
 
@@ -49,7 +48,6 @@ p {
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
-  border: solid black;
   width: 100%;
 }
 
@@ -64,6 +62,11 @@ p {
   cursor: pointer;
   height: 0;
   width: 0;
+}
+
+.radio-button-container input:focus + .custom-radio {
+  background-color: var(--button-color);
+  color: #ffffff;
 }
 
 .custom-radio {
