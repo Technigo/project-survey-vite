@@ -233,7 +233,11 @@ form {
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  z-index: 2;
+  position: relative;
+  top: 60px;
 }
 
 /* Question 3 */

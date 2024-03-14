@@ -3,7 +3,9 @@
 const NextButton = () => {
   return (
     <div className="next-q-btn">
-      <button type="submit">Next question</button>
+      <button aria-label="button to next question" type="submit">
+        Next question
+      </button>
     </div>
   );
 };
