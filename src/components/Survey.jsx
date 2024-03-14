@@ -1,5 +1,5 @@
 import "./Survey.css";
-import { useState } from "react"
+import { useState } from "react";
 
 export const Survey = () => {
   const [workout, setWorkout] = useState("");
@@ -7,35 +7,39 @@ export const Survey = () => {
   const [music, setMusic] = useState("");
   const hourGroups = ["1-2", "3-4", "4+"];
   const [showSummary, setShowSummary] = useState(false);
-  
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setShowSummary(true);
-     }
-   
-     const clearSurvey = () => {
-      setWorkout ("")
-      setHours ("")
-      setMusic ("")
-      setHours(false) 
-     }
+  };
 
-  return ( 
+  const clearSurvey = () => {
+    setWorkout("");
+    setHours("");
+    setMusic("");
+    setHours(false);
+  };
+
+  return (
     <>
-    {showSummary ? 
-    <div>
-    <p>Your prefered type of exercise is: {workout}</p>
-    <p>The amount of hours you exercise per week is: {hours} h</p>
-    <p>The music genre you like listening to whilst exercising is: {music} music </p>
-    <h2> Thank you for participating!🎉</h2>
-    <button onClick={clearSurvey}>Return</button>
-  </div> :
-
-     <form onSubmit={handleSubmit}>
-          
-          <h3>1.</h3>
+    {showSummary ? (
+        
+        <div>
+          <p>Your prefered type of exercise is: {workout}</p>
+          <p>The amount of hours you exercise per week is: {hours} h</p>
           <p>
+            The music genre you like listening to whilst exercising is: {music}{" "}
+            music{" "}
+          </p>
+          <h2> Thank you for participating!🎉</h2>
+          <button onClick={clearSurvey}>Return</button>
+        </div>
+      ) : (
+        <div className = "form-box">
+        <form onSubmit={handleSubmit}>
+          <h3>1.</h3>
+          <div ClassName="survey-container">
+            <p>
             What kind of exercise do you enjoy the most? (ex. running,
             swimming..)
           </p>
@@ -45,9 +49,8 @@ export const Survey = () => {
             value={workout}
             required
             placeholder="Write your answer here..."
-          />
+          /></div>
 
-          
           <h3>2.</h3>
           <p>How many hours/week do you spend exercising?</p>
           {hourGroups.map((group) => (
@@ -62,7 +65,6 @@ export const Survey = () => {
             </label>
           ))}
 
-          
           <h3>3.</h3>
           <p>What music do you like listening to when exercising?</p>
           <div className="dropdown">
@@ -75,11 +77,12 @@ export const Survey = () => {
               <option value="rock">Rock</option>
               <option value="pop">Pop</option>
               <option value="electronic">Electronic</option>
-            </select></div>
-          
+            </select>
+          </div>
 
           <button type="submit">Submit</button>
-        </form>}
-        </>
+        </form></div>
+      )}
+    </>
   );
 };
