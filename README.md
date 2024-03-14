@@ -1,37 +1,11 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/survey.svg" alt="Project Banner Image">
-  </a>
-</h1>
-
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+This is a site conducting a survey of the users favorite ice cream.
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started out pretty straight forward and had great teamwork with how we wanted to set up the survey, and how the functionality should work. It went super smoothly, the only bumps we've encountered were when we wanted to fix the responsiveness (which was a harder task than we originaly planned, since we used a background image), and when we wanted to make sure all required fields had to have been filled in before being able to press the submit button, since nothing was actually submitted. But we managed to make it work despite only working two days.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+https://ice-cream-survey.netlify.app/

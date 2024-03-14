@@ -30,6 +30,15 @@ export const Form = () => {
     }
   };
 
+  const startOver = () => {
+    setName ("")
+    setFlavor ("")
+    setCupOrCone ("")
+    setWithSauce (false)
+    setWithSprinkles (false)
+    setSubmit (false)
+  };
+
   if (submit === "true") {
     return (
       <div className="answer-field">
@@ -39,16 +48,16 @@ export const Form = () => {
           cupOrCone={data[2]}
           toppings={data[3]}
         />
+        <button onClick={startOver} className="button">
+          Start over!
+        </button>
       </div>
     );
   } else {
     return (
       <div className="form-questions">
-        <p>
-          Hello there!
-          <br></br>
-          Do you want to tell us about your favorite ice cream?
-        </p>
+        <h1>Hello there!</h1>
+        <p>Do you want to tell us about your favorite ice cream?</p>
         <form onSubmit={(event) => event.preventDefault()}>
           <div className="question">
             <label>
@@ -83,10 +92,10 @@ export const Form = () => {
               </select>
             </label>
           </div>
-          <div className="question">
-            <label>
-              Do you prefer cup or cone?
-              <div className="multiple-choice">
+          <div className="multiple-question">
+            <p> Do you prefer cup or cone?</p>
+            <div className="multiple-choice">
+              <label className="radio-field">
                 <input
                   type="radio"
                   value="cup"
@@ -96,7 +105,10 @@ export const Form = () => {
                   required
                   className="radio-button"
                 />
-                Cup
+                <span className="radio-box"></span>
+              </label>
+              Cup
+              <label className="radio-field">
                 <input
                   type="radio"
                   value="cone"
@@ -105,32 +117,38 @@ export const Form = () => {
                   name="cupOrCone"
                   className="radio-button"
                 />
-                Cone
-              </div>
-            </label>
+                <span className="radio-box"></span>
+              </label>
+              Cone
+            </div>
           </div>
-          <div className="question">
-            <label>
-              {" "}
+          <div className="multiple-question">
+            <p>
               Do you prefer your ice cream plain or with any toppings? <br></br>
               Choose the ones you like:
-              <div className="multiple-choice">
+            </p>
+            <div className="multiple-choice">
+              <label className="check-box-field">
                 <input
                   type="checkbox"
                   checked={withSauce}
                   onChange={(event) => setWithSauce(event.target.checked)}
                   className="checkbox"
-                />{" "}
-                Sauce
+                />
+                <span className="checkmark"></span>
+              </label>{" "}
+              Sauce
+              <label className="check-box-field">
                 <input
                   type="checkbox"
                   checked={withSprinkles}
                   onChange={(event) => setWithSprinkles(event.target.checked)}
                   className="checkbox"
-                />{" "}
-                Sprinkles
-              </div>
-            </label>
+                />
+                <span className="checkmark"></span>
+              </label>{" "}
+              Sprinkles
+            </div>
           </div>
           <button type="submit" onClick={handleSubmit} className="button">
             Submit

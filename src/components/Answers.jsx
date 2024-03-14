@@ -39,17 +39,17 @@ export const Answers = ({ name, flavor, cupOrCone, toppings }) => {
 
   let message = "";
   if (toppings === "plain") {
-    message = `Thank you ${name}! We have registered that your favorite ice cream is
+    message = `We have registered that your favorite ice cream is
         plain ${flavor} flavored ice cream in a ${cupOrCone}.`;
   } else if (toppings === "sauce" || toppings === "sprinkles") {
-    message = `Thank you ${name}! 
-    We have registered that your favorite ice cream is ${flavor} flavored ice cream in a ${cupOrCone} with ${toppings}.`;
+    message = `We have registered that your favorite ice cream is ${flavor} flavored ice cream in a ${cupOrCone} with ${toppings}.`;
   } else {
-    message = `Thank you ${name}! We have registered that your favorite ice cream is ${flavor} flavored ice cream in a ${cupOrCone} with sprinkles and sauce.`;
+    message = `We have registered that your favorite ice cream is ${flavor} flavored ice cream in a ${cupOrCone} with sprinkles and sauce.`;
   }
 
   return (
     <div>
+      <h2>Thank you {name}!</h2>
       <p>{message}</p>
       <p>Thank you for partipication!</p>
       <img src={icon} alt="icon of ice cream" className="icon" />
