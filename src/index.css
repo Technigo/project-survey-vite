@@ -79,6 +79,14 @@ h2 {
   width: 100%;
 }
 
+.input-dropdown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: rgba(0, 0, 0, 0) url(./assets/chevron.png) calc(100% - 10px)
+    no-repeat;
+}
+
 .question-textfield,
 .question-dropdown,
 .question-radio-buttons {
