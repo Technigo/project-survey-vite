@@ -1,8 +1,8 @@
-import { DropdownType } from "./index";
-import { ColorType } from "./index";
-import { RangeType } from "./index";
-import { RadioType } from "./index";
-import { CheckboxType } from "./index";
+import { DropdownType } from "../index";
+import { ColorType } from "../index";
+import { RangeType } from "../index";
+import { RadioType } from "../index";
+import { CheckboxType } from "../index";
 import { useState } from "react";
 
 export const InputSection = ({
