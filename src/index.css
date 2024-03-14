@@ -3,6 +3,7 @@
   font-family: "Lato";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
@@ -11,8 +12,14 @@ code {
 }
 
 body {
-  background-color: #faebd2;
- 
+  background-color: #f0e4d0;
+}
+
+#background-image {
+  position:absolute;
+  z-index: 1;
+  width: 100%;
+  margin: -10px;
 }
 
 #container {
@@ -21,50 +28,124 @@ body {
   justify-content: center;
   text-align: center;
   background-color: #ffb4c4;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 210px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 70px;
   margin-left: 50px;
   margin-right: 50px;
   line-height: 30px;
-  min-width: 120px;
-  margin-top: -300px;
+  min-width: 90px;
+  max-width: 350px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 30px;
+  
+}
+
+.form-questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.question label{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.multiple-choice{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.button {
+  background-color: #513411;
+  border: none;
+  border-radius: 40%;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 20px;
+}
+
+.button:hover{
+  background-color: #7c5b32;
 }
 
 
-img {
- min-height: 150px;
- align-content: center;
- width: 104%;
- margin-right: -10px;
- margin-top: -10px;
- margin-left: -10px;
- 
+input {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+.text-field {
+  border-radius: 30px;
+  border: none;
+  font-family: Lato;
+}
+
+.text-field:active{
+  border-color: #e7a7d8;
+  border: solid;
+}
+
+.dropdown-menu {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 30px;
+  border: none;
+  font-family: Lato;
+}
+.multiple-choice {
+  position: relative;
+}
+/* Hide the browser's default checkbox */
+.multiple-choice input {
+  opacity: 20%;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+
+/* Create a custom checkbox */
+.multiple-choice input[type=checkbox] {
+  position: absolute;
+  z-index: 2;
+  top: 2px;
+  height: 25px;
+  width: 25px;
+  background-color: #e7a7d8;
+  border: 3px solid #513411;
+}
+
+.multiple-choice input[type=radio] {
+  height: 25px;
+  width: 25px;
+  background-color: #e7a7d8;
+  border: 3px solid #513411;
 }
 
 /* TABLET */
 @media (min-width: 520px) AND (max-width: 799px){
 
-#container {
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 190px;
-}
 }
 /* DESKTOP */
 @media (min-width: 800px){
-#header-image {
-  max-height: 700px;
-  width:102%;
-}
-#container {
-  margin-left: 300px;
-  margin-right: 300px;
-  
-  padding-top: 160px;
-  margin-top: -400px;
-}
+
+
 }
 
 
