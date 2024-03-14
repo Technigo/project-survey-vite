@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
 export function Location() {
+
   const [location, setLocation] = useState("");
 
   const chooseLocation = (value) => {
     setLocation(value);
+  console.log("Location:", value); 
   };
 
   return (

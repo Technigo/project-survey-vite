@@ -5,6 +5,7 @@ export function Charactername() {
 
   function characterName(event) {
     setCharactername(event.target.value);
+    console.log("Selected Companion:", event.target.value);
   }
 
   return (

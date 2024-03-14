@@ -7,6 +7,7 @@ export function Adventure() {
 
   function selectAdventure(event) {
     setAdventure(event.target.value);
+    console.log("Selected Adventure:", event.target.value);
   }
 
   return (

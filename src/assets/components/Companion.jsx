@@ -7,6 +7,7 @@ export function Companion() {
 
   function selectCompanion(event) {
     setCompanion(event.target.value);
+    console.log("Selected Companion:", event.target.value);
   }
 
   return (

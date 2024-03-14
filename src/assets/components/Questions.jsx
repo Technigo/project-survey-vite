@@ -14,6 +14,8 @@ export function Questions() {
   const [adventure, setAdventure] = useState("");
 
   function handleSubmit(event) {
+    console.log("Form submitted");
+
     event.preventDefault();
     if (
       charactername !== "" &&
@@ -38,12 +40,12 @@ export function Questions() {
   return (
     <div>
       {!submitted ? (
-        <form onSubmit={handleSubmit} className="QuestionForm">
+        <form onSubmit={handleSubmit}>
           <Charactername setCharactername={setCharactername} />
           <Location setLocation={setLocation} />
           <Companion setCompanion={setCompanion} />
           <Adventure setAdventure={setAdventure} />
-          <SubmitButton onClick={setSubmitted} />
+          <SubmitButton onClick={handleSubmit}/>
         </form>
       ) : (
         <div>
