@@ -34,12 +34,11 @@ export const Company = ({ setDisplayCompany }) => {
         <option value="Yayoi Kusama">Yayoi Kusama</option>
         <option value="Miyazaki Hayao">Miyazaki Hayao</option>
       </select>
-      <p>
-        <span>We will organize a pizza date for you and {company}</span>
-      </p>
-    </div>
-  );
-};
+      </div>
+      <p><span>We will organize a pizza date for you and {company}</span></p>
+      </div>
+)
+}
 Company.propTypes = {
   setDisplayCompany: PropTypes.func,
 };
