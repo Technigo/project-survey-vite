@@ -20,10 +20,10 @@ export const Survey = ({ setDisplayLevel, setDisplayChoices, setDisplayLocation,
 };
 
 Survey.propTypes = {
-  setDisplayLevel: PropTypes.string,
-  setDisplayChoices: PropTypes.number,
-  setDisplayLocation: PropTypes.string,
-  setDisplayCompany: PropTypes.string,
+  setDisplayLevel: PropTypes.func,
+  setDisplayChoices: PropTypes.func,
+  setDisplayLocation: PropTypes.func,
+  setDisplayCompany: PropTypes.func,
 };
 
 

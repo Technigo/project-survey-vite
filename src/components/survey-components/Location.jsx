@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-export const Location = ({ setLocation }) => {
+export const Location = ({ setDisplayLocation }) => {
   const [selectedLocation, setSelectedLocation] = useState("");
 
   return (
@@ -14,7 +14,7 @@ export const Location = ({ setLocation }) => {
             value={selectedLocation}
             onChange={(event) => {
               setSelectedLocation(event.target.value);
-              setLocation(event.target.value);
+              setDisplayLocation(event.target.value);
             }}
           >
             <option value="" disabled hidden>
@@ -38,5 +38,5 @@ export const Location = ({ setLocation }) => {
 };
 
 Location.propTypes = {
-  setLocation: PropTypes.func,
+  setDisplayLocation: PropTypes.func,
 };

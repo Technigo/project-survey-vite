@@ -4,14 +4,16 @@ import './header.css'
 export const Header = () => {
   return (
     <header>
-      <h1>
-        <span>Pizza Survey</span>
-      </h1>
-      <img
-        src={headerImage}
-        id="headerImg"
-        alt="Image of flying pizza in the sky"
-      ></img>
+      <div>
+        <h1>
+          <span>Pizza Survey</span>
+        </h1>
+        <img
+          src={headerImage}
+          id="headerImg"
+          alt="Image of flying pizza in the sky"
+        ></img>
+      </div>
     </header>
-  )
+  );
 }
