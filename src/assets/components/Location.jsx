@@ -14,8 +14,8 @@ export function Location() {
       <div className="RadioButtons">
         <input
           type="radio"
-          name="location"
-          value="Forest"
+          name="location" 
+          value="Forest" 
           checked={location === "Forest"}
           onChange={() => chooseLocation("Forest")}
           className="radio"
@@ -23,8 +23,8 @@ export function Location() {
         <label>Forest</label>
         <input
           type="radio"
-          name="location"
-          value="A far far away kingdom"
+          name="location" 
+          value="A far far away kingdom" 
           checked={location === "A far far away kingdom"}
           onChange={() => chooseLocation("A far far away kingdom")}
           className="radio"
@@ -32,8 +32,8 @@ export function Location() {
         <label>A far far away kingdom</label>
         <input
           type="radio"
-          name="location"
-          value="School of Witchcraft and Wizardry"
+          name="location" 
+          value="School of Witchcraft and Wizardry" 
           checked={location === "School of Witchcraft and Wizardry"}
           onChange={() => chooseLocation("School of Witchcraft and Wizardry")}
           className="radio"
