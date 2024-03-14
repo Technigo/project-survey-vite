@@ -21,7 +21,7 @@ export const App = () => {
     setShowSummary(true)
   }
 
-  //Function to handle when input is changed
+  //Function to log change and update form upon input
   const handleInputChange = (name, value) => {
     console.log("Name:", name, "Value:", value)
 
