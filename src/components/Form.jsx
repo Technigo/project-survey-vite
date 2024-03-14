@@ -21,10 +21,16 @@ export const Form = () => {
   }
 
   let data = [`${name}`, `${flavor}`, `${cupOrCone}`, `${toppings}`];
-  const handleSubmit = () => {
-    setSubmit(submit ? false : true);
+
+  let handleSubmit = () => {
+    if (name !== "" && flavor !== "" && cupOrCone !=="") {
+      setSubmit(submit ? "false" : "true");}
+    else {
+      console.log ("Mandatory fields are not filled in")
+    }
   };
-  if (submit === true) {
+  
+  if (submit === "true") {
     return (
       <div>
         <Answers
@@ -37,73 +43,81 @@ export const Form = () => {
     );
   } else {
     return (
-      <div>
+      <div className="form-questions">
         <p>Hello! Do you want to tell us about your favorite ice cream?</p>
         <form onSubmit={(event) => event.preventDefault()}>
-          <label className="question">
-            {" "}
-            What is your name?
-            <input
-              type="text"
-              onChange={(event) => setName(event.target.value)}
-              value={name}
-              placeholder="Write your name here"
-              required
-            />
-          </label>
-          <label className="question">
-            {" "}
-            What flavor of ice cream do you prefer?
-            <select
-              onChange={(event) => setFlavor(event.target.value)}
-              value={flavor}
-              required
-            >
-              <option hidden value="">
-                Choose an option:
-              </option>
-              <option value="chocolate">Chocolate</option>
-              <option value="strawberry">Strawberry</option>
-              <option value="vanilla">Vanilla</option>
-            </select>
-          </label>
-          <label className="question">
-            Do you prefer cup or cone?
-            <input
-              type="radio"
-              value="cup"
-              onChange={(event) => setCupOrCone(event.target.value)}
-              checked={cupOrCone === "cup"}
-              name="cupOrCone"
-              required
-            />
-            Cup
-            <input
-              type="radio"
-              value="cone"
-              onChange={(event) => setCupOrCone(event.target.value)}
-              checked={cupOrCone === "cone"}
-              name="cupOrCone"
-            />
-            Cone
-          </label>
-          <label className="question">
-            {" "}
-            Do you prefer your ice cream plain or with any toppings? Choose the
-            ones you like:
-            <input
-              type="checkbox"
-              checked={withSauce}
-              onChange={(event) => setWithSauce(event.target.checked)}
-            />{" "}
-            Sauce
-            <input
-              type="checkbox"
-              checked={withSprinkles}
-              onChange={(event) => setWithSprinkles(event.target.checked)}
-            />{" "}
-            Sprinkles
-          </label>
+          <div className="question">
+            <label>
+              {" "}
+              What is your name?
+              <input
+                type="text"
+                onChange={(event) => setName(event.target.value)}
+                value={name}
+                placeholder="Write your name here"
+                required
+              />
+            </label>
+          </div>
+          <div className="question">
+            <label>
+              {" "}
+              What flavor of ice cream do you prefer?
+              <select
+                onChange={(event) => setFlavor(event.target.value)}
+                value={flavor}
+                required
+              >
+                <option hidden value="">
+                  Choose an option:
+                </option>
+                <option value="chocolate">Chocolate 🍫</option>
+                <option value="strawberry">Strawberry 🍓</option>
+                <option value="vanilla">Vanilla 🍦</option>
+              </select>
+            </label>
+          </div>
+          <div className="question">
+            <label>
+              Do you prefer cup or cone?
+              <input
+                type="radio"
+                value="cup"
+                onChange={(event) => setCupOrCone(event.target.value)}
+                checked={cupOrCone === "cup"}
+                name="cupOrCone"
+                required
+              />
+              Cup
+              <input
+                type="radio"
+                value="cone"
+                onChange={(event) => setCupOrCone(event.target.value)}
+                checked={cupOrCone === "cone"}
+                name="cupOrCone"
+              />
+              Cone
+            </label>
+          </div>
+          <div className="question">
+            <label>
+              {" "}
+              Do you prefer your ice cream plain or with any toppings? Choose the
+              ones you like:
+              <input
+                type="checkbox"
+                checked={withSauce}
+                onChange={(event) => setWithSauce(event.target.checked)}
+              />{" "}
+              Sauce
+              <input
+                type="checkbox"
+                checked={withSprinkles}
+                onChange={(event) => setWithSprinkles(event.target.checked)}
+              />{" "}
+              Sprinkles
+            </label>
+          </div>
           <button type="submit" onClick={handleSubmit}>
             Submit
           </button>
