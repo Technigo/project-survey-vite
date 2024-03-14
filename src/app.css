@@ -1,7 +1,7 @@
 .main-container {
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 5em;
+  padding-bottom: 2em;
 }
 
 .question {
@@ -81,10 +81,39 @@ p span {
   padding-right: 0.5em;
 }
 
+.submit-container {
+  width: 90%;
+  margin: 0 auto;
+  height: 150px;
+}
+
+.submit {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type='submit'] {
+  background-color: rgb(255, 200, 186);
+  padding: 15px;
+  border: 1px solid #caced1;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+input[type='submit']:hover {
+  background-color: rgb(255, 126, 94);
+}
+
 @media screen and (min-width: 768px) {
   .main-container {
     width: 50%;
     margin: 0 auto;
+  }
+  .submit-container {
+    width: 50%;
   }
 }
 
@@ -92,5 +121,8 @@ p span {
   .main-container {
     width: 30%;
     margin: 0 auto;
+  }
+  .submit-container {
+    width: 30%;
   }
 }

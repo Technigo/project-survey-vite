@@ -10,7 +10,7 @@ export const Submit = ({ showResults, setShowResults }) => {
   };
 
   return (
-    <div className="question submit">
+    <div className="submit">
       <input type="submit" value={showResults ? "Submit" : "Reset"} onClick={handleSubmit} accessKey="s" />
     </div>
   );
