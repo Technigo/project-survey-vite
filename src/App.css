@@ -59,17 +59,16 @@
   font-size: 14px;
 }
 
-.radio-button:focus {
-  background-color: var(--darkblue)
-}
-
 .radio-button input[type="radio"] {
   opacity: 0;
 }
-
-.radio-button input[type="radio"]:checked + label {
-  background-color: #ccd1ed;
+.radio-button input[type="radio"]:checked + label:after {
+  background-color: var(--darkblue);
 }
+
+/*.radio-button input[type="radio"]:checked + label {
+  background-color: #ccd1ed;
+}*/
 
 /*Range slider*/
 .budget-range {

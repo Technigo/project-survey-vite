@@ -1,21 +1,21 @@
-import { useState } from "react"
-import PropTypes from "prop-types"
-import { useForm, Controller } from "react-hook-form"
+import { useState } from "react";
+import PropTypes from "prop-types";
+import { useForm, Controller } from "react-hook-form";
 
 export const Period = ({ onInputChange }) => {
-  const [period, setPeriod] = useState("")
+  const [period, setPeriod] = useState("");
   const {
     control,
     formState: { errors },
-  } = useForm()
+  } = useForm();
 
   const handleChange = (event) => {
-    const newPeriod = event.target.value
-    console.log("Q3 period:", newPeriod)
+    const newPeriod = event.target.value;
+    console.log("Q3 period:", newPeriod);
 
-    setPeriod(newPeriod)
-    onInputChange("period", newPeriod)
-  }
+    setPeriod(newPeriod);
+    onInputChange("period", newPeriod);
+  };
 
   return (
     <div className="questions">
@@ -38,7 +38,8 @@ export const Period = ({ onInputChange }) => {
                     onChange={handleChange}
                     checked={period === "weekend"}
                     //{...field}
-                    required></input>
+                    required
+                  ></input>
                   Weekend
                 </label>
                 <label htmlFor="week" className="radio-button">
@@ -86,9 +87,9 @@ export const Period = ({ onInputChange }) => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 Period.propTypes = {
   onInputChange: PropTypes.func.isRequired,
-}
+};

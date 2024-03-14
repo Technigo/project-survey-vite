@@ -5,6 +5,7 @@ export const Budget = ({ onInputChange }) => {
   const [budget, setBudget] = useState("5000");
 
   const handleChange = (event) => {
+    event.preventDefault();
     const newBudget = event.target.value;
     setBudget(newBudget);
     onInputChange("budget", newBudget);
