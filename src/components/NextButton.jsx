@@ -1,15 +1,15 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
-const NextButton = ({ onClick }) => {
+const NextButton = () => {
   return (
     <div className="next-q-btn">
-      <button onClick={onClick} type="submit">
+      <button aria-label="button to next question" type="submit">
         Next question
       </button>
     </div>
   );
 };
 
-NextButton.propTypes = { onClick: PropTypes.func.isRequired };
+// NextButton.propTypes = { onClick: PropTypes.func.isRequired };
 
 export default NextButton;

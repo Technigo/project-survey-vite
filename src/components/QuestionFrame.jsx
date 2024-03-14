@@ -3,14 +3,18 @@ import Header from "./Header";
 import Question from "./Question";
 import NextButton from "./NextButton";
 import { questions } from "../question.json";
+import PropTypes from "prop-types";
 
-const QuestionFrame = () => {
-  const [clicked, setClicked] = useState(false);
+const QuestionFrame = ({ createSummary }) => {
+  // const [clicked, setClicked] = useState(false);
   const [qNum, setQNum] = useState(0);
 
-  const handleChange = () => {
-    setClicked(!clicked);
-    setQNum(qNum + 1);
+  // const handleSubmitBtn = () => {
+  //   setQNum(qNum + 1);
+  // };
+
+  const handleKeyDown = e => {
+    if (e.key === "Enter") e.preventDefault();
   };
 
   // State object to store form variables
@@ -23,12 +27,14 @@ const QuestionFrame = () => {
     frequency: "",
     level: 0,
     waysToDeal: "",
+    subscription: [],
   });
+
 
   // Event handler for form input changes
   const handleInputChange = (event) => {
     const { name, value, type, checked } = event.target;
-    const newValue = type === "checkbox" ? checked : value;
+    const newValue = type === "checkbox" ? [...formData.subscription, value] : value
     setFormData({
       ...formData, //spread syntax
       [name]: newValue,
@@ -38,23 +44,31 @@ const QuestionFrame = () => {
   // Event handler for form submission
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (qNum === 4) {
+      createSummary(formData);
+    } else {
+      setQNum(qNum + 1);
+    }
     // Process the form data here
-    console.log("Form Data:", formData);
+    // console.log("Form Data:", formData);
   };
 
   return (
-    <div>
-      <Header question={questions[qNum]} />
+    <div className="question-page">
+      <Header question={questions?.[qNum]} />
       <form onSubmit={handleSubmit}>
         <Question
           qNum={qNum}
           formData={formData}
           onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
         />
-        <NextButton onClick={handleChange} />
+        <NextButton />
       </form>
     </div>
   );
 };
+
+QuestionFrame.propTypes = { createSummary: PropTypes.func.isRequired };
 
 export default QuestionFrame;

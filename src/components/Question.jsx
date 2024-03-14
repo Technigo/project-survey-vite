@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 
-const Question = ({ formData, qNum, onChange }) => {
+const Question = ({ formData, qNum, onChange, onKeyDown }) => {
   //Question 1
   return (
     <div className="question-container">
       {qNum === 0 && (
         <div className="question-one question-options">
-          <div>
+          <div className="input-container">
             <label htmlFor="username">Enter your name: </label>
             <input
               id="username"
@@ -14,10 +14,11 @@ const Question = ({ formData, qNum, onChange }) => {
               type="text"
               name="name"
               value={formData.name}
+              onKeyDown={onKeyDown}
               required
             />
           </div>
-          <div>
+          <div className="input-container">
             <label htmlFor="useremail">Enter your email: </label>
             <input
               id="useremail"
@@ -26,6 +27,7 @@ const Question = ({ formData, qNum, onChange }) => {
               name="email"
               placeholder="hello123@gmail.com"
               value={formData.email}
+              onKeyDown={onKeyDown}
               required
             />
           </div>
@@ -40,6 +42,7 @@ const Question = ({ formData, qNum, onChange }) => {
             id="always-button"
             value="always"
             onChange={onChange}
+            checked={formData.frequency === "always"}
           />
           <label className="button-label" htmlFor="always-button">
             <p>Always</p>
@@ -51,6 +54,7 @@ const Question = ({ formData, qNum, onChange }) => {
             id="sometimes-button"
             value="sometimes"
             onChange={onChange}
+            checked={formData.frequency === "sometimes"}
           />
           <label className="button-label" htmlFor="sometimes-button">
             <p>Sometimes</p>
@@ -62,6 +66,7 @@ const Question = ({ formData, qNum, onChange }) => {
             id="never-button"
             value="never"
             onChange={onChange}
+            checked={formData.frequency === "never"}
           />
           <label className="button-label" htmlFor="never-button">
             <p>Never</p>
@@ -99,6 +104,49 @@ const Question = ({ formData, qNum, onChange }) => {
           </select>
         </div>
       )}
+      {qNum === 4 && (
+        <div className="question-five question-options">
+          <div className="checkbox-container">
+            <label className="checkbox-option">
+              <input
+                type="checkbox"
+                name="subscription"
+                value="Knitting"
+                onChange={onChange}
+              />
+              <span>Knitting</span>
+            </label>
+            <label className="checkbox-option">
+              <input
+                type="checkbox"
+                name="subscription"
+                value="ASMR"
+                onChange={onChange}
+              />
+              <span>ASMR</span>
+            </label>
+            <label className="checkbox-option">
+              <input
+                type="checkbox"
+                name="subscription"
+                value="Meditation"
+                onChange={onChange}
+              />
+              <span>Meditation</span>
+            </label>
+            <label className="checkbox-option">
+              <input
+                type="checkbox"
+                name="subscription"
+                value="Yoga"
+                onChange={onChange}
+              />
+              <span>Yoga</span>
+            </label>
+          </div>
+        </div>
+      )}
+      {qNum === 5 && <p>Summary should be displayed here.</p>}
     </div>
   );
 };
@@ -107,6 +155,7 @@ Question.propTypes = {
   formData: PropTypes.object.isRequired,
   qNum: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
+  onKeyDown: PropTypes.func.isRequired,
 };
 
 export default Question;
