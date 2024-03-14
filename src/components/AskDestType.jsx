@@ -1,16 +1,16 @@
-import { useState } from "react"
-import PropTypes from "prop-types"
+import { useState } from "react";
+import PropTypes from "prop-types";
 
 export const DestinationType = ({ onInputChange }) => {
-  const [destinationType, setDestinationType] = useState("")
+  const [destinationType, setDestinationType] = useState("");
 
   const handleChange = (event) => {
-    const newDestType = event.target.value
-    console.log("Q2 dest type:", newDestType)
+    const newDestType = event.target.value;
+    console.log("Q2 dest type:", newDestType);
 
-    setDestinationType(newDestType)
-    onInputChange("destinationType", newDestType)
-  }
+    setDestinationType(newDestType);
+    onInputChange("destinationType", newDestType);
+  };
 
   return (
     <div className="questions">
@@ -21,7 +21,9 @@ export const DestinationType = ({ onInputChange }) => {
           onChange={handleChange}
           value={destinationType}
           id="destination-type"
-          className="destination-input">
+          className="destination-input"
+          required
+        >
           <option value="" disabled>
             Select destination type
           </option>
@@ -36,9 +38,9 @@ export const DestinationType = ({ onInputChange }) => {
         </select>
       </label>
     </div>
-  )
-}
+  );
+};
 
 DestinationType.propTypes = {
   onInputChange: PropTypes.func.isRequired,
-}
+};
