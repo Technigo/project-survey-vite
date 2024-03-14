@@ -1,4 +1,4 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const NextButton = ({ qNum }) => {
   return (
@@ -13,6 +13,6 @@ const NextButton = ({ qNum }) => {
   );
 };
 
-// NextButton.propTypes = { onClick: PropTypes.func.isRequired };
+NextButton.propTypes = { qNum: PropTypes.number.isRequired };
 
 export default NextButton;
