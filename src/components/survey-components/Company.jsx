@@ -10,6 +10,7 @@ const selectCompany = (event) => {
 return(
 <div className="question company">
 <h3>4. Who do you dream of eating pizza with?</h3>
+<div className="dropdown">
 <select value={company} onChange={selectCompany}>
       <option value="" selected="selected" disabled hidden>
         Company of your choice
@@ -24,6 +25,7 @@ return(
         <option value="Vladimir Putin">Vladimir Putin</option>
         <option value="Yayoi Kusama">Yayoi Kusama</option>
       </select>
+      </div>
       <p><span>We will organize a pizza date for you and {company}</span></p>
       </div>
 )

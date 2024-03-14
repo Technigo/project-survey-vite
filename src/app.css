@@ -41,6 +41,21 @@ input[type='checkbox'] {
   margin-right: 1em;
 }
 
+.dropdown select {
+  background-color: #ffffff;
+  border: 1px solid #caced1;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  padding: 12px;
+  width: 100%;
+  max-width: 350px;
+  font-size: 16px;
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+/*
 .dropdown {
   position: relative;
 }
@@ -58,6 +73,8 @@ select {
   cursor: pointer;
   margin: 1em 0;
 }
+
+*/
 p span {
   font-size: 16px;
   font-weight: 700;
