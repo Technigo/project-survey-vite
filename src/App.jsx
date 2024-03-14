@@ -8,10 +8,10 @@ export const App = () => {
   // here we created a varible. so we can update bestThing to the value of the input field.
   const [bestThing, setBestThing] = useState("");
   const [niceThings, setNiceThings] = useState("");
+  const [definesYou, setDefinesYou] = useState("");
   // const holdDate is a function that takes an event as an argument//store the date user has put to the input field.
   //Here we create a function that takes an event as an argument.
   const onChange = (event) => {
-   
     // here we update the bestThing to the value of the input field.
     //here we are calling the function.
     setBestThing(event.target.value);
@@ -19,9 +19,13 @@ export const App = () => {
 
   // here we call the function that is going to run when the radiobuttons are clicked.
   const onOptionChange = (event) => {
-    
     setNiceThings(event.target.value);
   };
+
+// here we call the function that is going to run when the dropdown is clicked.
+  const onDropdownChange = (event) => {
+    setDefinesYou(event.target.value); 
+    };
 
   const onSubmit = (event) => {
     // here we create the varible for the funtion that prevent the page from refreshing when hit submit button.
@@ -53,7 +57,7 @@ export const App = () => {
               onChange={onChange}
             />
           </div>
-         {/* https://stackoverflow.com/questions/13273806/using-the-html-label-tag-with-radio-buttons "radiogroup" is a accessibility thing to tell that now a group of radiobuttons that belongs together, will be coming*/}
+          {/* https://stackoverflow.com/questions/13273806/using-the-html-label-tag-with-radio-buttons "radiogroup" is a accessibility thing to tell that now a group of radiobuttons that belongs together, will be coming*/}
           <div role="radiogroup" aria-labelledby="radioGroupLabel">
             <div id="radioGroupLabel">
               2. Do you often say nice things to people?
@@ -80,15 +84,30 @@ export const App = () => {
               />
               <label htmlFor="no">No</label>
             </div>
-            <div>
-              {/* input is the same thing as button. */}
-            <input type="submit" value="Submit" />
           </div>
+          <div>
+            <label htmlFor="definesYou">
+              3. What defines you as a person?
+            </label>
+            <select id="definesYou" name="definesYou" onChange={onDropdownChange}>
+              <option value="kindness">I'm kind</option>
+              <option value="honesty">I lie to be nice</option>
+              <option value="loyalty">I'm loyal</option>
+              <option value="respect">I'm fun</option>
+              </select>
+          </div>
+          <div>
+            {/* input is the same thing as button. */}
+            <input type="submit" value="Submit" />
           </div>
         </form>
         // This is the end of the form/conditional rendering
       )}
-      {mode == "summary" && <div>{bestThing} {niceThings} </div>}
+      {mode == "summary" && (
+        <div>
+          {bestThing} {niceThings} {definesYou}
+        </div>
+      )}
     </div>
   );
 };
