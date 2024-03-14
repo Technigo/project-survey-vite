@@ -46,18 +46,23 @@ h1 {
 }
 .footer {
   box-sizing: border-box;
-
+  align-items: center;
   color: white;
   background-color: #7e1639;
-
   width: 100%;
   display: flex;
-
+  flex-direction: column;
   justify-content: space-between;
 }
-a {
-  color: white;
+.copyright {
+  padding: 10px;
 }
+img {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+}
+
 @media (min-width: 669px) and (max-width: 1024px) {
   body {
     font-size: 18px;
@@ -68,6 +73,14 @@ a {
   h1 {
     font-size: 25px;
     margin-top: 30px;
+  }
+  .copyright {
+    padding: 15px;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    padding: 15px;
   }
 }
 @media (min-width: 1025px) {
@@ -83,6 +96,13 @@ a {
   }
   .footer {
     flex-direction: row;
-    padding: 40px;
+  }
+  .copyright {
+    padding: 15px;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    padding: 15px;
   }
 }
