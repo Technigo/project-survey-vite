@@ -5,7 +5,8 @@
 }
 
 *:focus {
-  outline: none;
+  outline: 1px solid #c874b2;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.7);
 }
 
 :root {
@@ -14,6 +15,10 @@
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+
+  --background-color-space: linear-gradient(to bottom, #210535, #c874b2);
+  --background-color-backup: #7b337d;
+  --background-color-button: #c874b2;
 }
 
 body {
@@ -21,7 +26,8 @@ body {
 }
 
 header {
-  background-color: blue;
+  background-image: var(--background-color-space);
+  background-color: var(--background-color-backup);
   color: white;
   text-align: center;
   height: 200px;
@@ -112,7 +118,7 @@ h2 {
   border: solid 1px black;
   padding: 15px 5px;
   margin: 20px 0;
-  background-color: #c2c2c2;
+  background-color: var(--background-color-button);
   color: black;
   width: 100%;
   transition-timing-function: ease-in;
@@ -124,7 +130,7 @@ h2 {
   border-radius: 6px;
   border: solid 1px black;
   padding: 15px 5px;
-  background-color: #c2c2c2;
+  background-color: var(--background-color-button);
   color: black;
   width: 300px;
   margin: auto;
@@ -133,7 +139,8 @@ h2 {
 }
 
 button:hover {
-  background-color: #e2e0e0;
+  background-color: #f5d5e0;
+  color: black;
 }
 
 button:active {
