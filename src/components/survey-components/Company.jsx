@@ -12,8 +12,7 @@ export const Company = ({ setDisplayCompany }) => {
 return(
 <div className="question company">
 <h3>4. Who do you dream of eating pizza with?</h3>
-<div className="dropdown">
-<select value={company} onChange={(event) => {
+    <select value={company} onChange={(event) => {
       setCompany(event.target.value);
       setDisplayCompany(event.target.value)
     }}>

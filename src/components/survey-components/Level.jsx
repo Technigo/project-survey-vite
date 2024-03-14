@@ -1,15 +1,17 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-export const Level = () => {
-    const [selectedLevel, setLevel] = useState("Novice");
+export const Level = ({ setDisplayLevel }) => {
+  const [selectedLevel, setLevel] = useState("Novice");
 
-    const levelSelect = (event) => {
-        setLevel(event.target.value)
-    }
+  const levelSelect = (event) => {
+    setLevel(event.target.value);
+    setDisplayLevel(event.target.value);
+  };
 
   return (
-      <div className="question level">
-          <h3>1. Select your pizza eating level:</h3>
+    <div className="question level">
+      <h3>1. Select your pizza eating level:</h3>
       <form>
         <div className="radio-option">
           <label>
@@ -67,7 +69,12 @@ export const Level = () => {
           </label>
         </div>
       </form>
-      <p><span>You selected: {selectedLevel}</span></p>
+      <p>
+        <span>You selected: {selectedLevel}</span>
+      </p>
     </div>
   );
+};
+Level.propTypes = {
+  setDisplayLevel: PropTypes.func,
 };

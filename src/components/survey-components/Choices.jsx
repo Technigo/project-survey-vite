@@ -1,48 +1,50 @@
-import { useState } from 'react'
-import { toppings } from './toppings.js'
-import './choices.css'
+import { useState } from "react";
+import PropTypes from "prop-types";
+import { toppings } from "./toppings.js";
+import "./choices.css";
 
-export const Choices = () => {
+export const Choices = ({ setDisplayChoices }) => {
   const [checkedState, setCheckedState] = useState(
     new Array(toppings.length).fill(false)
-  )
+  );
 
-  const [total, setTotal] = useState(0)
-  const [totalName, setTotalName] = useState([])
+  const [total, setTotal] = useState(0);
+  const [totalName, setTotalName] = useState([]);
 
   const handleOnChange = (position, name) => {
     const updatedCheckedState = checkedState.map((item, index) =>
       index === position ? !item : item
-    )
+    );
 
-    setCheckedState(updatedCheckedState)
-    console.log(name)
+    setCheckedState(updatedCheckedState);
+    console.log(name);
 
     const selectedToppings = updatedCheckedState.reduce(
       (sumName, currentState, index) => {
         if (currentState) {
-          return sumName.concat(toppings[index].name)
+          return sumName.concat(toppings[index].name);
         }
-        return sumName
+        return sumName;
       },
       []
-    )
+    );
 
-    const formattedTotalName = selectedToppings.join(', ')
-    setTotalName(formattedTotalName)
+    const formattedTotalName = selectedToppings.join(", ");
+    setTotalName(formattedTotalName);
 
     const totalScore = updatedCheckedState.reduce(
       (sum, currentState, index) => {
         if (currentState === true) {
-          return sum + toppings[index].score
+          return sum + toppings[index].score;
         }
-        return sum
+        return sum;
       },
       0
-    )
+    );
 
-    setTotal(totalScore)
-  }
+    setTotal(totalScore);
+    setDisplayChoices(totalScore);
+  };
 
   return (
     <div className="question">
@@ -70,53 +72,26 @@ export const Choices = () => {
                 <div className="right-section">{score}</div>
               </div>
             </li>
-          )
+          );
         })}
         <div className="toppings-result">
           <div className="toppings-selected">
-              <p><span>Toppings of your choice:</span>{totalName}</p>
+            <p>
+              <span>Toppings of your choice:</span>
+              {totalName}
+            </p>
           </div>
           <div className="score-section">
-              <p><span>Your total score:</span>{total} disgust points</p>
+            <p>
+              <span>Your total score:</span>
+              {total} disgust points
+            </p>
           </div>
         </div>
       </ul>
     </div>
-  )
-}
-
-// import PropTypes from "prop-types";
-
-// export const ArtistName = ({ artists }) => {
-//   const getArtist = () => {
-//     const artistInfo = artists.map(({ name, external_urls, id }) => {
-//       return (
-//         <span key={id}>
-//           <a href={external_urls.spotify}>{name}</a>
-//         </span>
-//       );
-//     });
-//     const startLength = artistInfo.length;
-//     let index = 1;
-//     switch (startLength) {
-//       case 1:
-//         break;
-//       case 2:
-//         artistInfo.splice(1, 0, " & ");
-//         break;
-//       default:
-//         for (let i = 1; i < startLength - 1; i++) {
-//           artistInfo.splice(index, 0, ", ");
-//           index = index + 2;
-//         }
-//         artistInfo.splice(-1, 0, " & ");
-//     }
-//     return artistInfo;
-//   };
-
-//   return <div className="artist-name">{getArtist()}</div>;
-// };
-
-// ArtistName.propTypes = {
-//   artists: PropTypes.array.isRequired,
-// };
+  );
+};
+Choices.propTypes = {
+  setDisplayChoices: PropTypes.func,
+};
