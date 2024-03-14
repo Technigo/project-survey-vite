@@ -13,11 +13,9 @@ code {
 }
 html {
   height: 100%;
-  position: relative;
 }
 
 body {
-  height: 100%;
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -44,14 +42,18 @@ h1 {
   margin: 30px;
 }
 .footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  left: 0;
   box-sizing: border-box;
   align-items: center;
   color: white;
   background-color: #7e1639;
   width: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 .copyright {
   padding: 10px;
@@ -94,8 +96,6 @@ img {
     margin-top: 35px;
   }
   .footer {
-    position: absolute;
-    bottom: 0;
     flex-direction: row;
   }
   .copyright {
