@@ -129,22 +129,27 @@ export const App = () => {
               </div>
             ))}
           </div>
-          <button type="submit">Submit your answer</button>
+          <button className="submit-button" type="submit">
+            Submit your answer
+          </button>
         </form>
       )}
       {submitted && (
         <>
           {" "}
           {/* Text to show when submitted */}
-          <p>
+          <p className="summary-text">
             Once upon a time, there was an alien - you. You were colored {color}{" "}
             and lived on {capitalizeFirstLetter(planet)}. Your best friend was a
-            cute {animal.toLowerCase()} named Sparkle. Together, you zoomed
-            through space, exploring new worlds and making friends wherever you
-            went. And you lived happily ever after, spreading joy across the
-            galaxy. The end!
+            cute {animal.toLowerCase()} named Sparkle. <br></br> <br></br>
+            Together, you zoomed through space, exploring new worlds and making
+            friends wherever you went. And you lived happily ever after,
+            spreading joy across the galaxy. <br></br>
+            <br></br>The end!
           </p>
-          <button onClick={handleStartOver}>Start over</button>
+          <button className="start-over-button" onClick={handleStartOver}>
+            Start over
+          </button>
         </>
       )}
     </div>

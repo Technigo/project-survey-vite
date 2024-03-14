@@ -44,11 +44,22 @@ h2 {
   font-weight: var(--font-weight-regular);
 }
 
+.summary-text {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 .form-container {
   padding: 0 16px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 430px;
+  margin: auto;
 }
 .input-textfield,
 .input-dropdown {
@@ -82,6 +93,7 @@ h2 {
 .question-label {
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-regular);
+  width: 100%;
   /* padding-bottom: 10px; */
 }
 
@@ -93,7 +105,7 @@ h2 {
   /* margin-top: 10px; */
 }
 
-button {
+.submit-button {
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-regular);
   border-radius: 6px;
@@ -106,6 +118,19 @@ button {
   transition-timing-function: ease-in;
   transition: 0.5s;
 }
+.start-over-button {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  border-radius: 6px;
+  border: solid 1px black;
+  padding: 15px 5px;
+  background-color: #c2c2c2;
+  color: black;
+  width: 300px;
+  margin: auto;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
+}
 
 button:hover {
   background-color: #e2e0e0;
@@ -115,4 +140,20 @@ button:active {
   background-color: #c2c2c2;
   transition-timing-function: ease-out;
   transition: 0.5s;
+}
+
+/* Media Queries for tablet and desktop */
+@media screen and (min-width: 667px) {
+  .question-textfield,
+  .question-dropdown,
+  .question-radio-buttons {
+    align-items: center;
+  }
+  .question-label {
+    text-align: center;
+  }
+
+  .summary-text {
+    width: 500px;
+  }
 }
