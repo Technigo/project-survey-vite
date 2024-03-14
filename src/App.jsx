@@ -12,11 +12,8 @@ export const App = () => {
 
   return (
     <div>
-      {!surveyStarted ? (
-        <StartPage onStartSurvey={startSurvey} />
-      ) : (
-        <SurveyForm />
-      )}
+      {surveyStarted === false && <StartPage onStartSurvey={startSurvey} />}
+      {surveyStarted && <SurveyForm />}
     </div>
   );
 };
