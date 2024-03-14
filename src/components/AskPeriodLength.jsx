@@ -26,59 +26,60 @@ export const Period = ({ onInputChange }) => {
           name="period"
           control={control}
           rules={{ required: "Please select an option" }}
-          //Removed field from here which solves the problem that is doesn't take the value when user clicks, but to discuss
-          render={(/*{ field }*/) => (
-            <>
-              <label htmlFor="weekend" className="radio-button">
-                <input
-                  name="period-length"
-                  id="weekend"
-                  type="radio"
-                  value="weekend"
-                  onChange={handleChange}
-                  checked={period === "weekend"}
-                  //{...field}
-                  required></input>
-                Weekend
-              </label>
-              <label htmlFor="week" className="radio-button">
-                <input
-                  name="period-length"
-                  id="week"
-                  type="radio"
-                  value="week"
-                  onChange={handleChange}
-                  checked={period === "week"}
-                  //{...field}
-                ></input>
-                Week
-              </label>
-              <label htmlFor="two-weeks" className="radio-button">
-                <input
-                  name="period-length"
-                  id="two-weeks"
-                  type="radio"
-                  value="two-weeks"
-                  onChange={handleChange}
-                  checked={period === "two-weeks"}
-                  //{...field}
-                ></input>
-                Two weeks
-              </label>
-              <label htmlFor="month" className="radio-button">
-                <input
-                  name="period-length"
-                  id="month"
-                  type="radio"
-                  value="month"
-                  onChange={handleChange}
-                  checked={period === "month"}
-                  //{...field}
-                ></input>
-                Month
-              </label>
-            </>
-          )}
+          render={
+            (/*{ field }*/) => (
+              <>
+                <label htmlFor="weekend" className="radio-button">
+                  <input
+                    name="period-length"
+                    id="weekend"
+                    type="radio"
+                    value="weekend"
+                    onChange={handleChange}
+                    checked={period === "weekend"}
+                    //{...field}
+                    required></input>
+                  Weekend
+                </label>
+                <label htmlFor="week" className="radio-button">
+                  <input
+                    name="period-length"
+                    id="week"
+                    type="radio"
+                    value="week"
+                    onChange={handleChange}
+                    checked={period === "week"}
+                    //{...field}
+                  ></input>
+                  Week
+                </label>
+                <label htmlFor="two-weeks" className="radio-button">
+                  <input
+                    name="period-length"
+                    id="two-weeks"
+                    type="radio"
+                    value="two-weeks"
+                    onChange={handleChange}
+                    checked={period === "two-weeks"}
+                    //{...field}
+                  ></input>
+                  Two weeks
+                </label>
+                <label htmlFor="month" className="radio-button">
+                  <input
+                    name="period-length"
+                    id="month"
+                    type="radio"
+                    value="month"
+                    onChange={handleChange}
+                    checked={period === "month"}
+                    //{...field}
+                  ></input>
+                  Month
+                </label>
+              </>
+            )
+          }
         />
         {errors.period && (
           <p className="error-message">{errors.period.message}</p>

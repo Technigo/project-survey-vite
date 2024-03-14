@@ -59,13 +59,12 @@
   font-size: 14px;
 }
 
-.radio-button input[type="radio"] {
-  opacity: 0;
+.radio-button:focus {
+  background-color: var(--darkblue)
 }
 
-.radio-button input[type="radio"] + label {
-  display: inline-block;
-  padding: 10px;
+.radio-button input[type="radio"] {
+  opacity: 0;
 }
 
 .radio-button input[type="radio"]:checked + label {

@@ -1,5 +1,15 @@
 Survey to book a mystery trip
 
+Whats left to do:
+- styling radio buttons
+- check accessibility
+- add validation to range question
+- style dropdown (arrow)
+- style button/error message
+- change header for after submission
+- make grey submit button darker? to increase accessiblity
+
+
 1. What is your name?
 Input type: text field
 
