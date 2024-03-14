@@ -31,13 +31,13 @@ export const Survey = () => {
             The music genre you like listening to whilst exercising is: {music}{" "}
             music{" "}
           </p>
-          <h2> Thank you for participating!🎉</h2>
+          <p> Thank you for participating!🎉</p>
           <button onClick={clearSurvey}>Return</button>
         </div>
       ) : (
         <div className = "form-box">
         <form onSubmit={handleSubmit}>
-          <h3>1.</h3>
+          <p>1.</p>
           <div ClassName="survey-container">
             <p>
             What kind of exercise do you enjoy the most? (ex. running,
@@ -51,7 +51,7 @@ export const Survey = () => {
             placeholder="Write your answer here..."
           /></div>
 
-          <h3>2.</h3>
+          <p>2.</p>
           <p>How many hours/week do you spend exercising?</p>
           {hourGroups.map((group) => (
             <label for="textinput" class="label" id="textworkoutinput" key={group}>
@@ -65,7 +65,7 @@ export const Survey = () => {
             </label>
           ))}
 
-          <h3>3.</h3>
+          <p>3.</p>
           <p>What music do you like listening to when exercising?</p>
           <div className="dropdown">
             <select
