@@ -43,6 +43,10 @@
   border: 1px solid black;
 }
 
+.name-input:focus::placeholder {
+  color: transparent;
+}
+
 /*Radio buttons*/
 .radio-button {
   display: inline-block;
