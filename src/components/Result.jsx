@@ -12,7 +12,7 @@ export const Result = ({
 
       <p className="result">Your level: {displayLevel}</p>
       <p className="result">Your score: {displayChoices}</p>
-      <p className="result">Your Location: {displayLocation}</p>
+      <p className="result">Your location: {displayLocation}</p>
       <p className="result">Your company: {displayCompany}</p>
     </div>
   );

@@ -35,7 +35,7 @@ export const App = () => {
             setDisplayLevel={setDisplayLevel}
             displayChoices={displayChoices}
             setDisplayChoices={setDisplayChoices}
-            displaylocation={displayLocation}
+            displayLocation={displayLocation}
             setDisplayLocation={setDisplayLocation}
             displayCompany={displayCompany}
             setDisplayCompany={setDisplayCompany}

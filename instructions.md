@@ -69,7 +69,11 @@ So you’ve completed the requirements? Great job! Ensure you've committed and p
 
 ### ROADMAP
 
-- Acceptable pizza toppings (How much of a degenerate swede are you?)
-- Country of residence. Dropdown?
-- Nivå av pizza-ätanade. Radio buttons
-- Vem av dessa skulle du vilja äta pizza med?
+- Acceptable pizza toppings (How much of a degenerate swede are you?)   Check!
+- Country of residence. Dropdown?                                       Check!
+- Nivå av pizza-ätanade. Radio buttons                                  Check!  
+- Vem av dessa skulle du vilja äta pizza med?                           Check!
+
+- Byt plats på survey och result i ternery operatorn. Just nu syns resultatet först.
+- Lägg in validering för frågorna.
+- Bilder för vem man valt att äta middag med.
