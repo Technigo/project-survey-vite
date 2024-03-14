@@ -42,6 +42,8 @@ export const Test = () => {
                     <h2>Quick Survey on your hotel stay</h2>
                     <label>Where did you stay?</label>
                     <select
+                    id= "Where did you stay?"
+                    aria-label="Where did you stay?"
                         value={author}
                         onChange={(e) => setAuthor(e.target.value)}
                     >
@@ -51,36 +53,44 @@ export const Test = () => {
                         <option value="Venice">Venice</option>
                         <option value="Paris">Paris</option>
                     </select>
-                    <label>Which one of our hotels did you stay at?</label>
-                    <input
+                    <label htmlFor = "Which one of our hotels did you stay at?" >Which one of our hotels did you stay at?</label>
+                    <input 
                         type="text" 
+                        id="Which one of our hotels did you stay at?"
                         required
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
+                        aria-label= "Type answer"
                     /> 
-                    <label>Describe your experience in a few sentences</label>
-                    <textarea
+                    <label htmlFor = "Describe your experience in a few sentences" >Describe your experience in a few sentences</label>
+                    <textarea 
+                    id="Describe your experience in a few sentences"
                         required
                         value={body}
                         onChange={(e) => setBody(e.target.value)}
+                        aria-label= "Type answer"
                     ></textarea>
-                    <label>Would you recommend a friend to stay at the hotel in the future?</label>
+                    <label htmlFor = "Would you recommend a friend to stay at the hotel in the future?">Would you recommend a friend to stay at the hotel in the future?</label>
                     <div>
-                        <label>
+                        <label htmlFor = "radiobuttons">
                             <input
-                                type="radio"
+                                type="radio" 
+                                id="radiobuttons"
                                 value="yes"
                                 checked={recommendation === "yes"}
                                 onChange={(e) => setRecommendation(e.target.value)}
+                                aria-label= "Pick yes"
                             />
                             Yes
-                        </label>
-                        <label>
+                        </label >
+                        <label htmlFor = "radiobuttons">
                             <input
-                                type="radio"
+                                type="radio" 
+                                id="radiobuttons"
                                 value="no"
                                 checked={recommendation === "no"}
                                 onChange={(e) => setRecommendation(e.target.value)}
+                                aria-label= "Pick no"
                             />
                             No
                         </label>

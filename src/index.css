@@ -29,7 +29,7 @@ code {
 }
 
 .test button {
-  background-color: #007bff;
+  background-color: #000000;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -38,7 +38,7 @@ code {
 }
 
 .test button:hover {
-  background-color: #0056b3;
+  background-color: #292929;
 }
 
 .submitted-data {
@@ -78,10 +78,15 @@ code {
  
 }
 
-
 @media (max-width: 700px) {
   .header img {
     width:250px; 
+  }
+}
+
+@media (max-width: 320px) {
+  .header img {
+    width:100px; 
   }
 }
 
