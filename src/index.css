@@ -44,41 +44,53 @@ h2 {
   font-weight: var(--font-weight-regular);
 }
 
-form {
+.form-container {
   padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.question-1 input,
-.question-2 select {
+.input-textfield,
+.input-dropdown {
   display: flex;
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-regular);
   border-radius: 6px;
   border: solid 1px black;
-  padding: 10px;
+  padding: 15px 5px;
   margin: 20px 0;
   width: 100%;
 }
 
-.radio-button label {
+.question-textfield,
+.question-dropdown,
+.question-radio-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.question-textfield p,
+.question-dropdown p,
+.question-radio-buttons p {
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-medium);
+  /* padding-bottom: 10px; */
+  line-height: 36px;
+}
+
+.question-label {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  /* padding-bottom: 10px; */
+}
+
+.input-radio-button {
   display: flex;
   width: 100px;
   justify-content: space-between;
   align-items: center;
-}
-
-.question-1 p,
-.question-2 p,
-.question-3 p {
-  font-size: var(--font-size-big);
-  font-weight: var(--font-weight-medium);
-  padding-bottom: 10px;
-}
-
-.question-1 label,
-.question-2 label,
-.question-3 label {
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-regular);
+  /* margin-top: 10px; */
 }
 
 button {
@@ -87,7 +99,7 @@ button {
   border-radius: 6px;
   border: solid 1px black;
   padding: 10px 20px;
-  margin: 10px 0;
+  margin: 20px 0;
   background-color: #c2c2c2;
   color: black;
   width: 100%;
