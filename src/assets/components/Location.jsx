@@ -1,13 +1,7 @@
-import React, { useState } from "react";
 
-export function Location() {
+// eslint-disable-next-line react/prop-types
+export function Location({ value, onChange }) {
 
-  const [location, setLocation] = useState("");
-
-  const chooseLocation = (value) => {
-    setLocation(value);
-  console.log("Location:", value); 
-  };
 
   return (
     <div className="ChooseLocation">
@@ -16,28 +10,28 @@ export function Location() {
       <div className="RadioButtons">
         <input
           type="radio"
-          name="location" 
-          value="Forest" 
-          checked={location === "Forest"}
-          onChange={() => chooseLocation("Forest")}
+          name="location"
+          value="Forest"
+          checked={value === "the forest"}
+          onChange={() => onChange("the forest")}
           className="radio"
         />
         <label>Forest</label>
         <input
           type="radio"
-          name="location" 
-          value="A far far away kingdom" 
-          checked={location === "A far far away kingdom"}
-          onChange={() => chooseLocation("A far far away kingdom")}
+          name="location"
+          value="A far far away kingdom"
+          checked={value === "a far far away kingdom"}
+          onChange={() => onChange("a far far away kingdom")}
           className="radio"
         />
         <label>A far far away kingdom</label>
         <input
           type="radio"
-          name="location" 
-          value="School of Witchcraft and Wizardry" 
-          checked={location === "School of Witchcraft and Wizardry"}
-          onChange={() => chooseLocation("School of Witchcraft and Wizardry")}
+          name="location"
+          value="School of Witchcraft and Wizardry"
+          checked={value === "the School of Witchcraft and Wizardry"}
+          onChange={() => onChange("the School of Witchcraft and Wizardry")}
           className="radio"
         />
         <label>School of Witchcraft and Wizardry</label>

@@ -1,20 +1,13 @@
-import React, { useState } from "react";
 import { companionsArray } from "./Arrays.jsx";
 
-export function Companion() {
-
-  const [companion, setCompanion] = useState("");
-
-  function selectCompanion(event) {
-    setCompanion(event.target.value);
-    console.log("Selected Companion:", event.target.value);
-  }
+// eslint-disable-next-line react/prop-types
+export function Companion({ value, onChange }) {
 
   return (
     <div className="CompanionComponent">
       <h2 className="number">3.</h2>
-      <p className="question">Who is your main character's companion?</p>
-      <select value={companion} onChange={selectCompanion}>
+      <p className="question">Who is your main character`s companion?</p>
+      <select value={value} onChange={(e) => onChange(e.target.value)}>
         <option value="">Select companion</option>
         {companionsArray.map((companion, index) => (
           <option key={index} value={companion.name}>

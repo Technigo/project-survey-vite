@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Charactername } from "./Charactername.jsx";
 import { Location } from "./Location.jsx";
 import { Companion } from "./Companion.jsx";
@@ -40,16 +40,18 @@ export function Questions() {
   return (
     <div>
       {!submitted ? (
-        <form onSubmit={handleSubmit}>
-          <Charactername setCharactername={setCharactername} />
-          <Location setLocation={setLocation} />
-          <Companion setCompanion={setCompanion} />
-          <Adventure setAdventure={setAdventure} />
-          <SubmitButton onClick={handleSubmit}/>
+
+        <form onSubmit={handleSubmit} className="QuestionForm">
+          <Charactername value={charactername} onChange={setCharactername} />
+          <Location value={location} onChange={setLocation} />
+          <Companion value={companion} onChange={setCompanion} />
+          <Adventure value={adventure} onChange={setAdventure} />
+          <SubmitButton onClick={() => setSubmitted(true)} />
+
         </form>
       ) : (
         <div>
-          <h2>Thank you for answering! Here's your whimsical bedtime story</h2>
+          <h2>Thank you for answering! Here`s your whimsical bedtime story</h2>
           <p>
             Your name is {charactername}, and you are tasked with an important
             mission and about to start your adventure!
@@ -57,7 +59,7 @@ export function Questions() {
           <p>You are excited to leave {location} and make some new friends!</p>
           {companion && (
             <p>
-              You will choose{" "}
+              You will meet {companion},{" "}
               {
                 companionsArray.find(
                   (companionElement) => companionElement.name === companion
@@ -67,6 +69,7 @@ export function Questions() {
           )}
           {adventure && (
             <p>
+              You do a {adventure} and{" "}
               {
                 adventuresArray.find(
                   (adventureElement) => adventureElement.name === adventure
