@@ -7,8 +7,8 @@ Whats left to do:
 - add validation to range question (tried this with event.preventDefault which is not working yet.)
 - style dropdown (arrow)
 - style button/error message
-- change header for after submission
-- make grey submit button darker? to increase accessiblity
+- change header for after submission (done /alma)
+- make grey submit button darker? to increase accessiblity (made it darker /Alma)
 
 1. What is your name?
    Input type: text field

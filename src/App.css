@@ -8,7 +8,7 @@
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-  max-width: 350px;
+  /* max-width: 100%; */
 }
 
 .counter {
@@ -25,6 +25,7 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 80px;
+  /* width: 100%; */
 }
 
 .labelQ {
@@ -35,9 +36,17 @@
 }
 
 /*Inputs styling*/
+
+.name-input,
+.destination-input,
+.radio-button,
+.budget-range {
+  display: block;
+  width: 280px;
+}
+
 .name-input,
 .destination-input {
-  width: 100%;
   padding: 10px 5px;
   border-radius: 6px;
   border: 1px solid black;
@@ -49,9 +58,7 @@
 
 /*Radio buttons*/
 .radio-button {
-  display: inline-block;
-  width: 100%;
-  padding: 10px;
+  padding: 10px 5px;
   border: 1px solid #9c9c9c;
   border-radius: 6px;
   cursor: pointer;
@@ -69,11 +76,6 @@
 /*.radio-button input[type="radio"]:checked + label {
   background-color: #ccd1ed;
 }*/
-
-/*Range slider*/
-.budget-range {
-  width: 100%;
-}
 
 /*Summary container styling*/
 .summary-container {
@@ -95,8 +97,15 @@
     justify-content: center;
   }
 
-  .counter {
-    align-self: center;
+  .name-input,
+  .destination-input,
+  .radio-button,
+  .budget-range {
+    width: 350px;
+  }
+
+  .questions {
+    align-items: center;
   }
 
   .labelQ {
@@ -107,6 +116,7 @@
     width: 233px;
     align-self: center;
   }
+
   .summary-container {
     padding: 40px 25%;
   }
