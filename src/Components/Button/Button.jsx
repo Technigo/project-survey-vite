@@ -10,7 +10,7 @@ export const Button = ({
   const removLastQuestion = lastQuesionIndex - 1;
 
   return (
-    <section>
+    <section className="button-section">
       {isStranger ? (
         <>
           {currentQuestionIndex > lastQuesionIndex && (
@@ -63,6 +63,12 @@ export const Button = ({
               </p>
             </>
           )}
+
+          {
+            (currentQuestionIndex = 0 && (
+              <p className="style-button" aria-hidden="true"></p>
+            ))
+          }
 
           {currentQuestionIndex > 0 &&
             currentQuestionIndex <= removLastQuestion + 1 && (

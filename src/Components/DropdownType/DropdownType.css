@@ -5,15 +5,19 @@ li {
 .option-area {
   display: flex;
   flex-direction: row;
-  border: red 1px solid;
 }
 
 .dropdown-btn {
-  width: 100%;
+  width: 80%;
 }
 
 .dropdown-list {
   text-align: center;
   width: 100%;
   border: rgb(255, 0, 251) 5px solid;
+}
+
+.previous-btn {
+  border: transparent;
+  color: transparent;
 }

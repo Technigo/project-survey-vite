@@ -11,19 +11,7 @@
 }
 
 .start-btn {
-  background: none;
-  margin: 50px auto;
   width: 400px;
   height: 80px;
-  border: var(--main-color) 2px solid;
-  border-radius: 30px;
-  color: var(--main-color);
-  font-family: inherit;
   font-size: 2rem;
-  font-weight: 800;
-  transition: all 0.2s ease-in-out;
-}
-
-button:hover {
-  background-color: var(--button-shadow-color);
 }

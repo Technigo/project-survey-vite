@@ -31,7 +31,26 @@ main {
 }
 
 button {
-  cursor: pointer;
+  background: none;
+  margin: 50px auto;
+  width: 200px;
+  height: 40px;
+  border: var(--main-color) 2px solid;
+  border-radius: 30px;
+  color: var(--main-color);
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--button-shadow-color);
+}
+
+button:focus {
+  outline: none;
+  background-color: var(--button-shadow-color);
 }
 
 .input-section {
@@ -53,7 +72,11 @@ button {
   font-family: inherit;
   font-size: 30px;
   font-weight: 500;
-  background-color: var(--question-background-color);
+  background: linear-gradient(
+    90deg,
+    var(--question-background-color),
+    #b2d1ad25 98%
+  );
   text-align: center;
   padding: 100px;
 }

@@ -1,18 +1,26 @@
+.button-section {
+  width: 100%;
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 0.7fr 1fr;
+  position: absolute;
+  bottom: 0;
+}
+
+.style-button {
+  margin: 50px auto;
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
 .previous-btn,
 .next-btn,
 .submit-btn {
-  position: absolute;
-}
-
-.next-btn,
-.submit-btn {
-  right: 200px;
-  bottom: 50px;
-}
-
-.previous-btn {
-  left: 200px;
-  bottom: 50px;
+  text-align: center;
 }
 
 .button-section p {
