@@ -1,0 +1,149 @@
+.dropdown {
+  min-width: 350px;
+}
+
+select {
+  font-size: 1.15rem;
+  padding: 0.1em 4em 0.2em 2em;
+  background-color: white;
+  border-radius: 0.25rem;
+  height: 40px;
+}
+
+.header-container {
+  background-color: #0018a4;
+  color: white;
+  text-align: center;
+  padding: 40px 30px;
+}
+
+form {
+  text-align: center;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+  margin: 5px;
+}
+
+input[type="radio"] {
+  border: 0px;
+  width: 1%;
+  height: 2em;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+p {
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.questions {
+  font-size: 22px;
+}
+
+.numbers {
+  font-weight: 500;
+  font-size: 25px;
+  margin-top: 80px;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  padding: 0.2em 1em 0.2em 1em;
+  background-color: white;
+  border-radius: 0.25rem;
+  height: 32px;
+  border-width: 1px;
+}
+
+button {
+  background-color: #0018a4;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 40px;
+  border-color: black;
+  border-width: 1px;
+}
+
+button:active {
+  background-color: #727274;
+}
+
+button:hover {
+  background-color: #727274;
+}
+
+#result-text {
+  font-size: 25px;
+  font-weight: 700;
+}
+.summary-container {
+  text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 668px) {
+  form {
+    width: auto;
+    text-align: left;
+  }
+
+  .dropdown {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  label {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  input[type="text"] {
+    width: 93%;
+    float: left;
+    height: 32px;
+    margin-bottom: 90px;
+  }
+
+  input[type="radio"] {
+    border: 0px;
+    width: 5%;
+    height: 2em;
+  }
+  form {
+    padding: 5px;
+    margin: 7px;
+  }
+  select {
+    width: 90%;
+    height: 40px;
+  }
+  button {
+    width: 106%;
+    margin: 0;
+    margin-top: 20px;
+    height: 43px;
+  }
+  .header-container {
+    width: 90%;
+  }
+  p {
+    width: 95%;
+  }
+}
