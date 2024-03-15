@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Level } from "./survey-components/Level";
 import { Choices } from "./survey-components/Choices";
-import { Location } from "./survey-components/location";
+import { Location } from "./survey-components/Location";
 import { Company } from "./survey-components/Company";
 import "../app.css";
 
