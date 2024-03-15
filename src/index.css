@@ -35,17 +35,19 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  color:  var(--white);
+  color: var(--white);
 }
-
 
 body::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.44), rgba(4, 50, 95, 0.44));
-
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.44),
+    rgba(4, 50, 95, 0.44)
+  );
 }
 
 main {
@@ -56,11 +58,12 @@ main,
 header {
   max-width: 2000px;
   font-weight: 300;
+  text-align: center;
 }
 
 h1,
 h2 {
-  font-weight: 300;
+  font-weight: 500;
 }
 
 h1 {
@@ -72,13 +75,15 @@ h2 {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 18px;
   color: var(--primary);
   margin-bottom: 30px;
   font-weight: 400;
 }
 
-p {font-size: 16px;}
+p {
+  font-size: 16px;
+}
 
 /* Elements */
 button {
@@ -91,35 +96,8 @@ button {
   cursor: pointer;
 }
 
-
-.question-two label {
-  display: inline-block;
-  position: relative;
-  padding: 20px 30px;
-  cursor: pointer;
-  margin: 20px;
-  background-color: #d48247;
-  border-radius: var(--radius);
-  transition: background-color 0.3s ease;
-}
-
-.question-two input[type="radio"] {
-  display: none;
-}
-
-
-.question-two label:hover {
-  background-color: #6f6f6f;
-}
-
-.question-two label.checked {
-  background-color: aquamarine;
-}
-
-
-
 /* Media queries */
-@media (min-width: 668px) and (max-width: 1024px) {
+@media (min-width: 668px) {
   h1 {
     font-size: 40px;
   }
@@ -128,22 +106,14 @@ button {
     font-size: 30px;
   }
 
-  p {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 1025px) {
-  h1 {
-    font-size: 40px;
-  }
-
-  h2 {
+  h3 {
     font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 30px;
+    font-weight: 400;
   }
 
   p {
     font-size: 18px;
   }
-
 }

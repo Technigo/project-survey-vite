@@ -1,37 +1,11 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/survey.svg" alt="Project Banner Image">
-  </a>
-</h1>
-
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+A short survey to practise useStatement in React and to aim for a high accessibility score in Lighthouse. A simple looking but still challenging task!
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started off with a different folder structure, one that was slightly more advanced than the current one. After some time, we re-aranged it to make it more understandable for everyone in the team and we got it rolling again. Why we chose our first model was because we figured it'd be easier to build on in the future to make a bigger survey from it, as a template sort of.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+https://clinquant-malasada-d51399.netlify.app/

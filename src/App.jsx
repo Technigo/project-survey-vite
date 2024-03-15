@@ -5,33 +5,27 @@ import { Summary } from "./components/Summary.jsx";
 
 export const App = () => {
   const [value, setValue] = useState("");
-  const [error, setErrorMessage] = useState("");
   const [mood, setMood] = useState("");
   const [song, setSong] = useState("");
-  const [showSummary, setShowSummary] = useState(false)
-  const [answer, setAnswer] = useState("")
-  
+  const [showSummary, setShowSummary] = useState(false);
 
   return (
     <>
-      <Header />
+      <Header showSummary={showSummary} />
       <main>
-        {showSummary ?
-        <Summary value={value} mood={mood} song={song}
-        answer={answer}
-        setAnswer={setAnswer} /> :
-        <Form 
-        value={value}
-        setValue={setValue}
-        error={error}
-        setErrorMessage={setErrorMessage}
-        mood={mood}
-        setMood={setMood}
-        song={song}
-        setSong={setSong}
-        setShowSummary={setShowSummary}
-        />}
-
+        {showSummary ? (
+          <Summary value={value} mood={mood} song={song} setMood={setMood} />
+        ) : (
+          <Form
+            value={value}
+            setValue={setValue}
+            mood={mood}
+            setMood={setMood}
+            song={song}
+            setSong={setSong}
+            setShowSummary={setShowSummary}
+          />
+        )}
       </main>
     </>
   );
