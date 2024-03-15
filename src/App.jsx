@@ -7,21 +7,21 @@ import { ResultPage } from './components/ResultPage';
 export const App = () => {
   const [surveyStarted, setSurveyStarted] = useState(false);
   const [showResultPage, setShowResultPage] = useState(false);
+  const [formData, setFormData] = useState({});
 
   const startSurvey = () => {
     setSurveyStarted(true);
   };
 
-  const handleFormSubmit =(formData)=>{
+  const shouldShowResult =()=>{
     setShowResultPage(true);  
   }
 
   return (
     <div>
       {surveyStarted === false && <StartPage onStartSurvey={startSurvey} />}
-      {surveyStarted && !showResultPage && <SurveyForm onSubmit={handleFormSubmit} />}
-      {showResultPage&& <ResultPage/>}
-
+      {surveyStarted && !showResultPage && <SurveyForm setFormData={setFormData} showResult={shouldShowResult} />}
+      {showResultPage&& <ResultPage formData={formData}/>}
     </div>
   );
 };

@@ -1,17 +1,9 @@
 import { useRef } from "react";
 import "./DropDown.css";
 
-export const DropDown = () => {
-  // Create a ref to hold the dropdown element
-  // Couldn't use this: export const DropDown = ({ selectedValue, handleDropdownChange }) => {
-  const dropdownRef = useRef(null);
+export const DropDown = ({handleDropdownChange}) => {
 
-  // Function to handle dropdown change
-  const handleDropdownChange = () => {
-    const selectedValue = dropdownRef.current.value;
-    // Do something with the selected value
-    console.log("Selected value:", selectedValue);
-  };
+  const dropdownRef = useRef(null);
 
   return (
     <div className="dropdown-container">

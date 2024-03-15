@@ -1,15 +1,9 @@
 import { useRef } from "react";
 import "./DropDown.css";
 
-export const DropDown2 = () => {
+export const DropDown2 = ({handleDropdownChange}) => {
+
     const dropdownRef = useRef(null);
-  
-    // Function to handle dropdown change internally
-    const handleDropdownChange = () => {
-      const selectedValue = dropdownRef.current.value;
-      // Do something with the selected value
-      console.log("Selected value:", selectedValue);
-    };
   
     return (
       <div className="dropdown-container">
