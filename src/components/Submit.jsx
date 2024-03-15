@@ -11,20 +11,16 @@ export const Submit = ({
   setDisplayLocation,
   setDisplayCompany,
 }) => {
-  //   const [submit, setSubmit] = useState(false);
 
   const handleSubmit = (e) => {
-    console.log("Location: ", displayLocation);
-    console.log("Level: ", displayLevel);
-    console.log("Company: ", displayCompany);
-
     e.preventDefault();
-    if (displayLocation === undefined) {
-      alert("Please enter your location");
+
+    if (displayLevel === undefined) {
+      alert("Please enter your level");
     } else if (displayCompany === undefined) {
       alert("Please enter your company");
-    } else if (displayLevel === undefined) {
-      alert("Please enter your level");
+    } else if (displayLocation === undefined) {
+      alert("Please enter your location");
     } else {
       setShowResults(!showResults);
     }

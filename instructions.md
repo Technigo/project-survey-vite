@@ -77,4 +77,4 @@ So you’ve completed the requirements? Great job! Ensure you've committed and p
 - Byt plats på survey och result i ternery operatorn.                   CHECK!
 - Bilder för vem man valt att äta middag med.                           Check!
 
-- Lägg in validering för frågorna.              
+- Lägg in validering för frågorna.                                      Check!

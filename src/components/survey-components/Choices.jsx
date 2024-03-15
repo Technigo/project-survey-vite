@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { toppings } from "./toppings.jsx";
+import { toppings } from "./data/toppings.jsx";
 import "./choices.css";
 
 export const Choices = ({ setDisplayChoices }) => {
@@ -11,13 +11,12 @@ export const Choices = ({ setDisplayChoices }) => {
   const [total, setTotal] = useState(0);
   const [totalName, setTotalName] = useState([]);
 
-  const handleOnChange = (position, name) => {
+  const handleOnChange = (position) => {
     const updatedCheckedState = checkedState.map((item, index) =>
       index === position ? !item : item
     );
 
     setCheckedState(updatedCheckedState);
-    console.log(name);
 
     const selectedToppings = updatedCheckedState.reduce(
       (sumName, currentState, index) => {

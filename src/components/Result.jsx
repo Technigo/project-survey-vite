@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { resultTexts } from "./survey-components/resulttexts";
-import { levelTexts } from "./survey-components/levelTexts";
-import { locationTexts } from "./survey-components/locationTexts";
-import { companyTexts } from "./survey-components/companyTexts";
+import { resultTexts } from "./survey-components/data/resulttexts";
+import { levelTexts } from "./survey-components/data/levelTexts";
+import { locationTexts } from "./survey-components/data/locationTexts";
+import { companyTexts } from "./survey-components/data/companyTexts";
 
 const resultTitle = (choicesScore) => {
   let title = "";
@@ -32,7 +32,6 @@ const locationCheck = (displayLocation) => {
   let locationText = "";
   {
     locationTexts.map(({ text, location }) => {
-      console.log(text);
       if (location === displayLocation.displayLocation) {
         locationText = text;
       }
@@ -46,7 +45,6 @@ const companyCheck = (displayCompany) => {
   let companyImg = "";
   {
     companyTexts.map(({ text, company, img }) => {
-      console.log(text);
       if (company === displayCompany.displayCompany) {
         companyText = text;
         companyImg = img;
