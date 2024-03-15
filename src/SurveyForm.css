@@ -28,7 +28,7 @@
 	margin: 24px;
 }
 
-.summary { 
+.summary {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -39,7 +39,8 @@
 	padding: 10px;
 }
 
-.donut-img { /*artistic choice to put flex-end and not center! Set to center in tablet and desktop*/
+.donut-img {
+	/*artistic choice to put flex-end and not center! Set to center in tablet and desktop*/
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -85,42 +86,48 @@
 	margin-top: 24px;
 }
 
-/*Range-slider styling*/
+/* RangeSlider container */
 .range-slider {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 0.2rem;
+	gap: 0.5rem;
 }
 
-.slider {
-	-webkit-appearance: none; /*this removes the default style on the slider*/
-	width: 100%;
-	height: 10px;
-	border-radius: 5px;
-	background: var(--pink);
-	outline: none;
+/* Label styling */
+.range-slider label {
+	font-size: 1.2rem;
 }
 
-.slider::-webkit-slider-thumb {
+/* Slider input styling */
+.range-slider input[type='range'] {
+	width: 80%; /* Adjust the width as needed */
 	-webkit-appearance: none;
 	appearance: none;
-	width: 25px;
-	height: 25px;
-	border-radius: 50%;
+	height: 10px;
+	border-radius: 5px;
+	background: var(--red);
+	outline: none;
+	margin-bottom: 0.5rem;
+}
+
+/* Slider thumb styling */
+.range-slider input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 20px; /* Thumb width */
+	height: 20px; /* Thumb height */
+	border-radius: 50%; /* Rounded thumb */
 	background: var(--indigo);
 	cursor: pointer;
-	transition: background 0.2s; /* Smooth transition for thumb color */
 }
 
-.slider:hover::-webkit-slider-thumb {
+.range-slider input[type='range']::-moz-range-thumb {
+	width: 20px; /* Thumb width */
+	height: 20px; /* Thumb height */
+	border-radius: 50%; /* Rounded thumb */
 	background: var(--indigo);
-}
-
-.range-slider-answer {
-	width: 100%;
-	height: 2rem;
-	margin-top: 24px;
+	cursor: pointer;
 }
 
 /* Tablet and Desktop */
