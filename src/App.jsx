@@ -15,20 +15,7 @@ export const App = () => {
   return (
     <>
       <Header />
-      {showResults ?
-        <div className="main-container">
-          <Survey
-            displayLevel={displayLevel}
-            setDisplayLevel={setDisplayLevel}
-            displayChoices={displayChoices}
-            setDisplayChoices={setDisplayChoices}
-            displaylocation={displayLocation}
-            setDisplayLocation={setDisplayLocation}
-            displayCompany={displayCompany}
-            setDisplayCompany={setDisplayCompany}
-          />
-        </div>
-        :
+      {showResults ? (
         <div className="result-container main-container">
           <Result
             displayLevel={displayLevel}
@@ -41,7 +28,20 @@ export const App = () => {
             setDisplayCompany={setDisplayCompany}
           />
         </div>
-        }
+      ) : (
+        <div className="main-container">
+          <Survey
+            displayLevel={displayLevel}
+            setDisplayLevel={setDisplayLevel}
+            displayChoices={displayChoices}
+            setDisplayChoices={setDisplayChoices}
+            displaylocation={displayLocation}
+            setDisplayLocation={setDisplayLocation}
+            displayCompany={displayCompany}
+            setDisplayCompany={setDisplayCompany}
+          />
+        </div>
+      )}
       <div className="submit-container">
         <Submit showResults={showResults} setShowResults={setShowResults} />
       </div>
