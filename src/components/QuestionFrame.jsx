@@ -52,7 +52,8 @@ const QuestionFrame = ({ createSummary }) => {
   return (
     <div className="question-page">
       <Header question={questions?.[qNum]} />
-      <ProgressBar progress={qNum + 1} total={questions.length} />
+      <ProgressBar qNum={qNum + 1} />
+
       <form onSubmit={handleSubmit}>
         <Question
           qNum={qNum}
