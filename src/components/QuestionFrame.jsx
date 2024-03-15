@@ -25,17 +25,17 @@ const QuestionFrame = ({ createSummary }) => {
     const { name, value, type } = event.target;
     const newValue =
       type === "checkbox" ? [...formData.subscription, value] : value;
-    let emailValidation = false;
+    let validation = false;
     if (name === "email") {
-      console.log("name data", formData.name);
-      emailValidation =
-        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) &&
-        formData.name;
-      console.log(emailValidation);
+      if (formData.name) {
+        validation = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value);
+      } else {
+        validation = false;
+      }
     } else if (name === "name") {
-      emailValidation = formData.email ? true : false;
+      validation = formData.email ? true : false;
     } else {
-      emailValidation = true;
+      validation = true;
     }
 
     setFormData({
@@ -43,7 +43,7 @@ const QuestionFrame = ({ createSummary }) => {
       [name]: newValue,
     });
     console.log("Validated:", validated);
-    setValidated(emailValidation);
+    setValidated(validation);
   };
 
   // Event handler for form submission
@@ -63,13 +63,13 @@ const QuestionFrame = ({ createSummary }) => {
       <Header question={questions?.[qNum]} />
 
       <form onSubmit={handleSubmit}>
-        <ProgressBar qNum={qNum + 1} />
+        <ProgressBar progress={qNum + 1} />
         <Question
           qNum={qNum}
           formData={formData}
           onChange={handleInputChange}
         />
-        <NextButton progress={qNum} validated={validated} />
+        <NextButton qNum={qNum} validated={validated} />
       </form>
     </div>
   );
