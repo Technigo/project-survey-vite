@@ -11,4 +11,4 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ### View it live
 
-https://warm-cendol-214ae9.netlify.app/)https://warm-cendol-214ae9.netlify.app/
+https://warm-cendol-214ae9.netlify.app/
