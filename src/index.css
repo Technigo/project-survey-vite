@@ -77,7 +77,7 @@ body {
   display: grid;
   width: inherit;
   height: inherit;
-  grid-template-rows: minmax(200px, 40vh) 25px auto;
+  grid-template-rows: 40% 25px auto;
 }
 
 /* header - the direct child (1/2) of question-page */
@@ -106,8 +106,8 @@ body {
 /* form - the direct child (2/2) of question-page */
 form {
   display: grid;
-  grid-template-rows: auto minmax(80px, 20%);
-  gap: minmax(80px, 20%);
+  grid-template-rows: auto 30%;
+  gap: 10%;
 }
 
 /* question-container - the direct child (1/2) of form */
@@ -133,7 +133,8 @@ form {
   font-family: inherit;
   font-weight: 600;
   border-radius: 8px;
-  background-color: #0018a5;
+  /* background-color: #0018a5; */
+  background-color: #c2c2c2;
   color: white;
   height: 45px;
   width: 80%;
@@ -398,6 +399,37 @@ input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 
+@media screen and (min-width: 768px) {
+  .question-page {
+    grid-template-columns: 50% auto;
+    grid-template-rows: 1fr;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .question-container {
+    width: 100%;
+    /* width: max-content; */
+    /* align-self: flex-start; */
+  }
+
+  .next-q-btn {
+    width: max-content;
+    align-self: center;
+    justify-content: flex-start;
+  }
+
+  .next-q-btn button {
+    width: max-content;
+    padding: 0 20px;
+  }
+=======
 /* Progress bar */
 
 .progressbar-container {
