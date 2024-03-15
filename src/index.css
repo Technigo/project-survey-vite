@@ -1,19 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  /* margin: 0; */
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "Poppins", sans-serif;
+  -moz-osx-font-smoothing: grayscale; */
+  --primary-color: #0018a5;
+  --secondary-color: #c2c2c2;
+  --background-color: linear-gradient(#c2b7bdff, #3a5572ff);
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+  --main-text-color: white;
+  --secondary-text-color: black;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 
 html {
   height: 100%;
@@ -23,10 +29,11 @@ body {
   width: 100vw;
   height: 100%;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 * {
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
 }
 
 #root {
@@ -36,8 +43,8 @@ body {
 /* Starting page */ /* Summary page */
 .starting-page,
 .summary-page {
-  background-color: #0018a5;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--main-text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +67,7 @@ body {
   font-weight: 600;
   border-radius: 8px;
   background-color: white;
-  color: #0018a5;
+  color: var(--primary-color);
   height: 45px;
   width: 100px;
   border: 0;
@@ -83,12 +90,12 @@ body {
 /* header - the direct child (1/2) of question-page */
 
 .header {
-  background-color: #0018a5;
+  background-image: var(--background-color);
   display: flex;
   flex-direction: column;
   font-size: 20px;
   width: 100%;
-  color: white;
+  color: var(--main-text-color);
   justify-content: center;
 }
 
@@ -135,11 +142,10 @@ form {
 
 .next-q-btn button {
   font-family: inherit;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
   border-radius: 8px;
-  /* background-color: #0018a5; */
-  background-color: #c2c2c2;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--main-text-color);
   height: 38px;
   width: 80%;
   border: 0;
@@ -147,7 +153,7 @@ form {
 }
 
 .next-q-btn .validated {
-  background-color: #0018a5;
+  background-color: #0f2b43ff;
 }
 
 /* question 1 */
@@ -225,12 +231,12 @@ form {
 
 .radio-label:checked + .button-label {
   /* background: #2ecc71; */
-  background-color: #0018a5;
+  background-color: #0f2b43ff;
   color: #efefef;
 }
 .radio-label:checked + .button-label:hover {
   /* background: #29b765; */
-  background-color: #0018a5;
+  background-color: #0f2b43ff;
   color: #e2e2e2;
 }
 
@@ -265,7 +271,6 @@ input[type="range"] {
   cursor: pointer;
   touch-action: none;
   writing-mode: vertical-lr;
-  /* height: 250px; */
   height: 30%;
 }
 
@@ -285,10 +290,9 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 /* slider thumb */
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
+  -webkit-appearance: none;
   appearance: none;
-  /* margin-top: -8px; */
-  background-color: #0018a4;
+  background-color: #0f2b43ff;
   border-radius: 1.5rem;
   height: 3rem;
   width: 3rem;
@@ -312,7 +316,7 @@ input[type="range"]::-moz-range-track {
 /* slider thumb */
 input[type="range"]::-moz-range-thumb {
   background-color: #0018a4;
-  border: none; /*Removes extra border that FF applies*/
+  border: none;
   border-radius: 1rem;
   height: 2rem;
   width: 2rem;
@@ -366,7 +370,7 @@ input[type="checkbox"] {
   color: currentColor;
   width: 2.3em;
   height: 2.3em;
-  border: 0.15em solid #0018a4;
+  border: 0.15em solid #0f2b43ff;
   transform: translateY(-0.075em);
   display: grid;
   place-content: center;
@@ -379,7 +383,7 @@ input[type="checkbox"]::before {
   height: 1.5em;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1.5em #0018a4;
+  box-shadow: inset 1em 1.5em #0f2b43ff;
   border-radius: 50%;
 }
 input[type="checkbox"]:checked::before {
@@ -405,7 +409,7 @@ input[type="checkbox"]:checked::before {
 
 .progressbar-progress {
   height: 100%;
-  background-color: #0018a5;
+  background-color: #1e3851ff;
   border-radius: 12px;
   transition: 0.4s ease;
 }
