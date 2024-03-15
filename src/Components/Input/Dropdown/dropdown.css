@@ -20,7 +20,6 @@
 
 .dropdown-container select::-ms-expand {
   display: none;
-  /* Hide the dropdown arrow in IE */
 }
 
 .dropdown-container select option {
@@ -36,13 +35,11 @@
 }
 
 .dropdown-container select::after {
-  /* Add a custom dropdown arrow */
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  /* Make the arrow non-clickable */
 }
 
 
@@ -56,10 +53,25 @@
   text-align: center;
 }
 
-/* Optional: Style the dropdown when an error is present */
 .error-dropdown-container select {
   border-color: red;
   background-color: #ffe6e6;
+}
+
+@media (min-width: 320px) and (max-width: 350px) {
+  .dropdown-label {
+    font-size: 10px;
+  }
+
+  .dropdown-container select {
+    font-size: 10px;
+    width: 150px;
+    height: 25px;
+  }
+
+  .error-message {
+    font-size: 10px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

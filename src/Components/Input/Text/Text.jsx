@@ -9,7 +9,6 @@ function Text({
   onChange,
   error,
 }) {
-  //this prevents you from writing a number in the input field.
   const handleKeyPress = (event) => {
     if (!/[0-9]/.test(event.key)) {
       return

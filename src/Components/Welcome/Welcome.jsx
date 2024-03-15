@@ -6,7 +6,7 @@ export default function Welcome({ onClick }) {
     <div className="welcome">
       <h1 className="welcome-title">Welcome!</h1>
       <p>We would like to know a bit about your latest trip.</p>
-      <button className="continue-button" onClick={onClick}>
+      <button className="continue-button" onClick={onClick} autoFocus>
         Continue
       </button>
     </div>

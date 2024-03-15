@@ -22,7 +22,7 @@ function Radio({ name, listOfItems, label, value, onChange, error }) {
               checked={value === group}
               className="hidden-radio"
             />
-            <span className="radio-text">{group}</span>
+            <span className="radio-text" tabIndex={0}>{group}</span>
           </label>
         ))}
       </div>

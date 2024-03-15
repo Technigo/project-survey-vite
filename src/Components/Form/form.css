@@ -1,5 +1,5 @@
 .page-container {
-  background-image: url(src/Components/Img/6345959.jpg);
+  background-image: url('/Img/6345959-min1.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 }
 
 .summary-container {
-  background-image: url(src/Components/Img/6345959.jpg);
+  background-image: url('/Img/6345959-min1.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -122,6 +122,13 @@ p {
   background-color: var(--button-hover-bg-color);
 }
 
+@media (min-width: 320px) and (max-width: 350px) {
+  .form-group {
+    max-width: 150px;
+    min-width: 150px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .form-container {
     height: 87vh;
@@ -174,6 +181,8 @@ p {
 
 
 }
+
+
 
 @media (min-width: 1025px) {
   .form-container {

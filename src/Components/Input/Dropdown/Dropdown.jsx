@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import "./dropdown.css" // Adjust the path as necessary
+import "./dropdown.css"
 
 function Dropdown({
   name,
@@ -14,14 +14,18 @@ function Dropdown({
     const selectedValue = e.target.value
     onChange(e)
     if (name === "purpose" && selectedValue === "Something else") {
-      onOptionChange(true) // Call the new onOptionChange prop
+      onOptionChange(true)
     } else {
       onOptionChange(false)
     }
   }
+
+  const labelId = `${name}-label`
+
   return (
     <div className="form-group">
       <label
+        id={labelId}
         htmlFor={name}
         className={`dropdown-label ${error ? "error-label" : ""}`}
       >
@@ -41,7 +45,12 @@ function Dropdown({
         </select>
       </div>
       {error && (
-        <div className="error-message" role="alert" aria-live="polite">
+        <div
+          className="error-message"
+          role="alert"
+          aria-live="polite"
+          aria-labelledby={labelId}
+        >
           {error}
         </div>
       )}
