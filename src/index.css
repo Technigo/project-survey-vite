@@ -107,6 +107,7 @@ body {
 form {
   display: grid;
   grid-template-rows: auto 30%;
+  /* gap: 2vh; */
   gap: 10%;
 }
 
@@ -126,7 +127,10 @@ form {
 .next-q-btn {
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-self: flex-start;
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
 }
 
 .next-q-btn button {
@@ -140,6 +144,10 @@ form {
   width: 80%;
   border: 0;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.next-q-btn .validated {
+  background-color: #0018a5;
 }
 
 /* question 1 */
@@ -165,7 +173,7 @@ form {
 
 /* question 2 */
 .question-two {
-  margin: 2.5rem auto;
+  margin: 0 auto;
   width: 60%;
 }
 
@@ -185,6 +193,7 @@ form {
   display: inline-block;
   padding: 1em 2em;
   margin: 1em;
+  height: 60px;
   cursor: pointer;
   color: #292929;
   border-radius: 0.25em;
@@ -214,41 +223,18 @@ form {
   }
 }
 
-#always-button:checked + .button-label {
+.radio-label:checked + .button-label {
   /* background: #2ecc71; */
   background-color: #0018a5;
   color: #efefef;
 }
-#always-button:checked + .button-label:hover {
+.radio-label:checked + .button-label:hover {
   /* background: #29b765; */
   background-color: #0018a5;
   color: #e2e2e2;
 }
 
-#sometimes-button:checked + .button-label {
-  /* background: #d91e18; */
-  background-color: #0018a5;
-  color: #efefef;
-}
-#sometimes-button:checked + .button-label:hover {
-  /* background: #c21b15; */
-  background-color: #0018a5;
-  color: #e2e2e2;
-}
-
-#never-button:checked + .button-label {
-  /* background: #4183d7; */
-  background-color: #0018a5;
-  color: #efefef;
-}
-#never-button:checked + .button-label:hover {
-  /* background: #2c75d2; */
-  background-color: #0018a5;
-  color: #e2e2e2;
-}
-
 .hidden {
-  /* display: none; */
   opacity: 0;
   z-index: 2;
   position: relative;
@@ -279,7 +265,8 @@ input[type="range"] {
   cursor: pointer;
   touch-action: none;
   writing-mode: vertical-lr;
-  height: 250px;
+  /* height: 250px; */
+  height: 30%;
 }
 
 /* Removes default focus */
@@ -399,6 +386,31 @@ input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 
+.progressbar-container {
+  display: flex;
+  background-color: #e2e2e2;
+  height: 20px;
+  width: 90%;
+  margin: auto;
+  border-radius: 12px;
+}
+
+.progressbar-progress {
+  height: 100%;
+  background-color: #0018a5;
+  border-radius: 12px;
+  transition: 0.4s ease;
+}
+
+.question-total {
+  position: absolute;
+  right: 1%;
+}
+
+.question-answered {
+  margin-left: 5px;
+  align-self: center;
+
 @media screen and (min-width: 768px) {
   .question-page {
     grid-template-columns: 50% auto;
@@ -429,31 +441,13 @@ input[type="checkbox"]:checked::before {
     width: max-content;
     padding: 0 20px;
   }
-=======
-/* Progress bar */
 
-.progressbar-container {
-  display: flex;
-  background-color: #e2e2e2;
-  height: 20px;
-  width: 90%;
-  margin: auto;
-  border-radius: 12px;
-}
-
-.progressbar-progress {
-  height: 100%;
-  background-color: #0018a5;
-  border-radius: 12px;
-  transition: 0.4s ease;
-}
-
-.question-total {
-  position: absolute;
-  right: 1%;
-}
-
-.question-answered {
-  margin-left: 5px;
-  align-self: center;
+  input[type="range"] {
+    writing-mode: horizontal-tb;
+    width: 70%;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    top: -15px;
+    right: 0;
+  }
 }

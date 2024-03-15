@@ -8,18 +8,12 @@ import ProgressBar from "./ProgressBar";
 
 const QuestionFrame = ({ createSummary }) => {
   const [qNum, setQNum] = useState(0);
-
-  // const handleKeyDown = e => {
-  //   if (e.key === "Enter") e.preventDefault();
-  // };
-
+  const [validated, setValidated] = useState(false);
+  // const [error, setError] = useState(false);
   // State object to store form variables
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
-    isSubscribed: false,
-    selectedOption: "option1",
     frequency: "",
     level: 0,
     waysToDeal: "",
@@ -31,22 +25,37 @@ const QuestionFrame = ({ createSummary }) => {
     const { name, value, type } = event.target;
     const newValue =
       type === "checkbox" ? [...formData.subscription, value] : value;
+    let emailValidation = false;
+    if (name === "email") {
+      console.log("name data", formData.name);
+      emailValidation =
+        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) &&
+        formData.name;
+      console.log(emailValidation);
+    } else if (name === "name") {
+      emailValidation = formData.email ? true : false;
+    } else {
+      emailValidation = true;
+    }
+
     setFormData({
-      ...formData, //spread syntax
+      ...formData,
       [name]: newValue,
     });
+    console.log("Validated:", validated);
+    setValidated(emailValidation);
   };
 
   // Event handler for form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (qNum === 4) {
+
+    if (validated && qNum === 4) {
       createSummary(formData);
-    } else {
+    } else if (validated) {
+      setValidated(false);
       setQNum(qNum + 1);
     }
-    // Process the form data here
-    // console.log("Form Data:", formData);
   };
 
   return (
@@ -60,7 +69,7 @@ const QuestionFrame = ({ createSummary }) => {
           formData={formData}
           onChange={handleInputChange}
         />
-        <NextButton qNum={qNum} />
+        <NextButton qNum={qNum} validated={validated} />
       </form>
     </div>
   );
