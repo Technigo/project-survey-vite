@@ -3,6 +3,7 @@ import { DropDown } from "./DropDown";
 import { DropDown2 } from './DropDown2'; 
 import { TextInput } from './TextInput';
 import { RadioButtons } from './RadioButtons';
+import { RangeSlider } from './RangeSlider';
 import "./SurveyForm.css";
 
 export const SurveyForm = ({setFormData, showResult}) => {
@@ -44,13 +45,12 @@ export const SurveyForm = ({setFormData, showResult}) => {
   
     return (
       <form onSubmit={handleSubmit} className="survey-form">
-        <h1>Music Survey</h1>
         <DropDown handleChange={handleGenreChange} />
         <TextInput value={selectedMusician} handleChange={handleMusicianChange} />
         <RadioButtons handleChange={handlePreferenceChange}/>
         <DropDown2 handleChange={handleDiscoveryChange} />
+        <RangeSlider />
         <button type="submit" className="button">Submit</button>
       </form>
     );
 }
-

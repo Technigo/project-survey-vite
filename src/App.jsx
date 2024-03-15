@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { StartPage } from './components/StartPage';
 import { SurveyForm } from "./components/SurveyForm";
-import "./index.css";
 import { ResultPage } from './components/ResultPage';
+import "./index.css";
+
 
 export const App = () => {
   const [surveyStarted, setSurveyStarted] = useState(false);

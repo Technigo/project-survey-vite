@@ -1,13 +1,17 @@
 import "react";
 import "./StartPage.css";
+import startPageImage from "../assets/startpage.png";
 
 import PropTypes from "prop-types";
 
 export const StartPage = ({ onStartSurvey }) => {
   return (
     <div className="start-page">
-        <p>Music Survey</p>
-      <button onClick={onStartSurvey}>Start</button>
+      <img src={startPageImage} alt="Music Survey Image" />
+      <div className="text-container">
+        <h1>Music Survey</h1>
+        <button onClick={onStartSurvey}>Let&apos;s start!</button>
+      </div>
     </div>
   );
 };

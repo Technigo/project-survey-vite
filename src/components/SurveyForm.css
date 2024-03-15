@@ -5,9 +5,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  width: 40%;
   border-radius: 25px;
-  padding: 20px;
+  padding: 2%;
 }
 
 /* Styling for survey heading */
@@ -50,3 +50,11 @@ h1 {
 .button:hover {
   background-color: blue;
 }
+
+/* Media query for screens under 940px */
+@media (max-width: 940px) {
+  .survey-form {
+    width: 70%; 
+  }
+}
+
