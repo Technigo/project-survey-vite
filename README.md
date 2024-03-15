@@ -12,3 +12,4 @@ When we ecountered problems we reviewed code from alumni, asked chatGPT, googled
 We are very happy with our result and we hope you are too!
 
 # View it live
+https://sofie-mai-break-the-ice-survey.netlify.app/
