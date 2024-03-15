@@ -21,6 +21,7 @@ code {
 body {
   display: flex;
   flex-direction: column;
+
   background-color: #d2c1b7;
 }
 
@@ -34,12 +35,13 @@ body {
   justify-content: center;
 }
 
-.QuestionForm {
-  margin: 1.25em;
+.QuestionForm,
+.elementContainer {
+  margin: 0.75em 0;
 }
 
 .question {
-  padding: 1em 0;
+  padding-bottom: 0.5em;
 }
 
 h1 {
@@ -58,13 +60,12 @@ h2 {
 
 p {
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
   color: #6a3e38;
 }
 
-textarea,
 select,
-button {
+button,
+#characterName {
   width: 100%;
   background-color: #6a3e38;
   font-family: "Montserrat", sans-serif;
@@ -114,6 +115,8 @@ label {
   padding: 2em 0;
 }
 .formContainer {
+  padding: 0 1em;
+
   display: flex;
   justify-content: center;
 }
