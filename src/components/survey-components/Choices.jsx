@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { toppings } from "./toppings.js";
+import { toppings } from "./toppings.jsx";
 import "./choices.css";
 
 export const Choices = ({ setDisplayChoices }) => {

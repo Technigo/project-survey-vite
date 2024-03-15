@@ -1,14 +1,11 @@
 import PropTypes from "prop-types";
 import { resultTexts } from "./survey-components/resulttexts";
+import { levelTexts } from "./survey-components/levelTexts";
 
-// const [text, setText] = useState("Unknown")
 const resultTitle = (choicesScore) => {
   let title = "Unkown";
   {
     resultTexts.map(({ text, score }) => {
-      console.log(choicesScore.displayChoices);
-      console.log(score);
-      console.log(text);
       if (score <= choicesScore.displayChoices) {
         title = text;
       }
@@ -17,16 +14,32 @@ const resultTitle = (choicesScore) => {
   }
 };
 
+const levelCheck = (displayLevel) => {
+  let levelText = "Unkown";
+  console.log(displayLevel.displayLevel);
+  console.log(levelText);
+  {
+    levelTexts.map(({ text, level }) => {
+      console.log(text)
+      if (level === displayLevel.displayLevel) {
+        levelText = text;
+      }
+    });
+  }
+    console.log(levelText);
+  return levelText;
+};
+
 export const Result = ({
   displayLevel,
   displayChoices,
   displayLocation,
   displayCompany,
 }) => {
-  
   return (
     <div className="result-container">
       <h2>{resultTitle({ displayChoices })}</h2>
+      <p className="result">{levelCheck({ displayLevel })}</p>
 
       <p className="result">Your level: {displayLevel}</p>
       <p className="result">Your score: {displayChoices}</p>

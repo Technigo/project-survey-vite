@@ -11,7 +11,7 @@ export const Submit = ({ showResults, setShowResults }) => {
 
   return (
     <div className="submit">
-      <input type="submit" value={showResults ? "Submit" : "Reset"} onClick={handleSubmit} accessKey="s" />
+      <input type="submit" value={showResults ? "Reset" : "Submit"} onClick={handleSubmit} accessKey="s" />
     </div>
   );
 };
