@@ -19,6 +19,7 @@
   --background-color-space: linear-gradient(to bottom, #210535, #c874b2);
   --background-color-backup: #7b337d;
   --background-color-button: #c874b2;
+  --background-color-hover: #f5d5e0;
 }
 
 body {
@@ -156,12 +157,12 @@ img {
 }
 
 button:hover {
-  background-color: #f5d5e0;
+  background-color: var(--background-color-hover);
   color: black;
 }
 
 button:active {
-  background-color: #c2c2c2;
+  background-color: var(--background-color-button);
   transition-timing-function: ease-out;
   transition: 0.5s;
 }
