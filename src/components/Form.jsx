@@ -38,11 +38,11 @@ const handleChange = (event) => {
         </label>
       </div>
 
-      <div className="question-container">
+      <div className="question-container question-two">
       <span className="count">2.</span>
       <h3>Does music make you happy?</h3>
-      <label>
-        <p>Yes, absolutely</p>
+      <label className={`radio-button ${mood === 'Yes' ? 'checked' : ''}`}>
+        Yes, absolutely
         <input
           type="radio"
           value="Yes"
@@ -51,8 +51,8 @@ const handleChange = (event) => {
           checked={mood === "Yes"}
         />
       </label>
-      <label>
-        <p>No, I like the silence</p>
+      <label className={`radio-button ${mood === 'No' ? 'checked' : ''}`}>
+        No, I like the silence
         <input
           type="radio"
           value="No"
@@ -73,10 +73,10 @@ const handleChange = (event) => {
         value={song}
         required
       >
-        <option value="">Select</option>
-        <option value="song1">First option</option>
-        <option value="song2">Second option</option>
-        <option value="song3">Third option</option>
+        <option disabled value="">Select a song</option>
+        <option value="“Happy” by Pharrell Williams">“Happy” by Pharrell Williams</option>
+        <option value="Don't Worry, Be Happy by Bobby McFerrin">"Don't Worry, Be Happy" by Bobby McFerrin</option>
+        <option value="Walking on Sunshine by Katrina and the Waves">"Walking on Sunshine" by Katrina and the Waves</option>
       </select>
     </div>
     <button type="submit">Submit your answers</button>

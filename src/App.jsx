@@ -9,6 +9,7 @@ export const App = () => {
   const [mood, setMood] = useState("");
   const [song, setSong] = useState("");
   const [showSummary, setShowSummary] = useState(false)
+  const [answer, setAnswer] = useState("")
   
 
   return (
@@ -16,7 +17,9 @@ export const App = () => {
       <Header />
       <main>
         {showSummary ?
-        <Summary value={value} mood={mood} song={song} /> :
+        <Summary value={value} mood={mood} song={song}
+        answer={answer}
+        setAnswer={setAnswer} /> :
         <Form 
         value={value}
         setValue={setValue}
