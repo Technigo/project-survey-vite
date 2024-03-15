@@ -6,7 +6,7 @@ import { RangeSlider } from './RangeSlider'
 import { SurveySummary } from './SurveySummary'
 import './SurveyForm.css'
 
-// Static data = data that does not change during the execution of a program / using any component props or state
+// Array containing static data = data that does not change during the execution of a program / using any component props or state
 // 1. Put outside component (Global scope)
 // 2. Use uppercase (STEP)
 const STEPS = [
@@ -49,9 +49,8 @@ const STEPS = [
 	},
 ]
 
-// 1. Initializing (初期化)
+//Functional component with state-hook for data
 export const SurveyForm = () => {
-	// surveyData = user's data (set up /initialized by an empty string and 50)
 	const [surveyData, setSurveyData] = useState({
 		tvShow: '',
 		harryPotter: '',
@@ -62,33 +61,22 @@ export const SurveyForm = () => {
 
 	// The initial value is quesiton no.1
 	const [currentStep, setCurrentStep] = useState(0)
-
-	// Initializes a state to keep track of whether the survey has been submitted
-	//without this there is no way to track whether the survey has been submitted
+	//Checks to see if state still is 0 or if user has submitted
 	const [submit, setSubmit] = useState(false)
 
-	// Initializes a state with the value null since there is no error message in the beggining
 	const [error, setError] = useState(null)
 
-	// 2. Updating the data
-	// current step -> STEPS's currentStep , value is surveyData's valueKey
+	//Updating data
 	const currentStepDetails = STEPS[currentStep]
 	const currentStepValue = surveyData[currentStepDetails.valueKey]
 
 	// Function to update survey data
-	// when you call any function, only POSITION matters in parameters, not names. e.g. in SelectOption.jsx
-	// key = 1st position = valueKey
-	// value = 2nd position = event.target.value
 	const updateSurveyData = (key, value) => {
-		// ... (spread syntax) = to copy existing state/data
-		// [key]: value = update the key with new value
-		// why write like ({ ...values, [key]: value }) -> key is dynamic, [] is how you write dynamic key in js rule
 		setSurveyData((values) => ({ ...values, [key]: value }))
 		// resets any error that might have occurred, returning to a state where there are no errors
 		setError(null)
 	}
 
-	// 3. "back" "next" steps
 	// When currentStep is more than 0, prevStep is (currentStep - 1)
 	const prevStep = () => {
 		if (currentStep > 0) {
@@ -104,54 +92,35 @@ export const SurveyForm = () => {
 			return
 		}
 
-		// Check user can move forward or not
+		// Conditional statement to check if user can move forward or not
 		// currentStep < STEPS.length - 1 = check user is in last step or not
 		const canMoveForward = currentStep < STEPS.length - 1
 		if (canMoveForward) {
-			// Increase 'currentStep' if it's not the last step.
 			setCurrentStep(currentStep + 1)
-			// Reset errors
 			setError(null)
 		}
 	}
 
 	// Function to mark the survey as submitted
 	const submitSurvey = () => {
-		setSubmit(true) // Set 'submit' state to true - written in line 67
+		setSubmit(true)
 	}
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
-		// prevent reloading the page when you click submit
 	}
 
 	return (
-		// A React component can only return (render) one child, so you can use a fragment (<>) to wrap multiple children
 		<>
 			{
-				// Check if the survey has been submitted using the 'submit' state.
-				submit ? (
-					// If the survey has been submitted ('submit' is true), render the SurveySummary component.
-					// Pass the 'surveyData' as props to SurveySummary, so it can display the collected data.
-					<SurveySummary surveyData={surveyData} steps={STEPS} />
-				) : (
-					// If the survey has not been submitted ('submit' is false), render the survey form.
-					<form className="form" onSubmit={handleSubmit}>
-						<div className="questions">
-							<currentStepDetails.Component
-								value={surveyData[currentStepDetails.valueKey]}
-								updateSurveyData={updateSurveyData}
-								{...currentStepDetails}
-							/>
-						</div>
-						<div className="button">
-							{currentStep > 0 && (
-								<button
-									style={{ backgroundColor: '#0018A4', color: '#ffffff' }}
-									onClick={prevStep}>
-									Back
-								</button>
-							)}
+			submit ? (<SurveySummary surveyData={surveyData} steps={STEPS} />) : (<form className="form" onSubmit={handleSubmit}>
+				<div className="questions">
+					<currentStepDetails.Component value={surveyData[currentStepDetails.valueKey]}updateSurveyData={updateSurveyData}
+					{...currentStepDetails}
+					/>
+				</div>
+				<div className="button">{currentStep > 0 && (
+					<button style={{ backgroundColor: '#0018A4', color: '#ffffff' }} onClick={prevStep}>Back</button>)}
 							{currentStep < STEPS.length - 1 ? (
 								<button
 									style={{ backgroundColor: '#0018A4', color: '#ffffff' }}

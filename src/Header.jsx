@@ -1,5 +1,6 @@
 import "./Header.css";
 
+/*Funtional component for header*/
 export const Header = () => {
   return (
     <header className="header">
