@@ -1,11 +1,10 @@
 import { companionsArray } from "./Arrays.jsx";
 
 // eslint-disable-next-line react/prop-types
-export function Companion({ value, onChange }) {
+export const Companion = ({ value, onChange }) => {
   return (
     <div className="CompanionComponent">
-      <h2 className="number">3.</h2>
-      <p className="question">Who is your main character`s companion?</p>
+      <h2 className="question">Who is your main character`s companion?</h2>
       <select value={value} onChange={(e) => onChange(e.target.value)}>
         <option value="">Select companion</option>
         {companionsArray.map((companion, index) => (
@@ -16,4 +15,4 @@ export function Companion({ value, onChange }) {
       </select>
     </div>
   );
-}
+};

@@ -37,11 +37,11 @@ export const adventuresArray = [
   {
     name: "Dreamy Drawing",
     description:
-      "inder the soft glow of starlight your canvases becomes a portal to a fantastical world. You dip your brushes into pots of liquid moonbeams and paint with color. And when the final touches are made and the last strokes of paint are applied, you step back to admire your masterpieces, knowing that you have created something truly enchanting.",
+      "under the soft glow of starlight your canvases become a portal to a fantastical world. You dip your brushes into pots of liquid moonbeams and paint with color. And when the final touches are made and the last strokes of paint are applied, you step back to admire your masterpieces, knowing that you have created something truly enchanting.",
   },
   {
     name: "Night of Stargazing",
     description:
-      "set up a cozy spot. You gaze at the stars, identify constellations and share stories about the wonders of the universe. Curious about what might be out there in outer space, you a slowly fall asleep.",
+      "set up a cozy spot. You gaze at the stars, identify constellations and share stories about the wonders of the universe. Curious about what might be out there in outer space, you slowly fall asleep.",
   },
 ];

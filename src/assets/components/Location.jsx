@@ -2,8 +2,7 @@
 export function Location({ value, onChange }) {
   return (
     <div className="ChooseLocation">
-      <h2 className="number">2.</h2>
-      <p className="question">Choose where you want to start your story?</p>
+      <h2 className="question">Choose where you want to start your story?</h2>
       <div className="RadioButtons">
         <input
           type="radio"
