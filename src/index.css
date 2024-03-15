@@ -77,7 +77,7 @@ body {
   display: grid;
   width: inherit;
   height: inherit;
-  grid-template-rows: 40% auto;
+  grid-template-rows: 40% 25px auto;
 }
 
 /* header - the direct child (1/2) of question-page */
@@ -168,6 +168,7 @@ form {
 
 .input-container > label {
   margin-bottom: 5px;
+  margin-top: 9px;
 }
 
 /* question 2 */
@@ -327,6 +328,12 @@ select {
   font-size: 25px;
   width: 70%;
   margin: 0 auto;
+  height: 70px;
+  border-radius: 0.5rem;
+  padding: 0 10px;
+  background: url(src/assets/arrow.svg) no-repeat;
+  appearance: none;
+  background-position: center right;
 }
 /* Question 5 */
 
@@ -378,6 +385,31 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
+
+.progressbar-container {
+  display: flex;
+  background-color: #e2e2e2;
+  height: 20px;
+  width: 90%;
+  margin: auto;
+  border-radius: 12px;
+}
+
+.progressbar-progress {
+  height: 100%;
+  background-color: #0018a5;
+  border-radius: 12px;
+  transition: 0.4s ease;
+}
+
+.question-total {
+  position: absolute;
+  right: 1%;
+}
+
+.question-answered {
+  margin-left: 5px;
+  align-self: center;
 
 @media screen and (min-width: 768px) {
   .question-page {
