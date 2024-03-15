@@ -24,13 +24,18 @@ export const Survey = () => {
     <>
       {showSummary ? (
         <div className="summary-container">
-          <p>Your prefered type of exercise is: {workout}</p>
-          <p>The amount of hours you exercise per week is: {hours} h</p>
           <p>
-            The music genre you like listening to whilst exercising is: {music}{" "}
-            music{" "}
+            Your prefered type of exercise is: <strong>{workout}</strong>{" "}
           </p>
-          <p> Thank you for participating!🎉</p>
+          <p>
+            The amount of hours you exercise per week is:{" "}
+            <strong>{hours} h</strong>{" "}
+          </p>
+          <p>
+            The music genre you like listening to whilst exercising is:{" "}
+            <strong>{music} music</strong>{" "}
+          </p>
+          <p id="result-text"> Thank you for participating!🎉</p>
           <button onClick={clearSurvey}>Return</button>
         </div>
       ) : (
@@ -67,7 +72,8 @@ export const Survey = () => {
           <p className="numbers">3.</p>
           <p>What music do you like listening to when exercising?</p>
           <div className="dropdown">
-            <select aria-label="State"
+            <select
+              aria-label="State"
               onChange={(event) => setMusic(event.target.value)}
               value={music}
             >

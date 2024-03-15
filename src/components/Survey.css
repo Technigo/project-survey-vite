@@ -65,6 +65,10 @@ button {
   margin: 40px;
 }
 
+#result-text {
+  font-size: 25px;
+  font-weight: 700;
+}
 .summary-container {
   text-align: center;
 }
@@ -86,7 +90,23 @@ button {
     justify-content: flex-start;
   }
 
-  input {
+  input[type="text"] {
+    width: 88%;
     float: left;
+    height: 32px;
+  }
+  form {
+    padding: 5px;
+    margin: 7px;
+  }
+  select {
+    width: 99%;
+    height: 40px;
+  }
+  button {
+    width: 99%;
+    margin: 0;
+    margin-top: 20px;
+    height: 40px;
   }
 }
