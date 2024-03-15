@@ -4,7 +4,7 @@ import { levelTexts } from "./survey-components/levelTexts";
 import { locationTexts } from "./survey-components/locationTexts";
 
 const resultTitle = (choicesScore) => {
-  let title = "Unkown";
+  let title = "";
   {
     resultTexts.map(({ text, score }) => {
       if (score <= choicesScore.displayChoices) {
@@ -16,7 +16,7 @@ const resultTitle = (choicesScore) => {
 };
 
 const levelCheck = (displayLevel) => {
-  let levelText = "Unkown";
+  let levelText = "";
   {
     levelTexts.map(({ text, level }) => {
       if (level === displayLevel.displayLevel) {
@@ -28,7 +28,7 @@ const levelCheck = (displayLevel) => {
 };
 
 const locationCheck = (displayLocation) => {
-  let locationText = "Unkown";
+  let locationText = "";
   {
     locationTexts.map(({ text, location }) => {
       console.log(text);

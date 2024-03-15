@@ -1,5 +1,5 @@
 export const locationTexts = [
-  // Result texts that get displayed when a certain level has been selected.
+  // Result texts that get displayed when a region been selected.
   {
     text: "You usually eat pizza in Africa. The second most populated region in the world. There are alot of people and a lot of different styles of pizza.",
     location: "Africa",
