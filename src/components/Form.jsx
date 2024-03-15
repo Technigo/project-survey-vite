@@ -1,20 +1,21 @@
 import "./Form.css";
 
 
-export const Form = ({ value, setValue, mood, setMood, song, setSong, setShowSummary, error, setErrorMessage }) => {
+
+export const Form = ({ value, setValue, mood, setMood, song, setSong, setShowSummary }) => {
+
+
 
   const handleSubmit = (event) => {
       event.preventDefault()
       setShowSummary(true)
     }
-const handleChange = (event) => {
-  setValue (event.target.value);
-        
-  //Om inget är ifyllt i inputfältet så visas meddelandet "Sorry but you need to add an activity"
-  if (!event.target.value) {
-  setErrorMessage("Sorry but you need to add an activity")
- }
-}
+
+
+  const handleChange = (event) => {
+
+    setValue(event.target.value);          
+  }
   
   return (
     <form className="form-container" onSubmit={handleSubmit}>
@@ -47,7 +48,7 @@ const handleChange = (event) => {
           type="radio"
           value="Yes"
           name="questionTwo"
-          onChange={event => setMood(event.target.value)}
+          onChange={event => setMood("You love music, that's lovely")}
           checked={mood === "Yes"}
         />
       </label>
@@ -57,7 +58,7 @@ const handleChange = (event) => {
           type="radio"
           value="No"
           name="questionTwo"
-          onChange={event => setMood(event.target.value)}
+          onChange={event => setMood("You don't like music? They say silence is golden.")}
           checked={mood === "No"}
         />
       </label>
