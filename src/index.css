@@ -128,6 +128,7 @@ footer {
   background: #6a3e38;
   margin-top: auto;
 }
+
 footer p {
   color: #d2c1b7;
   font-size: 0.75em;
@@ -167,5 +168,16 @@ section {
 
   footer {
     border-radius: 0 0 18px 18px;
+  }
+}
+
+/*Media Query for Tablet and Desktop*/
+@media (min-width: 481px) {
+  .formContainer {
+    min-height: calc(100vh - 150px); 
+  }
+
+  footer {
+    flex-shrink: 0;
   }
 }
