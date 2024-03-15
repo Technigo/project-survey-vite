@@ -64,14 +64,24 @@
   cursor: pointer;
   margin-top: 7px;
   font-size: 14px;
+  /*We have to check the font sizes with the design, since it doesn't match the check marks*/
 }
 
 .radio-button input[type="radio"] {
   opacity: 0;
 }
-.radio-button input[type="radio"]:checked + label:after {
-  background-color: var(--darkblue);
+
+.checkmark-icon {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+
+  /*background-image: url(assets/checkmark.svg);*/
+  /*background-size: cover;*/
 }
+/*.radio-button:checked ~ .radio-button::before {
+  background-color: var(--darkblue);
+}*/
 
 /*.radio-button input[type="radio"]:checked + label {
   background-color: #ccd1ed;

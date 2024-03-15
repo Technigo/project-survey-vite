@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { useForm, Controller } from "react-hook-form";
+import checkmarkIcon from "../assets/checkmark.svg";
 
 export const Period = ({ onInputChange }) => {
   const [period, setPeriod] = useState("");
@@ -29,7 +30,14 @@ export const Period = ({ onInputChange }) => {
           render={
             (/*{ field }*/) => (
               <>
-                <label htmlFor="weekend" className="radio-button">
+                <label
+                  htmlFor="weekend"
+                  className="radio-button"
+                  style={{
+                    backgroundColor:
+                      period === "weekend" ? "#CCD1ED" : "transparent",
+                  }}
+                >
                   <input
                     name="period-length"
                     id="weekend"
@@ -40,9 +48,21 @@ export const Period = ({ onInputChange }) => {
                     //{...field}
                     required
                   ></input>
+                  {period === "weekend" && (
+                    <span className="checkmark-icon">
+                      <img src={checkmarkIcon} alt="checkmark" />
+                    </span>
+                  )}
                   Weekend
                 </label>
-                <label htmlFor="week" className="radio-button">
+                <label
+                  htmlFor="week"
+                  className="radio-button"
+                  style={{
+                    backgroundColor:
+                      period === "week" ? "#CCD1ED" : "transparent",
+                  }}
+                >
                   <input
                     name="period-length"
                     id="week"
@@ -50,11 +70,24 @@ export const Period = ({ onInputChange }) => {
                     value="week"
                     onChange={handleChange}
                     checked={period === "week"}
+
                     //{...field}
                   ></input>
-                  Week
+                  {period === "week" && (
+                    <span className="checkmark-icon">
+                      <img src={checkmarkIcon} alt="checkmark" />
+                    </span>
+                  )}{" "}
+                  Week{" "}
                 </label>
-                <label htmlFor="two-weeks" className="radio-button">
+                <label
+                  htmlFor="two-weeks"
+                  className="radio-button"
+                  style={{
+                    backgroundColor:
+                      period === "two-weeks" ? "#CCD1ED" : "transparent",
+                  }}
+                >
                   <input
                     name="period-length"
                     id="two-weeks"
@@ -62,11 +95,24 @@ export const Period = ({ onInputChange }) => {
                     value="two-weeks"
                     onChange={handleChange}
                     checked={period === "two-weeks"}
+
                     //{...field}
                   ></input>
-                  Two weeks
+                  {period === "two-weeks" && (
+                    <span className="checkmark-icon">
+                      <img src={checkmarkIcon} alt="checkmark" />
+                    </span>
+                  )}
+                  Two weeks{" "}
                 </label>
-                <label htmlFor="month" className="radio-button">
+                <label
+                  htmlFor="month"
+                  className="radio-button"
+                  style={{
+                    backgroundColor:
+                      period === "month" ? "#CCD1ED" : "transparent",
+                  }}
+                >
                   <input
                     name="period-length"
                     id="month"
@@ -74,9 +120,15 @@ export const Period = ({ onInputChange }) => {
                     value="month"
                     onChange={handleChange}
                     checked={period === "month"}
+
                     //{...field}
                   ></input>
-                  Month
+                  {period === "month" && (
+                    <span className="checkmark-icon">
+                      <img src={checkmarkIcon} alt="checkmark" />
+                    </span>
+                  )}
+                  Month{" "}
                 </label>
               </>
             )
