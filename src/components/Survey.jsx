@@ -86,7 +86,7 @@ export const Survey = () => {
             </select>
           </div>
 
-          <button type="submit">Submit</button>
+          <button type="submit">Submit your answer</button>
         </form>
       )}
     </>
