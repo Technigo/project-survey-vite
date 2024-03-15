@@ -24,10 +24,13 @@ const QuestionFrame = ({ createSummary }) => {
     const { name, value, type } = event.target;
     const newValue =
       type === "checkbox" ? [...formData.subscription, value] : value;
-    // name === "email" && (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value))
     let emailValidation = false;
     if (name === "email") {
-      emailValidation = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value);
+      console.log("name data", formData.name);
+      emailValidation =
+        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) &&
+        formData.name;
+      console.log(emailValidation);
     } else if (name === "name") {
       emailValidation = formData.email ? true : false;
     } else {
@@ -38,7 +41,7 @@ const QuestionFrame = ({ createSummary }) => {
       ...formData,
       [name]: newValue,
     });
-    console.log(emailValidation);
+    console.log("Validated:", validated);
     setValidated(emailValidation);
   };
 
