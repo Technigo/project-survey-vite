@@ -1,5 +1,8 @@
+
 // eslint-disable-next-line react/prop-types
 export function Location({ value, onChange }) {
+
+
   return (
     <div className="ChooseLocation">
       <h2 className="question">Choose where you want to start your story?</h2>
