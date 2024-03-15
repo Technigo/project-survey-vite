@@ -4,7 +4,7 @@ import "./SurveyForm.css"
 export const SurveySummary = ({ surveyData, steps }) => {
   return (
 		<div className="summary">
-			<h2>🔥You're on fire!🔥</h2>
+			<h2>🔥Wow! You're on fire!🔥</h2>
 			<ul>
 				{steps.map((step) => (
 					<li key={step.valueKey}>

@@ -6,25 +6,16 @@
 
 # Survey Project
 
-Replace this readme with your own information about your project.
+This weeks project was to create a survey form with at least 3 questions using React. We had to have accessability in mind and our pair aimed for a lighthouse score of 100.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+# The Problem
 
-## Getting Started with the Project
+We first decided what questions we wanted to ask and then planed our working hours for the week. We combined asynchonous work and pair-programming using live-share, pop.com and working in branches.
+The design evolved during the course of time and we eventually thought it would be fun to make our "Ice-breaker-survey" for Technigo in Technigos colors and font. This was also a good way to analyze a sites elements/components/styles and to try to "follow" a design.
 
-### Dependency Installation & Startup Development Server
+When we ecountered problems we reviewed code from alumni, asked chatGPT, googled and read on stack overflow. This way we managed to complete some stretch goals even though our original plan was to only complete the basics.
 
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
-
-### The Problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We are very happy with our result and we hope you are too!
 
 ### View it live
 
