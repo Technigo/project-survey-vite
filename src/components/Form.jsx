@@ -19,7 +19,7 @@ const handleChange = (event) => {
   return (
     <form className="form-container" onSubmit={handleSubmit}>
       <div className="star"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100">
-        <path fill="#896757" d="M12 1l2.5 7.4h7.9l-6.4 4.9 2.5 7.4-6.5-4.9-6.4 4.9 2.5-7.4-6.4-4.9h7.9z"/>
+        <path fill="#d48247" d="M12 1l2.5 7.4h7.9l-6.4 4.9 2.5 7.4-6.5-4.9-6.4 4.9 2.5-7.4-6.4-4.9h7.9z"/>
         </svg>
       </div>
       <div className="form-wrapper">

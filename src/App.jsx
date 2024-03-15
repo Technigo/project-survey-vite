@@ -9,6 +9,7 @@ export const App = () => {
   const [mood, setMood] = useState("");
   const [song, setSong] = useState("");
   const [showSummary, setShowSummary] = useState(false)
+  
 
   return (
     <>
@@ -19,6 +20,8 @@ export const App = () => {
         <Form 
         value={value}
         setValue={setValue}
+        error={error}
+        setErrorMessage={setErrorMessage}
         mood={mood}
         setMood={setMood}
         song={song}
