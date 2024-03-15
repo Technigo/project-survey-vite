@@ -1,0 +1,7 @@
+/*background-styling app*/
+.wrapper {
+	background-color: var(--lightgreen);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
