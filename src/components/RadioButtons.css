@@ -6,6 +6,12 @@
   margin-bottom: 6px;
 }
 
+.radio-buttons-container p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 /* Styling for the Radiobutton answers */
 .radio-label {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

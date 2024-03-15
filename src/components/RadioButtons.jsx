@@ -21,7 +21,7 @@ const options = [
 
 export const RadioButtons = ({handleChange}) => {
   return (
-    <div>
+    <div className="radio-buttons-container">
       <p>
         Do you prefer attending live concerts or listening to music at home?
       </p>
