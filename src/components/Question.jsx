@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
 const Question = ({ formData, qNum, onChange }) => {
-  //Question 1
   return (
     <div className="question-container">
       {qNum === 0 && (
@@ -14,7 +13,6 @@ const Question = ({ formData, qNum, onChange }) => {
               type="text"
               name="name"
               value={formData.name}
-              // required
             />
           </div>
           <div className="input-container">
@@ -26,7 +24,6 @@ const Question = ({ formData, qNum, onChange }) => {
               name="email"
               placeholder="hello123@gmail.com"
               value={formData.email}
-              // required
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const NextButton = ({ qNum, validated }) => {
+const SubmitButton = ({ qNum, validated }) => {
   return (
     <div className="next-q-btn">
       <button
@@ -14,9 +14,9 @@ const NextButton = ({ qNum, validated }) => {
   );
 };
 
-NextButton.propTypes = {
+SubmitButton.propTypes = {
   qNum: PropTypes.number.isRequired,
   validated: PropTypes.bool.isRequired,
 };
 
-export default NextButton;
+export default SubmitButton;
