@@ -19,6 +19,8 @@ code {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: #d2c1b7;
 }
 
@@ -26,9 +28,9 @@ body {
   background-image: url(assets/bedtimeheader.jpg);
   background-size: cover;
   background-position: top;
-  height: 350px;
+  height: 300px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
@@ -44,7 +46,7 @@ h1 {
   color: #d2c1b7;
   font-family: "Abril Fatface", serif;
   font-size: 2.5em;
-  padding: 0 0.75em;
+  padding: 0.75em;
   text-align: center;
 }
 
@@ -57,6 +59,7 @@ h2 {
 p {
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
+  color: #6a3e38;
 }
 
 textarea,
@@ -70,6 +73,7 @@ button {
   cursor: pointer;
   border: none;
   padding: 0.25em;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .radioButton {
@@ -79,12 +83,12 @@ button {
 .submitButton {
   margin: 1em 0;
   padding: 0.25em 0;
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: 700;
   cursor: pointer;
   border: none;
   border-radius: 20px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .radioButton input {
@@ -99,4 +103,66 @@ label {
   padding-left: 0.5em;
   color: #6a3e38;
   font-size: 1em;
+}
+
+.outputContainer {
+  padding: 2em;
+  height: auto;
+}
+
+.storyContainer {
+  padding: 2em 0;
+}
+.formContainer {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em 0;
+  background: #6a3e38;
+  margin-top: auto;
+}
+footer p {
+  color: #d2c1b7;
+  font-size: 0.75em;
+}
+
+section {
+  flex: 1;
+}
+
+/*Media Query for Tablet and Desktop*/
+@media (min-width: 481px) {
+  textarea,
+  select,
+  button {
+    max-width: 481px;
+  }
+}
+
+/*Media Query for Desktop*/
+@media (min-width: 1025px) {
+  section {
+    display: flex;
+    width: 100%;
+    max-width: 1025px;
+    margin: 2em;
+    flex-direction: column;
+    border: 2px solid #6a3e38;
+    border-radius: 20px;
+  }
+  body {
+    display: flex;
+    align-items: center;
+  }
+  .header {
+    border-radius: 18px 18px 0 0;
+  }
+
+  footer {
+    border-radius: 0 0 18px 18px;
+  }
 }
