@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { Charactername } from "./Charactername.jsx";
 import { Location } from "./Location.jsx";
 import { Companion } from "./Companion.jsx";
@@ -13,39 +13,68 @@ export function Questions() {
   const [companion, setCompanion] = useState("");
   const [adventure, setAdventure] = useState("");
 
-  function handleSubmit(event) {
-    console.log("Form submitted");
+  const handleSubmit = useCallback(
+    (event) => {
+      event.preventDefault();
+      if (
+        charactername !== "" &&
+        location !== "" &&
+        companion !== "" &&
+        adventure !== ""
+      ) {
+        setSubmitted(true);
+      } else {
+        alert("Please answer all questions.");
+      }
+    },
+    [charactername, location, companion, adventure]
+  );
 
-    event.preventDefault();
-    if (
-      charactername !== "" &&
-      location !== "" &&
-      companion !== "" &&
-      adventure !== ""
-    ) {
-      setSubmitted(true);
-    } else {
-      alert("Please answer all questions.");
-    }
-  }
-
-  function makeAnotherStory() {
+  const makeAnotherStory = useCallback(() => {
     setCharactername("");
     setLocation("");
     setCompanion("");
     setAdventure("");
     setSubmitted(false);
-  }
+  }, []);
+
+  const companionsDescriptionMap = useMemo(() => {
+    return companionsArray.reduce((acc, companion) => {
+      acc[companion.name] = companion.description;
+      return acc;
+    }, {});
+  }, []);
+
+  const adventuresDescriptionMap = useMemo(() => {
+    return adventuresArray.reduce((acc, adventure) => {
+      acc[adventure.name] = adventure.description;
+      return acc;
+    }, {});
+  }, []);
 
   return (
     <div className="formContainer">
       {!submitted ? (
         <form onSubmit={handleSubmit} className="QuestionForm">
-          <Charactername value={charactername} onChange={setCharactername} />
-          <Location value={location} onChange={setLocation} />
-          <Companion value={companion} onChange={setCompanion} />
-          <Adventure value={adventure} onChange={setAdventure} />
-          <SubmitButton />
+          <Charactername
+            value={charactername}
+            onChange={setCharactername}
+            tabIndex="1"
+          />
+          <Location value={location} onChange={setLocation} tabIndex="2" />
+          <Companion
+            value={companion}
+            onChange={setCompanion}
+            tabIndex="3"
+            companionsDescriptionMap={companionsDescriptionMap}
+          />
+          <Adventure
+            value={adventure}
+            onChange={setAdventure}
+            tabIndex="4"
+            adventuresDescriptionMap={adventuresDescriptionMap}
+          />
+          <SubmitButton tabIndex="5" />
         </form>
       ) : (
         <div className="outputContainer">
@@ -59,27 +88,22 @@ export function Questions() {
             <br />
             {companion && (
               <p>
-                You will meet {companion},{" "}
-                {
-                  companionsArray.find(
-                    (companionElement) => companionElement.name === companion
-                  )?.description
-                }
+                You will meet {companion}, {companionsDescriptionMap[companion]}
               </p>
             )}
             <br />
             {adventure && (
               <p>
                 The two of you do a {adventure}.{" "}
-                {
-                  adventuresArray.find(
-                    (adventureElement) => adventureElement.name === adventure
-                  )?.description
-                }
+                {adventuresDescriptionMap[adventure]}
               </p>
             )}
           </div>
-          <button className="submitButton" onClick={makeAnotherStory}>
+          <button
+            className="submitButton"
+            onClick={makeAnotherStory}
+            tabIndex="6"
+          >
             Make another story
           </button>
         </div>
@@ -87,3 +111,4 @@ export function Questions() {
     </div>
   );
 }
+
