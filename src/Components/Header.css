@@ -1,0 +1,20 @@
+h1 {
+    background-color: #457B9D;
+    color: #F1FAEE;
+    text-align: center;
+    margin: 0;
+    padding: 25px;
+    font-family: Helvetica;
+}
+
+@media (min-width: 800px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+}

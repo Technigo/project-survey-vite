@@ -1,0 +1,21 @@
+h2 {
+    margin-top: 70px;
+    color: #1D3557;
+}
+
+p {
+    color: #1D3557;
+    font-size: 20px;
+}
+
+@media (min-width: 800px) {
+    p {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    p {
+        font-size: 30px;
+    }
+}

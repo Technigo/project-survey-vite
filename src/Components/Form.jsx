@@ -29,8 +29,10 @@ return (
             <Summary formData={formData} />
         ) : (
         <form onSubmit={handleSubmit}>
+            <div className="textQuestion">
             <label>
                 Name your favorite artist:
+                <br />
                 <input 
                 type="text"
                 name="question1"
@@ -38,10 +40,11 @@ return (
                 onChange={handleInputChange}
                 /> 
             </label>
-            <br />
+            </div>
+            <div className="radioQuestion">
             <label>
                 Do you listen to music every day?
-            <br />
+                <br />
             <input
                 type="radio"
                 name="question2"
@@ -49,8 +52,9 @@ return (
                 checked={formData.question2 === "yes"}
                 onChange={handleInputChange}
             />
-            Yes
-            <br />
+            <span className="radioButtonLabel">Yes</span>
+            </label>
+            <label>
             <input 
                 type="radio"
                 name="question2"
@@ -58,9 +62,10 @@ return (
                 checked={formData.question2 === "no"}
                 onChange={handleInputChange}
             />
-            No
+            <span className="radioButtonLabel">No</span>
             </label>
-            <br />
+            </div>
+            <div className="selectQuestion">
             <label>
                 Choose your favorite music genre:
                 <br />
@@ -69,14 +74,14 @@ return (
                 value={formData.question3}
                 onChange={handleInputChange}
              >
-                <option value="">Select an Option</option>
+                <option value="">Select an option</option>
                 <option value="Pop">Pop</option>
                 <option value="Rock">Rock</option>
                 <option value="Country">Country</option>
                 <option value="Techno">Techno</option>
                 </select>
             </label>
-            <br />
+            </div>
              <button type="submit">Submit</button>
         </form>
         )}

@@ -1,3 +1,4 @@
+import "./Summary.css"
 import PropTypes from 'prop-types';
 
 const Summary = ({ formData }) => {
