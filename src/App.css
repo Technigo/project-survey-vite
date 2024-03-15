@@ -8,11 +8,9 @@
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-  /* max-width: 100%; */
 }
 
 .counter {
-  /* height: 36px; */
   font-weight: 500;
   font-size: 24px;
   color: var(--darkblue);
@@ -25,18 +23,15 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 80px;
-  /* width: 100%; */
 }
 
 .labelQ {
   color: var(--darkblue);
-  /* height: 27px; */
   font-weight: 400;
   font-size: 18px;
 }
 
 /*Inputs styling*/
-
 .name-input,
 .destination-input,
 .radio-button,
@@ -50,6 +45,7 @@
   padding: 10px 5px;
   border-radius: 6px;
   border: 1px solid black;
+  font-size: 18px;
 }
 
 .name-input:focus::placeholder {
@@ -63,8 +59,7 @@
   border-radius: 6px;
   cursor: pointer;
   margin-top: 7px;
-  font-size: 14px;
-  /*We have to check the font sizes with the design, since it doesn't match the check marks*/
+  font-size: 18px;
 }
 
 .radio-button input[type="radio"] {
@@ -72,20 +67,10 @@
 }
 
 .checkmark-icon {
-  width: 16px;
   height: 16px;
+  width: 16px;
   margin: 0;
-
-  /*background-image: url(assets/checkmark.svg);*/
-  /*background-size: cover;*/
 }
-/*.radio-button:checked ~ .radio-button::before {
-  background-color: var(--darkblue);
-}*/
-
-/*.radio-button input[type="radio"]:checked + label {
-  background-color: #ccd1ed;
-}*/
 
 /*Summary container styling*/
 .summary-container {

@@ -1,7 +1,9 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
+
+// Component for the Summary
 
 export const Summary = ({ name, destinationType, period, budget }) => {
-  console.log("summary dest type:", destinationType)
+  console.log("summary dest type:", destinationType);
 
   return (
     <div className="summary-container">
@@ -18,12 +20,12 @@ export const Summary = ({ name, destinationType, period, budget }) => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Summary.propTypes = {
   name: PropTypes.string.isRequired,
   destinationType: PropTypes.string.isRequired,
   period: PropTypes.string.isRequired,
   budget: PropTypes.string.isRequired,
-}
+};

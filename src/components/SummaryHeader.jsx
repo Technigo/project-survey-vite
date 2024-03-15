@@ -1,4 +1,6 @@
-import "../Header.css"
+import "../Header.css";
+
+// Component for the Summary Header
 
 export const SummaryHeader = () => {
   return (
