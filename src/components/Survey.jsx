@@ -17,7 +17,8 @@ export const Survey = () => {
     setWorkout("");
     setHours("");
     setMusic("");
-    setHours(false);
+    setHours("");
+    setShowSummary(false);
   };
 
   return (
