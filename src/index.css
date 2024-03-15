@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+
+body {
+  background: linear-gradient(to bottom, #fff, #3f566e); 
+  min-height: 100vh; 
+}
+
 .test select,
 .test input[type="text"],
 .test textarea {
@@ -35,6 +41,8 @@ code {
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
+  margin: 20px auto;
+  display: block; 
 }
 
 .test button:hover {
@@ -55,7 +63,7 @@ code {
   margin-bottom: 5px;
 }
 .test h2{
-  color: #007bff;
+  color: #335375;
   font-size: 24px;
   margin-bottom: 30px;
 }
@@ -73,9 +81,17 @@ code {
 .header img {
   width: 500px; 
   height: auto; 
-  border: 2px solid #007bff; 
+  border: 2px solid #335375; 
   border-radius: 10px; 
  
+}
+
+.test input[type="radio"] {
+  margin-right: 10px; 
+}
+
+.test input[type="range"] {
+  margin-top: 20px; 
 }
 
 @media (max-width: 700px) {
