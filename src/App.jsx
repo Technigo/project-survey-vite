@@ -6,10 +6,10 @@ import { Submit } from "./components/Submit";
 import "./app.css";
 
 export const App = () => {
-  const [displayLevel, setDisplayLevel] = useState("Not chosen");
+  const [displayLevel, setDisplayLevel] = useState();
   const [displayChoices, setDisplayChoices] = useState(0);
-  const [displayLocation, setDisplayLocation] = useState("Not chosen");
-  const [displayCompany, setDisplayCompany] = useState("Not chosen");
+  const [displayLocation, setDisplayLocation] = useState();
+  const [displayCompany, setDisplayCompany] = useState();
   const [showResults, setShowResults] = useState(false);
 
   return (
@@ -30,20 +30,33 @@ export const App = () => {
         </div>
       ) : (
         <div className="main-container">
-          <Survey
-            displayLevel={displayLevel}
-            setDisplayLevel={setDisplayLevel}
-            displayChoices={displayChoices}
-            setDisplayChoices={setDisplayChoices}
-            displaylocation={displayLocation}
-            setDisplayLocation={setDisplayLocation}
-            displayCompany={displayCompany}
-            setDisplayCompany={setDisplayCompany}
-          />
+          <form>
+            <Survey
+              displayLevel={displayLevel}
+              setDisplayLevel={setDisplayLevel}
+              displayChoices={displayChoices}
+              setDisplayChoices={setDisplayChoices}
+              displaylocation={displayLocation}
+              setDisplayLocation={setDisplayLocation}
+              displayCompany={displayCompany}
+              setDisplayCompany={setDisplayCompany}
+            />
+          </form>
         </div>
       )}
       <div className="submit-container">
-        <Submit showResults={showResults} setShowResults={setShowResults} />
+        <Submit
+          showResults={showResults}
+          setShowResults={setShowResults}
+          displayLevel={displayLevel}
+          setDisplayLevel={setDisplayLevel}
+          displayChoices={displayChoices}
+          setDisplayChoices={setDisplayChoices}
+          displayLocation={displayLocation}
+          setDisplayLocation={setDisplayLocation}
+          displayCompany={displayCompany}
+          setDisplayCompany={setDisplayCompany}
+        />
       </div>
     </>
   );

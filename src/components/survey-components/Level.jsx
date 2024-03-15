@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 export const Level = ({ setDisplayLevel }) => {
-  const [selectedLevel, setLevel] = useState("Novice");
+  const [selectedLevel, setLevel] = useState();
 
   const levelSelect = (event) => {
     setLevel(event.target.value);
@@ -12,7 +12,6 @@ export const Level = ({ setDisplayLevel }) => {
   return (
     <div className="question level">
       <h3>1. Select your pizza eating level:</h3>
-      <form>
         <div className="radio-option">
           <label>
             <input
@@ -74,7 +73,6 @@ export const Level = ({ setDisplayLevel }) => {
             Italian
           </label>
         </div>
-      </form>
       <p>
         <span>You selected: {selectedLevel}</span>
       </p>

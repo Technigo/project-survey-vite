@@ -1,17 +1,49 @@
-// import { useState } from "react";
 import PropTypes from "prop-types";
 
-export const Submit = ({ showResults, setShowResults }) => {
+export const Submit = ({
+  showResults,
+  setShowResults,
+  displayLocation,
+  displayCompany,
+  displayLevel,
+  setDisplayLevel,
+  setDisplayChoices,
+  setDisplayLocation,
+  setDisplayCompany,
+}) => {
   //   const [submit, setSubmit] = useState(false);
 
   const handleSubmit = (e) => {
+    console.log("Location: ", displayLocation);
+    console.log("Level: ", displayLevel);
+    console.log("Company: ", displayCompany);
+
     e.preventDefault();
-    setShowResults(!showResults);
+    if (displayLocation === undefined) {
+      alert("Please enter your location");
+    } else if (displayCompany === undefined) {
+      alert("Please enter your company");
+    } else if (displayLevel === undefined) {
+      alert("Please enter your level");
+    } else {
+      setShowResults(!showResults);
+    }
+    if (showResults){
+      setDisplayLevel();
+      setDisplayChoices(0);
+      setDisplayLocation();
+      setDisplayCompany();
+    }
   };
 
   return (
     <div className="submit">
-      <input type="submit" value={showResults ? "Reset" : "Submit"} onClick={handleSubmit} accessKey="s" />
+      <input
+        type="submit"
+        value={showResults ? "Reset" : "Submit"}
+        onClick={handleSubmit}
+        accessKey="s"
+      />
     </div>
   );
 };
@@ -19,4 +51,11 @@ export const Submit = ({ showResults, setShowResults }) => {
 Submit.propTypes = {
   showResults: PropTypes.bool,
   setShowResults: PropTypes.func,
+  displayLevel: PropTypes.string,
+  displayLocation: PropTypes.string,
+  displayCompany: PropTypes.string,
+  setDisplayLevel: PropTypes.string,
+  setDisplayChoices: PropTypes.string,
+  setDisplayLocation: PropTypes.string,
+  setDisplayCompany: PropTypes.string,
 };
