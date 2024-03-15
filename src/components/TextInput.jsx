@@ -1,10 +1,15 @@
 import { useRef, useState } from "react";
 import "./TextInput.css";
 
-export const TextInput = () => {
+export const TextInput = ({value, handleChange}) => {
   // Create a ref to hold the input element
   // const inputRef = useRef(null);
-  const [musician, setMusician]= useState("");
+  const [musician, setMusician]= useState(value);
+
+  const onChange = (event) => {
+    setMusician(event.target.value);
+    handleChange(event);
+  };
 
   // // Function to handle input blur
   // const handleInputBlur = () => {
@@ -21,9 +26,7 @@ export const TextInput = () => {
       <input
        //  ref={inputRef} Attach the ref to the input element
         type="text"
-        onChange={event=> {
-          return setMusician(event.target.value)
-        }}
+        onChange={onChange}
         value={musician}
         name={musician}
         // id="favoriteMusician"

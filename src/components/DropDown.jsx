@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import "./DropDown.css";
 
-export const DropDown = ({handleDropdownChange}) => {
+export const DropDown = ({handleChange}) => {
 
   const dropdownRef = useRef(null);
 
@@ -15,7 +15,7 @@ export const DropDown = ({handleDropdownChange}) => {
         id="musicGenre"
         name="musicGenre"
         className="dropdown"
-        onChange={handleDropdownChange}
+        onChange={handleChange}
       >
         <option value="">Select an option</option>
         <option value="Pop">Pop</option>

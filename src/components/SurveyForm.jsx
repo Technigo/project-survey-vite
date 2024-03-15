@@ -18,21 +18,16 @@ export const SurveyForm = ({setFormData, showResult}) => {
     };
 
     const handleMusicianChange = (event) => {
-      setSelectedMusicPreference(event.target.value);
+      setSelectedMusician(event.target.value);
     };
 
     const handlePreferenceChange = (event) => {
-      setSelectedMusician(event.target.value);
+      setSelectedMusicPreference(event.target.value);
     };
 
     const handleDiscoveryChange = (event) => {
       setSelectedDiscovery(event.target.value);
     };
-
-    const handleChange = (e) => {
-      // handle form field changes
-    };
-
 
     const handleSubmit=(event)=>{
       event.preventDefault();
@@ -50,10 +45,10 @@ export const SurveyForm = ({setFormData, showResult}) => {
     return (
       <form onSubmit={handleSubmit} className="survey-form">
         <h1>Music Survey</h1>
-        <DropDown selectedValue={selectedGenre} handleDropdownChange={handleGenreChange} />
-        <TextInput />
-        <RadioButtons />
-        <DropDown2 selectedValue={selectedDiscovery} handleDropdownChange={handleDiscoveryChange} />
+        <DropDown handleChange={handleGenreChange} />
+        <TextInput value={selectedMusician} handleChange={handleMusicianChange} />
+        <RadioButtons handleChange={handlePreferenceChange}/>
+        <DropDown2 handleChange={handleDiscoveryChange} />
         <button type="submit" className="button">Submit</button>
       </form>
     );
