@@ -21,6 +21,7 @@ code {
 body {
   display: flex;
   flex-direction: column;
+
   background-color: #d2c1b7;
 }
 
@@ -34,12 +35,13 @@ body {
   justify-content: center;
 }
 
-.QuestionForm {
-  margin: 1.25em;
+.QuestionForm,
+.elementContainer {
+  margin: 0.75em 0;
 }
 
 .question {
-  padding: 1em 0;
+  padding: 0.5em 0;
 }
 
 h1 {
@@ -62,9 +64,9 @@ p {
   color: #6a3e38;
 }
 
-textarea,
 select,
-button {
+button,
+#characterName {
   width: 100%;
   background-color: #6a3e38;
   font-family: "Montserrat", sans-serif;
