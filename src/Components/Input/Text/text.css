@@ -1,0 +1,56 @@
+.text-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.text-container input[type="text"] {
+  width: 200px;
+  height: 30px;
+  font-size: 15px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  appearance: none;
+  background: #fff;
+}
+
+.text-container input[type="text"]::placeholder {
+  color: transparent;
+}
+
+.text-container input[type="text"]:not(:focus)::placeholder {
+  color: #999;
+}
+
+
+.error-input {
+  color: red;
+  border-color: red !important;
+  background-color: #ffe6e6 !important;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .text-label {
+    font-size: 20px;
+  }
+
+  .text-container input[type="text"] {
+    font-size: 20px;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .text-label {
+    font-size: 30px;
+  }
+
+  .text-container input[type="text"] {
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+  }
+
+}

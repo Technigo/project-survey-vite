@@ -1,0 +1,43 @@
+header {
+  background: linear-gradient(to right, #006100, #011d01);
+  color: #fff;
+  padding: 20px;
+}
+
+header p {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #8d8d8d,
+    1px 2px 0px #525151,
+    1px 3px 0px #000000,
+    1px 4px 0px #000000,
+    1px 5px 0px #000000,
+    1px 6px 0px #000000,
+    1px 10px 5px rgba(16, 16, 16, 0.5),
+    1px 15px 10px rgba(16, 16, 16, 0.4),
+    1px 20px 30px rgba(16, 16, 16, 0.3),
+    1px 25px 50px rgba(16, 16, 16, 0.2);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header p {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1025px) {
+  header {
+    padding: 30px;
+  }
+
+  header p {
+    font-size: 50px;
+
+  }
+}
