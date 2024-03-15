@@ -1,13 +1,18 @@
-import Form from "./Components/Form/Form"
-import Header from "./Components/Header/Header"
-import Footer from "./Components/Footer/Footer"
+// eslint-disable-next-line no-unused-vars
+import React, { Suspense, lazy } from "react"
+
+const Form = lazy(() => import("./Components/Form/Form"))
+const Header = lazy(() => import("./Components/Header/Header"))
+const Footer = lazy(() => import("./Components/Footer/Footer"))
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <Form />
-      <Footer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+        <Form />
+        <Footer />
+      </Suspense>
     </div>
   )
 }
