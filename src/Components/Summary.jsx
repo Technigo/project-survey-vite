@@ -2,16 +2,20 @@ import PropTypes from 'prop-types';
 
 const Summary = ({ formData }) => {
     return (
-        <div className="summary">
-            <h2>Summary</h2>
-            {Object.entries(formData).map(([question, answer]) => (
-                <p key={question}>
-                    You chose <strong>{answer}</strong> for the question: <em>{question}</em>.
-                </p>
-            ))}
-        </div>
+
+    <div className="summary">
+        <h2>Summary</h2>
+        <p>Your favorite artist is <strong>{formData.question1}</strong>.</p>
+        {formData.question2 === "yes" ? (
+            <p>You listen to music every day.</p>
+        ) : ( 
+            <p>You do not listen to music every day.</p>
+        )}
+        <p>Your favorite music genre is <strong>{formData.question3}</strong>.</p>
+    </div>
     );
-};
+    };
+
 
 Summary.propTypes = {
     formData: PropTypes.object.isRequired
