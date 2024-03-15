@@ -11,6 +11,7 @@ export const Location = ({ setDisplayLocation }) => {
           <h3>3. Where do you usually eat pizza?</h3>
           <select
             id="location"
+            required
             value={selectedLocation}
             onChange={(event) => {
               setSelectedLocation(event.target.value);

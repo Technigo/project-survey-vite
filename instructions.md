@@ -74,6 +74,7 @@ So you’ve completed the requirements? Great job! Ensure you've committed and p
 - Nivå av pizza-ätanade. Radio buttons                                  Check!  
 - Vem av dessa skulle du vilja äta pizza med?                           Check!
 
-- Byt plats på survey och result i ternery operatorn. Just nu syns resultatet först.
-- Lägg in validering för frågorna.
-- Bilder för vem man valt att äta middag med.
+- Byt plats på survey och result i ternery operatorn.                   CHECK!
+- Bilder för vem man valt att äta middag med.                           Check!
+
+- Lägg in validering för frågorna.              

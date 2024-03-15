@@ -55,9 +55,9 @@ const companyCheck = (displayCompany) => {
   }
   return (
     <div>
-      <p>"{companyText}"</p>
-      <p>- {displayCompany.displayCompany}</p>
       <img src={companyImg} alt={displayCompany.displayCompany} />
+      <p>{companyText}</p>
+      <p className="quote-name">- {displayCompany.displayCompany}</p>
     </div>
   );
 };
@@ -75,10 +75,10 @@ export const Result = ({
       <p className="result">{locationCheck({ displayLocation })}</p>
       <div className="result company">{companyCheck({ displayCompany })}</div>
 
-      <p className="result">Your level: {displayLevel}</p>
+      {/* <p className="result">Your level: {displayLevel}</p>
       <p className="result">Your score: {displayChoices}</p>
       <p className="result">Your location: {displayLocation}</p>
-      <p className="result">Your company: {displayCompany}</p>
+      <p className="result">Your company: {displayCompany}</p> */}
     </div>
   );
 };

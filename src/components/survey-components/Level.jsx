@@ -16,10 +16,12 @@ export const Level = ({ setDisplayLevel }) => {
         <div className="radio-option">
           <label>
             <input
+              name="level"
               type="radio"
               value="Novice"
               checked={selectedLevel === "Novice"}
               onChange={levelSelect}
+              required
             />
             Novice
           </label>
@@ -27,6 +29,7 @@ export const Level = ({ setDisplayLevel }) => {
         <div className="radio-option">
           <label>
             <input
+              name="level"
               type="radio"
               value="Intermediate"
               checked={selectedLevel === "Intermediate"}
@@ -38,6 +41,7 @@ export const Level = ({ setDisplayLevel }) => {
         <div className="radio-option">
           <label>
             <input
+              name="level"
               type="radio"
               value="Expert"
               checked={selectedLevel === "Expert"}
@@ -49,6 +53,7 @@ export const Level = ({ setDisplayLevel }) => {
         <div className="radio-option">
           <label>
             <input
+              name="level"
               type="radio"
               value="Doctoral degree in Pizza eating"
               checked={selectedLevel === "Doctoral degree in Pizza eating"}
@@ -60,6 +65,7 @@ export const Level = ({ setDisplayLevel }) => {
         <div className="radio-option">
           <label>
             <input
+              name="level"
               type="radio"
               value="Italian"
               checked={selectedLevel === "Italian"}
