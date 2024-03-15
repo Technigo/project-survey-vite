@@ -17,7 +17,7 @@ export const Activity = ({ formError, onChange }) => {
         id="activities-dropdown"
         onChange={handleSelectActivity}
       >
-        <option value="select">Choose an activity</option>
+        <option value="default">Choose an activity</option>
         <option value="hiking">Hiking</option>
         <option value="skiing">Skiing</option>
         <option value="canoeing">Canoeing</option>

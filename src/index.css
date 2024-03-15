@@ -8,6 +8,7 @@
   --green: #0c695d;
   --light-green: #d3edee;
   --red: #dc3220;
+  --blue: #4b5ea6;
 }
 
 code {
@@ -19,6 +20,10 @@ code {
   margin: 0;
   padding: 0;
   font-family: "Poppins";
+}
+
+*:focus {
+  outline: 2px var(--blue) solid;
 }
 
 h2 {
@@ -93,10 +98,6 @@ button {
 button:hover {
   background-color: var(--green);
   color: white;
-}
-
-button:focus {
-  border: 2px solid var(--blue);
 }
 
 .form-flex {

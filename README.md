@@ -4,31 +4,19 @@
   </a>
 </h1>
 
-# Survey Project
+# Adventure in the Wild
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+The task was to create a Typeform-like survey using React. The survey is for an outdoor activity company where the user can choose what activity they want to sign up for.
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I first looked at the design file provided and based the survey upon that. After writing out all the parts in the same file, I started breaking out different sections into their own compartments. A lot of time was spent on getting the validation system to work.
+
+If I had more time I would have worked more on the styling and tried out more of the stretch goals.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://ornate-basbousa-d697b8.netlify.app
 
 ## Instructions
 

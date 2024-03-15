@@ -8,7 +8,7 @@ import { Summary } from "./Summary";
 // Object for the form input info
 export const Form = () => {
   const [formData, setFormData] = useState({
-    selectedOption: "select",
+    selectedOption: "default",
     selectedLevel: "",
     specialRequirements: "",
     emailValue: "",
@@ -40,7 +40,7 @@ export const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     let errors = { ...formErrors };
-    if (formData.selectedOption.trim() === "select") {
+    if (formData.selectedOption.trim() === "default") {
       errors.selectedOption = "Please select an activity.";
     } else if (formData.selectedLevel.trim() === "") {
       errors.selectedLevel = "Please select your level.";
