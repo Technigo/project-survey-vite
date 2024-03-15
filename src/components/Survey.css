@@ -3,13 +3,11 @@
 }
 
 select {
-  /*appearance: none;*/
   font-size: 1.15rem;
   padding: 0.1em 4em 0.2em 2em;
   background-color: white;
   border-radius: 0.25rem;
   height: 40px;
-
 }
 
 .header-container {
@@ -33,6 +31,14 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 21px;
+  margin: 5px;
+}
+
+input[type="radio"] {
+  border: 0px;
+  width: 1%;
+  height: 2em;
 }
 
 h1 {
@@ -40,12 +46,17 @@ h1 {
 }
 
 p {
-  font-size: 19px;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.questions {
+  font-size: 22px;
 }
 
 .numbers {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 25px;
   margin-top: 80px;
 }
 
@@ -57,29 +68,26 @@ input[type="text"] {
   background-color: white;
   border-radius: 0.25rem;
   height: 32px;
-  border-width:1px;
-
-
+  border-width: 1px;
 }
 
 button {
-  background-color: #C2C2C2;
-  ;
+  background-color: #0018a4;
   border-radius: 0.25rem;
   color: white;
   font-size: 1rem;
   padding: 10px;
   margin: 40px;
   border-color: black;
-  border-width:1px;
+  border-width: 1px;
 }
 
 button:active {
-  background-color:#0018a4;
+  background-color: #727274;
 }
 
-button:hover{
-  background-color:#0018a4;
+button:hover {
+  background-color: #727274;
 }
 
 #result-text {
@@ -88,16 +96,14 @@ button:hover{
 }
 .summary-container {
   text-align: center;
-  
 }
 
-@media screen and (max-width: 668px) {
+@media (min-width: 320px) and (max-width: 668px) {
   form {
+    width: auto;
     text-align: left;
   }
-}
 
-@media (max-width: 668px) {
   .dropdown {
     display: flex;
     justify-content: flex-start;
@@ -109,22 +115,35 @@ button:hover{
   }
 
   input[type="text"] {
-    width: 88%;
+    width: 93%;
     float: left;
     height: 32px;
+    margin-bottom: 90px;
+  }
+
+  input[type="radio"] {
+    border: 0px;
+    width: 5%;
+    height: 2em;
   }
   form {
     padding: 5px;
     margin: 7px;
   }
   select {
-    width: 99%;
+    width: 90%;
     height: 40px;
   }
   button {
-    width: 99%;
+    width: 106%;
     margin: 0;
     margin-top: 20px;
-    height: 40px;
+    height: 43px;
+  }
+  .header-container {
+    width: 90%;
+  }
+  p {
+    width: 95%;
   }
 }

@@ -37,13 +37,13 @@ export const Survey = () => {
             <strong>{music} music</strong>{" "}
           </p>
           <p id="result-text"> Thank you for participating!🎉</p>
-          <button onClick={clearSurvey}>Return</button>
+          <button onClick={clearSurvey}>Return to survey</button>
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
           <p className="numbers">1.</p>
           <div className="survey-container">
-            <p>
+            <p className="questions">
               What kind of exercise do you enjoy the most? (ex. running,
               swimming..)
             </p>
@@ -57,7 +57,9 @@ export const Survey = () => {
           </div>
 
           <p className="numbers">2.</p>
-          <p>How many hours/week do you spend exercising?</p>
+          <p className="questions">
+            How many hours/week do you spend exercising?
+          </p>
           {hourGroups.map((group) => (
             <label key={group}>
               <input
@@ -71,7 +73,9 @@ export const Survey = () => {
           ))}
 
           <p className="numbers">3.</p>
-          <p>What music do you like listening to when exercising?</p>
+          <p className="questions">
+            What music do you like listening to when exercising?
+          </p>
           <div className="dropdown">
             <select
               aria-label="State"
