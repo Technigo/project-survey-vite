@@ -419,6 +419,25 @@ input[type="checkbox"]:checked::before {
   margin-left: 5px;
 }
 
+.error-msg-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  bottom: 8%;
+  width: 100%;
+}
+
+.error-msg {
+  color: #f8f2f2;
+  background-color: rgb(221, 93, 93, 0.9);
+  height: fit-content;
+  width: 70%;
+  padding: 10px 20px;
+  border-radius: 12px;
+  align-self: center;
+}
+
 @media screen and (min-width: 768px) {
   .question-page {
     grid-template-columns: 50% auto;
@@ -447,5 +466,10 @@ input[type="checkbox"]:checked::before {
   input[type="range"]::-webkit-slider-thumb {
     top: -15px;
     right: 0;
+  }
+
+  .error-msg-container {
+    position: relative;
+    text-align: center;
   }
 }

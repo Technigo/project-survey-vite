@@ -9,8 +9,8 @@ import ProgressBar from "./ProgressBar";
 const QuestionFrame = ({ createSummary }) => {
   const [qNum, setQNum] = useState(0);
   const [validated, setValidated] = useState(false);
-  // const [error, setError] = useState(false);
-  // State object to store form variables
+  const [errorMsg, setErrorMsg] = useState("");
+  const [showError, setShowError] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,27 +22,43 @@ const QuestionFrame = ({ createSummary }) => {
 
   // Event handler for form input changes
   const handleInputChange = event => {
-    const { name, value, type } = event.target;
+    setShowError(false);
+    const { name, value, type, checked } = event.target;
     const newValue =
-      type === "checkbox" ? [...formData.subscription, value] : value;
+      type === "checkbox" && checked
+        ? [...formData.subscription, value]
+        : type === "checkbox" && !checked
+        ? //remove unselected option from the subscription list
+          [...formData.subscription].filter(activity => activity !== value)
+        : value;
     let validation = false;
-    if (name === "email") {
-      if (formData.name) {
-        validation = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value);
+    console.log(newValue);
+    // the value is not "" or []
+    if (newValue.length > 0) {
+      if (name === "email") {
+        if (formData.name) {
+          validation = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value);
+          setErrorMsg("Email is invalid.");
+        } else {
+          validation = false;
+          setErrorMsg("Name is empty.");
+        }
+      } else if (name === "name") {
+        validation = formData.email ? true : false;
+        setErrorMsg("Email is empty.");
       } else {
-        validation = false;
+        validation = true;
+        setErrorMsg("");
       }
-    } else if (name === "name") {
-      validation = formData.email ? true : false;
     } else {
-      validation = true;
+      validation = false;
+      setErrorMsg(`You need to choose or type ${name}.`);
     }
 
     setFormData({
       ...formData,
       [name]: newValue,
     });
-    console.log("Validated:", validated);
     setValidated(validation);
   };
 
@@ -53,8 +69,12 @@ const QuestionFrame = ({ createSummary }) => {
     if (validated && qNum === 4) {
       createSummary(formData);
     } else if (validated) {
+      setErrorMsg("");
       setValidated(false);
       setQNum(qNum + 1);
+    } else {
+      !errorMsg && setErrorMsg(`Please take action on the form.`);
+      setShowError(true);
     }
   };
 
@@ -69,6 +89,11 @@ const QuestionFrame = ({ createSummary }) => {
           formData={formData}
           onChange={handleInputChange}
         />
+        {showError && (
+          <div className="error-msg-container">
+            <p className="error-msg">{errorMsg}</p>
+          </div>
+        )}
         <NextButton qNum={qNum} validated={validated} />
       </form>
     </div>
