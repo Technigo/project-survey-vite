@@ -12,7 +12,6 @@ code {
     monospace;
 }
 
-
 body {
   background: linear-gradient(to bottom, #fff, #3f566e); 
   min-height: 100vh; 
@@ -98,11 +97,17 @@ body {
   .header img {
     width:250px; 
   }
+  .test{
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 320px) {
   .header img {
     width:100px; 
+  }
+  .test{
+    font-size: 12px;
   }
 }
 
