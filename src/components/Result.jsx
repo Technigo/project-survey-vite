@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { resultTexts } from "./survey-components/resulttexts";
 import { levelTexts } from "./survey-components/levelTexts";
 import { locationTexts } from "./survey-components/locationTexts";
+import { companyTexts } from "./survey-components/companyTexts";
 
 const resultTitle = (choicesScore) => {
   let title = "";
@@ -40,6 +41,27 @@ const locationCheck = (displayLocation) => {
   return locationText;
 };
 
+const companyCheck = (displayCompany) => {
+  let companyText = "";
+  let companyImg = "";
+  {
+    companyTexts.map(({ text, company, img }) => {
+      console.log(text);
+      if (company === displayCompany.displayCompany) {
+        companyText = text;
+        companyImg = img;
+      }
+    });
+  }
+  return (
+    <div>
+      <p>"{companyText}"</p>
+      <p>- {displayCompany.displayCompany}</p>
+      <img src={companyImg} alt={displayCompany.displayCompany} />
+    </div>
+  );
+};
+
 export const Result = ({
   displayLevel,
   displayChoices,
@@ -51,6 +73,7 @@ export const Result = ({
       <h2>{resultTitle({ displayChoices })}</h2>
       <p className="result">{levelCheck({ displayLevel })}</p>
       <p className="result">{locationCheck({ displayLocation })}</p>
+      <div className="result company">{companyCheck({ displayCompany })}</div>
 
       <p className="result">Your level: {displayLevel}</p>
       <p className="result">Your score: {displayChoices}</p>
