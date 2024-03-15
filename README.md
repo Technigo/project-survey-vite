@@ -2,7 +2,7 @@
 
 # Survey Project
 
-This week we had to create a form with react.
+This week we had to create a form with react state and form control. Also to make the site with high acceibility.
 
 ### The Problem
 
