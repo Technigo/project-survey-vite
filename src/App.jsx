@@ -64,7 +64,7 @@ export const App = () => {
       <header>
         {submitted ? (
           <>
-            <h1>Here's your galaxy story</h1>
+            <h1>Here is your galaxy story</h1>
             <h2>Happy reading</h2>
           </>
         ) : (
