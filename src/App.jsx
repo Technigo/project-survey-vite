@@ -1,4 +1,5 @@
 import { useState } from "react";
+import spaceShipSvg from "./assets/space-ship.svg";
 
 export const App = () => {
   const [animal, setAnimal] = useState("");
@@ -63,8 +64,8 @@ export const App = () => {
       <header>
         {submitted ? (
           <>
-            <h1>Your results</h1>
-            <h2>hope you enjoy</h2>
+            <h1>Here's your galaxy story</h1>
+            <h2>Happy reading</h2>
           </>
         ) : (
           <>
@@ -137,6 +138,7 @@ export const App = () => {
       {submitted && (
         <>
           {" "}
+          <img src={spaceShipSvg} alt="space ship icon" />
           {/* Text to show when submitted */}
           <p className="summary-text">
             Once upon a time, there was an alien - you. You were colored {color}{" "}

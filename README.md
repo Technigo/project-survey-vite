@@ -1,37 +1,15 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/survey.svg" alt="Project Banner Image">
-  </a>
-</h1>
-
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+We wanted to make a form with three different questions using three different ways of input. When submitting the form the user is presented with a short story created based on the users answers.
 
 ### The Problem
 
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
+This project is built using React and styled with CSS. We made a form with a text input, a dropdown and radio buttons. The inputs are passed and used in an summary answer. For this project we also worked with accessibility and the goal was to make the form easy to use even for people with dissabilities.
+
+Next step would be to dig deeper into how to style the dropdown and the radio buttons using CSS.
+
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+https://galaxy-story.netlify.app/
