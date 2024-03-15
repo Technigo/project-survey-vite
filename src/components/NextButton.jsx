@@ -4,7 +4,7 @@ const NextButton = ({ qNum, validated }) => {
   return (
     <div className="next-q-btn">
       <button
-        className={validated && "validated"}
+        className={validated ? "validated" : null}
         aria-label={qNum === 4 ? "Submit your answer" : "go to next question"}
         type="submit"
       >
