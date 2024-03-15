@@ -67,7 +67,7 @@ export const Survey = () => {
           <p className="numbers">3.</p>
           <p>What music do you like listening to when exercising?</p>
           <div className="dropdown">
-            <select
+            <select aria-label="State"
               onChange={(event) => setMusic(event.target.value)}
               value={music}
             >
