@@ -117,6 +117,12 @@ h2 {
   justify-content: space-between;
   align-items: center;
   /* margin-top: 10px; */
+  accent-color: var(--background-color-backup);
+}
+
+.input-radio-button input:hover {
+  border: 1px solid var(--background-color-button);
+  box-shadow: 0 0 3px 3px #f5d5e0;
 }
 
 .submit-button {
