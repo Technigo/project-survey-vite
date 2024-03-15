@@ -2,6 +2,7 @@ import { companionsArray } from "./Arrays.jsx";
 
 // eslint-disable-next-line react/prop-types
 export function Companion({ value, onChange }) {
+
   return (
     <div className="CompanionComponent">
       <h2 className="number">3.</h2>

@@ -1,5 +1,8 @@
+
 // eslint-disable-next-line react/prop-types
 export function Location({ value, onChange }) {
+
+
   return (
     <div className="ChooseLocation">
       <h2 className="number">2.</h2>
