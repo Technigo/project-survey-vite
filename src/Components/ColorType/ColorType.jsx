@@ -10,28 +10,32 @@ export const ColorType = ({ question, handleChange }) => {
   };
 
   return (
-    <section className={`input-section ${question.id}`}>
-      <label htmlFor={question.id}>{question.questionText}</label>
-      <input
-        type="color"
-        id={question.id}
-        name={question.id}
-        value={selectedColor}
-        onChange={handleColorChange}
-      />
-      {selectedColor && (
-        <>
-          <p>Your selection:</p>
-          <div
-            className="color-display"
-            style={{
-              backgroundColor: selectedColor,
-              width: "30px",
-              height: "30px",
-            }}
-          ></div>
-        </>
-      )}
+    <section className="input-section">
+      <label className="question-area" htmlFor={question.id}>
+        {question.questionText}
+      </label>
+      <div className="option-area">
+        <input
+          type="color"
+          id={question.id}
+          name={question.id}
+          value={selectedColor}
+          onChange={handleColorChange}
+        />
+        {selectedColor && (
+          <>
+            <p>Your selection:</p>
+            <div
+              className="color-display"
+              style={{
+                backgroundColor: selectedColor,
+                width: "30px",
+                height: "30px",
+              }}
+            ></div>
+          </>
+        )}
+      </div>
     </section>
   );
 };

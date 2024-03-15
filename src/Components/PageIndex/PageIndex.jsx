@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./PageIndex.css";
 import data from "../../Data/questionList.json";
 import { StartPage } from "../index";
 import { InputSection } from "../index";

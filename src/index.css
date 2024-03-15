@@ -4,7 +4,10 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --main-color: #f0ebe8;
+  --main-color: #240f04;
+  --option-background-color: #faf4f1;
+  --question-background-color: #b2d1ad;
+  --button-shadow-color: #7eb377;
 }
 
 code {
@@ -19,10 +22,42 @@ code {
 }
 
 body {
-  background-color: var(--main-color);
+  background-color: var(--sub-color);
+  color: var(--main-color);
 }
 
 main {
-  border: red 1px solid;
   height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+.input-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  height: 100%;
+}
+
+.question-area,
+.option-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-area {
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: 500;
+  background-color: var(--question-background-color);
+  text-align: center;
+  padding: 100px;
+}
+
+.question-area p {
+  text-align: center;
 }

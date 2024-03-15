@@ -1,0 +1,21 @@
+.previous-btn,
+.next-btn,
+.submit-btn {
+  position: absolute;
+}
+
+.next-btn,
+.submit-btn {
+  right: 200px;
+  bottom: 50px;
+}
+
+.previous-btn {
+  left: 200px;
+  bottom: 50px;
+}
+
+.button-section p {
+  font-size: 2rem;
+  font-weight: 800;
+}

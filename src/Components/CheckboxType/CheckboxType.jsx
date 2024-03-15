@@ -1,8 +1,11 @@
 export const CheckboxType = ({ question, handleChecked, handleUncheck }) => {
   return (
-    <fieldset className={`input-section ${question.id}`}>
-      <legend>{question.questionText}</legend>
-      <div className="option-secton">
+    <section className="input-section">
+      <div className="question-area">
+        <p>{question.questionText}</p>
+      </div>
+
+      <div className="option-area">
         {question.options.map((option) => (
           <div key={option.id} className="each-option">
             <input
@@ -22,6 +25,6 @@ export const CheckboxType = ({ question, handleChecked, handleUncheck }) => {
           </div>
         ))}
       </div>
-    </fieldset>
+    </section>
   );
 };

@@ -1,9 +1,12 @@
 export const RadioType = ({ index, question, handleChange, handleVisitor }) => {
   if (index === 5) {
     return (
-      <fieldset className={`input-section ${question.id}`}>
-        <legend>{question.questionText}</legend>
-        <div className="option-secton">
+      <fieldset className="input-section">
+        <div className="question-area">
+          <legend>{question.questionText}</legend>
+        </div>
+
+        <div className="option-area">
           {question.options.map((option) => (
             <div key={option.id} className="each-option">
               <input
@@ -21,9 +24,11 @@ export const RadioType = ({ index, question, handleChange, handleVisitor }) => {
     );
   } else {
     return (
-      <fieldset className={`input-section ${question.id}`}>
-        <legend>{question.questionText}</legend>
-        <div className="option-secton">
+      <fieldset className="input-section">
+        <div className="question-area">
+          <legend>{question.questionText}</legend>
+        </div>
+        <div className="option-area">
           {question.options.map((option) => (
             <div key={option.id} className="each-option">
               <input

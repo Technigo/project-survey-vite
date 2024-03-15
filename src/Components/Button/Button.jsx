@@ -1,3 +1,5 @@
+import "./Button.css";
+
 export const Button = ({
   handleNextQuestion,
   handlePreviousQuestion,
@@ -8,7 +10,7 @@ export const Button = ({
   const removLastQuestion = lastQuesionIndex - 1;
 
   return (
-    <section className="button-section">
+    <section>
       {isStranger ? (
         <>
           {currentQuestionIndex > lastQuesionIndex && (
@@ -23,20 +25,30 @@ export const Button = ({
 
           {currentQuestionIndex > 0 &&
             currentQuestionIndex <= lastQuesionIndex + 1 && (
-              <button type="button" onClick={handlePreviousQuestion}>
+              <button
+                className="previous-btn"
+                type="button"
+                onClick={handlePreviousQuestion}
+              >
                 Previous
               </button>
             )}
 
           {currentQuestionIndex <= lastQuesionIndex && (
-            <button type="button" onClick={handleNextQuestion}>
+            <button
+              className="next-btn"
+              type="button"
+              onClick={handleNextQuestion}
+            >
               Next
             </button>
           )}
 
           {currentQuestionIndex > lastQuesionIndex && (
             <>
-              <button type="submit">Submit</button>
+              <button className="submit-btn" type="submit">
+                Submit
+              </button>
             </>
           )}
         </>
@@ -54,20 +66,30 @@ export const Button = ({
 
           {currentQuestionIndex > 0 &&
             currentQuestionIndex <= removLastQuestion + 1 && (
-              <button type="button" onClick={handlePreviousQuestion}>
+              <button
+                className="previous-btn"
+                type="button"
+                onClick={handlePreviousQuestion}
+              >
                 Previous
               </button>
             )}
 
           {currentQuestionIndex <= removLastQuestion && (
-            <button type="button" onClick={handleNextQuestion}>
+            <button
+              className="next-btn"
+              type="button"
+              onClick={handleNextQuestion}
+            >
               Next
             </button>
           )}
 
           {currentQuestionIndex > removLastQuestion && (
             <>
-              <button type="submit">Submit</button>
+              <button className="submit-btn" type="submit">
+                Submit
+              </button>
             </>
           )}
         </>
