@@ -7,8 +7,7 @@ import { adventuresArray } from "./Arrays";
 export function Adventure({ value, onChange }) {
   return (
     <div className="AdventureComponent">
-      <h2 className="number">4.</h2>
-      <p className="question">What`s the pair`s favourite adventure?</p>
+      <h2 className="question">What`s the pair`s favourite adventure?</h2>
       <select value={value} onChange={(e) => onChange(e.target.value)}>
         <option value="">Select adventure</option>
         {adventuresArray.map((adventureItem, index) => (
