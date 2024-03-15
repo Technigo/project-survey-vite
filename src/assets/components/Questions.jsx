@@ -40,14 +40,12 @@ export function Questions() {
   return (
     <div>
       {!submitted ? (
-
         <form onSubmit={handleSubmit} className="QuestionForm">
           <Charactername value={charactername} onChange={setCharactername} />
           <Location value={location} onChange={setLocation} />
           <Companion value={companion} onChange={setCompanion} />
           <Adventure value={adventure} onChange={setAdventure} />
           <SubmitButton onClick={() => setSubmitted(true)} />
-
         </form>
       ) : (
         <div>

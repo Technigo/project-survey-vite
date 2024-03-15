@@ -1,10 +1,7 @@
 import { companionsArray } from "./Arrays.jsx";
 
 // eslint-disable-next-line react/prop-types
-
 export const Companion = ({ value, onChange }) => {
-
-
   return (
     <div className="CompanionComponent">
       <h2 className="question">Who is your main character`s companion?</h2>

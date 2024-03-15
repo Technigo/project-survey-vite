@@ -1,12 +1,10 @@
-
 // eslint-disable-next-line react/prop-types
 export function Location({ value, onChange }) {
-
-
   return (
-    <div className="ChooseLocation">
+    <div className="chooseLocation">
       <h2 className="question">Choose where you want to start your story?</h2>
-      <div className="RadioButtons">
+
+      <div className="radioButton">
         <input
           type="radio"
           name="location"
@@ -16,6 +14,8 @@ export function Location({ value, onChange }) {
           className="radio"
         />
         <label>Forest</label>
+      </div>
+      <div className="radioButton">
         <input
           type="radio"
           name="location"
@@ -25,6 +25,9 @@ export function Location({ value, onChange }) {
           className="radio"
         />
         <label>A far far away kingdom</label>
+      </div>
+
+      <div className="radioButton">
         <input
           type="radio"
           name="location"
