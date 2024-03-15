@@ -30,7 +30,7 @@ body {
   font-family: "Poppins", sans-serif;
   max-width: 100vw;
   min-height: 100vh;
-  background-image: url("./chuttersnap-hJNNvvHo3zw-unsplash.jpg");
+  background-image: url("/chuttersnap-hJNNvvHo3zw-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
