@@ -1,4 +1,4 @@
-import headerImage from '../../public/assets/header1.jpg'
+import headerImage from '../components/survey-components/assets/header1.jpg'
 import './header.css'
 
 export const Header = () => {
