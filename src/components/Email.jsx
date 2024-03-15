@@ -1,10 +1,5 @@
-import { useState } from "react";
-
 export const Email = ({ formError, onChange }) => {
-  const [email, setEmail] = useState("");
-
   const handleEmailInput = (event) => {
-    setEmail(event.target.value);
     onChange(event.target.value);
   };
 
@@ -20,10 +15,9 @@ export const Email = ({ formError, onChange }) => {
       <input
         type="email"
         placeholder="your.email@email.com"
-        value={email}
         onChange={handleEmailInput}
       />
-      <p className="error-message">{formError}</p>
+      <span className="error-message">{formError}</span>
     </fieldset>
   );
 };

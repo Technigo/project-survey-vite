@@ -1,10 +1,5 @@
-import { useState } from "react";
-
 export const Level = ({ formError, onChange }) => {
-  const [level, setLevel] = useState("");
-
   const handleLevel = (event) => {
-    setLevel(event.target.value);
     onChange(event.target.value);
   };
   return (
@@ -15,44 +10,41 @@ export const Level = ({ formError, onChange }) => {
       </legend>
 
       <label htmlFor="beginner">
-        Beginner
         <input
           type="radio"
           className="radio"
           id="beginner"
           value="Beginner"
           name="level"
-          checked={level === "Beginner"}
           onChange={handleLevel}
         />
+        <span>Beginner</span>
       </label>
 
       <label htmlFor="intermediate">
-        Intermediate
         <input
           type="radio"
           className="radio"
           id="intermediate"
           value="Intermediate"
           name="level"
-          checked={level === "Intermediate"}
           onChange={handleLevel}
         />
+        <span>Intermediate</span>
       </label>
 
       <label htmlFor="advanced">
-        Advanced
         <input
           type="radio"
           className="radio"
           id="advanced"
           value="Advanced"
           name="level"
-          checked={level === "Advanced"}
           onChange={handleLevel}
         />
+        <span>Advanced</span>
       </label>
-      <p className="error-message">{formError}</p>
+      <span className="error-message">{formError}</span>
     </fieldset>
   );
 };

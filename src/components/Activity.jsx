@@ -1,10 +1,5 @@
-import { useState } from "react";
-
 export const Activity = ({ formError, onChange }) => {
-  const [activity, setActivity] = useState("");
-
   const handleSelectActivity = (event) => {
-    setActivity(event.target.value);
     onChange(event.target.value);
   };
 
@@ -27,7 +22,7 @@ export const Activity = ({ formError, onChange }) => {
         <option value="skiing">Skiing</option>
         <option value="canoeing">Canoeing</option>
       </select>
-      <p className="error-message">{formError}</p>
+      <span className="error-message">{formError}</span>
     </fieldset>
   );
 };

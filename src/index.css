@@ -5,7 +5,8 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --blue: #0018a4;
+  --green: #0c695d;
+  --light-green: #d3edee;
   --red: #dc3220;
 }
 
@@ -21,11 +22,12 @@ code {
 }
 
 h2 {
-  font-weight: 300;
+  font-weight: 900;
 }
 
-h4 {
+h3 {
   font-weight: 100;
+  font-size: 16px;
 }
 
 select,
@@ -46,29 +48,42 @@ header {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: var(--blue);
+  background-image: url(../public/forest.jpg);
+  background-color: var(--green);
   color: white;
   height: 150px;
   gap: 0.5rem;
 }
 
 legend {
-  color: var(--blue);
+  color: var(--green);
   width: 100%;
   padding: 0 0 30px 0;
+}
+
+hr {
+  margin: 3px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 fieldset {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border: none;
+  border-image: linear-gradient(to left, #565656, #d3edee) 5 0;
+  padding-bottom: 20px;
 }
 
 button {
   padding: 10px;
-  background-color: grey;
-  color: white;
+  background-color: var(--light-green);
   border-radius: 5px;
   outline: none;
   cursor: pointer;
@@ -76,11 +91,12 @@ button {
 }
 
 button:hover {
-  background-color: var(--blue);
+  background-color: var(--green);
+  color: white;
 }
 
 button:focus {
-  border: orange;
+  border: 2px solid var(--blue);
 }
 
 .form-flex {
@@ -94,18 +110,40 @@ button:focus {
   display: flex;
   flex-direction: row;
   justify-content: left;
+  gap: 1rem;
+}
+
+.radio-field label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .error-message {
   color: var(--red);
-  margin: 5px;
-  padding: 5px;
+  margin: 0x;
+  padding-top: 5px;
   text-align: left;
   width: 100%;
 }
 
+.selected {
+  font-weight: 900;
+  padding-right: 5px;
+}
+
 #summary {
+  background-color: var(--light-green);
+  margin-top: 50px;
   padding: 40px;
+  box-shadow: inset #27647b 0 0 0 5px, inset #849fad 0 0 0 1px,
+    inset #307c82 0 0 0 10px, inset #307c80 0 0 0 11px, inset #76cccd 0 0 0 16px,
+    inset #76cccc 0 0 0 17px, inset #e5f9f7 0 0 0 21px, inset #bfecf7 0 0 0 22px;
+}
+
+#summary h4,
+p {
+  padding: 2px;
 }
 
 .hidden {
@@ -125,6 +163,10 @@ button:focus {
 
 /***** Tablet and Desktop *****/
 @media (min-width: 768px) {
+  header {
+    height: 300px;
+  }
+
   legend {
     text-align: center;
   }
