@@ -112,39 +112,45 @@ export const SurveyForm = () => {
 
 	return (
 		<>
-			{
-			submit ? (<SurveySummary surveyData={surveyData} steps={STEPS} />) : (<form className="form" onSubmit={handleSubmit}>
-				<div className="questions">
-					<currentStepDetails.Component value={surveyData[currentStepDetails.valueKey]}updateSurveyData={updateSurveyData}
-					{...currentStepDetails}
-					/>
-				</div>
-				<div className="button">{currentStep > 0 && (
-					<button style={{ backgroundColor: '#0018A4', color: '#ffffff' }} onClick={prevStep}>Back</button>)}
-							{currentStep < STEPS.length - 1 ? (
-								<button
-									style={{ backgroundColor: '#0018A4', color: '#ffffff' }}
-									onClick={nextStep}>
-									Continue
-								</button>
-							) : (
-								<button
-									style={{ backgroundColor: '#0018A4', color: '#ffffff' }}
-									onClick={submitSurvey}>
-									Submit
-								</button>
-							)}
-						</div>
-						<div>{error && <p>Error: {error}</p>}</div>
-						<div className="donut-img">
-							<img
-								src="./src/assets/pinkdonut.png"
-								alt="pink donut with sprinkles"
-							/>
-						</div>
-					</form>
-				)
-			}
+			{submit ? (
+				<SurveySummary surveyData={surveyData} steps={STEPS} />
+			) : (
+				<form className="form" onSubmit={handleSubmit}>
+					<div className="questions">
+						<currentStepDetails.Component
+							value={surveyData[currentStepDetails.valueKey]}
+							updateSurveyData={updateSurveyData}
+							{...currentStepDetails}
+						/>
+					</div>
+					<div className="button">
+						{currentStep > 0 && (
+							<button
+								style={{ backgroundColor: '#0018A4', color: '#ffffff' }}
+								onClick={prevStep}>
+								Back
+							</button>
+						)}
+						{currentStep < STEPS.length - 1 ? (
+							<button
+								style={{ backgroundColor: '#0018A4', color: '#ffffff' }}
+								onClick={nextStep}>
+								Continue
+							</button>
+						) : (
+							<button
+								style={{ backgroundColor: '#0018A4', color: '#ffffff' }}
+								onClick={submitSurvey}>
+								Submit
+							</button>
+						)}
+					</div>
+					<div>{error && <p>Error: {error}</p>}</div>
+					<div className="donut-img">
+						<img src="/pinkdonut.png" alt="pink donut with sprinkles" />
+					</div>
+				</form>
+			)}
 		</>
 	)
 }
