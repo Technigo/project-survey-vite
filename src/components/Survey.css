@@ -36,14 +36,15 @@ label {
 h1 {
   font-weight: 500;
 }
-h3 {
-  margin: 50px;
-  font-weight: 400;
-
-}
 
 p {
   font-size: 19px;
+}
+
+.numbers {
+  font-weight: 500;
+  font-size: 22px;
+  margin-top: 80px;
 }
 
 input[type="text"] {
@@ -62,4 +63,30 @@ button {
   font-size: 1rem;
   padding: 8px;
   margin: 40px;
+}
+
+.summary-container {
+  text-align: center;
+}
+
+@media screen and (max-width: 668px) {
+  form {
+    text-align: left;
+  }
+}
+
+@media (max-width: 668px) {
+  .dropdown {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  label {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  input {
+    float: left;
+  }
 }

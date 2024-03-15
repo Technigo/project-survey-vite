@@ -22,9 +22,8 @@ export const Survey = () => {
 
   return (
     <>
-    {showSummary ? (
-        
-        <div>
+      {showSummary ? (
+        <div className="summary-container">
           <p>Your prefered type of exercise is: {workout}</p>
           <p>The amount of hours you exercise per week is: {hours} h</p>
           <p>
@@ -35,26 +34,26 @@ export const Survey = () => {
           <button onClick={clearSurvey}>Return</button>
         </div>
       ) : (
-        <div className = "form-box">
         <form onSubmit={handleSubmit}>
-          <p>1.</p>
-          <div ClassName="survey-container">
+          <p className="numbers">1.</p>
+          <div className="survey-container">
             <p>
-            What kind of exercise do you enjoy the most? (ex. running,
-            swimming..)
-          </p>
-          <input
-            type="text"
-            onChange={(event) => setWorkout(event.target.value)}
-            value={workout}
-            required
-            placeholder="Write your answer here..."
-          /></div>
+              What kind of exercise do you enjoy the most? (ex. running,
+              swimming..)
+            </p>
+            <input
+              type="text"
+              onChange={(event) => setWorkout(event.target.value)}
+              value={workout}
+              required
+              placeholder="Write your answer here..."
+            />
+          </div>
 
-          <p>2.</p>
+          <p className="numbers">2.</p>
           <p>How many hours/week do you spend exercising?</p>
           {hourGroups.map((group) => (
-            <label for="textinput" class="label" id="textworkoutinput" key={group}>
+            <label key={group}>
               <input
                 type="radio"
                 value={group}
@@ -65,7 +64,7 @@ export const Survey = () => {
             </label>
           ))}
 
-          <p>3.</p>
+          <p className="numbers">3.</p>
           <p>What music do you like listening to when exercising?</p>
           <div className="dropdown">
             <select
@@ -81,7 +80,7 @@ export const Survey = () => {
           </div>
 
           <button type="submit">Submit</button>
-        </form></div>
+        </form>
       )}
     </>
   );
