@@ -1,7 +1,7 @@
 export const companyTexts = [
   // Result texts that get displayed when a certain level has been selected.
   {
-    text: "The former first lady? I wonder what you guys will discuss.",
+    text: "I'm the first lady of pizza. Now what do you want to discuss?",
     company: "Michelle Obama",
     img: "public/company-choice/Michelle-obama.jpg",
   },

@@ -11,7 +11,6 @@ export const Submit = ({
   setDisplayLocation,
   setDisplayCompany,
 }) => {
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -24,7 +23,7 @@ export const Submit = ({
     } else {
       setShowResults(!showResults);
     }
-    if (showResults){
+    if (showResults) {
       setDisplayLevel();
       setDisplayChoices(0);
       setDisplayLocation();
@@ -50,8 +49,8 @@ Submit.propTypes = {
   displayLevel: PropTypes.string,
   displayLocation: PropTypes.string,
   displayCompany: PropTypes.string,
-  setDisplayLevel: PropTypes.string,
-  setDisplayChoices: PropTypes.string,
-  setDisplayLocation: PropTypes.string,
-  setDisplayCompany: PropTypes.string,
+  setDisplayLevel: PropTypes.func,
+  setDisplayChoices: PropTypes.func,
+  setDisplayLocation: PropTypes.func,
+  setDisplayCompany: PropTypes.func,
 };

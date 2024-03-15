@@ -54,7 +54,7 @@ const companyCheck = (displayCompany) => {
   return (
     <div>
       <img src={companyImg} alt={displayCompany.displayCompany} />
-      <p>{companyText}</p>
+      <p>"{companyText}"</p>
       <p className="quote-name">- {displayCompany.displayCompany}</p>
     </div>
   );
