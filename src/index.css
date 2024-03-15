@@ -469,7 +469,9 @@ input[type="checkbox"]:checked::before {
   }
 
   .error-msg-container {
-    position: relative;
+    bottom: 20%;
+    right: 5%;
+    width: 40%;
     text-align: center;
   }
 }
