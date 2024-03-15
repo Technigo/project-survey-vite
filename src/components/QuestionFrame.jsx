@@ -21,7 +21,7 @@ const QuestionFrame = ({ createSummary }) => {
   });
 
   // Event handler for form input changes
-  const handleInputChange = (event) => {
+  const handleInputChange = event => {
     const { name, value, type } = event.target;
     const newValue =
       type === "checkbox" ? [...formData.subscription, value] : value;
@@ -47,7 +47,7 @@ const QuestionFrame = ({ createSummary }) => {
   };
 
   // Event handler for form submission
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
 
     if (validated && qNum === 4) {
@@ -61,15 +61,15 @@ const QuestionFrame = ({ createSummary }) => {
   return (
     <div className="question-page">
       <Header question={questions?.[qNum]} />
-      <ProgressBar qNum={qNum + 1} />
 
       <form onSubmit={handleSubmit}>
+        <ProgressBar qNum={qNum + 1} />
         <Question
           qNum={qNum}
           formData={formData}
           onChange={handleInputChange}
         />
-        <NextButton qNum={qNum} validated={validated} />
+        <NextButton progress={qNum} validated={validated} />
       </form>
     </div>
   );
