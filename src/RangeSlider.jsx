@@ -14,8 +14,9 @@ export const RangeSlider = ({
   // Function to handle changes in slider value.
   // Converts the string value of the event target to an integer.
   const handleChange = (event) => {
-    updateSurveyData(valueKey, parseInt(event.target.value, 10)) &&
-      setSliderValue(newValue);
+    updateSurveyData(valueKey, parseInt(event.target.value, 10));
+
+    setSliderValue(event.target.value);
   };
 
   // Render the RangeSlider component.

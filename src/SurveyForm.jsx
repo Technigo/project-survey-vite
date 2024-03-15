@@ -90,7 +90,9 @@ export const SurveyForm = () => {
 
   // 3. "back" "next" steps
   // When currentStep is more than 0, prevStep is (currentStep - 1)
-  const prevStep = () => {
+  const prevStep = (event) => {
+    event.preventDefault();
+
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
       setError(null);
@@ -98,7 +100,9 @@ export const SurveyForm = () => {
   };
 
   // if "currentStepDetails.answerRequired" means it is true (required to answer) AND "!currentStepValue" means it is false = empty -> error shows up
-  const nextStep = () => {
+  const nextStep = (event) => {
+    event.preventDefault();
+
     if (currentStepDetails.answerRequired && !currentStepValue) {
       setError("Hey! You forgot to answer!");
       return;
@@ -120,15 +124,12 @@ export const SurveyForm = () => {
     setSubmit(true); // Set 'submit' state to true - written in line 67
   };
 
-	const handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     // prevent reloading the page when you click submit
-		event.preventDefault();
-		// if it is not the last step, move to next step
-    if (currentStep < STEPS.length - 1) {
-      nextStep();
-    } else {
-      submitSurvey();
-    }
+    event.preventDefault();
+    // if it is not the last step, move to next step
+
+    submitSurvey();
   };
 
   return (
