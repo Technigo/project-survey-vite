@@ -33,7 +33,7 @@ export const resultTexts = [
     score: 100,
   },
   {
-    text: "Would you remove the sauce as well if you could?.",
+    text: "Would you remove the sauce as well if you could!?",
     score: 137,
   },
 ];
