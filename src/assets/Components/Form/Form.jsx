@@ -54,17 +54,21 @@ export const Form = () => {
     switch (section) {
       case 0:
         return (
-          <div className="formWrapper">
-            <button className="startButton" onClick={handleNextSection}>
+          <div className="formWrapper" tabIndex>
+            <button
+              className="startButton"
+              onClick={handleNextSection}
+              onKeyDown={handleNextSection}
+            >
               Let`s go ☕
             </button>
           </div>
         )
       case 1:
         return (
-          <div className="formWrapper">
-            <label>
-              <h1>
+          <div className="formWrapper" tabIndex>
+            <label tabIndex>
+              <h1 tabIndex>
                 1.<br></br> What type of coffee do you prefer?
               </h1>
               <input
@@ -75,50 +79,68 @@ export const Form = () => {
                 placeholder="Write your answer here..."
               />
             </label>
-            <button onClick={handleNextSection}>Continue</button>
+            <button title="continue" onClick={handleNextSection}>
+              Continue
+            </button>
           </div>
         )
       case 2:
         return (
           <div className="formWrapper">
-            <h1>
+            <h1 tabIndex>
               2.<br></br> How many cups of coffee do you typically drink per
               day?
             </h1>
             {selectedCups.map((cups) => (
-              <label className="radiobuttonContainer" key={cups}>
+              <label className="radiobuttonContainer" key={cups} tabIndex>
                 <input
                   id="radioCheckbox"
                   type="radio"
                   value={cups}
                   onChange={handleRadioInput}
                   checked={selectedCup === cups}
+                  tabIndex
                   required
                 />
                 <div className="customRadioCheckbox">{cups}</div>
               </label>
             ))}
-            <button onClick={handleNextSection}>Continue</button>
+            <button title="continue" onClick={handleNextSection}>
+              Continue
+            </button>
           </div>
         )
       case 3:
         return (
           <div className="formWrapper">
-            <label>
-              <h1>
+            <label tabIndex>
+              <h1 tabIndex>
                 3.<br></br> What motivates you to drink coffee?
               </h1>
               <select
                 onChange={handleDropdownInput}
                 value={selectedReason}
                 required
+                tabIndex
               >
-                <option value="">Select a reason:</option>
-                <option value="Energy boost">Energy boost</option>
-                <option value="Taste preference">Taste preference</option>
-                <option value="Socialization">Socialization</option>
-                <option value="Ritual/habit">Ritual/habit</option>
-                <option value="Warmth/comfort">Warmth/comfort</option>
+                <option value="" tabIndex>
+                  Select a reason:
+                </option>
+                <option value="Energy boost" tabIndex>
+                  Energy boost
+                </option>
+                <option value="Taste preference" tabIndex>
+                  Taste preference
+                </option>
+                <option value="Socialization" tabIndex>
+                  Socialization
+                </option>
+                <option value="Ritual/habit" tabIndex>
+                  Ritual/habit
+                </option>
+                <option value="Warmth/comfort" tabIndex>
+                  Warmth/comfort
+                </option>
               </select>
             </label>
             <button onClick={handleNextSection}>Continue</button>
@@ -148,7 +170,7 @@ export const Form = () => {
       case 5:
         return (
           <div className="formWrapper">
-            <h1>
+            <h1 tabIndex>
               5.<br></br>How important is coffee to your daily routine?
             </h1>
             <input
