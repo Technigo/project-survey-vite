@@ -25,14 +25,15 @@ body {
 .header {
   background-image: url(assets/bedtimeheader.jpg);
   background-size: cover;
-  height: 400px;
+  background-position: top;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .QuestionForm {
-  margin: 1em;
+  margin: 1.25em;
 }
 
 .question {
@@ -42,9 +43,8 @@ body {
 h1 {
   color: #d2c1b7;
   font-family: "Abril Fatface", serif;
-
   font-size: 2.5em;
-  padding: 0.75em;
+  padding: 0 0.75em;
   text-align: center;
 }
 
@@ -56,6 +56,47 @@ h2 {
 
 p {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-size: 1em;
+}
+
+textarea,
+select,
+button {
+  width: 100%;
+  background-color: #6a3e38;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  color: #d2c1b7;
+  cursor: pointer;
+  border: none;
+  padding: 0.25em;
+}
+
+.radioButton {
+  padding: 0.25em 0;
+}
+
+.submitButton {
+  margin: 1em 0;
+  padding: 0.25em 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.radioButton input {
+  cursor: pointer;
+}
+
+/* .radioButton input:checked {
+  background-color: #6a3e38;
+} */
+
+label {
+  padding-left: 0.5em;
+  color: #6a3e38;
   font-size: 1em;
 }
