@@ -37,6 +37,9 @@
 	margin-top: 1rem;
 	margin-bottom: 6rem;
 	padding: 10px;
+	line-height: 2;
+	font-weight: 600;
+	color: var(--indigo);
 }
 
 .donut-img {
@@ -115,17 +118,17 @@
 .range-slider input[type='range']::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
-	width: 20px; /* Thumb width */
-	height: 20px; /* Thumb height */
-	border-radius: 50%; /* Rounded thumb */
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
 	background: var(--indigo);
 	cursor: pointer;
 }
 
 .range-slider input[type='range']::-moz-range-thumb {
-	width: 20px; /* Thumb width */
-	height: 20px; /* Thumb height */
-	border-radius: 50%; /* Rounded thumb */
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
 	background: var(--indigo);
 	cursor: pointer;
 }
