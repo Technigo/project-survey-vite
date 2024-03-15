@@ -5,8 +5,8 @@
 }
 
 *:focus {
-  outline: 1px solid #c874b2;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.7);
+  outline: 1px solid var(--background-color-button);
+  box-shadow: 0 0 5px 2px var(--background-color-button);
 }
 
 :root {
@@ -69,6 +69,14 @@ h2 {
   padding: 15px 5px;
   margin: 20px 0;
   width: 100%;
+}
+
+.input-textfield:hover,
+.input-dropdown:hover,
+.input-textfield:focus,
+.input-dropdown:focus {
+  border: 1px solid var(--background-color-button);
+  box-shadow: 0 0 5px 2px #f5d5e0;
 }
 
 .input-dropdown {
