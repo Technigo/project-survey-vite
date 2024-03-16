@@ -1,0 +1,15 @@
+{
+  "questions": [
+    { "id": 1, "title": "Please enter your full name and email" },
+    { "id": 2, "title": "Have you ever felt stressed?" },
+    { "id": 3, "title": "Please show your stress level" },
+    {
+      "id": 4,
+      "title": "How many ways do you have to deal with stress?"
+    },
+    {
+      "id": 5,
+      "title": "Which category of coping with stress would you like to subscribe?"
+    }
+  ]
+}

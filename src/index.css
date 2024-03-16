@@ -1,13 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*********** General styling ***********/
 :root {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-color: #0f2b43ff;
+  --secondary-color: #c2c2c2;
+  --error-background-color: #0018a5;
+  --background-color: linear-gradient(#c2b7bdff, #3a5572ff);
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+  --main-text-color: rgb(255, 255, 255);
+  --secondary-text-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html {
+  height: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  font-weight: var(--font-weight-regular);
+}
+
+#root {
+  width: inherit;
+  height: inherit;
+}
+
+/*********** Starting page & Summary page ***********/
+.starting-page,
+.summary-page {
+  background-color: var(--primary-color);
+  color: var(--main-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.starting-page {
+  background-image: url(./assets/images/calm3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.summary-page {
+  background-image: url(./assets/images/calm1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.starting-page > h2 {
+  margin: 0 0 40px 0;
+}
+
+.starting-page > h1 {
+  margin-top: 0;
+  padding: 0 15px;
+}
+
+.start-button {
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: white;
+  color: var(--primary-color);
+  height: 45px;
+  width: 100px;
+  border: 0;
+}
+
+.summary-text {
+  padding: 0 20px;
+  display: grid;
+  gap: 20px;
+}
+
+/*********** Question page ***********/
+.question-page {
+  display: grid;
+  width: inherit;
+  height: inherit;
+  grid-template-rows: 40% auto;
+}
+
+/*********** Header section ***********/
+.header {
+  background-image: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  width: 100%;
+  color: var(--main-text-color);
+  justify-content: center;
+}
+
+/*********** Question text and number in Header ***********/
+.question-text,
+.question-number {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 4px 4px 5px black;
+  font-size: 1.3rem;
+  margin: 6px;
+}
+
+/*********** Form section ***********/
+form {
+  display: grid;
+  grid-template-rows: 30px minmax(225px, auto) 20%;
+  gap: 20px;
+}
+
+/*********** Question details ***********/
+.question-container {
+  align-self: center;
+}
+
+.question-options {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.next-q-btn {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+}
+
+.next-q-btn button {
+  font-family: inherit;
+  font-weight: var(--font-weight-bold);
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+  color: var(--main-text-color);
+  height: 38px;
+  width: 80%;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.next-q-btn .validated {
+  background-color: var(--primary-color);
+}
+
+/*********** Question 1 ***********/
+.question-one {
+  align-items: center;
+}
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.input-container > input {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.input-container > label {
+  margin-bottom: 5px;
+  margin-top: 9px;
+}
+
+/*********** Question 2 ***********/
+.question-two {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.button-label {
+  display: inline-block;
+  padding: 0em 1em 3px;
+  margin: 0.4em;
+  height: 60px;
+  cursor: pointer;
+  color: #292929;
+  border-radius: 0.25em;
+  background: #efefef;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+  transition: 0.3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button-label:hover {
+  background: #d6d6d6;
+  color: #101010;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+}
+.button-label:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2),
+    inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+}
+
+.radio-label:checked + .button-label {
+  background-color: var(--primary-color);
+  color: #efefef;
+}
+.radio-label:checked + .button-label:hover {
+  background-color: var(--primary-color);
+  color: #e2e2e2;
+}
+
+.hidden {
+  opacity: 0;
+  z-index: 2;
+  position: relative;
+  top: 60px;
+}
+
+/*********** Question 3 ***********/
+/* Baseline, reset styles */
+.question-three {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+#range-value {
+  margin: 15px 0;
+  font-size: 24px;
+}
+
+#range-value::after {
+  content: "%";
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  touch-action: none;
+  writing-mode: vertical-lr;
+  height: 30%;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/* Chrome, Safari, Opera and Edge Chromium styles */
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #cccccc;
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--primary-color);
+  border-radius: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  right: 12px;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 0.125rem;
+}
+
+/* Firefox styles */
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #cccccc;
+  border-radius: 0.5rem;
+  height: 1rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 1rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 0.125rem;
+}
+
+/*********** Question 4 ***********/
+select {
+  font-size: 25px;
+  width: 70%;
+  margin: 0 auto;
+  height: 70px;
+  border-radius: 0.5rem;
+  padding: 0 10px;
+  background: url(../public/arrow.svg) no-repeat;
+  appearance: none;
+  background-position: center right;
+}
+
+/*********** Question 5 ***********/
+.question-five {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+}
+
+.checkbox-option {
+  display: grid;
+  grid-template-columns: 3em auto;
+  gap: 1em;
+  font-family: inherit;
+  margin-top: 1em;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 2.3em;
+  height: 2.3em;
+  border: 0.15em solid var(--primary-color);
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1.5em var(--primary-color);
+  border-radius: 50%;
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/*********** Progress bar ***********/
+.progress-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.progressbar-container {
+  display: flex;
+  background-color: #e2e2e2;
+  height: 20px;
+  width: 90%;
+  margin: auto 0;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.progressbar-progress {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  transition: 0.4s ease;
+}
+
+.question-total {
+  align-self: center;
+  margin-left: 10px;
+}
+
+.question-answered {
+  margin-left: 5px;
+}
+
+/*********** Error message ***********/
+.error-msg-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  bottom: 8%;
+  width: 100%;
+}
+
+.error-msg {
+  color: #f8f2f2;
+  background-color: var(--error-background-color);
+  height: fit-content;
+  width: 70%;
+  padding: 10px 20px;
+  border-radius: 12px;
+  align-self: center;
+}
+
+/*********** Media query for tablet and laptop ***********/
+@media screen and (min-width: 768px) {
+  .question-page {
+    grid-template-columns: 50% auto;
+    grid-template-rows: 1fr;
+  }
+
+  form {
+    grid-template-rows: 80px minmax(225px, auto) 20%;
+  }
+
+  .next-q-btn {
+    position: relative;
+    align-self: center;
+  }
+
+  .next-q-btn button {
+    width: max-content;
+    padding: 0 20px;
+    height: 45px;
+  }
+
+  .button-label {
+    padding: 1em 2em;
+    margin: 1em;
+  }
+
+  input[type="range"] {
+    writing-mode: horizontal-tb;
+    width: 70%;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    top: -15px;
+    right: 0;
+  }
+
+  .error-msg-container {
+    bottom: 20%;
+    right: 5%;
+    width: 40%;
+    text-align: center;
+  }
 }
