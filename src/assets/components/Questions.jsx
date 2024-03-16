@@ -41,15 +41,11 @@ export function Questions() {
     <div className="formContainer">
       {!submitted ? (
         <form onSubmit={handleSubmit} className="QuestionForm">
-          <Charactername
-            value={charactername}
-            onChange={setCharactername}
-            tabIndex="1"
-          />
-          <Location value={location} onChange={setLocation} tabIndex="2" />
-          <Companion value={companion} onChange={setCompanion} tabIndex="3" />
-          <Adventure value={adventure} onChange={setAdventure} tabIndex="4" />
-          <SubmitButton tabIndex="5" />
+          <Charactername value={charactername} onChange={setCharactername} />
+          <Location value={location} onChange={setLocation} />
+          <Companion value={companion} onChange={setCompanion} />
+          <Adventure value={adventure} onChange={setAdventure} />
+          <SubmitButton />
         </form>
       ) : (
         <div className="outputContainer">
@@ -83,11 +79,7 @@ export function Questions() {
               </p>
             )}
           </div>
-          <button
-            className="submitButton"
-            onClick={makeAnotherStory}
-            tabIndex="6"
-          >
+          <button className="submitButton" onClick={makeAnotherStory}>
             Make another story
           </button>
         </div>

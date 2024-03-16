@@ -6,11 +6,11 @@ export function Charactername({ value, onChange }) {
         <h2 className="question">What is your character&#39;s name?</h2>
         <input
           aria-describedby="characterName"
+          tabIndex="0"
           name="characterName"
           id="characterName"
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          // className="Charactername"
         />
       </label>
     </div>
