@@ -67,6 +67,7 @@ p {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
+	color: #fff;
 }
 
 .container-question label,
@@ -150,6 +151,8 @@ button.selected {
 	position: absolute;
 	bottom: 0px;    
 }
+
+/* this is not displayed consider to remove it */
 
 .warning-off {
    display: none;   

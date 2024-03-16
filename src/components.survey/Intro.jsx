@@ -30,7 +30,7 @@ export const Intro = ({ onNext, onBack, setFormData }) => {
     
 
 return (
-    <div className="container-question intro">
+    <div className="container-question">
         <div>
             <label htmlFor="username">Name</label>
             <input
@@ -38,7 +38,6 @@ return (
                 name="username"
                 placeholder="Enter your name"
                 id="username"
-                autoComplete="username"
                 value={inputs.username}
                 onChange={handleChange}
                 onFocus={handleFocus}
@@ -50,7 +49,6 @@ return (
                 type="number"
                 name="age"
                 id="age"
-                autoComplete="age"
                 placeholder="Enter your age"
                 value={inputs.age}
                 onChange={handleChange}
