@@ -27,7 +27,6 @@ export const Intro = ({ onNext, onBack, setFormData }) => {
         }  
     }
 
-   
     
 
 return (

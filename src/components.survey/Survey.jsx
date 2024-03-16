@@ -25,7 +25,6 @@ export const Survey = () => {
   }
 
 
-
   //setAnswer function is defined within the Survey component and passed down to the Question1 component.
 
   const renderCurrentQuestion = () => {

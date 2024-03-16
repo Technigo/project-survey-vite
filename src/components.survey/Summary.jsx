@@ -11,4 +11,4 @@ export const Summary = ({username, age, answer1, answer2, answer3 }) => {
   )
 }
 
-//{second && <p>Your Answer: {second}</p>}
+
