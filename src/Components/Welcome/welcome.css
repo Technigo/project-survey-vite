@@ -64,7 +64,7 @@
   background-color: #004d00;
 }
 
-@media (min-width: 320px) and (max-width: 350px) {
+@media (min-width: 320px) and (max-width: 410px) {
   .welcome-title {
     font-size: 40px;
   }

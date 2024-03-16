@@ -9,7 +9,6 @@ header p {
   font-weight: 700;
   margin: 0;
   font-weight: 600;
-  /*font-family: 'Roboto', sans-serif;*/
   color: #ffffff;
   text-transform: uppercase;
   text-shadow: 1px 1px 0px #8d8d8d,
@@ -38,6 +37,5 @@ header p {
 
   header p {
     font-size: 50px;
-
   }
 }

@@ -1,10 +1,9 @@
 import { useState } from "react"
-import backgroundImage from "/src/assets/Img/mobile-img.webp"
 import Welcome from "/src/Components/Welcome/Welcome"
 import Text from "/src/Components/Input/Text/Text"
 import Radio from "/src/Components/Input/Radio/Radio"
 import Dropdown from "../Input/Dropdown/Dropdown"
-import "./form.css" 
+import "./form.css"
 
 export default function Form() {
   const [formState, setFormState] = useState({
@@ -103,11 +102,7 @@ export default function Form() {
 
   if (formState.isSubmitted) {
     return (
-      <div
-        className="summary-container"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-        aria-label="background image of a map"
-      >
+      <div className="summary-container" aria-label="background image of a map">
         <h2 className="summary-title">Thank you for your submission!</h2>
         <h3>A summary of your answers:</h3>
         <div className="answers">
@@ -129,11 +124,7 @@ export default function Form() {
   }
 
   return (
-    <div
-      className="page-container"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-      aria-label="background image of a map"
-    >
+    <div className="page-container" aria-label="background image of a map">
       {!showForm ? (
         <div className="welcome-container">
           <Welcome onClick={handleContinue} />
