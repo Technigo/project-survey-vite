@@ -1,3 +1,4 @@
+
 import { companionsArray } from "./Arrays";
 
 // eslint-disable-next-line react/prop-types
@@ -14,11 +15,10 @@ export const Companion = ({ value, onChange }) => {
         id="selectCompanion"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        tabIndex="6"
       >
         <option value="">Select companion</option>
         {companionsArray.map((companion, index) => (
-          <option key={index} value={companion.name} tabIndex={index + 7}>
+          <option key={index} value={companion.name}>
             {companion.name}
           </option>
         ))}

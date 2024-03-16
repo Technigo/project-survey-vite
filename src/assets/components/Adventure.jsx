@@ -1,3 +1,4 @@
+
 import { adventuresArray } from "./Arrays";
 
 // eslint-disable-next-line react/prop-types
@@ -14,11 +15,10 @@ export function Adventure({ value, onChange }) {
         id="selectAdventure"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        tabIndex="10"
       >
         <option value="">Select adventure</option>
         {adventuresArray.map((adventureItem, index) => (
-          <option key={index} value={adventureItem.name} tabIndex={index + 11}>
+          <option key={index} value={adventureItem.name}>
             {adventureItem.name}
           </option>
         ))}
