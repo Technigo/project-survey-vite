@@ -1,8 +1,6 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-export const YesNoOption = () => {
-  const [recommend, setRecommend] = useState("");
-
+export const YesNoOption = ({ recommend, setRecommend }) => {
   const yesNoOptions = ["Yes", "No"];
 
   return (
@@ -23,4 +21,9 @@ export const YesNoOption = () => {
       ))}
     </fieldset>
   );
+};
+
+YesNoOption.propTypes = {
+  recommend: PropTypes.string.isRequired,
+  setRecommend: PropTypes.func.isRequired,
 };

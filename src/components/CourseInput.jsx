@@ -1,8 +1,6 @@
-import { useState } from "react";
+import { PropTypes } from "prop-types";
 
-export const CourseInput = () => {
-  const [course, setCourse] = useState("");
-
+export const CourseInput = ({ course, setCourse }) => {
   const courses = ["Bouldering", "Top rope climbing", "Sport climbing", "Trad climbing"];
 
   return (
@@ -23,4 +21,9 @@ export const CourseInput = () => {
       ))}
     </fieldset>
   );
+};
+
+CourseInput.propTypes = {
+  course: PropTypes.string.isRequired,
+  setCourse: PropTypes.func.isRequired,
 };

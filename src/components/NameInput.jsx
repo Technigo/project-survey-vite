@@ -1,9 +1,7 @@
-import { useState } from "react";
+import { PropTypes } from "prop-types";
 import { HandleFocus } from "./HandleFocus.jsx";
 
-export const NameInput = () => {
-  const [name, setName] = useState("");
-
+export const NameInput = ({ name, setName }) => {
   const { placeholder, handleFocus, handleOnBlur } = HandleFocus("Type your full name");
 
   return (
@@ -20,4 +18,9 @@ export const NameInput = () => {
       />
     </label>
   );
+};
+
+NameInput.propTypes = {
+  name: PropTypes.string.isRequired,
+  setName: PropTypes.func.isRequired,
 };

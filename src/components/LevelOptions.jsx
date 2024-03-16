@@ -1,24 +1,24 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-export const LevelOptions = () => {
-  const [level, setLevel] = useState("");
-
+export const LevelOptions = ({ setLevel }) => {
   return (
     <>
       <label className="form-area select-style">
         Which level were the course at:
-        <select onChange={(event) => setLevel(event.target.value)}>
-          <option required value={level}>
-            Beginner
+        <select defaultValue="Choose your level" required onChange={(event) => setLevel(event.target.value)}>
+          <option disabled hidden value="Choose your level">
+            Choose your level
           </option>
-          <option required value={level}>
-            Intermedier
-          </option>
-          <option required value={level}>
-            Advanced
-          </option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermedier">Intermedier</option>
+          <option value="Advanced">Advanced</option>
         </select>
       </label>
     </>
   );
+};
+
+LevelOptions.propTypes = {
+  level: PropTypes.string.isRequired,
+  setLevel: PropTypes.func.isRequired,
 };

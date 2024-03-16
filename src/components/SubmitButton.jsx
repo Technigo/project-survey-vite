@@ -1,3 +1,7 @@
 export const SubmitButton = () => {
-  return <button type="submit">Submit</button>;
+  return (
+    <button type="submit" className="submit-button">
+      Submit
+    </button>
+  );
 };

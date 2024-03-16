@@ -1,9 +1,7 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 import { HandleFocus } from "./HandleFocus.jsx";
 
-export const TextInput = () => {
-  const [text, setText] = useState("");
-
+export const TextInput = ({ text, setText }) => {
   const { placeholder, handleFocus, handleOnBlur } = HandleFocus(
     "Please, share what was good, fun or what we could have done better .."
   );
@@ -22,4 +20,9 @@ export const TextInput = () => {
       />
     </label>
   );
+};
+
+TextInput.propTypes = {
+  text: PropTypes.string.isRequired,
+  setText: PropTypes.func.isRequired,
 };
