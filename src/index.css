@@ -315,7 +315,7 @@ select {
   height: 70px;
   border-radius: 0.5rem;
   padding: 0 10px;
-  background: url(src/assets/arrow.svg) no-repeat;
+  background: url(./assets/arrow.svg) no-repeat;
   appearance: none;
   background-position: center right;
 }
