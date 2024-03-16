@@ -32,6 +32,7 @@ export const DropDown = ({handleChange}) => {
         <option value="Reggae">Reggae</option>
         <option value="Other">Other</option>
       </select>
+      
     </div>
   );
 };

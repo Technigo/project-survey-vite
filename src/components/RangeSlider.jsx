@@ -1,13 +1,12 @@
 import { useState } from "react";
 import "./RangeSlider.css";
 
-export const RangeSlider = () => {
+export const RangeSlider = ({handleChange}) => {
   const [value, setValue] = useState(3); // Default value
-
-  const handleChange = (event) => {
+  const onChange = (event) => {
     const newValue = parseInt(event.target.value);
     setValue(newValue);
-    console.log("New value:", newValue); // You can handle value change here
+    handleChange(event)
   };
 
   return (
@@ -22,7 +21,7 @@ export const RangeSlider = () => {
         max={5}
         step={1}
         value={value}
-        onChange={handleChange}
+        onChange={onChange}
         list="tickmarks"
       />
       <datalist id="tickmarks">

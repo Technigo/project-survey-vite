@@ -10,6 +10,7 @@ export const ResultPage=({formData}) => {
       <p>{formData.musician} is your favorite musician/band.</p>
       <p>You prefer: {formData.musicPreference}</p>
       <p>You discover new music from {formData.musicDiscovery}.</p> 
+      <p>Music is {formData.musicRange}/5 important to you in your life</p>
     </div>
   )
 }

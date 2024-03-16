@@ -25,21 +25,23 @@ export const RadioButtons = ({handleChange}) => {
       <p>
         Do you prefer attending live concerts or listening to music at home?
       </p>
-      {options.map((option) => (
-        <div key={option.value} className="radio-container">
-          <input
-            type="radio"
-            id={option.value}
-            name="musicPreference"
-            value={option.label}
-            onChange={handleChange}
-            className="radio-input"
-          />
-          <label htmlFor={option.value} className="radio-label">
-            {option.label}
-          </label>
-        </div>
-      ))}
+      <div className="mapContainer">
+        {options.map((option) => (
+          <div key={option.value} className="radio-container">
+            <input
+              type="radio"
+              id={option.value}
+              name="musicPreference"
+              value={option.label}
+              onChange={handleChange}
+              className="radio-input"
+            />
+            <label htmlFor={option.value} className="radio-label">
+              {option.label}
+            </label>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -7,13 +7,13 @@
   transform: translate(-50%, -50%);
   width: 40%;
   border-radius: 25px;
-  padding: 2%;
+  padding: 2% 2%;
 }
 
 /* Styling for survey heading */
 h1 {
   font-size: 30px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   color: #000000;
   margin-bottom: 10px;
   text-align: center;
@@ -27,23 +27,31 @@ h1 {
   margin: 0 auto;
   background-color: black;
   color: #fff;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: 5px;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .button:hover {
   background-color: blue;
 }
 
+.buttonContainer{
+  display: flex;
+  flex-direction: row;
+}
+
 /* Media query for screens under 940px */
 @media (max-width: 940px) {
   .survey-form {
     width: 70%; 
+    padding: 4% 6%; 
   }
+
 }
 

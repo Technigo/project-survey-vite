@@ -9,18 +9,18 @@
 
 /* Textinput styling default message + input message */
 .text-input-container .label {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
   margin-bottom: 5px;
 }
 
 .text-input-container input.input-field {
   width: 45%;
   padding: 6px;
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid #333;
   border-radius: 10px;
   box-sizing: border-box;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
