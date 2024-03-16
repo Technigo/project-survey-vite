@@ -1,7 +1,14 @@
 import PropTypes from "prop-types"
 import "./radio.css"
 
-function Radio({ name, listOfItems, label, value, onChange, error }) {
+export default function Radio({
+  name,
+  listOfItems,
+  label,
+  value,
+  onChange,
+  error,
+}) {
   return (
     <div className="form-group">
       <p className={`radio-label ${error ? "error-label" : ""}`}>{label}:</p>
@@ -45,5 +52,3 @@ Radio.propTypes = {
   onChange: PropTypes.func,
   error: PropTypes.string,
 }
-
-export default Radio

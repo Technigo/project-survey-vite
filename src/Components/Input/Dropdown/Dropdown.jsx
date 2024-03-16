@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import "./dropdown.css"
 
-function Dropdown({
+export default function Dropdown({
   name,
   options,
   label,
@@ -72,5 +72,3 @@ Dropdown.propTypes = {
   error: PropTypes.string,
   onOptionChange: PropTypes.func,
 }
-
-export default Dropdown

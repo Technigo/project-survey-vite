@@ -1,10 +1,10 @@
 import { useState } from "react"
-import backgroundImage from "../Img/6345959-min1.webp"
+import backgroundImage from "/src/assets/Img/mobile-img.webp"
 import Welcome from "/src/Components/Welcome/Welcome"
 import Text from "/src/Components/Input/Text/Text"
 import Radio from "/src/Components/Input/Radio/Radio"
 import Dropdown from "../Input/Dropdown/Dropdown"
-import "./form.css"
+import "./form.css" 
 
 export default function Form() {
   const [formState, setFormState] = useState({
@@ -22,6 +22,7 @@ export default function Form() {
     isSubmittedAttempted: false,
   })
   const [showReasonPur, setShowReasonPur] = useState(false)
+
   const [showForm, setShowForm] = useState(false)
 
   const ageGroups = ["0-18", "19-30", "30+"]

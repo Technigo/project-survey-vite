@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import "./text.css"
-function Text({
+
+export default function Text({
   name,
   label,
   placeholder,
@@ -54,5 +55,3 @@ Text.propTypes = {
   onChange: PropTypes.func,
   error: PropTypes.string,
 }
-
-export default Text
