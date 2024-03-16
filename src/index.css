@@ -7,12 +7,12 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
-  --primary-color: #0018a5;
+  --primary-color: #0f2b43ff;
   --secondary-color: #c2c2c2;
   --background-color: linear-gradient(#c2b7bdff, #3a5572ff);
   --font-weight-regular: 400;
   --font-weight-bold: 600;
-  --main-text-color: white;
+  --main-text-color: rgb(255, 255, 255);
   --secondary-text-color: black;
 }
 
@@ -51,6 +51,18 @@ body {
   text-align: center;
   height: 100vh;
   justify-content: center;
+}
+
+.starting-page {
+  background-image: url(./assets/images/calm3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.summary-page {
+  background-image: url(./assets/images/calm1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .starting-page > h2 {
