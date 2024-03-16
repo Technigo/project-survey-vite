@@ -188,7 +188,7 @@ p {
 
 @media (min-width: 1025px) {
   .page-container {
-    background-image: url('src/assets/Img/bigger-screen.webp');
+    background-image: url(/Img/bigger-screen.webp);
   }
 
   .form-container {
