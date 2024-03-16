@@ -19,20 +19,11 @@ code {
 }
 
 body {
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: #d2c1b7;
 }
-
-/* .header {
-  background-image: url(public/bedtimeheader.webp);
-  background-size: cover;
-  background-position: top;
-  height: 300px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-} */
 
 header {
   width: 100%;
@@ -44,7 +35,7 @@ header {
 img {
   width: 100%;
   min-height: 200px;
-  max-height: 400px;
+  max-height: 300px;
   object-fit: cover;
 }
 
@@ -137,13 +128,24 @@ label {
 .storyContainer {
   padding: 2em 0;
 }
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .formContainer {
+  min-height: calc(100% - 30px);
   padding: 0 1em;
   display: flex;
   justify-content: center;
 }
 
 footer {
+  height: 30px;
+  position: relative;
+  bottom: 0;
   display: flex;
   justify-content: center;
   padding: 0.5em 0;
@@ -156,20 +158,8 @@ footer p {
   font-size: 0.75em;
 }
 
-/* section {
-  flex: 1;
-} */
-
 /*Media Query for Tablet and Desktop*/
 @media (min-width: 481px) {
-  .formContainer {
-    min-height: calc(100vh - 150px);
-  }
-
-  footer {
-    flex-shrink: 0;
-  }
-
   textarea,
   select,
   button {

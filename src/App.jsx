@@ -5,7 +5,7 @@ import "./index.css";
 
 export const App = () => {
   return (
-    <div>
+    <div className="appContainer">
       <Header />
       <Questions />
       <Footer />

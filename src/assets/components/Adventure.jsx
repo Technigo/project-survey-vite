@@ -19,7 +19,6 @@ export function Adventure({ value, onChange }) {
         <option value="">Select adventure</option>
         {adventuresArray.map((adventureItem, index) => (
           <option key={index} value={adventureItem.name}>
-          <option key={index} value={adventureItem.name}>
             {adventureItem.name}
           </option>
         ))}
