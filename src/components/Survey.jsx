@@ -20,7 +20,6 @@ export const Survey = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(results);
     setSubmitted(true);
   };
 
@@ -35,9 +34,11 @@ export const Survey = () => {
         <div className="results">
           <h3>Here are your results!</h3>
           <p>Your favorite character is {results.character}.</p>
-          <p>Your favorite spell is {results.spell}.</p> 
+          <p>Your favorite spell is {results.spell}.</p>
           <p>You would like to be in house {results.house}!</p>
-          <button className="clear-button" onClick={clearForm}>Again!</button>
+          <button className="clear-button" onClick={clearForm}>
+            Again!
+          </button>
         </div>
       ) : (
         <div className="form-container">
@@ -57,6 +58,8 @@ export const Survey = () => {
                     onChange={handleInputChange}
                     checked={results.house === house}
                     id="houselist"
+                    required
+                    aria-required="true"
                   />
                   <span
                     className={`custom-radio ${
@@ -81,6 +84,7 @@ export const Survey = () => {
                 value={results.character}
                 onChange={handleInputChange}
                 id="characters"
+                required
               >
                 <option className="option" disabled value="">
                   Choose character
@@ -125,10 +129,13 @@ export const Survey = () => {
                 onChange={handleInputChange}
                 value={results.spell}
                 id="spells"
+                required
               ></input>
             </div>
 
-            <button className="submit-button" type="submit">Submit</button>
+            <button className="submit-button" type="submit">
+              Submit
+            </button>
           </form>
         </div>
       )}
