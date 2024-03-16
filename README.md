@@ -4,40 +4,16 @@
   </a>
 </h1>
 
-# Survey Project
+## Survey Project
 
-Replace this readme with your own information about your project.
+The assingment for week six was to create an interactive survey; we decided to focus on knowing our users stress levels and their way to cope with it. At the end of the survey we suggest them alternative ways to reduce stress levels.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## The Problem
 
-## Getting Started with the Project
+We first drafted the UI for the mobile in Figma. Then we started creating components to break down the project into reuseable parts. We did the multi-step form in the Question component and used the ternary conditions to check which question to render. Lastly, we built validation functions to ensure the email is in the valid format as well as other input fields are not empty.
 
-### Dependency Installation & Startup Development Server
+If we had more time, we would like to add a button that jumps to the previous page and a start-over button that restarts the survey.
 
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
+## View it live
 
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
-
-### The Problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-### View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
-
-//TODO: 1. Avoid empty input - validate the data --- complete text input area
-//TODO: 2. Adjust the background color for Q2 - pass the accessibility test
-//TODO: 3. Style question 4
-//TODO: 6. Responsive design - make sure it looks good on mobile and desktop
-//TODO: 7. (if possible) Visualize to the user how far through the survey they are and how much is left by creating a progress bar
+Netlify link: https://etna-wen-project-survey.netlify.app/

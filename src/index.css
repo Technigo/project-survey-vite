@@ -1,25 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/*********** General styling ***********/
 :root {
-  /* margin: 0; */
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
   --primary-color: #0f2b43ff;
   --secondary-color: #c2c2c2;
+  --error-background-color: #0018a5;
   --background-color: linear-gradient(#c2b7bdff, #3a5572ff);
   --font-weight-regular: 400;
   --font-weight-bold: 600;
   --main-text-color: rgb(255, 255, 255);
   --secondary-text-color: black;
 }
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
 
 html {
   height: 100%;
@@ -40,7 +31,8 @@ body {
   width: inherit;
   height: inherit;
 }
-/* Starting page */ /* Summary page */
+
+/*********** Starting page & Summary page ***********/
 .starting-page,
 .summary-page {
   background-color: var(--primary-color);
@@ -91,7 +83,7 @@ body {
   gap: 20px;
 }
 
-/* Question page */
+/*********** Question page ***********/
 .question-page {
   display: grid;
   width: inherit;
@@ -99,8 +91,7 @@ body {
   grid-template-rows: 40% auto;
 }
 
-/* header - the direct child (1/2) of question-page */
-
+/*********** Header section ***********/
 .header {
   background-image: var(--background-color);
   display: flex;
@@ -111,7 +102,7 @@ body {
   justify-content: center;
 }
 
-/* the direct child of header */
+/*********** Question text and number in Header ***********/
 .question-text,
 .question-number {
   display: flex;
@@ -122,27 +113,24 @@ body {
   margin: 6px;
 }
 
-/* form - the direct child (2/2) of question-page */
+/*********** Form section ***********/
 form {
   display: grid;
   grid-template-rows: 30px minmax(225px, auto) 20%;
-  /* gap: 2vh; */
   gap: 20px;
 }
 
-/* question-container - the direct child (1/2) of form */
+/*********** Question details ***********/
 .question-container {
   align-self: center;
 }
 
-/* the direct child of question container (1/1)*/
 .question-options {
   display: flex;
   flex-direction: column;
   font-size: 20px;
 }
 
-/* next-q-btn - the direct child (2/2) of form */
 .next-q-btn {
   display: flex;
   justify-content: center;
@@ -165,10 +153,10 @@ form {
 }
 
 .next-q-btn .validated {
-  background-color: #0f2b43ff;
+  background-color: var(--primary-color);
 }
 
-/* question 1 */
+/*********** Question 1 ***********/
 .question-one {
   align-items: center;
 }
@@ -189,28 +177,16 @@ form {
   margin-top: 9px;
 }
 
-/* question 2 */
+/*********** Question 2 ***********/
 .question-two {
   margin: 0 auto;
   width: 60%;
 }
 
-/* .button-wrap {
-  position: relative;
-  text-align: center;
-  top: 50%;
-  margin-top: -2.5em;
-}
-@media (max-width: 40em) {
-  .button-wrap {
-    margin-top: -1.5em;
-  }
-} */
-
 .button-label {
   display: inline-block;
-  padding: 1em 2em;
-  margin: 1em;
+  padding: 0em 1em 3px;
+  margin: 0.4em;
   height: 60px;
   cursor: pointer;
   color: #292929;
@@ -234,21 +210,13 @@ form {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2),
     inset 0px -1px 0 rgba(0, 0, 0, 0.22);
 }
-@media (max-width: 40em) {
-  .button-label {
-    padding: 0em 1em 3px;
-    margin: 0.4em;
-  }
-}
 
 .radio-label:checked + .button-label {
-  /* background: #2ecc71; */
-  background-color: #0f2b43ff;
+  background-color: var(--primary-color);
   color: #efefef;
 }
 .radio-label:checked + .button-label:hover {
-  /* background: #29b765; */
-  background-color: #0f2b43ff;
+  background-color: var(--primary-color);
   color: #e2e2e2;
 }
 
@@ -259,8 +227,8 @@ form {
   top: 60px;
 }
 
-/* Question 3 */
-/*********** Baseline, reset styles ***********/
+/*********** Question 3 ***********/
+/* Baseline, reset styles */
 .question-three {
   margin-top: 3rem;
   display: flex;
@@ -291,7 +259,7 @@ input[type="range"]:focus {
   outline: none;
 }
 
-/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* Chrome, Safari, Opera and Edge Chromium styles */
 /* slider track */
 input[type="range"]::-webkit-slider-runnable-track {
   background-color: #cccccc;
@@ -304,7 +272,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  background-color: #0f2b43ff;
+  background-color: var(--primary-color);
   border-radius: 1.5rem;
   height: 3rem;
   width: 3rem;
@@ -313,11 +281,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]:focus::-webkit-slider-thumb {
-  outline: 3px solid #0018a4;
+  outline: 3px solid var(--primary-color);
   outline-offset: 0.125rem;
 }
 
-/*********** Firefox styles ***********/
+/* Firefox styles */
 /* slider track */
 input[type="range"]::-moz-range-track {
   background-color: #cccccc;
@@ -327,7 +295,7 @@ input[type="range"]::-moz-range-track {
 
 /* slider thumb */
 input[type="range"]::-moz-range-thumb {
-  background-color: #0018a4;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 1rem;
   height: 2rem;
@@ -335,11 +303,11 @@ input[type="range"]::-moz-range-thumb {
 }
 
 input[type="range"]:focus::-moz-range-thumb {
-  outline: 3px solid #0018a4;
+  outline: 3px solid var(--primary-color);
   outline-offset: 0.125rem;
 }
 
-/* Question 4 */
+/*********** Question 4 ***********/
 select {
   font-size: 25px;
   width: 70%;
@@ -351,8 +319,8 @@ select {
   appearance: none;
   background-position: center right;
 }
-/* Question 5 */
 
+/*********** Question 5 ***********/
 .question-five {
   display: flex;
   align-items: center;
@@ -374,7 +342,6 @@ select {
 }
 
 input[type="checkbox"] {
-  /* Add if not using autoprefixer */
   -webkit-appearance: none;
   appearance: none;
   margin: 0;
@@ -382,7 +349,7 @@ input[type="checkbox"] {
   color: currentColor;
   width: 2.3em;
   height: 2.3em;
-  border: 0.15em solid #0f2b43ff;
+  border: 0.15em solid var(--primary-color);
   transform: translateY(-0.075em);
   display: grid;
   place-content: center;
@@ -395,13 +362,14 @@ input[type="checkbox"]::before {
   height: 1.5em;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1.5em #0f2b43ff;
+  box-shadow: inset 1em 1.5em var(--primary-color);
   border-radius: 50%;
 }
 input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 
+/*********** Progress bar ***********/
 .progress-section {
   display: flex;
   justify-content: center;
@@ -421,7 +389,7 @@ input[type="checkbox"]:checked::before {
 
 .progressbar-progress {
   height: 100%;
-  background-color: #1e3851ff;
+  background-color: var(--primary-color);
   border-radius: 12px;
   transition: 0.4s ease;
 }
@@ -435,6 +403,7 @@ input[type="checkbox"]:checked::before {
   margin-left: 5px;
 }
 
+/*********** Error message ***********/
 .error-msg-container {
   display: flex;
   justify-content: center;
@@ -446,7 +415,7 @@ input[type="checkbox"]:checked::before {
 
 .error-msg {
   color: #f8f2f2;
-  background-color: rgb(221, 93, 93, 0.9);
+  background-color: var(--error-background-color);
   height: fit-content;
   width: 70%;
   padding: 10px 20px;
@@ -454,6 +423,7 @@ input[type="checkbox"]:checked::before {
   align-self: center;
 }
 
+/*********** Media query for tablet and laptop ***********/
 @media screen and (min-width: 768px) {
   .question-page {
     grid-template-columns: 50% auto;
@@ -473,6 +443,11 @@ input[type="checkbox"]:checked::before {
     width: max-content;
     padding: 0 20px;
     height: 45px;
+  }
+
+  .button-label {
+    padding: 1em 2em;
+    margin: 1em;
   }
 
   input[type="range"] {

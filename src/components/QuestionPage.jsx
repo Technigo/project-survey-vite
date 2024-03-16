@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import ProgressBar from "./ProgressBar";
 
 const QuestionPage = ({ createSummary }) => {
+  // States
   const [qNum, setQNum] = useState(0);
   const [validation, setValidation] = useState({
     validated: false,
@@ -29,7 +30,7 @@ const QuestionPage = ({ createSummary }) => {
       type === "checkbox" && checked
         ? [...formData.subscription, value]
         : type === "checkbox" && !checked
-        ? //remove unselected option if any from the subscription list
+        ? //remove unselected option if any from the subscription array
           [...formData.subscription].filter(activity => activity !== value)
         : value;
     // the value is not "" or []
@@ -90,11 +91,11 @@ const QuestionPage = ({ createSummary }) => {
     if (validation.validated && qNum === 4) {
       createSummary(formData);
     } else if (validation.validated) {
-      //reset the validation details
+      //reset the validation details for new question page
       setValidation({
         errorMsg: "",
         showError: false,
-        setErrorMsg: "",
+        validated: false,
       });
       setQNum(qNum + 1);
     } else {
@@ -112,7 +113,6 @@ const QuestionPage = ({ createSummary }) => {
   return (
     <div className="question-page">
       <Header question={questions[qNum]} />
-
       <form onSubmit={handleSubmit}>
         <ProgressBar progress={qNum + 1} />
         <Question

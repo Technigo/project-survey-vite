@@ -113,6 +113,7 @@ const Question = ({ formData, qNum, onChange }) => {
                 name="subscription"
                 value="Knitting"
                 onChange={onChange}
+                checked={formData.subscription.includes("Knitting")}
               />
               <span>Knitting</span>
             </label>
@@ -122,6 +123,7 @@ const Question = ({ formData, qNum, onChange }) => {
                 name="subscription"
                 value="ASMR"
                 onChange={onChange}
+                checked={formData.subscription.includes("ASMR")}
               />
               <span>ASMR</span>
             </label>
@@ -131,6 +133,7 @@ const Question = ({ formData, qNum, onChange }) => {
                 name="subscription"
                 value="Meditation"
                 onChange={onChange}
+                checked={formData.subscription.includes("Meditation")}
               />
               <span>Meditation</span>
             </label>
@@ -140,13 +143,13 @@ const Question = ({ formData, qNum, onChange }) => {
                 name="subscription"
                 value="Yoga"
                 onChange={onChange}
+                checked={formData.subscription.includes("Yoga")}
               />
               <span>Yoga</span>
             </label>
           </div>
         </div>
       )}
-      {qNum === 5 && <p>Summary should be displayed here.</p>}
     </div>
   );
 };

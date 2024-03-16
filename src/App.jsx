@@ -17,7 +17,7 @@ export const App = () => {
     } way(s) to handle the stress. And you have subscribed to our updates on ${data.subscription.join(
       ", "
     )} to your email ${data.email}`;
-    //divide summary text into an array
+    //convert summary string into an array
     setShowSummary(summaryText.split("!"));
   };
 
