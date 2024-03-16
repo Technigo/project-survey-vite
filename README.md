@@ -1,37 +1,16 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/survey.svg" alt="Project Banner Image">
-  </a>
-</h1>
-
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+Goal for this week: create a survey using UseState hook in React. Make the survey responsive, accessible and perform a score>=95 in Lighthouse.
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I've personalized my design and created a survey which display one question per page. I've used UseState hook to handle imputs and finally display the result of all choices using a ternary operator (which I'm really proud of 😅).I've used basic validation(required) but seems not working, I'll need to fix that.
+Overall I feel I'm getting along with React and not with the styling, not my personal best.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://coffeeconsumptionhabits.netlify.app/
 
-## Instructions
+### Collaborators
 
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+[vittoriamatteoli]

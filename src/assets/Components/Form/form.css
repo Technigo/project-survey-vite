@@ -1,0 +1,190 @@
+form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formWrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.startButton {
+  box-sizing: border-box;
+  width: 300px;
+  height: 60px;
+  margin-top: 20px;
+  background-color: white;
+  color: #7e1639;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: solid #7e1639;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+button {
+  width: 300px;
+  height: 60px;
+  margin-top: 20px;
+  background-color: #7e1639;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: solid #7e1639;
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+button:active {
+  background-color: #bf2b5a;
+  border: solid #bf2b5a;
+}
+button:invalid {
+  background-color: #68157a;
+  border: solid #68157a;
+}
+::placeholder {
+  color: #7e1639;
+}
+
+input {
+  width: 200px;
+  outline: none;
+  color: #7e1639;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: solid #7e1639;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+input:focus {
+  color: #bf2b5a;
+  border: solid #bf2b5a;
+}
+::placeholder:focus {
+  color: #bf2b5a;
+}
+
+input:user-valid {
+  color: #68157a;
+  border: solid #68157a;
+}
+#radiobuttonContainer {
+  display: block;
+  /* position: relative; */
+  cursor: pointer;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#radioCheckbox {
+  opacity: 0;
+  cursor: pointer;
+}
+.customRadioCheckbox {
+  background-color: #7e163930;
+  cursor: pointer;
+  border: solid #7e1639;
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+.customRadioCheckbox:hover {
+  background-color: #bf2b5a;
+  color: white;
+  border-color: #bf2b5a;
+}
+#radioCheckbox:checked + .customRadioCheckbox {
+  background-color: #68157a;
+  color: white;
+  border-color: #68157a;
+}
+select {
+  outline: none;
+  color: #7e1639;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: solid #7e1639;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+select:focus {
+  background-color: #bf2b5a;
+  color: white;
+  border-color: #bf2b5a;
+}
+select:user-valid {
+  color: white;
+  background-color: #68157a;
+  border: solid #68157a;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 200px;
+  height: 20px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 30%;
+  width: 25px;
+  height: 25px;
+  background: #bf2b5a;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #bf2b5a;
+  cursor: pointer;
+}
+
+@media (min-width: 669px) and (max-width: 1024px) {
+  form {
+    margin: 30px 100px;
+  }
+
+  button {
+    width: 500px;
+    height: 60px;
+  }
+  input {
+    width: 300px;
+  }
+  .slider {
+    width: 300px;
+  }
+}
+@media (min-width: 1025px) {
+  form {
+    margin: 30px 300px;
+  }
+  button {
+    width: 600px;
+    height: 60px;
+  }
+  input {
+    width: 400px;
+  }
+  .slider {
+    width: 400px;
+  }
+}
