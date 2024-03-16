@@ -1,5 +1,5 @@
 .page-container {
-  background-image: url('/Img/6345959-min1.webp');
+  /*background-image: url('/Img/6345959-min1.webp');*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,8 +19,7 @@
 }
 
 .summary-container {
-  background-image: url('/Img/6345959-min1.webp');
-  background-color: hotpink;
+ /*background-image: url('/Img/6345959-min1.webp');*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

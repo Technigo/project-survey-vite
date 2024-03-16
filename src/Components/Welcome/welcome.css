@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');*/
 
 .welcome-container {
   height: 84vh;
@@ -12,14 +12,14 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
   color: #333;
 }
 
 .welcome-title {
   font-size: 70px;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
   color: #ffffff;
   text-transform: uppercase;
   text-shadow: 1px 1px 0px #8d8d8d,
