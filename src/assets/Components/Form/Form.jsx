@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Result } from '../Result/Result'
 import './form.css'
-import { ProgressBar } from '../ProgressBar/ProgressBar'
 
 const selectedCups = ['1 cup', '2 cups', '3 cups', '4 cups or more']
 const selectedTimes = ['Morning', 'Mid-morning', 'Afternoon', 'Evening']
@@ -9,9 +8,13 @@ export const Form = () => {
   const [favouriteCoffee, setFavouriteCoffee] = useState('')
   const [selectedCup, setSelectedCups] = useState('')
   const [selectedReason, setSelectedReason] = useState('')
+  // initial value for selectedTime = empty string
   const [selectedTime, setSelectedTime] = useState([])
+  // initial value for SliderValue= 50 -to display the handlepositioned in the middle of the range
   const [sliderValue, setSliderValue] = useState(50)
+  // initial value for formSubmitted is false - will be true once the form has been submitted
   const [formSubmitted, setFormSubmitted] = useState(false)
+  // initial value for section is 0 to start with initial start button and will increase of 1 for each answer submitted
   const [section, setSection] = useState(0)
 
   const handleInputChange = (event) => {
@@ -41,6 +44,7 @@ export const Form = () => {
   const handleInputSlider = (event) => {
     setSliderValue(event.target.value)
   }
+  //  handleNextSection it's called when a "continue" button it's clicked to render the next section
   const handleNextSection = () => {
     setSection(section + 1)
   }
@@ -54,20 +58,16 @@ export const Form = () => {
     switch (section) {
       case 0:
         return (
-          <div className="formWrapper" tabIndex>
-            <button
-              className="startButton"
-              onClick={handleNextSection}
-              onKeyDown={handleNextSection}
-            >
+          <div className="formWrapper">
+            <button className="startButton" onClick={handleNextSection}>
               Let`s go ☕
             </button>
           </div>
         )
       case 1:
         return (
-          <div className="formWrapper" tabIndex>
-            <label tabIndex>
+          <div className="formWrapper">
+            <label>
               <h1 tabIndex>
                 1.<br></br> What type of coffee do you prefer?
               </h1>
@@ -121,26 +121,13 @@ export const Form = () => {
                 onChange={handleDropdownInput}
                 value={selectedReason}
                 required
-                tabIndex
               >
-                <option value="" tabIndex>
-                  Select a reason:
-                </option>
-                <option value="Energy boost" tabIndex>
-                  Energy boost
-                </option>
-                <option value="Taste preference" tabIndex>
-                  Taste preference
-                </option>
-                <option value="Socialization" tabIndex>
-                  Socialization
-                </option>
-                <option value="Ritual/habit" tabIndex>
-                  Ritual/habit
-                </option>
-                <option value="Warmth/comfort" tabIndex>
-                  Warmth/comfort
-                </option>
+                <option value="">Select a reason:</option>
+                <option value="Energy boost">Energy boost</option>
+                <option value="Taste preference">Taste preference</option>
+                <option value="Socialization">Socialization</option>
+                <option value="Ritual/habit">Ritual/habit</option>
+                <option value="Warmth/comfort">Warmth/comfort</option>
               </select>
             </label>
             <button onClick={handleNextSection}>Continue</button>
@@ -180,10 +167,9 @@ export const Form = () => {
               max="100"
               value={sliderValue}
               className="slider"
-              id="myRange"
             />
             <p>
-              Rate: <span id="demo">{sliderValue}</span>%
+              Rate: <span>{sliderValue}</span>%
             </p>
             <button onClick={handleSubmit}>Submit your answer</button>
           </div>
