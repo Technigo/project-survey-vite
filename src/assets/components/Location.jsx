@@ -1,3 +1,5 @@
+import React from "react";
+
 // eslint-disable-next-line react/prop-types
 export function Location({ value, onChange }) {
   return (
@@ -13,7 +15,6 @@ export function Location({ value, onChange }) {
           checked={value === "the forest"}
           onChange={() => onChange("the forest")}
           className="radio"
-          tabIndex="0"
         />
         <label htmlFor="forest">An enchanted forest</label>
       </div>
@@ -26,7 +27,6 @@ export function Location({ value, onChange }) {
           checked={value === "a far far away kingdom"}
           onChange={() => onChange("a far far away kingdom")}
           className="radio"
-          tabIndex="0"
         />
         <label htmlFor="kingdom">A far far away kingdom</label>
       </div>
@@ -40,7 +40,6 @@ export function Location({ value, onChange }) {
           checked={value === "the School of Witchcraft and Wizardry"}
           onChange={() => onChange("the School of Witchcraft and Wizardry")}
           className="radio"
-          tabIndex="0"
         />
         <label htmlFor="school">School of Witchcraft and Wizardry</label>
       </div>
