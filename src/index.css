@@ -77,10 +77,6 @@ button,
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.radioButton {
-  padding: 0.25em 0;
-}
-
 .submitButton {
   margin: 1em 0;
   padding: 0.25em 0;
@@ -92,13 +88,25 @@ button,
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.radioButton input {
+input {
   cursor: pointer;
+  color: #6a3e38;
 }
 
-/* .radioButton input:checked {
-  background-color: #6a3e38;
-} */
+.radioButton {
+  padding: 0.25em 0;
+  display: flex;
+  align-items: center;
+}
+
+input#forest,
+input#kingdom,
+input#school {
+  width: 28px;
+  height: 28px;
+  padding: 20px;
+  border: #6a3e38 2px solid;
+}
 
 label {
   padding-left: 0.5em;
