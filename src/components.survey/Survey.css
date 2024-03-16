@@ -247,7 +247,14 @@ footer {
 .footer-content p {
 	margin: 0;
 }
-  
+
+.footer-content .link {
+	color: #0b1c2e;
+}
+.footer-content .link:hover {
+	color: #0056b3; 
+  }
+
   .logo {
 	width: 40px;
 	height: auto;
