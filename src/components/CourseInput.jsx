@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-const courses = ["Bouldering", "Top rope climbing", "Sport climbing", "Trad climbing"];
-
 export const CourseInput = () => {
   const [course, setCourse] = useState("");
+
+  const courses = ["Bouldering", "Top rope climbing", "Sport climbing", "Trad climbing"];
 
   return (
     <fieldset className="form-area">
@@ -16,6 +16,7 @@ export const CourseInput = () => {
             name="course"
             onChange={(event) => setCourse(event.target.value)}
             checked={course === group}
+            required
           />
           {group}
         </label>

@@ -3,6 +3,7 @@ import { HandleFocus } from "./HandleFocus.jsx";
 
 export const NameInput = () => {
   const [name, setName] = useState("");
+
   const { placeholder, handleFocus, handleOnBlur } = HandleFocus("Type your full name");
 
   return (
@@ -15,6 +16,7 @@ export const NameInput = () => {
         onFocus={handleFocus}
         onBlur={() => handleOnBlur(name)}
         value={name}
+        required
       />
     </label>
   );
