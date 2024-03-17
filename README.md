@@ -1,37 +1,13 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/survey.svg" alt="Project Banner Image">
-  </a>
-</h1>
-
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+To practice how to use the React hook useState and how to make a controlled form I created a basic survey to get feedback from people who had participated in a climbing course.
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I used different forums to read how other people had solve similiar problems and tried to translate that into my code. I also discussed the assignment with my classmates and how they have approach different tasks in the assignment.
+
+If I had more time, then I would have tried to do all of the stretchgoals.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+https://animated-kelpie-fc1fa3.netlify.app/

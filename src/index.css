@@ -1,13 +1,195 @@
 :root {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-color: #496480;
+  --secondary-color: #b3c1d1;
+  --header-font: Protest Revolution, Sans;
+  --text-font: Quicksand, Sans;
+  --text-size: 20px;
+  --text-color: #2d2e32;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--text-font);
+  font-size: var(--text-size);
+  color: var(--text-color);
+}
+
+/* background image */
+body {
+  background-image: url(assets/pexels-pavel-danilyuk-7590889.jpg);
+  background-size: cover;
+}
+
+.container {
+  background-color: #fff;
+  width: 95%;
+  height: 100%;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.header-box {
+  border-bottom: 5px dotted var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+/* ----------- HEADERS----------- */
+
+h1 {
+  margin-top: 20px;
+  font-family: var(--header-font);
+  color: #496480;
+  font-size: 45px;
+}
+
+h2 {
+  font-family: var(--header-font);
+  color: var(--primary-color);
+  font-size: 25px;
+  padding-bottom: 30px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+/* ----------- SUMMARY ------------ */
+
+.summary {
+  padding: 10px;
+  text-align: center;
+}
+
+.summary p {
+  margin: 15px 0;
+}
+
+/* ------- FORM INTRO TEXT -------- */
+
+.intro {
+  text-align: center;
+}
+
+.intro p {
+  margin-top: 5px;
+}
+
+/* ------------ FORM ------------ */
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.form-area {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------- TEXT INPUT ---------- */
+
+.text-form-area input {
+  border: 1px solid var(--primary-color);
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* -------- SUBMIT BUTTON --------- */
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* ------- RADIO BUTTONS -------- */
+
+.radio-options {
+  display: block;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  margin: 3px 0;
+  cursor: pointer;
+}
+
+/* hides the radiobutton */
+input[type="radio"] {
+  opacity: 0;
+}
+
+/* when radio button is seleceted it changes background */
+.radio-options.selected {
+  background-color: var(--secondary-color);
+}
+
+/* when selected a checkmark will appear before the text */
+.radio-options.selected:before {
+  content: "\2713";
+}
+
+fieldset {
+  padding: 2px;
+  border: none;
+}
+
+/* ------- SELECT DROPDOWN -------- */
+
+.select-style {
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ------- MEDIA QUERY -------- */
+
+/* tablet */
+@media (min-width: 768px) {
+  .container {
+    width: 75%;
+    padding: 0 25px;
+  }
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+}
+
+/* desktop */
+@media (min-width: 992px) {
+  .container {
+    width: 60%;
+  }
+  h1 {
+    font-size: 75px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  * {
+    font-size: 23px;
+  }
 }
