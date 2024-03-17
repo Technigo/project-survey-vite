@@ -1,4 +1,4 @@
-import "./Header.css";
+import "./Header.css"
 
 export const Header = () => {
   return (
@@ -6,5 +6,5 @@ export const Header = () => {
       <h1 onClick={() => location.reload()}>Surprise Holiday</h1>
       <h2>by Alma and Linda</h2>
     </header>
-  );
-};
+  )
+}

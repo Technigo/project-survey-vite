@@ -1,16 +1,16 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
+import { useState } from "react"
+import PropTypes from "prop-types"
 
 // Component for the Name Question
 
 export const Name = ({ onInputChange }) => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState("")
 
   const handleChange = (event) => {
-    const newName = event.target.value;
-    setName(newName);
-    onInputChange("name", newName);
-  };
+    const newName = event.target.value
+    setName(newName)
+    onInputChange("name", newName)
+  }
 
   return (
     <div className="questions">
@@ -28,9 +28,9 @@ export const Name = ({ onInputChange }) => {
         />
       </label>
     </div>
-  );
-};
+  )
+}
 
 Name.propTypes = {
   onInputChange: PropTypes.func.isRequired,
-};
+}

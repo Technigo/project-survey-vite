@@ -1,25 +1,24 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
+import { useState } from "react"
+import PropTypes from "prop-types"
 // Import for Validation of the Radio Buttons
-import { useForm, Controller } from "react-hook-form";
-import checkmarkIcon from "../assets/checkmark.svg";
+import { useForm, Controller } from "react-hook-form"
+import checkmarkIcon from "../assets/checkmark.svg"
 
 // Component for the Duration of the Stay Question
 
 export const Period = ({ onInputChange }) => {
-  const [period, setPeriod] = useState("");
+  const [period, setPeriod] = useState("")
   const {
     control,
     formState: { errors },
-  } = useForm();
+  } = useForm()
 
   const handleChange = (event) => {
-    const newPeriod = event.target.value;
-    console.log("Q3 period:", newPeriod);
+    const newPeriod = event.target.value
 
-    setPeriod(newPeriod);
-    onInputChange("period", newPeriod);
-  };
+    setPeriod(newPeriod)
+    onInputChange("period", newPeriod)
+  }
 
   return (
     <div className="questions">
@@ -38,8 +37,7 @@ export const Period = ({ onInputChange }) => {
                 style={{
                   backgroundColor:
                     period === "weekend" ? "#CCD1ED" : "transparent",
-                }}
-              >
+                }}>
                 <input
                   name="period-length"
                   id="weekend"
@@ -47,8 +45,7 @@ export const Period = ({ onInputChange }) => {
                   value="weekend"
                   onChange={handleChange}
                   checked={period === "weekend"}
-                  required
-                ></input>
+                  required></input>
                 {period === "weekend" && (
                   <span className="checkmark-icon">
                     <img src={checkmarkIcon} alt="checkmark" />
@@ -62,16 +59,14 @@ export const Period = ({ onInputChange }) => {
                 style={{
                   backgroundColor:
                     period === "week" ? "#CCD1ED" : "transparent",
-                }}
-              >
+                }}>
                 <input
                   name="period-length"
                   id="week"
                   type="radio"
                   value="week"
                   onChange={handleChange}
-                  checked={period === "week"}
-                ></input>
+                  checked={period === "week"}></input>
                 {period === "week" && (
                   <span className="checkmark-icon">
                     <img src={checkmarkIcon} alt="checkmark" />
@@ -85,16 +80,14 @@ export const Period = ({ onInputChange }) => {
                 style={{
                   backgroundColor:
                     period === "two-weeks" ? "#CCD1ED" : "transparent",
-                }}
-              >
+                }}>
                 <input
                   name="period-length"
                   id="two-weeks"
                   type="radio"
                   value="two-weeks"
                   onChange={handleChange}
-                  checked={period === "two-weeks"}
-                ></input>
+                  checked={period === "two-weeks"}></input>
                 {period === "two-weeks" && (
                   <span className="checkmark-icon">
                     <img src={checkmarkIcon} alt="checkmark" />
@@ -108,16 +101,14 @@ export const Period = ({ onInputChange }) => {
                 style={{
                   backgroundColor:
                     period === "month" ? "#CCD1ED" : "transparent",
-                }}
-              >
+                }}>
                 <input
                   name="period-length"
                   id="month"
                   type="radio"
                   value="month"
                   onChange={handleChange}
-                  checked={period === "month"}
-                ></input>
+                  checked={period === "month"}></input>
                 {period === "month" && (
                   <span className="checkmark-icon">
                     <img src={checkmarkIcon} alt="checkmark" />
@@ -133,9 +124,9 @@ export const Period = ({ onInputChange }) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
 Period.propTypes = {
   onInputChange: PropTypes.func.isRequired,
-};
+}
