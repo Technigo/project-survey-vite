@@ -6,10 +6,6 @@
 
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
 ## Getting Started with the Project
 
 ### Dependency Installation & Startup Development Server
@@ -28,10 +24,4 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c27fdbd8-26db-4814-aa61-b4b936192016/deploy-status)](https://app.netlify.com/sites/yifan-survey-project/deploys)
