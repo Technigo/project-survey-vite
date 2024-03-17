@@ -9,11 +9,13 @@
 }
 
 .radio-box {
+  cursor: pointer;
   margin: 8px;
   accent-color: var(--button-shadow-color);
 }
 
 .radio-option-text {
+  cursor: pointer;
   margin-top: 8px;
 }
 
