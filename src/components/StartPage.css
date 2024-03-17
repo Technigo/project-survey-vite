@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-/* Start page positioning */
 .start-page {
   position: fixed;
   top: 50%;
@@ -10,7 +9,6 @@
   border-radius: 50px;
 }
 
-/* Start page image */
 .start-page img {
   display: block;
   width: 100%;
@@ -18,7 +16,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
-/* Start page text container */
 .text-container {
   position: absolute;
   top: 50%;
@@ -27,18 +24,18 @@
   text-align: center;
 }
 
-/* Start page heading */
-.text-container h1 {
+.text-container h1,
+.text-container button {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 1px;
+}
+
+.text-container h1 {
   color: #ffffff;
   font-size: 80px;
 }
 
-/* Start page button */
 .text-container button {
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 1px;
   display: block;
   margin: auto;
   margin-top: -20px;
@@ -52,24 +49,17 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Changes background and text color of button on hover */
 .text-container button:hover {
   background-color: #be0000;
   color: white;
 }
 
-/* Media query for screens up to 480px */
 @media (max-width: 480px) {
   .start-page img {
-    display: none; /* Hides the image */
+    display: none;
   }
 
   .text-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
     width: 100%;
   }
 
@@ -85,7 +75,6 @@
   }
 }
 
-/* Media query for screens up to 768px */
 @media (max-width: 768px) {
   .text-container h1 {
     font-size: 30px;
@@ -97,7 +86,6 @@
   }
 }
 
-/* Media query for screens up to 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
   .start-page {
     width: 90%;
