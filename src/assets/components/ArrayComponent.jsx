@@ -1,0 +1,15 @@
+export const pillage = ["Bonebreaker", "Pillage", "Raid", "Robbery", "Theft", "Steal", "Burglary", "Heist", "Embezzlement", "Mugging", "Swindle", "Con", "Scam", "Fraud", "Racket", "Extortion", "Blackmail", "Bribery", "Graft", "Corruption", "Subornation", "Perjury", "Obstruction", "Treachery", "Betrayal", "Deceit", "Duplicity", "Perfidy", "Infidelity", "Disloyalty", "Treason", "Sedition", "Sabotage", "Espionage", "Infiltration", "Subversion", "Insurrection", "Rebellion", "Revolution", "Coup", "Uprising", "Mutiny", "Sedition", "Anarchy", "Chaos", "Mayhem", "Riot", "Pandemonium", "Bedlam", "Havoc", "Carnage", "Massacre", "Slaughter", "Butchery", "Bloodbath"]
+
+export const treasure = ["GoldTooth", "Treasurehunter", "Flashy", "Graverobber", "Jewelpatch", "Pearl", "Diamond", "Ruby", "Emerald", "Sapphire", "Gold", "Silver", "Platinum","Long Silver", "Chest", "Booty", "Loot", "Plunder"]
+
+export const rum = ["Drunken", "Booze", "Grog", "Sauce", "Schnapps", "Whiskey", "Bourbon", "Scotch", "Rye", "Vodka", "Gin", "Rum", "Tequila", "Brandy", "Cognac", "Liqueur", "Absinthe", "Schnapps", "Moonshine", "Brew", "Distillate", "Mash", "Hooch", "Rotgut", "Firewater", "Swill", "Slop", "Suds","Ale", "Beer", "Lager", "Stout", "Porter", "Pilsner", "Bock", "Malt", "Hops", "Yeast", "Wort", "Brewery", "Distillery", "Still", "Keg", "Cask", "Barrel", "Bottle", "Flask", "Jug", "Mug", "Pint", "Gallon", "Quart", "Pint", "Shot", "Drink", "Drunk", "Tipsy", "Sloshed", "Plastered", "Wasted", "Hammered", "Blitzed", "Soused", "Pickled"]
+
+export const dirt = ["Landlubber", "Filty", "Dusty", "Muddy", "Stained", "Blackened", "Nasty", "Messy", "Sandy", "Mouldy", "Gravel", "Grimy", "Dingy", "Grubby", "Grungy", "Silty", "Loamy"]
+
+export const air = ["Sky", "Clouds", "Tornado", "Wind", "Storm", "Fersh", "Breeze", "Breath", "Puff", "Zephyr", "Waft", "Blow", "Whiff", "Toxic"]
+
+export const water = ["Murky", "Brackish", "Dappled", "Turbulent", "Crystalline", "Deep", "Shallow", "Filmy", "Calm", "Blue", "Clean", "Clear", "Foamy", "Frothy", "Misty", "Deep sea", "Basin", "Cove", "Creek", "lake", "Bay", "Canal"]
+
+export const fire = ["Firewood", "Burning", "Hellfire", "Lava", "Fenix", "Flaming", "Molten", "Blazing", "Burning", "blazing", "smoldering", "flickering", "radiating", "mesmerizing", "scorching", "searing", "charring", "guttering", "irradiating", "illuminating", "shimmering", "warming", "devastating", "immolating", "hot", "roaring", "thundering"]
+
+export const piratenames = ["Dark skull", "Toothless", "Seadog", "Musclemouth", "Gybrush", "Greybeard", "Blackbeard", "Bluebeard", "Goldheart", "Stinkin'n", "Old tide", "Vex", "Black Jack", "Fearless", "Steelbreath", "Tide", "Cut-throat", "Pegleg", "Two toe", "One arm", "Sharkswimmer", "Landlubber", "Gunpowder", "Cannonball", "McTuna", "Sea-Wolf", "Lobsterleg"]
