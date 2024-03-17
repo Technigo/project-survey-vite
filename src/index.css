@@ -16,7 +16,7 @@ code {
   text-align: center;
   font-family: Helvetica;
   font-size: 20px;
-  color: #1D3557;
+  color: #1d3557;
   margin: 0 20px 0 20px;
 }
 
@@ -36,13 +36,13 @@ input[type="radio"] {
 }
 
 .radioButtonLabel {
- display: inline-block;
- cursor: pointer;
- padding: 10px 30px;
- margin: 10px;
- border: 1px solid #16405B;
- border-radius: 5px;
- position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 30px;
+  margin: 10px;
+  border: 1px solid #16405b;
+  border-radius: 5px;
+  position: relative;
 }
 
 .radioButtonLabel::before {
@@ -72,12 +72,12 @@ select {
   margin-top: 15px;
   font-size: 20px;
   border-radius: 5px;
-  color: #16405B;
+  color: #16405b;
 }
 
 select:focus {
   outline: none;
-  border-color: #457B9D;
+  border-color: #457b9d;
 }
 
 select option {
@@ -94,41 +94,40 @@ button {
 }
 
 button:hover {
-  background-color: #A8DADC;
+  background-color: #a8dadc;
 }
 
 button:active {
-  background-color: #1D3557;
+  background-color: #1d3557;
 }
 
 @media (min-width: 800px) {
-.form {
-  font-size: 24px;
-}
+  .form {
+    font-size: 24px;
+  }
 
-select {
-  font-size: 24px;
-}
+  select {
+    font-size: 24px;
+  }
 
-button {
-  font-size: 24px;
-}
+  button {
+    font-size: 24px;
+  }
 
-.textQuestion input {
-  width: 200px;
+  .textQuestion input {
+    width: 200px;
+  }
 }
-}
-
 
 @media (min-width: 1024px) {
   .form {
     font-size: 30px;
   }
-  
+
   select {
     font-size: 30px;
   }
-  
+
   button {
     font-size: 30px;
   }
@@ -137,7 +136,4 @@ button {
     width: 250px;
     height: 50px;
   }
-
 }
-
-

@@ -1,8 +1,7 @@
 import { useState } from "react";
-import Header from "./Components/Header"
-import Form from "./Components/Form"
-import Summary from "./Components/Summary"
-
+import Header from "./Components/Header";
+import Form from "./Components/Form";
+import Summary from "./Components/Summary";
 
 export const App = () => {
   const [formData, setFormData] = useState({});
@@ -11,7 +10,7 @@ export const App = () => {
   // Function to handle form submission
   const handleFormSubmit = (data) => {
     setFormData(data); // save the form data
-    setSubmitted(true); 
+    setSubmitted(true);
   };
 
   return (
