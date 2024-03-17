@@ -14,13 +14,13 @@ export const Button = ({
       {isStranger ? (
         <>
           {currentQuestionIndex > lastQuesionIndex && (
-            <>
-              <p>Are you satisfied with your choice?</p>
-              <p>
+            <div className="submit-text-area">
+              <p className="submit-text">Are you satisfied with your choice?</p>
+              <p className="submit-text">
                 Click previous button to go back, click submit button to send
                 your choices.
               </p>
-            </>
+            </div>
           )}
 
           {currentQuestionIndex > 0 &&
@@ -55,20 +55,18 @@ export const Button = ({
       ) : (
         <>
           {currentQuestionIndex > removLastQuestion && (
-            <>
-              <p>Are you satisfied with your choice?</p>
-              <p>
+            <div className="submit-text-area">
+              <p className="submit-text">Are you satisfied with your choice?</p>
+              <p className="submit-text">
                 Click previous button to go back, click submit button to send
                 your choices.
               </p>
-            </>
+            </div>
           )}
 
-          {
-            (currentQuestionIndex = 0 && (
-              <p className="style-button" aria-hidden="true"></p>
-            ))
-          }
+          {currentQuestionIndex === 0 && (
+            <p className="style-button" aria-hidden="true"></p>
+          )}
 
           {currentQuestionIndex > 0 &&
             currentQuestionIndex <= removLastQuestion + 1 && (

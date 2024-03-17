@@ -1,0 +1,18 @@
+.feature-option-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  font-size: var(--option-font-size);
+  font-weight: var(--option-font-weight);
+}
+
+.feature-option {
+  margin-top: 8px;
+}
+
+.feature-checkbox {
+  margin: 8px;
+  accent-color: var(--button-shadow-color);
+}

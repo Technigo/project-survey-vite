@@ -47,7 +47,7 @@
 
     {
       "id": "q4",
-      "questionText": "How important is having a dedicated home office or workspace to you?",
+      "questionText": "How would you rate the importance of having a dedicated home office or workspace?",
       "options": [{ "id": "q4a1", "optionText": "points:" }]
     },
 

@@ -5,9 +5,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --main-color: #240f04;
-  --option-background-color: #faf4f1;
+  --option-background-color: #fffaf8;
   --question-background-color: #b2d1ad;
   --button-shadow-color: #7eb377;
+  --option-font-size: 1.2rem;
+  --option-font-weight: 400;
 }
 
 code {
@@ -22,7 +24,7 @@ code {
 }
 
 body {
-  background-color: var(--sub-color);
+  background-color: var(--option-background-color);
   color: var(--main-color);
 }
 
@@ -31,6 +33,7 @@ main {
 }
 
 button {
+  cursor: pointer;
   background: none;
   margin: 50px auto;
   width: 200px;
@@ -49,8 +52,7 @@ button:hover {
 }
 
 button:focus {
-  outline: none;
-  background-color: var(--button-shadow-color);
+  outline: var(--button-shadow-color) solid 2px;
 }
 
 .input-section {

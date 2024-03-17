@@ -1,5 +1,6 @@
 .button-section {
   width: 100%;
+  height: 100vh;
   display: grid;
   flex-direction: row;
   grid-template-columns: 0.7fr 1fr;
@@ -7,23 +8,23 @@
   bottom: 0;
 }
 
-.style-button {
-  margin: 50px auto;
-  width: 200px;
-  height: 40px;
-  border-radius: 30px;
-  font-family: inherit;
-  font-size: 1.2rem;
-  font-weight: 800;
-}
-
 .previous-btn,
 .next-btn,
 .submit-btn {
   text-align: center;
+  margin-top: calc(100vh - 7rem);
 }
 
-.button-section p {
-  font-size: 2rem;
+.submit-text-area {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
   font-weight: 800;
+}
+
+.submit-text {
+  margin: 8px auto;
 }

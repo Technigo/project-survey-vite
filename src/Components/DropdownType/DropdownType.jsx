@@ -21,32 +21,33 @@ export const DropdownType = ({ question, handleDropDownChange }) => {
         <p>{question.questionText}</p>
       </div>
 
-      <div className="option-area">
+      <div className="dropdown-option-area">
         <button
           className="dropdown-btn"
           type="button"
           onClick={handleOpenOptions}
         >
-          Select your dream home location
+          {selectedOption ? selectedOption : "Select your dream home location"}
         </button>
-        {isOpen && (
-          <ul className="dropdown-list">
-            {question.options.map((option) => (
-              <li
-                key={option.id}
-                value={option.optionText}
-                onClick={() => handleOptionClick(option.optionText)}
-              >
-                {option.optionText}
-              </li>
-            ))}
-          </ul>
-        )}
-        {selectedOption && (
-          <p>
-            Your selection: <span>{selectedOption}</span>
-          </p>
-        )}
+        <div className="dropdown-list">
+          <div className={`dropdown-area ${isOpen ? "open" : ""}`}>
+            {isOpen && (
+              <ul>
+                {question.options.map((option) => (
+                  <li
+                    className="location-option"
+                    key={option.id}
+                    value={option.optionText}
+                    tabIndex={0}
+                    onClick={() => handleOptionClick(option.optionText)}
+                  >
+                    {option.optionText}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
       </div>
     </section>
   );

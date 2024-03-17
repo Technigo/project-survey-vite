@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ColorType.css";
 
 export const ColorType = ({ question, handleChange }) => {
   const [selectedColor, setSelectedColor] = useState("");
@@ -15,26 +16,15 @@ export const ColorType = ({ question, handleChange }) => {
         {question.questionText}
       </label>
       <div className="option-area">
+        <p>Click the color cube to select</p>
         <input
           type="color"
           id={question.id}
           name={question.id}
           value={selectedColor}
+          className="color-wheel"
           onChange={handleColorChange}
         />
-        {selectedColor && (
-          <>
-            <p>Your selection:</p>
-            <div
-              className="color-display"
-              style={{
-                backgroundColor: selectedColor,
-                width: "30px",
-                height: "30px",
-              }}
-            ></div>
-          </>
-        )}
       </div>
     </section>
   );

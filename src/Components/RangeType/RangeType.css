@@ -1,0 +1,33 @@
+.option-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.range-bar {
+  -webkit-appearance: none;
+  appearance: slider-vertical;
+  cursor: pointer;
+  margin: 15px;
+  accent-color: var(--main-color);
+  background: transparent;
+  height: 15rem;
+}
+
+.range-bar::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background-color: var(--question-background-color);
+  border-radius: 0.5rem;
+}
+
+.range-bar::-moz-range-track {
+  background-color: var(--question-background-color);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+.user-rate {
+  font-size: var(--option-font-size);
+  font-weight: var(--option-font-weight);
+}

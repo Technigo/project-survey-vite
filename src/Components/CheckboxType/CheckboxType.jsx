@@ -1,3 +1,5 @@
+import "./CheckboxType.css";
+
 export const CheckboxType = ({ question, handleChecked, handleUncheck }) => {
   return (
     <section className="input-section">
@@ -5,10 +7,11 @@ export const CheckboxType = ({ question, handleChecked, handleUncheck }) => {
         <p>{question.questionText}</p>
       </div>
 
-      <div className="option-area">
+      <div className="feature-option-area">
         {question.options.map((option) => (
-          <div key={option.id} className="each-option">
+          <div className="feature-option" key={option.id}>
             <input
+              className="feature-checkbox"
               type="checkbox"
               id={option.id}
               name={option.id}
@@ -21,7 +24,9 @@ export const CheckboxType = ({ question, handleChecked, handleUncheck }) => {
                 }
               }}
             />
-            <label htmlFor="{option.id}">{option.optionText}</label>
+            <label className="feature-text" htmlFor="{option.id}">
+              {option.optionText}
+            </label>
           </div>
         ))}
       </div>
