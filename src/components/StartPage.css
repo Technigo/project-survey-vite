@@ -5,13 +5,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 90%;
+  max-width: 1000px; 
   border-radius: 50px;
 }
 
 .start-page img {
   display: block;
   width: 100%;
+  height: auto;
   border-radius: 25px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
