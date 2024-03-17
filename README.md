@@ -26,7 +26,7 @@ I first created the survey form in one component. After that, I broke out the su
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://famous-blini-345240.netlify.app
 
 ## Instructions
 
