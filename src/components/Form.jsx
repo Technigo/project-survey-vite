@@ -60,8 +60,10 @@ export const Form = () => {
   } else {
     return (
       <div className="form-questions">
-        <h1>Hello there!</h1>
-        <p>Do you want to tell us about your favorite ice cream?</p>
+        <div>
+          <h1>Hello there!</h1>
+          <h4>Do you want to tell us about your favorite ice cream?</h4>
+        </div>
         <form onSubmit={(event) => event.preventDefault()}>
           <div className="question">
             <label>

@@ -43,10 +43,10 @@ body {
   align-items: center;
   text-align: center;
   background-color: var(--strawberry);
-  padding-top: 20px;
+  padding-top: 50px;
   padding-left: 35px;
   padding-right: 35px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   line-height: 30px;
   min-width: 120px;
   max-width: 270px;
@@ -101,7 +101,7 @@ body {
   text-align: center;
   text-decoration: none;
   font-size: 14px;
-  margin: 20px;
+  margin: 30px;
 }
 
 .button:hover {
