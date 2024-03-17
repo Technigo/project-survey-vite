@@ -7,13 +7,57 @@ import { RangeSlider } from "./RangeSlider";
 import "./SurveyForm.css";
 
 export const SurveyForm = ({ setFormData, showResult }) => {
-  // State to hold the selected values
+  // State to hold the selected values and current step
+  const [step, setStep] = useState(1);
   const [selectedGenre, setSelectedGenre] = useState("");
   const [selectedMusician, setSelectedMusician] = useState("");
   const [selectedMusicPreference, setSelectedMusicPreference] = useState("");
   const [selectedDiscovery, setSelectedDiscovery] = useState("");
+  const [selectedRange, setSelectedRange] = useState("");
 
-  // Function to handle dropdown changes
+  // Functions to handle next and previous steps
+  const nextStep = () => {
+    setStep(step + 1);
+  };
+
+  const prevStep = () => {
+    setStep(step - 1);
+  };
+
+  // Function to handle form submission
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = {
+      musicGenre: selectedGenre,
+      musician: selectedMusician,
+      musicPreference: selectedMusicPreference,
+      musicDiscovery: selectedDiscovery,
+      musicRange: selectedRange
+    };
+
+    showResult();
+    setFormData(formData);
+  };
+
+  // Render different components based on the current step
+  const renderStep = () => {
+    switch (step) {
+      case 1:
+        return <DropDown handleChange={handleGenreChange} />;
+      case 2:
+        return <TextInput value={selectedMusician} handleChange={handleMusicianChange} />;
+      case 3:
+        return <RadioButtons handleChange={handlePreferenceChange} />;
+      case 4:
+        return <DropDown2 handleChange={handleDiscoveryChange} />;
+      case 5:
+        return <RangeSlider handleChange={handleRangeChange}/>;
+      default:
+        return null;
+    }
+  };
+
+  // Event handlers for dropdown changes
   const handleGenreChange = (event) => {
     setSelectedGenre(event.target.value);
   };
@@ -30,29 +74,36 @@ export const SurveyForm = ({ setFormData, showResult }) => {
     setSelectedDiscovery(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const formData = {
-      musicGenre: selectedGenre,
-      musician: selectedMusician,
-      musicPreference: selectedMusicPreference,
-      musicDiscovery: selectedDiscovery,
-    };
-
-    showResult();
-    setFormData(formData);
+  const handleRangeChange = (event) => {
+    setSelectedRange(event.target.value);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="survey-form">
-      <DropDown handleChange={handleGenreChange} />
-      <TextInput value={selectedMusician} handleChange={handleMusicianChange} />
-      <RadioButtons handleChange={handlePreferenceChange} />
-      <DropDown2 handleChange={handleDiscoveryChange} />
-      <RangeSlider />
-      <button type="submit" className="button">
-        Submit
-      </button>
-    </form>
+    <div className="survey-form">
+      <div className="survey-content">
+        <form onSubmit={handleSubmit}>
+          {renderStep()}
+          <div className="buttonContainer">
+            {step > 1 && (
+              <button type="button" onClick={prevStep} className="button">
+                Back
+              </button>
+            )}
+
+            {step < 5 && (
+              <button type="button" onClick={nextStep} className="button">
+                Next Question
+              </button>
+            )}
+
+            {step === 5 && (
+              <button type="submit" className="button">
+                Submit
+              </button>
+            )}
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };

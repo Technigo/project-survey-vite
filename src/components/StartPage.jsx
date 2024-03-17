@@ -1,6 +1,6 @@
 import "react";
 import "./StartPage.css";
-import startPageImage from "../assets/startpage.png";
+import startPageImage from "../assets/startpage.avif";
 
 import PropTypes from "prop-types";
 
@@ -12,7 +12,7 @@ export const StartPage = ({ onStartSurvey }) => {
         <h1>Music Survey</h1>
         <button onClick={onStartSurvey}>Let&apos;s start!</button>
       </div>
-    </div>
+    </div> 
   );
 };
 

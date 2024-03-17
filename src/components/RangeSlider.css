@@ -1,9 +1,18 @@
 /* Slider question styling */
 .slider-label {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: bold;
-  font-size: 16px;
-  padding-bottom: 10px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 /* Slider positioning */
 .slider-container {
@@ -11,8 +20,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 /* Slider styling */
@@ -24,4 +31,13 @@
   opacity: 2;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+}
+
+.number{
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.question{
+  display: block;
 }

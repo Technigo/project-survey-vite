@@ -5,15 +5,25 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
+  width: 70%;
+  height: 60%;
   border-radius: 25px;
-  padding: 2%;
+}
+
+.survey-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 
 /* Styling for survey heading */
 h1 {
   font-size: 30px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   color: #000000;
   margin-bottom: 10px;
   text-align: center;
@@ -23,27 +33,47 @@ h1 {
 
 /* Styling for Submit-button */
 .button {
-  display: block;
-  margin: 0 auto;
   background-color: black;
   color: #fff;
-  padding: 10px 20px;
+  padding: 4px 14px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 20px;
-  margin-bottom: 5px;
+  margin: 20px 42px 20px 52px;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .button:hover {
   background-color: blue;
 }
 
-/* Media query for screens under 940px */
-@media (max-width: 940px) {
+.buttonContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin-top: 10px;
+}
+
+form{
+  width: 100%;
+}
+
+@media (min-width:667px) and (max-width:1025px) {
   .survey-form {
-    width: 70%; 
+    width: 80%;
+    height: 70%;
+  }
+}
+
+/* Styling for mobile device */
+@media (max-width:666px){
+  .survey-form {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
   }
 }
 

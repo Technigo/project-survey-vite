@@ -2,13 +2,13 @@ import { useRef } from "react";
 import "./DropDown.css";
 
 export const DropDown = ({handleChange}) => {
-
   const dropdownRef = useRef(null);
 
   return (
     <div className="dropdown-container">
       <label htmlFor="musicGenre" className="label">
-        What is your favorite music genre?
+        <span className="number">1.</span>
+        <span className="question">What is your favorite music genre?</span>
       </label>
       <select
         ref={dropdownRef}
