@@ -1,11 +1,14 @@
 # Survey Project
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+We did a short and simple music survey (inspired by previous weeks project).
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Working with components are still difficult this week and get them to pass data between components with props and manage component state using useState was even harder. Luckily we were two working on this project and we could complete what the other person couldn't.  
+
+If we had more time we would fix this issue: 
+- The user can leave questions blank with no input and continue to next questions and submit for summary.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://jing-cornelia-music-survey.netlify.app/
