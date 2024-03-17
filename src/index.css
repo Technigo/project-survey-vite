@@ -108,10 +108,9 @@ input {
 input#forest,
 input#kingdom,
 input#school {
-  width: 28px;
-  height: 28px;
-  padding: 20px;
-  border: #6a3e38 2px solid;
+  width: 20px;
+  height: 20px;
+  margin: 5px 0;
 }
 
 label {
