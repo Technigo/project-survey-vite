@@ -1,4 +1,4 @@
-//--- Handles the placeholder visibility depending on if the input field is active or not ---//
+//--- Handles the placeholder visibility depending on, if the input field is active or not ---//
 
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ export const HandleFocus = (initialPlaceholder) => {
     setPlaceholder("");
   };
 
-  // if the input field is empty when focusing on another input, the placeholder will appear.
+  // if the input field is empty when focusing on another input, the placeholder will appear again.
   const handleOnBlur = (value) => {
     if (value === "") {
       setPlaceholder(initialPlaceholder);

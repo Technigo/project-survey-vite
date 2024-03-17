@@ -24,8 +24,10 @@ export const Form = () => {
     <Summary name={name} course={course} level={level} text={text} recommend={recommend} />
   ) : (
     <form onSubmit={isFormComplete}>
-      <h3>How was your experience?</h3>
-      <p>Help us be better and to deliver top notch courses.</p>
+      <div className="intro">
+        <h3>How was your experience?</h3>
+        <p>Help us be better and to deliver top notch courses.</p>
+      </div>
       <NameInput name={name} setName={setName} />
       <CourseInput course={course} setCourse={setCourse} />
       <LevelOptions level={level} setLevel={setLevel} />
