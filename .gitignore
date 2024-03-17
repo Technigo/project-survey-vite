@@ -23,3 +23,8 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
+src/Header.jsx
+src/components.survey/Second.jsx
+src/Footer.jsx
+.gitignore
+src/components.survey/First.jsx
