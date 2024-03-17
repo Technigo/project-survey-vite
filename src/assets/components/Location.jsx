@@ -2,7 +2,7 @@
 export function Location({ value, onChange }) {
   return (
     <div className="elementContainer">
-      <label htmlFor="location">
+      <div className="locationContainer">
         <h2 className="question">Choose where you want to start your story?</h2>
 
         <div className="radioButton">
@@ -42,7 +42,7 @@ export function Location({ value, onChange }) {
           />
           <label htmlFor="school">School of Witchcraft and Wizardry</label>
         </div>
-      </label>
+      </div>
     </div>
   );
 }

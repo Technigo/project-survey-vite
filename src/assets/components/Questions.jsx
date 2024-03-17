@@ -40,7 +40,7 @@ export function Questions() {
   return (
     <div className="formContainer">
       {!submitted ? (
-        <form onSubmit={handleSubmit} className="QuestionForm">
+        <form onSubmit={handleSubmit} className="questionForm">
           <Charactername value={charactername} onChange={setCharactername} />
           <Location value={location} onChange={setLocation} />
           <Companion value={companion} onChange={setCompanion} />

@@ -39,9 +39,10 @@ img {
   object-fit: cover;
 }
 
-.QuestionForm,
+.questionForm,
 .elementContainer {
   margin: 0.75em 0;
+  /* width: 100%; */
 }
 
 .question {
@@ -141,6 +142,10 @@ label {
   justify-content: center;
 }
 
+.locationContainer {
+  padding-top: 1em;
+}
+
 footer {
   height: 30px;
   position: relative;
@@ -159,10 +164,10 @@ footer p {
 
 /*Media Query for Tablet and Desktop*/
 @media (min-width: 481px) {
-  textarea,
   select,
-  button {
-    max-width: 481px;
+  button,
+  #characterName {
+    max-width: 550px;
   }
   h1 {
     font-size: 2em;
