@@ -13,8 +13,7 @@
   justify-content: center;
 }
 
-/* Styling for survey heading */
-h1 {
+.header {
   font-size: 36px;
   font-family: "Bebas Neue", sans-serif;
   color:white;
@@ -30,7 +29,6 @@ p{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Styling for tablet device */
 @media (min-width:667px) and (max-width:1025px) {
   .resultForm {
     width: 80%;
@@ -38,7 +36,6 @@ p{
   }
 }
 
-/* Styling for mobile device */
 @media (max-width:666px){
   .resultForm {
     width: 100%;
