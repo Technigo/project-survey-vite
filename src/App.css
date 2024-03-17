@@ -62,10 +62,17 @@ p {
 .text-input {
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
   width: 100%;
 }
 
+.dropdown {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.text-input {
+  margin-bottom: 20px;
+}
 .radio-button-container {
   padding-bottom: 5px;
 }
@@ -92,7 +99,6 @@ p {
 }
 
 .custom-radio.checked {
-  /* background-color: var(--radio-bg); */
   background-color: var(--button-color);
   padding-left: 35px;
   color: var(--white);
@@ -126,6 +132,7 @@ p {
   color: var(--white);
   background-color: var(--button-color);
   border-radius: 5px;
+  margin-top: 20px;
 }
 
 .submit-button:hover {
@@ -160,11 +167,16 @@ p {
   .dropdown,
   .text-input {
     width: 400px;
-    padding-bottom: 70px;
+  }
+
+  .dropdown {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .submit-button {
     width: 400px;
+    margin: 30;
   }
 
   .radio-button-container {
@@ -186,6 +198,7 @@ p {
   }
   .text-input input {
     font-size: 20px;
+    margin-bottom: 20px;
   }
 
   .submit-button {

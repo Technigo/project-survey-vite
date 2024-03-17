@@ -1,15 +1,13 @@
 import "./App.css"
 import { Header } from "./components/Header"
-import { Survey } from "./components/Survey"
+import { Form } from "./components/Form"
 
 export const App = () => {
   
   return (
     <div>
       <Header />
-      <div className="form-wrapper">
-        <Survey />
-      </div>
+      <Form />
     </div>
   )
 };
