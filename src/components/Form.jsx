@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { Answers } from "./Answers.jsx";
 
+// FUNCTION TO EXPORT THE FORM
 export const Form = () => {
   const [submit, setSubmit] = useState(false);
   const [name, setName] = useState("");
@@ -22,6 +23,7 @@ export const Form = () => {
 
   let data = [`${name}`, `${flavor}`, `${cupOrCone}`, `${toppings}`];
 
+// FUNCTION TO MAKE SURE ALL REQUIRED FIELDS ARE FILLED IN BEFORE BEING ABLE TO CLICK THE SUBMIT BUTTON
   let handleSubmit = () => {
     if (name !== "" && flavor !== "" && cupOrCone !== "") {
       setSubmit(submit ? "false" : "true");
@@ -30,15 +32,17 @@ export const Form = () => {
     }
   };
 
+  // START OVER FUNCTION TO ERASE ALL INPUT FIELD DATA
   const startOver = () => {
-    setName ("")
-    setFlavor ("")
-    setCupOrCone ("")
-    setWithSauce (false)
-    setWithSprinkles (false)
-    setSubmit (false)
+    setName("");
+    setFlavor("");
+    setCupOrCone("");
+    setWithSauce(false);
+    setWithSprinkles(false);
+    setSubmit(false);
   };
 
+// // IF/ELSE FUNCTION TO SHOW FORM QUESTIONS UNTIL THE SUBMIT BUTTON HAS BEEN CLICKED
   if (submit === "true") {
     return (
       <div className="answer-field">

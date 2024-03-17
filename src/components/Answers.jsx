@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+// ICONS TO BE SHOWN ON ANSWER PAGE
 import coneChocolate from "../assets/icon-cone-chocolate.png";
 import coneVanilla from "../assets/icon-cone-vanilla.png";
 import coneStrawberry from "../assets/icon-cone-strawberry.png";
@@ -13,6 +14,7 @@ export const Answers = ({ name, flavor, cupOrCone, toppings }) => {
 
   let icon = "";
 
+// SWITCH TO DECIDE ICONS
   if (cupOrCone === "cone") {
     switch (flavor) {
       case "chocolate":
@@ -37,6 +39,7 @@ export const Answers = ({ name, flavor, cupOrCone, toppings }) => {
     }
   }
 
+// IF/ELSE FUNCTION TO SHOW DIFFERENT MESSAGES AND ICONS DEPENDING ON ANSWERS IN FORM
   let message = "";
   if (toppings === "plain") {
     message = `We have registered that your favorite ice cream is
