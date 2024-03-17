@@ -1,13 +1,120 @@
 :root {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --main-color: #240f04;
+  --option-background-color: #fffaf8;
+  --question-background-color: #b2d1ad;
+  --button-shadow-color: #7eb377;
+  --option-font-size: 1.2rem;
+  --small-screen-question-font-size: 1.5rem;
+  --option-font-weight: 400;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--option-background-color);
+  color: var(--main-color);
+}
+
+main {
+  height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  margin: 50px auto;
+  width: 200px;
+  height: 40px;
+  border: var(--main-color) 2px solid;
+  border-radius: 30px;
+  color: var(--main-color);
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--button-shadow-color);
+}
+
+button:focus {
+  outline: var(--button-shadow-color) solid 2px;
+}
+
+.input-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  height: 100%;
+}
+
+.question-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-area {
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    var(--question-background-color),
+    #b2d1ad25 98%
+  );
+  text-align: center;
+  padding: 80px;
+  z-index: -2;
+}
+
+.question-area p {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .input-section {
+    grid-template-columns: auto;
+    grid-template-rows: 0.7fr 1fr;
+  }
+
+  .question-area {
+    font-size: var(--small-screen-question-font-size);
+    padding: 20px;
+  }
+
+  button {
+    width: 100px;
+    height: 50px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .question-area {
+    font-size: var(--small-screen-question-font-size);
+    padding: 30px;
+  }
+
+  button {
+    width: 120px;
+    height: 50px;
+    font-size: 1rem;
+  }
 }

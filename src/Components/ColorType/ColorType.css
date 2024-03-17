@@ -1,0 +1,27 @@
+.color-option-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-option-area p {
+  font-size: var(--option-font-size);
+  font-weight: var(--option-font-weight);
+  margin: 20px auto;
+}
+
+.color-wheel {
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .color-option-area {
+    justify-content: flex-start;
+    margin-top: 80px;
+  }
+}

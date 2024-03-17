@@ -1,0 +1,30 @@
+.radio-option-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  font-size: var(--option-font-size);
+  font-weight: var(--option-font-weight);
+}
+
+.radio-box {
+  cursor: pointer;
+  margin: 8px;
+  accent-color: var(--button-shadow-color);
+}
+
+.radio-option-text {
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .radio-option-area {
+    justify-content: flex-start;
+    font-size: var(--option-font-size);
+    font-weight: var(--option-font-weight);
+    margin-top: 120px;
+    font-size: 1rem;
+  }
+}
