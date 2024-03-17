@@ -27,6 +27,7 @@
 
 p{
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 @media (min-width:667px) and (max-width:1025px) {
