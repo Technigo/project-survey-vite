@@ -19,7 +19,7 @@ In retrospect, I should probably just focused on the streach goals instead of ma
 
 ### View it live
 
-
+[https://piratenamegenerator.netlify.app/](Pirate name generator)
 
 ## Instructions
 
