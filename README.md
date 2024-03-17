@@ -18,8 +18,8 @@ I quickly decided I wanted to have some fun with the inputs, and used some time 
 In retrospect, I should probably just focused on the streach goals instead of making pirate names.
 
 ### View it live
-
-[https://piratenamegenerator.netlify.app/](Pirate name generator)
+<a href = https://piratenamegenerator.netlify.app/>
+Pirate name generator </a>
 
 ## Instructions
 
