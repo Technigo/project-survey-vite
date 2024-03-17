@@ -22,9 +22,11 @@ const options = [
 export const RadioButtons = ({handleChange}) => {
   return (
     <div className="radio-buttons-container">
-      <p>
-        Do you prefer attending live concerts or listening to music at home?
-      </p>
+      <form className="label">
+        <span className="number">3.</span>
+        <span className="question">Do you prefer attending live concerts or listening to music at home?</span> 
+      </form>
+
       <div className="mapContainer">
         {options.map((option) => (
           <div key={option.value} className="radio-container">

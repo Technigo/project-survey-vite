@@ -12,7 +12,8 @@ export const RangeSlider = ({handleChange}) => {
   return (
     <div className="slider-container">
       <label className="slider-label">
-        How important is music in your daily life? Rate from 1 to 5.
+        <span className="number">5.</span>
+        <span className="question">How important is music in your daily life? Rate from 1 to 5.</span>
       </label>
       <input
         className="slider"

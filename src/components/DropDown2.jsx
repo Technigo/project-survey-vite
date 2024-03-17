@@ -8,7 +8,8 @@ export const DropDown2 = ({handleChange}) => {
     return (
       <div className="dropdown-container">
         <label htmlFor="musicDiscovery" className="label">
-          How do you discover new music?
+          <span className="number">4.</span>
+          <span className="question">How do you discover new music?</span>
         </label>
         <select
           ref={dropdownRef}

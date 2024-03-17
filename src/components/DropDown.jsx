@@ -8,8 +8,11 @@ export const DropDown = ({handleChange}) => {
   return (
     <div className="dropdown-container">
       <label htmlFor="musicGenre" className="label">
-        What is your favorite music genre?
+        <span className="number">1.</span>
+        <span className="question">What is your favorite music genre?</span>
       </label>
+
+      
       <select
         ref={dropdownRef}
         id="musicGenre"
@@ -32,6 +35,7 @@ export const DropDown = ({handleChange}) => {
         <option value="Reggae">Reggae</option>
         <option value="Other">Other</option>
       </select>
+      
       
     </div>
   );

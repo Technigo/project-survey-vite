@@ -80,28 +80,30 @@ export const SurveyForm = ({ setFormData, showResult }) => {
 
   return (
     <div className="survey-form">
-      <form onSubmit={handleSubmit}>
-        {renderStep()}
-        <div className="buttonContainer">
-          {step > 1 && (
-            <button type="button" onClick={prevStep} className="button">
-              Back
-            </button>
-          )}
+      <div className="survey-content">
+        <form onSubmit={handleSubmit}>
+          {renderStep()}
+          <div className="buttonContainer">
+            {step > 1 && (
+              <button type="button" onClick={prevStep} className="button">
+                Back
+              </button>
+            )}
 
-          {step < 5 && (
-            <button type="button" onClick={nextStep} className="button">
-              Next Question
-            </button>
-          )}
+            {step < 5 && (
+              <button type="button" onClick={nextStep} className="button">
+                Next Question
+              </button>
+            )}
 
-          {step === 5 && (
-            <button type="submit" className="button">
-              Submit
-            </button>
-          )}
-        </div>
-      </form>
+            {step === 5 && (
+              <button type="submit" className="button">
+                Submit
+              </button>
+            )}
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
