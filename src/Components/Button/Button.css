@@ -1,8 +1,7 @@
 .button-section {
   width: 100%;
-  height: 100vh;
+  height: 10vh;
   display: grid;
-  flex-direction: row;
   grid-template-columns: 0.7fr 1fr;
   position: absolute;
   bottom: 0;
@@ -12,12 +11,13 @@
 .next-btn,
 .submit-btn {
   text-align: center;
-  margin-top: calc(100vh - 7rem);
+  margin-top: calc(10vh - 7rem);
 }
 
 .submit-text-area {
-  position: absolute;
-  top: 40%;
+  position: fixed;
+  top: 120px;
+  padding: 180px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -25,6 +25,26 @@
   font-weight: 800;
 }
 
-.submit-text {
-  margin: 8px auto;
+@media screen and (max-width: 768px) and (min-width: 425px) {
+  .button-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .submit-text-area {
+    top: 160px;
+    padding: 80px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .button-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .submit-text-area {
+    top: 150px;
+    padding: 50px;
+    font-size: 1.2rem;
+  }
 }

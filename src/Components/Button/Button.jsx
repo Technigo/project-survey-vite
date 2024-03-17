@@ -14,13 +14,10 @@ export const Button = ({
       {isStranger ? (
         <>
           {currentQuestionIndex > lastQuesionIndex && (
-            <div className="submit-text-area">
-              <p className="submit-text">Are you satisfied with your choice?</p>
-              <p className="submit-text">
-                Click previous button to go back, click submit button to send
-                your choices.
-              </p>
-            </div>
+            <p className="submit-text-area">
+              Are you satisfied with your choice? Click previous button to go
+              back, click submit button to send your choices.
+            </p>
           )}
 
           {currentQuestionIndex > 0 &&

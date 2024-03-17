@@ -16,6 +16,7 @@ export const CheckboxType = ({ question, handleChecked, handleUncheck }) => {
               id={option.id}
               name={option.id}
               value={option.optionText}
+              aria-label={option.optionText}
               onChange={(event) => {
                 if (event.target.checked) {
                   handleChecked(option.optionText);
@@ -24,7 +25,7 @@ export const CheckboxType = ({ question, handleChecked, handleUncheck }) => {
                 }
               }}
             />
-            <label className="feature-text" htmlFor="{option.id}">
+            <label className="feature-text" htmlFor={option.id}>
               {option.optionText}
             </label>
           </div>

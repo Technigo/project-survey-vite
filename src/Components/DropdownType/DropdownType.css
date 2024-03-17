@@ -55,3 +55,12 @@ li {
 .location-option:focus {
   background-color: var(--question-background-color);
 }
+
+@media screen and (max-width: 768px) {
+  .dropdown-option-area {
+    justify-content: flex-start;
+  }
+  .location-option {
+    font-size: 1rem;
+  }
+}

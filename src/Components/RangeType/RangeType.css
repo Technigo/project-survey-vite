@@ -1,4 +1,4 @@
-.option-area {
+.range-option-area {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,8 +6,7 @@
 }
 
 .range-bar {
-  -webkit-appearance: none;
-  appearance: slider-vertical;
+  appearance: none;
   cursor: pointer;
   margin: 15px;
   accent-color: var(--main-color);
@@ -30,4 +29,19 @@
 .user-rate {
   font-size: var(--option-font-size);
   font-weight: var(--option-font-weight);
+}
+
+@media screen and (max-width: 768px) {
+  .range-option-area {
+    justify-content: flex-start;
+    margin-top: 70px;
+  }
+
+  .range-bar {
+    height: 10rem;
+  }
+
+  .user-rate {
+    font-size: 1rem;
+  }
 }

@@ -17,6 +17,7 @@ export const RadioType = ({ index, question, handleChange, handleVisitor }) => {
                 id={option.id}
                 name={question.id}
                 value={option.optionText}
+                aria-label={option.optionText}
                 onChange={handleChange}
               />
               <label className="radio-option-text" htmlFor="{option.id}">

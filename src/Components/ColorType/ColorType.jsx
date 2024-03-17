@@ -15,7 +15,7 @@ export const ColorType = ({ question, handleChange }) => {
       <label className="question-area" htmlFor={question.id}>
         {question.questionText}
       </label>
-      <div className="option-area">
+      <div className="color-option-area">
         <p>Click the color cube to select</p>
         <input
           type="color"
@@ -23,6 +23,7 @@ export const ColorType = ({ question, handleChange }) => {
           name={question.id}
           value={selectedColor}
           className="color-wheel"
+          aria-label="Choose color"
           onChange={handleColorChange}
         />
       </div>

@@ -9,6 +9,7 @@
   --question-background-color: #b2d1ad;
   --button-shadow-color: #7eb377;
   --option-font-size: 1.2rem;
+  --small-screen-question-font-size: 1.5rem;
   --option-font-weight: 400;
 }
 
@@ -62,8 +63,7 @@ button:focus {
   height: 100%;
 }
 
-.question-area,
-.option-area {
+.question-area {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +72,7 @@ button:focus {
 
 .question-area {
   font-family: inherit;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 500;
   background: linear-gradient(
     90deg,
@@ -80,9 +80,41 @@ button:focus {
     #b2d1ad25 98%
   );
   text-align: center;
-  padding: 100px;
+  padding: 80px;
+  z-index: -2;
 }
 
 .question-area p {
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .input-section {
+    grid-template-columns: auto;
+    grid-template-rows: 0.7fr 1fr;
+  }
+
+  .question-area {
+    font-size: var(--small-screen-question-font-size);
+    padding: 20px;
+  }
+
+  button {
+    width: 100px;
+    height: 50px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .question-area {
+    font-size: var(--small-screen-question-font-size);
+    padding: 30px;
+  }
+
+  button {
+    width: 120px;
+    height: 50px;
+    font-size: 1rem;
+  }
 }

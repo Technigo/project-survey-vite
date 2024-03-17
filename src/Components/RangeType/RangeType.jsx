@@ -13,9 +13,9 @@ export const RangeType = ({ question, handleChange }) => {
   return (
     <section className="input-section">
       <div className="question-area">
-        <p>{question.questionText}</p>
+        <label>{question.questionText}</label>
       </div>
-      <div className="option-area">
+      <div className="range-option-area">
         <input
           className="range-bar"
           type="range"
@@ -24,6 +24,8 @@ export const RangeType = ({ question, handleChange }) => {
           min="0"
           max="10"
           list="{question.id}"
+          aria-label="Rate the importance"
+          style={{ writingMode: "vertical-lr" }}
           onChange={handleSelectValue}
         />
 

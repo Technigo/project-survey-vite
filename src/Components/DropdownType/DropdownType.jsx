@@ -39,6 +39,7 @@ export const DropdownType = ({ question, handleDropDownChange }) => {
                     key={option.id}
                     value={option.optionText}
                     tabIndex={0}
+                    aria-label={option.optionText}
                     onClick={() => handleOptionClick(option.optionText)}
                   >
                     {option.optionText}

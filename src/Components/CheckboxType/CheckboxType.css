@@ -13,6 +13,22 @@
 }
 
 .feature-checkbox {
+  cursor: pointer;
   margin: 8px;
   accent-color: var(--button-shadow-color);
+}
+
+.feature-text {
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .feature-option-area {
+    font-size: 1rem;
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  .feature-option {
+    margin-top: 0px;
+  }
 }

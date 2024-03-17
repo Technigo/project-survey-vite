@@ -15,3 +15,38 @@
   height: 80px;
   font-size: 2rem;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .start-section {
+    font-size: 1.5rem;
+  }
+
+  .start-btn {
+    width: 200px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 512px) {
+  .start-section {
+    font-size: 1rem;
+  }
+
+  .start-btn {
+    width: 100px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 512px) {
+  .start-section {
+    font-size: 0.8rem;
+  }
+
+  .start-btn {
+    width: 100px;
+    height: 50px;
+    font-size: 0.8rem;
+  }
+}

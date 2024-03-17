@@ -44,7 +44,7 @@ export const Summary = ({ optionSummary, isStranger }) => {
           <div className="answer">
             <p>
               <span className="answer-description">
-                You have rated the importance of a home office or workspace:
+                You have rated the importance of a home office or workspace:{" "}
               </span>
               {optionSummary[3]} out of 10.
             </p>
