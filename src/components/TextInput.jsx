@@ -10,7 +10,6 @@ export const TextInput = ({value, handleChange}) => {
     handleChange(event);
   };
 
-  console.log("favorite musician: "+musician)
   return (
     <div className="text-input-container">
       <label htmlFor="favoriteMusician" className="label">

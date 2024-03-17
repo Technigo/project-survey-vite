@@ -2,7 +2,6 @@ import { useRef } from "react";
 import "./DropDown.css";
 
 export const DropDown = ({handleChange}) => {
-
   const dropdownRef = useRef(null);
 
   return (
@@ -11,8 +10,6 @@ export const DropDown = ({handleChange}) => {
         <span className="number">1.</span>
         <span className="question">What is your favorite music genre?</span>
       </label>
-
-      
       <select
         ref={dropdownRef}
         id="musicGenre"
@@ -35,8 +32,6 @@ export const DropDown = ({handleChange}) => {
         <option value="Reggae">Reggae</option>
         <option value="Other">Other</option>
       </select>
-      
-      
     </div>
   );
 };

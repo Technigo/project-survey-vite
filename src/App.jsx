@@ -4,7 +4,6 @@ import { SurveyForm } from "./components/SurveyForm";
 import { ResultPage } from './components/ResultPage';
 import "./index.css";
 
-
 export const App = () => {
   const [surveyStarted, setSurveyStarted] = useState(false);
   const [showResultPage, setShowResultPage] = useState(false);

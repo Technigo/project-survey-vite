@@ -1,6 +1,4 @@
-import React from 'react';
 import "./ResultPage.css";
-import { SurveyForm } from "./SurveyForm";
 
 export const ResultPage=({formData}) => {
   return (
