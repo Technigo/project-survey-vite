@@ -1,13 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
+
 :root {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #d2c1b7;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+img {
+  width: 100%;
+  min-height: 200px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.questionForm,
+.elementContainer {
+  margin: 0.75em 0;
+  /* width: 100%; */
+}
+
+.question {
+  padding-bottom: 0.5em;
+}
+
+h1 {
+  color: #d2c1b7;
+  font-family: "Abril Fatface", serif;
+  font-size: 1.75em;
+  padding: 1em;
+  text-align: center;
+  position: absolute;
+}
+
+h2 {
+  color: #6a3e38;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  color: #6a3e38;
+  font-size: 1em;
+}
+
+select,
+button,
+#characterName {
+  width: 100%;
+  background-color: #6a3e38;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  color: #d2c1b7;
+  cursor: pointer;
+  border: none;
+  padding: 0.25em;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.submitButton {
+  margin: 1em 0;
+  padding: 0.25em 0;
+  font-size: 1.25em;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  cursor: pointer;
+  color: #6a3e38;
+}
+
+.radioButton {
+  padding: 0.25em 0;
+  display: flex;
+  align-items: center;
+}
+
+input#forest,
+input#kingdom,
+input#school {
+  width: 20px;
+  height: 20px;
+  margin: 5px 0;
+}
+
+label {
+  padding-left: 0.5em;
+  color: #6a3e38;
+  font-size: 1em;
+}
+
+.outputContainer {
+  padding: 2em;
+  height: auto;
+}
+
+.storyContainer {
+  padding: 2em 0;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.formContainer {
+  min-height: calc(100% - 30px);
+  padding: 0 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.locationContainer {
+  padding-top: 1em;
+}
+
+footer {
+  height: 30px;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0.5em 0;
+  background: #6a3e38;
+  margin-top: auto;
+}
+
+footer p {
+  color: #d2c1b7;
+  font-size: 0.75em;
+}
+
+/*Media Query for Tablet and Desktop*/
+@media (min-width: 481px) {
+  select,
+  button,
+  #characterName {
+    max-width: 550px;
+  }
+  h1 {
+    font-size: 2em;
+    padding: 2em;
+  }
+}
+
+/*Media Query for Desktop*/
+@media (min-width: 1025px) {
+  section {
+    display: flex;
+    width: 100%;
+    max-width: 1025px;
+    margin: 2em;
+    flex-direction: column;
+    border: 2px solid #6a3e38;
+    border-radius: 20px;
+  }
+  body {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    border-radius: 18px 18px 0 0;
+  }
+  h1 {
+    font-size: 2.5em;
+    padding: 2.5em;
+  }
+
+  footer {
+    border-radius: 0 0 18px 18px;
+  }
 }
