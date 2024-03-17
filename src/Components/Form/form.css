@@ -7,7 +7,7 @@
 
 .form-container {
   background-image: url(/Img/mobile-img.webp);
-  height: 100vh;
+  height: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -101,7 +101,7 @@ p {
   height: 50px;
   width: 200px;
   padding: 10px 20px;
-  margin-top: 40px;
+  margin-top: 10px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -123,6 +123,10 @@ p {
 }
 
 @media (min-width: 320px) and (max-width: 350px) {
+  .form-container {
+    height: 120vh;
+  }
+
   .form-group {
     max-width: 150px;
     min-width: 150px;
