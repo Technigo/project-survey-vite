@@ -7,12 +7,14 @@
   box-sizing: border-box;
   --vanilla: #f0e4d0;
   --strawberry: #ffb4c4;
-  --chocolate-sauce:  #513411;  
+  --chocolate-sauce: #513411;
 }
+
 code {
-  font-family: "source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "source-code-pro, Menlo, Monaco, Consolas, " Courier New",
+ monospace;
 }
+
 body {
   background-color: var(--vanilla);
   margin: 0;
@@ -24,6 +26,7 @@ body {
   width: 100%;
   max-height: 900px;
 }
+
 /*Styling for the container with the form*/
 #wrapper {
   position: absolute;
@@ -52,7 +55,7 @@ body {
   z-index: 2;
   position: absolute;
   border-radius: 30px;
-  
+
 }
 
 
@@ -63,7 +66,7 @@ body {
   justify-content: center;
 }
 
-.question label{
+.question label {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,10 +80,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
 }
 
-.multiple-choice{
+.multiple-choice {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -90,7 +93,7 @@ body {
 }
 
 .button {
-  background-color:var(--chocolate-sauce);
+  background-color: var(--chocolate-sauce);
   border: none;
   border-radius: 30px;
   color: var(--vanilla);
@@ -101,7 +104,7 @@ body {
   margin: 20px;
 }
 
-.button:hover{
+.button:hover {
   background-color: #7c5b32;
 }
 
@@ -117,6 +120,7 @@ input {
   border: none;
   font-family: Lato;
 }
+
 /*Styling for dropdown-menu*/
 .dropdown-menu {
   width: 80%;
@@ -131,17 +135,17 @@ select option {
   transition: 0.8s ease;
 }
 
-select option[value="chocolate"]{
-  background: var(--chocolate-sauce)!important;
+select option[value="chocolate"] {
+  background: var(--chocolate-sauce) !important;
   color: white;
 }
 
 select option[value="strawberry"] {
-  background: var(--strawberry)!important;
+  background: var(--strawberry) !important;
 }
 
 select option[value="vanilla"] {
-  background: var(--vanilla)!important;
+  background: var(--vanilla) !important;
 }
 
 
@@ -153,10 +157,12 @@ select option[value="vanilla"] {
   height: 25px;
   width: 25px;
 }
+
 /* Styling for custom checkbox */
 .check-box-field {
   position: relative;
 }
+
 .checkmark {
   position: absolute;
   right: 1px;
@@ -170,13 +176,13 @@ select option[value="vanilla"] {
 }
 
 /*When you hover...*/
-.check-box-field:hover input ~ .checkmark {
+.check-box-field:hover input~.checkmark {
   background-color: var(--vanilla);
   cursor: pointer;
 }
 
 /* When the checkbox is checked*/
-.check-box-field input:checked ~ .checkmark {
+.check-box-field input:checked~.checkmark {
   background-color: var(--chocolate-sauce);
   transition: 0.2s ease;
 }
@@ -188,9 +194,11 @@ select option[value="vanilla"] {
   display: none;
   transition: 0.2s ease;
 }
-.check-box-field input:checked ~ .checkmark:after {
+
+.check-box-field input:checked~.checkmark:after {
   display: block;
 }
+
 .check-box-field .checkmark:after {
   left: 6px;
   top: 2px;
@@ -207,6 +215,7 @@ select option[value="vanilla"] {
 .radio-field {
   position: relative;
 }
+
 .radio-box {
   position: absolute;
   left: 1px;
@@ -218,16 +227,19 @@ select option[value="vanilla"] {
   background-color: #ffc5d1;
   border: 2px solid var(--chocolate-sauce);
 }
+
 /*When you hover...*/
-.radio-field:hover input ~ .radio-box {
+.radio-field:hover input~.radio-box {
   background-color: var(--vanilla);
   cursor: pointer;
 }
+
 /* When a radio button is chosen*/
-.radio-field input:checked ~ .radio-box {
+.radio-field input:checked~.radio-box {
   background-color: var(--chocolate-sauce);
   transition: 0.2s ease;
 }
+
 /* Create a dot that is visible when radio button is chosen */
 .radio-box:after {
   content: "";
@@ -237,7 +249,7 @@ select option[value="vanilla"] {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.radio-field input:checked ~ .radio-box:after {
+.radio-field input:checked~.radio-box:after {
   display: block;
 }
 
@@ -253,24 +265,23 @@ select option[value="vanilla"] {
 
 
 /* TABLET */
-@media (min-width: 450px) AND (max-width: 700px){
-#container {
-max-width: 500px;
-margin-left: 60px;
-margin-right: 60px;
-margin-top: 20px;
+@media (min-width: 450px) AND (max-width: 700px) {
+  #container {
+    max-width: 500px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 20px;
+  }
 }
-}
+
 /* DESKTOP */
-@media (min-width: 701px){
-#container {
-min-width: 600px;
-max-width: 900px;
-margin-left: 20px;
-margin-right: 20px;
-margin-top: 50px;
+@media (min-width: 701px) {
+  #container {
+    min-width: 600px;
+    max-width: 900px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+  }
+
 }
-
-} 
-
-
