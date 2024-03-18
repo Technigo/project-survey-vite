@@ -20,7 +20,7 @@ export const PirateName = ({ userData, handleDataUpdate }) => {
 			case "Air":
 				word = air[Math.floor(Math.random() * air.length)];
 				break;
-			case "Dirt":
+			case "Earth":
 				word = dirt[Math.floor(Math.random() * dirt.length)];
 				break;
 			case "Water":

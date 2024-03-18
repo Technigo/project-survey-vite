@@ -74,7 +74,7 @@ export const Survey = () => {
 							required
 						>
 							<option value="">Select an option</option>
-							<option value="Dirt">Dirt</option>
+							<option value="Earth">Earth</option>
 							<option value="Air">Air</option>
 							<option value="Fire">Fire</option>
 							<option value="Water">Water</option>
