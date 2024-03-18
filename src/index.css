@@ -168,6 +168,7 @@ select option[value="vanilla"] {
 /* Styling for custom checkbox */
 .check-box-field {
   position: relative;
+  margin-right: 10px;
 }
 
 .checkmark {
@@ -221,6 +222,7 @@ select option[value="vanilla"] {
 /*Styling for custom radio buttons*/
 .radio-field {
   position: relative;
+  margin-right: 10px;
 }
 
 .radio-box {
