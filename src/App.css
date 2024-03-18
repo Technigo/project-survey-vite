@@ -1,0 +1,118 @@
+:root {
+  --darkblue: #0018a4;
+}
+
+/*Form styling*/
+.form {
+  padding: 0 16px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.counter {
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--darkblue);
+  margin-bottom: 5px;
+}
+
+.questions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.labelQ {
+  color: var(--darkblue);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/*Inputs styling*/
+.name-input,
+.destination-input,
+.radio-button,
+.budget-range {
+  display: block;
+  width: 280px;
+}
+
+.name-input,
+.destination-input {
+  padding: 10px 5px;
+  border-radius: 6px;
+  border: 1px solid black;
+  font-size: 18px;
+}
+
+.name-input:focus::placeholder {
+  color: transparent;
+}
+
+/*Radio buttons*/
+.radio-button {
+  padding: 10px 5px;
+  border: 1px solid #9c9c9c;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 7px;
+  font-size: 18px;
+}
+
+.radio-button input[type="radio"] {
+  opacity: 0;
+}
+
+.checkmark-icon {
+  height: 16px;
+  width: 16px;
+  margin: 0;
+}
+
+/*Summary container styling*/
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  color: var(--darkblue);
+}
+
+.summary-message {
+  padding: 25px 0;
+}
+
+/*Media queries*/
+@media (min-width: 450px) {
+  .app-body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .name-input,
+  .destination-input,
+  .radio-button,
+  .budget-range {
+    width: 350px;
+  }
+
+  .questions {
+    align-items: center;
+  }
+
+  .labelQ {
+    text-align: center;
+  }
+
+  .submit-button {
+    width: 233px;
+    align-self: center;
+  }
+
+  .summary-container {
+    padding: 40px 25%;
+  }
+}

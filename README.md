@@ -1,37 +1,15 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/survey.svg" alt="Project Banner Image">
-  </a>
-</h1>
-
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+This week we created a survey using this weeks React concept useState, while making sure the website scores high in accessibility.
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started by writing down our questions and planned the flow of the survey. We identified the different questions and split them up in different components. We used useState complete the project and to show and hide the form and the summary of the form.
+
+We tried to follow the provided design but we had a hard time implementing the styling for the question inputs. We also didn't manage put a validation on the range question, so we might look into solving that later.
+
+If we had more time, we would work on more of the strech goals, probably look into displaying one question at a time.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+https://surprise-holiday.netlify.app/

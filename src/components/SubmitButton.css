@@ -1,0 +1,17 @@
+:root {
+  --darkblue: #0018a4;
+}
+
+/*Submit button*/
+.submit-button {
+  background-color: #696969;
+  border: 1px solid black;
+  color: white;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.submit-button:active {
+  background-color: var(--darkblue);
+}
