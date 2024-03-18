@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* root is a div  */
+#root {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 16px;
+}
