@@ -1,3 +1,14 @@
+import "./app.css";
+import {Survey} from "./Survey"
+
 export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
+
+
+	return (
+		<div>
+			<Survey />
+		</div >
+	)
 };
+
+

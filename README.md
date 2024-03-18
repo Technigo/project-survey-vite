@@ -6,29 +6,20 @@
 
 # Survey Project
 
-Replace this readme with your own information about your project.
+Made a pirate name generator who takes the users input to select random values who fit the user input.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+the user fills out a form with their name,picks their favorite element from a dropdown, check off a checkbox if they are older than 25, and selects their passion in life with radiobuttons. These inputs are then checked for their value, and a random word for each type is the chosen.
 
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+after the user have filled in their form, the form is hidden and the user is presented with a summary of their input and their new pirate name.
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I quickly decided I wanted to have some fun with the inputs, and used some time to figure out how to use the input to display a random result each time.
+In retrospect, I should probably just focused on the streach goals instead of making pirate names.
 
 ### View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+<a href = https://piratenamegenerator.netlify.app/>
+Pirate name generator </a>
 
 ## Instructions
 
