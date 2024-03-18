@@ -22,10 +22,10 @@ export const App = () => {
     setNiceThings(event.target.value);
   };
 
-// here we call the function that is going to run when the dropdown is clicked.
+  // here we call the function that is going to run when the dropdown is clicked.
   const onDropdownChange = (event) => {
-    setDefinesYou(event.target.value); 
-    };
+    setDefinesYou(event.target.value);
+  };
 
   const onSubmit = (event) => {
     // here we create the varible for the funtion that prevent the page from refreshing when hit submit button.
@@ -67,7 +67,7 @@ export const App = () => {
                 type="radio"
                 id="yes"
                 name="niceThings"
-                value="yes"
+                value="Yes"
                 onChange={onOptionChange}
               />
               <label htmlFor="yes">Yes</label>
@@ -78,7 +78,7 @@ export const App = () => {
                 type="radio"
                 id="no"
                 name="niceThings"
-                value="no"
+                value="No"
                 // here we tell react to call the function when the radio button is clicked.
                 onChange={onOptionChange}
               />
@@ -86,15 +86,17 @@ export const App = () => {
             </div>
           </div>
           <div>
-            <label htmlFor="definesYou">
-              3. What defines you as a person?
-            </label>
-            <select id="definesYou" name="definesYou" onChange={onDropdownChange}>
-              <option value="kindness">I'm kind</option>
-              <option value="honesty">I lie to be nice</option>
-              <option value="loyalty">I'm loyal</option>
-              <option value="respect">I'm fun</option>
-              </select>
+            <label htmlFor="definesYou">3. What defines you as a person?</label>
+            <select
+              id="definesYou"
+              name="definesYou"
+              onChange={onDropdownChange}
+            >
+              <option value="I'm kind">I'm kind</option>
+              <option value="I lie to be nice">I lie to be nice</option>
+              <option value="I'm loyal">I'm loyal</option>
+              <option value="I'm fun">I'm fun</option>
+            </select>
           </div>
           <div>
             {/* input is the same thing as button. */}
@@ -105,7 +107,13 @@ export const App = () => {
       )}
       {mode == "summary" && (
         <div>
-          {bestThing} {niceThings} {definesYou}
+          <h2>Summary:</h2>
+          <h3>The best thing about you is:</h3>
+          <p>{bestThing}</p>
+          <h3>And do you often say nice things to people?</h3>
+          <p>{niceThings}</p>
+          <h3>And what definies you as a person is:</h3>
+          <p>{definesYou}</p>
         </div>
       )}
     </div>
