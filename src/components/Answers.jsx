@@ -45,9 +45,9 @@ export const Answers = ({ name, flavor, cupOrCone, toppings }) => {
     message = `We have registered that your favorite ice cream is
         plain ${flavor} flavored ice cream in a ${cupOrCone}.`;
   } else if (toppings === "sauce" || toppings === "sprinkles") {
-    message = `We have registered that your favorite ice cream is ${flavor} flavored ice cream in a ${cupOrCone} with ${toppings}.`;
+    message = `We have registered that your favorite ice cream is ${flavor} flavored in a ${cupOrCone} with ${toppings}.`;
   } else {
-    message = `We have registered that your favorite ice cream is ${flavor} flavored ice cream in a ${cupOrCone} with sprinkles and sauce.`;
+    message = `We have registered that your favorite ice cream is ${flavor} flavored in a ${cupOrCone} with sprinkles and sauce.`;
   }
 
   return (

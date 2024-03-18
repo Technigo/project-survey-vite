@@ -58,6 +58,11 @@ body {
 
 }
 
+.form-sub-heading {
+  font-size: 1em;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+}
 
 .form-questions {
   display: flex;
@@ -108,7 +113,6 @@ body {
   background-color: #7c5b32;
 }
 
-
 input {
   width: 70%;
   padding: 12px 20px;
@@ -147,8 +151,6 @@ select option[value="strawberry"] {
 select option[value="vanilla"] {
   background: var(--vanilla) !important;
 }
-
-
 
 /* Hide the browser's default checkbox and radio-buttons */
 .multiple-choice input {
@@ -263,7 +265,6 @@ select option[value="vanilla"] {
   background: var(--vanilla);
 }
 
-
 /* TABLET */
 @media (min-width: 450px) AND (max-width: 700px) {
   #container {
@@ -283,5 +284,4 @@ select option[value="vanilla"] {
     margin-right: 20px;
     margin-top: 50px;
   }
-
 }

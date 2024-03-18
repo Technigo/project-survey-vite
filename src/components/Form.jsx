@@ -62,7 +62,7 @@ export const Form = () => {
       <div className="form-questions">
         <div>
           <h1>Hello there!</h1>
-          <h4>Do you want to tell us about your favorite ice cream?</h4>
+          <h2 className="form-sub-heading">Do you want to tell us about your favorite ice cream?</h2>
         </div>
         <form onSubmit={(event) => event.preventDefault()}>
           <div className="question">
