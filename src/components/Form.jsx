@@ -62,7 +62,9 @@ export const Form = () => {
       <div className="form-questions">
         <div>
           <h1>Hello there!</h1>
-          <h2 className="form-sub-heading">Do you want to tell us about your favorite ice cream?</h2>
+          <h2 className="form-sub-heading">
+            Do you want to tell us about your favorite ice cream?
+          </h2>
         </div>
         <form onSubmit={(event) => event.preventDefault()}>
           <div className="question">
@@ -101,31 +103,35 @@ export const Form = () => {
           <div className="multiple-question">
             <p> Do you prefer cup or cone?</p>
             <div className="multiple-choice">
-              <label className="radio-field">
-                <input
-                  type="radio"
-                  value="cup"
-                  onChange={(event) => setCupOrCone(event.target.value)}
-                  checked={cupOrCone === "cup"}
-                  name="cupOrCone"
-                  required
-                  className="radio-button"
-                />
-                <span className="radio-box"></span>
+              <label>
+                <div className="radio-field">
+                  <input
+                    type="radio"
+                    value="cup"
+                    onChange={(event) => setCupOrCone(event.target.value)}
+                    checked={cupOrCone === "cup"}
+                    name="cupOrCone"
+                    required
+                    className="radio-button"
+                  />
+                  <span className="radio-box"></span>
+                </div>
+                Cup
               </label>
-              Cup
-              <label className="radio-field">
-                <input
-                  type="radio"
-                  value="cone"
-                  onChange={(event) => setCupOrCone(event.target.value)}
-                  checked={cupOrCone === "cone"}
-                  name="cupOrCone"
-                  className="radio-button"
-                />
-                <span className="radio-box"></span>
+              <label>
+                <div className="radio-field">
+                  <input
+                    type="radio"
+                    value="cone"
+                    onChange={(event) => setCupOrCone(event.target.value)}
+                    checked={cupOrCone === "cone"}
+                    name="cupOrCone"
+                    className="radio-button"
+                  />
+                  <span className="radio-box"></span>
+                </div>
+                Cone
               </label>
-              Cone
             </div>
           </div>
           <div className="multiple-question">
@@ -134,26 +140,30 @@ export const Form = () => {
               Choose the ones you like:
             </p>
             <div className="multiple-choice">
-              <label className="check-box-field">
-                <input
-                  type="checkbox"
-                  checked={withSauce}
-                  onChange={(event) => setWithSauce(event.target.checked)}
-                  className="checkbox"
-                />
-                <span className="checkmark"></span>
-              </label>{" "}
-              Sauce
-              <label className="check-box-field">
-                <input
-                  type="checkbox"
-                  checked={withSprinkles}
-                  onChange={(event) => setWithSprinkles(event.target.checked)}
-                  className="checkbox"
-                />
-                <span className="checkmark"></span>
-              </label>{" "}
-              Sprinkles
+              <label>
+                <div className="check-box-field">
+                  <input
+                    type="checkbox"
+                    checked={withSauce}
+                    onChange={(event) => setWithSauce(event.target.checked)}
+                    className="checkbox"
+                  />
+                  <span className="checkmark"></span>
+                </div>{" "}
+                Sauce
+              </label>
+              <label>
+                <div className="check-box-field">
+                  <input
+                    type="checkbox"
+                    checked={withSprinkles}
+                    onChange={(event) => setWithSprinkles(event.target.checked)}
+                    className="checkbox"
+                  />
+                  <span className="checkmark"></span>
+                </div>{" "}
+                Sprinkles
+              </label>
             </div>
           </div>
           <button type="submit" onClick={handleSubmit} className="button">

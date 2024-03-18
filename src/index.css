@@ -85,7 +85,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .multiple-choice {
@@ -95,6 +94,12 @@ body {
   justify-content: center;
   gap: 10px;
   margin-top: -15px;
+}
+
+.multiple-choice label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button {
