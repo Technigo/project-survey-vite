@@ -91,7 +91,7 @@ p span {
 }
 
 input[type='submit'] {
-  background-color: rgb(255, 200, 186);
+  background-color: rgb(253, 133, 103);
   padding: 15px;
   border: 1px solid #caced1;
   border-radius: 15px;
@@ -99,7 +99,7 @@ input[type='submit'] {
 }
 
 input[type='submit']:hover {
-  background-color: rgb(255, 126, 94);
+  background-color: rgb(252, 93, 65);
 }
 
 @media screen and (min-width: 768px) {
