@@ -86,7 +86,9 @@ export const App = () => {
             </div>
           </div>
           <div>
-            <label className="question" htmlFor="definesYou">3. What defines you as a person?</label>
+            <label className="question" htmlFor="definesYou">
+              3. What defines you as a person?
+            </label>
             <select
               id="definesYou"
               name="definesYou"
@@ -106,7 +108,7 @@ export const App = () => {
         // This is the end of the form/conditional rendering
       )}
       {mode == "summary" && (
-        <div>
+        <div className="summary">
           <h2>Summary:</h2>
           <h3>The best thing about you is:</h3>
           <p>{bestThing}</p>

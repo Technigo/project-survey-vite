@@ -6,32 +6,16 @@
 
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## Getting Started with the Project
-
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
+The assignment was to practise React state and controlled forms by making a Typeform-like product. Accessibility was also a focus.
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The main new concept to learn was the useState hook. This was my first experience with a React hook. I also learned how to use ⌘-F5 to start VoiceOver and check the page's screen reader accessible. And I ran the page through the Lighthouse accessibility audit, which it got 100%.
+
+In the CSS, I wanted to style all three of my different input field types together using one block of code. But when I added padding to them, they all became different widths. I learned about using a [box-sizing reset](https://css-tricks.com/box-sizing/) to fix that.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://thebestyouu.netlify.app/
 
-## Instructions
 
-<a href="instructions.md">
-   See instructions of this project
-  </a>
