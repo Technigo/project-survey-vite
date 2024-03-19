@@ -8,23 +8,30 @@
   font-weight: var(--option-font-weight);
 }
 
+.each-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
 .radio-box {
   cursor: pointer;
-  margin: 8px;
+  margin: 10px;
   accent-color: var(--button-shadow-color);
 }
 
 .radio-option-text {
   cursor: pointer;
-  margin-top: 8px;
 }
 
 @media screen and (max-width: 768px) {
   .radio-option-area {
+    padding: 0 20px;
     justify-content: flex-start;
     font-size: var(--option-font-size);
     font-weight: var(--option-font-weight);
-    margin-top: 120px;
+    margin-top: 80px;
     font-size: 1rem;
   }
 }

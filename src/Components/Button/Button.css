@@ -42,6 +42,12 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .previous-btn,
+  .next-btn,
+  .submit-btn {
+    margin-top: calc(10vh - 5rem);
+  }
+
   .submit-text-area {
     top: 150px;
     padding: 50px;

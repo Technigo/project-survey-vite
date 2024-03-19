@@ -25,10 +25,14 @@
   .feature-option-area {
     font-size: 1rem;
     justify-content: flex-start;
-    padding-top: 40px;
+    padding-top: 20px;
   }
 
   .feature-option {
     margin-top: 0px;
+  }
+
+  .feature-checkbox {
+    margin: 6px;
   }
 }
