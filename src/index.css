@@ -11,3 +11,129 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.form {
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 20px;
+  color: #1d3557;
+  margin: 0 20px 0 20px;
+}
+
+.textQuestion {
+  margin: 70px 0 70px 0;
+}
+
+.textQuestion input {
+  margin-top: 15px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radioButtonLabel {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 30px;
+  margin: 10px;
+  border: 1px solid #16405b;
+  border-radius: 5px;
+  position: relative;
+}
+
+.radioButtonLabel::before {
+  content: "\2714";
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  font-size: 20px;
+  color: black;
+  opacity: 0;
+}
+
+input[type="radio"]:checked + .radioButtonLabel {
+  background-color: #a8dadc;
+}
+
+input[type="radio"]:checked + .radioButtonLabel::before {
+  opacity: 1;
+}
+
+.selectQuestion {
+  margin: 70px 0;
+}
+
+select {
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  color: #16405b;
+}
+
+select:focus {
+  outline: none;
+  border-color: #457b9d;
+}
+
+select option {
+  font-size: 20px;
+  padding: 20px;
+}
+
+button {
+  margin: 20px 0 50px 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #adb5bd;
+}
+
+button:hover {
+  background-color: #a8dadc;
+}
+
+button:active {
+  background-color: #1d3557;
+}
+
+@media (min-width: 800px) {
+  .form {
+    font-size: 24px;
+  }
+
+  select {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 24px;
+  }
+
+  .textQuestion input {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form {
+    font-size: 30px;
+  }
+
+  select {
+    font-size: 30px;
+  }
+
+  button {
+    font-size: 30px;
+  }
+
+  .textQuestion input {
+    width: 250px;
+    height: 50px;
+  }
+}
