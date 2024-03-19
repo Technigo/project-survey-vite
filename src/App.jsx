@@ -1,3 +1,9 @@
+import { Form } from "./components/Form.jsx";
+
 export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
+  return (
+    <div className="page">
+      <Form />
+    </div>
+  );
 };
