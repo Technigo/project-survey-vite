@@ -1,0 +1,48 @@
+.headline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.toppings-list {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.toppings-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em 0 ;
+}
+
+.toppings-result {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0 1em 0;
+  border: 1px solid #caced1;
+  background-color:#ffffffe1;;
+  border-radius: 20px;
+  padding: 1em;
+}
+
+.toppings-selected {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  padding: 0;
+}
+
+.score-section {
+  display: flex;
+  flex-direction: row;
+}
+
