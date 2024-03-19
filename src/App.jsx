@@ -47,7 +47,7 @@ export const App = () => {
           <div>
             {/* "for" and "id" has to match, it's for accessabiliy  */}
             {/* use "htmlfor", otherwise you will get a warning in the console log.  */}
-            <label htmlFor="bestThing">
+            <label className="question" htmlFor="bestThing">
               1. What's the best thing about you?
             </label>
             <input
@@ -59,10 +59,10 @@ export const App = () => {
           </div>
           {/* https://stackoverflow.com/questions/13273806/using-the-html-label-tag-with-radio-buttons "radiogroup" is a accessibility thing to tell that now a group of radiobuttons that belongs together, will be coming*/}
           <div role="radiogroup" aria-labelledby="radioGroupLabel">
-            <div id="radioGroupLabel">
+            <div className="question" id="radioGroupLabel">
               2. Do you often say nice things to people?
             </div>
-            <div>
+            <div className="radioButton">
               <input
                 type="radio"
                 id="yes"
@@ -73,7 +73,7 @@ export const App = () => {
               <label htmlFor="yes">Yes</label>
             </div>
 
-            <div>
+            <div className="radioButton">
               <input
                 type="radio"
                 id="no"
@@ -86,7 +86,7 @@ export const App = () => {
             </div>
           </div>
           <div>
-            <label htmlFor="definesYou">3. What defines you as a person?</label>
+            <label className="question" htmlFor="definesYou">3. What defines you as a person?</label>
             <select
               id="definesYou"
               name="definesYou"

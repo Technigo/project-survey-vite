@@ -7,6 +7,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -41,4 +49,29 @@ form {
   margin: 0 auto;
   padding: 0 16px;
   row-gap: 16px;
+}
+
+.radioButton, select, [type="text"] {
+  border: 1px solid black;
+  padding: 4px;
+  font-size: 16px;
+  width: 100%;
+  margin: 20px 0;
+  
+}
+
+.question {
+  font-weight: bold;
+}
+
+[type="submit"] {
+  background-color: #4d6637;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+  font-size: large;
 }
