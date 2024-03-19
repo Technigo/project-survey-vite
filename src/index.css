@@ -12,9 +12,33 @@ code {
     monospace;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* root is a div  */
 #root {
+}
+
+header {
+  margin-bottom: 16px;
+  background-color: #4d6637;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+ 
   max-width: 320px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 0 16px;
+  row-gap: 16px;
 }
