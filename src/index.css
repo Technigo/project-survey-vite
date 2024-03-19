@@ -11,3 +11,103 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  background: linear-gradient(to bottom, #fff, #3f566e); 
+  min-height: 100vh; 
+}
+
+.test select,
+.test input[type="text"],
+.test textarea {
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.test textarea {
+  resize: vertical;
+}
+
+.test button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block; 
+}
+
+.test button:hover {
+  background-color: #292929;
+}
+
+.submitted-data {
+  margin-top: 20px;
+}
+
+.submitted-data p {
+  margin-bottom: 10px;
+}
+
+.text label {
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+.test h2{
+  color: #335375;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.test {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+.header img {
+  width: 500px; 
+  height: auto; 
+  border: 2px solid #335375; 
+  border-radius: 10px; 
+ 
+}
+
+.test input[type="radio"] {
+  margin-right: 10px; 
+}
+
+.test input[type="range"] {
+  margin-top: 20px; 
+}
+
+@media (max-width: 700px) {
+  .header img {
+    width:250px; 
+  }
+  .test{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header img {
+    width:100px; 
+  }
+  .test{
+    font-size: 12px;
+  }
+}
+
