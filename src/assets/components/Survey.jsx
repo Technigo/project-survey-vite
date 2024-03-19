@@ -5,8 +5,8 @@ import "../css/app.css";
 
 export const Survey = () => {
 	//dropdown, input, checkbox, radiobuttons and visibility
-	const [dropdown, setDropdown] = useState("Dirt");
-	const [name, setName] = useState("Your name");
+	const [dropdown, setDropdown] = useState("Earth");
+	const [name, setName] = useState("name..");
 	const [check, setCheck] = useState("");
 	const [value, setRadio] = useState("Rum");
 	const [toggle, setToggle] = useState("visible");
