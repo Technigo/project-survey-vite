@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
 export function Charactername({ value, onChange }) {
   return (
-    <div className="elementContainer">
+    <div className="element-container">
       <label htmlFor="characterName">
         <h2 className="question">What is your character&#39;s name?</h2>
         <input

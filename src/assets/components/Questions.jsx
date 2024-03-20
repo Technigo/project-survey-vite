@@ -38,9 +38,9 @@ export function Questions() {
   }
 
   return (
-    <div className="formContainer">
+    <div className="form-container">
       {!submitted ? (
-        <form onSubmit={handleSubmit} className="questionForm">
+        <form onSubmit={handleSubmit} className="question-form">
           <Charactername value={charactername} onChange={setCharactername} />
           <Location value={location} onChange={setLocation} />
           <Companion value={companion} onChange={setCompanion} />
@@ -48,9 +48,9 @@ export function Questions() {
           <SubmitButton />
         </form>
       ) : (
-        <div className="outputContainer">
+        <div className="output-container">
           <h2>Here&#39;s your whimsical bedtime story!</h2>
-          <div className="storyContainer">
+          <div className="story-container">
             <p>
               This is the story of {charactername} who is about to meet new
               friends and start a magical adventure! You are excited to leave{" "}
@@ -79,7 +79,7 @@ export function Questions() {
               </p>
             )}
           </div>
-          <button className="submitButton" onClick={makeAnotherStory}>
+          <button className="submit-button" onClick={makeAnotherStory}>
             Make another story
           </button>
         </div>

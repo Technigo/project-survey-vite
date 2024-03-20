@@ -39,8 +39,8 @@ img {
   object-fit: cover;
 }
 
-.questionForm,
-.elementContainer {
+.question-form,
+.element-container {
   margin: 0.75em 0;
   /* width: 100%; */
 }
@@ -84,7 +84,7 @@ button,
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.submitButton {
+.submit-button {
   margin: 1em 0;
   padding: 0.25em 0;
   font-size: 1.25em;
@@ -100,7 +100,7 @@ input {
   color: #6a3e38;
 }
 
-.radioButton {
+.radio-button {
   padding: 0.25em 0;
   display: flex;
   align-items: center;
@@ -120,29 +120,29 @@ label {
   font-size: 1em;
 }
 
-.outputContainer {
+.output-container {
   padding: 2em;
   height: auto;
 }
 
-.storyContainer {
+.story-container {
   padding: 2em 0;
 }
 
-.appContainer {
+.app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.formContainer {
+.form-container {
   min-height: calc(100% - 30px);
   padding: 0 1em;
   display: flex;
   justify-content: center;
 }
 
-.locationContainer {
+.location-container {
   padding-top: 1em;
 }
 

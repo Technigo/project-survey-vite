@@ -3,7 +3,7 @@ import { adventuresArray } from "./Arrays";
 // eslint-disable-next-line react/prop-types
 export function Adventure({ value, onChange }) {
   return (
-    <div className="elementContainer">
+    <div className="element-container">
       <label htmlFor="selectAdventure">
         <h2 className="question">
           What&#39;s the pair&#39;s favourite adventure?

@@ -3,7 +3,7 @@ import { companionsArray } from "./Arrays";
 // eslint-disable-next-line react/prop-types
 export const Companion = ({ value, onChange }) => {
   return (
-    <div className="elementContainer">
+    <div className="element-container">
       <label htmlFor="selectCompanion">
         <h2 className="question">
           Who is your main character&#39;s companion?
