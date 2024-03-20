@@ -1,8 +1,11 @@
-export const Summary = ({ name, setName, age, setAge, setShowSummary }) => {
+export const Summary = ({ name, setName, age, setAge, celebrate, setCelebrate, best, setBest, holiday, setHoliday, setShowSummary }) => {
 
   const clearForm = () => {
     setName('')
     setAge('')
+    setCelebrate('')
+    setBest('')
+    setHoliday('')
     setShowSummary(false)
   }
 
@@ -10,8 +13,8 @@ export const Summary = ({ name, setName, age, setAge, setShowSummary }) => {
     <div>
       <h2>Thank you for doing our Easter Survey!</h2>
       <h3>Here is the summary of your answers:</h3>
-      <p>Your name is {name} and you are {age} years old.</p>
-      <p>The best thing about Easter is and your favourite holiday is.</p>
+      <p>Your name is {name}, you are {age} years old and you {celebrate} Easter.</p>
+      <p>The best thing about Easter is to {best} and your favourite holiday is {holiday}.</p>
       <button onClick={clearForm}>Restart survey</button>
     </div>
   )

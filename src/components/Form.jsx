@@ -1,4 +1,4 @@
-export const Form = ({ name, setName, age, setAge, setShowSummary}) => {
+export const Form = ({ name, setName, age, setAge,  celebrate, setCelebrate, best, setBest, holiday, setHoliday, setShowSummary }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -9,29 +9,41 @@ export const Form = ({ name, setName, age, setAge, setShowSummary}) => {
       <form onSubmit={handleSubmit}>
           <div>
              <label htmlFor="nameInput">name:</label>
-             <input id="nameInput" name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required></input>
+             <input id="nameInput" name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" required></input>
           </div>
 
           <div>
              <label htmlFor="ageInput">age:</label>
-             <input id="ageInput" name="age" type="number" value={age} onChange={(e) => setAge(e.target.value)} required></input>
+             <input id="ageInput" name="age" type="number" value={age} onChange={(e) => setAge(e.target.value)} placeholder="Your age" required></input>
           </div>
 
-          <div>
+          <div className="celebrate" value={celebrate} onChange={(e) => setCelebrate(e.target.value)}>
+             <p>Do you celebrate Easter?</p>
+             <label htmlFor="yesInput"><input id="yesInput" name="yes" type='radio' value="celebrate"></input>Yes</label>
+             <label htmlFor="noInput"><input id="noInput" name="no" type='radio' value="do not celebrate"></input>No</label>
+          </div>
+
+          <div className="best">
              <p>What is the best thing about Easter?</p>
-             <label><input type='radio' name="best_thing" value="Church"></input>Visiting church</label>
-             <label><input type='radio' name="best_thing" value="EggHunt"></input>Go egg hunting</label>
-             <label><input type='radio' name="best_thing" value="PaintEggs"></input>To paint eggs</label>
-             <label><input type='radio' name="best_thing" value="Eating"></input>Eating delicious Easter food</label>
+             <select id="bestInput" name="best" value={best} onChange={(e) => setBest(e.target.value)} required>
+               <option value="" disabled>Select option</option>
+               <option value="visit church">Visiting church</option>
+               <option value="go egg hunting">Go egg hunting</option>
+               <option value="paint eggs">Paint eggs</option>
+               <option value="eat good food">Eating delicious Easter food</option>
+               <option value="Other">Other</option>
+             </select>
           </div>
 
-          <div>
+          <div className="holidays">
              <p>What is your favourite holiday?</p>
-             <select required>
-               <option value="">Select favourite holiday</option>
-               <option value="christmas">Christmas</option>
-               <option value="easter">Easter</option>
-               <option value="midsummer">Midsummer</option>
+             <select id="holidayInput" name="holiday" value={holiday} onChange={(e) => setHoliday(e.target.value)} required>
+               <option value="" disabled>Select favourite holiday</option>
+               <option value="Christmas">Christmas</option>
+               <option value="Easter">Easter</option>
+               <option value="Midsummer">Midsummer</option>
+               <option value="New Years">New Years</option>
+               <option value="some other holiday">Other holiday</option>
              </select>
           </div>
 
