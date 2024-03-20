@@ -1,0 +1,39 @@
+.app-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #0018a4;
+  border-radius: 10px;
+}
+.survey-form-container {
+  padding: 20px;
+}
+
+.survey-form-container label {
+  margin-bottom: 10px;
+}
+
+.survey-form-container input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.survey-form-container button {
+  padding: 10px 20px;
+  background-color: #0018a4;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.survey-form-container button:hover {
+  background-color: #000c52;
+}
+
+.survey-summary {
+  margin-top: 20px;
+}
