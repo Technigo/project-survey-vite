@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 
 const SurveyForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    age: '',
-    gender: '',
-    rate: '',
+    activity: '',
+    musicHappy: '',
+    happySong: '',
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -21,86 +20,89 @@ const SurveyForm = () => {
   };
 
   return (
-    <div className="container">
-      <div className='header'>
-        <h1>Technigo Bootcamp</h1>
-        <h2>Evaluate the course</h2>
+    <>
+      <div className="container">
+        {!submitted ? (
+          <form onSubmit={handleSubmit}>
+            <div className="question">
+            <label htmlFor="numberOne"><h3>1.</h3></label>
+              <label htmlFor="activity"><h3>What is your favorite mood-boosting activity?</h3></label>
+              <input
+                type="text" 
+                placeholder='Write your answer here'
+                id="activity"
+                name="activity"
+                value={formData.activity}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="question">
+              <label htmlFor="numberTwo"><h3>2.</h3></label>
+              <label htmlFor="musicHappy"><h3>Does music make you happy?</h3></label>
+              <div className="musicHappyOptions">
+                <button
+                  type="option"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setFormData({ ...formData, musicHappy: 'Yes, absolutely' });
+                  }}
+                  className={formData.musicHappy === 'Yes, absolutely' ? 'selected' : ''}
+                >
+                  Yes, absolutely
+                </button>
+                <button
+                  type="option"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setFormData({ ...formData, musicHappy: 'No, I like the silence' });
+                  }}
+                  className={formData.musicHappy === 'No, I like the silence' ? 'selected' : ''}
+                >
+                  No, I like the silence
+                </button>
+              </div>
+            </div>
+
+            <div className="question">
+              <label htmlFor="numberThree"><h3>3.</h3></label>
+              <label htmlFor="happySong"><h3>What is your go-to happy song?</h3></label>
+              <select id="happySong" name="happySong" value={formData.happySong} onChange={handleChange} required>
+                <option value="">Select</option>
+                <option value="Don't Stop Believin' - Journey">Don't Stop Believin' - Journey</option>
+                <option value="I Gotta Feeling - The Black Eyed Peas">I Gotta Feeling - The Black Eyed Peas</option>
+                <option value="Walking on Sunshine - Katrina and the Waves">Walking on Sunshine - Katrina and the Waves</option>
+                <option value="Can't Stop the Feeling! - Justin Timberlake">Can't Stop the Feeling! - Justin Timberlake</option>
+                <option value="Good Vibrations - The Beach Boys">Good Vibrations - The Beach Boys</option>
+                <option value="Best Day of My Life - American Authors">Best Day of My Life - American Authors</option>
+                <option value="Uptown Funk - Mark Ronson ft. Bruno Mars">Uptown Funk - Mark Ronson ft. Bruno Mars</option>
+                <option value="I Want to Hold Your Hand - The Beatles">I Want to Hold Your Hand - The Beatles</option>
+                <option value="Lovely Day - Bill Withers">Lovely Day - Bill Withers</option>
+                <option value="Shake It Off - Taylor Swift">Shake It Off - Taylor Swift</option>
+                <option value="I'm Yours - Jason Mraz">I'm Yours - Jason Mraz</option>
+                <option value="Here Comes the Sun - The Beatles">Here Comes the Sun - The Beatles</option>
+                <option value="Walking on Sunshine - Aly & AJ">Walking on Sunshine - Aly & AJ</option>
+                <option value="Don't Worry, Be Happy - Bobby McFerrin">Don't Worry, Be Happy - Bobby McFerrin</option>
+                <option value="September - Earth, Wind & Fire">September - Earth, Wind & Fire</option>
+                <option value="Good Life - OneRepublic">Good Life - OneRepublic</option>
+                <option value="Happy Together - The Turtles">Happy Together - The Turtles</option>
+                <option value="I'm a Believer - The Monkees">I'm a Believer - The Monkees</option>
+                <option value="Shut Up and Dance - Walk the Moon">Shut Up and Dance - Walk the Moon</option>
+              </select>
+            </div>
+
+            <button type="submit">Submit your answer</button>
+          </form>
+        ) : (
+          <div className='summary'>
+            <h2>Thank you for participating!</h2>
+            <p><strong>Favorite Mood-Boosting Activity:</strong> {formData.activity}</p>
+            <p><strong>Does Music Make You Happy?:</strong> {formData.musicHappy}</p>
+            <p><strong>Go-To Happy Song:</strong> {formData.happySong}</p>
+          </div>
+        )}
       </div>
-      {!submitted ? (
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-
-          <label htmlFor="age">Age</label>
-          <input
-            type="number"
-            id="age"
-            name="age"
-            value={formData.age}
-            onChange={handleChange}
-            required
-          />
-          <label htmlFor="gender">Gender</label>
-          <select id="gender" name="gender" value={formData.gender} onChange={handleChange} required>
-            <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="non-binary">Non-binary</option>
-            <option value="genderqueer">Genderqueer</option>
-            <option value="genderfluid">Genderfluid</option>
-            <option value="agender">Agender</option>
-            <option value="bigender">Bigender</option>
-            <option value="androgynous">Androgynous</option>
-            <option value="two-spirit">Two-Spirit</option>
-            <option value="demiboy">Demiboy</option>
-            <option value="demigirl">Demigirl</option>
-            <option value="gender-nonconforming">Gender Nonconforming</option>
-            <option value="pangender">Pangender</option>
-            <option value="neutrois">Neutrois</option>
-            <option value="gender-questioning">Gender Questioning</option>
-            <option value="gender-variant">Gender Variant</option>
-            <option value="transgender">Transgender</option>
-            <option value="cisgender">Cisgender</option>
-            <option value="intergender">Intergender</option>
-            <option value="polygender">Polygender</option>
-            <option value="other"></option>
-          </select>
-
-          <label>How would you rate your experience at Technigo bootcamp?</label><br/>
-          <input type="radio" id="very_satisfied" name="rate" value="very satisfied" onChange={handleChange} />
-          <label htmlFor="very_satisfied">Very Satisfied</label><br/>
-
-          <input type="radio" id="satisfied" name="rate" value="satisfied" onChange={handleChange} />
-          <label htmlFor="satisfied">Satisfied</label><br/>
-
-          <input type="radio" id="neither_agree_nor_disagree" name="rate" value="Neither agree nor disagree" onChange={handleChange} />
-          <label htmlFor="neither_agree_nor_disagree">Neither Agree nor Disagree</label><br/>
-
-          <input type="radio" id="dissatisfied" name="rate" value="dissatisfied" onChange={handleChange} />
-          <label htmlFor="dissatisfied">Dissatisfied</label><br/>
-
-          <input type="radio" id="very_dissatisfied" name="rate" value="very dissatisfied" onChange={handleChange} />
-          <label htmlFor="very_dissatisfied">Very Dissatisfied</label><br/>
-
-          <button type="submit">Submit</button>
-        </form>
-      ) : (
-        <div className='summary'>
-          <h2>Thank you for participating!</h2>
-          <p><strong>Name:</strong> {formData.name}</p>
-          <p><strong>Age:</strong> {formData.age}</p>
-          <p><strong>Gender:</strong> {formData.gender}</p>
-          <p><strong>Rate:</strong> {formData.rate}</p>
-        </div>
-      )}
-    </div>
+    </>
   );
 }
 
