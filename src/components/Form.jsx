@@ -56,6 +56,7 @@ export const Form = ({
               name="questionTwo"
               onChange={(event) => setMood("Yes")}
               checked={mood === "Yes"}
+              required
             />
           </label>
           <label className={`radio-button ${mood === "No" ? "checked" : ""}`}>
@@ -66,6 +67,7 @@ export const Form = ({
               name="questionTwo"
               onChange={(event) => setMood("No")}
               checked={mood === "No"}
+              required
             />
           </label>
         </div>
