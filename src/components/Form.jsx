@@ -19,8 +19,8 @@ export const Form = ({ name, setName, age, setAge,  celebrate, setCelebrate, bes
 
           <div className="celebrate" value={celebrate} onChange={(e) => setCelebrate(e.target.value)}>
              <p>Do you celebrate Easter?</p>
-             <label htmlFor="yesInput"><input id="yesInput" name="yes" type='radio' value="celebrate"></input>Yes</label>
-             <label htmlFor="noInput"><input id="noInput" name="no" type='radio' value="do not celebrate"></input>No</label>
+             <label htmlFor="yesInput"><input id="yesInput" name="radio-group" type='radio' value="celebrate" required></input>Yes</label>
+             <label htmlFor="noInput"><input id="noInput" name="radio-group" type='radio' value="do not celebrate" required></input>No</label>
           </div>
 
           <div className="best">
@@ -31,7 +31,7 @@ export const Form = ({ name, setName, age, setAge,  celebrate, setCelebrate, bes
                <option value="go egg hunting">Go egg hunting</option>
                <option value="paint eggs">Paint eggs</option>
                <option value="eat good food">Eating delicious Easter food</option>
-               <option value="Other">Other</option>
+               <option value="do other activities">Other activities</option>
              </select>
           </div>
 

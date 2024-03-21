@@ -3,7 +3,23 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: antiquewhite;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.header-container {
+  background-color: #7209b7;
+  border-radius: 5px;
+  padding: 10px;
+  letter-spacing: 5px;
+}
+
+.container {
+  background-color: rgb(255, 213, 0, 0.6);
+  border: solid;
+  border-radius: 5px;
+  padding: 30px;
 }
 
 :root {

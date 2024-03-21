@@ -12,11 +12,31 @@ export const App = () => {
   const [showSummary, setShowSummary] = useState(false)
  
   return (
-    <main>
+    <main className="container">
       <Header />
-
-      {showSummary ? <Summary name={name} setName={setName} age={age} setAge={setAge} celebrate={celebrate} setCelebrate={setCelebrate} best={best} setBest={setBest} holiday={holiday} setHoliday={setHoliday} setShowSummary={setShowSummary} /> : <Form name={name} setName={setName} age={age} setAge={setAge} celebrate={celebrate} setCelebrate={setCelebrate} best={best} setBest={setBest} holiday={holiday} setHoliday={setHoliday} setShowSummary={setShowSummary} />}
-
+      {showSummary ? 
+      <Summary 
+      name={name} 
+      setName={setName} 
+      age={age} 
+      setAge={setAge} 
+      celebrate={celebrate} 
+      setCelebrate={setCelebrate} 
+      best={best} setBest={setBest} 
+      holiday={holiday} 
+      setHoliday={setHoliday} 
+      setShowSummary={setShowSummary} /> : 
+      <Form 
+      name={name} 
+      setName={setName} 
+      age={age} 
+      setAge={setAge} 
+      celebrate={celebrate} 
+      setCelebrate={setCelebrate} 
+      best={best} setBest={setBest} 
+      holiday={holiday} 
+      setHoliday={setHoliday} 
+      setShowSummary={setShowSummary} />}
     </main>
   )
 };
