@@ -10,7 +10,7 @@ export const Summary = ({ name, setName, age, setAge, celebrate, setCelebrate, b
   }
 
   return (
-    <div>
+    <div className="summary">
       <h2>Thank you for doing our Easter Survey!</h2>
       <h3>Here is the summary of your answers:</h3>
       <p>Your name is {name}, you are {age} years old and you {celebrate} Easter.</p>

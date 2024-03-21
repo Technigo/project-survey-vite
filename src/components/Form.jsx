@@ -7,13 +7,13 @@ export const Form = ({ name, setName, age, setAge,  celebrate, setCelebrate, bes
 
     return (
       <form onSubmit={handleSubmit}>
-          <div>
-             <label htmlFor="nameInput">name:</label>
+          <div className="personal-info">
+             <label htmlFor="nameInput">Name:</label>
              <input id="nameInput" name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" required></input>
           </div>
 
-          <div>
-             <label htmlFor="ageInput">age:</label>
+          <div className="personal-info">
+             <label htmlFor="ageInput">Age:</label>
              <input id="ageInput" name="age" type="number" value={age} onChange={(e) => setAge(e.target.value)} placeholder="Your age" required></input>
           </div>
 
@@ -25,7 +25,7 @@ export const Form = ({ name, setName, age, setAge,  celebrate, setCelebrate, bes
 
           <div className="best">
              <p>What is the best thing about Easter?</p>
-             <select id="bestInput" name="best" value={best} onChange={(e) => setBest(e.target.value)} required>
+             <select aria-label="BestThing" name="best" value={best} onChange={(e) => setBest(e.target.value)} required>
                <option value="" disabled>Select option</option>
                <option value="visit church">Visiting church</option>
                <option value="go egg hunting">Go egg hunting</option>
@@ -37,7 +37,7 @@ export const Form = ({ name, setName, age, setAge,  celebrate, setCelebrate, bes
 
           <div className="holidays">
              <p>What is your favourite holiday?</p>
-             <select id="holidayInput" name="holiday" value={holiday} onChange={(e) => setHoliday(e.target.value)} required>
+             <select aria-label="FavouriteHoliday" name="holiday" value={holiday} onChange={(e) => setHoliday(e.target.value)} required>
                <option value="" disabled>Select favourite holiday</option>
                <option value="Christmas">Christmas</option>
                <option value="Easter">Easter</option>

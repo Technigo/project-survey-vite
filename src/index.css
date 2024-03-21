@@ -1,27 +1,3 @@
-body {
-  background-image: url(assets/tulips.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: white;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-.header-container {
-  background-color: #7209b7;
-  border-radius: 5px;
-  padding: 10px;
-  letter-spacing: 5px;
-}
-
-.container {
-  background-color: rgb(255, 213, 0, 0.6);
-  border: solid;
-  border-radius: 5px;
-  padding: 30px;
-}
-
 :root {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -34,4 +10,83 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+body {
+  background-image: url(assets/tulips.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 15px;
+}
+
+.header-container {
+  background-color: #ea96df;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.container {
+  background-color: rgb(252, 215, 44, 0.7);
+  color: #1e4f2a;
+  border: solid;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+input, select {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  margin: 7px;
+}
+
+button {
+  background-color: #ffffad;
+  color: #901447;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #4aa77c;
+}
+
+.celebrate, .best, .holidays, .summary {
+  font-size: 19px;
+}
+
+.personal-info {
+  margin-top: 15px;
+}
+
+label {
+  display: inline-block;
+  text-align: left;
+  width: 55px;
+  font-size: 19px;
+}
+
+@media (min-width: 667px) and (max-width: 1024px) {
+
+  .container {
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+  }
+
 }
