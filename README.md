@@ -7,3 +7,5 @@ The assignment was to create a survey consisting of at least 3 questions. The pu
 I started with a design for the project. Choosing a background image from Unsplash and a color palette from Coolors. The project was then coded using JS, React & CSS.
 
 ### View it live
+
+https://katarina-easter-survey.netlify.app
