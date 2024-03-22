@@ -1,4 +1,4 @@
-export const Summary = ({username, age, answer1, answer2, answer3 }) => {
+export const Summary = ({ username, age, answer1, answer2, answer3 }) => {
   return (
     <div className="survey-summary">
       <label>Let´s see how your day looks:</label>
@@ -8,7 +8,5 @@ export const Summary = ({username, age, answer1, answer2, answer3 }) => {
       <p>Hyperfocused: {answer2} </p>
       <p>Tabs Opened: {answer3} </p>
     </div>
-  )
-}
-
-
+  );
+};

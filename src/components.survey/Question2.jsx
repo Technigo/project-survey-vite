@@ -1,9 +1,8 @@
-import { useState } from "react"
-import { BackNextButtons } from "./BackNextButtons"
+import { useState } from "react";
+import { BackNextButtons } from "./BackNextButtons";
 
-export const Question2 = ({onNext, onBack, setFormData }) => {
-  const [second, setSecond] = useState("")
-
+export const Question2 = ({ onNext, onBack, setFormData }) => {
+  const [second, setSecond] = useState("");
 
   const handleYesClick = () => {
     setSecond("yes");
@@ -24,13 +23,24 @@ export const Question2 = ({onNext, onBack, setFormData }) => {
   return (
     <div className="container-question">
       <label className="question" htmlFor="question2">
-        Have you ever accidentally hyperfocused on something for hours, forgetting to eat, sleep, or even blink?
+        Have you ever accidentally hyperfocused on something for hours,
+        forgetting to eat, sleep, or even blink?
       </label>
       <div>
-          <button className={second === 'yes' ? 'selected' : ''} onClick={handleYesClick}>Yes, so many times!</button>
-          <button className={second === 'no' ? 'selected' : ''} onClick={handleNoClick}>Nope, I've never been so lost.</button>
+        <button
+          className={second === "yes" ? "selected" : ""}
+          onClick={handleYesClick}
+        >
+          Yes, so many times!
+        </button>
+        <button
+          className={second === "no" ? "selected" : ""}
+          onClick={handleNoClick}
+        >
+          Nope, I've never been so lost.
+        </button>
       </div>
-      <BackNextButtons onNext={onNext} onBack={onBack}/> 
-    </div>     
-  )
-}
+      <BackNextButtons onNext={onNext} onBack={onBack} />
+    </div>
+  );
+};

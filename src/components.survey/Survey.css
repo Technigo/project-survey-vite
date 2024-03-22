@@ -4,184 +4,179 @@
  | |       \___ \   \___ \     \___ \     | |      \   /   | |        | |   | . ` | | | |_ |   | |      | |  | | | |  | | |  __|  
  | |____   ____) |  ____) |    ____) |    | |       | |    | |____   _| |_  | |\  | | |__| |   | |____  | |__| | | |__| | | |____ 
   \_____| |_____/  |_____/    |_____/     |_|       |_|    |______| |_____| |_| \_|  \_____|    \_____|  \____/  |_____/  |______| https://patorjk.com/software/taag/#p=display&h=0&f=Big&t=CSS%20STYLING%20CODE*/
-																																
-																																
 
-
-:root{
-	--text-color: #FFFFFF;
-	--button-color: #008080; 
-	--hover-color: #e0a800;
-	--background-color: rgba(0, 0, 0, .6);
+:root {
+  --text-color: #ffffff;
+  --button-color: #008080;
+  --hover-color: #e0a800;
+  --background-color: rgba(0, 0, 0, 0.6);
 }
 
 .form-container {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* HEADER -------------------------------------------------------------------------------------- */
 .header-container {
-	background-color: var(--background-color);
-	padding: 50px 20px;
-	margin-top: 50px;
-	min-width: 320px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	margin: 0 auto;
+  background-color: var(--background-color);
+  padding: 50px 20px;
+  margin-top: 50px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .header-container h1 {
-	color: #008080;
+  color: #008080;
 }
 
 p {
-	margin: 20px;
-	color: #FFFFFF;
+  margin: 20px;
+  color: #ffffff;
 }
 
 /* QUESTIONS & the SUMMARY---------------------------------------------------------------------- */
 /* styles that affects all questions ------------------------------------------------------------*/
 
 .question {
-	margin: 25px 0px;
-	color: var(--text-color);
+  margin: 25px 0px;
+  color: var(--text-color);
 }
 
-.container-question, 
-.survey-summary{
-	background-color: var(--background-color);
-	margin-top: 50px;
-	padding: 40px;
-	padding-bottom: 15px;
-	font-weight: bold;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	width: 90%;
-	height: 100%;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	color: #fff;
+.container-question,
+.survey-summary {
+  background-color: var(--background-color);
+  margin-top: 50px;
+  padding: 40px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
 }
 
 .container-question label,
-.survey-summary label{
-	font-size: 1em;
-	text-align: center;  
-	padding: 5px;
+.survey-summary label {
+  font-size: 1em;
+  text-align: center;
+  padding: 5px;
 }
 
-.survey-summary label{
-	color: var(--button-color);
-	font-size: 1.2em;
-
+.survey-summary label {
+  color: var(--button-color);
+  font-size: 1.2em;
 }
 
-input::placeholder{
-	color: white;
+input::placeholder {
+  color: white;
 }
 
 .container-question label input {
-	padding: 5px;
+  padding: 5px;
 }
 
-input[type=text], input[type=number] {
-	margin: 6px;
-	outline: none;
-	border: none;
-	background-color: var(--button-color);
-	border-radius: 15px;
-	padding: 6px;
-	color: var(--text-color);
-	width: 100%;
-	text-align: center;
-	color: rgb(255, 255, 255);
-	font-size: 1em;
+input[type="text"],
+input[type="number"] {
+  margin: 6px;
+  outline: none;
+  border: none;
+  background-color: var(--button-color);
+  border-radius: 15px;
+  padding: 6px;
+  color: var(--text-color);
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
 }
 
 button {
-	margin: 10px 20px;
-	padding: 7px 20px;
-	font-size: 16px;
-	border: none;
-	background-color: var(--button-color);
-	border-radius: 15px;
-	cursor: pointer;
-	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
-	transition: 1s ease;
-	color: rgb(255, 255, 255);
+  margin: 10px 20px;
+  padding: 7px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: var(--button-color);
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: 1s ease;
+  color: rgb(255, 255, 255);
 }
 
 button:hover {
-	background-color: var(--hover-color); 
+  background-color: var(--hover-color);
 }
 
-
 button.selected {
-	background-color: var(--hover-color);
-	color: #fff;
+  background-color: var(--hover-color);
+  color: #fff;
 }
 
 /* NEXT BACK BUTTON ---------------------------------------------------------------------- */
 
 .back-next-buttons {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	margin: 20px 0px;
-	width: 100%;
-	align-self: end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+  width: 100%;
+  align-self: end;
 }
 
-.back-next-buttons button{
-	margin: 50px 0px 0px 0px;
+.back-next-buttons button {
+  margin: 50px 0px 0px 0px;
 }
 
 .warning-on {
-	display: none;  
-	color: red;
-	font-weight: lighter;
-	position: absolute;
-	bottom: 0px;    
+  display: none;
+  color: red;
+  font-weight: lighter;
+  position: absolute;
+  bottom: 0px;
 }
 
 /* this is not displayed consider to remove it */
 
 .warning-off {
-   display: none;   
+  display: none;
 }
 
 /* QUESTION0 - INTRO --------------------------------------------------------------------------- */
 
 .intro label {
-	display: none;
+  display: none;
 }
 
-/* QUESTION1 ------------------------------------------------------------------------------------*/  
+/* QUESTION1 ------------------------------------------------------------------------------------*/
 
 .radio-option {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .radio-option label {
-	text-align: left;
-	display: inline;
-	font-weight: lighter;
-	color: var(--text-color);
+  text-align: left;
+  display: inline;
+  font-weight: lighter;
+  color: var(--text-color);
 }
 
-
-.radio-option input[type="radio"]{
-	width: 15px;
-	float: right;
+.radio-option input[type="radio"] {
+  width: 15px;
+  float: right;
 }
 
 /* QUESTION2 ------------------------------------------------------------------------------------*/
@@ -189,98 +184,93 @@ button.selected {
 /* QUESTION3 ------------------------------------------------------------------------------------*/
 
 .container-question select {
-	appearance: none; /* Hide the default arrow */
-	color: var(--button-color);
-	background-color: white; /* Set background color */
-	box-shadow: 10px 5px 5px rgba(255, 255, 255, 0.2);
-	border-radius: 20px; /* Add border radius */
-	border: 3px solid var(--button-color);
-	padding: 10px; /* Add padding */
-	width: 100%; /* Set width */
-	font-size: 16px; /* Set font size */
-	cursor: pointer;
+  appearance: none; /* Hide the default arrow */
+  color: var(--button-color);
+  background-color: white; /* Set background color */
+  box-shadow: 10px 5px 5px rgba(255, 255, 255, 0.2);
+  border-radius: 20px; /* Add border radius */
+  border: 3px solid var(--button-color);
+  padding: 10px; /* Add padding */
+  width: 100%; /* Set width */
+  font-size: 16px; /* Set font size */
+  cursor: pointer;
 }
 
 .container-question:focus {
-	outline: none; /* Remove focus outline */
-	color: var(--hover-color);
+  outline: none; /* Remove focus outline */
+  color: var(--hover-color);
 }
 
 .container-question::placeholder {
-	color: #999;
-	font-style: italic;
+  color: #999;
+  font-style: italic;
 }
 
-.custome-select{
-	padding: 10px;
+.custome-select {
+  padding: 10px;
 }
-
 
 .container-question option[selected] {
-	background-color: #e0a800;
+  background-color: #e0a800;
 }
 
 /* -----------------------------------------------FOOTER--------------------------------------- */
 footer {
-	bottom: 0;
-	height: 30px;
-	color: #fff;
-	background-color: var(--button-color);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 10px;
-	font-size: .6em;
-	position: absolute;
-	width: 100%;
-	align-self: end;
-	left: 0; /* Align to the left edge of the viewport */
-  }
+  bottom: 0;
+  height: 30px;
+  color: #fff;
+  background-color: var(--button-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 0.6em;
+  position: absolute;
+  width: 100%;
+  align-self: end;
+  left: 0; /* Align to the left edge of the viewport */
+}
 
 .footer-content {
-    display: flex;
-	align-items: center;
-	flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .footer-content > div {
-	flex: 1;
+  flex: 1;
 }
 
 .footer-content p {
-	margin: 0;
+  margin: 0;
 }
 
 .footer-content .link {
-	color: #0b1c2e;
+  color: #0b1c2e;
 }
 .footer-content .link:hover {
-	color: #0056b3; 
-  }
+  color: #0056b3;
+}
 
-  .logo {
-	width: 40px;
-	height: auto;
-  }
+.logo {
+  width: 40px;
+  height: auto;
+}
 
 /* SUMARY ------------------------------------------------------------------------------------*/
-
-
 
 /* MEDIA QUERIES------------------------------------------------------------------------------------ */
 /* MOBILE SCREENS 670px to 1024xp------------------------------------------------------------------- */
 @media (min-width: 768px) {
-	.header-container {
-	  padding: 50px 100px; /* Increase padding for larger screens */
-	  min-width: 768px; /* Adjust min-width for larger screens */
-	}
+  .header-container {
+    padding: 50px 100px; /* Increase padding for larger screens */
+    min-width: 768px; /* Adjust min-width for larger screens */
   }
+}
 
 /* TABLET SCREENS 671px to 1024xp------------------------------------------------------------------- */
-@media (min-width:671px) and (max-width:1024px){
-
+@media (min-width: 671px) and (max-width: 1024px) {
 }
 /* TABLET SCREENS 671px to 1024xp------------------------------------------------------------------- */
 @media (min-width: 1024px) {
-
-} 
+}
