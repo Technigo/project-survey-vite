@@ -140,20 +140,18 @@ button.selected {
   margin: 50px 0px 0px 0px;
 }
 
-.warning-on {
+/* .warning-on {
   display: none;
   color: red;
   font-weight: lighter;
   position: absolute;
   bottom: 0px;
-}
+} */
 
-/* this is not displayed consider to remove it */
-
-.warning-off {
+/* .warning-off {
   display: none;
 }
-
+ */
 /* QUESTION0 - INTRO --------------------------------------------------------------------------- */
 
 .intro label {
@@ -243,18 +241,7 @@ footer {
 
 .footer-content p {
   margin: 0;
-}
-
-.footer-content .link {
-  color: #0b1c2e;
-}
-.footer-content .link:hover {
-  color: #0056b3;
-}
-
-.logo {
-  width: 40px;
-  height: auto;
+  color: #ffffff;
 }
 
 /* SUMARY ------------------------------------------------------------------------------------*/
@@ -266,11 +253,4 @@ footer {
     padding: 50px 100px; /* Increase padding for larger screens */
     min-width: 768px; /* Adjust min-width for larger screens */
   }
-}
-
-/* TABLET SCREENS 671px to 1024xp------------------------------------------------------------------- */
-@media (min-width: 671px) and (max-width: 1024px) {
-}
-/* TABLET SCREENS 671px to 1024xp------------------------------------------------------------------- */
-@media (min-width: 1024px) {
 }

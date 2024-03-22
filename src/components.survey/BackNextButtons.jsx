@@ -9,7 +9,7 @@ export const BackNextButtons = ({ onNext, onBack, disabled }) => {
           Next
         </button>
       </div>
-      <p className="warning-on">You have to fill the questions available.</p>
+      {/* <p className="warning-on">You have to fill the questions available.</p> */}
     </>
   );
 };

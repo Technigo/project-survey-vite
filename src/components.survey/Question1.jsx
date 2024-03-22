@@ -68,4 +68,4 @@ export const Question1 = ({ onNext, onBack, setFormData }) => {
   );
 };
 
-//disabled={!fieldsFilled}/ the user can move further without choosing something
+//disabled={!fieldsFilled}/ the user cannot move further without choosing something

@@ -37,6 +37,7 @@ export const Intro = ({ onNext, onBack, setFormData }) => {
           value={inputs.username}
           onChange={handleChange}
           onFocus={handleFocus}
+          autoComplete="name"
           required
         />
 
