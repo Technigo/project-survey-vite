@@ -136,7 +136,7 @@ select {
 input {
 	appearance: none;
 	border-radius: 7px;
-	
+
 	border: none;
 	margin: 0px 0px 5px 0px;
 	background-color: var(--text-color);
@@ -246,7 +246,7 @@ hr {
 
 	input.typeform {
 		width: 300px;
-		padding: 7px 0;
+		padding: 7px 0 7px 10px;
 	}
 
 	select {
