@@ -1,4 +1,3 @@
-import "../css/app.css";
 import { useEffect } from "react";
 import PropTypes from 'prop-types';
 import { pillage, treasure, rum, dirt, air, water, fire, piratenames } from './ArrayComponent';

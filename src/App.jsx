@@ -1,14 +1,14 @@
-import "./app.css";
-import {Survey} from "./Survey"
+import "./css/App.css";
+import { Survey } from "./components/Survey";
+import { Header } from "./components/Header";
 
 export const App = () => {
-
-
 	return (
-		<div>
+		<div className="main">
+			<Header />
 			<Survey />
-		</div >
-	)
+		</div>
+	);
 };
 
 

@@ -1,35 +1,35 @@
 {
-	"name": "Pirate Name Generator : a survey",
-	"short_name": "Pirate Name Generator",
-	"icons": [
-		{
-			"src": "./src/assets/image/png/maskable_icon.png",
-			"sizes": "192x192",
-			"type": "image/png",
-			"purpose": "maskable"
-		},
-		{
-			"src": "./src/assets/image/png/android-chrome-192x192.png",
-			"sizes": "192x192",
-			"type": "image/png",
-			"purpose": "any"
-		},
-		{
-			"src": "./src/assets/image/png/android-chrome-512x512.png",
-			"sizes": "512x512",
-			"type": "image/png",
-			"purpose": "any"
-		},
-		{
-			"src": "./src/assets/image/png/apple-touch-icon.png",
-			"sizes": "180x180",
-			"type": "image/png",
-			"purpose": "any"
-		}
-	],
-	"id":"/?source=pwa",
-	"theme_color": "#f4f1de",
-	"background_color": "#f4f1de",
-	"display": "standalone",
-	"start_url": "./?source=pwa"
+  "name": "Pirate Name Generator : a survey",
+  "short_name": "Pirate Name Generator",
+  "icons": [
+    {
+      "src": "./src/assets/image/png/maskable_icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./src/assets/image/png/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./src/assets/image/png/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./src/assets/image/png/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "id": "/?source=pwa",
+  "theme_color": "#f4f1de",
+  "background_color": "#f4f1de",
+  "display": "standalone",
+  "start_url": "./?source=pwa"
 }

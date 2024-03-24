@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { PirateName } from "./PirateName";
-import "../css/app.css";
-
 
 export const Survey = () => {
 	//dropdown, input, checkbox, radiobuttons and visibility
