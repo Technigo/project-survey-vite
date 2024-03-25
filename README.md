@@ -6,9 +6,8 @@
 
 # Survey Project
 
-Replace this readme with your own information about your project.
+Practiced React state & controlled forms via Typeform-like project.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## Getting Started with the Project
 
@@ -24,11 +23,14 @@ npm i && code . && npm run dev
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I created SurveyForm functional component with useState hook to manage form data (formData) and submission status (submitted). I designed form structure with input fields and buttons. Implemented event handlers (handleChange and handleSubmit) to capture user input and handle form submission. I defined submission logic in handleSubmit function to update submitted state upon form submission. In the end I rendered submission summary with collected data for user confirmation.
+
+
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+(https://thescienceofhappines.netlify.app/)
+[text](https://thescienceofhappines.netlify.app/)
 
 ## Instructions
 
