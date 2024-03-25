@@ -29,7 +29,7 @@ const SurveyForm = () => {
               <label htmlFor="activity"><h3>What is your favorite mood-boosting activity?</h3></label>
               <input
                 type="text" 
-                placeholder='Write your answer here'
+                placeholder='Write your answer here...'
                 id="activity"
                 name="activity"
                 value={formData.activity}
