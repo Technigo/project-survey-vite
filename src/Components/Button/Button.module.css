@@ -1,0 +1,36 @@
+.navQuestionBtnContainer {}
+
+.previousButton {
+    background-color: #d0c4c2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.previousButton:hover {
+    background-color: #c7bab8;
+}
+
+
+.nextButton {
+    background-color: #d0c4c2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(50%);
+}
+
+.nextButton:hover {
+    background-color: #c7bab8;
+}
