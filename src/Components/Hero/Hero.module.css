@@ -1,0 +1,20 @@
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust the height as needed */
+  background-color: #f0f0f0; /* Add a background color for the container */
+}
+
+.heroImage {
+  max-width: 100%; /* Ensure the image does not exceed its container */
+  max-height: 100%; /* Ensure the image does not exceed its container */
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+  
+  
+  
+
+
+
