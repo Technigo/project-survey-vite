@@ -23,6 +23,8 @@ How you design your page is up to you, but take accessibility into account when 
 6. Work on different features (for example, different quiz questions) in different branches
 7. When you're done with a feature, it's time to merge! You choose if you want to work with PRs and code reviews or if you want to do this more verbally before you merge.
 
+
+
 ## Requirements:
 - Your app should consist of at least 3 questions.
 - At least one question should use radio buttons.
