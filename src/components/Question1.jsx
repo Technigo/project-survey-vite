@@ -1,8 +1,16 @@
-export const Question1
- = () => {
-
-  const [activity, setActivity] = useState('')
-
+export const Question1 = ({ activity, setActivity }) => {
   return (
     <div>
-      <input type="text" placeholder="Write your answer here..." value ={activity} required />
+      <h3> Whats your favorite mood boost activity?</h3>
+
+      <input
+        type="text"
+        placeholder="Write your answer here..."
+        onChange={(event) => setActivity(event.target.value)}
+        value={activity}
+        required
+
+      />
+    </div>
+  );
+};
