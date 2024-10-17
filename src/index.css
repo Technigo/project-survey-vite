@@ -72,14 +72,14 @@ code {
   border-radius: 4px;
   width: 95%;
   outline: none;
-  border: 1px solid #bcbbbb;
+  border: 1px solid #6c6c6c;
 }
 
 select {
   padding: 7px;
   border-radius: 4px;
   width: 100%;
-  border-color: #bcbbbb;
+  border-color: #6c6c6c;
   cursor: pointer;
 }
 
@@ -115,7 +115,32 @@ button:hover {
   background-color: #2035ad;
 }
 
-.summary-container {
+/* Tablet and Desktop view */
+@media (min-width: 667px) {
+  
+  .survey-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+
+  button {
+    width: 50%;
+  }
+
+  select {
+    width: 70%;
+  }
+
+  .input-area {
+    width: 70%;
+  }
+
+  .summary-container {
+    max-width: 600px;
+  }
 
 }
-
