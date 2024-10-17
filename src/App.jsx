@@ -1,3 +1,17 @@
+// src/App
+import React, { useState } from 'react';
+
+import { Header } from "./components/Header";
+import { Survey } from "./components/Survey";
+
+
 export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  return (
+    <div>
+      <Header isSubmitted={isSubmitted} />
+      <Survey setIsSubmitted={setIsSubmitted} />
+    </div>
+  );
 };
