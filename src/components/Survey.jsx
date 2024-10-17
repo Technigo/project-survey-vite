@@ -26,11 +26,11 @@ export const Survey = ({ setIsSubmitted }) => {
         <Question1 activity={activity} setActivity={setActivity} />
         <Question2 musicYesNo={musicYesNo} setMusicYesNo={setMusicYesNo} />
         <Question3 happySong={happySong} setHappySong={setHappySong} />
-        <button type="submit">Submit</button>
+        <button type="submit">Submit your answer</button>
       </form>
       ) : (
         <Summary activity={activity} musicYesNo={musicYesNo} happySong={happySong} />
     )}
     </div>
   );
-};
+}; 

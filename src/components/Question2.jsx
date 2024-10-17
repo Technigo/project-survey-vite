@@ -5,7 +5,7 @@ export const Question2 = ({ musicYesNo, setMusicYesNo }) => {
     <div className="question2">
     <h3>Does music make you happy?</h3>
     <label>
-      <input className="radio-btn"
+      <input className="radio-btn1"
         type="radio"
         value="yes"
         onChange={event => setMusicYesNo(event.target.value)}
@@ -15,7 +15,7 @@ export const Question2 = ({ musicYesNo, setMusicYesNo }) => {
     </label>
 
       <label>
-        <input className="radio-btn"
+        <input className="radio-btn2"
           type="radio"
           value="no"
           onChange={event => setMusicYesNo(event.target.value)}

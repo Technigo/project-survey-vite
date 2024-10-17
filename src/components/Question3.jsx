@@ -10,11 +10,11 @@ export const Question3 = ({ happySong, setHappySong }) => {
       value={happySong}
       >
         <option value="">Select</option>
-        <option value="A bar song">A Bar Song (Tipsy) - Shaboozey</option>
-        <option value="Birds of a feather">Birds of a feather - Billie Eilish</option>
-        <option value="Taste">Taste - Sabrina Carpenter</option>
-        <option value="Timeless">Timeless - The Weeknd & Playboi Carti</option>
-        <option value="Please Please Please">Please please please - Sabrina Carpenter</option>
+        <option value="A bar song (Tipsy) - Shaboozey">A Bar Song (Tipsy) - Shaboozey</option>
+        <option value="Birds of a feather - Billie Eilish">Birds of a feather - Billie Eilish</option>
+        <option value="Taste - Sabrina Carpenter">Taste - Sabrina Carpenter</option>
+        <option value="Timeless - The Weeknd & Playboi Carti">Timeless - The Weeknd & Playboi Carti</option>
+        <option value="Please Please Please - Sabrina Carpenter">Please please please - Sabrina Carpenter</option>
       </select>
       </div>
   )
