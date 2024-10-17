@@ -1,37 +1,13 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/survey.svg" alt="Project Banner Image">
-  </a>
-</h1>
 
 # Survey Project
 
-Replace this readme with your own information about your project.
+This project was about practising React state and controlled forms by making a Typeform-like product in the form of a quiz. The completed project should consist of at least three questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## Problem
 
-## Getting Started with the Project
+In this project, we worked with trying to connect the different components within the survey. We also encountered several challenges related to styling and layout, such as customizing the appearance of dropdown menus to match our design. Additionally, we adjusted default styles on input fields, including removing border-radius and default borders to create a more uniform look throughout the form. By solving these issues, we improved the user experience and created a visually appealing survey application.
 
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
-
-### The Problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+https://survey-site-jje.netlify.app
